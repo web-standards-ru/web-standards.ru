@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
+<head>
+    <title>Пример: формулы в VML</title>
+    <meta charset="utf-8">
+    <style>
+        v\:shape,
+        v\:formulas,
+        v\:f {
+            display: inline-block;
+            behavior: url(#default#VML);
+        }
+
+        v\:shape {
+            width: 200px;
+            height: 75px;
+        }
+    </style>
+</head>
+<body>
+    <v:shape stroked="false" fillcolor="#EEE" coordorigin="0 0" coordsize="1000 1000" path="m 0,0 l @0,0, @0,@1, 0,@1 x e">
+        <v:formulas>
+            <v:f eqn="val width"/>
+            <v:f eqn="val height"/>
+        </v:formulas>
+    </v:shape>
+</body>

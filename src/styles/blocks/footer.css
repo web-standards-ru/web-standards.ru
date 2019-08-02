@@ -1,0 +1,6 @@
+/* Footer */
+
+.footer {
+    background-color: var(--color-grey-dark);
+    color: var(--color-text-grey-light);
+}

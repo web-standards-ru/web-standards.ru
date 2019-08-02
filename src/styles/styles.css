@@ -1,0 +1,22 @@
+/* Fonts */
+
+@import 'fonts.css';
+
+/* Blocks */
+
+@import 'blocks/page.css';
+@import 'blocks/header.css';
+@import 'blocks/main.css';
+@import 'blocks/links.css';
+@import 'blocks/footer.css';
+
+/* Globals */
+
+:root {
+    --color-grey-dark: #273238;
+    --color-grey-medium: #696969;
+    --color-grey-light: #E9EAEB;
+    --color-blue-dark: #0064A4;
+    --color-blue-light: #DFF3F4;
+    --color-text-grey-light: #B1B3B6;
+}

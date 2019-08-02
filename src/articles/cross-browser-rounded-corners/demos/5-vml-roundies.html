@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Пример: закруглённые уголки в VML</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(paper.jpg);
+        }
+
+        .border {
+            border: 6px solid #BADBAD;
+        }
+
+        .round {
+            margin: 10px;
+            padding: 10px;
+            -webkit-border-radius: 16px;
+            -moz-border-radius: 16px;
+            border-radius: 16px;
+            background: #ffffff;
+        }
+
+        .inline {
+            margin: 0 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .textonly {
+            color: #ffffff;
+        }
+
+        .nl {
+            margin: 10px;
+            clear: left;
+        }
+    </style>
+    <!--[if VML&(lt IE 9)]>
+        <style>
+            .wrap {
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .round {
+                border: 0 !important;
+                background: none !important;
+                padding: 0 !important;
+            }
+
+            * html .inline {
+                display: inline;
+            }
+
+            * + html .inline {
+                display: inline;
+            }
+
+            .round-vml {
+                position: relative;
+                top: -1px;
+                left: -1px;
+                padding: 12px 9px 9px 12px;
+                height: 100%;
+            }
+
+            .inline-vml {
+                display: inline-block;
+            }
+
+            .border-vml {
+                padding: 16px 10px 10px 16px;
+            }
+
+            v\:shape,
+            v\:shapetype,
+            v\:formulas,
+            v\:f {
+                behavior: url(#default#VML);
+            }
+
+            v\:shape {
+                display: block;
+            }
+        </style>
+        <xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
+        <v:shapetype id="vml-round" adj="16" coordorigin="0 0" coordsize="1000000 1000000" path="m@6,l@8,qx@0,@7l@0,@9qy@8,@1l@6,@1qx,@9l,@7qy@6,xe">
+            <v:formulas>
+                <v:f eqn="val width"/><v:f eqn="val height"/>
+                <v:f eqn="prod @0 1 pixelwidth"/><v:f eqn="prod @1 1 pixelheight"/>
+                <v:f eqn="sum pixelwidth 0 #0"/><v:f eqn="sum pixelheight 0 #0"/>
+                <v:f eqn="prod #0 @2 1"/><v:f eqn="prod #0 @3 1"/>
+                <v:f eqn="prod @4 @2 1"/><v:f eqn="prod @5 @3 1"/>
+            </v:formulas>
+        </v:shapetype>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <div class="round">
+        <!--[if VML&(lt IE 9)]><v:shape type="#vml-round" class="round-vml" stroked="false" fillcolor="#FFF"><![endif]-->
+            Простые закруглённые уголки
+        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+        </div>
+        <div class="round border">
+        <!--[if VML&(lt IE 9)]><v:shape type="#vml-round" class="round-vml border-vml" adj="13" fillcolor="#FFF" strokeweight="6px" strokecolor="#BADBAD"><![endif]-->
+            Закруглённые уголки с рамкой
+        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+        </div>
+        <div class="round inline">
+        <!--[if VML&(lt IE 9)]><v:shape type="#vml-round" class="round-vml inline-vml" stroked="false" fillcolor="#FFF"><![endif]-->
+            Простые закруглённые уголки в строку
+        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+        </div>
+        <div class="round inline border">
+        <!--[if VML&(lt IE 9)]><v:shape type="#vml-round" class="round-vml inline-vml border-vml" adj="13" fillcolor="#FFF" strokeweight="6px" strokecolor="#BADBAD"><![endif]-->
+            Закруглённые уголки с рамкой в строку
+        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+        </div>
+        <div class="inline textonly">Немного текста после</div>
+        <div class="nl textonly">И текст на новой строчке</div>
+    </div>
+</body>

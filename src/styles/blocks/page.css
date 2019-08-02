@@ -1,0 +1,11 @@
+/* Page */
+
+.page {
+    background-color: white;
+    color: black;
+    font-family: 'Dewi', sans-serif;
+}
+
+.page__body {
+    margin: 0;
+}

@@ -1,0 +1,10 @@
+/* Links */
+
+.links {
+    background-color: var(--color-grey-light);
+}
+
+.links__title {
+    font-weight: normal;
+    font-family: 'Dewi Expanded', sans-serif;
+}
