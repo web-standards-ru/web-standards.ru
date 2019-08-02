@@ -316,7 +316,7 @@ _Перевод [«New CSS Logical Properties!»](https://medium.com/p/bc6945311
 
 Читать меня можно тут: [Твиттер,](https://twitter.com/eladsc) [Facebook](https://www.facebook.com/eladsc), [LinkedIn](https://www.linkedin.com/).
 
-![](images/9.jpeg)
+![](images/9.jpg)
 
 Вы можете найти меня в группах на Facebook:
 
