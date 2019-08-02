@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.1",
+    "rfc822-date": "0.0.3"
+  }
+}
