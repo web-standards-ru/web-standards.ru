@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}{% if page.url != '/' %} — Веб-стандарты{% endif %}</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="page__body">
+    {% include 'header.njk' %}
+    {% include 'footer.njk' %}
+</body>
+</html>
