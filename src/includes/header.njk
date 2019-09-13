@@ -1,6 +1,10 @@
 <header class="header">
     <div class="header__logo">
-        <h1>Веб-стандарты</h1>
+        <p>
+            {% if page.url != '/' %}<a href="/">{% endif %}
+                Веб-стандарты
+            {% if page.url != '/' %}</a>{% endif %}
+        </p>
         <p>Сообщество разработчиков</p>
     </div>
     <nav class="header__navigation">

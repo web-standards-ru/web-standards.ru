@@ -1,0 +1,13 @@
+---
+layout: page.njk
+---
+
+{% include 'header.njk' %}
+
+<main>
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+</main>
+
+{% include 'aside.njk' %}
+{% include 'footer.njk' %}
