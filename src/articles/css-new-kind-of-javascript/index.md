@@ -1,6 +1,8 @@
 ---
 title: "CSS: новый вид JavaScript"
 date: "2018-07-13"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[CSS: A New Kind Of JavaScript](https://medium.com/@Heydon/css-a-new-kind-of-javascript-fcf730d33ce7)» Хейдона Пикеринга._

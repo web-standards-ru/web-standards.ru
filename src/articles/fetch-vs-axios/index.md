@@ -1,6 +1,8 @@
 ---
 title: "Генерация HTTP-запросов"
 date: "2017-11-15"
+layout: article.njk
+tags: article
 ---
 
 Fetch или Axios.js.

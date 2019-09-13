@@ -1,6 +1,8 @@
 ---
 title: "CSS и JS в состоянии войны: как это остановить"
 date: "2019-02-04"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[CSS and JS Are at War, Here’s How to Stop It](https://dev.to/evilmartians/css-and-js-are-at-war-heres-how-to-stop-it-158a)» Андрея Ситника._

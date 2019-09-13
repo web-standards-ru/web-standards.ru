@@ -1,6 +1,8 @@
 ---
 title: "Атрибут contenteditable"
 date: "2012-03-09"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[The contenteditable attribute](http://html5doctor.com/the-contenteditable-attribute/)» Джека Осборна._

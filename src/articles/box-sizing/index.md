@@ -1,6 +1,8 @@
 ---
 title: "Размеры блоков, или Назад в будущее"
 date: "2013-01-23"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Sizing Boxes (Back to the Future)](http://generatedcontent.org/post/25832131984/box-sizing)» и «[Box-sizing: border-box; the results are in](http://generatedcontent.org/post/26334712021/box-sizing-results)» Дэвида Стори._

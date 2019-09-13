@@ -1,6 +1,8 @@
 ---
 title: "Новые логические свойства в CSS!"
 date: "2019-02-06"
+layout: article.njk
+tags: article
 ---
 
 Следующий шаг в эволюции CSS

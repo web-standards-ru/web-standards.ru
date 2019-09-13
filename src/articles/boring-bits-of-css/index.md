@@ -1,6 +1,8 @@
 ---
 title: "Как я научился любить скучные мелочи CSS"
 date: "2012-08-21"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Learning to Love the Boring Bits of CSS](http://www.alistapart.com/articles/love-the-boring-bits-of-css/)» Питера Гастона._

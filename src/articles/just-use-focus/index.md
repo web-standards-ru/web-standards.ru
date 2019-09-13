@@ -1,6 +1,8 @@
 ---
 title: "Просто используйте стили для :focus, чёрт возьми"
 date: "2018-12-10"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Just use :focus styles, damnit](https://gomakethings.com/just-use-focus-styles-damnit/)» Криса Фердинанди._

@@ -1,6 +1,8 @@
 ---
 title: "Как работает nth-child"
 date: "2011-11-21"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[How nth-child Works](http://css-tricks.com/5452-how-nth-child-works/)» Криса Койера._

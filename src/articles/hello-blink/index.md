@@ -1,6 +1,8 @@
 ---
 title: "Здравствуй, Blink"
 date: "2013-04-06"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Hello Blink](https://www.brucelawson.co.uk/2013/hello-blink/)» Брюса Лоусона._

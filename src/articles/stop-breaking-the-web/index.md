@@ -1,6 +1,8 @@
 ---
 title: "Хватит разрушать веб"
 date: "2015-03-23"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Stop Breaking the Web](http://ponyfoo.com/articles/stop-breaking-the-web)» Николаса Беваквы._

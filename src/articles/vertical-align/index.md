@@ -1,6 +1,8 @@
 ---
 title: "Разбираемся с vertical-align"
 date: "2012-03-09"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Understanding CSS’s vertical-align Property](http://www.impressivewebs.com/css-vertical-align/)» Луиса Лазариса._

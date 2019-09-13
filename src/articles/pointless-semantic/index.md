@@ -1,6 +1,8 @@
 ---
 title: "Наша бессмысленная погоня за семантической ценностью"
 date: "2012-08-09"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Our Pointless Pursuit Of Semantic Value](http://coding.smashingmagazine.com/2011/11/11/our-pointless-pursuit-of-semantic-value/)» Дивьи Маньян._

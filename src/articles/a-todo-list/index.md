@@ -1,6 +1,8 @@
 ---
 title: "Инклюзивные компоненты: список дел"
 date: "2019-02-18"
+layout: article.njk
+tags: article
 ---
 
 Перевод [«A Todo List»](https://inclusive-components.design/a-todo-list/) Хейдона Пикеринга.

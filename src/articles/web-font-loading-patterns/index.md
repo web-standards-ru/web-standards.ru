@@ -1,6 +1,8 @@
 ---
 title: "Паттерны загрузки веб-шрифтов"
 date: "2016-06-14"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Web Font Loading Patterns](https://www.bramstein.com/writing/web-font-loading-patterns.html)» Брэма Штайна._

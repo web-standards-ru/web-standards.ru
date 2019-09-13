@@ -1,6 +1,8 @@
 ---
 title: "Быстродействие фронтенда для дизайнеров и разработчиков"
 date: "2013-04-15"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Front-end performance for web designers and front-end developers](http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/)» Гарри Робертса._

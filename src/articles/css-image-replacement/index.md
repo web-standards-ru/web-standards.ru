@@ -1,6 +1,8 @@
 ---
 title: "Ещё одна CSS-техника замены текста изображением"
 date: "2012-09-10"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Another CSS image replacement technique](http://nicolasgallagher.com/another-css-image-replacement-technique/)» Николаса Галлахера._

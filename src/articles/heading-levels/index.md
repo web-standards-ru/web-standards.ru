@@ -1,6 +1,8 @@
 ---
 title: "Важность уровней заголовков для вспомогательных технологий"
 date: "2018-11-13"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[The Importance of Heading Levels for Assistive Technology](https://webdesign.tutsplus.com/articles/the-importance-of-heading-levels-for-assistive-technology--cms-31753)» Эрика Бейли._

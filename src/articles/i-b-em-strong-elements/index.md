@@ -1,6 +1,8 @@
 ---
 title: "Элементы i, b, em и strong"
 date: "2010-07-13"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[The i, b, em, & strong elements](http://html5doctor.com/i-b-em-strong-element/)» Оли Стадхольма._

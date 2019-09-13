@@ -1,6 +1,8 @@
 ---
 title: "В HTML5 добавлен новый атрибут translate"
 date: "2012-07-30"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[HTML5 adds new translate attribute](http://rishida.net/blog/?p=831)» Ричарда Ишиды._

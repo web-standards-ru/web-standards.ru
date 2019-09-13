@@ -1,6 +1,8 @@
 ---
 title: "«Исправление» списков"
 date: "2019-01-21"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[„Fixing“ Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)» Скотта О’Хары._

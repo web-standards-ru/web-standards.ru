@@ -1,6 +1,8 @@
 ---
 title: "Функции-декораторы, которые можно написать с нуля"
 date: "2018-06-13"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Here are a few function decorators you can write from scratch](https://medium.freecodecamp.org/here-are-a-few-function-decorators-you-can-write-from-scratch-488549fe8f86)» Кристи Сальсезку._

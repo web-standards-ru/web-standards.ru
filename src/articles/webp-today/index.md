@@ -1,6 +1,8 @@
 ---
 title: "WebP сегодня: зачем и как?"
 date: "2018-12-25"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Why and how to use WebP images today](https://bitsofco.de/why-and-how-to-use-webp-images-today/)» Ире Адеринокун._

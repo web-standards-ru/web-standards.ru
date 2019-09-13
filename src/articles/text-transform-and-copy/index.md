@@ -1,6 +1,8 @@
 ---
 title: "Text-transform и копирование"
 date: "2019-01-24"
+layout: article.njk
+tags: article
 ---
 
 Что происходит при копировании текста с `text-transform`.

@@ -1,6 +1,8 @@
 ---
 title: "Метрики загрузки страницы"
 date: "2017-11-15"
+layout: article.njk
+tags: article
 ---
 
 Что все они означают?

@@ -1,6 +1,8 @@
 ---
 title: "Всё, что нужно знать про ARIA Live Regions"
 date: "2019-03-12"
+layout: article.njk
+tags: article
 ---
 
 Как сделать изменение контента доступным

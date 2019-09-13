@@ -1,6 +1,8 @@
 ---
 title: "Ключевые слова в линейных градиентах"
 date: "2012-07-24"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Linear Gradient Keywords](http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/)» Эрика Мейера._

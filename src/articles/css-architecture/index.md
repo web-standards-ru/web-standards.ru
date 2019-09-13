@@ -1,6 +1,8 @@
 ---
 title: "Архитектура CSS"
 date: "2014-02-20"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[CSS Architecture](http://philipwalton.com/articles/css-architecture/)» Филипа Уолтона_

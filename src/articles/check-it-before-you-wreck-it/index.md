@@ -1,6 +1,8 @@
 ---
 title: "Не проверив HTML5-кода, не суйся в воду — с Майком™ Смитом"
 date: "2014-12-26"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[HTML5 — Check it Before you Wreck it with Mike™ Smith](http://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/)» Стива Фолкнера._

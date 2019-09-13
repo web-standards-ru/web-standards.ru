@@ -1,6 +1,8 @@
 ---
 title: "Обещание бургерной вечеринки"
 date: "2017-02-09"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[The Promise of a Burger Party](https://kosamari.com/notes/the-promise-of-a-burger-party)» Марико Косаки._

@@ -1,6 +1,8 @@
 ---
 title: "Прогрессивное улучшение меня расстраивает"
 date: "2016-03-22"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Progressive Enhancement Makes Me Sad](http://www.heydonworks.com/article/progressive-enhancement-makes-me-sad)» Хейдона Пикеринга._

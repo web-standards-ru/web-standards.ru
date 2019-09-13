@@ -1,6 +1,8 @@
 ---
 title: "Роутинг, бандлинг и ленивая загрузка на Webpack"
 date: "2018-02-09"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Multiple routes, bundling and lazy-loading](https://sgom.es/posts/2018-01-18-multiple-routes-webpack/)» Серджио Гомеса._

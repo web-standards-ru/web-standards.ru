@@ -1,6 +1,8 @@
 ---
 title: "Puppeteer для краулинга страниц сайта и сохранения их в Markdown"
 date: "2019-01-17"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Using Puppeteer to crawl pages and save them as Markdown files](https://justmarkup.com/log/2019/01/using-puppeteer-to-crawl-pages-and-save-them-as-markdown-files/)» Михаэля Шарналя._

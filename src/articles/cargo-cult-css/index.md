@@ -1,6 +1,8 @@
 ---
 title: "Культ карго CSS"
 date: "2014-02-19"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Cargo Cult CSS](http://www.kapowaz.net/articles/cargo-cult-css)» Бена Дарлоу._

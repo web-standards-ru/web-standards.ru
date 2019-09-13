@@ -1,6 +1,8 @@
 ---
 title: "Элементы figure и figcaption"
 date: "2012-03-12"
+layout: article.njk
+tags: article
 ---
 _Перевод «[The figure & figcaption elements](http://html5doctor.com/the-figure-figcaption-elements/)» Ричарда Кларка._
 

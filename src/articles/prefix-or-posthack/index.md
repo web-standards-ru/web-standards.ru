@@ -1,6 +1,8 @@
 ---
 title: "Префикс или постхак"
 date: "2010-08-19"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Prefix or Posthack](http://www.alistapart.com/articles/prefix-or-posthack/)» Эрика Мейера._

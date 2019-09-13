@@ -1,6 +1,8 @@
 ---
 title: "Как на самом деле работает position: sticky в CSS"
 date: "2019-01-31"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[CSS Position Sticky — How It Really Works!](https://medium.com/@elad/css-position-sticky-how-it-really-works-54cd01dc2d46)» Элада Шехтера._

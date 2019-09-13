@@ -1,6 +1,8 @@
 ---
 title: "Почему Sass?"
 date: "2013-12-10"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Why Sass?](http://alistapart.com/article/why-sass)» Дэна Седерхольма._

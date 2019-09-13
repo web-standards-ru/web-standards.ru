@@ -1,6 +1,8 @@
 ---
 title: "Основы адаптивной типографики"
 date: "2012-09-10"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Responsive Typography: The Basics](http://informationarchitects.net/blog/responsive-typography-the-basics/)» Оливера Райхенштайна._

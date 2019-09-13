@@ -1,6 +1,8 @@
 ---
 title: "Исследуем большие экраны"
 date: "2014-11-24"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Surveying the Big Screen](http://alistapart.com/article/surveying-the-big-screen)» Майка Пика._

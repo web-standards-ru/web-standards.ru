@@ -1,6 +1,8 @@
 ---
 title: "Простое вертикальное центрирование текста с помощью SVG"
 date: "2013-03-26"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Easily center text vertically, with SVG!](http://lea.verou.me/2013/03/easily-center-text-vertically-with-svg/)» Лии Веру._

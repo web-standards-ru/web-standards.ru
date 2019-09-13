@@ -1,6 +1,8 @@
 ---
 title: "Элементы details и summary"
 date: "2011-08-29"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[The details and summary elements](http://html5doctor.com/the-details-and-summary-elements/)» Тома Лидбеттера._

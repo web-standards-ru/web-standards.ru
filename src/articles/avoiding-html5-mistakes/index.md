@@ -1,6 +1,8 @@
 ---
 title: "Избегаем популярных ошибок в HTML5"
 date: "2011-07-27"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoiding-common-html5-mistakes/)» Ричарда Кларка._

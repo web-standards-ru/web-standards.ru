@@ -1,6 +1,8 @@
 ---
 title: "Реализуем пуш-уведомления на фронтенде и бэкенде"
 date: "2017-03-13"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Implementing push notifications on the front-end and back-end](https://justmarkup.com/log/2017/02/implementing-push-notifications/)» Майкла Шарналя._

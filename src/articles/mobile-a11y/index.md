@@ -1,6 +1,8 @@
 ---
 title: "Советы по доступности интерактивных элементов на мобильных устройствах"
 date: "2019-02-21"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Tips for making interactive elements accessible on mobile devices](https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/)» Ире Адеринокун._

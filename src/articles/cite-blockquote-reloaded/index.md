@@ -1,6 +1,8 @@
 ---
 title: "Сite и blockquote: перезагрузка"
 date: "2013-11-11"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Cite and blockquote — reloaded](http://html5doctor.com/cite-and-blockquote-reloaded/)» Стива Фолкнера._

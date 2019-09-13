@@ -1,6 +1,8 @@
 ---
 title: "Почему у нас нет селектора по родителю"
 date: "2011-09-20"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Why we don’t have a parent selector](http://snook.ca/archives/html_and_css/css-parent-selectors/)» Джонатана Снука._

@@ -1,6 +1,8 @@
 ---
 title: "Манифест? А? Что? Зачем?"
 date: "2017-01-09"
+layout: article.njk
+tags: article
 ---
 
 _Перевод [поясняющей заметки](https://github.com/w3c/manifest/blob/gh-pages/explainer.md) к спецификации [Web App Manifest](https://www.w3.org/TR/appmanifest/) Альфреда Маерса._

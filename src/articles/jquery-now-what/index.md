@@ -1,6 +1,8 @@
 ---
 title: "Я знаю jQuery. И что?"
 date: "2013-12-16"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[I know jQuery. Now what?](http://remysharp.com/2013/04/19/i-know-jquery-now-what/)» Реми Шарпа._

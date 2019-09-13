@@ -1,6 +1,8 @@
 ---
 title: "Полезные правила доступности, которые останутся в памяти"
 date: "2018-11-28"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[Pragmatic rules of web accessibility that will stick to your mind](https://medium.com/p/9d3eb85a1a28)» Тьяго Ромеро Гарсии._

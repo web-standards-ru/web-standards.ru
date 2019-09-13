@@ -1,6 +1,8 @@
 ---
 title: "HTML, CSS и исчезающие точки входа в индустрию"
 date: "2019-02-01"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[HTML, CSS and our vanishing industry entry points](https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/)» Рейчел Эндрю._

@@ -1,6 +1,8 @@
 ---
 title: "Как быстро создать десктопное приложение на HTML, CSS и JavaScript"
 date: "2019-02-06"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[How to Easily Build Desktop Apps with HTML, CSS and JS](https://medium.com/p/d3e3f03f95a5)» Адитьи Шридхары._

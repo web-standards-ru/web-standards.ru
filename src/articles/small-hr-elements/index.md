@@ -1,6 +1,8 @@
 ---
 title: "Элементы small и hr"
 date: "2011-05-30"
+layout: article.njk
+tags: article
 ---
 
 _Перевод «[The small & hr elements](http://html5doctor.com/small-hr-element/)» Оли Стадхольма._
