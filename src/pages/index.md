@@ -1,4 +1,5 @@
 ---
 title: Веб-стандарты
-layout: page.njk
+layout: index.njk
+permalink: index.html
 ---
