@@ -1,11 +1,13 @@
 ---
-title: "Не проверив HTML5-кода, не суйся в воду — с Майком™ Смитом"
-date: "2014-12-26"
+title: 'Не проверив HTML5-кода, не суйся в воду — с Майком™ Смитом'
+date: 2014-12-26
+source:
+    title: 'HTML5 — Check it Before you Wreck it with Mike™ Smith'
+    url: http://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/
+    author: 'Стива Фолкнера'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[HTML5 — Check it Before you Wreck it with Mike™ Smith](http://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/)» Стива Фолкнера._
 
 [Майк™ Смит](http://people.w3.org/mike/) (известный как [@sideshowbarker](https://twitter.com/sideshowbarker)) из W3C — человек, с головой увязший в исходном коде инструмента W3C для _проверки <del>валидности</del> разметки_; эта _магия_ работает именно благодаря ему. Вопросы были заданы на радость и в назидание читателю сайта.
 

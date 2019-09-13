@@ -1,11 +1,13 @@
 ---
-title: "«Исправление» списков"
-date: "2019-01-21"
+title: '«Исправление» списков'
+date: 2019-01-21
+source:
+    title: '„Fixing“ Lists'
+    url: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+    author: 'Скотта О’Хары'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[„Fixing“ Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)» Скотта О’Хары._
 
 ![](images/1.png)
 

@@ -1,11 +1,13 @@
 ---
-title: "Глубокое погружение в ES-модули в картинках"
-date: "2018-03-30"
+title: 'Глубокое погружение в ES-модули в картинках'
+date: 2018-03-30
+source:
+    title: 'ES modules: A cartoon deep-dive'
+    url: https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
+    author: 'Лин Кларк'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)» Лин Кларк._
 
 ![](images/1.png)
 

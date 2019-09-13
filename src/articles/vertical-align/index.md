@@ -1,11 +1,13 @@
 ---
-title: "Разбираемся с vertical-align"
-date: "2012-03-09"
+title: 'Разбираемся с vertical-align'
+date: 2012-03-09
+source:
+    title: 'Understanding CSS’s vertical-align property'
+    url: http://www.impressivewebs.com/css-vertical-align/
+    author: 'Луиса Лазариса'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Understanding CSS’s vertical-align Property](http://www.impressivewebs.com/css-vertical-align/)» Луиса Лазариса._
 
 «Опять `vertical-align` не работает!» — вздохнёт веб-разработчик.
 

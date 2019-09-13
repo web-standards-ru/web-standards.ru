@@ -1,11 +1,13 @@
 ---
-title: "Как работает nth-child"
-date: "2011-11-21"
+title: 'Как работает nth-child'
+date: 2011-11-21
+source:
+    title: 'How nth-child Works'
+    url: http://css-tricks.com/5452-how-nth-child-works/
+    author: 'Криса Койера'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[How nth-child Works](http://css-tricks.com/5452-how-nth-child-works/)» Криса Койера._
 
 Существует такой селектор, точнее псевдокласс, называемый `:nth-child`. Вот пример его использования:
 

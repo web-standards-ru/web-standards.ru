@@ -1,11 +1,13 @@
 ---
-title: "Функции-декораторы, которые можно написать с нуля"
-date: "2018-06-13"
+title: 'Функции-декораторы, которые можно написать с нуля'
+date: 2018-06-13
+source:
+    title: 'Here are a few function decorators you can write from scratch'
+    url: https://medium.com/p/488549fe8f86
+    author: 'Кристи Сальсезку'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Here are a few function decorators you can write from scratch](https://medium.freecodecamp.org/here-are-a-few-function-decorators-you-can-write-from-scratch-488549fe8f86)» Кристи Сальсезку._
 
 ![Фото [Calum Lewis](https://unsplash.com/photos/rkT_TG5NKF8).](images/1.jpg)
 _Фото [Calum Lewis](https://unsplash.com/photos/rkT_TG5NKF8)._

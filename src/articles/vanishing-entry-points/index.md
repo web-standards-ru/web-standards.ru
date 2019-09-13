@@ -1,13 +1,15 @@
 ---
-title: "HTML, CSS и исчезающие точки входа в индустрию"
-date: "2019-02-01"
+title: 'HTML, CSS и исчезающие точки входа в индустрию'
+date: 2019-02-01
+source:
+    title: 'HTML, CSS and our vanishing industry entry points'
+    url: https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/
+    author: 'Рейчел Эндрю'
 layout: article.njk
 tags: article
 ---
 
-_Перевод «[HTML, CSS and our vanishing industry entry points](https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/)» Рейчел Эндрю._
-
-![Monday Start Animation by Laurentiu Lunic](images/1.gif)
+![](images/1.gif)
 _[Monday Start Animation by Laurentiu Lunic](https://dribbble.com/shots/3944123-Monday-Start-Animation)_
 
 Все опять обозлились на CSS. Я даже не стану перечислять причины. В общей сложности всё сводится к тому, что CSS достаточно прост, но одновременно с этим и достаточно сложен. До такой степени, что, во избежание волнений общественности, проще завернуть его в JavaScript. Вы можете прочитать более осмысленный взгляд Криса Койера [«The Great Divide»](https://css-tricks.com/the-great-divide/).

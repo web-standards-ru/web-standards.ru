@@ -1,10 +1,13 @@
 ---
-title: "Элементы figure и figcaption"
-date: "2012-03-12"
+title: 'Элементы figure и figcaption'
+date: 2012-03-12
+source:
+    title: 'The figure & figcaption elements'
+    url: http://html5doctor.com/the-figure-figcaption-elements/
+    author: 'Ричарда Кларка'
 layout: article.njk
 tags: article
 ---
-_Перевод «[The figure & figcaption elements](http://html5doctor.com/the-figure-figcaption-elements/)» Ричарда Кларка._
 
 В обычных печатных изданиях, таких как книги и журналы, изображения, таблицы или примеры кода обычно сопровождаются подписью. До сих пор у нас не было возможности семантически выделять такой тип содержимого напрямую в HTML, вместо того чтобы прибегать к именам классов СSS. HTML5 надеется исправить эту проблему с помощью новых элементов: `<figure>` и `<figcaption>`. Давайте разберемся!
 

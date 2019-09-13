@@ -1,11 +1,13 @@
 ---
-title: "В HTML5 добавлен новый атрибут translate"
-date: "2012-07-30"
+title: 'В HTML5 добавлен новый атрибут translate'
+date: 2012-07-30
+source:
+    title: 'HTML5 adds new translate attribute'
+    url: http://rishida.net/blog/?p=831
+    author: 'Ричарда Ишиды'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[HTML5 adds new translate attribute](http://rishida.net/blog/?p=831)» Ричарда Ишиды._
 
 В HTML5 недавно [добавился новый атрибут](http://dev.w3.org/html5/spec/global-attributes.html#the-translate-attribute) — `translate`. На трёх [семинарах MultilingualWeb](http://multilingualweb.eu/), которые мы провели за последние два года, идея такого булева флага — «переводить или не переводить» постоянно вызывает довольно большой интерес у локализаторов, создателей текста, и всех тех, кто работает с языковыми технологиями.
 

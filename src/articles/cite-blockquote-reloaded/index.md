@@ -1,11 +1,13 @@
 ---
-title: "Сite и blockquote: перезагрузка"
-date: "2013-11-11"
+title: 'Сite и blockquote: перезагрузка'
+date: 2013-11-11
+source:
+    title: 'Cite and blockquote — reloaded'
+    url: http://html5doctor.com/cite-and-blockquote-reloaded/
+    author: 'Стива Фолкнера'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Cite and blockquote — reloaded](http://html5doctor.com/cite-and-blockquote-reloaded/)» Стива Фолкнера._
 
 Недавно в [спецификации HTML](http://www.w3.org/html/wg/drafts/html/master/) было изменено определение элементов `<blockquote>` и `<cite>`. В статье рассказывается, что это значит для разработчиков.
 

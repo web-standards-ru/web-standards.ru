@@ -1,11 +1,13 @@
 ---
-title: "Хватит разрушать веб"
-date: "2015-03-23"
+title: 'Хватит разрушать веб'
+date: 2015-03-23
+source:
+    title: 'Stop breaking the Web'
+    url: http://ponyfoo.com/articles/stop-breaking-the-web
+    author: 'Николаса Беваквы'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Stop Breaking the Web](http://ponyfoo.com/articles/stop-breaking-the-web)» Николаса Беваквы._
 
 2014 год. Ниндзя-рок-звезды веба идут против забытой ныне техники [прогрессивного улучшения](http://alistapart.com/article/understandingprogressiveenhancement). Они отказываются от истоков веба и всего того, за что они когда-то стояли. В этой статье я собираюсь громко заявить о том, как **мы разрушаем веб**; о не всегда явных причинах, почему мы должны перестать это делать, и отчего _хорошей идеей будет это прекратить_.
 

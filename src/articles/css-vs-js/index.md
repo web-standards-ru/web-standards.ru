@@ -1,11 +1,13 @@
 ---
-title: "CSS и JS в состоянии войны: как это остановить"
-date: "2019-02-04"
+title: 'CSS и JS в состоянии войны: как это остановить'
+date: 2019-02-04
+source:
+    title: 'CSS and JS are at war, here’s how to stop it'
+    url: https://dev.to/evilmartians/css-and-js-are-at-war-heres-how-to-stop-it-158a
+    author: 'Андрея Ситника'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[CSS and JS Are at War, Here’s How to Stop It](https://dev.to/evilmartians/css-and-js-are-at-war-heres-how-to-stop-it-158a)» Андрея Ситника._
 
 ![](images/1.gif)
 _[ESPN — Saber Combat](https://dribbble.com/shots/5310012-ESPN-Saber-Combat)_

@@ -1,11 +1,13 @@
 ---
-title: "Полезные правила доступности, которые останутся в памяти"
-date: "2018-11-28"
+title: 'Полезные правила доступности, которые останутся в памяти'
+date: 2018-11-28
+source:
+    title: 'Pragmatic rules of web accessibility that will stick to your mind'
+    url: https://medium.com/p/9d3eb85a1a28
+    author: 'Тьяго Ромеро Гарсии'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Pragmatic rules of web accessibility that will stick to your mind](https://medium.com/p/9d3eb85a1a28)» Тьяго Ромеро Гарсии._
 
 ![](images/1.jpg)
 _«Параолимпийские игры изменяют наше восприятие мира», Стивен Хокинг. То же можно сказать о доступности._

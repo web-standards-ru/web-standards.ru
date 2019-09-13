@@ -1,11 +1,13 @@
 ---
-title: "Основы адаптивной типографики"
-date: "2012-09-10"
+title: 'Основы адаптивной типографики'
+date: 2012-09-10
+source:
+    title: 'Responsive typography: the basics'
+    url: http://informationarchitects.net/blog/responsive-typography-the-basics/
+    author: 'Оливера Райхенштайна'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Responsive Typography: The Basics](http://informationarchitects.net/blog/responsive-typography-the-basics/)» Оливера Райхенштайна._
 
 Когда мы создаём сайты, мы обычно начинаем с определения основных параметров текста. Он диктует нам ширину главной колонки, а остальное выстраивается почти само собой. Так было раньше. До недавнего времени разрешение экрана было более или менее однородным, сегодня же мы имеем дело с разнообразными размерами и разрешениями, и это многое усложняет.
 

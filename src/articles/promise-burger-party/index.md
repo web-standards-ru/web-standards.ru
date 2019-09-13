@@ -1,11 +1,13 @@
 ---
-title: "Обещание бургерной вечеринки"
-date: "2017-02-09"
+title: 'Обещание бургерной вечеринки'
+date: 2017-02-09
+source:
+    title: 'The promise of a burger party'
+    url: https://kosamari.com/notes/the-promise-of-a-burger-party
+    author: 'Марико Косаки'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[The Promise of a Burger Party](https://kosamari.com/notes/the-promise-of-a-burger-party)» Марико Косаки._
 
 _Я написала этот пост как альтернативное введение в JavaScript-промисы. Я набросала его в своем блокноте во время чтения многочисленных статей на эту тему. Если вам нужно более глубокое руководство, в конце статьи есть список для дальнейшего изучения._
 

@@ -1,11 +1,13 @@
 ---
-title: "Инклюзивные компоненты: меню и кнопки меню"
-date: "2019-05-21"
+title: 'Инклюзивные компоненты: меню и кнопки меню'
+date: 2019-05-21
+source:
+    title: 'Menus & menu buttons'
+    url: https://inclusive-components.design/menus-menu-buttons/
+    author: 'Хейдона Пикеринга'
 layout: article.njk
 tags: article
 ---
-
-Перевод «[Menus & Menu Buttons](https://inclusive-components.design/menus-menu-buttons/)» Хейдона Пикеринга.
 
 ![](images/cover.png)
 

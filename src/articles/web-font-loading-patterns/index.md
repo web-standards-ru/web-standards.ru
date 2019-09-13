@@ -1,11 +1,13 @@
 ---
-title: "Паттерны загрузки веб-шрифтов"
-date: "2016-06-14"
+title: 'Паттерны загрузки веб-шрифтов'
+date: 2016-06-14
+source:
+    title: 'Web font loading patterns'
+    url: https://www.bramstein.com/writing/web-font-loading-patterns.html
+    author: 'Брэма Штайна'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Web Font Loading Patterns](https://www.bramstein.com/writing/web-font-loading-patterns.html)» Брэма Штайна._
 
 _Загрузка веб-шрифтов может показаться сложной задачей. Однако, на самом деле, она довольно проста, если вы будете использовать описанные ниже паттерны. Комбинируя их, вы сможете управлять загрузкой веб-шрифтов во всех браузерах._
 

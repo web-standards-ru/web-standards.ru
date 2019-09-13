@@ -1,11 +1,13 @@
 ---
-title: "Элементы i, b, em и strong"
-date: "2010-07-13"
+title: 'Элементы i, b, em и strong'
+date: 2010-07-13
+source:
+    title: 'The i, b, em, & strong elements'
+    url: http://html5doctor.com/i-b-em-strong-element/
+    author: 'Оли Стадхольма'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[The i, b, em, & strong elements](http://html5doctor.com/i-b-em-strong-element/)» Оли Стадхольма._
 
 В то время как многие элементы из HTML4 вошли в HTML5 без существенных изменений, некоторые исторически презентационные элементы обрели новую семантику.
 

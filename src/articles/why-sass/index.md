@@ -1,11 +1,13 @@
 ---
-title: "Почему Sass?"
-date: "2013-12-10"
+title: 'Почему Sass?'
+date: 2013-12-10
+source:
+    title: 'Why Sass?'
+    url: http://alistapart.com/article/why-sass
+    author: 'Дэна Седерхольма'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Why Sass?](http://alistapart.com/article/why-sass)» Дэна Седерхольма._
 
 _Перед вами перевод первой главы книги «[Sass For Web Designers](http://www.abookapart.com/products/sass-for-web-designers)» Дэна Седерхольма, которая вышла в серии A Book Apart. В числе [других книг](/books/), мы рекомендуем эту для введения в CSS-препроцессоры. Редакция._
 

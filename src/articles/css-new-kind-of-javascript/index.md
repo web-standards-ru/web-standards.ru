@@ -1,11 +1,13 @@
 ---
-title: "CSS: новый вид JavaScript"
-date: "2018-07-13"
+title: 'CSS: новый вид JavaScript'
+date: 2018-07-13
+source:
+    title: 'CSS: A New Kind Of JavaScript'
+    url: https://medium.com/p/fcf730d33ce7
+    author: 'Хейдона Пикеринга'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[CSS: A New Kind Of JavaScript](https://medium.com/@Heydon/css-a-new-kind-of-javascript-fcf730d33ce7)» Хейдона Пикеринга._
 
 Те из вас, кто знаком с веб-платформой, наверняка наслышаны и о двух дополнительных технологиях: **HTML** для структуризации документов и **JavaScript** для интерактивности и стилизации.
 

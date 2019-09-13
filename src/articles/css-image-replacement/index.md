@@ -1,11 +1,13 @@
 ---
-title: "Ещё одна CSS-техника замены текста изображением"
-date: "2012-09-10"
+title: 'Ещё одна CSS-техника замены текста изображением'
+date: 2012-09-10
+source:
+    title: 'Another CSS image replacement technique'
+    url: http://nicolasgallagher.com/another-css-image-replacement-technique/
+    author: 'Николаса Галлахера'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Another CSS image replacement technique](http://nicolasgallagher.com/another-css-image-replacement-technique/)» Николаса Галлахера._
 
 Недавно в проект [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) была добавлена новая техника замены текста изображением. В этой записи я расскажу, как она работает и как соотносится с альтернативными методами.
 

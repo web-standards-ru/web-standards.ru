@@ -1,15 +1,15 @@
 ---
-title: "Невыполненные обещания веб-компонентов"
-date: "2017-04-17"
+title: 'Невыполненные обещания веб-компонентов'
+date: 2017-04-17
+source:
+    title: 'The broken promise of Web Components'
+    url: https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/
+    author: 'Дмитрия Диманта'
 layout: article.njk
 tags: article
 ---
 
-_Перевод «[The broken promise of Web Components](https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/)» Дмитрия Диманта._
-
-<figure>
-    <img src="images/cover.jpg" alt="">
-</figure>
+<img src="images/cover.jpg" alt="">
 
 **Дисклеймер:** в статье я часто говорю о React, но вы можете понимать под ним любую библиотеку на JavaScript: Inferno, Preact, Vue, Snabbdom, Virtual DOM или без него: Elm, Om и другие. Точно так же под Polymer можно иметь в виду Vaadin или X-Tag, или…
 

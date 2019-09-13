@@ -1,11 +1,13 @@
 ---
-title: "Элементы details и summary"
-date: "2011-08-29"
+title: 'Элементы details и summary'
+date: 2011-08-29
+source:
+    title: 'The details and summary elements'
+    url: http://html5doctor.com/the-details-and-summary-elements/
+    author: 'Тома Лидбеттера'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[The details and summary elements](http://html5doctor.com/the-details-and-summary-elements/)» Тома Лидбеттера._
 
 Вам часто приходилось использовать JavaScript для создания виджета, показывающего и скрывающего какое-то содержимое? Возможно, для этого вы даже скачивали целую JavaScript-библиотеку? Что ж, можете радоваться: HTML5 позволяет создавать подобное всего лишь парой строчек кода, без применения JavaScript. Зависит от браузера, конечно, но мы вернёмся к этому позже. Представляем вам элемент `<details>`.
 

@@ -1,11 +1,13 @@
 ---
-title: "Почему у нас нет селектора по родителю"
-date: "2011-09-20"
+title: 'Почему у нас нет селектора по родителю'
+date: 2011-09-20
+source:
+    title: 'Why we don’t have a parent selector'
+    url: http://snook.ca/archives/html_and_css/css-parent-selectors/
+    author: 'Джонатана Снука'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Why we don’t have a parent selector](http://snook.ca/archives/html_and_css/css-parent-selectors/)» Джонатана Снука._
 
 Относительно регулярно я вижу дискуссии о том, должен ли CSS включать селектор по родителю и, пока я не выяснил, как работает движок браузера, сам строил предположения по этому поводу.
 

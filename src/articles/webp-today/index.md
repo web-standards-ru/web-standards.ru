@@ -1,11 +1,13 @@
 ---
-title: "WebP сегодня: зачем и как?"
-date: "2018-12-25"
+title: 'WebP сегодня: зачем и как?'
+date: 2018-12-25
+source:
+    title: 'Why and how to use WebP images today'
+    url: https://bitsofco.de/why-and-how-to-use-webp-images-today/
+    author: 'Ире Адеринокун'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Why and how to use WebP images today](https://bitsofco.de/why-and-how-to-use-webp-images-today/)» Ире Адеринокун._
 
 [WebP](https://developers.google.com/speed/webp/) — формат графики, разработанный Google в 2010. Он был создан, как альтернатива PNG и JPG, и отличается от них гораздо меньшим размером при том же качестве изображения.
 

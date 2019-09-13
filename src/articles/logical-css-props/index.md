@@ -1,13 +1,15 @@
 ---
-title: "Новые логические свойства в CSS!"
-date: "2019-02-06"
+title: 'Новые логические свойства в CSS!'
+date: 2019-02-06
+source:
+    title: 'New CSS Logical Properties!'
+    url: https://medium.com/p/bc6945311ce7
+    author: 'Элада Шехтера'
 layout: article.njk
 tags: article
 ---
 
 Следующий шаг в эволюции CSS
-
-_Перевод [«New CSS Logical Properties!»](https://medium.com/p/bc6945311ce7) Элада Шехтера._
 
 ## Интро
 

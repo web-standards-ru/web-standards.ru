@@ -1,11 +1,13 @@
 ---
-title: "Сколько стоит JavaScript?"
-date: "2017-11-21"
+title: 'Сколько стоит JavaScript?'
+date: 2017-11-21
+source:
+    title: 'The Cost Of JavaScript'
+    url: https://medium.com/p/84009f51e99e
+    author: 'Эдди Османи'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[The Cost Of JavaScript](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)» Эдди Османи._
 
 По мере того, как мы создаём сайты, всё более и более зависящие от JavaScript, мы иногда теряем производительность. В этой статье я расскажу про соблюдение некоторых правил, которые могут помочь, если вы хотите, чтобы ваш интерактивный сайт быстро загружался на мобильных устройствах.
 

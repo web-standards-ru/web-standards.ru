@@ -1,11 +1,13 @@
 ---
-title: "Как создать адаптивную сетку"
-date: "2017-10-03"
+title: 'Как создать адаптивную сетку'
+date: 2017-10-03
+source:
+    title: 'How to build a responsive grid system'
+    url: https://zellwk.com/blog/responsive-grid-system/
+    author: 'Зела Лью'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[How to build a responsive grid system](https://zellwk.com/blog/responsive-grid-system/)» Зела Лью._
 
 Адаптивная сетка — один из лучших инструментов для создания уникального дизайна. Вы можете настроить всё, что нужно — количество и ширину колонок, отступы и даже контрольные точки, при достижении которых перестраивается раскладка страницы.
 

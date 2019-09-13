@@ -1,11 +1,13 @@
 ---
-title: "Инклюзивные компоненты: тултипы и тоглтипы"
-date: "2019-07-23"
+title: 'Инклюзивные компоненты: тултипы и тоглтипы'
+date: 2019-07-23
+source:
+    title: 'Tooltips & Toggletips'
+    url: https://inclusive-components.design/tooltips-toggletips/
+    author: 'Хейдона Пикеринга'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/)» Хейдона Пикеринга._
 
 ![](images/cover.png)
 

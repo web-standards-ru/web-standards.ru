@@ -1,11 +1,13 @@
 ---
-title: "Размеры блоков, или Назад в будущее"
-date: "2013-01-23"
+title: 'Размеры блоков, или Назад в будущее'
+date: 2013-01-23
+source:
+    title: 'Box-sizing: border-box; the results are in'
+    url: http://generatedcontent.org/post/26334712021/box-sizing-results
+    author: 'Дэвида Стори'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Sizing Boxes (Back to the Future)](http://generatedcontent.org/post/25832131984/box-sizing)» и «[Box-sizing: border-box; the results are in](http://generatedcontent.org/post/26334712021/box-sizing-results)» Дэвида Стори._
 
 Технологии разработки сайтов меняются в корне. XHTML (Strict — мы так гордились своей работой) уступил место более свободному HTML5. Нарезанные картинки и div-обёртки заменяются гораздо более разумными (и, если повезет, семантичными) средствами HTML и CSS3, такими как `border-radius`, `box-shadow` и градиенты. Резиновая раскладка превращается в отзывчивый дизайн на медиа-выражениях. JavaScript — уже не просто игрушка, и занимает положенное место в триумвирате с HTML и CSS. Может быть, мы уже близки к получению реального инструмента разметки с помощью Flexbox. Может быть, даже почтенные единицы `em` будут забыты, и их заменят более предсказуемые [`rem`](http://generatedcontent.org/post/11933972962/css3values), а также [гибкие единицы `vw` и `vh`](http://generatedcontent.org/post/21279324555/viewportunits).
 

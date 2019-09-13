@@ -1,11 +1,13 @@
 ---
-title: "Исследуем большие экраны"
-date: "2014-11-24"
+title: 'Исследуем большие экраны'
+date: 2014-11-24
+source:
+    title: 'Surveying the Big Screen'
+    url: http://alistapart.com/article/surveying-the-big-screen
+    author: 'Майка Пика'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Surveying the Big Screen](http://alistapart.com/article/surveying-the-big-screen)» Майка Пика._
 
 Прошло больше трёх лет с тех пор, как [адаптивный веб-дизайн](http://alistapart.com/article/responsive-web-design) начал появляться в наших портфолио. Сегодня мы имеем солидный набор решений для создания сайтов, достойно отображающихся на маленьких устройствах. А как насчёт больших экранов?
 

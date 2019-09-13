@@ -1,13 +1,14 @@
 ---
-title: "Промисы на примерах из жизни"
-date: "2017-12-05"
+title: 'Промисы на примерах из жизни'
+subtitle: 'Поговорим о промисах простыми словами'
+date: 2017-12-05
+source:
+    title: 'JavaScript: promises explained with simple real life analogies'
+    url: https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138
+    author: 'Шрути Капур'
 layout: article.njk
 tags: article
 ---
-
-Поговорим о промисах простыми словами
-
-_Перевод «[JavaScript: Promises explained with simple real life analogies](https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138)» Шрути Капур._
 
 ![](images/1.jpg)
 _Ай промис, фото [Бена Уайта](https://unsplash.com/photos/tX4-tYibILg)._

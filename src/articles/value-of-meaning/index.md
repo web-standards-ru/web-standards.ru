@@ -1,11 +1,13 @@
 ---
-title: "Ценность осмысленности"
-date: "2012-08-09"
+title: 'Ценность осмысленности'
+date: 2012-08-09
+source:
+    title: 'The value of meaning'
+    url: http://cssquirrel.com/blog/2011/11/11/the-value-of-meaning/
+    author: 'Кайла Вимса'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[The Value of Meaning](http://cssquirrel.com/blog/2011/11/11/the-value-of-meaning/)» Кайла Вимса._
 
 <img src="images/comic.png" alt="">
 

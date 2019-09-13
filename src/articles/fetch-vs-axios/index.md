@@ -1,13 +1,13 @@
 ---
-title: "Генерация HTTP-запросов"
-date: "2017-11-15"
+title: 'Генерация HTTP-запросов: Fetch или Axios.js'
+date: 2017-11-15
+source:
+    title: 'Fetch vs. Axios.js for making HTTP requests'
+    url: https://medium.com/p/2b261cdd3af5
+    author: 'Джейсона Арнольда'
 layout: article.njk
 tags: article
 ---
-
-Fetch или Axios.js.
-
-_Перевод «[Fetch vs. Axios.js for making http requests](https://medium.com/p/2b261cdd3af5)» Джейсона Арнольда._
 
 <figure>
     <img src="images/1.jpg" alt="">

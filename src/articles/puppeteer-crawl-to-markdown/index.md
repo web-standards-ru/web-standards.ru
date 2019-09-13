@@ -1,13 +1,15 @@
 ---
-title: "Puppeteer для краулинга страниц сайта и сохранения их в Markdown"
-date: "2019-01-17"
+title: 'Puppeteer для краулинга страниц сайта и сохранения их в Markdown'
+date: 2019-01-17
+source:
+    title: 'Using Puppeteer to crawl pages and save them as Markdown files'
+    url: https://justmarkup.com/log/2019/01/using-puppeteer-to-crawl-pages-and-save-them-as-markdown-files/
+    author: 'Михаэля Шарналя'
 layout: article.njk
 tags: article
 ---
 
-_Перевод «[Using Puppeteer to crawl pages and save them as Markdown files](https://justmarkup.com/log/2019/01/using-puppeteer-to-crawl-pages-and-save-them-as-markdown-files/)» Михаэля Шарналя._
-
-![Используем Puppeteer для краулинга страниц сайта и сохранения их в Markdown.](images/1.png)
+![](images/1.png)
 
 Одна из моих целей на 2019: закончить редизайн [моего сайта](https://justmarkup.com/), и, что гораздо важнее, превратить его из сайта на WordPress в обычный статический сайт. Чтобы это сделать, мне надо сохранить все мои посты в формате Markdown. Попытки найти для этой задачи подходящий плагин для WordPress не увенчались успехом. С другой стороны, я бы мог использовать WordPress REST API или даже RSS-фид, чтобы получить данные, но и это не показалось мне вполне правильным решением. Потом я прочёл [статью](https://24ways.org/2018/dynamic-social-sharing-images/), написанную [Дрю МакЛиланом](https://twitter.com/drewm), в которой он использует Puppeteer для динамического создания скриншотов страниц, которые потом использует в превью постов для социальных сетей. И тогда у меня созрел план.
 

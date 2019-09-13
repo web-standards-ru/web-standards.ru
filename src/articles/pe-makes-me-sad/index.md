@@ -1,11 +1,13 @@
 ---
-title: "Прогрессивное улучшение меня расстраивает"
-date: "2016-03-22"
+title: 'Прогрессивное улучшение меня расстраивает'
+date: 2016-03-22
+source:
+    title: 'Progressive enhancement makes me sad'
+    url: http://www.heydonworks.com/article/progressive-enhancement-makes-me-sad
+    author: 'Хейдона Пикеринга'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Progressive Enhancement Makes Me Sad](http://www.heydonworks.com/article/progressive-enhancement-makes-me-sad)» Хейдона Пикеринга._
 
 Последнее время только и разговоров в защиту прогрессивного улучшения и «универсальных» (изоморфных) приложений. Оказывается, серверный рендеринг улучшает быстродействие, надёжность, совместимость и упрощает парсинг содержимого.
 

@@ -1,11 +1,13 @@
 ---
-title: "Наша бессмысленная погоня за семантической ценностью"
-date: "2012-08-09"
+title: 'Наша бессмысленная погоня за семантической ценностью'
+date: 2012-08-09
+source:
+    title: 'Our pointless pursuit of semantic value'
+    url: http://coding.smashingmagazine.com/2011/11/11/our-pointless-pursuit-of-semantic-value/
+    author: 'Дивьи Маньян'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Our Pointless Pursuit Of Semantic Value](http://coding.smashingmagazine.com/2011/11/11/our-pointless-pursuit-of-semantic-value/)» Дивьи Маньян._
 
 > Мета-утопия — это мир достоверных метаданных. Когда же отравителю становится выгодно отравить колодец, то мета-воды становятся крайне токсичными очень быстро.
 > [Кори Доктороу](http://www.well.com/~doctorow/metacrap.htm)

@@ -1,11 +1,13 @@
 ---
-title: "Избегаем популярных ошибок в HTML5"
-date: "2011-07-27"
+title: 'Избегаем популярных ошибок в HTML5'
+date: 2011-07-27
+source:
+    title: 'Avoiding common HTML5 mistakes'
+    url: http://html5doctor.com/avoiding-common-html5-mistakes/
+    author: 'Ричарда Кларка'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoiding-common-html5-mistakes/)» Ричарда Кларка._
 
 Разбирая сайты для [Галереи HTML5](http://html5gallery.com/) и отвечая на вопросы читателей на сайте [Доктор HTML5](http://html5doctor.com/), я вынужден просматривать целую кучу страниц на HTML5 и, конечно же, их исходный код. В этой статье я расскажу вам об ошибках и сомнительной разметке, которые мне частенько приходится видеть, и объясню, как их избежать.
 
@@ -15,7 +17,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
 
     <!-- Не копируйте этот код! Он неправильный! -->
     <div id="wrapper">
-        <div id="header">  
+        <div id="header">
             <h1>Моя супер-пупер страница</h1>
             <!-- Содержимое шапки -->
         </div>
@@ -34,7 +36,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
 
     <!-- Не копируйте этот код! Он неправильный! -->
     <section id="wrapper">
-        <header>  
+        <header>
             <h1>Моя супер-пупер страница</h1>
             <!-- Содержимое шапки -->
         </header>
@@ -54,7 +56,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
 Таким образом, корректной разметкой для упомянутого выше примера с использованием HTML5 и пары ролей ARIA будет следующий код. Обратите внимание, что вам, в зависимости от дизайна, всё ещё могут понадобится экстра-элементы `<div>`.
 
     <body>
-        <header>  
+        <header>
             <h1>Моя супер-пупер страница</h1>
             <!-- Содержимое шапки -->
         </header>
@@ -86,7 +88,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
 
     <!-- Не копируйте этот код! Он неправильный! -->
     <article>
-        <header>  
+        <header>
             <h1>Мой лучший пост</h1>
         </header>
         <!-- Содержимое записи -->
@@ -110,7 +112,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
 
     <!-- Не копируйте этот код! Он неправильный! -->
     <header>
-        <hgroup>  
+        <hgroup>
             <h1>Мой лучший пост</h1>
         </hgroup>
         <p>Ричард Кларк</p>
@@ -127,7 +129,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
 
     <!-- Не копируйте этот код! Он неправильный! -->
     <header>
-        <hgroup>  
+        <hgroup>
             <h1>Моя компания</h1>
             <h2>Основана в 1893 году</h2>
         </hgroup>
@@ -135,7 +137,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
 
 Когда `<hgroup>` — это единственный дочерний элемент `<header>`, то какой смысл в этом `<header>`? Если в нём нет дополнительных элементов, соседствующих с `<hgroup>`, смело избавляйтесь от `<header>`.
 
-    <hgroup>  
+    <hgroup>
         <h1>Моя компания</h1>
         <h2>Основана в 1893 году</h2>
     </hgroup>
@@ -202,7 +204,7 @@ _Перевод «[Avoiding common HTML5 mistakes](http://html5doctor.com/avoidi
     </header>
 
     <!-- Не копируйте этот код! Он неправильный! -->
-    <header>  
+    <header>
         <figure>
             <img src="logo.png" alt="Моя компания">
         </figure>

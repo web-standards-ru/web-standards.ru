@@ -1,11 +1,13 @@
 ---
-title: "Руководство для прохождения интервью по фронтенду"
-date: "2018-02-21"
+title: 'Руководство для прохождения интервью по фронтенду'
+date: 2018-02-21
+source:
+    title: 'Front-end interview handbook'
+    url: https://github.com/yangshun/front-end-interview-handbook
+    author: 'Юн Хен Тая'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Front End Interview Handbook](https://github.com/yangshun/front-end-interview-handbook)» Юн Хен Тая._
 
 ## Часть 1. HTML
 

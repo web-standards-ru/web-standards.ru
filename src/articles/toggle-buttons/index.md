@@ -1,11 +1,13 @@
 ---
-title: "Инклюзивные компоненты: переключатели"
-date: "2019-01-05"
+title: 'Инклюзивные компоненты: переключатели'
+date: 2019-01-05
+source:
+    title: 'Toggle buttons'
+    url: https://inclusive-components.design/toggle-button/
+    author: 'Хейдона Пикеринга'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Toggle Buttons](https://inclusive-components.design/toggle-button/)» Хейдона Пикеринга._
 
 ![](images/buttons.jpg)
 

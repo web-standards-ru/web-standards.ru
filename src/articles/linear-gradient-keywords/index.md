@@ -1,11 +1,13 @@
 ---
-title: "Ключевые слова в линейных градиентах"
-date: "2012-07-24"
+title: 'Ключевые слова в линейных градиентах'
+date: 2012-07-24
+source:
+    title: 'Linear gradient keywords'
+    url: http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/
+    author: 'Эрика Мейера'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Linear Gradient Keywords](http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/)» Эрика Мейера._
 
 Использование линейных градиентов в CSS может приводить к самым разнообразным результатам, которые не назовёшь иначе как странными; иногда даже сам синтаксис кажется странным.
 

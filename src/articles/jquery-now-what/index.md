@@ -1,11 +1,13 @@
 ---
-title: "Я знаю jQuery. И что?"
-date: "2013-12-16"
+title: 'Я знаю jQuery. И что?'
+date: 2013-12-16
+source:
+    title: 'I know jQuery. Now what?'
+    url: http://remysharp.com/2013/04/19/i-know-jquery-now-what/
+    author: 'Реми Шарпа'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[I know jQuery. Now what?](http://remysharp.com/2013/04/19/i-know-jquery-now-what/)» Реми Шарпа._
 
 На конференции jQuery UK 2013 я делал доклад под названием «[Я знаю jQuery. И что?](https://speakerdeck.com/rem/i-know-jquery-now-what)». Обычно я готовлюсь, устраивая взрыв из стикеров на своём столе, но в этот раз я сперва написал пост, а потом уже сделал слайды. Итак, вот мой практически не отредактированный и немного путаный рассказ о том, как я работал с jQuery, и как я смотрю на использование встроенных браузерных технологий.
 

@@ -1,11 +1,13 @@
 ---
-title: "Быстродействие фронтенда для дизайнеров и разработчиков"
-date: "2013-04-15"
+title: 'Быстродействие фронтенда для дизайнеров и разработчиков'
+date: 2013-04-15
+source:
+    title: 'Front-end performance for web designers and front-end developers'
+    url: http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/
+    author: 'Гарри Робертса'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Front-end performance for web designers and front-end developers](http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/)» Гарри Робертса._
 
 Вряд ли кто-то будет отрицать, что быстродействие — один из _ключевых_ аспектов любого более-менее серьёзного веб-проекта: будь это маленький сайт-портфолио, мобильное веб-приложение, или полноценный проект интернет-магазина. Исследования, статьи и ваш собственный опыт подсказывают: чем быстрее, тем лучше.
 

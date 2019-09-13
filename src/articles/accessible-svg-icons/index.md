@@ -1,11 +1,13 @@
 ---
-title: "Доступные SVG-иконки с инлайновыми спрайтами"
-date: "2018-12-17"
+title: 'Доступные SVG-иконки с инлайновыми спрайтами'
+date: 2018-12-17
+source:
+    title: 'Accessible SVG Icons with Inline Sprites'
+    url: https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/
+    author: 'Марко Хенгстенберга'
 layout: article.njk
 tags: article
 ---
-
-_Перевод [«Accessible SVG Icons with Inline Sprites»](https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/) Марко Хенгстенберга._
 
 Если вы ищете повод использовать иконки в проекте, то далеко ходить не надо. Как хорошо заметил [Оливер Рейхенштейн](https://ia.net) в своём докладе [«Об иконках»](https://vimeo.com/184776819) на Smashing Conf во Фрайбурге: _«На определённом этапе проекта кто-нибудь обязательно приходит и говорит: нам нужны иконки!»_. Так зачем они нужны людям?
 

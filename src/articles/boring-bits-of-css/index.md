@@ -1,11 +1,13 @@
 ---
-title: "Как я научился любить скучные мелочи CSS"
-date: "2012-08-21"
+title: 'Как я научился любить скучные мелочи CSS'
+date: 2012-08-21
+source:
+    title: 'Learning to Love the Boring Bits of CSS'
+    url: http://www.alistapart.com/articles/love-the-boring-bits-of-css/
+    author: 'Питера Гастона'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[Learning to Love the Boring Bits of CSS](http://www.alistapart.com/articles/love-the-boring-bits-of-css/)» Питера Гастона._
 
 В будущем CSS есть много того, чего нам стоит ожидать с нетерпением: с одной стороны, там будет целый спектр новых методов, которые произведут революцию в вёрстке; с другой стороны — новый набор графических эффектов, которые позволят создавать на лету фильтры и шейдеры. Людям всё это страшно нравится, в журналах и блогах пишется огромное количество статей об этих нововведениях.
 

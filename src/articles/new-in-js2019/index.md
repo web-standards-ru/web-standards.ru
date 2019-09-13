@@ -1,11 +1,13 @@
 ---
-title: "Что нового в JavaScript 2019"
-date: "2019-01-30"
+title: 'Что нового в JavaScript 2019'
+date: 2019-01-30
+source:
+    title: 'What’s New in JavaScript for 2019'
+    url: https://developer.okta.com/blog/2019/01/22/whats-new-in-es2019
+    author: 'Девида Нила'
 layout: article.njk
 tags: article
 ---
-
-_Перевод «[What’s New in JavaScript for 2019](https://developer.okta.com/blog/2019/01/22/whats-new-in-es2019)» Девида Нила._
 
 ![](images/1.jpg)
 
