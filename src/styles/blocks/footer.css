@@ -1,6 +1,44 @@
 /* Footer */
 
 .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
+    row-gap: 10px;
+    padding: 16px 8px;
     background-color: var(--color-grey-dark);
     color: var(--color-text-grey-light);
+}
+
+/* Links */
+
+.footer__link {
+    color: white;
+}
+
+/* Copy */
+
+.footer__copy {
+    grid-row: 1 / auto;
+    grid-column: 1 / 2;
+    margin: 0;
+}
+
+/* Design */
+
+.footer__design {
+    grid-column: 1 / 2;
+    margin: 0;
+}
+
+/* Pages */
+
+.footer__pages {
+    display: grid;
+    grid-row: 1 / -1;
+    grid-column: 2 / 3;
+    row-gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
