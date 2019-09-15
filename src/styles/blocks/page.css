@@ -1,11 +1,24 @@
 /* Page */
 
+.page,
+.page__body {
+    height: 100%;
+}
+
 .page {
     background-color: white;
     color: black;
     font-family: 'Dewi', sans-serif;
 }
 
+/* Body */
+
 .page__body {
+    display: grid;
+    grid-template-rows:
+        min-content
+        1fr
+        min-content
+        min-content;
     margin: 0;
 }
