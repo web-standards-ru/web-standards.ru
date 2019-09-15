@@ -1,7 +1,23 @@
 /* Header */
 
-.header__type {
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Dewi', sans-serif;
+.header {
+    padding: 16px 8px;
+}
+
+/* Logo */
+
+.header__logo {
+
+}
+
+/* Navigation */
+
+.header__navigation {
+
+}
+
+/* Informer */
+
+.header__informer {
+
 }

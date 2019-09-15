@@ -1,25 +1,26 @@
 <header class="header">
-    <div class="header__logotype">
-        <img class="header__logo" src="/images/logo.svg" width="32" alt="">
-        <p class="header__type">
+    <div class="header__logo logo">
+        <img class="logo__cube" src="/images/logo.svg" width="36" alt="">
+        <p class="logo__title">
             {% if page.url != '/' %}<a href="/">{% endif %}
                 Веб-стандарты
             {% if page.url != '/' %}</a>{% endif %}
         </p>
-        <p>Сообщество разработчиков</p>
+        <p class="logo__tagline">Сообщество разработчиков</p>
     </div>
-    <nav class="header__navigation">
-        <ul>
-            <li><a href="/articles/">Статьи</a></li>
-            <li><a>Конференция</a></li>
-            <li><a>Календарь</a></li>
-            <li><a>Подкаст</a></li>
-            <li><a href="">О проекте</a></li>
-            <li><a href="">Поддержать проект</a></li>
+    <nav class="header__navigation navigation">
+        <button class="navigation__button" type="button"></button>
+        <ul class="navigation__pages">
+            <li class="navigation__page"><a class="navigation__link" href="/articles/">Статьи</a></li>
+            <li class="navigation__page"><a class="navigation__link">Конференция</a></li>
+            <li class="navigation__page"><a class="navigation__link">Календарь</a></li>
+            <li class="navigation__page"><a class="navigation__link">Подкаст</a></li>
+            <li class="navigation__page"><a class="navigation__link" href="">О проекте</a></li>
+            <li class="navigation__page"><a class="navigation__link" href="">Поддержать проект</a></li>
         </ul>
     </nav>
-    <ul class="header__teaser">
-        <li>Автор JS-интенсивов, встроенный скроллер в Chrome развитие SVG и &amp; в CSS</li>
-        <li>Конференция в Москве, еще одна строка желательна</li>
+    <ul class="header__informer informer">
+        <li class="informer__item">164. Автор JS-интенсивов, встроенный скроллер в Chrome развитие SVG и &amp; в CSS</li>
+        <li class="informer__item">5 апр. Конференция в Москве, еще одна строка желательна</li>
     </ul>
 </header>

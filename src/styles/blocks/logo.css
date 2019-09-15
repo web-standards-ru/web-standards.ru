@@ -1,0 +1,45 @@
+/* Logo */
+
+.logo {
+    display: grid;
+    column-gap: 8px;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+}
+
+.logo__cube {
+    width: 36px;
+}
+
+@media (min-width: 640px) {
+    .logo__cube {
+        grid-row: 1 / 3;
+        width: 76px;
+    }
+}
+
+.logo__title {
+    margin: 0;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (min-width: 640px) {
+    .logo__title {
+        font-size: 48px;
+    }
+}
+
+.logo__tagline {
+    display: none;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+@media (min-width: 640px) {
+    .logo__tagline {
+        display: block;
+    }
+}

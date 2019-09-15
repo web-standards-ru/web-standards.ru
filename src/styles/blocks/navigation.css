@@ -1,0 +1,41 @@
+/* Navigation */
+
+.navigation {
+
+}
+
+/* Button */
+
+.navigation__button {
+    width: 18px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    background-image: url(/images/burger.svg);
+}
+
+/* Pages */
+
+.navigation__pages {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Page */
+
+.navigation__page {
+    text-transform: uppercase;
+}
+
+/* Link */
+
+.navigation__link {
+    color: var(--color-grey-medium);
+    text-decoration: none;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+    color: inherit;
+}
