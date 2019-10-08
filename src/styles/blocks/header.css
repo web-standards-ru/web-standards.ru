@@ -1,23 +1,25 @@
 /* Header */
 
 .header {
-    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 64px;
 }
 
 /* Logo */
 
 .header__logo {
-
+    order: 2;
 }
 
 /* Navigation */
 
 .header__navigation {
-
+    order: 1;
 }
 
 /* Informer */
 
 .header__informer {
-
+    order: 3;
 }
