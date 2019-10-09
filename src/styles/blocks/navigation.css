@@ -1,38 +1,54 @@
 /* Navigation */
 
 .navigation {
-
+    display: flex;
+    padding: 10px 0 26px;
+    border-bottom: 1px solid #8e8e8e;
 }
 
 /* Button */
 
 .navigation__button {
-    width: 18px;
+    display: none;
     height: 12px;
-    border: none;
+    width: 18px;
+
     background-color: transparent;
-    background-image: url(/images/burger.svg);
+    background-image: url('/images/burger.svg');
+    border: none;
 }
 
 /* Pages */
 
 .navigation__pages {
+    display: flex;
     margin: 0;
     padding: 0;
+    width: 100%;
+
     list-style: none;
 }
 
 /* Page */
 
-.navigation__page {
-    text-transform: uppercase;
+.navigation__page:not(:last-of-type) {
+    margin: 0 20px 0 0;
+}
+
+.navigation__page_right {
+    margin-left: auto;
+    padding: 0 0 0 2em;
+    background: url('/images/patreon.svg') center left no-repeat;
 }
 
 /* Link */
 
 .navigation__link {
-    color: var(--color-grey-medium);
+    line-height: 1.2;
+    color: black;
+    letter-spacing: 0.05em;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .navigation__link:link,

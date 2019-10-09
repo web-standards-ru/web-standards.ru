@@ -20,5 +20,6 @@
         1fr
         min-content
         min-content;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1920px;
 }
