@@ -15,8 +15,7 @@ module.exports = function(config) {
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
         templateFormats: [
-            'md',
-            'html',
+            'md', 'html',
             'jpg', 'png', 'svg'
         ],
     };
