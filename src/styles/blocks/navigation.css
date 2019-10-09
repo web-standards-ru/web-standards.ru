@@ -14,7 +14,7 @@
     width: 18px;
 
     background-color: transparent;
-    background-image: url(/images/burger.svg);
+    background-image: url('/images/burger.svg');
     border: none;
 }
 
