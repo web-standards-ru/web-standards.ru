@@ -38,15 +38,14 @@
 .navigation__page_right {
     margin-left: auto;
     padding: 0 0 0 2em;
-    
-    background: url(/images/patreon.svg) center left no-repeat;
+    background: url('/images/patreon.svg') center left no-repeat;
 }
 
 /* Link */
 
 .navigation__link {
-    line-height: 19px;
-    color: var(--color-black);
+    line-height: 1.2;
+    color: black;
     letter-spacing: 0.05em;
     text-decoration: none;
     text-transform: uppercase;
