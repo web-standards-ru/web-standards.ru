@@ -3,6 +3,14 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
 
+    config.addFilter('ruDate', function(value) {
+        return value.toLocaleString('ru', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }).replace(' г.', '');
+    });
+
     config.addFilter('htmlmin', function(value) {
         let htmlmin = require('html-minifier');
         return htmlmin.minify(

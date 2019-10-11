@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "npx eleventy --serve --quiet",
-    "build": "npx eleventy --quiet",
+    "start": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" npx eleventy --serve --quiet",
+    "build": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" npx eleventy --quiet",
     "test": "stylelint 'src/styles/**/*.css'"
   },
   "devDependencies": {
