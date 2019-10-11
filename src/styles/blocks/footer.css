@@ -8,7 +8,7 @@
     column-gap: 10px;
     padding: 16px 8px;
     background-color: var(--color-grey-dark);
-    color: var(--color-text-grey-light);
+    color: var(--color-grey-lighter);
 }
 
 /* Links */
