@@ -1,10 +1,140 @@
 /* Links */
 
 .links {
+    padding: 16px 9px;
+    box-sizing: border-box;
     background-color: var(--color-grey-light);
 }
 
+.links__list {
+    margin: 0;
+}
+
 .links__title {
-    font-weight: normal;
+    margin: 0 0 15px 0;
     font-family: 'Dewi Expanded', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.links__section {
+    padding: 9px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-family: 'Dewi';
+    font-size: 12px;
+}
+
+.links__section:not(:last-child) {
+    border-bottom: 1px solid var(--color-grey-medium);
+}
+
+.links__definition {
+    flex: 1 1 auto;
+}
+
+.links__description {
+    margin: 0 5px 0 0;
+    display: flex;
+    flex: 0 0 144px;
+    text-align: left;
+}
+
+.links__link {
+    margin-right: 15px;
+}
+
+.links__link::before {
+    content: '';
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+}
+
+@media (min-width: 568px) {
+    .links {
+        display: flex;
+    }
+
+    .links__title {
+        flex: 1 1 auto;
+    }
+
+    .links__list {
+        flex: 0 0 320px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .links {
+        padding: 30px 48px;
+    }
+
+    .links__title {
+        font-size: 24px;
+    }
+
+    .links__section {
+        padding: 20px 0;
+        font-size: 16px;
+    }
+
+    .links__section:first-child {
+        padding-top: 0;
+    }
+
+    .links__list {
+        flex: 0 0 490px;
+    }
+
+    .links__definition {
+        flex: 1 1 auto;
+    }
+
+    .links__description {
+        margin-right: 15px;
+        flex: 0 0 190px;
+    }
+
+    .links__link {
+        margin-right: 15px;
+    }
+
+    .links__link::before {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+/* Links Icons */
+
+.links__link--vk::before {
+    background-image: url('/images/icons/social-vk.svg');
+}
+
+.links__link--fb::before {
+    background-image: url('/images/icons/social-fb.svg');
+}
+
+.links__link--twitter::before {
+    background-image: url('/images/icons/social-twitter.svg');
+}
+
+.links__link--telegram::before {
+    background-image: url('/images/icons/social-telegram.svg');
+}
+
+.links__link--github::before {
+    background-image: url('/images/icons/social-github.svg');
+}
+
+.links__link--slack::before {
+    background-image: url('/images/icons/social-slack.svg');
+}
+
+.links__link--youtube::before {
+    background-image: url('/images/icons/social-youtube.svg');
 }
