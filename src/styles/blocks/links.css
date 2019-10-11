@@ -108,33 +108,32 @@
     }
 }
 
-
 /* Links Icons */
 
 .links__link--vk::before {
-    background-image: url('/images/icons/social-vk.svg');
+    background-image: url('/images/social/vk.svg');
 }
 
-.links__link--fb::before {
-    background-image: url('/images/icons/social-fb.svg');
+.links__link--facebook::before {
+    background-image: url('/images/social/facebook.svg');
 }
 
 .links__link--twitter::before {
-    background-image: url('/images/icons/social-twitter.svg');
+    background-image: url('/images/social/twitter.svg');
 }
 
 .links__link--telegram::before {
-    background-image: url('/images/icons/social-telegram.svg');
+    background-image: url('/images/social/telegram.svg');
 }
 
 .links__link--github::before {
-    background-image: url('/images/icons/social-github.svg');
+    background-image: url('/images/social/github.svg');
 }
 
 .links__link--slack::before {
-    background-image: url('/images/icons/social-slack.svg');
+    background-image: url('/images/social/slack.svg');
 }
 
 .links__link--youtube::before {
-    background-image: url('/images/icons/social-youtube.svg');
+    background-image: url('/images/social/youtube.svg');
 }
