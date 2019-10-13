@@ -5,7 +5,22 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main">
-    {{ content | safe }}
+  {{ content | safe }}
+
+  <ul class="articles-list list">  
+    {%- for article in collections.article | reverse -%}
+      <li class="list-item">
+        <article class="post">
+          <h2 class="post__title">
+            <a href="{{ article.url }}" class="post__link link">
+              {{ article.data.title }}
+            </a>
+          </h2>
+          
+        </article>
+      </li>
+    {%- endfor -%}
+  </ul>
 </main>
 
 {% include 'aside.njk' %}

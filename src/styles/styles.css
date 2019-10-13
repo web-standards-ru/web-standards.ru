@@ -16,8 +16,8 @@
 /* Globals */
 
 :root {
-    --color-grey-darker: #333333;
     --color-grey-dark: #273238;
+    --color-grey-darker: #333333;
     --color-grey-medium: #696969;
     --color-grey-light: #828282;
     --color-grey-lighter: #b1b3b6;

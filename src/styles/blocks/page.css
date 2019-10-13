@@ -3,6 +3,7 @@
 .page,
 .page__body {
     height: 100%;
+    overflow-x: hidden;
 }
 
 .page {

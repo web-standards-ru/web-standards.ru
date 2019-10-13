@@ -1,7 +1,96 @@
 /* Informer */
 
 .informer {
-    margin: 0;
     padding: 0;
     list-style: none;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.informer__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.informer__decoration {
+    display: flex;
+    align-items: center;
+}
+
+.informer__meta {
+    background-image: url('/images/wave.svg');
+    background-size: 22px 14px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    font-size: 13px;
+    min-width: 40px;
+    text-transform: uppercase;
+    padding-left: 24px;
+}
+
+.informer__meta--calendar {
+    background-image: url('/images/calendar.svg');
+}
+
+.informer__text {
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.informer__item::after {
+    background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (min-width: 500px) {
+    .informer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: -1;
+        white-space: normal;
+    }
+}
+
+@media (min-width: 600px) {
+    .informer {
+        grid-column-start: 6;
+    }
+
+    .informer__item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .informer__meta {
+        background-size: 38px 29px;
+        font-size: 48px;
+        padding-left: 38px;
+    }
+
+    .informer__meta--calendar {
+        background-size: 38px 23px;
+    }
+
+    .informer__text {
+        margin-top: 10px;
+        margin-bottom: 0;
+        white-space: normal;
+    }
+}
+
+@media (min-width: 800px) {
+    .informer__item::after {
+        display: none;
+    }
 }
