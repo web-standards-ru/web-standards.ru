@@ -35,7 +35,7 @@
     margin: 0 20px 0 0;
 }
 
-.navigation__page_right {
+.navigation__page--right {
     margin-left: auto;
     padding: 0 0 0 2em;
     background: url('/images/patreon.svg') center left no-repeat;

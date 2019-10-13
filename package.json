@@ -81,6 +81,7 @@
       "block-opening-brace-newline-after": "always-multi-line",
       "block-opening-brace-space-after": "always-single-line",
       "block-opening-brace-space-before": "always-single-line",
+      "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
       "selector-attribute-brackets-space-inside": "never",
       "selector-attribute-operator-space-after": "never",
       "selector-attribute-operator-space-before": "never",
