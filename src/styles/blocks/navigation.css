@@ -1,19 +1,17 @@
 /* Navigation */
 
 .navigation {
+    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
 }
 
 @media (min-width: 500px) {
     .navigation {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
         border-bottom: 1px solid #8e8e8e;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 1;
-        grid-column-end: -1;
         font-size: 16px;
     }
 }
@@ -21,6 +19,9 @@
 /* Button */
 
 .navigation__button {
+    display: block;
+    width: 26px;
+    height: 18px;
     background-color: transparent;
     background-image: url('/images/burger.svg');
     background-position: 50% 50%;
@@ -28,9 +29,6 @@
     background-size: 100%;
     border: none;
     cursor: pointer;
-    display: block;
-    width: 26px;
-    height: 18px;
     transition: 0.5s;
 }
 
@@ -69,55 +67,55 @@
 
 @media (min-width: 500px) {
     .navigation__pages {
-        background-color: transparent;
+        position: static;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         flex-wrap: wrap;
-        position: static;
+        justify-content: space-between;
+        background-color: transparent;
     }
 }
 
 /* Page */
 
 .navigation__page {
+    margin: 0;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #000000;
-    margin: 0;
-    padding: 10px 0;
 }
 
 @media (min-width: 500px) {
     .navigation__page {
         margin-right: 10px;
-        border-bottom: 0;
         padding: 0;
+        border-bottom: 0;
     }
 
     .navigation__page--right {
         display: flex;
+        flex-basis: 25%;
         justify-content: flex-end;
         align-items: center;
-        flex-basis: 25%;
     }
 
     .navigation__page--right::before {
-        background: url('/images/patreon.svg') center left no-repeat;
         display: block;
-        content: '';
         width: 20px;
         height: 20px;
         margin-right: 10px;
+        background: url('/images/patreon.svg') center left no-repeat;
+        content: '';
     }
 }
 
 /* Link */
 
 .navigation__link {
-    color: #000000;
     display: block;
+    color: black;
     line-height: 1.2;
     letter-spacing: 0.05em;
     text-decoration: none;
