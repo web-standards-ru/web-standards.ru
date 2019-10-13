@@ -38,12 +38,12 @@
 .links__description {
     margin: 0 5px 0 0;
     display: flex;
-    flex: 0 0 144px;
+    flex: 0 0 172px;
     text-align: left;
 }
 
 .links__link {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .links__link::before {
@@ -95,7 +95,7 @@
 
     .links__description {
         margin-right: 15px;
-        flex: 0 0 190px;
+        flex: 0 0 252px;
     }
 
     .links__link {
