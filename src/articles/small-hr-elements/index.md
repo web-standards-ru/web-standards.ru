@@ -3,8 +3,11 @@ title: 'Элементы small и hr'
 date: 2011-05-30
 source:
     title: 'The small & hr elements'
-    url: http://html5doctor.com/small-hr-element/
-    author: 'Оли Стадхольма'
+    url: 'https://html5doctor.com/small-hr-element/'
+    author: 'Оли Стадхольм'
+translator:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---

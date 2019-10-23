@@ -3,8 +3,11 @@ title: 'Почему у нас нет селектора по родител�
 date: 2011-09-20
 source:
     title: 'Why we don’t have a parent selector'
-    url: http://snook.ca/archives/html_and_css/css-parent-selectors/
-    author: 'Джонатана Снука'
+    url: 'http://snook.ca/archives/html_and_css/css-parent-selectors/'
+    author: 'Джонатан Снук'
+translator:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---

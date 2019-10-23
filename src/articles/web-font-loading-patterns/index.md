@@ -3,8 +3,14 @@ title: 'Паттерны загрузки веб-шрифтов'
 date: 2016-06-14
 source:
     title: 'Web font loading patterns'
-    url: https://www.bramstein.com/writing/web-font-loading-patterns.html
-    author: 'Брэма Штайна'
+    url: 'https://www.bramstein.com/writing/web-font-loading-patterns.html'
+    author: 'Брэм Штайн'
+translator:
+    name: 'Андрей Алексеев'
+    url: 'https://github.com/aalexeev239'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -194,5 +200,3 @@ Internet Explorer и Edge используют FOUT и отображают з
     }
 
 Если вы будете загружать шрифты этим способом, ваши посетители увидят FOUT только при первом посещении сайта, а при всех дальнейших переходах шрифт будет отрисовываться мгновенно. А значит, с одной стороны, вы сохраните выгоды, которые даёт прогрессивное улучшение, а с другой — сделаете сайт удобным, поскольку загрузка страниц будет меньше раздражать при повторных посещениях.
-
-_Перевод [Андрея Алексеева](https://github.com/aalexeev239), редактура [Вадима Макеева](http://pepelsbey.net)._

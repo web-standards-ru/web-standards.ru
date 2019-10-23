@@ -3,8 +3,11 @@ title: 'Префикс или постхак'
 date: 2010-08-19
 source:
     title: 'Prefix or posthack'
-    url: http://www.alistapart.com/articles/prefix-or-posthack/
-    author: 'Эрика Мейера'
+    url: 'http://www.alistapart.com/articles/prefix-or-posthack/'
+    author: 'Эрик Мейер'
+translator:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---

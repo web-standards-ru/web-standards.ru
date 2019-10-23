@@ -3,8 +3,16 @@ title: 'Культ карго CSS'
 date: 2014-02-19
 source:
     title: 'Cargo Cult CSS'
-    url: http://www.kapowaz.net/articles/cargo-cult-css
-    author: 'Бена Дарлоу'
+    url: 'http://www.kapowaz.net/articles/cargo-cult-css'
+    author: 'Бен Дарлоу'
+translator:
+    name: 'Влад Андерсен'
+    url: 'http://www.facebook.com/vlad.andersen'
+editor:
+  - name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
+  - name: 'Ольга Алексашенко'
+    url: 'https://moikrug.ru/engel-t'
 layout: article.njk
 tags: article
 ---
@@ -206,7 +214,7 @@ tags: article
 
 ## Благодарности
 
-Пока я писал эту статью, мне очень помогали своим советом [Марк Норман Фрэнсис](http://twitter.com/cackhanded), [Брэд Райт](http://twitter.com/intranation), [Росс Бранигес](http://twitter.com/rossbruniges), [Джейк Арчибальд](http://twitter.com/jaffathecake) и [Патрик Гриффитс](http://twitter.com/ptg).
+Пока я писал эту статью, мне очень помогали своим советом [Марк Норман Фрэнсис](https://twitter.com/cackhanded), [Брэд Райт](https://twitter.com/intranation), [Росс Бранигес](https://twitter.com/rossbruniges), [Джейк Арчибальд](https://twitter.com/jaffathecake) и [Патрик Гриффитс](https://twitter.com/ptg).
 
 ## Ссылки
 
@@ -218,5 +226,3 @@ tags: article
 - [Искусство программирования в Unix](http://www.faqs.org/docs/artu/transparencychapter.html)
 - [CSS Lint — зло](http://2002-2012.mattwilcox.net/archive/entry/id/1054/)
 - [Wikipedia: форма следует за функцией](http://en.wikipedia.org/wiki/Form_follows_function)
-
-_Перевод [Влада Андерсена](http://www.facebook.com/vlad.andersen), редактура [Вадима Макеева](http://pepelsbey.net) и [Ольги Алексашенко](http://engel-t.moikrug.ru)._

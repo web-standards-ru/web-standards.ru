@@ -3,8 +3,14 @@ title: 'Как я научился любить скучные мелочи CSS'
 date: 2012-08-21
 source:
     title: 'Learning to Love the Boring Bits of CSS'
-    url: http://www.alistapart.com/articles/love-the-boring-bits-of-css/
-    author: 'Питера Гастона'
+    url: 'http://www.alistapart.com/articles/love-the-boring-bits-of-css/'
+    author: 'Питер Гастон'
+translator:
+    name: 'Влад Андерсен'
+    url: 'http://www.facebook.com/vlad.andersen'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -151,5 +157,3 @@ tags: article
 Может быть, про новые возможности вроде фильтров больше пишут, но вы с гораздо большей вероятностью обнаружите, что именно те мелочи, которые представлены в этой статье, будут вам полезны в разработке.
 
 Каждая из них сделает вашу профессиональную жизнь немножко проще, и в то же время расширит пространство ваших возможностей — а в этом ничего скучного, поверьте, нет.
-
-_Перевод [Влада Андерсена](http://www.facebook.com/vlad.andersen), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

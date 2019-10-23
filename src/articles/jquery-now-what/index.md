@@ -3,8 +3,16 @@ title: 'Я знаю jQuery. И что?'
 date: 2013-12-16
 source:
     title: 'I know jQuery. Now what?'
-    url: http://remysharp.com/2013/04/19/i-know-jquery-now-what/
-    author: 'Реми Шарпа'
+    url: 'http://remysharp.com/2013/04/19/i-know-jquery-now-what/'
+    author: 'Рем Шарп'
+translator:
+    name: 'Влад Андерсен'
+    url: 'http://www.facebook.com/vlad.andersen'
+editor:
+  - name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
+  - name: 'Ольга Алексашенко'
+    url: 'https://moikrug.ru/engel-t'
 layout: article.njk
 tags: article
 ---
@@ -438,5 +446,3 @@ Google (по моим последним данным) поддерживает
 - [Видео доклада](http://vimeo.com/68009123)
 - [Секция вопросов и ответов с конференции Mobilism](http://vimeo.com/68910118#t=2380)
 - [Библиотека min.js](https://github.com/remy/min.js)
-
-_Перевод [Влада Андерсена](http://www.facebook.com/vlad.andersen), редактура [Вадима Макеева](http://pepelsbey.net) и [Ольги Алексашенко](http://engel-t.moikrug.ru)._

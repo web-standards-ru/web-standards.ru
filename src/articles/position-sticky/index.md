@@ -3,8 +3,14 @@ title: 'Как на самом деле работает position: sticky в CSS
 date: 2019-01-31
 source:
     title: 'CSS position: sticky — how it really works!'
-    url: https://medium.com/p/54cd01dc2d46
-    author: 'Элада Шехтера'
+    url: 'https://medium.com/p/54cd01dc2d46'
+    author: 'Элад Шехтер'
+translator:
+    name: 'Алёна Батицкая'
+    url: 'https://medium.com/@ABatickaya'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -138,7 +144,6 @@ CSS
 ## Браузерная поддержка
 
 - «Липкое» позиционирование поддерживается всеми основными современными браузерами. Исключение: старый-добрый IE.
-
 - Для Safari потребуется префикс `-webkit`
 
     position: -webkit-sticky; /* Safari */
@@ -175,5 +180,3 @@ CSS
 - [CSS Masters](https://www.facebook.com/groups/css.master/)
 
 - [CSS Masters Israel](https://www.facebook.com/groups/css.masters.israel/)
-
-_Перевод [Алёны Батицкой](https://medium.com/@ABatickaya), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

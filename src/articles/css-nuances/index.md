@@ -1,6 +1,12 @@
 ---
-title: "Нюансы CSS"
-date: "2011-04-21"
+title: 'Нюансы CSS'
+date: 2011-04-21
+author:
+    name: 'Лев Солнцев'
+    url: 'https://twitter.com/ruGreLI'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -94,5 +100,3 @@ tags: article
 ## Заключение
 
 Знание основ спецификаций, понимание механизмов работы браузеров и выполняемых действий позволяет оптимизировать написание кода, упростить его, сделать лаконичней, а также упростить дальнейшую разработку и поддержку.
-
-_Автор [Лев Солнцев](https://twitter.com/ruGreLI), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

@@ -3,8 +3,14 @@ title: '«Исправление» списков'
 date: 2019-01-21
 source:
     title: '„Fixing“ Lists'
-    url: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
-    author: 'Скотта О’Хары'
+    url: 'https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html'
+    author: 'Скотт О’Хара'
+translator:
+    name: 'Татьяна Фокина'
+    url: 'https://medium.com/@fokinatatiana'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -154,5 +160,3 @@ tags: article
 > Это всё нужно для удобства пользователей, ведь сегодня на большинстве сайтов разработчики не уделяют внимание удобству скринридеров. Разумеется, я открыт для предложений по внесению изменений (включая обновление эвристики), которые сделают жизнь авторов лучше без ухудшения положения пользователей.
 
 Так что замечания и комментарии приветствуются :)
-
-_Перевод [Татьяны Фокиной](https://medium.com/@fokinatatiana), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

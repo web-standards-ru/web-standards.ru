@@ -3,8 +3,14 @@ title: 'Простое вертикальное центрирование те�
 date: 2013-03-26
 source:
     title: 'Easily center text vertically, with SVG!'
-    url: http://lea.verou.me/2013/03/easily-center-text-vertically-with-svg/
-    author: 'Лии Веру'
+    url: 'http://lea.verou.me/2013/03/easily-center-text-vertically-with-svg/'
+    author: 'Лия Веру'
+translator:
+    name: 'Антон Немцев'
+    url: 'https://twitter.com/silentimp'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -44,5 +50,3 @@ tags: article
 <iframe src="http://dabblet.com/gist/5229803" width="510" height="510"></iframe>
 
 Проверено в последних Chrome, Firefox, IE9+. Несмотря на то, что этот способ не подойдёт для всех случаев, надеюсь, он вам пригодится.
-
-_Перевод [Антона Немцева](http://twitter.com/silentimp), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

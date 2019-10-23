@@ -1,6 +1,12 @@
 ---
-title: "Text-transform и копирование"
-date: "2019-01-24"
+title: 'Text-transform и копирование'
+date: 2019-01-24
+author:
+    name: 'Игорь Шевченко'
+    url: 'https://medium.com/@igor_shevchenko'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -39,5 +45,3 @@ tags: article
 _Коммит, который вносит изменения в стандарт._
 
 Сейчас баг в Firefox закрыт как «wontfix», баг в WebKit по-прежнему открыт. Но уже можно надеяться, что скоро его поправят, и копирование текста с `text-transform` начнет работать во всех браузерах одинаково.
-
-_Автор [Игорь Шевченко](https://medium.com/@igor&#95;shevchenko), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

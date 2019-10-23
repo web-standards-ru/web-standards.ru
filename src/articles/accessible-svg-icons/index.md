@@ -3,8 +3,14 @@ title: 'Доступные SVG-иконки с инлайновыми спрай
 date: 2018-12-17
 source:
     title: 'Accessible SVG Icons with Inline Sprites'
-    url: https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/
-    author: 'Марко Хенгстенберга'
+    url: 'https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/'
+    author: 'Марко Хенгстенберг'
+translator:
+    name: 'Татьяна Фокина'
+    url: 'https://medium.com/@fokinatatiana'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -312,5 +318,3 @@ SVG или масштабируемая векторная графика (Scala
 Итак, без лишних слов, спасибо Леони Уотсон, Лоре Калбаг, Лии Веру, Саре Суайдан, Саре Дрэснер, Вал Хед, Серене Дэвис, Марси Саттон, Кэри Фишер, Зоуи Гилленуотер, Хезер Мильориси, Мэлори ван Ахтерберг, Стиву Фолкнеру, Патрику Лауке, Хейдону Пикерингу, Нилу Милликену, Николасу Стинхауту, Марко Цехе, Хьюго Жироделю, Гуннару Биттерсману, Эрику Бэйли, Алану Далтону, Крису Койеру, Брюсу Лоусону, Аарону Густавсону, Скотту Охаре, всей Paciello Group, A List Apart и A Book Apart, Khan Academy, командам Pa11y и tenon.io, а также тем, кого я забыл здесь упомянуть.
 
 Спасибо всем тем, кто (надеюсь) никогда не сдаётся, и объясняет другим (и мне), почему доступность важна, и как сделать интернет более инклюзивным местом.
-
-_Перевод [Татьяны Фокиной](https://medium.com/@fokinatatiana), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

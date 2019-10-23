@@ -3,8 +3,14 @@ title: 'Извлекаем критический CSS'
 date: 2019-10-08
 source:
     title: 'Extract critical CSS'
-    url: https://web.dev/extract-critical-css
-    author: 'Милицы Михайлии'
+    url: 'https://web.dev/extract-critical-css'
+    author: 'Милица Михайлия'
+translator:
+    name: 'Алёна Батицкая'
+    url: 'https://medium.com/@ABatickaya'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -12,8 +18,6 @@ tags: article
 ![](images/buffering.png)
 
 [Картинка Ивана Гриззла с Dribble](https://dribbble.com/shots/3510389-Critical-video-considerations-for-brands)
-
-_Перевод «[Extract critical CSS](https://web.dev/extract-critical-css)» Милицы Михайлии_
 
 Браузер должен скачать и распарсить CSS-файл перед тем, как отрисует страницу. Это делает CSS ресурсом, блокирующим рендеринг. Если файл большой или соединение медленное, то запрос стилей может значительно увеличить время отрисовки страницы.
 
@@ -67,5 +71,3 @@ _Помните, что если вы заинлайнили большой ку
 [Penthouse](https://github.com/pocketjoso/penthouse) — хороший выбор, если на вашем сайте или в приложении используется большое количество стилей или если стили динамически внедряются в DOM (как это бывает, например, в приложениях Angular). В этом инструменте под капотом скрывается [Puppeteer](https://github.com/GoogleChrome/puppeteer) и у него даже есть [онлайн-версия](https://jonassebastianohlsson.com/criticalpathcssgenerator/).
 
 Penthouse не умеет автоматически определять расположение файлов стилей, вы должны руками указать пути до HTML и CSS-файлов, для которых нужно сгенерировать критический CSS. Плюс этого инструмента в том, что он отлично справляется с многопоточностью.
-
-_Перевод [Алёны Батицкой](https://medium.com/@ABatickaya), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

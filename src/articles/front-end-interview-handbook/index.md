@@ -3,8 +3,14 @@ title: 'Руководство для прохождения интервью п
 date: 2018-02-21
 source:
     title: 'Front-end interview handbook'
-    url: https://github.com/yangshun/front-end-interview-handbook
-    author: 'Юн Хен Тая'
+    url: 'https://github.com/yangshun/front-end-interview-handbook'
+    author: 'Юн Хен Тай'
+translator:
+    name: 'Алёна Батицкая'
+    url: 'https://medium.com/@ABatickaya'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -77,7 +83,7 @@ tags: article
 
 ### Ссылки
 
-- [HTML5 Custom Data Attributes `data-*`](http://html5doctor.com/html5-custom-data-attributes/).
+- [HTML5 Custom Data Attributes `data-*`](https://html5doctor.com/html5-custom-data-attributes/).
 - [HTML 5.2: Embedding custom non-visible data with the `data-*` attributes](https://www.w3.org/TR/html5/dom.html#embedding-custom-non-visible-data-with-the-data-attributes)
 
 ### Представьте HTML5 как открытую веб-платформу. Из каких блоков состоит HTML5?
@@ -189,5 +195,3 @@ tags: article
 
 - [Front End Interview Questions HTML](https://neal.codes/blog/front-end-interview-questions-html/).
 - [The Definitive “Front-End Developer Job Interview Questions” And My Answers](http://peterdoes.it/2015/12/03/a-personal-exercise-front-end-job-interview-questions-and-my-answers-all/).
-
-_Перевод [Алёны Батицкой](https://medium.com/@ABatickaya), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

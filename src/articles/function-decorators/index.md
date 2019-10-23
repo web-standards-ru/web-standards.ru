@@ -3,8 +3,14 @@ title: 'Функции-декораторы, которые можно напи�
 date: 2018-06-13
 source:
     title: 'Here are a few function decorators you can write from scratch'
-    url: https://medium.com/p/488549fe8f86
+    url: 'https://medium.com/p/488549fe8f86'
     author: 'Кристи Сальсезку'
+translator:
+    name: 'Владислав Почепцов'
+    url: 'https://medium.com/@vlad_poe'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -147,5 +153,3 @@ _Фото [Calum Lewis](https://unsplash.com/photos/rkT_TG5NKF8)._
 - [You will finally understand what Closure is](https://medium.com/p/13ba11825319)
 - [Class vs Factory function: exploring the way forward](https://medium.com/p/73258b6a8d15) (см. [перевод](https://medium.com/@kanby/класс-vs-фабрика-объектов-перспективы-9b4c696823c8)).
 - [Make your code easier to read with Functional Programming](https://medium.com/p/94fb8cc69f9d)
-
-_Перевод [Влада Почепцова](https://medium.com/@vlad&#95;poe), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

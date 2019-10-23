@@ -1,11 +1,19 @@
 ---
-title: "Манифест? А? Что? Зачем?"
-date: "2017-01-09"
+title: 'Манифест? А? Что? Зачем?'
+date: 2017-01-09
+source:
+    title: 'Manifest? Eh? What? Why?'
+    url: 'https://github.com/w3c/manifest/blob/gh-pages/explainer.md'
+    author: 'Альфред Маерс'
+translator:
+    name: 'Анна Кухарева'
+    url: 'https://medium.com/@annakukhareva'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
-
-_Перевод [поясняющей заметки](https://github.com/w3c/manifest/blob/gh-pages/explainer.md) к спецификации [Web App Manifest](https://www.w3.org/TR/appmanifest/) Альфреда Маерса._
 
 [Многие из нас](https://github.com/w3c/manifest/graphs/contributors), кто работает над вебом, активно стараются уменьшить разрыв между нативными и веб-приложениями.
 
@@ -140,7 +148,7 @@ _Перевод [поясняющей заметки](https://github.com/w3c/man
 
 Также вы можете применить другие стили для приложение в определённом режиме с помощью характеристики display-mode:
 
-    [@media](http://twitter.com/media) all and (display-mode: standalone) {
+    [@media](https://twitter.com/media) all and (display-mode: standalone) {
         /* … */
     }
 
@@ -224,6 +232,4 @@ _Перевод [поясняющей заметки](https://github.com/w3c/man
 
 ## Авторы
 
-Основная часть этого пояснения первоначально появилась в статье «[The W3C App Manifest specification](http://html5doctor.com/web-manifest-specification/)» на [HTML5 Doctor](http://html5doctor.com/), и была написана [Маркусом Касересом](https://github.com/marcoscaceres) и [Брюсом Лоусоном](http://www.brucelawson.co.uk/). Данный материал публикуется на основе лицензии [для некоммерческое использования](http://creativecommons.org/licenses/by-nc/2.0/uk/). Вы можете спокойно изменять, повторно использовать, модифицировать и расширять это пояснение. Некоторые авторы сохраняют свои авторские права на отдельные статьи.
-
-_Перевод [Анны Кухаревой](https://medium.com/@annakukhareva) и [Вадима Макеева](https://medium.com/@pepelsbey), редактура Вадима Макеева._
+Основная часть этого пояснения первоначально появилась в статье «[The W3C App Manifest specification](https://html5doctor.com/web-manifest-specification/)» на [HTML5 Doctor](https://html5doctor.com/), и была написана [Маркусом Касересом](https://github.com/marcoscaceres) и [Брюсом Лоусоном](http://www.brucelawson.co.uk/). Данный материал публикуется на основе лицензии [для некоммерческое использования](http://creativecommons.org/licenses/by-nc/2.0/uk/). Вы можете спокойно изменять, повторно использовать, модифицировать и расширять это пояснение. Некоторые авторы сохраняют свои авторские права на отдельные статьи.

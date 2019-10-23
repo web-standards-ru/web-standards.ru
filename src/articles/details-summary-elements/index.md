@@ -3,8 +3,11 @@ title: 'Элементы details и summary'
 date: 2011-08-29
 source:
     title: 'The details and summary elements'
-    url: http://html5doctor.com/the-details-and-summary-elements/
-    author: 'Тома Лидбеттера'
+    url: 'https://html5doctor.com/the-details-and-summary-elements/'
+    author: 'Том Лидбеттер'
+translator:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---

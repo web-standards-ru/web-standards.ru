@@ -3,8 +3,18 @@ title: 'Сite и blockquote: перезагрузка'
 date: 2013-11-11
 source:
     title: 'Cite and blockquote — reloaded'
-    url: http://html5doctor.com/cite-and-blockquote-reloaded/
-    author: 'Стива Фолкнера'
+    url: 'https://html5doctor.com/cite-and-blockquote-reloaded/'
+    author: 'Стив Фолкнер'
+translator:
+    name: 'Наталья Арефьева'
+    url: 'https://twitter.com/n_snork'
+editor:
+  - name: 'Юлия Бухвалова'
+    url: 'https://twitter.com/yoksel'
+  - name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
+  - name: 'Ольга Алексашенко'
+    url: 'https://moikrug.ru/engel-t'
 layout: article.njk
 tags: article
 ---
@@ -87,5 +97,3 @@ _(Добавлено 6.11.13, прим. редактора.)_ В ответ н
 - [4.5.4 Элемент `<blockquote>`](http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-blockquote-element)
 
 Огромное спасибо «доктору» Оли, чье [исследование](http://oli.jp/2011/blockquote/) помогло подготовить изменения, произошедшие с элементами `<cite>` и `<blockquote>`. И «доктору» Брюсу за то, что [настаивал](http://www.brucelawson.co.uk/2013/on-citing-quotations-again/) на своем праве цитировать свою маму.
-
-_Перевод: [Натальи Арефьевой](http://twitter.com/n_snork) и [Юлии Бухваловой](https://twitter.com/yoksel), редактура [Вадима Макеева](http://pepelsbey.net) и [Ольги Алексашенко](http://engel-t.moikrug.ru)._

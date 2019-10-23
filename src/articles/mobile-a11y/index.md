@@ -3,8 +3,16 @@ title: 'Советы по доступности интерактивных эл
 date: 2019-02-21
 source:
     title: 'Tips for making interactive elements accessible on mobile devices'
-    url: https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/
+    url: 'https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/'
     author: 'Ире Адеринокун'
+translator:
+    name: 'Алёна Батицкая'
+    url: 'https://medium.com/@ABatickaya'
+editor:
+  - name: 'Наталья Рыжова'
+    url: 'https://www.facebook.com/natalia.ryzhova.71'
+  - name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -111,5 +119,3 @@ tags: article
 Вообще, на мобильных устройствах проще работать с чекбоксами, радиокнопками и выпадающими списками, чем с полями для ввода текста.
 
 В тех местах, где требуется ввод текста, мы можем постараться автоматически заполнять поля. Например, подставляя текущую локацию в поле адреса.
-
-_Перевод [Алёны Батицкой](https://medium.com/@ABatickaya), редактура [Натальи Рыжовой](https://www.facebook.com/natalia.ryzhova.71) и [Вадима Макеева](https://medium.com/@pepelsbey)._

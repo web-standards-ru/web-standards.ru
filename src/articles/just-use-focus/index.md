@@ -3,8 +3,14 @@ title: 'Просто используйте стили для :focus, чёрт 
 date: 2018-12-10
 source:
     title: 'Just use :focus styles, damnit'
-    url: https://gomakethings.com/just-use-focus-styles-damnit/
-    author: 'Криса Фердинанди'
+    url: 'https://gomakethings.com/just-use-focus-styles-damnit/'
+    author: 'Крис Фердинанди'
+translator:
+    name: 'Татьяна Фокина'
+    url: 'https://medium.com/@fokinatatiana'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -36,5 +42,3 @@ tags: article
 К тому же стили фокуса не обязательно должны быть уродливыми. Я думаю, что стили по умолчанию замечательные, но вы можете принимать какие угодно творческие решения, чтобы они выглядели лучше.
 
 Моя позиция: просто используйте стили фокуса на своём сайте. Для всего, на чём можно сделать фокус. Для каждого пользователя.
-
-_Перевод [Татьяны Фокиной](https://medium.com/@fokinatatiana), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

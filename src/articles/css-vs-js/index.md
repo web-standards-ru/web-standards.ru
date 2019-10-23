@@ -3,8 +3,14 @@ title: 'CSS и JS в состоянии войны: как это останов
 date: 2019-02-04
 source:
     title: 'CSS and JS are at war, here’s how to stop it'
-    url: https://dev.to/evilmartians/css-and-js-are-at-war-heres-how-to-stop-it-158a
-    author: 'Андрея Ситника'
+    url: 'https://dev.to/evilmartians/css-and-js-are-at-war-heres-how-to-stop-it-158a'
+    author: 'Андрей Ситник'
+translator:
+    name: 'Алёна Батицкая'
+    url: 'https://medium.com/@ABatickaya'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -69,5 +75,3 @@ _[ESPN — Saber Combat](https://dribbble.com/shots/5310012-ESPN-Saber-Combat)_
 ## Что ещё почитать
 
 Моя статья [о будущем PostCSS, линтеров и CSS-in-JS](https://evilmartians.com/chronicles/five-years-of-postcss-state-of-the-union) из [Марсианских хроник](https://evilmartians.com/chronicles/).
-
-_Перевод [Алёны Батицкой](https://medium.com/@ABatickaya), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

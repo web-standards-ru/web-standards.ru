@@ -3,8 +3,14 @@ title: 'Архитектура CSS'
 date: 2014-02-20
 source:
     title: 'CSS Architecture'
-    url: http://philipwalton.com/articles/css-architecture/
-    author: 'Филипа Уолтона'
+    url: 'http://philipwalton.com/articles/css-architecture/'
+    author: 'Филип Уолтон'
+translator:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
+editor:
+    name: 'Ольга Алексашенко'
+    url: 'https://moikrug.ru/engel-t'
 layout: article.njk
 tags: article
 ---
@@ -400,5 +406,3 @@ HTML Inspector проходит по вашему HTML и (почти как C
 CSS — это не просто средство визуального дизайна. Не стоит забывать о правильных подходах к программированию только потому, что вы пишете CSS. Подходы вроде ООП, DRY, принцип открытости и закрытости, разделение ответственности и т.п. также применимы к CSS.
 
 Главная мысль вот в чем: что бы вы ни делали для организации вашего кода, убедитесь, что вы оцениваете свои действия по тому, помогают ли они сделать проще разработку и поддержку кода в будущем.
-
-_Перевод [Вадима Макеева](http://pepelsbey.net), редактура [Ольги Алексашенко](http://engel-t.moikrug.ru)._

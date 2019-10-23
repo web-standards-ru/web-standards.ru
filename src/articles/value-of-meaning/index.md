@@ -3,8 +3,14 @@ title: 'Ценность осмысленности'
 date: 2012-08-09
 source:
     title: 'The value of meaning'
-    url: http://cssquirrel.com/blog/2011/11/11/the-value-of-meaning/
-    author: 'Кайла Вимса'
+    url: 'http://cssquirrel.com/blog/2011/11/11/the-value-of-meaning/'
+    author: 'Кайл Вимс'
+translator:
+    name: 'Влад Андерсен'
+    url: 'http://www.facebook.com/vlad.andersen'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -62,5 +68,3 @@ HTML5 все ещё устаканивается. Некоторые значе
 Или, как Карл [прокомментировал](http://coding.smashingmagazine.com/2011/11/11/our-pointless-pursuit-of-semantic-value/#comment-554266) пост Дивьи:
 
 > инжбд, уцсацрйттуцчб — пргьйжед жйюб ирд чузу, ьчуёа футнсечб ихшз ихшзе. вчу цуынербтао путчхепч, пучухао ийоцчжшйч сйлиш теэнсн нийдсн. жа цсйэнжейчй уёхеёучпш н уцсацрйттуцчб. фйьербту.
-
-_Перевод [Влада Андерсена](http://www.facebook.com/vlad.andersen), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

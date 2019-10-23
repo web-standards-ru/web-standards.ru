@@ -3,8 +3,14 @@ title: 'Невыполненные обещания веб-компоненто�
 date: 2017-04-17
 source:
     title: 'The broken promise of Web Components'
-    url: https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/
-    author: 'Дмитрия Диманта'
+    url: 'https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/'
+    author: 'Дмитрий Димант'
+translator:
+    name: 'Владислав Почепцов'
+    url: 'https://medium.com/@vlad_poe'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -239,5 +245,3 @@ Ad infinitum.
 
 - Изображение: [Nobody Home Yet](https://www.flickr.com/photos/yoorock/29946893014/) Рика Херрмана, [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 - Ссылки на некоторые материалы были взяты из [статьи](http://2ality.com/2015/08/web-component-status.html) Акселя Раушмайера.
-
-_Перевод [Владислава Почепцова](https://medium.com/@vlad&#95;poe), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

@@ -4,8 +4,14 @@ subtitle: 'Поговорим о промисах простыми словам�
 date: 2017-12-05
 source:
     title: 'JavaScript: promises explained with simple real life analogies'
-    url: https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138
+    url: 'https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138'
     author: 'Шрути Капур'
+translator:
+    name: 'Артур Храбров'
+    url: 'https://medium.com/@nzvtrkk'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -131,5 +137,3 @@ _Промис успешно выполнился, [фото Скотта Веб
 1. [Статья про промисы на MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
 2. [Введение на Google Developers](http://https//developers.google.com/web/fundamentals/primers/promises)
 3. [Про concurrency model на MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion)
-
-_Перевод [Артур Храбров](https://medium.com/@nzvtrkk), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

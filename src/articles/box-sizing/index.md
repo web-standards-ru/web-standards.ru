@@ -3,8 +3,14 @@ title: 'Размеры блоков, или Назад в будущее'
 date: 2013-01-23
 source:
     title: 'Box-sizing: border-box; the results are in'
-    url: http://generatedcontent.org/post/26334712021/box-sizing-results
-    author: 'Дэвида Стори'
+    url: 'http://generatedcontent.org/post/26334712021/box-sizing-results'
+    author: 'Дэвид Стори'
+translator:
+    name: 'Сергей Смольников'
+    url: 'https://twitter.com/smolnikov'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -94,5 +100,3 @@ CSS-свойство `box-sizing` существует уже некоторое
 Я оставлю [опрос открытым](https://docs.google.com/spreadsheet/viewform?formkey=dE83R3I0Z29PaldPYm5nalEyU3dsNmc6MQ) в надежде собрать больше ответов. Но поскольку соотношение результатов в `box-sizing:border-box;` составило 60 к 40 в течение недели, я не жду, что результат значительно изменится.
 
 Вы все еще можете принять участие в опросе. К сожалению, результаты опроса сейчас скрыты. Но это только подогревает наше любопытство. Расскажите: а что вы думаете о возможности выбора блочной модели? Используете box-sizing:border-box; в текущих проектах? Планируете использовать?
-
-_Перевод [Сергей Смольников](https://twitter.com/smolnikov), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

@@ -1,6 +1,12 @@
 ---
-title: "Критический CSS + прогрессивный CSS = ?"
-date: "2017-10-24"
+title: 'Критический CSS + прогрессивный CSS = ?'
+date: 2017-10-24
+author:
+    name: 'Даниил Оношко'
+    url: 'https://trigen.pro/'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -207,5 +213,3 @@ tags: article
 - [33 способа ускорить ваш фронтенд в 2017 году](https://habrahabr.ru/company/badoo/blog/320558/), Александр Гутников
 - [The future of loading CSS](https://jakearchibald.com/2016/link-in-body/), Джейк Арчибальд
 - [Ускорение Lenta.ru: 3 человека, 2 недели, улучшение глубины просмотра на 27%](http://habrahabr.net/thread/8679), Денис Паращий
-
-_Автор [Даниил Оношко](https://trigen.pro/), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

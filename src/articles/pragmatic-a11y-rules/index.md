@@ -3,8 +3,14 @@ title: 'Полезные правила доступности, которые �
 date: 2018-11-28
 source:
     title: 'Pragmatic rules of web accessibility that will stick to your mind'
-    url: https://medium.com/p/9d3eb85a1a28
-    author: 'Тьяго Ромеро Гарсии'
+    url: 'https://medium.com/p/9d3eb85a1a28'
+    author: 'Тьяго Ромеро Гарсия'
+translator:
+    name: 'Татьяна Фокина'
+    url: 'https://medium.com/@fokinatatiana'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -239,5 +245,3 @@ _«Семантическай веб несложен по своей приро
 - [WAI-ARIA Design Patterns and Widgets](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex)
 - [WAI-ARIA Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 - [HTML5 Sectioning Elements](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/HTML5.html)
-
-_Перевод [Татьяны Фокиной](https://medium.com/@fokinatatiana), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

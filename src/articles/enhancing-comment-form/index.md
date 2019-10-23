@@ -3,8 +3,18 @@ title: 'Улучшение формы комментариев'
 date: 2016-11-18
 source:
     title: 'Enhancing a comment form'
-    url: https://justmarkup.com/log/2016/10/enhancing-a-comment-form/
-    author: 'Майкла Шарналя'
+    url: 'https://justmarkup.com/log/2016/10/enhancing-a-comment-form/'
+    author: 'Майкл Шарналь'
+translator:
+    name: 'Анна Кухарева'
+    url: 'https://medium.com/@annakukhareva'
+editor:
+  - name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
+  - name: 'Юля Бухвалова'
+    url: 'https://medium.com/@yoksel'
+  - name: 'Алексей Симоненко'
+    url: 'https://medium.com/@simonenko'
 layout: article.njk
 tags: article
 ---
@@ -387,5 +397,3 @@ tags: article
 [Финальная Улучшенная улучшенная™ версия.](https://justmarkup.github.io/demos/form-enhancement/v7/)
 
 Если у вас есть какие-либо идеи по улучшению или вы нашли ошибку в коде, пожалуйста, создайте [ишью на Гитхабе.](https://github.com/justmarkup/demos/issues)
-
-_Перевод [Анны Кухаревой](https://medium.com/@annakukhareva), редактура [Вадима Макеева](https://medium.com/@pepelsbey), [Юли Бухваловой](https://medium.com/@yoksel) и [Алексея Симоненко](https://medium.com/@simonenko)._

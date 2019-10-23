@@ -3,8 +3,14 @@ title: 'Что нового в JavaScript 2019'
 date: 2019-01-30
 source:
     title: 'What’s New in JavaScript for 2019'
-    url: https://developer.okta.com/blog/2019/01/22/whats-new-in-es2019
-    author: 'Девида Нила'
+    url: 'https://developer.okta.com/blog/2019/01/22/whats-new-in-es2019'
+    author: 'Девид Нил'
+translator:
+    name: 'Алёна Батицкая'
+    url: 'https://medium.com/@ABatickaya'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -187,5 +193,3 @@ Babel поддерживает экспериментальные возможн
 - [Use TypeScript to Build a Node API with Express](https://developer.okta.com/blog/2018/11/15/node-express-typescript)
 
 Если вам будет интересно, то вы можете почитать [предыдущие версии](https://www.ecma-international.org/publications/standards/Ecma-262-arch.htm) ECMAScript, например, ES2015, ES2016 и ES2017.
-
-_Перевод [Алёны Батицкой](https://medium.com/@ABatickaya), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

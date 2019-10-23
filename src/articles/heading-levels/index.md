@@ -3,8 +3,14 @@ title: 'Важность уровней заголовков для вспомо
 date: 2018-11-13
 source:
     title: 'The importance of heading levels for assistive technology'
-    url: https://webdesign.tutsplus.com/articles/the-importance-of-heading-levels-for-assistive-technology--cms-31753
-    author: 'Эрика Бейли'
+    url: 'https://webdesign.tutsplus.com/articles/the-importance-of-heading-levels-for-assistive-technology--cms-31753'
+    author: 'Эрик Бейли'
+translator:
+    name: 'Татьяна Фокина'
+    url: 'https://medium.com/@fokinatatiana'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -179,5 +185,3 @@ tags: article
 И это одна из самых распространённых проблем с доступностью, которую легко решить. Потратьте немного времени и посмотрите на свой сайт или приложение ещё раз. Структура заголовков точно описывает страницу? Соблюдается ли логический порядок? Очень просто поменять пару цифр местами!
 
 Стоит обратить внимание и на то, что заголовки, подобно иерархическим форматам данных, таким как JSON, могут быть вложены в другие, если они логически связаны. Внутри заголовка второго уровня вы можете использовать заголовки третьего. Каждый из этих подзаголовков может, в свою очередь, иметь вложенные подзаголовки четвёртого уровня.
-
-_Перевод [Татьяны Фокиной](https://medium.com/@fokinatatiana), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

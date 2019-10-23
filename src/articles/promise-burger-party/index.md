@@ -3,8 +3,14 @@ title: 'Обещание бургерной вечеринки'
 date: 2017-02-09
 source:
     title: 'The promise of a burger party'
-    url: https://kosamari.com/notes/the-promise-of-a-burger-party
-    author: 'Марико Косаки'
+    url: 'https://kosamari.com/notes/the-promise-of-a-burger-party'
+    author: 'Марико Косака'
+translator:
+    name: 'Владислав Почепцов'
+    url: 'https://medium.com/@vlad_poe'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -123,5 +129,3 @@ _Метод `.then()` принимает вторым аргументом фу�
 - [JavaScript Promiseの本](http://azu.github.io/promises-book/) — на японском, китайском и корейском языках.
 
 Спасибо Джейку Арчибальду и Нолану Лоусону за вычитку статьи и ценные советы, а также Крису Уитли за найденную в коде ошибку.
-
-_Перевод [Владислава Почепцова](https://medium.com/@vlad&#95;poe), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

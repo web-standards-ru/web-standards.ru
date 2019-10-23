@@ -1,6 +1,12 @@
 ---
-title: "Преимущества многострочного CSS"
-date: "2010-12-13"
+title: 'Преимущества многострочного CSS'
+date: 2010-12-13
+author:
+    name: 'Вячеслав Олиянчук'
+    url: 'http://miripiruni.org/'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -168,5 +174,3 @@ tags: article
 - [CSS-менеджмент. Три года спустя](http://vimeo.com/17498225), доклад Вадима Макеева;
 - [Eclipse: знакомство с Ant](http://www.artlebedev.ru/tools/technogrette/soft/eclipse-ant/), статья Сергея Чикуёнка;
 - [CSScomb.ru](http://csscomb.ru/), инструменты для сортировки CSS-свойств.
-
-_Автор [Вячеслав Олиянчук](http://miripiruni.org/), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

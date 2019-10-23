@@ -1,6 +1,12 @@
 ---
-title: "Всё, что нужно знать про ARIA Live Regions"
-date: "2019-03-12"
+title: 'Всё, что нужно знать про ARIA Live Regions'
+date: 2019-03-12
+author:
+    name: 'Татьяна Фокина'
+    url: 'https://medium.com/@fokinatatiana'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -298,5 +304,3 @@ ARIA-ролей, которые делают часть страницы инт�
 - Несколько примеров использования ARIA-атрибутов в [ARIA Live Regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) на MDN.
 - [ARIA Live Regions](https://medium.com/@rishabhsrao/aria-live-regions-6cc96e1a8b72) Ришабха Рао.
 - Перевод статьи [Как сделать сообщения об ошибках доступными](https://medium.com/high-technologies-center/как-сделать-сообщения-об-ошибках-доступными-1400134a59cc) Хидде де Вриса.
-
-_Редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

@@ -3,8 +3,14 @@ title: 'Генерация HTTP-запросов: Fetch или Axios.js'
 date: 2017-11-15
 source:
     title: 'Fetch vs. Axios.js for making HTTP requests'
-    url: https://medium.com/p/2b261cdd3af5
-    author: 'Джейсона Арнольда'
+    url: 'https://medium.com/p/2b261cdd3af5'
+    author: 'Джейсон Арнольд'
+translator:
+    name: 'Артур Храбров'
+    url: 'https://medium.com/@nzvtrkk'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -96,5 +102,3 @@ Axios — это JavaScript-библиотека для выполнения л�
 Метод `fetch()` по умолчанию не работает с куками. Для этого необходимо выставить значение `credentials`:
 
     fetch('url', { credentials: 'same-origin' });
-
-_Перевод [Артура Храброва](https://medium.com/@nzvtrkk), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._

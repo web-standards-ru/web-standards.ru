@@ -3,8 +3,14 @@ title: 'Puppeteer для краулинга страниц сайта и сох�
 date: 2019-01-17
 source:
     title: 'Using Puppeteer to crawl pages and save them as Markdown files'
-    url: https://justmarkup.com/log/2019/01/using-puppeteer-to-crawl-pages-and-save-them-as-markdown-files/
-    author: 'Михаэля Шарналя'
+    url: 'https://justmarkup.com/log/2019/01/using-puppeteer-to-crawl-pages-and-save-them-as-markdown-files/'
+    author: 'Михаэль Шарналь'
+translator:
+    name: 'Владислав Ермолин'
+    url: 'https://medium.com/@electrovladyslav'
+editor:
+    name: 'Вадим Макеев'
+    url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article
 ---
@@ -394,5 +400,3 @@ tags: article
 Здесь мы используем `fs.writeFile()`. Мы хотим сохранить наши файлы в папке `/posts/`, используя `pathname` из переменной `pagePathname` как имена файлов, и `.md` как расширение. Это будет первым аргументом в функции `writeFile()`. Вторым аргументом мы передадим `pageContentMarkdown`, в котором лежит полученный Markdown в формате `String`. Если всё пройдёт без ошибок, мы получими статьи в формате Markdown, сохранённые одна за другой. Да, мы сделали это!
 
 Я надеюсь, эта статья вас чему-то научила, и, возможно, вы в будущем тоже решите использовать Puppeteer для чего-нибудь интересного. Если вам любопытно, посмотрите финальный код на [Гитхабе](https://github.com/justmarkup/html-posts-to-markdown/blob/master/index.js).
-
-_Перевод [Владислава Ермолина](https://medium.com/@electrovladyslav), редактура [Вадима Макеева](https://medium.com/@pepelsbey)._
