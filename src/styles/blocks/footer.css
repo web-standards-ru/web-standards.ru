@@ -23,8 +23,7 @@
     color: inherit;
 }
 
-.footer__link:link,
-.footer__link:visited {
+.footer__link[href] {
     color: white;
 }
 
@@ -99,4 +98,3 @@
         font-size: 14px;
     }
 }
-

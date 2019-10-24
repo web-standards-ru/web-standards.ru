@@ -85,6 +85,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #000000;
+    color: var(--color-grey-lighter);
 }
 
 @media (min-width: 500px) {
@@ -115,21 +116,19 @@
 
 .navigation__link {
     display: block;
-    color: black;
+    color: inherit;
     line-height: 1.2;
     letter-spacing: 0.05em;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.navigation__link:hover {
-    cursor: pointer;
-    text-decoration: underline;
+.navigation__link[href] {
+    color: black;
 }
 
-.navigation__link:link,
-.navigation__link:visited {
-    color: inherit;
+.navigation__link[href]:hover {
+    text-decoration: underline;
 }
 
 @media (min-width: 500px) {
