@@ -12,7 +12,9 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - js
 ---
 
 ![Фото [Calum Lewis](https://unsplash.com/photos/rkT_TG5NKF8).](images/1.jpg)

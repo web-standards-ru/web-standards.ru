@@ -12,7 +12,9 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - js
 ---
 
 Существует множество способов вертикального выравнивания текста в контейнере произвольных размеров:

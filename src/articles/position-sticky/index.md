@@ -12,7 +12,10 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
+  - css
 ---
 
 У `position: sticky` уже очень неплохая браузерная поддержка, но большинство разработчиков так и не используют это свойство.

@@ -16,7 +16,10 @@ editor:
   - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - design
+  - typography
 ---
 
 Прошло больше трёх лет с тех пор, как [адаптивный веб-дизайн](http://alistapart.com/article/responsive-web-design) начал появляться в наших портфолио. Сегодня мы имеем солидный набор решений для создания сайтов, достойно отображающихся на маленьких устройствах. А как насчёт больших экранов?

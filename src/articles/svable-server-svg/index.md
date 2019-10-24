@@ -10,7 +10,10 @@ editor:
   - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - js
+  - svg
 ---
 
 _Мы начинаем серию статей, в которых вы можете рассказать о своём сервисе или разработке, которые могут быть полезны для фронтенд-разработчиков. Есть о чём рассказать? Пишите нам на [wst@web-standards.ru](mailto:wst@web-standards.ru). Редакция._

@@ -7,6 +7,13 @@ layout: page.njk
 <main class="main">
     <h1>{{ title }}</h1>
     <p>{{ date }}</p>
+    <p>
+        {%- for tag in tags | filterArticleTag -%}
+            <span>
+                <a href="/articles/tags/{{ tag }}">{{ tag }}</a>
+            </span>
+        {%- endfor -%}
+    </p>
     {{ content | safe }}
 </main>
 

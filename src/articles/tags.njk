@@ -1,0 +1,24 @@
+---
+title: Теги
+layout: page.njk
+permalink: /articles/tags/
+---
+
+{% include 'header.njk' %}
+
+<main class="main">
+    {{ content | safe }}
+    <h1>Теги</h1>
+    <ul>
+        {% for tag in collections.tagList | filterArticleTag %}
+            <li>
+                <h2>
+                    <a href="/articles/tags/{{ tag | slug }}">{{ tag }}</a>
+                </h2>
+            </li>
+        {% endfor %}
+    </ul>
+</main>
+
+{% include 'aside.njk' %}
+{% include 'footer.njk' %}

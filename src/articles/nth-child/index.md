@@ -9,7 +9,9 @@ translator:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - css
 ---
 
 Существует такой селектор, точнее псевдокласс, называемый `:nth-child`. Вот пример его использования:

@@ -1,0 +1,35 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - articles
+        - tagList
+    addAllPagesToCollections: true
+renderData:
+    title: Статьи с тегом «{{ tag }}»
+layout: page.njk
+permalink: /articles/tags/{{ tag | slug }}/
+---
+
+{% include 'header.njk' %}
+
+<main class="main">
+    {% set taglist = collections[tag] %}
+    <h1>Статьи с тегом «{{ tag }}» ({{ taglist | length }})</h1>
+    <ol>
+        {% for article in taglist | filterArticles | reverse %}
+            <li>
+                <a href="{{ article.url | url }}">{{ article.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+    <p>
+        <a href="/articles/tags/">Все теги</a>
+    </p>
+</main>
+
+{% include 'aside.njk' %}
+{% include 'footer.njk' %}

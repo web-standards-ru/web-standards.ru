@@ -14,7 +14,10 @@ editor:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
+  - a11y
 ---
 
 <figure>

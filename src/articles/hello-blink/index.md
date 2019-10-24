@@ -12,7 +12,9 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - performance
 ---
 
 Как же хорошо открыто говорить о [Blink](http://blog.chromium.org/2013/04/blink-rendering-engine-for-chromium.html) — новом движке для браузеров Opera _(примечание: это мой работодатель, но запись личная)_ и Сhrome. Я знаю множество людей, которые переживали, что с уходом Opera Presto веб потеряет былое многообразие, но форк WebKit в Blink восстановит баланс сил. Opera будет развивать Blink.

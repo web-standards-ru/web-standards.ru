@@ -8,7 +8,8 @@ editor:
     name: 'Вадима Макеева'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
 ---
 
 Если звезды фронтенда зажигаются, значит, кто-то их зажигает? Кто? Приоткрываем завесу тайны над темой наставничества в вебе.

@@ -16,7 +16,9 @@ editor:
   - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
 ---
 
 Недавно в [спецификации HTML](http://www.w3.org/html/wg/drafts/html/master/) было изменено определение элементов `<blockquote>` и `<cite>`. В статье рассказывается, что это значит для разработчиков.

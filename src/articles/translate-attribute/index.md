@@ -12,7 +12,9 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
 ---
 
 В HTML5 недавно [добавился новый атрибут](http://dev.w3.org/html5/spec/global-attributes.html#the-translate-attribute) — `translate`. На трёх [семинарах MultilingualWeb](http://multilingualweb.eu/), которые мы провели за последние два года, идея такого булева флага — «переводить или не переводить» постоянно вызывает довольно большой интерес у локализаторов, создателей текста, и всех тех, кто работает с языковыми технологиями.

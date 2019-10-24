@@ -12,7 +12,10 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - css
+  - a11y
 ---
 
 ![If it’s interactive, it needs a focus style](images/1.png)

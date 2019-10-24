@@ -12,7 +12,10 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
+  - css
 ---
 
 Недавно в проект [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) была добавлена новая техника замены текста изображением. В этой записи я расскажу, как она работает и как соотносится с альтернативными методами.

@@ -4,6 +4,31 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
 
+    config.addCollection('tagList', function(collection) {
+        const set = new Set();
+        for (const item of collection.getAllSorted()) {
+            if ('tags' in item.data) {
+                const tags = item.data.tags;
+                if (typeof tags === 'string') {
+                    tags = [tags];
+                }
+                for (const tag of tags) {
+                    set.add(tag);
+                }
+            }
+        }
+        return [...set].sort();
+    });
+
+    config.addFilter('filterArticles', function(array) {
+        return array.filter(post =>
+            post.inputPath.startsWith('./src/articles/')
+        );
+    });
+    config.addFilter('filterArticleTag', function(tagsCollection) {
+        return tagsCollection.filter(tag => tag !== 'article');
+    });
+
     config.addFilter('ruDate', function(value) {
         return value.toLocaleString('ru', {
             year: 'numeric',
@@ -82,8 +107,8 @@ module.exports = function(config) {
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
         templateFormats: [
-            'md', 'html',
-            'jpg', 'png', 'svg'
+            'md', 'html', 'njk',
+            'jpg', 'png', 'svg',
         ],
     };
 };

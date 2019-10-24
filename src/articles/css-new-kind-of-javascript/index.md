@@ -14,7 +14,11 @@ editor:
   - name: 'Андрей Мелихов'
     url: 'https://medium.com/@amel_true'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
+  - css
+  - js
 ---
 
 Те из вас, кто знаком с веб-платформой, наверняка наслышаны и о двух дополнительных технологиях: **HTML** для структуризации документов и **JavaScript** для интерактивности и стилизации.

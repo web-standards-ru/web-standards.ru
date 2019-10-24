@@ -16,7 +16,9 @@ editor:
   - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
 ---
 
 [Майк™ Смит](http://people.w3.org/mike/) (известный как [@sideshowbarker](https://twitter.com/sideshowbarker)) из W3C — человек, с головой увязший в исходном коде инструмента W3C для _проверки <del>валидности</del> разметки_; эта _магия_ работает именно благодаря ему. Вопросы были заданы на радость и в назидание читателю сайта.

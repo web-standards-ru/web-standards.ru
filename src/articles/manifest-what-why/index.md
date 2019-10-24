@@ -12,7 +12,9 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - js
 ---
 
 [Многие из нас](https://github.com/w3c/manifest/graphs/contributors), кто работает над вебом, активно стараются уменьшить разрыв между нативными и веб-приложениями.

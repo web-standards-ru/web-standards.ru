@@ -16,7 +16,9 @@ editor:
   - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - css
 ---
 
 Я не хотел верить в Sass. «Я пишу стили руками! Мне не нужна помощь. Я не хочу усложнять мой рабочий процесс! Отстаньте от меня!»

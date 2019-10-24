@@ -8,7 +8,10 @@ editor:
     name: 'Вадима Макеева'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - js
+  - performance
 ---
 
 Что все они означают?

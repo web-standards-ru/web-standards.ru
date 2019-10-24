@@ -16,7 +16,10 @@ editor:
   - name: 'Алексей Симоненко'
     url: 'https://medium.com/@simonenko'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
+  - js
 ---
 
 От базовых до улучшенных сообщений об ошибках к фоновой синхронизации

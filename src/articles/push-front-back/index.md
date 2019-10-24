@@ -12,7 +12,9 @@ editor:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - js
 ---
 
 В предыдущей [статье](https://justmarkup.com/log/2017/02/introducing-iss-observer-com/) об [iss-observer.com](https://iss-observer.com/) я обещал рассказать о технической стороне реализации пуш-уведомлений. Изначально я планировал сконцентрироваться на проблемах, с которыми пришлось иметь дело в процессе работы над [iss-observer.com](https://iss-observer.com/). Теперь я думаю, будет полезнее посвятить материал базовым вопросам, и уточнять детали, где это необходимо. Обращаю ваше внимание, что фронтенд частично опирается на [этот урок](https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/?hl=en).

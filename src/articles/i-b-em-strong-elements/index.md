@@ -9,7 +9,10 @@ translator:
     name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
-tags: article
+tags:
+  - article
+  - html
+  - a11y
 ---
 
 В то время как многие элементы из HTML4 вошли в HTML5 без существенных изменений, некоторые исторически презентационные элементы обрели новую семантику.
