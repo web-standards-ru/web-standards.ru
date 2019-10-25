@@ -1,0 +1,144 @@
+.article {
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+}
+
+.article__heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -8px 16px;
+    color: white;
+    background-color: var(--color-grey-dark);
+}
+
+.article__heading-wrapper::after {
+    content: ' ';
+    display: block;
+    align-self: center;
+    width: 320px;
+    height: 170px;
+    background-image: url('/images/patterns/dots.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.article__title {
+    margin: 16px;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+}
+
+.article__source {
+    margin: 0 16px 16px;
+}
+
+.article__link {
+    color: var(--color-blue-light);
+    text-decoration: none;
+}
+
+.article__meta {
+    display: flex;
+    margin: 0 16px 32px;
+}
+
+.article__date {
+    margin-right: 21px;
+    color: var(--color-grey-lighter);
+}
+
+.article__tags {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.article__tags-item {
+    list-style: none;
+    margin-right: 5px;
+}
+
+.article__tags-item:last-child {
+    margin-right: 0;
+}
+
+.article__tags-link {
+    color: white;
+    text-decoration: none;
+}
+
+.article__link:hover,
+.article__link:focus,
+.article__tags-link:hover,
+.article__tags-link:focus {
+    text-decoration: underline;
+}
+
+.article__link:active,
+.article__tags-link:active {
+    opacity: 0.5;
+}
+
+.article__authors {
+    margin-bottom: 48px;
+}
+
+.article__collaborators {
+    margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .article {
+        font-size: 16px;
+    }
+
+    .article__heading {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 24px 24px 39px;
+        border-top: 1px solid var(--color-grey-medium);
+        border-bottom: 1px solid var(--color-grey-medium);
+    }
+
+    .article__heading-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2%;
+        margin: 0 0 64px;
+        background-color: transparent;
+        color: black;
+    }
+
+    .article__heading-wrapper::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-grey-dark);
+        background-image: url('/images/patterns/rain.svg');
+        background-size: cover;
+    }
+
+    .article__title {
+        margin: 0 0 24px;
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .article__source {
+        margin: 0 0 24px;
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    .article__meta {
+        margin: 10% 0 0;
+    }
+
+    .article__tags-link {
+        color: black;
+    }
+}

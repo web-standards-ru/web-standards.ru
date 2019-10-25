@@ -5,16 +5,54 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main">
-    <h1>{{ title }}</h1>
-    <p>{{ date }}</p>
-    <p>
-        {%- for tag in tags | filterArticleTag -%}
-            <span>
-                <a href="/articles/tags/{{ tag }}">{{ tag }}</a>
-            </span>
-        {%- endfor -%}
-    </p>
-    {{ content | safe }}
+    <div class="main__content article">
+        <div class="article__heading-wrapper">
+            <div class="article__heading">
+                <h1 class="article__title">{{ title }}</h1>
+                {# При отсутствии source нужно скрывать данный блок #}
+                <p class="article__source">
+                    Перевод статьи
+                    <a class="article__link" href="{{ source.url }}">
+                        {{ source.title }}
+                    </a>
+                </p>
+                <div class="article__meta">
+                    {# Тут нужен фильтр для преобразования даты к виду: YYYY-MM-DD #}
+                    <time class="article__date" datetime="{{ date }}">{{ date }}</time>
+                    <ul class="article__tags">
+                    {%- for tag in tags | filterArticleTag -%}
+                        <li class="article__tags-item">
+                            <a class="article__tags-link" href="/articles/tags/{{ tag }}">{{ tag }}</a>
+                        </li>
+                    {%- endfor -%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="article__authors authors">
+            {# Тут нужно генерировать блок авторов и соавторов #}
+            <div class="authors__author">
+                <a class="authors__author-link" href="{{ author.link }}">{{ author.name }}</a>
+                <ul class="authors__author-roles-list">
+                    {# Тут нужно генерировать список ролей из маркдауна #}
+                    <li class="authors__role">Разработчик</li>
+                </ul>
+            </div>
+            {# При отсутствии translator нужно скрывать данный блок #}
+            <p class="authors__collaborators">
+                <span class="authors__collaborators-heading">Перевод</span>
+                <a class="authors__collaborators-link" href="{{ translator.url }}">{{ translator.name }}</a>
+            </p>
+            {# При отсутствии editor нужно скрывать данный блок #}
+            <p class="authors__collaborators">
+                <span class="authors__collaborators-heading">Редактура</span>
+                <a class="authors__collaborators-link" href="{{ editor.url }}">{{ editor.name }}</a>
+            </p>
+        </div>
+        <div class="article__content content">
+            {{ content | safe }}
+        </div>
+    </address>
 </main>
 
 {% include 'aside.njk' %}
