@@ -7,24 +7,23 @@ layout: page.njk
 <main class="main">
     {{ content | safe }}
 
-    <div class="articles">
-        <ul class="articles__list">
-        {%- for article in collections.article | reverse -%}
-            <li>
-                <article>
-                    <h2>
-                        <a href="{{ article.url }}">
-                            {{ article.data.title }}
-                        </a>
-                    </h2>
-                </article>
-            </li>
-        {%- endfor -%}
-        </ul>
-        <p class="articles__more">
-            <a class="articles__link" href="/articles/">Все статьи</a>
+    {%- for article in collections.article | reverse -%}
+    <article class="preview">
+        <time class="preview__date" datetime="{{ article.date }}">4 февраля</time>
+        <img class="preview__photo" src="/images/author--blue.png" height="104" width="113" alt="{{ article.data.source.author }}">
+        <p class="preview__author">
+            <span class="preview__name">{{ article.data.source.author }}</span>
+            <span class="preview__profession">Разработчик в Apple</span>
         </p>
-    </div>
+        <p class="preview__wrapper">
+            <a class="preview__title" href="{{ article.url }}">{{ article.data.title }}</a>
+        </p>
+    </article>
+    {%- endfor -%}
+
+    <p class="notice">
+        <a class="notice__link" href="/articles/">Все статьи</a>
+    </p>
 </main>
 
 {% include 'aside.njk' %}

@@ -2,7 +2,6 @@
 
 .notice {
     margin: 40px 0 19px;
-
     text-align: center;
 }
 
@@ -27,30 +26,38 @@
 .notice__link {
     display: inline-block;
     padding-top: 39px;
-
-    font-size: 24px;
     color: black;
     letter-spacing: -0.02em;
     text-decoration: none;
+    font-size: 24px;
+}
 
-    background: url('/images/shout.svg') center top / 40px 24px no-repeat;
+.notice__link--shout {
+    background-image: url('/images/shout.svg');
+    background-position: 50% 0;
+    background-size: auto 24px;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 630px) {
     .notice__link {
-        padding: 0 0 0 50px;
-
-        font-size: 32px;
+        padding-top: 0;
+        background-position: 0 50%;
         letter-spacing: normal;
+        font-size: 32px;
+    }
 
-        background-position: left center;
+    .notice__link--shout {
+        padding-left: 50px;
     }
 }
 
 @media (min-width: 1024px) {
     .notice__link {
-        padding: 0 0 0 56px;
-
         font-size: 48px;
+    }
+
+    .notice__link--shout {
+        padding-left: 56px;
     }
 }
