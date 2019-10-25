@@ -9,6 +9,9 @@
 @import 'blocks/logo.css';
 @import 'blocks/navigation.css';
 @import 'blocks/articles.css';
+@import 'blocks/archive.css';
+@import 'blocks/preview.css';
+@import 'blocks/notice.css';
 @import 'blocks/informer.css';
 @import 'blocks/main.css';
 @import 'blocks/links.css';

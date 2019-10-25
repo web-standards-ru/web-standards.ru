@@ -1,0 +1,56 @@
+/* Notice */
+
+.notice {
+    margin: 40px 0 19px;
+
+    text-align: center;
+}
+
+@media (min-width: 375px) {
+    .notice {
+        margin: 41px 0 48px;
+    }
+}
+
+@media (min-width: 630px) {
+    .notice {
+        margin: 70px 0 33px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .notice {
+        margin: 160px 0 60px;
+    }
+}
+
+.notice__link {
+    display: inline-block;
+    padding-top: 39px;
+
+    font-size: 24px;
+    color: black;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+
+    background: url('/images/shout.svg') center top / 40px 24px no-repeat;
+}
+
+@media (min-width: 630px) {
+    .notice__link {
+        padding: 0 0 0 50px;
+
+        font-size: 32px;
+        letter-spacing: normal;
+
+        background-position: left center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .notice__link {
+        padding: 0 0 0 56px;
+
+        font-size: 48px;
+    }
+}

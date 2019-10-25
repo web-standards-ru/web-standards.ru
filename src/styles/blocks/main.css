@@ -1,9 +1,10 @@
 /* Main */
+
 .main {
     padding: 64px 8px 37px;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     .main {
         padding: 100px 64px;
     }
