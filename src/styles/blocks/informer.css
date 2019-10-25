@@ -1,64 +1,25 @@
 /* Informer */
 
 .informer {
+    display: flex;
+    flex-direction: column;
     padding: 0;
+    max-width: 100%;
     list-style: none;
     text-overflow: clip;
     white-space: nowrap;
 }
 
-.informer__item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 10px;
-    position: relative;
-}
-
-.informer__decoration {
-    display: flex;
-    align-items: center;
-}
-
-.informer__meta {
-    background-image: url('/images/wave.svg');
-    background-size: 22px 14px;
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-    font-size: 13px;
-    min-width: 40px;
-    text-transform: uppercase;
-    padding-left: 24px;
-}
-
-.informer__meta--calendar {
-    background-image: url('/images/calendar.svg');
-}
-
-.informer__text {
-    margin: 0;
-    position: relative;
-    white-space: nowrap;
-}
-
-.informer__item::after {
-    background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-    display: block;
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 20%;
-    height: 100%;
-    z-index: 1;
+@media (min-width: 375px) {
+    .informer {
+        white-space: normal;
+    }
 }
 
 @media (min-width: 500px) {
     .informer {
-        grid-row-start: 2;
-        grid-row-end: 3;
-        grid-column-start: 4;
-        grid-column-end: -1;
-        white-space: normal;
+        grid-row: 2 / 3;
+        grid-column: 4 / -1;
     }
 }
 
@@ -66,31 +27,129 @@
     .informer {
         grid-column-start: 6;
     }
+}
 
-    .informer__item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .informer__meta {
-        background-size: 38px 29px;
-        font-size: 48px;
-        padding-left: 38px;
-    }
-
-    .informer__meta--calendar {
-        background-size: 38px 23px;
-    }
-
-    .informer__text {
-        margin-top: 10px;
-        margin-bottom: 0;
-        white-space: normal;
+@media (min-width: 980px) {
+    .informer {
+        flex-direction: row;
     }
 }
 
-@media (min-width: 800px) {
+.informer__item {
+    display: flex;
+    position: relative;
+    padding: 2px 10px 2px 40px;
+    background-size: 32px 24px;
+    background-repeat: no-repeat;
+    line-height: 1.3;
+}
+
+@media (min-width: 375px) {
+    .informer__item {
+        flex-direction: column;
+        padding: 0 10px 0 48px;
+        background-position: 0 5px;
+    }
+}
+
+@media (min-width: 500px) {
+    .informer__item {
+        padding: 0 10px 0 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .informer__item {
+        background-size: 38px 30px;
+        background-position: 0 18px;
+    }
+}
+
+.informer__item--wave {
+    background-image: url('/images/wave.svg');
+}
+
+.informer__item--calendar {
+    background-image: url('/images/calendar.svg');
+}
+
+.informer__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 374px) {
     .informer__item::after {
-        display: none;
+        background: linear-gradient(
+            to left,
+            white, rgba(255, 255, 255, 0)
+        );
+        display: block;
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 375px) {
+    .informer__item:not(:last-child) {
+        margin-bottom: 26px;
+    }
+}
+
+@media (min-width: 980px) {
+    .informer__item {
+        max-width: 244px;
+    }
+
+    .informer__item:not(:last-child) {
+        margin: 0 50px 0 0;
+    }
+}
+
+.informer__meta {
+    grid-area: meta;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+@media (min-width: 375px) {
+    .informer__meta {
+        font-size: 21px;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 500px) {
+    .informer__meta {
+        margin: 0;
+        padding: 4px 0 4px 48px;
+    }
+}
+
+@media (min-width: 600px) {
+    .informer__meta {
+        font-size: 48px;
+        text-transform: uppercase;
+    }
+}
+
+.informer__text {
+    grid-area: text;
+    margin: 0;
+    position: relative;
+}
+
+@media (min-width: 375px) {
+    .informer__text {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    .informer__text {
+        font-size: 16px;
     }
 }
