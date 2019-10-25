@@ -11,9 +11,11 @@
     <nav class="header__navigation navigation">
         <button class="navigation__button"
             aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="navigation-menu"
             type="button"
         ></button>
-        <ul class="navigation__pages">
+        <ul id="navigation-menu" class="navigation__pages">
             <li class="navigation__page">
                 <a class="navigation__link" href="/articles/">Статьи</a>
             </li>

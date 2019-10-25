@@ -1,9 +1,9 @@
 /* Navigation */
 
 .navigation {
-    margin: 0 10px;
     display: flex;
-    justify-content: flex-end;
+    margin: 0 10px;
+    justify-content: center;
     align-items: center;
 }
 
@@ -32,12 +32,6 @@
     transition: 0.5s;
 }
 
-.navigation__button--active {
-    width: 18px;
-    height: 26px;
-    transform: rotate(90deg);
-}
-
 @media (min-width: 500px) {
     .navigation__button {
         display: none;
@@ -47,18 +41,19 @@
 /* Pages */
 
 .navigation__pages {
-    display: flex;
-    background-color: #ffffff;
-    flex-direction: column;
     position: absolute;
     top: 60px;
     left: 100%;
-    list-style: none;
-    transition: 0.5s;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     padding: 0;
     width: 100%;
-    margin: 0;
-    z-index: 2;
+    height: auto;
+    background-color: white;
+    list-style: none;
+    transition: 0.5s;
 }
 
 .navigation__pages--active {
@@ -68,20 +63,25 @@
 @media (min-width: 500px) {
     .navigation__pages {
         position: static;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(6, auto);
         background-color: transparent;
+    }
+}
+
+@media (min-width: 860px) {
+    .navigation__pages {
+        grid-template-rows: 1fr;
     }
 }
 
 /* Page */
 
 .navigation__page {
+    display: flex;
     margin: 0;
     padding: 10px 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #000000;
@@ -90,16 +90,20 @@
 
 @media (min-width: 500px) {
     .navigation__page {
-        margin-right: 10px;
+        margin-right: 5px;
         padding: 0;
+        justify-content: flex-end;
         border-bottom: 0;
+        font-size: 12px;
     }
 
     .navigation__page--right {
         display: flex;
-        flex-basis: 25%;
-        justify-content: flex-end;
+        margin: 0;
+        justify-content: center;
         align-items: center;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
     }
 
     .navigation__page--right::before {
@@ -109,6 +113,25 @@
         margin-right: 10px;
         background: url('/images/patreon.svg') center left no-repeat;
         content: '';
+    }
+}
+
+@media (min-width: 600px) {
+    .navigation__page {
+        font-size: 16px;
+    }
+
+    .navigation__page--right {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 860px) {
+    .navigation__page--right {
+        margin-top: 0;
+        grid-column: 7 / 11;
+        grid-row: 1 / 2;
+        justify-content: flex-end;
     }
 }
 

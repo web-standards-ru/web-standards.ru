@@ -29,7 +29,6 @@
     .logo__title {
         font-size: 38px;
         align-self: end;
-        padding-bottom: 20px;
     }
 }
 
@@ -50,6 +49,6 @@
     .logo__tagline {
         align-self: start;
         display: block;
-        padding-top: 20px;
+        padding-top: 5px;
     }
 }
