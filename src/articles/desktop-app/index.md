@@ -5,11 +5,11 @@ source:
     title: 'How to easily build desktop apps with HTML, CSS and JS'
     url: 'https://medium.com/p/d3e3f03f95a5'
     author: 'Адитья Шридхара'
-translator:
-    name: 'Алёна Батицкая'
+translators:
+  - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

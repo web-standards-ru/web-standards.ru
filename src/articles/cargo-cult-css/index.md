@@ -5,10 +5,10 @@ source:
     title: 'Cargo Cult CSS'
     url: 'http://www.kapowaz.net/articles/cargo-cult-css'
     author: 'Бен Дарлоу'
-translator:
-    name: 'Влад Андерсен'
+translators:
+  - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'
-editor:
+editors:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
   - name: 'Ольга Алексашенко'

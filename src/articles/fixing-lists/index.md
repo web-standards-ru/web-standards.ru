@@ -5,11 +5,11 @@ source:
     title: '„Fixing“ Lists'
     url: 'https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html'
     author: 'Скотт О’Хара'
-translator:
-    name: 'Татьяна Фокина'
+translators:
+  - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,11 +5,11 @@ source:
     title: 'Top JS frameworks and topics to learn in 2019'
     url: 'https://medium.com/p/b4142f38df20'
     author: 'Эрик Эллиот'
-translator:
-    name: 'Владислав Почепцов'
+translators:
+  - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

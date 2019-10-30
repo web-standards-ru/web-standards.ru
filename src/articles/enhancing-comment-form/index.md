@@ -5,10 +5,10 @@ source:
     title: 'Enhancing a comment form'
     url: 'https://justmarkup.com/log/2016/10/enhancing-a-comment-form/'
     author: 'Майкл Шарналь'
-translator:
-    name: 'Анна Кухарева'
+translators:
+  - name: 'Анна Кухарева'
     url: 'https://medium.com/@annakukhareva'
-editor:
+editors:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
   - name: 'Юля Бухвалова'

@@ -5,11 +5,11 @@ source:
     title: 'Using Puppeteer to crawl pages and save them as Markdown files'
     url: 'https://justmarkup.com/log/2019/01/using-puppeteer-to-crawl-pages-and-save-them-as-markdown-files/'
     author: 'Михаэль Шарналь'
-translator:
-    name: 'Владислав Ермолин'
+translators:
+  - name: 'Владислав Ермолин'
     url: 'https://medium.com/@electrovladyslav'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

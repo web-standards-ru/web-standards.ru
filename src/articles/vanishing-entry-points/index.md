@@ -5,11 +5,11 @@ source:
     title: 'HTML, CSS and our vanishing industry entry points'
     url: 'https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/'
     author: 'Рейчел Эндрю'
-translator:
-    name: 'Алёна Батицкая'
+translators:
+  - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

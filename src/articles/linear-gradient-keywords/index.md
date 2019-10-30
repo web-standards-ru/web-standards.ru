@@ -5,11 +5,11 @@ source:
     title: 'Linear gradient keywords'
     url: 'http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/'
     author: 'Эрик Мейер'
-translator:
-    name: 'Влад Андерсен'
+translators:
+  - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,8 +5,8 @@ source:
     title: 'How nth-child Works'
     url: 'http://css-tricks.com/5452-how-nth-child-works/'
     author: 'Крис Койер'
-translator:
-    name: 'Вадим Макеев'
+translators:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -1,11 +1,11 @@
 ---
 title: 'О доступности интерфейсов из первых уст'
 date: 2018-02-19
-author:
+authors:
     name: 'Евгений Караваев'
     url: 'https://medium.com/@karavaev.evgeniy'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

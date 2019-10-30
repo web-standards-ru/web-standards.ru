@@ -5,11 +5,11 @@ source:
     title: 'Our pointless pursuit of semantic value'
     url: 'https://www.smashingmagazine.com/2011/11/our-pointless-pursuit-of-semantic-value/'
     author: 'Дивья Маньян'
-translator:
-    name: 'Влад Андерсен'
+translators:
+  - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,11 +5,11 @@ source:
     title: 'Here are a few function decorators you can write from scratch'
     url: 'https://medium.com/p/488549fe8f86'
     author: 'Кристи Сальсезку'
-translator:
-    name: 'Владислав Почепцов'
+translators:
+  - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

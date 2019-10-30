@@ -5,11 +5,11 @@ source:
     title: 'The contenteditable attribute'
     url: 'https://html5doctor.com/the-contenteditable-attribute/'
     author: 'Джек Осборн'
-translator:
-    name: 'Антон Немцев'
+translators:
+  - name: 'Антон Немцев'
     url: 'https://twitter.com/silentimp'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

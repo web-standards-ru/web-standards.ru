@@ -5,11 +5,11 @@ source:
     title: 'The broken promise of Web Components'
     url: 'https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/'
     author: 'Дмитрий Димант'
-translator:
-    name: 'Владислав Почепцов'
+translators:
+  - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

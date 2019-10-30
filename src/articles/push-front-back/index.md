@@ -5,11 +5,11 @@ source:
     title: 'Implementing push notifications on the front-end and back-end'
     url: 'https://justmarkup.com/log/2017/02/implementing-push-notifications/'
     author: 'Михаэль Шарналь'
-translator:
-    name: 'Владислав Почепцов'
+translators:
+  - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

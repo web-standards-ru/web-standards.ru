@@ -1,11 +1,11 @@
 ---
 title: 'Основные способы вёрстки. Часть вторая: бестабличная вёрстка'
 date: 2013-06-28
-author:
+authors:
     name: 'Лев Солнцев'
     url: 'https://twitter.com/ruGreLI'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,11 +5,11 @@ source:
     title: 'HTML5 adds new translate attribute'
     url: 'http://rishida.net/blog/?p=831'
     author: 'Ричард Ишида'
-translator:
-    name: 'Влад Андерсен'
+translators:
+  - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,11 +5,11 @@ source:
     title: 'Manifest? Eh? What? Why?'
     url: 'https://github.com/w3c/manifest/blob/gh-pages/explainer.md'
     author: 'Альфред Маерс'
-translator:
-    name: 'Анна Кухарева'
+translators:
+  - name: 'Анна Кухарева'
     url: 'https://medium.com/@annakukhareva'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

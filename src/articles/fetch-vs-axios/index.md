@@ -5,11 +5,11 @@ source:
     title: 'Fetch vs. Axios.js for making HTTP requests'
     url: 'https://medium.com/p/2b261cdd3af5'
     author: 'Джейсон Арнольд'
-translator:
-    name: 'Артур Храбров'
+translators:
+  - name: 'Артур Храбров'
     url: 'https://medium.com/@nzvtrkk'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

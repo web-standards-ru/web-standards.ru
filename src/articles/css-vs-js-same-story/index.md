@@ -5,8 +5,8 @@ source:
     title: 'We’re seeing the same thing today…'
     url: 'https://twitter.com/tobie/status/1083316137826365442'
     author: 'Тоби Лангел'
-translator:
-    name: 'Вадим Макеев'
+translators:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

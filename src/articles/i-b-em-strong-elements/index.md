@@ -5,8 +5,8 @@ source:
     title: 'The i, b, em, & strong elements'
     url: 'https://html5doctor.com/i-b-em-strong-element/'
     author: 'Оли Стадхольм'
-translator:
-    name: 'Вадим Макеев'
+translators:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

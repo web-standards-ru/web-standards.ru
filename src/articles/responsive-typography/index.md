@@ -5,11 +5,11 @@ source:
     title: 'Responsive typography: the basics'
     url: 'http://informationarchitects.net/blog/responsive-typography-the-basics/'
     author: 'Оливер Райхенштайн'
-translator:
-    name: 'Александр Котоманов'
+translators:
+  - name: 'Александр Котоманов'
     url: 'http://alex.kotomanov.com/'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,10 +5,10 @@ source:
     title: 'Tips for making interactive elements accessible on mobile devices'
     url: 'https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/'
     author: 'Ире Адеринокун'
-translator:
-    name: 'Алёна Батицкая'
+translators:
+  - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'
-editor:
+editors:
   - name: 'Наталья Рыжова'
     url: 'https://www.facebook.com/natalia.ryzhova.71'
   - name: 'Вадим Макеев'

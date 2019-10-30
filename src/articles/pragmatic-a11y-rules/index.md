@@ -5,11 +5,11 @@ source:
     title: 'Pragmatic rules of web accessibility that will stick to your mind'
     url: 'https://medium.com/p/9d3eb85a1a28'
     author: 'Тьяго Ромеро Гарсия'
-translator:
-    name: 'Татьяна Фокина'
+translators:
+  - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

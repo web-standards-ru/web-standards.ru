@@ -5,8 +5,8 @@ source:
     title: 'Avoiding common HTML5 mistakes'
     url: 'https://html5doctor.com/avoiding-common-html5-mistakes/'
     author: 'Ричард Кларк'
-translator:
-    name: 'Вадим Макеев'
+translators:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

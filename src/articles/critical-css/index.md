@@ -5,11 +5,11 @@ source:
     title: 'Extract critical CSS'
     url: 'https://web.dev/extract-critical-css'
     author: 'Милица Михайлия'
-translator:
-    name: 'Алёна Батицкая'
+translators:
+  - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags: article

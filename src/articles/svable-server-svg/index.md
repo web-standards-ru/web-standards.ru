@@ -1,10 +1,10 @@
 ---
 title: 'Svable — простая генерация SVG на сервере'
 date: 2013-12-13
-author:
+authors:
     name: 'Илья Заяц'
     url: 'http://svable.com/'
-editor:
+editors:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
   - name: 'Ольга Алексашенко'

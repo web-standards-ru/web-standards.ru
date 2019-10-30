@@ -5,11 +5,11 @@ source:
     title: 'Stop breaking the Web'
     url: 'http://ponyfoo.com/articles/stop-breaking-the-web'
     author: 'Николас Беваква'
-translator:
-    name: 'Ольга Алексашенко'
+translators:
+  - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

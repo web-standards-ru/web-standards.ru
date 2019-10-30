@@ -5,12 +5,12 @@ source:
     title: 'HTML5 — Check it Before you Wreck it with Mike™ Smith'
     url: 'https://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/'
     author: 'Стив Фолкнер'
-translator:
+translators:
   - name: 'Максим Усачёв'
     url: 'https://twitter.com/psyw'
   - name: 'Илья Стрельцын'
     url: 'https://twitter.com/SelenIT2'
-editor:
+editors:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
   - name: 'Ольга Алексашенко'

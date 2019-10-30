@@ -1,11 +1,11 @@
 ---
 title: 'Text-transform и копирование'
 date: 2019-01-24
-author:
+authors:
     name: 'Игорь Шевченко'
     url: 'https://medium.com/@igor_shevchenko'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

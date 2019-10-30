@@ -5,11 +5,11 @@ source:
     title: 'CSS Architecture'
     url: 'http://philipwalton.com/articles/css-architecture/'
     author: 'Филип Уолтон'
-translator:
-    name: 'Вадим Макеев'
+translators:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
-editor:
-    name: 'Ольга Алексашенко'
+editors:
+  - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'
 layout: article.njk
 tags:

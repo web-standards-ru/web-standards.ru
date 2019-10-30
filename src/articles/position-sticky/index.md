@@ -5,11 +5,11 @@ source:
     title: 'CSS position: sticky — how it really works!'
     url: 'https://medium.com/p/54cd01dc2d46'
     author: 'Элад Шехтер'
-translator:
-    name: 'Алёна Батицкая'
+translators:
+  - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,10 +5,10 @@ source:
     title: 'Front-end performance for web designers and front-end developers'
     url: 'http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/'
     author: 'Гарри Робертс'
-translator:
-    name: 'Влад Андерсен'
+translators:
+  - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'
-editor:
+editors:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
   - name: 'Ольга Алексашенко'

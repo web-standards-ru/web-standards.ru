@@ -5,11 +5,11 @@ source:
     title: 'Easily center text vertically, with SVG!'
     url: 'http://lea.verou.me/2013/03/easily-center-text-vertically-with-svg/'
     author: 'Лия Веру'
-translator:
-    name: 'Антон Немцев'
+translators:
+  - name: 'Антон Немцев'
     url: 'https://twitter.com/silentimp'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

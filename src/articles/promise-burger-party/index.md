@@ -5,11 +5,11 @@ source:
     title: 'The promise of a burger party'
     url: 'https://kosamari.com/notes/the-promise-of-a-burger-party'
     author: 'Марико Косака'
-translator:
-    name: 'Владислав Почепцов'
+translators:
+  - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

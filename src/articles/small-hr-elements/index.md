@@ -5,8 +5,8 @@ source:
     title: 'The small & hr elements'
     url: 'https://html5doctor.com/small-hr-element/'
     author: 'Оли Стадхольм'
-translator:
-    name: 'Вадим Макеев'
+translators:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

@@ -5,11 +5,11 @@ source:
     title: 'Accessible SVG Icons with Inline Sprites'
     url: 'https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/'
     author: 'Марко Хенгстенберг'
-translator:
-    name: 'Татьяна Фокина'
+translators:
+  - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

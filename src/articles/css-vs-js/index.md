@@ -5,11 +5,11 @@ source:
     title: 'CSS and JS are at war, here’s how to stop it'
     url: 'https://dev.to/evilmartians/css-and-js-are-at-war-heres-how-to-stop-it-158a'
     author: 'Андрей Ситник'
-translator:
-    name: 'Алёна Батицкая'
+translators:
+  - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

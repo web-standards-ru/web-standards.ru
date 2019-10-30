@@ -5,10 +5,10 @@ source:
     title: 'Surveying the Big Screen'
     url: 'http://alistapart.com/article/surveying-the-big-screen'
     author: 'Майк Пик'
-translator:
-    name: 'Наталья Арефьева'
+translators:
+  - name: 'Наталья Арефьева'
     url: 'https://twitter.com/n_snork'
-editor:
+editors:
   - name: 'Юлия Бухвалова'
     url: 'https://twitter.com/yoksel'
   - name: 'Вадим Макеев'

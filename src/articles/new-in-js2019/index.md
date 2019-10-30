@@ -5,11 +5,11 @@ source:
     title: 'What’s New in JavaScript for 2019'
     url: 'https://developer.okta.com/blog/2019/01/22/whats-new-in-es2019'
     author: 'Девид Нил'
-translator:
-    name: 'Алёна Батицкая'
+translators:
+  - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

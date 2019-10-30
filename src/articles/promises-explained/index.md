@@ -6,11 +6,11 @@ source:
     title: 'JavaScript: promises explained with simple real life analogies'
     url: 'https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138'
     author: 'Шрути Капур'
-translator:
-    name: 'Артур Храбров'
+translators:
+  - name: 'Артур Храбров'
     url: 'https://medium.com/@nzvtrkk'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

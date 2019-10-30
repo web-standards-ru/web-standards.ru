@@ -1,11 +1,11 @@
 ---
 title: 'Метрики загрузки страницы'
 date: 2017-11-15
-author:
+authors:
     name: 'Артём Денисов'
     url: 'https://medium.com/@denar90'
-editor:
-    name: 'Вадима Макеева'
+editors:
+  - name: 'Вадима Макеева'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

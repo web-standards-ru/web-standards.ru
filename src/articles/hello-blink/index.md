@@ -5,11 +5,11 @@ source:
     title: 'Hello Blink'
     url: 'https://www.brucelawson.co.uk/2013/hello-blink/'
     author: 'Брюс Лоусон'
-translator:
-    name: 'Антон Немцев'
+translators:
+  - name: 'Антон Немцев'
     url: 'https://twitter.com/silentimp'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

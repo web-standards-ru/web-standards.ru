@@ -5,11 +5,11 @@ source:
     title: 'Another CSS image replacement technique'
     url: 'http://nicolasgallagher.com/another-css-image-replacement-technique/'
     author: 'Николас Галлахер'
-translator:
-    name: 'Максим Усачёв'
+translators:
+  - name: 'Максим Усачёв'
     url: 'https://twitter.com/psyw'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

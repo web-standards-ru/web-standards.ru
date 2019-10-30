@@ -5,11 +5,11 @@ source:
     title: 'Tooltips & Toggletips'
     url: 'https://inclusive-components.design/tooltips-toggletips/'
     author: 'Хейдон Пикеринг'
-translator:
-    name: 'Татьяна Фокина'
+translators:
+  - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

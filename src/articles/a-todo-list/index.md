@@ -5,11 +5,11 @@ source:
     title: 'A Todo List'
     url: 'https://inclusive-components.design/a-todo-list/'
     author: 'Хейдон Пикеринг'
-translator:
-    name: 'Татьяна Фокина'
+translators:
+  - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

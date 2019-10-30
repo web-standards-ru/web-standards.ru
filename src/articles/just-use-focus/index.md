@@ -5,11 +5,11 @@ source:
     title: 'Just use :focus styles, damnit'
     url: 'https://gomakethings.com/just-use-focus-styles-damnit/'
     author: 'Крис Фердинанди'
-translator:
-    name: 'Татьяна Фокина'
+translators:
+  - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
-editor:
-    name: 'Вадим Макеев'
+editors:
+  - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

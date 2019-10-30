@@ -1,11 +1,11 @@
 ---
 title: 'Путь наставника'
 date: 2016-06-30
-author:
+authors:
     name: 'Максим Усачёв'
     url: 'https://twitter.com/psyw'
-editor:
-    name: 'Вадима Макеева'
+editors:
+  - name: 'Вадима Макеева'
     url: 'https://twitter.com/pepelsbey'
 layout: article.njk
 tags:

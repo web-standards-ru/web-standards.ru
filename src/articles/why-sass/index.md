@@ -5,10 +5,10 @@ source:
     title: 'Why Sass?'
     url: 'http://alistapart.com/article/why-sass'
     author: 'Дэн Седерхольм'
-translator:
-    name: 'Наталья Арефьева'
+translators:
+  - name: 'Наталья Арефьева'
     url: 'https://twitter.com/n_snork'
-editor:
+editors:
   - name: 'Юлия Бухвалова'
     url: 'https://twitter.com/yoksel'
   - name: 'Вадим Макеев'
