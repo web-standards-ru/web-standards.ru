@@ -36,9 +36,11 @@ layout: page.njk
         </div>
         <div class="article__authors authors">
             <div class="authors__author">
-                <a class="authors__author-link" href="{{ author.url }}">
-                    {{ author.name }}
-                </a>
+                {%- for author in authors -%}
+                    <a class="authors__author-link" href="{{ author.url }}">
+                        {{ author.name }}
+                    </a>
+                {%- endfor -%}
                 {# TODO Пока ролей нет, возможно, стоит дропнуть
                     <ul class="authors__author-roles-list">
                         <li class="authors__role">Разработчик</li>

@@ -2,7 +2,7 @@
 title: 'Нюансы CSS'
 date: 2011-04-21
 authors:
-    name: 'Лев Солнцев'
+  - name: 'Лев Солнцев'
     url: 'https://twitter.com/ruGreLI'
 editors:
   - name: 'Вадим Макеев'

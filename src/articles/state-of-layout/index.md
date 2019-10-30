@@ -2,7 +2,7 @@
 title: 'Какой расклад?'
 date: 2010-08-30
 authors:
-    name: 'Вячеслав Олиянчук'
+  - name: 'Вячеслав Олиянчук'
     url: 'http://miripiruni.org/'
 editors:
   - name: 'Вадим Макеев'

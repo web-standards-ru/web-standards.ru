@@ -2,7 +2,7 @@
 title: 'Метрики загрузки страницы'
 date: 2017-11-15
 authors:
-    name: 'Артём Денисов'
+  - name: 'Артём Денисов'
     url: 'https://medium.com/@denar90'
 editors:
   - name: 'Вадима Макеева'

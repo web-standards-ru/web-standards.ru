@@ -2,7 +2,7 @@
 title: 'Преимущества многострочного CSS'
 date: 2010-12-13
 authors:
-    name: 'Вячеслав Олиянчук'
+  - name: 'Вячеслав Олиянчук'
     url: 'http://miripiruni.org/'
 editors:
   - name: 'Вадим Макеев'
