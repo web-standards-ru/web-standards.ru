@@ -4,7 +4,7 @@ date: 2019-09-30
 source:
     title: 'Tabbed Interfaces'
     url: https://inclusive-components.design/tabbed-interfaces/
-    author: 'Хейдона Пикеринга'
+    author: 'Хейдон Пикеринг'
 translator:
     name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
@@ -37,7 +37,7 @@ tags: article
 
 Что, если я использую немного CSS, чтобы визуализировать выбор раздела из моего оглавления? Конечно, это можно сделать при помощи псевдокласса `:target`.
 
-    section:not(:target) {  
+    section:not(:target) {
       display: none;
     }
 
@@ -61,7 +61,7 @@ tags: article
 
 Что делает вкладки вкладками, так это удобство взаимодействия с ними с клавиатуры. На самом деле единственная причина, по которой в этом случае нужна семантика ARIA — это для предупреждения пользователей скринридеров об ожидаемом поведении клавиатуры. Ниже базовая семантическая структура и примечания к ней:
 
-    <ul role="tablist">  
+    <ul role="tablist">
       <li role="presentation">
         <a role="tab" href="#section1" id="tab1" aria-selected="true">
           Раздел 1
@@ -77,17 +77,17 @@ tags: article
            Раздел 3
          </a>
       </li>
-    </ul>  
+    </ul>
     <section role="tabpanel" id="section1"
-             aria-labelledby="tab1">  
+             aria-labelledby="tab1">
       ...
-    </section>  
+    </section>
     <section role="tabpanel" id="section2"
-             aria-labelledby="tab2" hidden>  
+             aria-labelledby="tab2" hidden>
       ...
-    </section>  
+    </section>
     <section role="tabpanel" id="section3"
-             aria-labelledby="tab3" hidden>  
+             aria-labelledby="tab3" hidden>
       ...
     </section>
 
@@ -113,7 +113,7 @@ tags: article
 
 Не менее важно то, что пользователя возвращает к выбранной вкладке после нажатия Shift Tab. Всё это можно сделать, если добавить для каждой вкладки атрибут `tabindex="-1"`, кроме выбранной в данный момент. Это убирает интерактивные вкладки из порядка фокуса, но даёт возможность установить его с помощью скрипта. В примере ниже выбрана вторая вкладка, которой задано состояние `aria-selected` со значением `true`.
 
-    <ul role="tablist">  
+    <ul role="tablist">
       <li role="presentation">
         <a role="tab" tabindex="-1" href="#section1">
           Раздел 1
@@ -132,11 +132,11 @@ tags: article
 
 При помощи атрибута `tabindex="-1"` я могу для оставшихся вкладок отслеживать событие `keydown` для клавиш с левой и правой стрелками, чтобы сделать активной нужную неактивную вкладку.
 
-    tab.addEventListener('keydown', e => {  
+    tab.addEventListener('keydown', e => {
       let dir = e.which === 37 ? 'left' : 39 ? 'right' : null;
       if (dir) {
         switchTab(e.eventTarget, dir);
-      }  
+      }
     })
 
 Каждый раз, когда пользователь выбирает новую вкладку, появляется связанная с ней панель вкладок. Когда первая из четырёх вкладок выбрана, то любой скринридер объявит примерно следующее: _«[Название вкладки] выбрана, вкладка, 2 из 4»_. Исчерпывающая информация.
@@ -149,7 +149,7 @@ tags: article
 
 При работе со скринридерами, такими как NVDA и JAWS, [стрелка вниз перемещает пользователя к следующему элементу](https://webaim.org/resources/shortcuts/nvda#reading) (тому, на котором можно сделать фокус или к какому-то другому), после чего они объявят его. Если не изменять поведение, то это будет следующая вкладка в `tablist`. Вместо этого можно перехватить нажатие клавиши со стрелкой вниз и программно переместить фокус на открытую панель вкладок, убедившись, что она не пропущена. Посмотрите на `panels[i].focus()` в следующем фрагменте кода:
 
-    tab.addEventListener('keydown', e => {  
+    tab.addEventListener('keydown', e => {
       let index = Array.prototype.indexOf.call(tabs, e.currentTarget);
       let dir =
         e.which === 37 ? index - 1 :
@@ -226,7 +226,7 @@ tags: article
 
 Простая замена какого-то контента на странице не приводит к тому, что пользователя автоматически переносит к этому контенту или (в случае слепых пользователей вспомогательных технологий), что его предупреждают о существовании такого контента. Как сказано выше в примечании «Фокус на неинтерактивных элементах», можно сделать фокус на основном заголовке нового представления или на внешнем элементе. Если вы делаете фокус на последнем, то рекомендуется задать ему подпись либо непосредственно при помощи `aria-label`, либо по принципу заголовка с использованием `aria-labelledby`.
 
-    <div aria-label="На главную" role="region" tabindex="-1">  
+    <div aria-label="На главную" role="region" tabindex="-1">
       ...
     </div>
 

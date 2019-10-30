@@ -4,7 +4,7 @@ date: 2019-09-02
 source:
     title: 'A Theme Switcher'
     url: https://inclusive-components.design/a-theme-switcher/
-    author: 'Хейдона Пиккеринга'
+    author: 'Хейдон Пикеринг'
 translator:
     name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
@@ -49,7 +49,7 @@ tags: article
 
     :root {
        background-color: #fefefe;
-       filter: invert(100%);   
+       filter: invert(100%);
     }
 
     * {
@@ -62,16 +62,16 @@ tags: article
 
 Когда мы хотим инвертировать тему, то, скорее всего, не собираемся инвертировать растровые изображения или видео. В противном случае интерфейс будет заполнен жуткими негативами. Хитрость заключается в дважды инвертированных `<img>`. Селектор, который я использую, исключает SVG-изображения. Они, как правило, легко и просто инвертируются из-за того, что представлены в виде простых цветовых схем.
 
-    :root { 
+    :root {
        background-color: #fefefe;
        filter: invert(100%);
     }
-    
-    * { 
+
+    * {
        background-color: inherit;
     }
-    
-    img:not([src*=".svg"]), video {  
+
+    img:not([src*=".svg"]), video {
        filter: invert(100%);
     }
 
@@ -99,14 +99,14 @@ tags: article
 
 Если у вас ещё не настроено окружение для React, то можете легко это сделать, установив `create-react-app`.
 
-    npm i -g create-react-app  
-    create-react-app theme-switch  
-    cd theme-switch  
+    npm i -g create-react-app
+    create-react-app theme-switch
+    cd theme-switch
     npm start
 
 Теперь заготовка приложения будет работать на `localhost:3000`. В новом проекте `theme-switch` наш компонент называется **ThemeSwitch** и будет добавлен в `render()` в `App.js` как `<ThemeSwitch/>`.
 
-    class App extends Component {  
+    class App extends Component {
       render() {
         return (
           <div className="App">
@@ -136,18 +136,18 @@ tags: article
 Как следует из пути в строке с импортом выше, мы будем работать с файлом `ThemeSwitch.js`, размещённом в новой папке «components». Так что нужно создать папку и файл. Основа для **ThemeSwitch** выглядит так:
 
     import React, { Component } from 'react';
-    
-    class ThemeSwitch extends Component {  
+
+    class ThemeSwitch extends Component {
       render() {
         // Разметка компонента в JSX
       }
     }
-    
+
     export default ThemeSwitch;
 
 После рендеринга разметка переключателя, имеющего неактивное состояние и состояние по умолчанию, будет выглядеть таким образом (примечания после этого фрагмента кода):
 
-    <div>  
+    <div>
        <button aria-pressed="false">
           тёмная тема:
           <span aria-hidden="true">выключить</span>
@@ -169,9 +169,9 @@ tags: article
 
 Наш компонент будет хранить текущее состояние. Это позволит пользователю переключаться между активным и неактивным состояниями тёмной темы. Сначала мы инициализируем состояние в конструкторе компонента:
 
-    constructor(props) {  
+    constructor(props) {
        super(props);`
-    
+
        this.state = {
           active: 'false'
        };
@@ -180,7 +180,7 @@ tags: article
 Чтобы оживить компонент, включим вспомогательную функцию `isActive()`, а также `toggle()`, которая фактически переключает состояние:
 
     isActive = () => this.state.active;`
-    
+
       toggle = () => {
         this.setState({
           active: !this.isActive()
@@ -192,7 +192,7 @@ tags: article
 
 В `render()` для компонента мы можем использовать `isActive()` для переключения значения `aria-pressed`, текста кнопки и значения CSS-атрибута `media`:
 
-    return (  
+    return (
       <div>
         <button aria-pressed={this.isActive()} onClick={this.toggle}>
           тёмная тема:
@@ -233,13 +233,13 @@ tags: article
       if (this.store) {
         this.setState({
           active: this.store.getItem('ThemeSwitch') || false
-        });   
-      } 
+        });
+      }
     }
 
 Так как управление состоянием в React происходит асинхронно, недостаточно просто сохранять изменённое состояние после того, как оно было дополнено. Вместо этого мне нужно использовать метод `componentDidUpdate`:
 
-    componentDidUpdate() {  
+    componentDidUpdate() {
       if (this.store) {
         this.store.setItem('ThemeSwitch', this.state.active);
       }
@@ -251,7 +251,7 @@ tags: article
 
 Если вы когда-нибудь имели дело с [Modernizr](https://modernizr.com/), то могли бы использовать похожий тест свойства и его значения для CSS. Однако не стоит его здесь использовать, поскольку мы не хотим, чтобы наш компонент имел какие-либо зависимости, если в этом нет необходимости.
 
-    invertSupported (property, value) {  
+    invertSupported (property, value) {
       var prop = property + ':',
           el = document.createElement('test'),
           mStyle = el.style;
@@ -259,7 +259,7 @@ tags: article
       return mStyle[property];
     }
 
-    componentDidMount() {  
+    componentDidMount() {
       if (this.store) {
         this.setState({
           supported: this.invertSupported('filter', 'invert(100%)'),
@@ -270,7 +270,7 @@ tags: article
 
 Это можно использовать в нашем JSX для того, чтобы скрыть компонент интерфейса с помощью свойства `hidden` там, где оно не поддерживается.
 
-    <div hidden={!this.state.supported}>  
+    <div hidden={!this.state.supported}>
       <!-- контент компонента -->
     </div>
 
@@ -282,11 +282,11 @@ tags: article
 
 В качестве альтернативы вы можете вообще отказаться от отображения содержимого компонента на странице, возвращая `null`.
 
-    render() {  
+    render() {
       if (!this.supported) {
         return null;
       }
-    
+
       return (
         <div>
           <button aria-pressed={this.state.active}
@@ -313,7 +313,7 @@ tags: article
 
 * Если вам нужно определить WHCM, чтобы добавить улучшения, вы можете использовать следующий медиазапрос:
 
-    @media (-ms-high-contrast: active) {    
+    @media (-ms-high-contrast: active) {
       /* Относящийся к WHCM код */
     }
 
@@ -328,7 +328,7 @@ tags: article
 Я могу запросить этот проп в виде строки CSS и повторно инвертировать изображения, если её значение равно `true`:
 
 
-    this.css = `  
+    this.css = `
       html { filter: invert(100%); background: #fefefe; }
       * { background-color: inherit }
       ${this.props.preserveRasters === 'true' ? `img:not([src*=".svg"]), video { filter: invert(100%) }` : ``}`;
