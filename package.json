@@ -3,11 +3,15 @@
   "scripts": {
     "start": "npx eleventy --serve --quiet",
     "build": "npx eleventy --quiet",
-    "test": "stylelint 'src/styles/**/*.css'"
+    "test": "stylelint 'src/styles/**/*.css' && remark ."
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
     "pretty-data": "^0.40.0",
+    "remark-cli": "^7.0.0",
+    "remark-lint": "^6.0.5",
+    "remark-lint-emphasis-marker": "^1.0.3",
+    "remark-lint-strong-marker": "^1.0.3",
     "stylelint": "^11.0.0"
   },
   "browserslist": [
@@ -141,5 +145,16 @@
       "no-eol-whitespace": true,
       "no-missing-end-of-source-newline": true
     }
+  },
+  "remarkConfig": {
+    "settings": {
+      "emphasis": "_",
+      "strong": "**"
+    },
+    "plugins": [
+      "remark-lint-emphasis-marker",
+      "remark-lint-strong-marker"
+    ]
   }
+
 }
