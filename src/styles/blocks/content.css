@@ -4,3 +4,16 @@
     max-width: 100%;
     height: auto;
 }
+
+@media (min-width: 1240px) {
+    .content {
+        width: 863px;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1500px) {
+    .content {
+        width: 880px;
+    }
+}

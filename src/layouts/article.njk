@@ -37,6 +37,7 @@ layout: page.njk
         <div class="article__authors authors">
             {%- for author in authors -%}
                 <div class="authors__author">
+                    <img class="authors__author-avatar" src="/images/author--blue.png" width="113" height="104" alt="{{ author.name }}">
                     <a class="authors__author-link" href="{{ author.url }}">
                         {{ author.name }}
                     </a>
