@@ -313,9 +313,11 @@ tags: article
 
 * Если вам нужно определить WHCM, чтобы добавить улучшения, вы можете использовать следующий медиазапрос:
 
-    @media (-ms-high-contrast: active) {
-      /* Относящийся к WHCM код */
-    }
+```
+@media (-ms-high-contrast: active) {
+    /* Относящийся к WHCM код */
+}
+```
 
 ## Проп `preserveRasters`
 
@@ -326,7 +328,6 @@ tags: article
     <ThemeSwitch preserveRasters={false} />
 
 Я могу запросить этот проп в виде строки CSS и повторно инвертировать изображения, если её значение равно `true`:
-
 
     this.css = `
       html { filter: invert(100%); background: #fefefe; }

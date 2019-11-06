@@ -149,10 +149,13 @@ CSS
 - «Липкое» позиционирование поддерживается всеми основными современными браузерами. Исключение: старый-добрый IE.
 - Для Safari потребуется префикс `-webkit`
 
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
+```
+position: -webkit-sticky; /* Safari */
+position: sticky;
+```
 
-![Более 86% браузеров поддерживает sticky по данным [Can I Use](https://caniuse.com/#search=sticky)](images/3.png)*Более 86% браузеров поддерживает sticky по данным [Can I Use](https://caniuse.com/#search=sticky)*
+![Более 86% браузеров поддерживает sticky по данным Can I Use](images/3.png)
+_Более 86% браузеров поддерживает sticky по данным [Can I Use](https://caniuse.com/#search=sticky)_
 
 ## В заключении
 
