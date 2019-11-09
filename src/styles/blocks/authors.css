@@ -1,7 +1,7 @@
 .authors {
     display: flex;
     font-size: 10px;
-    line-height: 130%;
+    line-height: 1.3em;
     color: black;
 }
 
@@ -54,6 +54,12 @@
     letter-spacing: 0.01em;
 }
 
+@media (min-width: 900px) {
+    .authors {
+        font-size: 14px;
+    }
+}
+
 @media (min-width: 1024px) {
     .authors {
         align-items: flex-start;
@@ -79,7 +85,7 @@
     .authors__author-roles-list {
         margin-top: 16px;
         font-size: 16px;
-        line-height: 160%;
+        line-height: 1.6em;
     }
 
     .authors__collaborators-heading {

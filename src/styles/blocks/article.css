@@ -1,6 +1,6 @@
 .article {
     font-size: 12px;
-    line-height: 130%;
+    line-height: 1.3em;
     letter-spacing: -0.02em;
 }
 
@@ -24,9 +24,10 @@
 }
 
 .article__title {
+    min-height: 3.6em;
     margin: 16px;
     font-size: 21px;
-    line-height: 25px;
+    line-height: 1.2em;
     letter-spacing: 0.03em;
 }
 
@@ -114,7 +115,7 @@
     }
 
     .article__source {
-        min-height: 2.3em;
+        min-height: 2.6em;
     }
 }
 
@@ -131,6 +132,11 @@
 @media (min-width: 900px) {
     .article__title {
         font-size: 32px;
+    }
+
+    .article__source,
+    .article__meta {
+        font-size: 16px;
     }
 }
 
@@ -163,13 +169,11 @@
     .article__title {
         margin: 0 0 24px;
         font-size: 48px;
-        line-height: 58px;
     }
 
     .article__source {
         margin: 0 0 24px;
         font-size: 21px;
-        line-height: 25px;
     }
 
     .article__meta {

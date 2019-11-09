@@ -11,11 +11,10 @@ layout: page.njk
                 <h1 class="article__title">{{ title }}</h1>
                 {% if source %}
                     <p class="article__source">
-                        Перевод
-                        «<a class="article__link" href="{{ source.url }}">
+                        Перевод статьи
+                        <a class="article__link" href="{{ source.url }}">
                             {{ source.title }}
-                        </a>»
-                        {{ source.author }}
+                        </a>
                     </p>
                 {% endif %}
                 <div class="article__meta">
