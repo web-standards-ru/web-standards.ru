@@ -9,13 +9,6 @@
     display: none;
 }
 
-.authors__author-roles-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: none;
-}
-
 .authors__collaborators {
     display: flex;
     flex-direction: column;
@@ -76,13 +69,8 @@
         margin-right: 39px;
     }
 
-    .authors__author-roles-list {
-        display: block;
-    }
-
     .authors__author-link,
-    .authors__collaborators,
-    .authors__author-roles-list {
+    .authors__collaborators {
         margin-top: 16px;
         font-size: 16px;
         line-height: 1.6em;
@@ -114,8 +102,7 @@
     }
 
     .authors__author-link,
-    .authors__collaborators,
-    .authors__author-roles-list {
+    .authors__collaborators {
         margin-top: 0;
     }
 

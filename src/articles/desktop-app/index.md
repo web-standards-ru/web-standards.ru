@@ -1,12 +1,12 @@
 ---
 title: 'Как быстро создать десктопное приложение на HTML, CSS и JavaScript'
 date: 2019-02-06
+author:
+    name: 'Адитья Шридхар'
+    url: 'https://medium.com/@aditya_sridhar'
 source:
     title: 'How to easily build desktop apps with HTML, CSS and JS'
     url: 'https://medium.com/p/d3e3f03f95a5'
-authors:
-  - name: 'Адитья Шридхар'
-    url: 'https://medium.com/@aditya_sridhar'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

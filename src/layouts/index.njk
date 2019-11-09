@@ -10,13 +10,15 @@ layout: page.njk
     {%- for article in collections.article | reverse -%}
     <article class="preview">
         <time class="preview__date" datetime="{{ article.date }}">4 февраля</time>
-        <img class="preview__photo" src="/images/author--blue.png" height="104" width="113" alt="{{ article.data.source.author }}">
+        <img class="preview__photo" src="/images/author--blue.png"
+            width="113" height="104" alt="{{ article.data.author.name }}">
         <p class="preview__author">
-            <span class="preview__name">{{ article.data.source.author }}</span>
-            <span class="preview__profession">Разработчик в Apple</span>
+            <span class="preview__name">{{ article.data.author.name }}</span>
         </p>
         <p class="preview__wrapper">
-            <a class="preview__title" href="{{ article.url }}">{{ article.data.title }}</a>
+            <a class="preview__title" href="{{ article.url }}">
+                {{ article.data.title }}
+            </a>
         </p>
     </article>
     {%- endfor -%}

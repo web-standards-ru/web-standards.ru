@@ -1,8 +1,8 @@
 ---
 title: 'Кроссбраузерные закруглённые уголки'
 date: 2010-06-28
-authors:
-  - name: 'Лев Солнцев'
+author:
+    name: 'Лев Солнцев'
     url: 'https://twitter.com/ruGreLI'
 editors:
   - name: 'Вадим Макеев'

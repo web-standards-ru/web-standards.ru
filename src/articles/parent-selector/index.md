@@ -1,12 +1,12 @@
 ---
 title: 'Почему у нас нет селектора по родителю'
 date: 2011-09-20
+author:
+    name: 'Джонатан Снук'
+    url: 'https://snook.ca/'
 source:
     title: 'Why we don’t have a parent selector'
     url: 'http://snook.ca/archives/html_and_css/css-parent-selectors/'
-authors:
-  - name: 'Джонатан Снук'
-    url: 'https://snook.ca/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

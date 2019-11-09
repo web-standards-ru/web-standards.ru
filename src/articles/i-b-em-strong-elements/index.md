@@ -1,12 +1,12 @@
 ---
 title: 'Элементы i, b, em и strong'
 date: 2010-07-13
+author:
+    name: 'Оли Стадхольм'
+    url: 'https://html5doctor.com/author/olib/'
 source:
     title: 'The i, b, em, & strong elements'
     url: 'https://html5doctor.com/i-b-em-strong-element/'
-authors:
-  - name: 'Оли Стадхольм'
-    url: 'https://html5doctor.com/author/olib/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

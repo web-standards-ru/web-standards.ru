@@ -1,12 +1,12 @@
 ---
 title: 'Роутинг, бандлинг и ленивая загрузка на Webpack'
 date: 2018-02-09
+author:
+    name: 'Серджио Гомес'
+    url: 'https://sgom.es/'
 source:
     title: 'Multiple routes, bundling and lazy-loading'
     url: 'https://sgom.es/posts/2018-01-18-multiple-routes-webpack/'
-authors:
-  - name: 'Серджио Гомес'
-    url: 'https://sgom.es/'
 translators:
   - name: 'Артур Храбров'
     url: 'https://medium.com/@nzvtrkk'

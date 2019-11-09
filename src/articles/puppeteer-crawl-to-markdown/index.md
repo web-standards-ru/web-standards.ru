@@ -1,12 +1,12 @@
 ---
 title: 'Puppeteer для краулинга страниц сайта и сохранения их в Markdown'
 date: 2019-01-17
+author:
+    name: 'Михаэль Шарналь'
+    url: 'https://justmarkup.com/'
 source:
     title: 'Using Puppeteer to crawl pages and save them as Markdown files'
     url: 'https://justmarkup.com/log/2019/01/using-puppeteer-to-crawl-pages-and-save-them-as-markdown-files/'
-authors:
-  - name: 'Михаэль Шарналь'
-    url: 'https://justmarkup.com/'
 translators:
   - name: 'Владислав Ермолин'
     url: 'https://medium.com/@electrovladyslav'

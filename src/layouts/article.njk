@@ -34,19 +34,12 @@ layout: page.njk
             </div>
         </div>
         <div class="article__authors authors">
-            {%- for author in authors -%}
-                <div class="authors__author">
-                    <img class="authors__author-avatar" src="/images/author--blue.png" width="113" height="104" alt="{{ author.name }}">
-                    <a class="authors__author-link" href="{{ author.url }}">
-                        {{ author.name }}
-                    </a>
-                {# TODO Пока ролей нет, возможно, стоит дропнуть
-                    <ul class="authors__author-roles-list">
-                        <li class="authors__role">Разработчик</li>
-                    </ul>
-                #}
-                </div>
-            {%- endfor -%}
+            <div class="authors__author">
+                <img class="authors__author-avatar" src="/images/author--blue.png" width="113" height="104" alt="{{ author.name }}">
+                <a class="authors__author-link" href="{{ author.url }}">
+                    {{ author.name }}
+                </a>
+            </div>
 
             {% if translators %}
                 <p class="authors__collaborators">

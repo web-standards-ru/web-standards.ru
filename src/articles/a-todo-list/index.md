@@ -1,12 +1,12 @@
 ---
 title: 'Инклюзивные компоненты: список дел'
 date: 2019-02-18
+author:
+    name: 'Хейдон Пикеринг'
+    url: 'https://www.heydonworks.com/'
 source:
     title: 'A Todo List'
     url: 'https://inclusive-components.design/a-todo-list/'
-authors:
-  - name: 'Хейдон Пикеринг'
-    url: 'http://www.heydonworks.com/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

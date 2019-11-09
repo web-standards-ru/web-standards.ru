@@ -1,12 +1,12 @@
 ---
 title: 'Паттерны загрузки веб-шрифтов'
 date: 2016-06-14
+author:
+    name: 'Брэм Штайн'
+    url: 'https://www.bramstein.com/'
 source:
     title: 'Web font loading patterns'
     url: 'https://www.bramstein.com/writing/web-font-loading-patterns.html'
-authors:
-  - name: 'Брэм Штайн'
-    url: 'https://www.bramstein.com/'
 translators:
   - name: 'Андрей Алексеев'
     url: 'https://github.com/aalexeev239'

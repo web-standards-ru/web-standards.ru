@@ -1,12 +1,12 @@
 ---
 title: 'Как создать адаптивную сетку'
 date: 2017-10-03
+author:
+    name: 'Зел Лью'
+    url: 'https://zellwk.com/about/'
 source:
     title: 'How to build a responsive grid system'
     url: 'https://zellwk.com/blog/responsive-grid-system/'
-authors:
-  - name: 'Зел Лью'
-    url: 'https://zellwk.com/about/'
 translators:
   - name: 'Игорь Лесневский'
     url: 'https://www.facebook.com/lesnevskii.igor'

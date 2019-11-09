@@ -1,12 +1,12 @@
 ---
 title: 'CSS: новый вид JavaScript'
 date: 2018-07-13
+author:
+    name: 'Хейдон Пикеринг'
+    url: 'https://www.heydonworks.com/'
 source:
     title: 'CSS: A New Kind Of JavaScript'
     url: 'https://medium.com/p/fcf730d33ce7'
-authors:
-  - name: 'Хейдон Пикеринг'
-    url: 'http://www.heydonworks.com/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

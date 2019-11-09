@@ -1,12 +1,12 @@
 ---
 title: '«Исправление» списков'
 date: 2019-01-21
-source:
-    title: '„Fixing“ Lists'
-    url: 'https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html'
-authors:
-  - name: 'Скотт О’Хара'
+author:
+    name: 'Скотт О’Хара'
     url: 'https://www.scottohara.me/'
+source:
+    title: 'Fixing Lists'
+    url: 'https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

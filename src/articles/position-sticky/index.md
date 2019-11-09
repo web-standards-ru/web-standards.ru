@@ -1,12 +1,12 @@
 ---
 title: 'Как на самом деле работает position: sticky в CSS'
 date: 2019-01-31
+author:
+    name: 'Элад Шехтер'
+    url: 'https://medium.com/@elad'
 source:
     title: 'CSS position: sticky — how it really works!'
     url: 'https://medium.com/p/54cd01dc2d46'
-authors:
-  - name: 'Элад Шехтер'
-    url: 'https://medium.com/@elad'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

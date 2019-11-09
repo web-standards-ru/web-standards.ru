@@ -1,12 +1,12 @@
 ---
 title: 'Извлекаем критический CSS'
 date: 2019-10-08
+author:
+    name: 'Милица Михайлия'
+    url: 'https://twitter.com/bibydigital'
 source:
     title: 'Extract critical CSS'
     url: 'https://web.dev/extract-critical-css'
-authors:
-  - name: 'Милица Михайлия'
-    url: 'https://twitter.com/bibydigital'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

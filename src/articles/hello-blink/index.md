@@ -1,12 +1,12 @@
 ---
 title: 'Здравствуй, Blink'
 date: 2013-04-06
+author:
+    name: 'Брюс Лоусон'
+    url: 'https://www.brucelawson.co.uk/'
 source:
     title: 'Hello Blink'
     url: 'https://www.brucelawson.co.uk/2013/hello-blink/'
-authors:
-  - name: 'Брюс Лоусон'
-    url: 'https://www.brucelawson.co.uk/'
 translators:
   - name: 'Антон Немцев'
     url: 'https://twitter.com/silentimp'

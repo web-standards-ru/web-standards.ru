@@ -1,12 +1,12 @@
 ---
 title: 'Инклюзивные компоненты: меню и кнопки меню'
 date: 2019-05-21
+author:
+    name: 'Хейдон Пикеринг'
+    url: 'https://www.heydonworks.com/'
 source:
     title: 'Menus & menu buttons'
     url: 'https://inclusive-components.design/menus-menu-buttons/'
-authors:
-  - name: 'Хейдон Пикеринг'
-    url: 'http://www.heydonworks.com/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'
@@ -215,7 +215,7 @@ tags:
 
 ## ARIA-controls
 
-Как я уже писал в [«Aria-controls Is Poop»](http://www.heydonworks.com/article/aria-controls-is-poop), атрибут `aria-controls`, который помогает пользователям скринридеров при переходе от контролирующего элемента к контролируемому, поддерживается только в JAWS. Так что на него нельзя положиться.
+Как я уже писал в [«Aria-controls Is Poop»](https://www.heydonworks.com/article/aria-controls-is-poop), атрибут `aria-controls`, который помогает пользователям скринридеров при переходе от контролирующего элемента к контролируемому, поддерживается только в JAWS. Так что на него нельзя положиться.
 
 Без хорошего метода перемещения между элементами, вам нужно убедиться в том, что одно из следующего верно:
 

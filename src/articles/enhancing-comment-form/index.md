@@ -1,12 +1,12 @@
 ---
 title: 'Улучшение формы комментариев'
 date: 2016-11-18
+author:
+    name: 'Майкл Шарналь'
+    url: 'https://justmarkup.com/'
 source:
     title: 'Enhancing a comment form'
     url: 'https://justmarkup.com/log/2016/10/enhancing-a-comment-form/'
-authors:
-  - name: 'Майкл Шарналь'
-    url: 'https://justmarkup.com/'
 translators:
   - name: 'Анна Кухарева'
     url: 'https://medium.com/@annakukhareva'

@@ -1,8 +1,8 @@
 ---
 title: 'Критический CSS + прогрессивный CSS = ?'
 date: 2017-10-24
-authors:
-  - name: 'Даниил Оношко'
+author:
+    name: 'Даниил Оношко'
     url: 'https://trigen.pro/'
 editors:
   - name: 'Вадим Макеев'
