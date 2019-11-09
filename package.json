@@ -3,7 +3,7 @@
   "scripts": {
     "start": "npx eleventy --serve --quiet",
     "build": "npx eleventy --quiet",
-    "test": "stylelint 'src/styles/**/*.css' && remark src/articles/**/*.md"
+    "test": "stylelint 'src/styles/**/*.css' && remark 'src/articles/**/*.md' --quiet"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
