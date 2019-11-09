@@ -4,7 +4,9 @@ date: 2012-08-09
 source:
     title: 'Our pointless pursuit of semantic value'
     url: 'https://www.smashingmagazine.com/2011/11/our-pointless-pursuit-of-semantic-value/'
-    author: 'Дивья Маньян'
+authors:
+  - name: 'Дивья Маньян'
+    url: 'http://nimbupani.com/'
 translators:
   - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'

@@ -4,7 +4,9 @@ date: 2013-04-06
 source:
     title: 'Hello Blink'
     url: 'https://www.brucelawson.co.uk/2013/hello-blink/'
-    author: 'Брюс Лоусон'
+authors:
+  - name: 'Брюс Лоусон'
+    url: 'https://www.brucelawson.co.uk/'
 translators:
   - name: 'Антон Немцев'
     url: 'https://twitter.com/silentimp'

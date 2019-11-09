@@ -4,7 +4,9 @@ date: 2012-03-09
 source:
     title: 'The contenteditable attribute'
     url: 'https://html5doctor.com/the-contenteditable-attribute/'
-    author: 'Джек Осборн'
+authors:
+  - name: 'Джек Осборн'
+    url: 'https://html5doctor.com/author/jacko/'
 translators:
   - name: 'Антон Немцев'
     url: 'https://twitter.com/silentimp'

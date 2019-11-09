@@ -4,7 +4,9 @@ date: 2013-12-10
 source:
     title: 'Why Sass?'
     url: 'http://alistapart.com/article/why-sass'
-    author: 'Дэн Седерхольм'
+authors:
+  - name: 'Дэн Седерхольм'
+    url: 'http://simplebits.com/'
 translators:
   - name: 'Наталья Арефьева'
     url: 'https://twitter.com/n_snork'

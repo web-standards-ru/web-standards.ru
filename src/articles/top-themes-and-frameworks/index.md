@@ -4,7 +4,9 @@ date: 2019-01-16
 source:
     title: 'Top JS frameworks and topics to learn in 2019'
     url: 'https://medium.com/p/b4142f38df20'
-    author: 'Эрик Эллиот'
+authors:
+  - name: 'Эрик Эллиот'
+    url: 'https://medium.com/@_ericelliott'
 translators:
   - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'

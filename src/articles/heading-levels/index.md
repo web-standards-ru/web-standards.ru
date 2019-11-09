@@ -4,7 +4,9 @@ date: 2018-11-13
 source:
     title: 'The importance of heading levels for assistive technology'
     url: 'https://webdesign.tutsplus.com/articles/the-importance-of-heading-levels-for-assistive-technology--cms-31753'
-    author: 'Эрик Бейли'
+authors:
+  - name: 'Эрик Бейли'
+    url: 'https://ericwbailey.design/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

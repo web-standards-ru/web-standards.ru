@@ -4,7 +4,9 @@ date: 2013-04-15
 source:
     title: 'Front-end performance for web designers and front-end developers'
     url: 'http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/'
-    author: 'Гарри Робертс'
+authors:
+  - name: 'Гарри Робертс'
+    url: 'https://csswizardry.com/'
 translators:
   - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'

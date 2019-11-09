@@ -4,7 +4,9 @@ date: 2016-11-18
 source:
     title: 'Enhancing a comment form'
     url: 'https://justmarkup.com/log/2016/10/enhancing-a-comment-form/'
-    author: 'Майкл Шарналь'
+authors:
+  - name: 'Майкл Шарналь'
+    url: 'https://justmarkup.com/'
 translators:
   - name: 'Анна Кухарева'
     url: 'https://medium.com/@annakukhareva'

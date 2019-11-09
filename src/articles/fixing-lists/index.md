@@ -4,7 +4,9 @@ date: 2019-01-21
 source:
     title: '„Fixing“ Lists'
     url: 'https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html'
-    author: 'Скотт О’Хара'
+authors:
+  - name: 'Скотт О’Хара'
+    url: 'https://www.scottohara.me/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

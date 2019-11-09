@@ -4,7 +4,9 @@ date: 2018-12-25
 source:
     title: 'Why and how to use WebP images today'
     url: 'https://bitsofco.de/why-and-how-to-use-webp-images-today/'
-    author: 'Ире Адеринокун'
+authors:
+  - name: 'Ире Адеринокун'
+    url: 'https://ireaderinokun.com/'
 translators:
   - name: 'Владислав Ермолин'
     url: 'https://medium.com/@electrovladyslav'

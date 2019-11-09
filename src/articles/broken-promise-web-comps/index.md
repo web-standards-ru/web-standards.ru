@@ -4,7 +4,9 @@ date: 2017-04-17
 source:
     title: 'The broken promise of Web Components'
     url: 'https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/'
-    author: 'Дмитрий Димант'
+authors:
+  - name: 'Дмитрий Димант'
+    url: 'https://dmitriid.com/'
 translators:
   - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'

@@ -4,7 +4,9 @@ date: 2017-11-21
 source:
     title: 'The Cost Of JavaScript'
     url: 'https://medium.com/p/84009f51e99e'
-    author: 'Эдди Османи'
+authors:
+  - name: 'Эдди Османи'
+    url: 'https://medium.com/@addyosmani'
 translators:
   - name: 'Артур Храбров'
     url: 'https://medium.com/@nzvtrkk'

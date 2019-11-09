@@ -4,7 +4,9 @@ date: 2014-11-24
 source:
     title: 'Surveying the Big Screen'
     url: 'http://alistapart.com/article/surveying-the-big-screen'
-    author: 'Майк Пик'
+authors:
+  - name: 'Майк Пик'
+    url: 'https://alistapart.com/author/mikepick/'
 translators:
   - name: 'Наталья Арефьева'
     url: 'https://twitter.com/n_snork'

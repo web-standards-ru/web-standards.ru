@@ -4,7 +4,9 @@ date: 2018-07-13
 source:
     title: 'CSS: A New Kind Of JavaScript'
     url: 'https://medium.com/p/fcf730d33ce7'
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'http://www.heydonworks.com/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

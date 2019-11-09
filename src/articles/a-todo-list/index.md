@@ -4,7 +4,9 @@ date: 2019-02-18
 source:
     title: 'A Todo List'
     url: 'https://inclusive-components.design/a-todo-list/'
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'http://www.heydonworks.com/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

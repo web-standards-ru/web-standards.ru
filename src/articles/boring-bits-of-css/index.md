@@ -4,7 +4,9 @@ date: 2012-08-21
 source:
     title: 'Learning to Love the Boring Bits of CSS'
     url: 'http://www.alistapart.com/articles/love-the-boring-bits-of-css/'
-    author: 'Питер Гастон'
+authors:
+  - name: 'Питер Гастон'
+    url: 'https://alistapart.com/author/stopsatgreen/'
 translators:
   - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'

@@ -4,7 +4,9 @@ date: 2018-06-13
 source:
     title: 'Here are a few function decorators you can write from scratch'
     url: 'https://medium.com/p/488549fe8f86'
-    author: 'Кристи Сальсезку'
+authors:
+  - name: 'Кристи Сальсезку'
+    url: 'https://medium.com/@cristiansalcescu'
 translators:
   - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'

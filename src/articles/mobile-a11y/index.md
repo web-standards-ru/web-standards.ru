@@ -4,7 +4,9 @@ date: 2019-02-21
 source:
     title: 'Tips for making interactive elements accessible on mobile devices'
     url: 'https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/'
-    author: 'Ире Адеринокун'
+authors:
+  - name: 'Ире Адеринокун'
+    url: 'https://bitsofco.de/'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

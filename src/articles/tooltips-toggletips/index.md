@@ -4,7 +4,9 @@ date: 2019-07-23
 source:
     title: 'Tooltips & Toggletips'
     url: 'https://inclusive-components.design/tooltips-toggletips/'
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'https://inclusive-components.design/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

@@ -4,7 +4,9 @@ date: 2019-02-06
 source:
     title: 'How to easily build desktop apps with HTML, CSS and JS'
     url: 'https://medium.com/p/d3e3f03f95a5'
-    author: 'Адитья Шридхара'
+authors:
+  - name: 'Адитья Шридхар'
+    url: 'https://medium.com/@aditya_sridhar'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

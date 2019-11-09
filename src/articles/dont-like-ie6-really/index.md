@@ -4,7 +4,9 @@ date: 2011-08-02
 source:
     title: 'What do you mean, you don’t like IE6? Really?'
     url: 'http://remy.tumblr.com/post/8334086394/what-do-you-mean-you-dont-like-ie6-really'
-    author: 'Реми Шарп'
+authors:
+  - name: 'Реми Шарп'
+    url: 'https://remy.tumblr.com/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

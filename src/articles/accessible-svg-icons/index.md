@@ -4,7 +4,9 @@ date: 2018-12-17
 source:
     title: 'Accessible SVG Icons with Inline Sprites'
     url: 'https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/'
-    author: 'Марко Хенгстенберг'
+authors:
+  - name: 'Марко Хенгстенберг'
+    url: 'https://twitter.com/nice2meatu'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

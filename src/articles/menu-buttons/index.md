@@ -4,7 +4,9 @@ date: 2019-05-21
 source:
     title: 'Menus & menu buttons'
     url: 'https://inclusive-components.design/menus-menu-buttons/'
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'http://www.heydonworks.com/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

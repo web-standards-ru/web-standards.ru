@@ -4,7 +4,9 @@ date: 2011-09-20
 source:
     title: 'Why we don’t have a parent selector'
     url: 'http://snook.ca/archives/html_and_css/css-parent-selectors/'
-    author: 'Джонатан Снук'
+authors:
+  - name: 'Джонатан Снук'
+    url: 'https://snook.ca/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

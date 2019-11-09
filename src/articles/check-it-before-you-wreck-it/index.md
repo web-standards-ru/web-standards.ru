@@ -4,7 +4,9 @@ date: 2014-12-26
 source:
     title: 'HTML5 — Check it Before you Wreck it with Mike™ Smith'
     url: 'https://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/'
-    author: 'Стив Фолкнер'
+authors:
+  - name: 'Стив Фолкнер'
+    url: 'https://html5doctor.com/author/stevef/'
 translators:
   - name: 'Максим Усачёв'
     url: 'https://twitter.com/psyw'

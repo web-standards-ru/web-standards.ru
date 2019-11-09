@@ -4,7 +4,9 @@ date: 2011-05-30
 source:
     title: 'The small & hr elements'
     url: 'https://html5doctor.com/small-hr-element/'
-    author: 'Оли Стадхольм'
+authors:
+  - name: 'Оли Стадхольм'
+    url: 'https://html5doctor.com/author/olib/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

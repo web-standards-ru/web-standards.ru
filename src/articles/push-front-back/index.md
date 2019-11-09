@@ -4,7 +4,9 @@ date: 2017-03-13
 source:
     title: 'Implementing push notifications on the front-end and back-end'
     url: 'https://justmarkup.com/log/2017/02/implementing-push-notifications/'
-    author: 'Михаэль Шарналь'
+authors:
+  - name: 'Михаэль Шарналь'
+    url: 'https://justmarkup.com/'
 translators:
   - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'

@@ -4,7 +4,9 @@ date: 2019-02-04
 source:
     title: 'CSS and JS are at war, here’s how to stop it'
     url: 'https://dev.to/evilmartians/css-and-js-are-at-war-heres-how-to-stop-it-158a'
-    author: 'Андрей Ситник'
+authors:
+  - name: 'Андрей Ситник'
+    url: 'https://dev.to/iskin'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

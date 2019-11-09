@@ -4,7 +4,9 @@ date: 2017-10-03
 source:
     title: 'How to build a responsive grid system'
     url: 'https://zellwk.com/blog/responsive-grid-system/'
-    author: 'Зел Лью'
+authors:
+  - name: 'Зел Лью'
+    url: 'https://zellwk.com/about/'
 translators:
   - name: 'Игорь Лесневский'
     url: 'https://www.facebook.com/lesnevskii.igor'

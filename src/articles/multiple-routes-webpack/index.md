@@ -4,7 +4,9 @@ date: 2018-02-09
 source:
     title: 'Multiple routes, bundling and lazy-loading'
     url: 'https://sgom.es/posts/2018-01-18-multiple-routes-webpack/'
-    author: 'Серджио Гомес'
+authors:
+  - name: 'Серджио Гомес'
+    url: 'https://sgom.es/'
 translators:
   - name: 'Артур Храбров'
     url: 'https://medium.com/@nzvtrkk'

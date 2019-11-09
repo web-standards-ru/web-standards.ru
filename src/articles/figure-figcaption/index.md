@@ -4,7 +4,9 @@ date: 2012-03-12
 source:
     title: 'The figure & figcaption elements'
     url: 'https://html5doctor.com/the-figure-figcaption-elements/'
-    author: 'Ричард Кларк'
+authors:
+  - name: 'Ричард Кларк'
+    url: 'https://html5doctor.com/author/richc/'
 translators:
   - name: 'Екатерина Мордвина'
 editors:

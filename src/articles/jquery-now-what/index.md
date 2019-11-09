@@ -4,7 +4,9 @@ date: 2013-12-16
 source:
     title: 'I know jQuery. Now what?'
     url: 'http://remysharp.com/2013/04/19/i-know-jquery-now-what/'
-    author: 'Рем Шарп'
+authors:
+  - name: 'Рем Шарп'
+    url: 'http://remysharp.com/'
 translators:
   - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'

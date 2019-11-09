@@ -4,7 +4,9 @@ date: 2011-08-29
 source:
     title: 'The details and summary elements'
     url: 'https://html5doctor.com/the-details-and-summary-elements/'
-    author: 'Том Лидбеттер'
+authors:
+  - name: 'Том Лидбеттер'
+    url: 'https://html5doctor.com/author/toml/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

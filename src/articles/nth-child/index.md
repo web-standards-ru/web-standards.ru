@@ -4,7 +4,9 @@ date: 2011-11-21
 source:
     title: 'How nth-child Works'
     url: 'http://css-tricks.com/5452-how-nth-child-works/'
-    author: 'Крис Койер'
+authors:
+  - name: 'Крис Койер'
+    url: 'https://css-tricks.com/author/chriscoyier/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

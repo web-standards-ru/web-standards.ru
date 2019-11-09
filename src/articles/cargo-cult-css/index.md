@@ -5,6 +5,9 @@ source:
     title: 'Cargo Cult CSS'
     url: 'http://www.kapowaz.net/articles/cargo-cult-css'
     author: 'Бен Дарлоу'
+authors:
+  - name: 'Бен Дарлоу'
+    url: 'http://www.kapowaz.net/'
 translators:
   - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'

@@ -4,7 +4,9 @@ date: 2019-01-05
 source:
     title: 'Toggle buttons'
     url: 'https://inclusive-components.design/toggle-button/'
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'https://inclusive-components.design/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

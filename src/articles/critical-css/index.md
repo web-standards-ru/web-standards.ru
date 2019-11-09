@@ -4,7 +4,9 @@ date: 2019-10-08
 source:
     title: 'Extract critical CSS'
     url: 'https://web.dev/extract-critical-css'
-    author: 'Милица Михайлия'
+authors:
+  - name: 'Милица Михайлия'
+    url: 'https://twitter.com/bibydigital'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

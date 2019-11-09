@@ -4,7 +4,9 @@ date: 2018-11-28
 source:
     title: 'Pragmatic rules of web accessibility that will stick to your mind'
     url: 'https://medium.com/p/9d3eb85a1a28'
-    author: 'Тьяго Ромеро Гарсия'
+authors:
+  - name: 'Тьяго Ромеро Гарсия'
+    url: 'https://medium.com/@themindfuldev'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

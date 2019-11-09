@@ -4,7 +4,9 @@ date: 2019-02-06
 source:
     title: 'New CSS Logical Properties!'
     url: 'https://medium.com/p/bc6945311ce7'
-    author: 'Элад Шехтер'
+authors:
+  - name: 'Элад Шехтер'
+    url: 'https://medium.com/@elad'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

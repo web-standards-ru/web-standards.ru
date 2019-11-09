@@ -4,7 +4,9 @@ date: 2018-12-10
 source:
     title: 'Just use :focus styles, damnit'
     url: 'https://gomakethings.com/just-use-focus-styles-damnit/'
-    author: 'Крис Фердинанди'
+authors:
+  - name: 'Крис Фердинанди'
+    url: 'https://gomakethings.com/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

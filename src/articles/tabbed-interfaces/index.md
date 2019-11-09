@@ -4,7 +4,9 @@ date: 2019-09-30
 source:
     title: 'Tabbed Interfaces'
     url: https://inclusive-components.design/tabbed-interfaces/
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'https://inclusive-components.design/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

@@ -4,7 +4,9 @@ date: 2011-07-27
 source:
     title: 'Avoiding common HTML5 mistakes'
     url: 'https://html5doctor.com/avoiding-common-html5-mistakes/'
-    author: 'Ричард Кларк'
+authors:
+  - name: 'Ричард Кларк'
+    url: 'https://html5doctor.com/author/richc/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

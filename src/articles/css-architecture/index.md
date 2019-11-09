@@ -4,7 +4,9 @@ date: 2014-02-20
 source:
     title: 'CSS Architecture'
     url: 'http://philipwalton.com/articles/css-architecture/'
-    author: 'Филип Уолтон'
+authors:
+  - name: 'Филип Уолтон'
+    url: 'https://philipwalton.com/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

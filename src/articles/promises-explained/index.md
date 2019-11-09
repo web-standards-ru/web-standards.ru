@@ -5,7 +5,9 @@ date: 2017-12-05
 source:
     title: 'JavaScript: promises explained with simple real life analogies'
     url: 'https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138'
-    author: 'Шрути Капур'
+authors:
+  - name: 'Шрути Капур'
+    url: 'https://twitter.com/shrutikapoor08'
 translators:
   - name: 'Артур Храбров'
     url: 'https://medium.com/@nzvtrkk'

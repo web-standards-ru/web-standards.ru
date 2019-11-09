@@ -4,7 +4,9 @@ date: 2019-09-02
 source:
     title: 'A Theme Switcher'
     url: https://inclusive-components.design/a-theme-switcher/
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'https://inclusive-components.design/'
 translators:
   - name: 'Татьяна Фокина'
     url: 'https://medium.com/@fokinatatiana'

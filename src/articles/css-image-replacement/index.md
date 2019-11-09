@@ -4,7 +4,9 @@ date: 2012-09-10
 source:
     title: 'Another CSS image replacement technique'
     url: 'http://nicolasgallagher.com/another-css-image-replacement-technique/'
-    author: 'Николас Галлахер'
+authors:
+  - name: 'Николас Галлахер'
+    url: 'http://nicolasgallagher.com/'
 translators:
   - name: 'Максим Усачёв'
     url: 'https://twitter.com/psyw'

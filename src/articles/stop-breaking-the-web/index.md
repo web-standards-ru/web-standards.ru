@@ -4,7 +4,9 @@ date: 2015-03-23
 source:
     title: 'Stop breaking the Web'
     url: 'http://ponyfoo.com/articles/stop-breaking-the-web'
-    author: 'Николас Беваква'
+authors:
+  - name: 'Николас Беваква'
+    url: 'https://twitter.com/nzgb'
 translators:
   - name: 'Ольга Алексашенко'
     url: 'https://moikrug.ru/engel-t'

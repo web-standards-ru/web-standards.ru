@@ -4,7 +4,9 @@ date: 2017-02-09
 source:
     title: 'The promise of a burger party'
     url: 'https://kosamari.com/notes/the-promise-of-a-burger-party'
-    author: 'Марико Косака'
+authors:
+  - name: 'Марико Косака'
+    url: 'https://kosamari.com/'
 translators:
   - name: 'Владислав Почепцов'
     url: 'https://medium.com/@vlad_poe'

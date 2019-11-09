@@ -4,7 +4,9 @@ date: 2012-09-10
 source:
     title: 'Responsive typography: the basics'
     url: 'http://informationarchitects.net/blog/responsive-typography-the-basics/'
-    author: 'Оливер Райхенштайн'
+authors:
+  - name: 'Оливер Райхенштайн'
+    url: 'https://twitter.com/reichenstein'
 translators:
   - name: 'Александр Котоманов'
     url: 'http://alex.kotomanov.com/'

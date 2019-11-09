@@ -4,7 +4,9 @@ date: 2012-07-24
 source:
     title: 'Linear gradient keywords'
     url: 'http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/'
-    author: 'Эрик Мейер'
+authors:
+  - name: 'Эрик Мейер'
+    url: 'https://meyerweb.com/'
 translators:
   - name: 'Влад Андерсен'
     url: 'http://www.facebook.com/vlad.andersen'

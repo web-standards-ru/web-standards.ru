@@ -4,7 +4,9 @@ date: 2016-03-22
 source:
     title: 'Progressive enhancement makes me sad'
     url: 'http://www.heydonworks.com/article/progressive-enhancement-makes-me-sad'
-    author: 'Хейдон Пикеринг'
+authors:
+  - name: 'Хейдон Пикеринг'
+    url: 'http://www.heydonworks.com/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'

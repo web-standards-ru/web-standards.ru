@@ -4,7 +4,9 @@ date: 2017-11-15
 source:
     title: 'Fetch vs. Axios.js for making HTTP requests'
     url: 'https://medium.com/p/2b261cdd3af5'
-    author: 'Джейсон Арнольд'
+authors:
+  - name: 'Джейсон Арнольд'
+    url: 'https://medium.com/@thejasonfile'
 translators:
   - name: 'Артур Храбров'
     url: 'https://medium.com/@nzvtrkk'

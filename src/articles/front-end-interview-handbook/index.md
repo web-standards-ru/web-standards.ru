@@ -4,7 +4,9 @@ date: 2018-02-21
 source:
     title: 'Front-end interview handbook'
     url: 'https://github.com/yangshun/front-end-interview-handbook'
-    author: 'Юн Хен Тай'
+authors:
+  - name: 'Юн Хен Тай'
+    url: 'https://github.com/yangshun'
 translators:
   - name: 'Алёна Батицкая'
     url: 'https://medium.com/@ABatickaya'

@@ -4,7 +4,9 @@ date: 2010-08-19
 source:
     title: 'Prefix or posthack'
     url: 'http://www.alistapart.com/articles/prefix-or-posthack/'
-    author: 'Эрик Мейер'
+authors:
+  - name: 'Эрик Мейер'
+    url: 'https://meyerweb.com/'
 translators:
   - name: 'Вадим Макеев'
     url: 'https://twitter.com/pepelsbey'
