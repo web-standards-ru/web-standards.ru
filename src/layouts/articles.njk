@@ -6,25 +6,30 @@ layout: page.njk
 
 <main class="main">
     {{ content | safe }}
+
     <div class="archive">
         <h1 class="archive__title">Статьи</h1>
         <time class="archive__year">2019</time>
     </div>
+
     {%- for article in collections.article | reverse -%}
-    <article class="preview">
-        <time class="preview__date" datetime="{{ article.date }}">4 февраля</time>
-        <img class="preview__photo" src="/images/author--blue.png"
-            width="113" height="104" alt="{{ article.data.author.name }}">
-        <p class="preview__author">
-            <span class="preview__name">{{ article.data.author.name }}</span>
-        </p>
-        <p class="preview__wrapper">
-            <a class="preview__title" href="{{ article.url }}">
-                {{ article.data.title }}
-            </a>
-        </p>
-    </article>
+        <article class="preview">
+            <time class="preview__date" datetime="{{ article.date | isoDate }}">
+                {{ article.date | ruDate }}
+            </time>
+            <img class="preview__photo" src="/images/author--blue.png"
+                width="113" height="104" alt="{{ article.data.author.name }}">
+            <p class="preview__author">
+                <span class="preview__name">{{ article.data.author.name }}</span>
+            </p>
+            <p class="preview__wrapper">
+                <a class="preview__title" href="{{ article.url }}">
+                    {{ article.data.title }}
+                </a>
+            </p>
+        </article>
     {%- endfor -%}
+
     <p class="notice">
         <a class="notice__link notice__link--shout" href="">
             12 мая конференция в Москве

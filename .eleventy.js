@@ -37,9 +37,8 @@ module.exports = function(config) {
         }).replace(' г.', '');
     });
 
-    config.addFilter('formatDate', function(value) {
-        const { DateTime } = require("luxon");
-        return DateTime.fromJSDate(value).toFormat('yyyy-MM-dd');
+    config.addFilter('isoDate', function(value) {
+        return value.toISOString();
     });
 
     config.addFilter('htmlmin', function(value) {

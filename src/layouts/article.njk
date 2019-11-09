@@ -11,15 +11,13 @@ layout: page.njk
                 <h1 class="article__title">{{ title }}</h1>
                 {% if source %}
                     <p class="article__source">
-                        Перевод статьи
-                        <a class="article__link" href="{{ source.url }}">
-                            {{ source.title }}
-                        </a>
+                        Перевод
+                        «<a class="article__link" href="{{ source.url }}">{{ source.title }}</a>»
                     </p>
                 {% endif %}
                 <div class="article__meta">
-                    <time class="article__date" datetime="{{ date | formatDate }}">
-                        {{ date | formatDate }}
+                    <time class="article__date" datetime="{{ date | isoDate }}">
+                        {{ date | ruDate }}
                     </time>
                     <ul class="article__tags">
                         {%- for tag in tags | filterArticleTag -%}
@@ -35,7 +33,8 @@ layout: page.njk
         </div>
         <div class="article__authors authors">
             <div class="authors__author">
-                <img class="authors__author-avatar" src="/images/author--blue.png" width="113" height="104" alt="{{ author.name }}">
+                <img class="authors__author-avatar" src="/images/author--blue.png"
+                    width="113" height="104" alt="{{ author.name }}">
                 <a class="authors__author-link" href="{{ author.url }}">
                     {{ author.name }}
                 </a>
