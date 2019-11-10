@@ -1,25 +1,29 @@
-const navigationPages = document.querySelector('.navigation__pages');
 const navigationButton = document.querySelector('.navigation__button');
+const pageBody = document.querySelector('.page__body');
+const pageContent = document.querySelector('.page__content');
 let isMenuHidden = false;
 
 const isMenuHiddenCheck = () => {
-  let attributeValue = navigationButton.getAttribute("aria-expanded");
+    let attributeValue = navigationButton.getAttribute('aria-expanded');
 
-  attributeValue === 'false' ? isMenuHidden = false : isMenuHidden = true;
+    attributeValue === 'false' ? isMenuHidden = false : isMenuHidden = true;
 
-  return isMenuHidden;
+    return isMenuHidden;
 }
 
 const handleNavigationMenuState = () => {
     if (isMenuHiddenCheck()) {
-      navigationButton.setAttribute("aria-expanded", "false");
-      return;
-    } 
-    navigationButton.setAttribute("aria-expanded", "true");
+        navigationButton.setAttribute('aria-expanded', 'false');
+    setTimeout(() => pageBody.classList.toggle('page__body--active'), 200);
+        return;
+    }
+    navigationButton.setAttribute('aria-expanded', 'true');
+    pageBody.classList.toggle('page__body--active');
 };
 
 const showHideNavigationMenu = () => {
-    navigationPages.classList.toggle('navigation__pages--active');
+    navigationButton.classList.toggle('navigation__button--active');
+    pageContent.classList.toggle('page__content--active');
 };
 
 navigationButton.addEventListener('click', () => {

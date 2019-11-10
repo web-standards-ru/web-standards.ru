@@ -3,11 +3,9 @@
 .preview {
     display: grid;
     grid: repeat(2, min-content) / 80px 61px 1fr;
-    padding: 16px 0 49px;
-
-    border-top: 1px solid var(--color-grey-lighter);
-
     grid-gap: 0 16px;
+    padding: 16px 0 49px;
+    border-top: 1px solid var(--color-grey-lighter);
 }
 
 @media (min-width: 630px) {
@@ -31,9 +29,8 @@
 @media (min-width: 1440px) {
     .preview {
         grid-template-columns: 266px 113px 264px 1fr;
-        padding: 15px 0 47px;
-
         grid-gap: 39px;
+        padding: 15px 0 47px;
     }
 }
 
@@ -44,7 +41,6 @@
 .preview__date {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
     font-size: 12px;
     color: var(--color-grey-light);
     letter-spacing: -0.03em;
@@ -111,7 +107,6 @@
 
 .preview__name {
     display: block;
-
     font-size: 12px;
     line-height: 1.5;
     color: var(--color-grey-darker);
@@ -141,7 +136,7 @@
 .preview__wrapper {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 }
 
 @media (min-width: 1024px) {

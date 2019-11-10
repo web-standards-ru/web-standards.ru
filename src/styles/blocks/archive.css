@@ -2,7 +2,6 @@
 
 .archive__title {
     margin: 0 0 37px;
-
     font: 400 24px 'Dewi Expanded', sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -11,7 +10,6 @@
 @media (min-width: 630px) {
     .archive__title {
         margin: 20px 0 50px;
-
         font-size: 32px;
     }
 }
@@ -19,7 +17,6 @@
 @media (min-width: 1024px) {
     .archive__title {
         margin: 53px 0 113px;
-
         font-size: 48px;
     }
 }
@@ -27,7 +24,6 @@
 .archive__year {
     display: inline-block;
     margin-bottom: 16px;
-
     font: 700 16px 'Dewi Expanded', sans-serif;
     text-transform: uppercase;
 }
@@ -35,7 +31,6 @@
 @media (min-width: 630px) {
     .archive__year {
         margin-bottom: 20px;
-
         font-size: 20px;
     }
 }
@@ -43,7 +38,6 @@
 @media (min-width: 1024px) {
     .archive__year {
         margin-bottom: 23px;
-
         font-size: 24px;
     }
 }

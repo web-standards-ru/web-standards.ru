@@ -2,6 +2,7 @@
 
 .main {
     padding: 64px 8px 37px;
+    background-color: white;
 }
 
 @media (min-width: 1024px) {

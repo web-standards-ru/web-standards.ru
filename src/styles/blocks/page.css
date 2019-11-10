@@ -3,24 +3,46 @@
 .page,
 .page__body {
     height: 100%;
-    overflow-x: hidden;
 }
 
 .page {
-    background-color: white;
-    color: black;
     font-family: 'Dewi', sans-serif;
+    color: black;
+    background-color: white;
 }
 
-/* Body */
-
 .page__body {
+    display: grid;
+    grid-template-rows:
+        min-content
+        min-content;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .page__body--active {
+        position: fixed;
+    }
+}
+
+.page__content {
     display: grid;
     grid-template-rows:
         min-content
         1fr
         min-content
         min-content;
-    margin: 0 auto;
-    max-width: 1920px;
+    overflow: hidden;
+    transition: transform 0.2s linear;
+}
+
+@media (max-width: 768px) {
+    .page__content--active {
+        position: relative;
+        border-top-left-radius: 14px;
+        box-shadow: 0 -10px #f2f7fa;
+        transform: translate(213px, 80px);
+        pointer-events: none;
+    }
 }

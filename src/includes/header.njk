@@ -1,50 +1,24 @@
 <header class="header">
     <div class="header__logo logo">
-        <img class="logo__cube" src="/images/logo.svg" width="36" alt="">
+        <img class="logo__logotype" src="/images/logo.svg" width="40" height="40" alt="Логотип Веб-стандартов">
         <p class="logo__title">
             {% if page.url != '/' %}<a href="/">{% endif %}
                 Веб-стандарты
             {% if page.url != '/' %}</a>{% endif %}
         </p>
-        <p class="logo__tagline">Сообщество разработчиков</p>
+        <p class="logo__tagline">
+            Сообщество разработчиков
+        </p>
     </div>
-    <nav class="header__navigation navigation">
-        <button class="navigation__button"
-            aria-label="Открыть меню"
-            aria-expanded="false"
-            aria-controls="navigation-menu"
-            type="button"
-        ></button>
-        <ul id="navigation-menu" class="navigation__pages">
-            <li class="navigation__page">
-                <a class="navigation__link" href="/articles/">Статьи</a>
-            </li>
-            <li class="navigation__page">
-                <a class="navigation__link">Конференция</a>
-            </li>
-            <li class="navigation__page">
-                <a class="navigation__link">Календарь</a>
-            </li>
-            <li class="navigation__page">
-                <a class="navigation__link">Подкаст</a>
-            </li>
-            <li class="navigation__page">
-                <a class="navigation__link">О проекте</a>
-            </li>
-            <li class="navigation__page navigation__page--right">
-                <a class="navigation__link" href="https://www.patreon.com/webstandards_ru">Поддержать проект</a>
-            </li>
-        </ul>
-    </nav>
     <ul class="header__informer informer">
         <li class="informer__item informer__item--wave">
-            <strong class="informer__meta">164</strong>
+            <strong class="informer__meta informer__meta--wave">164</strong>
             <p class="informer__text">
                 Автор JS-интенсивов, встроенный скроллер в Chrome развитие SVG и &amp; в CSS
             </p>
         </li>
         <li class="informer__item informer__item--calendar">
-            <strong class="informer__meta">
+            <strong class="informer__meta informer__meta--calendar">
                 <time datetime="2019-04-05">5 апр</time>
             </strong>
             <p class="informer__text">
