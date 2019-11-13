@@ -41,8 +41,8 @@ tags: article
 
 Рискованно просто добавлять обработчик клика для заголовков, чтобы связать с ними контент. Это не то взаимодействие, которого ожидают вспомогательные технологии или которого можно добиться при помощи клавиатуры. Вместо этого нам нужно адаптировать разметку, добавив в неё стандартную кнопку.
 
-    <h2><button>Мой раздел</button></h2>  
-    <div>  
+    <h2><button>Мой раздел</button></h2>
+    <div>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur laoreet massa. Nam eu porta dolor. Vestibulum pulvinar lorem et nisl     tempor lacinia.</p>
       <p>Cras mi nisl, semper ut gravida sed, vulputate vel mauris. In dignissim aliquet fermentum. Donec arcu nunc, tempor sed nunc id, dapibus ornare dolor.</p>
     </div>
@@ -57,15 +57,15 @@ tags: article
 
 Также нам бы пришлось кастомизировать код для всех вариантов поведения элемента ```<button>```, например, для поведения при фокусе (см. ```tabindex``` в примере ниже), и привязывать нужные клавиши, чтобы активировать наш кастомный контрол.
 
-    <!-- Не делайте так -->  
+    <!-- Не делайте так -->
     <h2 role="button" tabindex="0">Мой раздел</h2>
 
 ### Состояние
 
 Наш компонент может находится в одном из двух взаимоисключающих состояний: свёрнутом и развёрнутом. Его состояние может быть отображено визуально, но необходимо также сообщать о нём и программно. Можно сделать это, добавив для кнопки атрибут ```aria-expanded``` с начальным значением ```false``` (в свёрнутом состоянии). Соответственно, нам нужно скрыть связанный ```<div>```. В данном случае при помощи ```hidden```.
 
-    <h2><button aria-expanded="false">Мой раздел</button></h2>  
-    <div hidden>  
+    <h2><button aria-expanded="false">Мой раздел</button></h2>
+    <div hidden>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur laoreet massa. Nam eu porta dolor. Vestibulum     pulvinar lorem et nisl tempor lacinia.</p>
       <p>Cras mi nisl, semper ut gravida sed, vulputate vel mauris. In dignissim aliquet fermentum. Donec arcu nunc, tempor sed nunc id, dapibus ornare dolor.</p>
     </div>
@@ -82,25 +82,25 @@ tags: article
 
 Мы оказались в ситуации, когда используем кнопку, но при этом она должна выглядеть как улучшенная версия заголовка, внутри которого она находится. Наиболее эффективный способ это сделать — удалить все авторские и браузерные стили для кнопок и наследовать их от их родительского заголовка.
 
-    h2 button {  
-      all: inherit;    
+    h2 button {
+      all: inherit;
     }
 
 Отлично, однако сейчас кнопка интуитивно не понятна ([affordance](https://www.interaction-design.org/literature/book/the-glossary-of-human-computer-interaction/affordances)). Она не выглядит так, будто её можно активировать. Именно здесь обычно добавляется символ плюс или минус. Плюс означает, что раздел может быть развёрнут, а минус, что его можно свернуть.
 
 ![](images/collapsed-and-epxpanded-section.png)
 
-Теперь возникает такой вопрос: как нам рендерить иконку? Ответ: 
+Теперь возникает такой вопрос: как нам рендерить иконку? Ответ:
 максимально эффективно и доступно. Простые формы, например, прямоугольники (```<rect>```) — это хороший способ создания иконок в SVG, поэтому давайте это сделаем.
 
-    <svg viewBox="0 0 10 10">  
+    <svg viewBox="0 0 10 10">
       <rect height="8" width="2" y="1" x="4"/>
       <rect height="2" width="8" y="4" x="1"/>
     </svg>
 
 Кода так мало, что он может поместиться в твит. Поскольку программно состояние передаётся через атрибут ```aria-expanded```, нам не нужно, чтобы эта графика была доступна для скринридера или была интерактивной. В этом случае нам нужно добавить ещё пару атрибутов.
 
-    <button aria-expanded="false">  
+    <button aria-expanded="false">
       Мой раздел
       <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
         <rect class="vert" height="8" width="2" y="1" x="4"/>
@@ -108,9 +108,8 @@ tags: article
       </svg>
     </button>
 
-* ```aria-hidden="true"``` скрывает SVG-иконку от скринридеров и других вспомогательных технологий.
-
-* ```focusable="false"``` решает проблему добавления фокуса по умолчанию для SVG-файлов в Internet Explorer и Edge.
+- `aria-hidden="true"` скрывает SVG-иконку от скринридеров и других вспомогательных технологий.
+- `focusable="false"` решает проблему добавления фокуса по умолчанию для SVG-файлов в Internet Explorer и Edge.
 
 Обратите внимание на класс ```vert``` для прямоугольника, который представляет собой вертикальную конструкцию. Мы собираемся с помощью CSS показывать и скрывать его в зависимости от состояния, превращая иконку то в плюс, то в минус.
 
@@ -122,7 +121,7 @@ tags: article
 
 Обратите внимание, что стиль фокуса по умолчанию был сброшен при помощи ```inherit: all```. Можно объявить стиль фокуса для SVG следующим образом:
 
-    h2 button:focus svg {  
+    h2 button:focus svg {
       outline: 2px solid;
     }
 
@@ -138,7 +137,7 @@ tags: article
 
 ## Примечание. Почему бы не использовать <use>?
 
-Если у нас много сворачиваемых областей на странице, 
+Если у нас много сворачиваемых областей на странице,
 то повторное использование одного и того же содержимого SVG-элемента ```<pattern>``` при помощи [элементов ```<use>```](https://wearejh.com/inline-svg-use-element/) и ```xlink:href``` уменьшило бы их избыточность.
 
     <button aria-expanded="false">
@@ -156,15 +155,15 @@ tags: article
 
     (function() {
       const headings = document.querySelectorAll('h2');
-    
+
       Array.prototype.forEach.call(headings, heading => {
         let btn = heading.querySelector('button');
         let target = heading.nextElementSibling;
-    
+
         btn.onclick = () => {
           let expanded =
             btn.getAttribute('aria-expanded') === 'true' || false;
-    
+
           btn.setAttribute('aria-expanded', !expanded);
           target.hidden = expanded;
         }
@@ -179,9 +178,8 @@ tags: article
 
 Проблема со скриптом выше заключается в том, что для него требуется вручную адаптировать HTML для работы сворачивающихся секций. Ожидается, что это реализовано инженером как компонент через шаблон или JSX. Однако для статических сайтов, например, блогов, есть две неизбежные проблемы:
 
-* Если JavaScript недоступен, то в DOM остаются интерактивные элементы, которые ничего не делают, поэтому в этом случае их семантика не имеет смысла.
-
-* Ответственность за создание и поддержку сложного HTML лежит на авторе или редакторе.
+- Если JavaScript недоступен, то в DOM остаются интерактивные элементы, которые ничего не делают, поэтому в этом случае их семантика не имеет смысла.
+- Ответственность за создание и поддержку сложного HTML лежит на авторе или редакторе.
 
 Вместо этого мы можем взять базовый ввод текста, скажем, в виде разметки или WYSIWYG _(от англ. «What You See Is What You Get», проще говоря — визуальный редактор. — прим. переводчика)_ и улучшить его _постфактум_ с помощью скрипта. Это довольно просто сделать с помощью jQuery, учитывая методы ```nextUntil``` и ```wrapAll```, однако в обычном JavaScript нам нужно сделать некоторую итерацию. Вот другое демо на CodePen, в котором автоматически добавляются переключатель и группа с контентом для переключения. Он нацелен на все ```<h2>```, найденные на странице в ```<main>```.
 
@@ -195,7 +193,7 @@ tags: article
 
 Веб-компоненты могут стать ответом. Рассмотрим пример ниже:
 
-    <toggle-section open="false">  
+    <toggle-section open="false">
       <h2>Мой раздел</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur laoreet massa. Nam eu porta dolor. Vestibulum pulvinar lorem et nisl tempor lacinia.</p>
       <p>Cras mi nisl, semper ut gravida sed, vulputate vel mauris. In dignissim aliquet fermentum. Donec arcu nunc, tempor sed nunc id, dapibus ornare dolor.</p>
@@ -205,9 +203,9 @@ tags: article
 
 Фактически, если мы проверяем поддержку элемента с ```<template>``` и ```attachShadow``` при помощи скрипта, то такой же фолбэк будет отображаться в браузерах, которые эти возможности не поддерживают.
 
-    if ('content' in document.createElement('template')) {  
+    if ('content' in document.createElement('template')) {
       // Определяем <template> для веб-компонента
-    
+
       if (document.head.attachShadow) {
         // Определяем веб-компонент, используя синтаксис версии v1
       }
@@ -217,7 +215,7 @@ tags: article
 
 Мы можем добавить элемент шаблона в разметку и ссылаться на него или создать его на лету. Это я собираюсь сделать позже.
 
-    tmpl.innerHTML = `  
+    tmpl.innerHTML = `
       <h2>
         <button aria-expanded="false">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
@@ -233,7 +231,7 @@ tags: article
         h2 {
           margin: 0;
         }
-    
+
         h2 button {
           all: inherit;
           box-sizing: border-box;
@@ -242,16 +240,16 @@ tags: article
           width: 100%;
           padding: 0.5em 0;
         }
-    
+
         button svg {
           height: 1em;
           margin-left: 0.5em;
         }
-    
+
         [aria-expanded="true"] .vert {
           display: none;
         }
-    
+
         [aria-expanded] rect {
           fill: currentColor;
         }
@@ -268,10 +266,10 @@ tags: article
 
 Внутри компонента ```this.innerHTML``` есть ссылка на этот контент в Light DOM. Мы должны создать ```shadowRoot``` и заполнить его контентом шаблона. Разметка Shadow DOM вместо этого находится в ```this.shadowRoot.innerHTML```.
 
-    class ToggleSection extends HTMLElement {  
+    class ToggleSection extends HTMLElement {
       constructor() {
         super();
-    
+
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(tmpl.content.cloneNode(true));
       }
@@ -301,7 +299,7 @@ tags: article
 
 Второй символ из ```tagName``` спарсился как целое. Если это натуральное число (```NaN``` — ложное) и не ```2```, которое неявно присутствует в ```<h2>```, то применится атрибут ```aria-level```. Элементы, которые не являются заголовками, в качестве фоллбека всё ещё отдают содержимое ```textContent``` как лейбл для хранящегося в Shadow DOM ```<h2>```. Это может сопровождаться «вежливым» (polite) предупреждением ```console.warn```, которое рекомендует разработчикам использовать заголовок в качестве предпочтительного элемента.
 
-    if (!level) {  
+    if (!level) {
       console.warn('```У первого элемента внутри каждого ```<toggle-section> должен быть заголовок подходящего уровня.');
     }
 
@@ -309,7 +307,7 @@ tags: article
 
 Одно из преимуществ использования ```aria-level``` заключается в том, что, в нашем случае, атрибут не используется в качестве стилевого хука (styling hook), поэтому внешний вид заголовка или кнопки остаётся неизменным.
 
-    <h2 aria-level="3">  
+    <h2 aria-level="3">
       <button aria-expanded="false">
         <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
           <rect class="vert" height="8" width="2" y="1" x="4"/>
@@ -320,53 +318,50 @@ tags: article
 
 Если вы хотите, чтобы заголовки вашей сворачиваемой секции внешне отражали их уровень, вы должны включить что-то вроде CSS-стилей ниже:
 
-    toggle-section [aria-level="2"] {  
+    toggle-section [aria-level="2"] {
       font-size: 2rem;
     }
-    
-    toggle-section [aria-level="3"] {  
+
+    toggle-section [aria-level="3"] {
       font-size: 1.5rem;
     }
-    
+
     /* И так далее… */
 
 ### Роль ```region```
 
 Любой контент, который представлен заголовком, является _де-факто _(под)разделом страницы. Но, как я уже говорил в [«Списке дел»](https://inclusive-components.design/a-todo-list/#headinglevel) (_есть в [переводе на русский](https://medium.com/web-standards/a-todo-list-40a324436b3e). — прим. переводчика_), вы можете использовать явные секционные элементы-контейнеры ```<section>```. Вы добьётесь того же эффекта, если примените атрибут ```role="region"``` к элементу вроде нашего кастомного ```<toggle-section>``` (который, в противном случае, не будет обладать такой семантикой).
 
-    <toggle-section role="region">  
+    <toggle-section role="region">
       ...
     </toggle-section>
 
 Пользователи скринридеров [больше предпочитают перемещаться по документу по заголовкам, чем по областям](http://www.heydonworks.com/article/responses-to-the-screen-reader-strategy-survey), однако у многих скринридеров _есть_ функция шорткатов по областям страницы (region shortcuts). Добавление атрибута ```role="region"``` даёт довольно много:
 
-* Обеспечивает фоллбек в виде навигационной подсказки для пользователей скринридеров в ситуациях, когда Light DOM не содержит заголовка.
-
-* Объявляется как «область» (region), когда пользователь скринридера попадает в этот раздел и ведёт себя как структурная подсказка.
-
-* Предоставляет стилевой хук в виде ```toggle-button[role="region"]```. Это позволяет нам добавлять те стили, которые мы хотим увидеть, если скрипт запущен и веб-компоненты поддерживаются.
+- Обеспечивает фоллбек в виде навигационной подсказки для пользователей скринридеров в ситуациях, когда Light DOM не содержит заголовка.
+- Объявляется как «область» (region), когда пользователь скринридера попадает в этот раздел и ведёт себя как структурная подсказка.
+- Предоставляет стилевой хук в виде ```toggle-button[role="region"]```. Это позволяет нам добавлять те стили, которые мы хотим увидеть, если скрипт запущен и веб-компоненты поддерживаются.
 
 ## Привязка ```open и aria-expanded```
 
 Когда значение атрибута ```open``` меняется с ```true``` на ```false``` мы хотим, чтобы было также видно переключение контента. Используя ```observedAttributes()``` и ```attributeChangedCallback()```, мы можем сделать это _напрямую_. Разместим этот код после конструктора компонента:
 
-    static get observedAttributes() {  
+    static get observedAttributes() {
       return ['open'];
     }
-    
-    attributeChangedCallback(name) {  
+
+    attributeChangedCallback(name) {
       if (name === 'open') {
         this.switchState();
       }
     }
 
-* ```observedAttributes()``` получает массив всех атрибутов родительского ```<toggle-section>```, которые мы хотим увидеть.
-
-* ```attributeChangedCallback(name)``` позволяет нам выполнять нашу функцию ```switchState()``` в случае изменения значения ```open```.
+- ```observedAttributes()``` получает массив всех атрибутов родительского ```<toggle-section>```, которые мы хотим увидеть.
+- ```attributeChangedCallback(name)``` позволяет нам выполнять нашу функцию ```switchState()``` в случае изменения значения ```open```.
 
 Преимущество такого подхода в том, что мы можем переключать состояние, используя скрипт, который просто изменяет значение ```open ```за пределами компонента. Чтобы _пользователи_ могли изменить состояние, мы можем просто перебросить ```open``` в функцию клика:
 
-    this.btn.onclick = () => {  
+    this.btn.onclick = () => {
       this.setAttribute('open',
         this.getAttribute('open') === 'true' ? 'false' : 'true'
       );
@@ -374,7 +369,7 @@ tags: article
 
 Так как функция ```switchState()``` увеличивает значение ```aria-expanded```, то мы привязали ```open``` к ```aria-expanded```, убедившись в доступности изменения состояния.
 
-    this.switchState = () => {  
+    this.switchState = () => {
       let expanded = this.getAttribute('open') === 'true' || false;
       this.btn.setAttribute('aria-expanded', expanded);
       this.shadowRoot.querySelector('.content').hidden = !expanded;
@@ -392,7 +387,7 @@ tags: article
 
 Поэтому нам нужно сгруппировать два альтернативных контрола.
 
-    <ul class="controls" aria-label="Контролы секции">  
+    <ul class="controls" aria-label="Контролы секции">
       <li><button id="expand">развернуть всё</button></li>
       <li><button id="collapse">свернуть всё</button></li>
     </ul>
@@ -415,21 +410,21 @@ tags: article
 
 Большинство парсеров с этой целью добавляет атрибуты ```id``` для заголовков. Поскольку заголовок для целевого раздела в нашем расширенном интерфейсе может находиться внутри свёрнутого раздела или раздела, на котором не сделан фокус, нам нужно его открыть, чтобы показать контент и перенести фокус на него. Жизненный цикл ```connectedCallback()``` даёт нам это сделать, когда компонент готов. Это похоже на ```DOMContentLoaded```, но только для веб-компонентов.
 
-    connectedCallback() {  
+    connectedCallback() {
       if (window.location.hash.substr(1) === this.heading.id) {
         this.setAttribute('open', 'true');
         this.btn.focus();
-      } 
+      }
     }
 
 Обратите внимание на то, что мы делаем фокус на кнопке внутри заголовка компонента. Это перемещает пользователей клавиатуры к соответствующему компоненту, готовому к взаимодействию. Скринридерами будет объявлен уровень родительского заголовка вместе с названием кнопки.
 
 В дополнение к этому нам нужно обновлять ```hash``` каждый раз, когда пользователи открывают последующий раздел. Тогда они могут поделиться определённым URL без необходимости копаться в инструментах разработчика (если они знают как!), чтобы скопировать и вставить ```id``` заголовка. Давайте используем ```pushState``` для динамичного изменения URL без перезагрузки страницы:
 
-    this.btn.onclick = () => {  
+    this.btn.onclick = () => {
       let open = this.getAttribute('open') === 'true' || false;
       this.setAttribute('open', open ? 'false' : 'true');
-    
+
       if (this.heading.id && !open) {
         history.pushState(null, null, '#' + this.heading.id);
       }
@@ -447,12 +442,8 @@ tags: article
 
 ## Чеклист
 
-* Не зависьте от больших библиотек в случае небольших взаимодействий, если только рассматриваемая библиотека не будет использоваться для других улучшений взаимодействия.
-
-* Не переопределяйте важные роли элементов. Прочитайте [второе правило использования ARIA](https://www.w3.org/TR/using-aria/#second).
-
-* Поддерживайте высококонтрастные темы в ваших SVG-иконках при помощи ```currentColor```.
-
-* Если контент уже статичный, то это хорошая возможность для прогрессивного улучшения вашего веб-компонента.
-
-* Пожалуйста, используйте информативные лейблы в секциях, а не «Раздел 1», «Раздел 2» и так далее. В таком случае это будут просто плейсхолдеры!
+- Не зависьте от больших библиотек в случае небольших взаимодействий, если только рассматриваемая библиотека не будет использоваться для других улучшений взаимодействия.
+- Не переопределяйте важные роли элементов. Прочитайте [второе правило использования ARIA](https://www.w3.org/TR/using-aria/#second).
+- Поддерживайте высококонтрастные темы в ваших SVG-иконках при помощи ```currentColor```.
+- Если контент уже статичный, то это хорошая возможность для прогрессивного улучшения вашего веб-компонента.
+- Пожалуйста, используйте информативные лейблы в секциях, а не «Раздел 1», «Раздел 2» и так далее. В таком случае это будут просто плейсхолдеры!

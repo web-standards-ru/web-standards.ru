@@ -9,9 +9,11 @@
     "@11ty/eleventy": "^0.9.0",
     "pretty-data": "^0.40.0",
     "remark-cli": "^7.0.0",
+    "remark-frontmatter": "^1.3.2",
     "remark-lint": "^6.0.5",
     "remark-lint-emphasis-marker": "^1.0.3",
     "remark-lint-strong-marker": "^1.0.3",
+    "remark-lint-unordered-list-marker-style": "^1.0.3",
     "stylelint": "^11.0.0"
   },
   "browserslist": [
@@ -149,11 +151,14 @@
   "remarkConfig": {
     "settings": {
       "emphasis": "_",
-      "strong": "**"
+      "strong": "**",
+      "bullet": "-"
     },
     "plugins": [
+      "remark-frontmatter",
       "remark-lint-emphasis-marker",
-      "remark-lint-strong-marker"
+      "remark-lint-strong-marker",
+      "remark-lint-unordered-list-marker-style"
     ]
   }
 }
