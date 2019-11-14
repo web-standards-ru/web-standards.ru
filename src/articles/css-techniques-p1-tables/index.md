@@ -1,7 +1,7 @@
 ---
 title: 'Основные способы вёрстки. Часть первая: таблица'
 date: 2013-06-27
-author: leo-solntsev
+author: lev-solntsev
 editors:
   - vadim-makeev
 layout: article.njk

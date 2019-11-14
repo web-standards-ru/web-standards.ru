@@ -6,7 +6,7 @@ source:
     title: 'Web font loading patterns'
     url: 'https://www.bramstein.com/writing/web-font-loading-patterns.html'
 translators:
-  - andery-alexeev
+  - andrey-alexeev
 editors:
   - vadim-makeev
 layout: article.njk

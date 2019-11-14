@@ -1,7 +1,7 @@
 ---
 title: 'Нюансы CSS'
 date: 2011-04-21
-author: leo-solntsev
+author: lev-solntsev
 editors:
   - vadim-makeev
 layout: article.njk

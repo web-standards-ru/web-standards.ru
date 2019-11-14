@@ -1,7 +1,7 @@
 ---
 title: 'Как работает nth-child'
 date: 2011-11-21
-author: chris-coyer
+author: chris-coyier
 source:
     title: 'How nth-child Works'
     url: 'http://css-tricks.com/5452-how-nth-child-works/'

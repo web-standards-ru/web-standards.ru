@@ -1,7 +1,7 @@
 ---
 title: 'Кроссбраузерные закруглённые уголки'
 date: 2010-06-28
-author: leo-solntsev
+author: lev-solntsev
 editors:
   - vadim-makeev
 layout: article.njk

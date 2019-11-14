@@ -1,7 +1,7 @@
 ---
 title: 'Основные способы вёрстки. Часть вторая: бестабличная вёрстка'
 date: 2013-06-28
-author: leo-solntsev
+author: lev-solntsev
 editors:
   - vadim-makeev
 layout: article.njk
