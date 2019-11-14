@@ -1,18 +1,14 @@
 ---
 title: 'Ценность осмысленности'
 date: 2012-08-09
-author:
-    name: 'Кайл Вимс'
-    url: 'http://cssquirrel.com/'
+author: kyle-weems
 source:
     title: 'The value of meaning'
     url: 'http://cssquirrel.com/blog/2011/11/11/the-value-of-meaning/'
 translators:
-  - name: 'Влад Андерсен'
-    url: 'http://www.facebook.com/vlad.andersen'
+  - vlad-andersen
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

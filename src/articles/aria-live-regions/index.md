@@ -1,12 +1,9 @@
 ---
 title: 'Всё, что нужно знать про ARIA Live Regions'
 date: 2019-03-12
-author:
-    name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+author: tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

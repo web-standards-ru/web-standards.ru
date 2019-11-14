@@ -1,12 +1,9 @@
 ---
 title: 'Нюансы CSS'
 date: 2011-04-21
-author:
-    name: 'Лев Солнцев'
-    url: 'https://twitter.com/ruGreLI'
+author: leo-solntsev
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

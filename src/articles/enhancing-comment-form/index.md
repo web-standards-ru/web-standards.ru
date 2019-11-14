@@ -1,22 +1,16 @@
 ---
 title: 'Улучшение формы комментариев'
 date: 2016-11-18
-author:
-    name: 'Майкл Шарналь'
-    url: 'https://justmarkup.com/'
+author: michael-scharnagl
 source:
     title: 'Enhancing a comment form'
     url: 'https://justmarkup.com/log/2016/10/enhancing-a-comment-form/'
 translators:
-  - name: 'Анна Кухарева'
-    url: 'https://medium.com/@annakukhareva'
+  - anna-kukhareva
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Юля Бухвалова'
-    url: 'https://medium.com/@yoksel'
-  - name: 'Алексей Симоненко'
-    url: 'https://medium.com/@simonenko'
+  - vadim-makeev
+  - yuliya-bukhvalova
+  - alexey-simonenko
 layout: article.njk
 tags:
   - article

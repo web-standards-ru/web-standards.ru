@@ -1,18 +1,14 @@
 ---
 title: 'JavaScript: топ тем и фреймворков для изучения в 2019 году'
 date: 2019-01-16
-author:
-    name: 'Эрик Эллиот'
-    url: 'https://medium.com/@_ericelliott'
+author: eric-elliot
 source:
     title: 'Top JS frameworks and topics to learn in 2019'
     url: 'https://medium.com/p/b4142f38df20'
 translators:
-  - name: 'Владислав Почепцов'
-    url: 'https://medium.com/@vlad_poe'
+  - vladislav-pocheptsov
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

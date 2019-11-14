@@ -1,18 +1,14 @@
 ---
 title: 'Инклюзивные компоненты: переключатель темы'
 date: 2019-09-02
-author:
-    name: 'Хейдон Пикеринг'
-    url: 'https://www.heydonworks.com/'
+author: heydon-pickering
 source:
     title: 'A Theme Switcher'
     url: https://inclusive-components.design/a-theme-switcher/
 translators:
-  - name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+  - tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags: article
 ---

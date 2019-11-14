@@ -14,11 +14,15 @@ permalink: index.html
             <time class="preview__date" datetime="{{ article.date | isoDate }}">
                 {{ article.date | ruDate }}
             </time>
-            <img class="preview__photo" src="/images/author--blue.png"
-                width="113" height="104" alt="{{ article.data.author.name }}">
-            <p class="preview__author">
-                <span class="preview__name">{{ article.data.author.name }}</span>
-            </p>
+
+            {% for author in collections.people | filterPeople(article.data.author) %}
+                <img class="preview__photo" src="/images/author--blue.png"
+                    width="113" height="104" alt="{{ author.name }}">
+                <p class="preview__author">
+                    <span class="preview__name">{{ author.name }}</span>
+                </p>
+            {% endfor %}
+
             <p class="preview__wrapper">
                 <a class="preview__title" href="{{ article.url }}">
                     {{ article.data.title }}

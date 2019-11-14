@@ -33,17 +33,19 @@ layout: page.njk
         </div>
         <div class="article__authors authors">
             <div class="authors__author">
-                <img class="authors__author-avatar" src="/images/author--blue.png"
-                    width="113" height="104" alt="{{ author.name }}">
-                <a class="authors__author-link" href="{{ author.url }}">
-                    {{ author.name }}
-                </a>
+                {% for author in collections.people | filterPeople(author) %}
+                    <img class="authors__author-avatar" src="/images/author--blue.png"
+                        width="113" height="104" alt="{{ author.name }}">
+                    <a class="authors__author-link" href="{{ author.url }}">
+                        {{ author.name }}
+                    </a>
+                {% endfor %}
             </div>
 
             {% if translators %}
                 <p class="authors__collaborators">
                     <span class="authors__collaborators-heading">Перевод</span>
-                    {%- for translator in translators -%}
+                    {%- for translator in collections.people | filterPeople(translators) -%}
                         <a class="authors__collaborators-link" href="{{ translator.url }}">
                             {{ translator.name }}
                         </a>
@@ -54,7 +56,7 @@ layout: page.njk
             {% if editors %}
                 <p class="authors__collaborators">
                     <span class="authors__collaborators-heading">Редактура</span>
-                    {%- for editor in editors -%}
+                    {%- for editor in collections.people | filterPeople(editors) -%}
                         <a class="authors__collaborators-link" href="{{ editor.url }}">
                             {{ editor.name }}
                         </a>

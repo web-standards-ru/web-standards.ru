@@ -1,18 +1,14 @@
 ---
 title: 'Хватит разрушать веб'
 date: 2015-03-23
-author:
-    name: 'Николас Беваква'
-    url: 'https://twitter.com/nzgb'
+author: nicolas-bevacqua
 source:
     title: 'Stop breaking the Web'
     url: 'http://ponyfoo.com/articles/stop-breaking-the-web'
 translators:
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - olga-aleksashenko
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

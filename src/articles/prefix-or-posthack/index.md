@@ -1,15 +1,12 @@
 ---
 title: 'Префикс или постхак'
 date: 2010-08-19
-author:
-    name: 'Эрик Мейер'
-    url: 'https://meyerweb.com/'
+author: eric-meyer
 source:
     title: 'Prefix or posthack'
     url: 'http://www.alistapart.com/articles/prefix-or-posthack/'
 translators:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

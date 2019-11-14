@@ -1,18 +1,14 @@
 ---
 title: 'Невыполненные обещания веб-компонентов'
 date: 2017-04-17
-author:
-    name: 'Дмитрий Димант'
-    url: 'https://dmitriid.com/'
+author: dmitry-dimant
 source:
     title: 'The broken promise of Web Components'
     url: 'https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/'
 translators:
-  - name: 'Владислав Почепцов'
-    url: 'https://medium.com/@vlad_poe'
+  - vladislav-pocheptsov
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

@@ -1,15 +1,14 @@
 ---
 title: 'Элементы i, b, em и strong'
 date: 2010-07-13
-author:
-    name: 'Оли Стадхольм'
-    url: 'https://html5doctor.com/author/olib/'
+author: oli-studholme
 source:
     title: 'The i, b, em, & strong elements'
     url: 'https://html5doctor.com/i-b-em-strong-element/'
 translators:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
+editors:
+  - vadim-makeev
 layout: article.njk
 tags:
   - article
@@ -152,5 +151,3 @@ tags:
 И последнее: все эти элементы (как и большинство HTML5-элементов) намеренно были сделаны _медиа-независимыми_, т.е. их семантика теперь не привязана к отображению в визуальных браузерах.
 
 Что же мы имеем? Две презентационных дворняжки из HTML4 превратились в полноценные, насыщенные смыслом HTML5-элементы, готовые снова вернуться в ваш код. Сможете ли _вы_ устоять перед их блестящими, полными семантики щенячьими глазками? Дайте нам знать!
-
-_Редактура [Вадима Макеева](https://twitter.com/pepelsbey)._

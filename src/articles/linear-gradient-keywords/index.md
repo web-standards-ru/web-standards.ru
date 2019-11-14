@@ -1,18 +1,14 @@
 ---
 title: 'Ключевые слова в линейных градиентах'
 date: 2012-07-24
-author:
-    name: 'Эрик Мейер'
-    url: 'https://meyerweb.com/'
+author: eric-meyer
 source:
     title: 'Linear gradient keywords'
     url: 'http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/'
 translators:
-  - name: 'Влад Андерсен'
-    url: 'http://www.facebook.com/vlad.andersen'
+  - vlad-andersen
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

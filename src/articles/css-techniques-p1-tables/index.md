@@ -1,12 +1,9 @@
 ---
 title: 'Основные способы вёрстки. Часть первая: таблица'
 date: 2013-06-27
-author:
-    name: 'Лев Солнцев'
-    url: 'https://twitter.com/ruGreLI'
+author: leo-solntsev
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

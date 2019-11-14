@@ -1,18 +1,14 @@
 ---
 title: 'Архитектура CSS'
 date: 2014-02-20
-author:
-    name: 'Филип Уолтон'
-    url: 'https://philipwalton.com/'
+author: philip-walton
 source:
     title: 'CSS Architecture'
     url: 'http://philipwalton.com/articles/css-architecture/'
 translators:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 editors:
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - olga-aleksashenko
 layout: article.njk
 tags:
   - article

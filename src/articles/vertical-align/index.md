@@ -1,18 +1,14 @@
 ---
 title: 'Разбираемся с vertical-align'
 date: 2012-03-09
-author:
-    name: 'Луис Лазарис'
-    url: 'https://www.impressivewebs.com/'
+author: louis-lazaris
 source:
     title: 'Understanding CSS’s vertical-align property'
     url: 'http://www.impressivewebs.com/css-vertical-align/'
 translators:
-  - name: 'Андрей Мотошин'
-    url: 'http://htmlhero.ru/'
+  - andrey-motoshin
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

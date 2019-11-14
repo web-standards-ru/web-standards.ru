@@ -1,18 +1,14 @@
 ---
 title: ' Инклюзивные компоненты: интерфейсы со вкладками'
 date: 2019-09-30
-author:
-    name: 'Хейдон Пикеринг'
-    url: 'https://www.heydonworks.com/'
+author: heydon-pickering
 source:
     title: 'Tabbed Interfaces'
     url: https://inclusive-components.design/tabbed-interfaces/
 translators:
-  - name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+  - tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags: article
 ---

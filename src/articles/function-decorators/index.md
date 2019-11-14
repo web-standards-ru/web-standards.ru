@@ -1,18 +1,14 @@
 ---
 title: 'Функции-декораторы, которые можно написать с нуля'
 date: 2018-06-13
-author:
-    name: 'Кристи Сальсезку'
-    url: 'https://medium.com/@cristiansalcescu'
+author: cristian-salcescu
 source:
     title: 'Here are a few function decorators you can write from scratch'
     url: 'https://medium.com/p/488549fe8f86'
 translators:
-  - name: 'Владислав Почепцов'
-    url: 'https://medium.com/@vlad_poe'
+  - vladislav-pocheptsov
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

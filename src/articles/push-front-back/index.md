@@ -1,18 +1,14 @@
 ---
 title: 'Реализуем пуш-уведомления на фронтенде и бэкенде'
 date: 2017-03-13
-author:
-    name: 'Михаэль Шарналь'
-    url: 'https://justmarkup.com/'
+author: michael-scharnagl
 source:
     title: 'Implementing push notifications on the front-end and back-end'
     url: 'https://justmarkup.com/log/2017/02/implementing-push-notifications/'
 translators:
-  - name: 'Владислав Почепцов'
-    url: 'https://medium.com/@vlad_poe'
+  - vladislav-pocheptsov
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

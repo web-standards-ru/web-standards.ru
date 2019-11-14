@@ -1,20 +1,15 @@
 ---
 title: 'Культ карго CSS'
 date: 2014-02-19
-author:
-    name: 'Бен Дарлоу'
-    url: 'http://www.kapowaz.net/'
+author: ben-darlow
 source:
     title: 'Cargo Cult CSS'
     url: 'http://www.kapowaz.net/articles/cargo-cult-css'
 translators:
-  - name: 'Влад Андерсен'
-    url: 'http://www.facebook.com/vlad.andersen'
+  - vlad-andersen
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - vadim-makeev
+  - olga-aleksashenko
 layout: article.njk
 tags:
   - article

@@ -1,12 +1,9 @@
 ---
 title: 'Какой расклад?'
 date: 2010-08-30
-author:
-    name: 'Вячеслав Олиянчук'
-    url: 'http://miripiruni.org/'
+author: vyacheslav-olianchuk
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

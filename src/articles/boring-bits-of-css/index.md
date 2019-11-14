@@ -1,18 +1,14 @@
 ---
 title: 'Как я научился любить скучные мелочи CSS'
 date: 2012-08-21
-author:
-    name: 'Питер Гастон'
-    url: 'https://alistapart.com/author/stopsatgreen/'
+author: peter-gasston
 source:
     title: 'Learning to Love the Boring Bits of CSS'
     url: 'http://www.alistapart.com/articles/love-the-boring-bits-of-css/'
 translators:
-  - name: 'Влад Андерсен'
-    url: 'http://www.facebook.com/vlad.andersen'
+  - vlad-andersen
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

@@ -1,18 +1,14 @@
 ---
 title: 'HTML, CSS и исчезающие точки входа в индустрию'
 date: 2019-02-01
-author:
-    name: 'Рейчел Эндрю'
-    url: 'https://rachelandrew.co.uk/'
+author: rachel-andrew
 source:
     title: 'HTML, CSS and our vanishing industry entry points'
     url: 'https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/'
 translators:
-  - name: 'Алёна Батицкая'
-    url: 'https://medium.com/@ABatickaya'
+  - alena-batickaya
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

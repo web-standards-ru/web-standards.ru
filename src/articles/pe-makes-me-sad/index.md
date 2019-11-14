@@ -1,15 +1,12 @@
 ---
 title: 'Прогрессивное улучшение меня расстраивает'
 date: 2016-03-22
-author:
-    name: 'Хейдон Пикеринг'
-    url: 'https://www.heydonworks.com/'
+author: heydon-pickering
 source:
     title: 'Progressive enhancement makes me sad'
     url: 'https://www.heydonworks.com/article/progressive-enhancement-makes-me-sad'
 translators:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

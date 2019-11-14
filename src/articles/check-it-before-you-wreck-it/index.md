@@ -1,22 +1,16 @@
 ---
 title: 'Не проверив HTML5-кода, не суйся в воду — с Майком™ Смитом'
 date: 2014-12-26
-author:
-    name: 'Стив Фолкнер'
-    url: 'https://html5doctor.com/author/stevef/'
+author: steve-faulkner
 source:
     title: 'HTML5 — Check it Before you Wreck it with Mike™ Smith'
     url: 'https://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/'
 translators:
-  - name: 'Максим Усачёв'
-    url: 'https://twitter.com/psyw'
-  - name: 'Илья Стрельцын'
-    url: 'https://twitter.com/SelenIT2'
+  - maxim-usachev
+  - ilya-streltsin
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - vadim-makeev
+  - olga-aleksashenko
 layout: article.njk
 tags:
   - article

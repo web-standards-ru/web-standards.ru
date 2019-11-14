@@ -1,20 +1,15 @@
 ---
 title: 'Быстродействие фронтенда для дизайнеров и разработчиков'
 date: 2013-04-15
-author:
-    name: 'Гарри Робертс'
-    url: 'https://csswizardry.com/'
+author: harry-roberts
 source:
     title: 'Front-end performance for web designers and front-end developers'
     url: 'http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/'
 translators:
-  - name: 'Влад Андерсен'
-    url: 'http://www.facebook.com/vlad.andersen'
+  - vlad-andersen
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - vadim-makeev
+  - olga-aleksashenko
 layout: article.njk
 tags:
   - article

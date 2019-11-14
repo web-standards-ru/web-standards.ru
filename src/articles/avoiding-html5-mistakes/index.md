@@ -1,15 +1,12 @@
 ---
 title: 'Избегаем популярных ошибок в HTML5'
 date: 2011-07-27
-author:
-    name: 'Ричард Кларк'
-    url: 'https://html5doctor.com/author/richc/'
+author: richard-clark
 source:
     title: 'Avoiding common HTML5 mistakes'
     url: 'https://html5doctor.com/avoiding-common-html5-mistakes/'
 translators:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

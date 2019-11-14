@@ -1,12 +1,9 @@
 ---
 title: 'Метрики загрузки страницы'
 date: 2017-11-15
-author:
-    name: 'Артём Денисов'
-    url: 'https://medium.com/@denar90'
+author: artem-denysov
 editors:
-  - name: 'Вадима Макеева'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

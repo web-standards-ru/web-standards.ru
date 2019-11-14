@@ -1,18 +1,14 @@
 ---
 title: 'Манифест? А? Что? Зачем?'
 date: 2017-01-09
-author:
-    name: 'Альфред Маерс'
-    url: 'https://github.com/alfredmyers'
+author: alfred-myers
 source:
     title: 'Manifest? Eh? What? Why?'
     url: 'https://github.com/w3c/manifest/blob/gh-pages/explainer.md'
 translators:
-  - name: 'Анна Кухарева'
-    url: 'https://medium.com/@annakukhareva'
+  - anna-kukhareva
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

@@ -1,18 +1,14 @@
 ---
 title: 'Как на самом деле работает position: sticky в CSS'
 date: 2019-01-31
-author:
-    name: 'Элад Шехтер'
-    url: 'https://medium.com/@elad'
+author: elad-shechter
 source:
     title: 'CSS position: sticky — how it really works!'
     url: 'https://medium.com/p/54cd01dc2d46'
 translators:
-  - name: 'Алёна Батицкая'
-    url: 'https://medium.com/@ABatickaya'
+  - alena-batickaya
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

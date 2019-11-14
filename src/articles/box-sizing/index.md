@@ -1,18 +1,14 @@
 ---
 title: 'Размеры блоков, или Назад в будущее'
 date: 2013-01-23
-author:
-    name: 'Дэвид Стори'
-    url: 'https://generatedcontent.org/'
+author: david-storey
 source:
     title: 'Box-sizing: border-box; the results are in'
     url: 'http://generatedcontent.org/post/26334712021/box-sizing-results'
 translators:
-  - name: 'Сергей Смольников'
-    url: 'https://twitter.com/smolnikov'
+  - sergey-smolnikov
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

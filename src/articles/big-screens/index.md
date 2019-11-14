@@ -1,22 +1,16 @@
 ---
 title: 'Исследуем большие экраны'
 date: 2014-11-24
-author:
-    name: 'Майк Пик'
-    url: 'https://alistapart.com/author/mikepick/'
+author: mike-pick
 source:
     title: 'Surveying the Big Screen'
     url: 'http://alistapart.com/article/surveying-the-big-screen'
 translators:
-  - name: 'Наталья Арефьева'
-    url: 'https://twitter.com/n_snork'
+  - natasha-arefyeva
 editors:
-  - name: 'Юлия Бухвалова'
-    url: 'https://twitter.com/yoksel'
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - yuliya-bukhvalova
+  - vadim-makeev
+  - olga-aleksashenko
 layout: article.njk
 tags:
   - article

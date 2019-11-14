@@ -1,22 +1,16 @@
 ---
 title: 'Почему Sass?'
 date: 2013-12-10
-author:
-    name: 'Дэн Седерхольм'
-    url: 'http://simplebits.com/'
+author: dan-cederholm
 source:
     title: 'Why Sass?'
     url: 'http://alistapart.com/article/why-sass'
 translators:
-  - name: 'Наталья Арефьева'
-    url: 'https://twitter.com/n_snork'
+  - natasha-arefyeva
 editors:
-  - name: 'Юлия Бухвалова'
-    url: 'https://twitter.com/yoksel'
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - yuliya-bukhvalova
+  - vadim-makeev
+  - olga-aleksashenko
 layout: article.njk
 tags:
   - article

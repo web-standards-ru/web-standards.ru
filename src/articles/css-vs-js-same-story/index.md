@@ -1,15 +1,12 @@
 ---
 title: 'Та же история, только с CSS'
 date: 2019-01-16
-author:
-    name: 'Тоби Лангел'
-    url: 'https://twitter.com/tobie'
+author: tobie-langel
 source:
     title: 'We’re seeing the same thing today…'
     url: 'https://twitter.com/tobie/status/1083316137826365442'
 translators:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

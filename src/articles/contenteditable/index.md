@@ -4,15 +4,11 @@ date: 2012-03-09
 source:
     title: 'The contenteditable attribute'
     url: 'https://html5doctor.com/the-contenteditable-attribute/'
-author:
-    name: 'Джек Осборн'
-    url: 'https://html5doctor.com/author/jacko/'
+author: jack-osborne
 translators:
-  - name: 'Антон Немцев'
-    url: 'https://twitter.com/silentimp'
+  - anton-nemtsev
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

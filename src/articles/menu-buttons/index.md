@@ -1,18 +1,14 @@
 ---
 title: 'Инклюзивные компоненты: меню и кнопки меню'
 date: 2019-05-21
-author:
-    name: 'Хейдон Пикеринг'
-    url: 'https://www.heydonworks.com/'
+author: heydon-pickering
 source:
     title: 'Menus & menu buttons'
     url: 'https://inclusive-components.design/menus-menu-buttons/'
 translators:
-  - name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+  - tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

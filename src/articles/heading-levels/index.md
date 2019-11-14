@@ -1,18 +1,14 @@
 ---
 title: 'Важность уровней заголовков для вспомогательных технологий'
 date: 2018-11-13
-author:
-    name: 'Эрик Бейли'
-    url: 'https://ericwbailey.design/'
+author: eric-bailey
 source:
     title: 'The importance of heading levels for assistive technology'
     url: 'https://webdesign.tutsplus.com/articles/the-importance-of-heading-levels-for-assistive-technology--cms-31753'
 translators:
-  - name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+  - tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

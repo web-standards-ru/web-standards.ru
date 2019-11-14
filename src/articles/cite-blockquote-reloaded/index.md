@@ -1,22 +1,16 @@
 ---
 title: 'Сite и blockquote: перезагрузка'
 date: 2013-11-11
-author:
-    name: 'Стив Фолкнер'
-    url: 'https://html5doctor.com/author/stevef/'
+author: steve-faulkner
 source:
     title: 'Cite and blockquote — reloaded'
     url: 'https://html5doctor.com/cite-and-blockquote-reloaded/'
 translators:
-  - name: 'Наталья Арефьева'
-    url: 'https://twitter.com/n_snork'
+  - natasha-arefyeva
 editors:
-  - name: 'Юлия Бухвалова'
-    url: 'https://twitter.com/yoksel'
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Ольга Алексашенко'
-    url: 'https://moikrug.ru/engel-t'
+  - yuliya-bukhvalova
+  - vadim-makeev
+  - olga-aleksashenko
 layout: article.njk
 tags:
   - article

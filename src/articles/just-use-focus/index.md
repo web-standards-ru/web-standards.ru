@@ -1,18 +1,14 @@
 ---
 title: 'Просто используйте стили для :focus, чёрт возьми'
 date: 2018-12-10
-author:
-    name: 'Крис Фердинанди'
-    url: 'https://gomakethings.com/'
+author: chris-ferdinandi
 source:
     title: 'Just use :focus styles, damnit'
     url: 'https://gomakethings.com/just-use-focus-styles-damnit/'
 translators:
-  - name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+  - tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

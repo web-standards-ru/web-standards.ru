@@ -1,18 +1,14 @@
 ---
 title: 'Полезные правила доступности, которые останутся в памяти'
 date: 2018-11-28
-author:
-    name: 'Тьяго Ромеро Гарсия'
-    url: 'https://medium.com/@themindfuldev'
+author: tiago-romero-garcia
 source:
     title: 'Pragmatic rules of web accessibility that will stick to your mind'
     url: 'https://medium.com/p/9d3eb85a1a28'
 translators:
-  - name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+  - tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

@@ -1,18 +1,14 @@
 ---
 title: 'Ещё одна CSS-техника замены текста изображением'
 date: 2012-09-10
-author:
-    name: 'Николас Галлахер'
-    url: 'http://nicolasgallagher.com/'
+author: nicolas-gallagher
 source:
     title: 'Another CSS image replacement technique'
     url: 'http://nicolasgallagher.com/another-css-image-replacement-technique/'
 translators:
-  - name: 'Максим Усачёв'
-    url: 'https://twitter.com/psyw'
+  - maxim-usachev
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

@@ -1,18 +1,14 @@
 ---
 title: 'Генерация HTTP-запросов: Fetch или Axios.js'
 date: 2017-11-15
-author:
-    name: 'Джейсон Арнольд'
-    url: 'https://medium.com/@thejasonfile'
+author: jason-arnold
 source:
     title: 'Fetch vs. Axios.js for making HTTP requests'
     url: 'https://medium.com/p/2b261cdd3af5'
 translators:
-  - name: 'Артур Храбров'
-    url: 'https://medium.com/@nzvtrkk'
+  - artur-khrabrov
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article

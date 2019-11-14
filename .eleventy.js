@@ -66,12 +66,29 @@ module.exports = function(config) {
         return content;
     });
 
+    // Возвращает данные о людях из списка filterList
+    config.addFilter('filterPeople', function(peopleList, filterList) {
+        return peopleList
+            .filter((person) => {
+                // Иногда filterList это строка, а не массив, поэтому всегда делаем массив
+                const filterListNormalized = [].concat(filterList);
+
+                return filterListNormalized.includes(person.fileSlug);
+            })
+            .map((person) => {
+                // Берёт все данные, кроме pkg и collections для оптимизации памяти
+                const { pkg, collections, ...data } = person.data;
+
+                return data;
+            });
+    });
+
     return {
         dir: {
             input: 'src',
             output: 'dist',
             includes: 'includes',
-            layouts: 'layouts'
+            layouts: 'layouts',
         },
         dataTemplateEngine: 'njk',
         markdownTemplateEngine: false,

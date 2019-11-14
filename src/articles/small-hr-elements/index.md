@@ -1,15 +1,12 @@
 ---
 title: 'Элементы small и hr'
 date: 2011-05-30
-author:
-    name: 'Оли Стадхольм'
-    url: 'https://html5doctor.com/author/olib/'
+author: oli-studholme
 source:
     title: 'The small & hr elements'
     url: 'https://html5doctor.com/small-hr-element/'
 translators:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags:
   - article
