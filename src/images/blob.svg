@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden">
+    <clipPath id="author-clip-path--1" clipPathUnits="objectBoundingBox"><path d="M0.516,0.008 C0.615,0.01,0.717,0.019,0.801,0.068 C0.883,0.116,0.937,0.195,0.973,0.277 C1.007,0.352,1.001,0.435,1,0.516 C0.998,0.597,1.013,0.684,0.963,0.751 C0.914,0.817,0.815,0.827,0.739,0.868 C0.663,0.908,0.602,0.972,0.516,0.989 C0.42,1.008,0.305,1.025,0.227,0.971 C0.147,0.917,0.164,0.804,0.123,0.722 C0.087,0.65,0,0.596,0.001,0.516 C0.002,0.437,0.093,0.386,0.128,0.313 C0.169,0.23,0.15,0.119,0.225,0.06 C0.301,0,0.415,0.007,0.516,0.008"></path></clipPath>
+    <clipPath id="author-clip-path--2" clipPathUnits="objectBoundingBox"><path d="M0.497,0.012 C0.594,0,0.69,0.038,0.774,0.081 C0.859,0.124,0.939,0.179,0.981,0.256 C1.022,0.33,1.01,0.416,1.004,0.499 C0.999,0.577,0.994,0.658,0.95,0.726 C0.905,0.795,0.827,0.839,0.753,0.884 C0.672,0.935,0.596,0.998,0.497,1.008 C0.395,1.017,0.284,0.995,0.205,0.938 C0.129,0.882,0.119,0.787,0.084,0.706 C0.055,0.638,0.022,0.572,0.016,0.499 C0.009,0.422,0,0.339,0.046,0.272 C0.092,0.207,0.188,0.188,0.262,0.145 C0.341,0.099,0.403,0.024,0.497,0.012"></path></clipPath>
+    <clipPath id="author-clip-path--3" clipPathUnits="objectBoundingBox"><path d="M0.505,0.054 C0.584,0.066,0.663,0.074,0.734,0.109 C0.807,0.145,0.879,0.19,0.918,0.259 C0.957,0.326,0.938,0.407,0.949,0.483 C0.963,0.573,1.026,0.663,0.991,0.747 C0.956,0.832,0.853,0.87,0.77,0.916 C0.687,0.963,0.602,1.031,0.505,1.019 C0.408,1.007,0.357,0.908,0.276,0.856 C0.203,0.809,0.103,0.797,0.053,0.729 C0.002,0.659,0.004,0.568,0.002,0.483 C0,0.397,0.001,0.309,0.04,0.231 C0.081,0.149,0.14,0.067,0.229,0.033 C0.316,0,0.412,0.04,0.505,0.054"></path></clipPath>
+    <clipPath id="author-clip-path--4" clipPathUnits="objectBoundingBox"><path d="M0.537,0.001 C0.622,0.002,0.692,0.058,0.765,0.101 C0.836,0.142,0.914,0.178,0.957,0.247 C1.001,0.315,1.009,0.399,1.006,0.48 C1.003,0.559,0.98,0.635,0.94,0.704 C0.9,0.773,0.841,0.829,0.776,0.877 C0.703,0.931,0.629,1.001,0.537,1.001 C0.445,1.001,0.379,0.92,0.3,0.876 C0.221,0.831,0.124,0.811,0.071,0.739 C0.017,0.665,0,0.57,0.009,0.48 C0.017,0.394,0.065,0.317,0.118,0.247 C0.168,0.183,0.235,0.136,0.306,0.094 C0.379,0.052,0.452,0,0.537,0.001"></path></clipPath>
+    <clipPath id="author-clip-path--5" clipPathUnits="objectBoundingBox"><path d="M0.515,0.05 C0.587,0.063,0.657,0.079,0.722,0.116 C0.788,0.153,0.847,0.201,0.893,0.263 C0.944,0.332,1.006,0.406,1.004,0.493 C1.002,0.58,0.926,0.642,0.883,0.716 C0.841,0.789,0.817,0.875,0.753,0.927 C0.686,0.983,0.6,1.009,0.515,1.017 C0.425,1.025,0.332,1.016,0.251,0.972 C0.17,0.927,0.105,0.853,0.061,0.768 C0.018,0.684,0,0.588,0.004,0.493 C0.009,0.4,0.04,0.312,0.085,0.232 C0.13,0.153,0.181,0.068,0.262,0.034 C0.342,0,0.43,0.035,0.515,0.05"></path></clipPath>
+    <clipPath id="author-clip-path--6" clipPathUnits="objectBoundingBox"><path d="M0.517,0.003 C0.602,0.006,0.685,0.027,0.76,0.07 C0.839,0.116,0.913,0.174,0.956,0.258 C1,0.344,1.009,0.444,1.002,0.542 C0.994,0.645,0.973,0.749,0.912,0.83 C0.85,0.912,0.759,0.967,0.662,0.992 C0.568,1.017,0.472,0.991,0.377,0.97 C0.273,0.948,0.154,0.947,0.082,0.865 C0.01,0.783,0,0.658,0.005,0.546 C0.01,0.446,0.064,0.361,0.11,0.273 C0.153,0.192,0.189,0.104,0.264,0.054 C0.338,0.005,0.429,0,0.517,0.003"></path></clipPath>
+    <clipPath id="author-clip-path--7" clipPathUnits="objectBoundingBox"><path d="M0.487,0.007 C0.59,0,0.699,0.014,0.78,0.072 C0.858,0.128,0.873,0.228,0.912,0.312 C0.95,0.394,1.02,0.471,1.005,0.559 C0.991,0.647,0.896,0.699,0.837,0.769 C0.774,0.845,0.743,0.954,0.647,0.99 C0.549,1.026,0.438,0.99,0.339,0.957 C0.245,0.924,0.156,0.877,0.096,0.802 C0.039,0.731,0.025,0.641,0.014,0.553 C0.004,0.468,0,0.38,0.037,0.301 C0.074,0.221,0.143,0.159,0.221,0.108 C0.301,0.056,0.389,0.013,0.487,0.007"></path></clipPath>
+
+    <filter id="black-to-teal" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                .33 .33 .33 0 0
+                .33 .33 .33 0 0
+                0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+        <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0 0.2"/>
+            <feFuncG type="table" tableValues="0 0.47"/>
+            <feFuncB type="table" tableValues="0 0.62"/>
+            <feFuncA type="table" tableValues="0 1"/>
+        </feComponentTransfer>
+        <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+    </filter>
+
+    <filter id="black-to-lightteal" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                .33 .33 .33 0 0
+                .33 .33 .33 0 0
+                0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+        <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0 0.26"/>
+            <feFuncG type="table" tableValues="0 0.67"/>
+            <feFuncB type="table" tableValues="0 0.71"/>
+            <feFuncA type="table" tableValues="0 1"/>
+        </feComponentTransfer>
+        <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+    </filter>
+
+    <filter id="black-to-moss" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                .33 .33 .33 0 0
+                .33 .33 .33 0 0
+                0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+        <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0 0.41"/>
+            <feFuncG type="table" tableValues="0 0.73"/>
+            <feFuncB type="table" tableValues="0 0.45"/>
+            <feFuncA type="table" tableValues="0 1"/>
+        </feComponentTransfer>
+        <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+    </filter>
+
+    <filter id="black-to-grass" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                .33 .33 .33 0 0
+                .33 .33 .33 0 0
+                0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+        <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0 0.58"/>
+            <feFuncG type="table" tableValues="0 0.83"/>
+            <feFuncB type="table" tableValues="0 0.27"/>
+            <feFuncA type="table" tableValues="0 1"/>
+        </feComponentTransfer>
+        <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+    </filter>
+
+    <filter id="black-to-yellow" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                .33 .33 .33 0 0
+                .33 .33 .33 0 0
+                0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+        <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0 1"/>
+            <feFuncG type="table" tableValues="0 0.93"/>
+            <feFuncB type="table" tableValues="0 0"/>
+            <feFuncA type="table" tableValues="0 1"/>
+        </feComponentTransfer>
+        <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+    </filter>
+</svg>
