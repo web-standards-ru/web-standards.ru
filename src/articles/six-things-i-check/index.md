@@ -1,20 +1,15 @@
 ---
 title: 'Помимо автоматизированного тестирования доступности: шесть вещей, которые я проверяю на каждом своём сайте'
 date: 2019-11-05
-author:
-    name: 'Мануэль Матузович'
-    url: 'https://www.matuzo.at/'
+author: manuel-matuzovic
 source:
     title: 'Beyond automatic accessibility testing'
     url: 'https://www.matuzo.at/blog/beyond-automatic-accessibility-testing-6-things-i-check-on-every-website-i-build/'
 translators:
-  - name: 'Глафира Жур'
-    url: 'https://medium.com/@glafirazhur'
+  - glafira-zhur
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
-  - name: 'Никита Дубко'
-    url: 'https://twitter.com/dark_mefody'
+  - vadim-makeev
+  - nikita-dubko
 layout: article.njk
 tags: article
 ---

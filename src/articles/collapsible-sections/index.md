@@ -1,18 +1,14 @@
 ---
 title: 'Инклюзивные компоненты: сворачиваемые секции'
 date: 2019-10-17
-author:
-    name: 'Хейдон Пикеринг'
-    url: 'https://www.heydonworks.com/'
+author: heydon-pickering
 source:
     title: 'Collapsible Sections'
     url: https://inclusive-components.design/collapsible-sections/
 translators:
-  - name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+  - tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags: article
 ---

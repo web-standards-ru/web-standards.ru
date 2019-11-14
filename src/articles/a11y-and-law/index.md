@@ -1,12 +1,9 @@
 ---
 title: 'Доступность и закон'
 date: 2019-11-04
-author:
-    name: 'Татьяна Фокина'
-    url: 'https://medium.com/@fokinatatiana'
+author: tatiana-fokina
 editors:
-  - name: 'Вадим Макеев'
-    url: 'https://twitter.com/pepelsbey'
+  - vadim-makeev
 layout: article.njk
 tags: article
 ---
