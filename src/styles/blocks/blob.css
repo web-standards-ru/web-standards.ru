@@ -1,0 +1,54 @@
+/* Blob */
+
+.blob--teal {
+    filter: url('#blob--teal');
+}
+
+.blob--lightteal {
+    filter: url('#blob--lightteal');
+}
+
+.blob--moss {
+    filter: url('#blob--moss');
+}
+
+.blob--grass {
+    filter: url('#blob--grass');
+}
+
+/* Crop */
+
+.blob--shape-1 {
+    -webkit-clip-path: url('#blob--shape-1');
+    clip-path: url('#blob--shape-1');
+}
+
+.blob--shape-2 {
+    -webkit-clip-path: url('#blob--shape-2');
+    clip-path: url('#blob--shape-2');
+}
+
+.blob--shape-3 {
+    -webkit-clip-path: url('#blob--shape-3');
+    clip-path: url('#blob--shape-3');
+}
+
+.blob--shape-4 {
+    -webkit-clip-path: url('#blob--shape-4');
+    clip-path: url('#blob--shape-4');
+}
+
+.blob--shape-5 {
+    -webkit-clip-path: url('#blob--shape-5');
+    clip-path: url('#blob--shape-5');
+}
+
+.blob--shape-6 {
+    -webkit-clip-path: url('#blob--shape-6');
+    clip-path: url('#blob--shape-6');
+}
+
+.blob--shape-7 {
+    -webkit-clip-path: url('#blob--shape-7');
+    clip-path: url('#blob--shape-7');
+}

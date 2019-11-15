@@ -72,65 +72,6 @@
     width: 80px;
 }
 
-/* Colored preview photos */
-
-.preview:nth-child(5n + 1) .preview__photo {
-    filter: url('#black-to-teal');
-}
-
-.preview:nth-child(5n + 2) .preview__photo {
-    filter: url('#black-to-lightteal');
-}
-
-.preview:nth-child(5n + 3) .preview__photo {
-    filter: url('#black-to-moss');
-}
-
-.preview:nth-child(5n + 4) .preview__photo {
-    filter: url('#black-to-grass');
-}
-
-.preview:nth-child(5n + 5) .preview__photo {
-    filter: url('#black-to-yellow');
-}
-
-/* Clipped preview photos */
-
-.preview:nth-child(7n + 1) .preview__photo {
-    -webkit-clip-path: url('#author-clip-path--1');
-    clip-path: url('#author-clip-path--1');
-}
-
-.preview:nth-child(7n + 2) .preview__photo {
-    -webkit-clip-path: url('#author-clip-path--2');
-    clip-path: url('#author-clip-path--2');
-}
-
-.preview:nth-child(7n + 3) .preview__photo {
-    -webkit-clip-path: url('#author-clip-path--3');
-    clip-path: url('#author-clip-path--3');
-}
-
-.preview:nth-child(7n + 4) .preview__photo {
-    -webkit-clip-path: url('#author-clip-path--4');
-    clip-path: url('#author-clip-path--4');
-}
-
-.preview:nth-child(7n + 5) .preview__photo {
-    -webkit-clip-path: url('#author-clip-path--5');
-    clip-path: url('#author-clip-path--5');
-}
-
-.preview:nth-child(7n + 6) .preview__photo {
-    -webkit-clip-path: url('#author-clip-path--6');
-    clip-path: url('#author-clip-path--6');
-}
-
-.preview:nth-child(7n + 7) .preview__photo {
-    -webkit-clip-path: url('#author-clip-path--7');
-    clip-path: url('#author-clip-path--7');
-}
-
 @media (min-width: 630px) {
     .preview__photo {
         width: 100px;
