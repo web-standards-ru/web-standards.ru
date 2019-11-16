@@ -21,11 +21,17 @@ tags:
 
 ## Изменения в определении `<blockquote>`
 
-> Элемент `<blockquote>` представляет контент, являющийся цитатой из другого источника, **возможно**, включающим упоминание этого источника, которое **должно быть** размещено внутри элементов `<footer>` или `<cite>`, и, **возможно**, содержащий примечания и сокращения.
-> Контент внутри элемента `<blockquote>`, за исключением отсылки к источнику и изменений в тексте, **должен быть** точной цитатой из другого источника, адрес которого, если таковой имеется, **может быть** указан в атрибуте `cite`.
-> [4.51 the Blockquote element](http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-blockquote-element), Роберт Бержон и соавторы, 2013
+<blockquote>
+    <p>Элемент <code>&lt;blockquote&gt;</code> представляет контент, являющийся цитатой из другого источника, <strong>возможно</strong>, включающим упоминание этого источника, которое <strong>должно быть</strong> размещено внутри элементов <code>&lt;footer&gt;</code> или <code>&lt;cite&gt;</code>, и, <strong>возможно</strong>, содержащий примечания и сокращения.</p>
+    <p>Контент внутри элемента <code>&lt;blockquote&gt;</code>, за исключением отсылки к источнику и изменений в тексте, <strong>должен быть</strong> точной цитатой из другого источника, адрес которого, если таковой имеется, <strong>может быть</strong> указан в атрибуте <code>cite</code>.</p>
+    <footer>
+        <cite>
+            <a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-blockquote-element">4.51 the Blockquote element</a>, Роберт Бержон и соавторы, 2013.
+        </cite>
+    </footer>
+</blockquote>
 
-Выделение в цитате авторское, прим. редактора.
+_Выделение в цитате авторское, прим. редактора._
 
 ### Что изменения в `<blockquote>` значат для разработчиков
 
@@ -33,19 +39,21 @@ tags:
 
 Пример использования элементов `<footer>` и `<cite>` внутри `<blockquote>`:
 
-    <blockquote>
-        <p>
-            As my fellow HTML5 Doctor, Oli Studholme has showed,
-            people seldom quote exactly – so sacrosanctity of the quoted
-            text isn’t a useful ideal – and in print etc, citations almost
-            always appear as part of the quotation –
-            it’s highly conventional.
-        </p>
-        <footer>
-            — <cite><a href="http://brucelawson.co.uk/2013/on-citing-
-            quotations-again/">Bruce Lawson</a></cite>
-        </footer>
-    </blockquote>
+```html
+<blockquote>
+    <p>
+        As my fellow HTML5 Doctor, Oli Studholme has showed,
+        people seldom quote exactly – so sacrosanctity of the quoted
+        text isn’t a useful ideal – and in print etc, citations almost
+        always appear as part of the quotation –
+        it’s highly conventional.
+    </p>
+    <footer>
+        — <cite><a href="http://brucelawson.co.uk/2013/on-citing-
+        quotations-again/">Bruce Lawson</a></cite>
+    </footer>
+</blockquote>
+```
 
 Пример выше показывает, что авторы спецификации, вместо того, чтобы следовать [теоретической чистоте](http://www.w3.org/TR/html-design-principles/#priority-of-constituencies), которая, в данном случае, не имеет практического смысла, предпочли изменить определение, чтобы [решить реальную проблему](http://www.w3.org/TR/html-design-principles/#solve-real-problems) используя существующие возможности HTML, а не [изобретать колесо](http://www.w3.org/TR/html-design-principles/#do-not-reinvent-the-wheel).
 
@@ -57,20 +65,28 @@ tags:
 
 _(Добавлено 6.11.13, прим. редактора.)_ В ответ на отзывы, мы решили изменить наше предложение для спецификации так, чтобы использовать атрибут `class` (который [может использоваться для расширения](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#extensibility)) элемента `<cite>` для обозначения, что это часть источника цитаты.
 
-    <blockquote>
-        <p>
-            My favorite book is
-            <cite class="from-quote">At Swim-Two-Birds</cite>
-        </p>
-        <footer>
-            — <cite>Mike[tm]Smith</cite>
-        </footer>
-    </blockquote>
+```html
+<blockquote>
+    <p>
+        My favorite book is
+        <cite class="from-quote">At Swim-Two-Birds</cite>
+    </p>
+    <footer>
+        — <cite>Mike[tm]Smith</cite>
+    </footer>
+</blockquote>
+```
 
 ## Изменения в определении `<cite>`
 
-> [Элемент `<cite>`](http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element) [представляет](http://www.w3.org/html/wg/drafts/html/master/dom.html#represents) отсылку к оригинальной работе. Он **должен** включать название работы или имя автора (персоналию, группу лиц или организацию), или ссылку, которые **могут быть** в представлены сокращенном виде в соответствии с соглашениями, принятыми при цитировании.
-> [4.51 the Cite element](http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element), Роберт Бержон и соавторы, 2013
+<blockquote>
+    <p><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element">Элемент <code>&lt;cite&gt;</code></a> <a href="http://www.w3.org/html/wg/drafts/html/master/dom.html#represents">представляет</a> отсылку к оригинальной работе. Он <strong>должен</strong> включать название работы или имя автора (персоналию, группу лиц или организацию), или ссылку, которые <strong>могут быть</strong> в представлены сокращенном виде в соответствии с соглашениями, принятыми при цитировании.</p>
+    <footer>
+        <cite>
+            <a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element">4.51 the Cite element</a>, Роберт Бержон и соавторы, 2013.
+        </cite>
+    </footer>
+</blockquote>
 
 ### Что изменения в `<cite>` значат для разработчиков
 
@@ -78,14 +94,25 @@ _(Добавлено 6.11.13, прим. редактора.)_ В ответ н
 
 Разработчики выступали против изменений в определении:
 
-> Присоединяйтесь к кампании гражданского неповиновения против излишне ограничительных, обратно-несовместимых изменений элемента `<cite>`. Начните использовать HTML5, но начните использовать его разумно. Давайте посмотрим, как плохой совет канет в лету.
-> [Джереми Кит, 2009](http://24ways.org/2009/incite-a-riot/)
+<blockquote>
+    <p>Присоединяйтесь к кампании гражданского неповиновения против излишне ограничительных, обратно-несовместимых изменений элемента <code>&lt;cite&gt;</code>. Начните использовать HTML5, но начните использовать его разумно. Давайте посмотрим, как плохой совет канет в лету.</p>
+    <footer>
+        <cite>
+            <a href="http://24ways.org/2009/incite-a-riot/">Джереми Кит, 2009</a>.
+        </cite>
+    </footer>
+</blockquote>
 
 Они также приводили [абстрактные](http://wiki.whatwg.org/wiki/Cite_element) и [реальные примеры](http://oli.jp/example/blockquote-metadata/) указания источника. Сейчас, в результате [исследований](https://dl.dropboxusercontent.com/u/377471/cite1.html), [анализа данных](http://lists.w3.org/Archives/Public/public-html/2013Aug/0100.html) и [дискуссий](http://www.w3.org/Search/Mail/Public/search?keywords=%3Cblockquote%3E+%3Ccite%3E&hdr-1-name=subject&hdr-1-query=&index-grp=Public_FULL&index-type=t&type-index=public-html), разработчики могут вновь использовать `<cite>` для того, чтобы разными способами сослаться на источник: например, указать <q>название работы, имя автора или ссылку на источник</q>. Мы теряем в теоретической чистоте, но выигрываем в удобстве использования:
 
-> Сколько раз в день тег `<cite>`, содержащий гиперссылку, опубликуется на веб-страницах? По меньшей мере, 70 миллиардов раз, т.е. примерно в 10 ссылках на странице результатов поиска Google.
-> Одна из причин, почему элемент `<cite>` теперь можно использовать для гиперссылок (даже не упоминая про идентичную ситуацию с Bing).
-> Стив Фолкнер, [22 октября 2013](https://twitter.com/stevefaulkner/statuses/392645777874370560)
+<blockquote>
+    <p>Сколько раз в день тег <code>&lt;cite&gt;</code>, содержащий гиперссылку, опубликуется на веб-страницах? По меньшей мере, 70 миллиардов раз, т.е. примерно в 10 ссылках на странице результатов поиска Google. Одна из причин, почему элемент <code>&lt;cite&gt;</code> теперь можно использовать для гиперссылок (даже не упоминая про идентичную ситуацию с Bing).</p>
+    <footer>
+        <cite>
+            Стив Фолкнер, <a href="https://twitter.com/stevefaulkner/statuses/392645777874370560">22 октября 2013</a>
+        </cite>
+    </footer>
+</blockquote>
 
 ### Что вы думаете?
 

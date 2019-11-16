@@ -240,27 +240,29 @@ Visually Complete
 
 Если вы хотите делать замеры вручную, то это возможно с [API PerformanceObserver](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver). Небольшой пример из спецификации:
 
-    const observer = new PerformanceObserver(list => {
-        list
-            .getEntries()
-             // Get the values we are interested in
-            .map(({ name, entryType, startTime, duration }) => {
-        const obj = {
-            "Duration": duration,
-            "Entry Type": entryType,
-            "Name": name,
-            "Start Time": startTime,
-        };
-        return JSON.stringify(obj, null, 2);
-    })
-    // Display them to the console
-    .forEach(console.log);
-        // maybe disconnect after processing the events.
-        observer.disconnect();
-    });
-    // retrieve buffered events and subscribe to new events
-    // for Resource-Timing and User-Timing
-    observer.observe({
-        entryTypes: ["resource", "mark", "measure"],
-        buffered: true
-    });
+```js
+const observer = new PerformanceObserver(list => {
+    list
+        .getEntries()
+        // Get the values we are interested in
+        .map(({ name, entryType, startTime, duration }) => {
+    const obj = {
+        'Duration': duration,
+        'Entry Type': entryType,
+        'Name': name,
+        'Start Time': startTime,
+    };
+    return JSON.stringify(obj, null, 2);
+})
+// Display them to the console
+.forEach(console.log);
+    // maybe disconnect after processing the events.
+    observer.disconnect();
+});
+// retrieve buffered events and subscribe to new events
+// for Resource-Timing and User-Timing
+observer.observe({
+    entryTypes: ['resource', 'mark', 'measure'],
+    buffered: true
+});
+```

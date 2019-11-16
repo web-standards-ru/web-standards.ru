@@ -20,11 +20,13 @@ tags:
 
 Ниже приведен CSS [недавно обновлённого](https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7) вспомогательного класса (для замены текста изображением) из HTML5 Boilerplate. Этот код также попал во фреймворк [Compass](http://compass-style.org/).
 
-    .ir {
-        font: 0/0 a;
-         text-shadow: none;
-        color: transparent;
-     }
+```css
+.ir {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+```
 
 ## Что делает каждая из деклараций?
 

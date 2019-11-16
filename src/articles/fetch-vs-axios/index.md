@@ -30,10 +30,12 @@ Axios — это JavaScript-библиотека для выполнения л�
 
 Вот простой пример c использованием API Spotify. Установим URL в качестве переменной и передадим её в `fetch()`. Затем установим колбэк, выводящий в консоль данные в качестве аргумента `then()`.
 
-    const url = 'https://api.spotify.com/v1/artists/ID';
+```js
+const url = 'https://api.spotify.com/v1/artists/ID';
 
-    fetch(url)
-      .then(data => console.log(data));
+fetch(url)
+    .then(data => console.log(data));
+```
 
 <figure>
     <img src="images/2.png" alt="">
@@ -44,9 +46,11 @@ Axios — это JavaScript-библиотека для выполнения л�
 
 Чтобы получить данные, сперва нужно передать их в метод json().
 
-    fetch(url)
-      .then(response => response.json())
-      .then(data => console.log(data));
+```js
+fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data));
+```
 
 <figure>
     <img src="images/3.png" alt="">
@@ -57,19 +61,25 @@ Axios — это JavaScript-библиотека для выполнения л�
 
 Либо npm, либо bower:
 
-    $ npm install axios
-    $ bower install axios
+```sh
+npm install axios
+bower install axios
+```
 
 Либо прямо с CDN:
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```html
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```
 
 Затем, прямо в консоли, устанавливаем URL в качестве переменной и передаем его в метод `axios.get()`.
 
-    const url = 'https://api.spotify.com/v1/artists/ID'
+```js
+const url = 'https://api.spotify.com/v1/artists/ID'
 
-    axios.get(url)
-      .then(response => console.log(response));
+axios.get(url)
+    .then(response => console.log(response));
+```
 
 ![](images/4.png)
 
@@ -79,11 +89,13 @@ Axios — это JavaScript-библиотека для выполнения л�
 
 Изменим переменную `url` из предыдущих примеров на некорректную. Ожидается, что ошибка 400 из метода `then()` перейдёт в блок `сatch()`, но этого не происходит.
 
-    const url = '[https://api.spotify.com/v1/artists/WRONG'](https://api.spotify.com/v1/artists/0OdUWJ0sBjDrqHygGUXeCFcdsds');
+```js
+const url = 'https://api.spotify.com/v1/artists/ID';
 
-    fetch(url)
-      .catch(error => console.log('BAD', error))
-      .then(response => console.log('GOOD', response));
+fetch(url)
+    .catch(error => console.log('BAD', error))
+    .then(response => console.log('GOOD', response));
+```
 
 Для наглядности выведем в консоль `BAD` в случае, если ошибка обрабатывается в блоке `catch()`, в противном случае выведем `GOOD`.
 
@@ -101,4 +113,6 @@ Axios — это JavaScript-библиотека для выполнения л�
 
 Метод `fetch()` по умолчанию не работает с куками. Для этого необходимо выставить значение `credentials`:
 
-    fetch('url', { credentials: 'same-origin' });
+```js
+fetch('url', { credentials: 'same-origin' });
+```

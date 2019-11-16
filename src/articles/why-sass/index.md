@@ -31,47 +31,53 @@ tags:
 
 Вам когда-нибудь надо было изменить в стилях, скажем, цвет, и при этом обнаруживалось, что вы вынуждены найти и заменить его значение во многих местах? Вам хотелось бы , чтобы CSS позволял вам сделать это вот так?
 
-    $brand-color: #fc3;
+```scss
+$brand-color: #fc3;
 
-    a {
-        color: $brand-color;
-    }
+a {
+    color: $brand-color;
+}
 
-    nav {
-        background-color: $brand-color;
-    }
+nav {
+    background-color: $brand-color;
+}
+```
 
 Что, если бы вы могли изменить значение в одном месте, а оно бы поменялось во всем документе? С Sass это возможно.
 
 Или как насчет повторяющихся блоков правил, которые используются в разных местах таблицы стилей?
 
-    p {
-        margin-bottom: 20px;
-        font-size: 14px;
-        line-height: 1.5;
-    }
+```css
+p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
 
-    footer {
-        margin-bottom: 20px;
-        font-size: 14px;
-        line-height: 1.5;
-    }
+footer {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+```
 
 Разве не было бы прекрасно собрать эти общие правила в один блок, который можно использовать несколько раз? Повторюсь, блок определяется один раз, но при этом его можно использовать везде, где он вам потребуется.
 
-    @mixin default-type {
-        margin-bottom: 20px;
-        font-size: 14px;
-        line-height: 1.5;
-    }
+```scss
+@mixin default-type {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
 
-    p {
-        @include default-type;
-    }
+p {
+    @include default-type;
+}
 
-    footer {
-        @include default-type;
-    }
+footer {
+    @include default-type;
+}
+```
 
 Всё это тоже Sass! И два этих очень простых примера демонстрируют лишь небольшую часть возможностей Sass, который может сделать разработку стилей более быстрой, легкой и гибкой. Он желанный помощник в мире веб-дизайна, потому что каждый, кто создает сайты, знает, что…
 

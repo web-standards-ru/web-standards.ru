@@ -48,7 +48,7 @@ tags:
 
 Дальше он показывает демо и рассказывает о веб-компонентах, под которыми в то время подразумевали три разные вещи: инкапсуляцию CSS, Shadow DOM и веб-компоненты. (Я тоже, в целом, рекомендую его доклад).
 
-Но потом случился _[W3C](https://www.w3.org/)_. В лучших традициях он взял инициативу в свои руки и потратил следующие пять лет на поиск того самого платоновского идеала, позабыв о практическом результате.
+Но потом случился [W3C](https://www.w3.org/). В лучших традициях он взял инициативу в свои руки и потратил следующие пять лет на поиск того самого платоновского идеала, позабыв о практическом результате.
 
 ### Революция Facebook
 
@@ -95,65 +95,77 @@ Polymer демонстрирует главный минус веб-компон
 
 Разберём следующий код на React:
 
-    <MyComponent style={{border: '1px solid gray'}}>
-      {
+```jsx
+<MyComponent style={{border: '1px solid gray'}}>
+    {
         ['Hello', 'world'].map((text) => <p>{text}</p>)
-      }
-    </MyComponent>
+    }
+</MyComponent>
+```
 
 Перед нами кастомный компонент. Его стили определены в формате JavaScript-объекта. Его дочерние элементы — результат исполнения метода map и, одновременно, ещё один компонент. В данном случае, это `<p>`, но могло быть что угодно. Внутри — текущее значение элемента массива.
 
 Этот XML-подобный DSL напрямую [транслируется в JavaScript](https://babeljs.io/repl/#?babili=false&evaluate=true&lineWrap=false&presets=react%2Cstage-2&targets=&browsers=&builtIns=false&code=%3CMyComponent%20style%3D%7B%7Bborder%3A%20'1px%20solid%20gray'%7D%7D%3E%0A%20%20%7B%0A%20%20%20%20%20%5B'Hello'%2C%20'world'%5D.map((text)%20%3D%3E%20%3Cp%3E%7Btext%7D%3C%2Fp%3E)%0A%20%20%7D%0A%3C%2FMyComponent%3E&#babili=false):
 
-    React.createElement(
-      MyComponent,
-      { style: { border: '1px solid gray' } },
-      ['Hello', 'world'].map(text => React.createElement(
+```js
+React.createElement(
+    MyComponent,
+    { style: { border: '1px solid gray' } },
+    ['Hello', 'world'].map(text => React.createElement(
         'p',
         null,
         text
-      ))
-    );
+    ));
+);
+```
 
 А как бы выглядел тот же трюк на веб-компонентах? Ну…
 
 Если взять HTML как контрпример для JSX, то ничего не выйдет:
 
-    <my-component style="только строки для атрибутов">
-      … здесь ничего …
-      здесь можно использовать только другой компонент или текст
-    </my-component>
+```html
+<my-component style="только строки для атрибутов">
+    … здесь ничего …
+    здесь можно использовать только другой компонент или текст
+</my-component>
+```
 
 Ну а что с JS API? Помните, я говорил, что веб-компоненты — это DOM?
 
-    const MyComponent = document.createElement('my-component')
-    MyComponent.style.border = '1px solid gray'
+```js
+const MyComponent = document.createElement('my-component');
+MyComponent.style.border = '1px solid gray';
 
-    ['Hello', 'world'].forEach(('text') => {
-      const p = document.createElement('p')
-      p.textContent(text)
+['Hello', 'world'].forEach(('text') => {
+    const p = document.createElement('p');
+    p.textContent(text);
 
-      MyComponent.appendChild(p)
-    })
+    MyComponent.appendChild(p);
+});
+```
 
-Код компонента будет неуклонно расти при усложнении каждого элемента. Представьте, мы хотим обернуть text внутри p в span?
+Код компонента будет неуклонно расти при усложнении каждого элемента. Представьте, мы хотим обернуть `text` внутри `<p>` в `<span>`?
 
 Сделать это на React? Раз плюнуть. Просто добавляем:
 
-    ['Hello', 'world'].map((text) => {
-      return <p><span>{text}</span></p>
-    })
+```jsx
+['Hello', 'world'].map((text) => {
+    return <p><span>{text}</span></p>
+});
+```
 
 А на веб-компонентах:
 
-    ['Hello', 'world'].forEach(('text') => {
-      const p = document.createElement('p')
-      const span = document.createElement('span')
-      span.textContent(text)
-      p.appendChild(span)
+```js
+['Hello', 'world'].forEach(('text') => {
+    const p = document.createElement('p');
+    const span = document.createElement('span');
+    span.textContent(text);
+    p.appendChild(span);
 
-      MyComponent.appendChild(p)
-    })
+    MyComponent.appendChild(p);
+})
+```
 
 Ad infinitum.
 
@@ -163,41 +175,44 @@ Ad infinitum.
 
 Чтобы разобраться, пройдитесь по [data system](https://www.polymer-project.org/2.0/docs/devguide/data-system) из Polymer. Здесь я покажу только несколько примеров:
 
-**Обратите внимание:** [[]], {{}}, $= и другие — не являются частью спецификации веб-компонентов.
+**Обратите внимание:** `[[]]`, `{{}}`, `$=` и другие — не являются частью спецификации веб-компонентов.
 
-    <template>
-      <div>[[name.first]] [[name.last]]
-      </div>
-    </template>
+```jsx
+<template>
+    <div>[[name.first]] [[name.last]]</div>
+</template>
 
-    <my-input value="{{name}}"></my-input>
+<my-input value="{{name}}"></my-input>
 
-    static get properties() {
-      return {
+static get properties() {
+    return {
         active: {
-          type: Boolean,
-          observer: 'userListChanged(users.*, filter)'
+            type: Boolean,
+            observer: 'userListChanged(users.*, filter)'
         }
-      }
     }
+}
 
-    <div>[[_formatName(first, last, title)]]</div>
+<div>[[_formatName(first, last, title)]]</div>
 
-    <a href$="{{hostProperty}}">
+<a href$="{{hostProperty}}">
+```
 
 И так далее. А вот [моё любимое](https://www.polymer-project.org/2.0/docs/devguide/data-binding#annotated-computed):
 
 > **Запятая внутри строки:** каждая запятая внутри строки **должна** обязательно экранироваться символом `\`.
 
-    <dom-module id="x-custom">
-      <template>
+```html
+<dom-module id="x-custom">
+    <template>
         <span>
-          {{translate('Hello\, nice to meet you', first, last)}}
+            {{translate('Hello\, nice to meet you', first, last)}}
         </span>
-      </template>
-    </dom-module>
+    </template>
+</dom-module>
+```
 
-Ну то есть, [wat](https://www.destroyallsoftware.com/talks/wat).
+Ну то есть, [WAT](https://www.destroyallsoftware.com/talks/wat).
 
 ## Ну серьёзно
 

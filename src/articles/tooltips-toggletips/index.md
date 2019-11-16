@@ -65,25 +65,29 @@ tags:
 
 Чтобы связать один элемент с другим в качестве основного лейбла, нужно использовать `aria-labelledby`. Связь устанавливается благодаря `aria-labelledby` и `id` с одинаковыми значениями.
 
-    <button class="notifications"
-            aria-labelledby="notifications-label">
-        <svg>
-            <use xlink:href="#notifications-icon"></use>
-        </svg>
-    </button>
-    <div role="tooltip"
-         id="notifications-label">
-        Уведомления
-    </div>
+```html
+<button class="notifications"
+        aria-labelledby="notifications-label">
+    <svg>
+        <use xlink:href="#notifications-icon"></use>
+    </svg>
+</button>
+<div role="tooltip"
+        id="notifications-label">
+    Уведомления
+</div>
+```
 
 - Обратите внимание, как устанавливается роль `tooltip`. С практической точки зрения она гарантирует, что `aria-describedby` точно работает там, где поддерживается. Как указывает Леони Уотсон, [ARIA-лейблы и описания иногда работают не со всеми элементами](https://developer.paciellogroup.com/blog/2017/07/short-note-on-aria-label-aria-labelledby-and-aria-describedby/), если вы не используете соответствующую роль. В этом случае самой важной является роль кнопки по умолчанию у элемента `<button>`. Однако `role="tooltip"` может расширить поддержку этого метода присвоения лейблов в некоторых программах.
 - Каким бы ни был текст в SVG, он не будет прочитан. `aria-labelledby` _переопределяет_ текстовое содержимое кнопки на то, которое есть у лейбла.
 
 Сейчас пример выше для скринридеров и их пользователей с точки зрения функциональности похож на простую подпись вроде этой:
 
-    <button class="notifications">
-        Уведомления
-    </button>
+```html
+<button class="notifications">
+    Уведомления
+</button>
+```
 
 Текст тултипа доступен при фокусе так же, как если бы на него навёл курсор зрячий пользователь. На самом деле, если бы весь текст появлялся только при наведении, то для зрячих пользователей интерфейс был бы в некоторой степени аналогичен интерфейсу пользователей скринридеров.
 
@@ -91,10 +95,12 @@ tags:
 
 Всё то время, что я работаю консультантом по дизайну интерфейсов, я вижу людей, которые добавляют атрибут `title` для ссылок с точно таким же текстом:
 
-    <a href="/some/path"
-       title="Специальная страница Хейдона">
-        Специальная страница Хейдона
-    </a>
+```html
+<a href="/some/path"
+    title="Специальная страница Хейдона">
+    Специальная страница Хейдона
+</a>
+```
 
 Если текстовое содержимое элемента хорошо видно, то это избыточно.
 `title` ничего не делает для скринридеров, кроме повтора в некоторых случаях.
@@ -107,16 +113,17 @@ tags:
 
 К счастью, атрибут `aria-labelledby` может содержать несколько `id`, разделённых пробелами.
 
-    <button class="notifications"
-            aria-labelledby="notifications-count notifications-label">
-        <svg>
-            <use xlink:href="#notifications-icon"></use>
-        </svg>
-        <span id="notifications-count">3</span>
-    </button>
-    <div role="tooltip" id="notifications-label">
-        Уведомления
-    </div>
+```html
+<button class="notifications" aria-labelledby="notifications-count notifications-label">
+    <svg>
+        <use xlink:href="#notifications-icon"></use>
+    </svg>
+    <span id="notifications-count">3</span>
+</button>
+<div role="tooltip" id="notifications-label">
+    Уведомления
+</div>
+```
 
 Несмотря на то, что элемент с `#notifications-count` находится внутри `<button>`, он не является сам по себе лейблом: он формирует первую часть лейбла в качестве первого `id`, указанного в значении `aria-labelledby`. Элемент расположен там, где он находится (в разметке), так что дизайнер может использовать относительное и абсолютное позиционирование, чтобы разместить элемент в нужном месте.
 
@@ -128,30 +135,32 @@ tags:
 
 Некоторые интерактивные элементы могут иметь доступные описания, но все они нуждаются в доступных лейблах. Если мы используем `aria-describedby` для связи текста тултипа, нам нужен другой метод для добавления лейбла «Уведомления». В отличие от `aria-labelledby` мы можем добавить визуально скрытый `<span>` для текстового содержимого кнопки рядом со счётчиком «3».
 
-    <button class="notifications"
-            aria-describedby="notifications-desc">
-        <svg>
-            <use xlink:href="#notifications-icon"></use>
-        </svg>
-        <span id="notifications-count">3</span>
-        <span class="visually-hidden">Уведомления</span>
-    </button>
-    <div role="tooltip"
-         id="notifications-desc">
-        Посмотреть и изменить настройки уведомлений
-    </div>
+```html
+<button class="notifications" aria-describedby="notifications-desc">
+    <svg>
+        <use xlink:href="#notifications-icon"></use>
+    </svg>
+    <span id="notifications-count">3</span>
+    <span class="visually-hidden">Уведомления</span>
+</button>
+<div role="tooltip" id="notifications-desc">
+    Посмотреть и изменить настройки уведомлений
+</div>
+```
 
 Класс `visually-hidden` аналогичен специальному CSS, который мы обсуждали ранее в Inclusive Components. Он скрывает `<span>` визуально, при этом оставляя его доступным для объявления скринридерами.
 
-    .visually-hidden {
-        clip-path: inset(100%);
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-    }
+```css
+.visually-hidden {
+    clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+```
 
 Предписанное поведение `aria-describedby` заключается в том, чтобы давать последнюю информацию об изменениях для контрола после объявления лейбла и роли. В этом случае будет объявлено следующее:
 
@@ -163,26 +172,29 @@ tags:
 
 Чтобы улучшить поведение печально известного атрибута `title`, наши тултипы должны появляться как при фокусе, так и при наведении. Добавить всплывающую подсказку в элементе рядом с кнопкой мы можем только с помощью CSS:
 
-    [role="tooltip"] {
-        display: none;
-    }
+```css
+[role="tooltip"] {
+    display: none;
+}
 
-    button:hover + [role="tooltip"],
-    button:focus + [role="tooltip"] {
-        display: block;
-    }
+button:hover + [role="tooltip"],
+button:focus + [role="tooltip"] {
+    display: block;
+}
+```
 
 Однако, нам может понадобиться обернуть кнопку и тултип в один контейнер для позиционирования:
 
-    .button-and-tooltip {
-        position: relative;
-    }
+```css
+.button-and-tooltip {
+    position: relative;
+}
 
-    [role="tooltip"] {
-        position: absolute;
-        /* требуются значения для
-           left, top, right, bottom */
-    }
+[role="tooltip"] {
+    position: absolute;
+    /* требуются значения для left, top, right, bottom */
+}
+```
 
 ## Взаимодействие с тач-устройствами
 
@@ -215,69 +227,62 @@ tags:
 
 Ниже разметка с пустой интерактивной областью. Обратите внимание на элемент `.tooltip-container`, который нужен для позиционирования. Для него должно быть задано свойство `position: relative`, которое позволяет абсолютно позиционировать рядом элемент `.toggletip-bubble`.
 
-    <span class="tooltip-container">
-      <button type="button"
-        aria-label="больше информации"
-        data-toggletip-content="Это уточняет то, что нужно уточнить">
-          i
-      </button>
-      <span role="status"></span>
-    </span>
+```html
+<span class="tooltip-container">
+    <button type="button" aria-label="больше информации" data-toggletip-content="Это уточняет то, что нужно уточнить">i</button>
+    <span role="status"></span>
+</span>
+```
 
 Также обратите внимание на атрибут `type="button"`, запрещающий некоторым браузерам определять элемент как кнопку отправки данных, если он расположен внутри формы. Вот разметка с интерактивной областью, в которой происходят какие-то события (после того, как на кнопку с тоглтипом кликнули):
 
-    <span class="tooltip-container">
-      <button type="button"
-        aria-label="больше информации"
-        data-toggletip-content="Это уточняет то, что нужно уточнить">
-          i
-      </button>
-      <span role="status">
+```html
+<span class="tooltip-container">
+    <button type="button" aria-label="больше информации" data-toggletip-content="Это уточняет то, что нужно уточнить">i</button>
+    <span role="status">
         <span class="toggletip-bubble">
-          Это уточняет то, что нужно уточнить
+            Это уточняет то, что нужно уточнить
         </span>
-      </span>
     </span>
+</span>
+```
 
 Дополнительный скрипт с комментариями и CodePen:
 
-    (function() {
-      // Получаем все кнопки-тоглтипы
-      var toggletips = document.querySelectorAll('[data-toggletip-content]');
-
-      // Обходим их
-      Array.prototype.forEach.call(toggletips, function (toggletip) {
+```js
+(function() {
+    // Получаем все кнопки-тоглтипы
+    var toggletips = document.querySelectorAll('[data-toggletip-content]');
+    // Обходим их
+    Array.prototype.forEach.call(toggletips, function (toggletip) {
         // Получим сообщение из элемента с data-content
         var message = toggletip.getAttribute('data-toggletip-content');
-
         // Получаем все элементы с интерактивными областями
         var liveRegion = toggletip.nextElementSibling;
-
         // Переключаем сообщение
         toggletip.addEventListener('click', function () {
-            liveRegion.innerHTML = '';
-            window.setTimeout(function() {
-              liveRegion.innerHTML =
-                '<span class="toggletip-bubble">' +
-                  message +
-                '</span>';
-            }, 100);
+                liveRegion.innerHTML = '';
+                window.setTimeout(function() {
+                    liveRegion.innerHTML =
+                        '<span class="toggletip-bubble">' +
+                            message +
+                        '</span>';
+                }, 100);
         });
-
         // Закрываем по клику на другую область
         document.addEventListener('click', function (e) {
-          if (toggletip !== e.target) {
-            liveRegion.innerHTML = '';
-          }
+            if (toggletip !== e.target) {
+                liveRegion.innerHTML = '';
+            }
         });
-
         // Убираем тоглтип по нажатию на Esc
         toggletip.addEventListener('keydown', function(e) {
-          if ((e.keyCode || e.which) === 27)
-          liveRegion.innerHTML = '';
+            if ((e.keyCode || e.which) === 27)
+            liveRegion.innerHTML = '';
         });
-      });
-    }());
+    });
+}());
+```
 
 <iframe src="https://codepen.io/heydon/embed/zdYdQv/?height=265&theme-id=0&amp;default-tab=js,result"></iframe>
 
@@ -292,21 +297,21 @@ tags:
 
 Как я уже упоминал, атрибут `title` _действительно_ ненадёжный. Но он, по крайней мере, добавляет доступный лейбл для некоторых вспомогательных технологий, присутствующий, когда на кнопке сделан фокус. Мы можем с помощью `title` добавить контент для пузыря и использовать его для создания атрибута `data-toggletip-content` при загрузке страницы. Первоначальный хук нашего скрипта теперь становится логическим `data-toggletip`:
 
-    <button data-toggletip
-            aria-label="больше информации"
-            title="Это уточняет то, что нужно уточнить">
-        i
-    </button>
+```html
+<button data-toggletip aria-label="больше информации" title="Это уточняет то, что нужно уточнить">i</button>
+```
 
 В скрипте нам нужно взять значение `title` для создания `data-tooltip-content`, а после удалить `title`, так как он нам не нужен. Если не трогать его, то его всё ещё может объявить скринридер.
 
-    var toggletips = document.querySelectorAll('[data-toggletip][title]');
+```js
+var toggletips = document.querySelectorAll('[data-toggletip][title]');
 
-    Array.prototype.forEach(toggletips, function (toggletip) {
-        var message = toggletip.getAttribute('title');
-        toggletip.setAttribute('data-tooltip-content', message);
-        toggletip.removeAttribute('title');
-    });
+Array.prototype.forEach(toggletips, function (toggletip) {
+    var message = toggletip.getAttribute('title');
+    toggletip.setAttribute('data-tooltip-content', message);
+    toggletip.removeAttribute('title');
+});
+```
 
 ### Более совершенное прогрессивное улучшение
 
@@ -324,10 +329,12 @@ tags:
 
 Тоглтип-кнопка, которая не является `<button>`, обманывает вспомогательные технологии и на ней нельзя сделать фокус с помощью клавиатуры (если это не другой неправильный в данном случае элемент вроде ссылки). В нашем скрипте мы можем обнаружить элемент nodeName и вернуть сообщение об ошибке, если это не BUTTON. Мы используем `return`, чтобы остановить выполнение оставшейся части IIFE _(Immediately Invoked Function Expression — немедленно вызываемой функции — прим. переводчика)._
 
-    if (toggletip.nodeName !== 'BUTTON') {
-        console.error('Тоглтипы должны быть элементами <button>.')
-        return;
-    }
+```js
+if (toggletip.nodeName !== 'BUTTON') {
+    console.error('Тоглтипы должны быть элементами <button>.')
+    return;
+}
+```
 
 ![](images/js-error.png)
 
@@ -337,10 +344,12 @@ tags:
 
 Ошибка, которую мы ранее отловили с помощью JavaScript, может быть обнаружена с помощью CSS-селектора `[data-tooltip]:not(button)`. Мы можем подсветить элементы с ошибками с помощью красного аутлайна и добавить сообщение о них с помощью `ERROR`:
 
-    [data-tooltip]:not(button) {
-      outline: red solid 0.5em;
-      ERROR: Тоглтипы должны быть элементами <button>.
-    }
+```css
+[data-tooltip]:not(button) {
+    outline: red solid 0.5em;
+    ERROR: Тоглтипы должны быть элементами <button>.
+}
+```
 
 ERROR, несмотря на невалидное значение, появится в инструментах разработчика, когда элемент будет изучен.
 

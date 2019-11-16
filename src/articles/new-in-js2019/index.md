@@ -43,42 +43,44 @@ _**Дисклеймер:** поскольку есть несколько кан
 
 Есть несколько предложений по изменениям, которые следует внести в классы, включая [строковую декларацию](https://github.com/tc39/proposal-class-fields), [приватные методы и поля](https://github.com/tc39/proposal-private-methods) и [статические методы и поля](https://github.com/tc39/proposal-static-class-features/).
 
-    class Truck extends Automobile {
-      model = "Очень мощный"; // Объявление публичного поля
-      #numberOfSeats = 5; // Объявление приватного поля
-      #isCrewCab = true;
-      static #name = "Грузовик"; // Статическое приватное поле
+```js
+class Truck extends Automobile {
+    model = 'Очень мощный'; // Объявление публичного поля
+    #numberOfSeats = 5; // Объявление приватного поля
+    #isCrewCab = true;
+    static #name = 'Грузовик'; // Статическое приватное поле
 
-      // Статичный метод
-      static formattedName() {
+    // Статичный метод
+    static formattedName() {
         // Обратите внимание, что имя класса Truck используется
         // вместо this чтобы получить доступ к статическому полю
         return `Это автомобиль ${ Truck.#name }.`;
-      }
+    }
 
-      constructor( model, seats = 2 ) {
+    constructor( model, seats = 2 ) {
         super();
         this.seats = seats;
-      }
-
-      // Приватный метод
-      #getBodyType() {
-        return this.#isCrewCab ?
-          "Двойная кабина" : "Стандартная кабина";
-      }
-
-      bodyType() {
-        return `${ this.#numberOfSeats }-passenger ${ this.model } ${ this.#getBodyType() }`;
-      }
-
-      get seats() { return this.#numberOfSeats; }
-      set seats( value ) {
-        if ( value >= 1 && value < 7 ) {
-          this.#numberOfSeats = value;
-          this.#isCrewCab = value > 3;
-        }
-      }
     }
+
+    // Приватный метод
+    #getBodyType() {
+        return this.#isCrewCab ?
+            'Двойная кабина' : 'Стандартная кабина';
+    }
+
+    bodyType() {
+        return `${ this.#numberOfSeats }-passenger ${ this.model } ${ this.#getBodyType() }`;
+    }
+
+    get seats() { return this.#numberOfSeats; }
+    set seats( value ) {
+        if ( value >= 1 && value < 7 ) {
+            this.#numberOfSeats = value;
+            this.#isCrewCab = value > 3;
+        }
+    }
+}
+```
 
 Лично мне не очень нравится синтаксис `#` для приватных полей и методов. Я бы предпочёл чтобы в спецификации JavaScript использовалось ключевое слово `private` для этих целей по аналогии с другими языками.
 
@@ -86,10 +88,12 @@ _**Дисклеймер:** поскольку есть несколько кан
 
 У типа данных `String` существует метод `trim()`, с помощью которого можно удалить пробелы с обоих концов строки. [Предложено](https://github.com/tc39/proposal-string-left-right-trim) ввести методы `trimStart()` и `trimEnd()`, которые дадут больше контроля над удалением пробелов.
 
-    const one = "      Привет и позвольте ";
-    const two = "нам начать.        ";
-    console.log( one.trimStart() + two.trimEnd() )
-    // "Привет и позвольте нам начать."
+```js
+const one = "      Привет и позвольте ";
+const two = "нам начать.        ";
+console.log( one.trimStart() + two.trimEnd() )
+// "Привет и позвольте нам начать."
+```
 
 Интересный факт: эта возможность языка [уже реализована](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd#Browser_compatibility) во многих JavaScript-движках. Один из случаев когда браузеры помогают развивать язык.
 
@@ -97,20 +101,22 @@ _**Дисклеймер:** поскольку есть несколько кан
 
 Мы видим примитив [BigInt](https://github.com/tc39/proposal-bigint) для целых чисел, превышающих текущее максимальное значение 253. `BigInt` может быть объявлен несколькими различными способами.
 
-    // Референс
-    const theBiggestIntegerToday = Number.MAX_SAFE_INTEGER;
-    // 9007199254740991
+```js
+// Референс
+const theBiggestIntegerToday = Number.MAX_SAFE_INTEGER;
+// 9007199254740991
 
-    // Используем синтаксис 'n' для объявления BigInt
-    const ABiggerInteger = 9100000000000001n;
+// Используем синтаксис 'n' для объявления BigInt
+const ABiggerInteger = 9100000000000001n;
 
-    // Используем конструктор BigInt()
-    const EvenBigger = BigInt( 9100000000000002 );
-    // 9100000000000002n
+// Используем конструктор BigInt()
+const EvenBigger = BigInt( 9100000000000002 );
+// 9100000000000002n
 
-    // Используем конструктор BigInt() со строкой
-    const SuchBigWow = BigInt( "9100000000000003" );
-    // 9100000000000003n
+// Используем конструктор BigInt() со строкой
+const SuchBigWow = BigInt( "9100000000000003" );
+// 9100000000000003n
+```
 
 [Узнайте больше](https://developers.google.com/web/updates/2018/05/bigint) о вариантах использования и фишках `BigInt`.
 
@@ -118,25 +124,29 @@ _**Дисклеймер:** поскольку есть несколько кан
 
 Если вы изучали функциональное программирование, то [вы точно узнаете](https://github.com/tc39/proposal-flatMap) `flat()` и `flatMap()`. `flat()` принимает массив значений, который может состоять в том числе из других массивов, и возвращает новый одномерный массив.
 
-    const nestedArraysOhMy = ["a", ["b", "c"], ["d", ["e", "f"]]];
-    // .flat() принимает необязательный аргумент глубины
-    const ahhThatsBetter = nestedArraysOhMy.flat(2);
-    console.log( ahhThatsBetter );
-    // ["a", "b", "c", "d", "e", "f"]
+```js
+const nestedArraysOhMy = ["a", ["b", "c"], ["d", ["e", "f"]]];
+// .flat() принимает необязательный аргумент глубины
+const ahhThatsBetter = nestedArraysOhMy.flat(2);
+console.log( ahhThatsBetter );
+// ["a", "b", "c", "d", "e", "f"]
+```
 
 `flatMap()` похож на `map()`, но колбэк может вернуть массив и в результате получится плоский одномерный массив вместо вложенных массивов.
 
-    const scattered = ["мой любимый", "бутерброд", "это", "сэндвич с курицей"];
+```js
+const scattered = ["мой любимый", "бутерброд", "это", "сэндвич с курицей"];
 
-    // Обычный map() вернёт вложенные массивы
-    const huh = scattered.map(chunk => chunk.split(" "));
-    console.log(huh);
-    // [["мой", "любимый"], ["бутерброд"], ["это"], ["сэндвич", "с", "курицей"]]
+// Обычный map() вернёт вложенные массивы
+const huh = scattered.map(chunk => chunk.split(" "));
+console.log(huh);
+// [["мой", "любимый"], ["бутерброд"], ["это"], ["сэндвич", "с", "курицей"]]
 
-    // flatMap() объединяет возвращаемые массивы
-    const better = scattered.flatMap( chunk => chunk.split( " " ) );
-    console.log(better);
-    // ["мой", "любимый", "бутерброд", "это", "сэндвич", "с", "курицей"]
+// flatMap() объединяет возвращаемые массивы
+const better = scattered.flatMap( chunk => chunk.split( " " ) );
+console.log(better);
+// ["мой", "любимый", "бутерброд", "это", "сэндвич", "с", "курицей"]
+```
 
 ## Другие предложения-кандидаты в ES2019
 
@@ -167,15 +177,21 @@ _**Дисклеймер:** поскольку есть несколько кан
 
 MacOS или Linux:
 
-    node --v8-options | grep "in progress"
+```sh
+node --v8-options | grep "in progress"
+```
 
 Windows:
 
-    node --v8-options | find "in progress"
+```sh
+node --v8-options | find "in progress"
+```
 
 Например, чтобы запустить приложение Node.js с поддержкой строковой декларации и статических методов, вы можете использовать следующие опции CLI.
 
-    node --harmony-class-fields --harmony-static-fields index.js
+```sh
+node --harmony-class-fields --harmony-static-fields index.js
+```
 
 ## Тестируйте с Babel 7.0+
 

@@ -42,26 +42,28 @@ tags:
 
 [Пример 1. VML](demos/1-vml.html) (только IE8 и ниже).
 
-    <!DOCTYPE HTML>
-    <xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
-    <head>
-        <title>Пример: VML</title>
-        <meta charset="utf-8">
-        <style>
-            v\:shape {
-                behavior:url(#default#VML);
-                display:inline-block;
-                width:100px;
-                height:20px;
-        }
-        </style>
-    </head>
-    <body>
-        <v:shape stroked="false" fillcolor="#EEE"
-            coordorigin="0 0" coordsize="1000 1000"
-            path="m 0,0 l 1000,0, 1000,1000, 0,1000 x e">
-        </v:shape>
-    </body>
+```html
+<!DOCTYPE HTML>
+<xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
+<head>
+    <title>Пример: VML</title>
+    <meta charset="utf-8">
+    <style>
+        v\:shape {
+            behavior: url(#default#VML);
+            display: inline-block;
+            width: 100px;
+            height: 20px;
+    }
+    </style>
+</head>
+<body>
+    <v:shape stroked="false" fillcolor="#EEE"
+        coordorigin="0 0" coordsize="1000 1000"
+        path="m 0,0 l 1000,0, 1000,1000, 0,1000 x e">
+    </v:shape>
+</body>
+```
 
 Для запуска VML в IE нужно несколько условий.
 
@@ -97,14 +99,16 @@ VML имеет возможность задавать, считать и ис
 
 [Пример 2. Формулы в VML](demos/2-vml-formulas.html) (только IE8 и ниже).
 
-    <v:shape coordorigin="0 0" coordsize="1000 1000"
-        path="m 0,0 l @0,0, @0,@1, 0,@1 x e"
-        fillcolor="#EEE" stroked="false">
-        <v:formulas>
-            <v:f eqn="val width"/>
-            <v:f eqn="val height"/>
-        </v:formulas>
-    </v:shape>
+```xml
+<v:shape coordorigin="0 0" coordsize="1000 1000"
+    path="m 0,0 l @0,0, @0,@1, 0,@1 x e"
+    fillcolor="#EEE" stroked="false">
+    <v:formulas>
+        <v:f eqn="val width"/>
+        <v:f eqn="val height"/>
+    </v:formulas>
+</v:shape>
+```
 
 <figure>
     <img src="images/1-shot.png" alt="Пример 2. Internet Explorer 6.">
@@ -123,23 +127,24 @@ VML имеет возможность задавать, считать и ис
 
 [Пример 3. VML и пикселы](demos/3-vml-pixels.html) (только IE8 и ниже).
 
-    <v:shape adj="8" stroked="false" fillcolor="#CCC"
-        coordorigin="0 0" coordsize="1000000 1000000"
-        path="m @6,0 l @8,0 qx @0,@7 l @0,@9 qy @8,@1
-              l @6,@1 qx 0,@9 l 0,@7 qy @6,0 x e">
-        <v:formulas>
-            <v:f eqn="val width"/>
-            <v:f eqn="val height"/>
-            <v:f eqn="prod @0 1 pixelwidth"/>
-            <v:f eqn="prod @1 1 pixelheight"/>
-            <v:f eqn="sum pixelwidth 0 #0"/>
-            <v:f eqn="sum pixelheight 0 #0"/>
-            <v:f eqn="prod #0 @2 1"/>
-            <v:f eqn="prod #0 @3 1"/>
-            <v:f eqn="prod @4 @2 1"/>
-            <v:f eqn="prod @5 @3 1"/>
-        </v:formulas>
-    </v:shape>
+```xml
+<v:shape adj="8" stroked="false" fillcolor="#CCC"
+    coordorigin="0 0" coordsize="1000000 1000000"
+    path="m @6,0 l @8,0 qx @0,@7 l @0,@9 qy @8,@1 l @6,@1 qx 0,@9 l 0,@7 qy @6,0 x e">
+    <v:formulas>
+        <v:f eqn="val width"/>
+        <v:f eqn="val height"/>
+        <v:f eqn="prod @0 1 pixelwidth"/>
+        <v:f eqn="prod @1 1 pixelheight"/>
+        <v:f eqn="sum pixelwidth 0 #0"/>
+        <v:f eqn="sum pixelheight 0 #0"/>
+        <v:f eqn="prod #0 @2 1"/>
+        <v:f eqn="prod #0 @3 1"/>
+        <v:f eqn="prod @4 @2 1"/>
+        <v:f eqn="prod @5 @3 1"/>
+    </v:formulas>
+</v:shape>
+```
 
 <img src="images/coordinates.png" alt="Система координат.">
 
@@ -164,60 +169,62 @@ VML имеет возможность задавать, считать и ис
 
 [Пример 4.1. VML и содержимое страницы](demos/4.1-vml-pos-ib.html).
 
-    <style>
-        .round {
-            display:inline-block;
-            padding:10px;
-            -webkit-border-radius:8px;
-            -moz-border-radius:8px;
-            border-radius:8px;
-            background:#CCC;
+```html
+<style>
+    .round {
+        display: inline-block;
+        padding: 10px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        background: #CCC;
     }
-    </style>
-    <!--[if VML&(lt IE 9)]>
-    <style>
-        .round {
-            background:none!important;
-            padding:0!important;
+</style>
+<!--[if VML&(lt IE 9)]>
+<style>
+    .round {
+        background: none!important;
+        padding: 0!important;
     }
-        .round-vml {
-            position:relative;
-            padding:11px 9px 9px 11px;
-            height:100%;
+    .round-vml {
+        position: relative;
+        padding: 11px 9px 9px 11px;
+        height: 100%;
     }
-        v\:shape,
-        v\:formulas,
-        v\:f { behavior:url(#default#VML) }
-        v\:shape { display:inline-block }
-    </style>
-    <xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
-    <![endif]-->
+    v\:shape,
+    v\:formulas,
+    v\:f { behavior:url(#default#VML) }
+    v\:shape { display:inline-block }
+</style>
+<xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
+<![endif]-->
 
-    <div class="round">
-    <!--[if VML&(lt IE 9)]>
-        <v:shape adj="8" class="round-vml"
-            stroked="false" fillcolor="#CCC"
-            coordorigin="0 0" coordsize="1000000 1000000"
-            path="m @6,0 l @8,0 qx @0,@7 l @0,@9 qy @8,@1
-                  l @6,@1 qx 0,@9 l 0,@7 qy @6,0 x e">
-            <v:formulas>
-                <v:f eqn="val width"/>
-                <v:f eqn="val height"/>
-                <v:f eqn="prod @0 1 pixelwidth"/>
-                <v:f eqn="prod @1 1 pixelheight"/>
-                <v:f eqn="sum pixelwidth 0 #0"/>
-                <v:f eqn="sum pixelheight 0 #0"/>
-                <v:f eqn="prod #0 @2 1"/>
-                <v:f eqn="prod #0 @3 1"/>
-                <v:f eqn="prod @4 @2 1"/>
-                <v:f eqn="prod @5 @3 1"/>
-            </v:formulas>
-    <![endif]-->
-        Закруглённые уголки — это реальность!
-    <!--[if VML&(lt IE 9)]>
-        </v:shape>
-    <![endif]-->
-    </div>
+<div class="round">
+<!--[if VML&(lt IE 9)]>
+    <v:shape adj="8" class="round-vml"
+        stroked="false" fillcolor="#CCC"
+        coordorigin="0 0" coordsize="1000000 1000000"
+        path="m @6,0 l @8,0 qx @0,@7 l @0,@9 qy @8,@1
+                l @6,@1 qx 0,@9 l 0,@7 qy @6,0 x e">
+        <v:formulas>
+            <v:f eqn="val width"/>
+            <v:f eqn="val height"/>
+            <v:f eqn="prod @0 1 pixelwidth"/>
+            <v:f eqn="prod @1 1 pixelheight"/>
+            <v:f eqn="sum pixelwidth 0 #0"/>
+            <v:f eqn="sum pixelheight 0 #0"/>
+            <v:f eqn="prod #0 @2 1"/>
+            <v:f eqn="prod #0 @3 1"/>
+            <v:f eqn="prod @4 @2 1"/>
+            <v:f eqn="prod @5 @3 1"/>
+        </v:formulas>
+<![endif]-->
+    Закруглённые уголки — это реальность!
+<!--[if VML&(lt IE 9)]>
+    </v:shape>
+<![endif]-->
+</div>
+```
 
 Размеры элемента можно изменять. Радиус закругления от этого не меняется.
 
@@ -241,40 +248,42 @@ VML позволяет создавать заготовки, чтобы ссы�
 
 [Пример 5. Закруглённые уголки в VML](demos/5-vml-roundies.html).
 
-    <div class="round">
-        <!--[if VML&(lt IE 9)]>
-        <v:shape type="#vml-round" class="round-vml"
-            stroked="false" fillcolor="#FFF">
-        <![endif]-->
-            Простые закруглённые уголки
-        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
-    </div>
-    <div class="round border">
-        <!--[if VML&(lt IE 9)]>
-        <v:shape type="#vml-round"
-            class="round-vml border-vml" adj="13"
-            fillcolor="#FFF" strokeweight="6px" strokecolor="#BADBAD">
-        <![endif]-->
-            Закруглённые уголки с рамкой
-        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
-    </div>
-    <div class="round inline">
-        <!--[if VML&(lt IE 9)]>
-        <v:shape type="#vml-round" class="round-vml inline-vml"
-            stroked="false" fillcolor="#FFF">
-        <![endif]-->
-            Простые закруглённые уголки в строку
-        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
-    </div>
-    <div class="round inline border">
-        <!--[if VML&(lt IE 9)]>
-        <v:shape type="#vml-round"
-            class="round-vml inline-vml border-vml" adj="13"
-            fillcolor="#FFF" strokeweight="6px" strokecolor="#BADBAD">
-        <![endif]-->
-            Закруглённые уголки с рамкой в строку
-        <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
-    </div>
+```html
+<div class="round">
+    <!--[if VML&(lt IE 9)]>
+    <v:shape type="#vml-round" class="round-vml"
+        stroked="false" fillcolor="#FFF">
+    <![endif]-->
+        Простые закруглённые уголки
+    <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+</div>
+<div class="round border">
+    <!--[if VML&(lt IE 9)]>
+    <v:shape type="#vml-round"
+        class="round-vml border-vml" adj="13"
+        fillcolor="#FFF" strokeweight="6px" strokecolor="#BADBAD">
+    <![endif]-->
+        Закруглённые уголки с рамкой
+    <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+</div>
+<div class="round inline">
+    <!--[if VML&(lt IE 9)]>
+    <v:shape type="#vml-round" class="round-vml inline-vml"
+        stroked="false" fillcolor="#FFF">
+    <![endif]-->
+        Простые закруглённые уголки в строку
+    <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+</div>
+<div class="round inline border">
+    <!--[if VML&(lt IE 9)]>
+    <v:shape type="#vml-round"
+        class="round-vml inline-vml border-vml" adj="13"
+        fillcolor="#FFF" strokeweight="6px" strokecolor="#BADBAD">
+    <![endif]-->
+        Закруглённые уголки с рамкой в строку
+    <!--[if VML&(lt IE 9)]></v:shape><![endif]-->
+</div>
+```
 
 Теперь всё выглядит примерно так:
 

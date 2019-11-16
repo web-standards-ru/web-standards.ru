@@ -132,32 +132,36 @@ tags:
 - `left` = `inset-inline-start`
 - `right` = `inset-inline-end`
 
-    /* Старая техника */
-    .popup {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
+```css
+/* Старая техника */
+.popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
-    /* Новая техника */
-    .popup {
-       position: fixed;
-       inset-block-start: 0;  /* top - для английского */
-       inset-block-end: 0;    /* bottom - для английского */
-       inset-inline-start: 0; /* left - для английского */
-       inset-inline-end: 0;   /* right - для английского */
-    }
+/* Новая техника */
+.popup {
+    position: fixed;
+    inset-block-start: 0;  /* top - для английского */
+    inset-block-end: 0;    /* bottom - для английского */
+    inset-inline-start: 0; /* left - для английского */
+    inset-inline-end: 0;   /* right - для английского */
+}
+```
 
 Бросив беглый взгляд, вы можете задаться вопросом, какого чёрта я должен использовать такие сложные имена?! Но на то есть веская причина. Новые имена свойств можно комбинировать в шорткаты, подобно текущим `padding`, `margin`, `border`.
 
 Пример:
 
-    .popup {
-       position: fixed;
-       inset: 0 0 0 0; /* top, right, bottom, left - для английского */
-    }
+```css
+.popup {
+    position: fixed;
+    inset: 0 0 0 0; /* top, right, bottom, left - для английского */
+}
+```
 
 ![](images/6.png)
 
@@ -226,9 +230,11 @@ tags:
 
 Пример для японского:
 
-    html {
-        writing-mode: vertical-rl;
-    }
+```css
+html {
+    writing-mode: vertical-rl;
+}
+```
 
 ![](images/8.png)
 
@@ -238,9 +244,11 @@ tags:
 
 Пример направления для арабского:
 
-    html {
-        direction: rtl;
-    }
+```css
+html {
+    direction: rtl;
+}
+```
 
 Даже удивительно, на сколько просто сайт, идущий сверху вниз, можно преобразовать в идущий справа налево с горизонтальной прокруткой.
 
@@ -268,29 +276,33 @@ tags:
 
 Предложенное мною решение:
 
-    html {
-       flow-mode: physical;
-       /* или */
-       flow-mode: logical;
-    }
+```css
+html {
+    flow-mode: physical;
+    /* или */
+    flow-mode: logical;
+}
 
-    .box {
-      /* будет интерпретироваться согласно значению flow-mode** ***/
-       margin: 10px 5px 6px 3px;
-       padding: 5px 10px 2px 7px;
-    }
+.box {
+    /* будет интерпретироваться согласно значению flow-mode** ***/
+    margin: 10px 5px 6px 3px;
+    padding: 5px 10px 2px 7px;
+}
+```
 
 ### Проблемы с адаптивным дизайном
 
 Пока пытался создать рабочее демо, я попробовал использовать новое свойство максимальной ширины `max-inline-size` внутри медиавыражения, предполагая, что для языков «справа налево» и «слева направо» оно будет вести себя как `max-width`, а для языков вроде японского — как `max-height`. К сожалению, браузеры пока отказываются понимать это свойство внутри медиавыражений.
 
-    /* Не работает */
-    @media (max-inline-size: 1000px) {
-      .main-content {
+```css
+/* Не работает */
+@media (max-inline-size: 1000px) {
+    .main-content {
         background: red;
         grid-template-columns: auto;
-      }
     }
+}
+```
 
 ### Изменения, которые нужно учесть
 
@@ -319,16 +331,3 @@ tags:
 - [Becoming a CSS Grid Ninja!](https://medium.com/@elad/becoming-a-css-grid-ninja-f4c6db018cc1)
 - [The New Responsive Design Evolution](https://medium.com/@elad/the-new-responsive-design-evolution-2bfb9b504a4e)
 - [Как на самом деле работает position: sticky в CSS](https://medium.com/web-standards/sticky-bc7ff7088693)
-
-### Кто я?
-
-Меня зовут Элад Шехтер, я веб-разработчик, специализирующийся на дизайне и архитектуре CSS и HTML. Я работаю на [Investing.com](https://www.investing.com/).
-
-Читать меня можно тут: [Твиттер,](https://twitter.com/eladsc) [Facebook](https://www.facebook.com/eladsc), [LinkedIn](https://www.linkedin.com/).
-
-![](images/9.jpg)
-
-Вы можете найти меня в группах на Facebook:
-
-- [CSS Masters](https://www.facebook.com/groups/css.master/)
-- [CSS Masters Israel](https://www.facebook.com/groups/css.masters.israel/)

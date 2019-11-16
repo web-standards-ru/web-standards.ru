@@ -38,89 +38,99 @@ _Мы начинаем серию статей, в которых вы мож
 
 Возьмем для примера [вот этот SVG](http://codepen.io/anon/pen/jiHkq). Как видим, это круг с полупрозрачным `stroke` и белым квадратом, который рисуется ровно по центру этого круга. И все это на фоне белого прямоугольника с закругленными краями. Допустим, нам позарез нужно отрисовать подобное на сервере. Для этого потребуется сформировать POST-запрос на наш сервис со следующим JSON:
 
-    {
-        'paper': {
-        'attrs': [ { 'width': '640' }, { 'height': '480' }],
-        'access_key': 'my_key',
-        'format': 'svg',
-        'children': [
-            {
-            'type': 'rect',
-            'attrs': [
-                { 'x': '0' },
-                { 'y': '0' },
-                { 'width': '640' },
-                { 'height': '480' },
-                { 'rx': '10' },
-                { 'fill': '#fff' }
-            ]},
-            {
-            'type': 'circle',
-            'svable_id': 'main_circle',
-            'attrs': [
-                { 'cx': '320' },
-                { 'cy': '240' },
-                { 'r': '60' },
-                { 'fill': '#223fa3' },
-                { 'stroke': '#000000' },
-                { 'stroke-width': '80' },
-                { 'stroke-opacity': '0.5' }
-            ]},
-            {
-            'type': 'rect',
-            'attrs': [
-                { 'x': 'main_circle.cx - 10' },
-                { 'y': 'main_circle.cy - 10' },
-                { 'fill': '#fff' },
-                { 'width': '20' },
-                { 'height': '20' }
-            ]}
+```json
+{
+    'paper': {
+    'attrs': [ { 'width': '640' }, { 'height': '480' }],
+    'access_key': 'my_key',
+    'format': 'svg',
+    'children': [
+        {
+        'type': 'rect',
+        'attrs': [
+            { 'x': '0' },
+            { 'y': '0' },
+            { 'width': '640' },
+            { 'height': '480' },
+            { 'rx': '10' },
+            { 'fill': '#fff' }
+        ]},
+        {
+        'type': 'circle',
+        'svable_id': 'main_circle',
+        'attrs': [
+            { 'cx': '320' },
+            { 'cy': '240' },
+            { 'r': '60' },
+            { 'fill': '#223fa3' },
+            { 'stroke': '#000000' },
+            { 'stroke-width': '80' },
+            { 'stroke-opacity': '0.5' }
+        ]},
+        {
+        'type': 'rect',
+        'attrs': [
+            { 'x': 'main_circle.cx - 10' },
+            { 'y': 'main_circle.cy - 10' },
+            { 'fill': '#fff' },
+            { 'width': '20' },
+            { 'height': '20' }
         ]}
-    }
+    ]}
+}
+```
 
 Разберем его по частям: в корневом объекте `paper` вы описываете размеры вашего полотна, `viewBox`, а также указываете ваш персональный ключ доступа и растровый формат (по умолчанию в ответ вам придет SVG):
 
-    'paper': {
-        'attrs': [{ 'width': '640' }, { 'height': '480' }],
-        'access_key': 'my_key',
-        'format': 'svg',
+```json
+'paper': {
+    'attrs': [{ 'width': '640' }, { 'height': '480' }],
+    'access_key': 'my_key',
+    'format': 'svg',
+```
 
 В массиве `children` указываются все объекты, которые попадут на ваш холст. Первым из них идет фоновый прямоугольник. Тут все достаточно просто и почти один в один повторяет формат самого SVG-документа:
 
-    'type': 'rect',
-    'attrs': [
-        { 'x': '0' },
-        { 'y': '0' },
-        { 'width': '640' },
-        { 'height': '480' },
-        { 'rx': '10' },
-        { 'fill': '#fff' }
-    ]
+```json
+'type': 'rect',
+'attrs': [
+    { 'x': '0' },
+    { 'y': '0' },
+    { 'width': '640' },
+    { 'height': '480' },
+    { 'rx': '10' },
+    { 'fill': '#fff' }
+]
+```
 
 Далее опишем круг. Тут все тоже довольно банально, но есть одно отличие — атрибут `svable_id`, который позволит вам сослаться конкретно на этот объект в тот момент, когда вам понадобятся любые его параметры:
 
-    'type': 'circle',
-    'svable_id': 'main_circle',
-    'attrs': [
-        { 'cx': '320' },
-        { 'cy': '240' },
-        { 'r': '60' },
-        { 'fill': '#223fa3' },
-        { 'stroke': '#000000' },
-        { 'stroke-width': '80' },
-        { 'stroke-opacity': '0.5' }
-    ]
+```json
+'type': 'circle',
+'svable_id': 'main_circle',
+'attrs': [
+    { 'cx': '320' },
+    { 'cy': '240' },
+    { 'r': '60' },
+    { 'fill': '#223fa3' },
+    { 'stroke': '#000000' },
+    { 'stroke-width': '80' },
+    { 'stroke-opacity': '0.5' }
+]
+```
 
 Затем опишем последний квадрат. Напомним, что он должен позиционироваться относительно центра круга. Тут вам и пригодится то, что вы указали в `svable_id`:
 
-    'type': 'rect',
-    'attrs': [
-        { 'x': 'main_circle.cx - 10' },
-        { 'y': 'main_circle.cy - 10' },
-        { 'fill': '#fff' },
-        { 'width': '20' },
-        { 'height': '20' }
-    ]
+```json
+'type': 'rect',
+'attrs': [
+    { 'x': 'main_circle.cx - 10' },
+    { 'y': 'main_circle.cy - 10' },
+    { 'fill': '#fff' },
+    { 'width': '20' },
+    { 'height': '20' }
+]
+```
 
 Однако обычно никто не рисует SVG на сервере с нуля. Поэтому мы создали адаптеры под популярные JavaScript-библиотеки: уже готов Raphaël, завершаем работу над Snap.svg и D3.
 
@@ -128,53 +138,63 @@ _Мы начинаем серию статей, в которых вы мож
 
 Возьмем уже знакомый нам SVG и [отрисуем с помощью Raphaël](http://codepen.io/anon/pen/iJext):
 
-    var paper = Raphael(0, 0, 640, 480);
-        paper
-            .rect(0, 0, 640, 480, 10)
-            .attr({
-                fill: '#fff',
-                stroke: 'none'
-    });
-    var circle = paper
-        .circle(320, 240, 60)
-        .attr({
-            fill: '#223fa3',
-            stroke: '#000',
-            'stroke-width': 80,
-            'stroke-opacity': 0.5
-    });
-    paper
-        .rect(circle.attr('cx') - 10, circle.attr('cy') - 10, 20, 20)
-        .attr({
-            fill: '#fff',
-            stroke: 'none'
-    });
-
-А теперь перенесем его на сервер и [отрисуем с помощью Node.js](http://codepen.io/anon/pen/woJgA):
-
-    var Svable = require('svable');
-    var paper = Svable(0, 0, 640, 480, 'raphael');
+```js
+var paper = Raphael(0, 0, 640, 480);
     paper
         .rect(0, 0, 640, 480, 10)
         .attr({
-        fill: '#fff',
-        stroke: 'none'
-    });
-    var circle = paper
-        .circle(320, 240, 60)
-        .attr({
-            fill: '#223fa3',
-            stroke: '#000',
-            'stroke-width': 80,
-            'stroke-opacity': 0.5
-    });
-    paper
-        .rect(circle.attr('cx') - 10, circle.attr('cy') - 10, 20, 20)
-        .attr({
             fill: '#fff',
             stroke: 'none'
-    });
-    console.log(paper.burnSync());
+});
+
+var circle = paper
+    .circle(320, 240, 60)
+    .attr({
+        fill: '#223fa3',
+        stroke: '#000',
+        'stroke-width': 80,
+        'stroke-opacity': 0.5
+});
+
+paper
+    .rect(circle.attr('cx') - 10, circle.attr('cy') - 10, 20, 20)
+    .attr({
+        fill: '#fff',
+        stroke: 'none'
+});
+```
+
+А теперь перенесем его на сервер и [отрисуем с помощью Node.js](http://codepen.io/anon/pen/woJgA):
+
+```js
+var Svable = require('svable');
+var paper = Svable(0, 0, 640, 480, 'raphael');
+
+paper
+    .rect(0, 0, 640, 480, 10)
+    .attr({
+    fill: '#fff',
+    stroke: 'none'
+});
+
+var circle = paper
+    .circle(320, 240, 60)
+    .attr({
+        fill: '#223fa3',
+        stroke: '#000',
+        'stroke-width': 80,
+        'stroke-opacity': 0.5
+});
+
+paper
+    .rect(circle.attr('cx') - 10, circle.attr('cy') - 10, 20, 20)
+    .attr({
+        fill: '#fff',
+        stroke: 'none'
+});
+
+console.log(paper.burnSync());
+```
 
 Как видите, вся разница лишь в первоначальном вызове объекта и итоговом получении результата.
 

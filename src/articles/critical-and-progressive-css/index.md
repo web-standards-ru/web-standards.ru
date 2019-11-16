@@ -29,38 +29,41 @@ tags:
 
 При отрисовке HTML, как только браузер встречает `<script>` или `<link>`, он останавливается и ждёт, пока JS или CSS-файл загрузится, и только после этого идет дальше. При использовании `<script>` с атрибутами `async` и `defer`, мы можем попросить браузер загружать скрипт асинхронно, без блокировки рендеринга страницы, но у `<link>` таких атрибутов нет. Из этой ситуации нас спасёт функция [loadCSS](https://github.com/filamentgroup/loadCSS) — её использование позволит вашей странице отрисоваться с критическим CSS и не ждать полной загрузки остальных стилей.
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <script>
-                // loadCSS.js
-            </script>
-            <style>
-                /* Критические стили */
-                .article,
-                .comments,
-                .about,
-                .footer {
-                    display: none;
-                }
-            </style>
-            <script>
-                /* Остальные стили */
-                loadCSS('style.css');
-            </script>
-        </head>
-        <body>
-            …
-        </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // loadCSS.js
+        </script>
+        <style>
+            /* Критические стили */
+            .article,
+            .comments,
+            .about,
+            .footer {
+                display: none;
+            }
+        </style>
+        <script>
+            /* Остальные стили */
+            loadCSS('style.css');
+        </script>
+    </head>
+    <body>
+        …
+    </body>
+</html>
+```
 
 Как это работает? Если коротко, то эта функция создает `<link rel="stylesheet">` с атрибутом `media="only x"`. Таким образом, браузер загружает стили, при этом не блокируя рендеринг страницы. После того, как стили загружены, атрибуту задается значение `media="all"`. В современных браузерах, поддерживающих rel="preload" для `<link>`, можно обойтись без loadCSS.
 
-    <link rel="preload" href="/style.css"
-          as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
+```html
+<link rel="preload" href="/style.css" as="style" onload="this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="style.css">
+</noscript>
+```
 
 С `media="only x"` такой трюк не сработает: разные браузеры загружают CSS по-разному, loadCSS учитывает все эти нюансы.
 
@@ -70,27 +73,29 @@ tags:
 
 Прогрессивный CSS предполагает создание отдельного CSS-файла для каждой части страницы: перед каждой вставляется `<link rel="stylesheet">` со стилем только этой части. Благодаря тому, что `<link rel="stylesheet">` блокирует рендеринг до окончания загрузки стилей, страница будет загружаться последовательно по частях. В этом сценарии выгоднее всего использовать HTTP/2, он хорошо работает с одновременными запросами.
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-        </head>
-        <body>
-            <link rel="stylesheet" href="header.css">
-            <header class="header">…</header>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <link rel="stylesheet" href="header.css">
+        <header class="header">…</header>
 
-            <link rel="stylesheet" href="article.css">
-            <main class="article"></main>
+        <link rel="stylesheet" href="article.css">
+        <main class="article"></main>
 
-            <link rel="stylesheet" href="comments.css">
-            <section class="comments">…</section>
+        <link rel="stylesheet" href="comments.css">
+        <section class="comments">…</section>
 
-            <link rel="stylesheet" href="about.css">
-            <section class="about"></section>
+        <link rel="stylesheet" href="about.css">
+        <section class="about"></section>
 
-            <link rel="stylesheet" href="footer.css">
-            <footer class="footer"></footer>
-        </body>
-    </html>
+        <link rel="stylesheet" href="footer.css">
+        <footer class="footer"></footer>
+    </body>
+</html>
+```
 
 Пришла пора признаться, что прогрессивный CSS это скорее концепт, чем что-то применимое на практике: в [спецификации HTML](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element) никак не объяснено, как рендеринг страницы должен блокироваться загрузкой CSS и как должен вести себя `<link rel="stylesheet">` в `<body>`, поэтому все браузеры обрабатывают эту ситуацию по-своему. Можно выделить два основных поведения браузеров:
 
@@ -110,70 +115,63 @@ tags:
 
 Чтобы с лёгкостью применять критический и прогрессивный CSS вместе во всех браузерах, я написал плагин [gulp-progressive-css](https://www.npmjs.com/package/gulp-progressive-css). Этот плагин обрабатывает HTML-файлы и добавляет возможность использовать атрибуты `priority="critical"`, `priority="queued"` и `priority="async"` у элемента `<link rel="stylesheet">`.
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <link rel="stylesheet"
-                  priority="async" href="/font.css">
-
-            <link rel="stylesheet"
-                  priority="critical" href="/header.css">
-
-            <link rel="stylesheet"
-                  priority="queued" href="/article.css">
-
-            <link rel="stylesheet"
-                  priority="queued" href="/comments.css">
-
-            <link rel="stylesheet"
-                  priority="queued" href="/about.css">
-
-            <link rel="stylesheet"
-                  priority="queued" href="/footer.css">
-        </head>
-        <body>
-            <header class="header"></header>
-            <main class="article"></main>
-            <section class="comments"></section>
-            <section class="about"></section>
-            <footer class="footer"></footer>
-        </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" priority="async" href="/font.css">
+        <link rel="stylesheet" priority="critical" href="/header.css">
+        <link rel="stylesheet" priority="queued" href="/article.css">
+        <link rel="stylesheet" priority="queued" href="/comments.css">
+        <link rel="stylesheet" priority="queued" href="/about.css">
+        <link rel="stylesheet" priority="queued" href="/footer.css">
+    </head>
+    <body>
+        <header class="header"></header>
+        <main class="article"></main>
+        <section class="comments"></section>
+        <section class="about"></section>
+        <footer class="footer"></footer>
+    </body>
+</html>
+```
 
 Стили, подключенные с атрибутом `priority="critical"`, будут встроены в HTML-файл, а стили с атрибутом `priority="queued"` или `priority="async"` будут загружены асинхронно с помощью функции importCSS. Это [вариация функции](https://github.com/TrigenSoftware/import-css/blob/master/src/link-in-body-async.js) `loadCSS`, её особенность в том, что загрузка стилей начинается одновременно, но стили с `priority="queued"` будут применяться в том порядке, в котором они были указаны в HTML-файле. Чтобы загрузка стилей работала одинаково во всех браузерах, подключение стилей переносится в конец `<body>`. Также добавляется `<link rel="preload">` в `<head>` для каждого файла стилей, чтобы в браузерах, которые поддерживают `rel="preload"`, загрузка начиналась еще при обработке `<head>`.
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <style>/* header.css */</style>
-            <link rel="preload" as="style" href="font.css">
-            <link rel="preload" as="style" href="article.css">
-            <link rel="preload" as="style" href="comments.css">
-            <link rel="preload" as="style" href="about.css">
-            <link rel="preload" as="style" href="footer.css">
-            <noscript>
-                <link rel="stylesheet" href="font.css">
-                <link rel="stylesheet" href="article.css">
-                <link rel="stylesheet" href="comments.css">
-                <link rel="stylesheet" href="about.css">
-                <link rel="stylesheet" href="footer.css">
-            </noscript>
-        </head>
-        <body>
-            <header class="header"></header>
-            <main class="article"></main>
-            <section class="comments"></section>
-            <section class="about"></section>
-            <footer class="footer"></footer>
-            <script>
-                importCSS('font.css', 0, true);
-                importCSS('article.css');
-                importCSS('comments.css');
-                importCSS('about.css');
-                importCSS('footer.css');
-            </script>
-        </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>/* header.css */</style>
+        <link rel="preload" as="style" href="font.css">
+        <link rel="preload" as="style" href="article.css">
+        <link rel="preload" as="style" href="comments.css">
+        <link rel="preload" as="style" href="about.css">
+        <link rel="preload" as="style" href="footer.css">
+        <noscript>
+            <link rel="stylesheet" href="font.css">
+            <link rel="stylesheet" href="article.css">
+            <link rel="stylesheet" href="comments.css">
+            <link rel="stylesheet" href="about.css">
+            <link rel="stylesheet" href="footer.css">
+        </noscript>
+    </head>
+    <body>
+        <header class="header"></header>
+        <main class="article"></main>
+        <section class="comments"></section>
+        <section class="about"></section>
+        <footer class="footer"></footer>
+        <script>
+            importCSS('font.css', 0, true);
+            importCSS('article.css');
+            importCSS('comments.css');
+            importCSS('about.css');
+            importCSS('footer.css');
+        </script>
+    </body>
+</html>
+```
 
 ## Результаты применения
 

@@ -42,58 +42,66 @@ tags:
 
 SVG или масштабируемая векторная графика (Scalable Vector Graphic) — это часть спецификации расширяемого языка разметки (Extensible Markup Languag, XML), которая может быть встроена в HTML-документ при помощи элемента `<svg>`, как в примере кода ниже (в нём SVG — стрелка в браузере, указывающая вниз):
 
-    <body>
-        <svg viewBox="0 0 10 10">
-            <path d="m5 9-3-4h2v-4h2v4h2z"/>
-        </svg>
-    </body>
+```html
+<body>
+    <svg viewBox="0 0 10 10">
+        <path d="m5 9-3-4h2v-4h2v4h2z"/>
+    </svg>
+</body>
+```
 
 В этом простом примере есть всё, что нужно для отображения SVG в [браузерах, которые её поддерживают](https://caniuse.com/#feat=svg). Однако, без указания высоты и ширины, SVG будет отображаться настолько большой, насколько это позволит доступная область просмотра. В примере ниже показано как это исправить:
 
-    <body>
-        <svg width="10" height="10"
-             viewBox="0 0 10 10">
-            <path d="m5 9-3-4h2v-4h2v4h2z"/>
-        </svg>
-    </body>
+```html
+<body>
+    <svg width="10" height="10"
+            viewBox="0 0 10 10">
+        <path d="m5 9-3-4h2v-4h2v4h2z"/>
+    </svg>
+</body>
+```
 
 Одиночный вспомогательный CSS-класс, присвоенный нашим SVG-иконкам, задаёт им нужное поведение. Затем он переопределяет эти значения и отлично масштабирует иконки в соответствии с размером текста.
 
-    .svg-icon {
-        /* Разместить иконку выше базового текста. */
-        position: relative;
-        top: 0.125em;
+```css
+.svg-icon {
+    /* Разместить иконку выше базового текста. */
+    position: relative;
+    top: 0.125em;
 
-        /* Не дать иконке сжаться внутри flex-контейнера. */
-        flex-shrink: 0;
+    /* Не дать иконке сжаться внутри flex-контейнера. */
+    flex-shrink: 0;
 
-        /*
-         * Масштабировать иконку до размера шрифта родительского
-         * элемента.
-        */
-        height: 1em;
-        width: 1em;
+    /*
+        * Масштабировать иконку до размера шрифта родительского
+        * элемента.
+    */
+    height: 1em;
+    width: 1em;
 
-        /* Установить для иконки любой цвет, который задан родителю. */
-        fill: currentColor;
+    /* Установить для иконки любой цвет, который задан родителю. */
+    fill: currentColor;
 
-        /*
-         * Если иконка используется в ссылке, для которой задан цветовой
-         * переход, мы можем также задать для fill нужное значение
-         * transition.
-        */
-       transition: fill 0.3s;
-    }
+    /*
+        * Если иконка используется в ссылке, для которой задан цветовой
+        * переход, мы можем также задать для fill нужное значение
+        * transition.
+    */
+    transition: fill 0.3s;
+}
+```
 
 Ниже пример HTML-кода:
 
-    <body>
-        <svg class="svg-icon"
-             width="10" height="10"
-             viewBox="0 0 10 10">
-            <path d="m5 9-3-4h2v-4h2v4h2z"/>
-        </svg>
-    </body>
+```html
+<body>
+    <svg class="svg-icon"
+            width="10" height="10"
+            viewBox="0 0 10 10">
+        <path d="m5 9-3-4h2v-4h2v4h2z"/>
+    </svg>
+</body>
+```
 
 [Я сделал демо на CodePen](https://codepen.io/Nice2MeatU/pen/YNEXMj), чтобы показать, на что способен этот одиночный CSS-селектор. Мы можем увеличить или уменьшить значение `font-size` для параграфа в инспекторе CSS и увидеть, как иконка увеличивается вместе с текстом. Мы также можем изменить значение `color` и посмотреть, как это повлияет на неё. При наведении курсора на ссылку или при фокусе на ней одновременно изменяется как цвет ссылки, так и цвет заливки иконки.
 
@@ -103,28 +111,32 @@ SVG или масштабируемая векторная графика (Scala
 
 Давайте предположим, что нам нужно создать кнопку, которая переключает видимость навигации по сайту. При первом нажатии на неё навигация будет показана, а при повторном снова скрыта. Надеюсь, что все согласны, что кнопка — это кнопка, и [поэтому она должна быть](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role) `<button>`. В нашем случае дизайн-макета недостаточно. Всё, что дал нам дизайнер — это иконка гамбургера, без текста. Переключаемся на редактор: добавляем в кнопку SVG.
 
-    <button type="button">
-        <svg class="svg-icon"
-             width="10" height="10"
-             viewBox="0 0 10 10"
-             role="img">
-            <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
-        </svg>
-    </button>
+```html
+<button type="button">
+    <svg class="svg-icon"
+            width="10" height="10"
+            viewBox="0 0 10 10"
+            role="img">
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+</button>
+```
 
 Теперь нужно добавить немного текста, с которым могли бы взаимодействовать вспомогательные технологии. Используя инлайновый SVG, мы можем добавить элемент `<title>` для первого дочернего элемента `<svg>` и присвоить ему ID. Затем нам нужно сослаться на нужное значение ID с помощью атрибута `aria-labelledby`, который задан открывающему тегу `<svg>`:
 
-    <button type="button">
-        <svg class="svg-icon"
-             width="10" height="10"
-             viewBox="0 0 10 10"
-             role="img"
-             focusable="false"
-             aria-labelledby="menu-icon-title">
-            <title id="menu-icon-title">Меню</title>
-            <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
-        </svg>
-    </button>
+```html
+<button type="button">
+    <svg class="svg-icon"
+            width="10" height="10"
+            viewBox="0 0 10 10"
+            role="img"
+            focusable="false"
+            aria-labelledby="menu-icon-title">
+        <title id="menu-icon-title">Меню</title>
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+</button>
+```
 
 Теперь, когда кто-то установит фокус на кнопке, будет объявлен текст заголовка (некоторые браузеры даже показывают текст внутри `<title>` в виде всплывающей подсказки). Обратите внимание на сочетание атрибута и значения `focusable="false"` в SVG! Это помешает установить фокус на SVG в Internet Explorer и Microsoft Edge. [Это баг](https://github.com/PolymerElements/iron-icon/issues/71), который не исправлен для 10 и 11 версий Internet Explorer.
 
@@ -134,53 +146,59 @@ SVG или масштабируемая векторная графика (Scala
 
 Вы можете использовать элемент `<span>`, чтобы обернуть текст и визуально скрыть от пользователя. С помощью этого мы предоставляем вспомогательным технологиям описание иконки в текстовом виде, не изменяя дизайна кнопки.
 
-    <button type="button">
-        <svg class="svg-icon"
-             width="10" height="10"
-             viewBox="0 0 10 10"
-             role="img"
-             focusable="false"
-             aria-hidden="true">
-            <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
-        </svg>
-        <span class="visually-hidden">
-            Меню
-        </span>
-    </button>
+```html
+<button type="button">
+    <svg class="svg-icon"
+            width="10" height="10"
+            viewBox="0 0 10 10"
+            role="img"
+            focusable="false"
+            aria-hidden="true">
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+    <span class="visually-hidden">
+        Меню
+    </span>
+</button>
+```
 
 Вспомогательный CSS-класс выглядит так:
 
-    .visually-hidden {
-        // Убрать текст из потока.
-        position: absolute;
+```css
+.visually-hidden {
+    /* Убрать текст из потока */
+    position: absolute;
 
-        // Уменьшить его высоту и ширину до одного пикселя.
-        height: 1px;
-        width: 1px;
+    /* Уменьшить его высоту и ширину до одного пикселя */
+    height: 1px;
+    width: 1px;
 
-        // Скрыть выходящие за пределы контейнера элементы или текст.
-        overflow: hidden;
+    /* Скрыть выходящие за пределы контейнера элементы или текст */
+    overflow: hidden;
 
-        // Установить для clip нулевое значение.
-        clip: rect(0, 0, 0, 0);
+    /* Установить для clip нулевое значение */
+    clip: rect(0, 0, 0, 0);
 
-        // Текст не будет перенесён на вторую строку.
-        white-space: nowrap;
-    }
+    /* Текст не будет перенесён на вторую строку */
+    white-space: nowrap;
+}
+```
 
 ### Не сильно отличающийся пример
 
 И вот наши дизайнеры решили добавить другую кнопку с _текстом_ и _иконкой_ рядом с ним. Если у вас есть текст рядом с иконкой, то не добавляйте заголовок и описание, а замените `role="img"` у SVG на `aria-hidden="true"`. Добавление к элементу атрибута `aria-hidden="true"` полностью удаляет его и его дочерние элементы из дерева доступности. Такой элемент не будет доступен для Accessibility API:
 
-    <button type="button">
-        Меню
-        <svg class="svg-icon"
-             viewBox="0 0 10 10"
-             focusable="false"
-             aria-hidden="true">
-            <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
-        </svg>
-    </button>
+```html
+<button type="button">
+    Меню
+    <svg class="svg-icon"
+            viewBox="0 0 10 10"
+            focusable="false"
+            aria-hidden="true">
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+</button>
+```
 
 Поскольку у нас есть текст, который объясняет назначение кнопки, иконка стала просто декоративным элементом. Когда мы имеем дело с декоративными изображениями или графикой, нам нужно скрыть их из дерева доступности.
 
@@ -198,10 +216,11 @@ SVG или масштабируемая векторная графика (Scala
 
 Разместив пустой `<svg></svg>` в качестве первого потомка открывающего тега `<body>` и скрыв его от всех (зрячих или нет) при помощи инлайнового `display: none`, мы создали пространство для вставки наших иконок. Важно именно инлайново задать `display: none`, потому что мы не хотим, чтобы спрайт был видим при загрузке наших таблиц стилей браузером! Если у вас есть критические стили для сайта, вы можете добавить свойство туда, и не трогать спрайт.
 
+```html
     <body>
-        <svg style="display: none">
-        </svg>
+        <svg style="display: none"></svg>
     </body>
+```
 
 **Примечание**: это только _один_ из множества вариантов создания SVG-спрайта! Есть несколько способов сделать это, но в этой статье невозможно объяснить их все. [Сара Суайдан](https://www.sarasoueidan.com) очень подробно рассказывает о различных [вариантах создания SVG-спрайта](https://www.sarasoueidan.com/blog/overview-of-svg-sprite-creation-techniques/) со всеми преимуществами и проблемами, которые имеются в каждом из подходов.
 
@@ -221,16 +240,18 @@ SVG или масштабируемая векторная графика (Scala
 
 До использования SVGOMG наши иконки могут выглядеть как в примере ниже. Это зависит от того, какими программами для создания графики вы пользуетесь (в примере показан SVG-код, который был создан в Adobe Illustrator при выборе параметра «Сохранить как»):
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In.
-    SVG Version: 6.00 Build 0) -->
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="24px" height="24px" viewBox="0 0 24 24"
-    enable-background="new 0 0 24 24" xml:space="preserve">
-        <path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"/>
-        <path fill="none" d="M0,0h24v24H0V0z"/>
-    </svg>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In.
+SVG Version: 6.00 Build 0) -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+width="24px" height="24px" viewBox="0 0 24 24"
+enable-background="new 0 0 24 24" xml:space="preserve">
+    <path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"/>
+    <path fill="none" d="M0,0h24v24H0V0z"/>
+</svg>
+```
 
 **Примечание:** если выбрать в Adobe Illustrator параметр «Экспорт», то получится более чистый SVG-код!
 
@@ -240,60 +261,66 @@ SVG или масштабируемая векторная графика (Scala
 
 Посмотрим, что осталось после оптимизации:
 
-    <svg viewBox="0 0 24 24">
-        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-        <path fill="none" d="M0 0h24v24H0V0z"/>
-    </svg>
+```xml
+<svg viewBox="0 0 24 24">
+    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+    <path fill="none" d="M0 0h24v24H0V0z"/>
+</svg>
+```
 
 После добавления SVG-кода в спрайт, нам только осталось слегка его изменить (я добавил переносы строк для того, чтобы код стал более читаемым):
 
-    <svg style="display: none">
-        <symbol id="icon-angle-down"
-                viewBox="0 0 24 24">
-            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-            <path fill="none" d="M0 0h24v24H0V0z"/>
-        </symbol>
-    </svg>
+```xml
+<svg style="display: none">
+    <symbol id="icon-angle-down"
+            viewBox="0 0 24 24">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        <path fill="none" d="M0 0h24v24H0V0z"/>
+    </symbol>
+</svg>
+```
 
 Мы заменили `<svg>` на `<symbol>` и задали иконке уникальный ID, поэтому можем использовать её в другой части нашей страницы. Самым большим преимуществом этого подхода является возможность бесконечно использовать одну иконку и задавать ей подпись для каждого случая использования. Нет необходимости создавать иконку больше одного раза:
 
-    <button type="button">
-        <svg class="svg-icon"
-             role="img"
-             focusable="false"
-             aria-labelledby="toggle-nav-icon-title">
-            <title id="toggle-nav-icon-title">Меню</title>
-            <use xlink:href="#icon-angle-down"/>
-        </svg>
-    </button>
+```html
+<button type="button">
+    <svg class="svg-icon"
+            role="img"
+            focusable="false"
+            aria-labelledby="toggle-nav-icon-title">
+        <title id="toggle-nav-icon-title">Меню</title>
+        <use xlink:href="#icon-angle-down"/>
+    </svg>
+</button>
 
-    <a href="#next-section">
-        <svg class="svg-icon"
-             role="img"
-             focusable="false"
-             aria-labelledby="next-section-icon">
-            <title id="next-section-icon">Перейти к следующему разделу.</title>
-            <use xlink:href="#icon-angle-down" />
-        </svg>
-    </a>
+<a href="#next-section">
+    <svg class="svg-icon"
+            role="img"
+            focusable="false"
+            aria-labelledby="next-section-icon">
+        <title id="next-section-icon">Перейти к следующему разделу.</title>
+        <use xlink:href="#icon-angle-down"/>
+    </svg>
+</a>
 
-    <button type="button">
-        <svg class="svg-icon"
-             aria-hidden="true"
-             focusable="false">
-            <use xlink:href="#icon-angle-down" />
-        </svg>
-        Нажмите на кнопку вниз!
-    </button>
+<button type="button">
+    <svg class="svg-icon"
+            aria-hidden="true"
+            focusable="false">
+        <use xlink:href="#icon-angle-down"/>
+    </svg>
+    Нажмите на кнопку вниз!
+</button>
 
-    <p>
-        Прокрутите вниз для получения дополнительной информации!
-        <svg class="svg-icon"
-             aria-hidden="true"
-             focusable="false">
-            <use xlink:href="#icon-angle-down" />
-        </svg>
-    </p>
+<p>
+    Прокрутите вниз для получения дополнительной информации!
+    <svg class="svg-icon"
+            aria-hidden="true"
+            focusable="false">
+        <use xlink:href="#icon-angle-down"/>
+    </svg>
+</p>
+```
 
 С помощью одиночного тега `<use>` мы можем ссылаться на ID этого SVG в спрайте. В примере выше у нас есть четыре разных сценария использования, все с одной и той же иконкой. Мы можем скрыть их, когда они используются как декоративные элементы, или подписать, когда это нужно. Круто!
 

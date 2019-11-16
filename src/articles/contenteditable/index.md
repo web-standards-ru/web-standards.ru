@@ -21,8 +21,12 @@ tags:
 
 Давайте обратимся к спецификации:
 
-> Атрибут `contenteditable` обладает фиксированным набором значений, он может быть пустой строкой, `true` или `false`. Пустая строка или `true` обозначают, что элемент доступен для редактирования. `false` обозначает, что элемент недоступен для редактирования. Есть еще третье состояние — `inherit`, это значение атрибута по умолчанию и оно означает, что значение наследуется от родительского элемента.
-> [WHATWG](http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable)
+<blockquote>
+    <p>Атрибут <code>contenteditable</code> обладает фиксированным набором значений, он может быть пустой строкой, <code>true</code> или <code>false</code>. Пустая строка или <code>true</code> обозначают, что элемент доступен для редактирования. <code>false</code> обозначает, что элемент недоступен для редактирования. Есть еще третье состояние — <code>inherit</code>, это значение атрибута по умолчанию и оно означает, что значение наследуется от родительского элемента.</p>
+    <footer>
+        <cite><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable">WHATWG</a>.</cite>
+    </footer>
+<blockquote>
 
 В основном, атрибут `contenteditable` должен был обеспечивать работу WYSIWYG-редакторов. Скорее всего, вы встречали его в инструментах подобных Symphony или на сайтах вроде Flickr, где вы начинаете редактировать материалы, просто кликнув в определенную область.
 
@@ -36,21 +40,23 @@ tags:
 
 ## Пример кода
 
-    <div id="example-one" contenteditable="true">
-        <style scoped>
-            #example-one {
-                margin:12px 0;
-            }
-            #example-one[contenteditable="true"] {
-                padding:10px;
-                outline:3px dashed #CCC;
-            }
-            #example-one[contenteditable="true"]:hover {
-                outline:3px dashed #2B8BAD;
-            }
-        </style>
-        <p>Всё что находится в этом блоке, доступно для редактирования в браузерах, поддерживающих <code>HTML5</code>. Давайте, попробуйте: кликните для начала редактирования.</p>
-    </div>
+```html
+<div id="example-one" contenteditable="true">
+    <style scoped>
+        #example-one {
+            margin:12px 0;
+        }
+        #example-one[contenteditable="true"] {
+            padding:10px;
+            outline:3px dashed #CCC;
+        }
+        #example-one[contenteditable="true"]:hover {
+            outline:3px dashed #2B8BAD;
+        }
+    </style>
+    <p>Всё что находится в этом блоке, доступно для редактирования в браузерах, поддерживающих <code>HTML5</code>. Давайте, попробуйте: кликните для начала редактирования.</p>
+</div>
+```
 
 ## Демонстрация
 
@@ -144,13 +150,14 @@ tags:
 
 Для написания этого раздела я обратился за помощью к доктору Реми, так как он гораздо более сведущ во всём, что касается хранения <del>данных</del> всего на свете.
 
-> В зависимости от сложности блока ваш код может отлавливать нажатие <kbd>Enter</kbd> (код 13) для сохранения изменения и <kbd>Esc</kbd> (код 27) для их отмены.
->
-> Когда пользователь нажимает <kbd>Enter</kbd> (предполагаем, что редактируем однострочные данные), получаем `innerHTML` редактируемого блока и посылаем AJAX-запрос с изменениями на сервер.
->
-> Простой пример можно увидеть тут: [Сохранение данных из элемента с `сontenteditable` при помощи AJAX](http://jsbin.com/owavu3).
->
-> [Реми Шарп](http://remysharp.com/)
+<blockquote>
+    <p>В зависимости от сложности блока ваш код может отлавливать нажатие <kbd>Enter</kbd> (код 13) для сохранения изменения и <kbd>Esc</kbd> (код 27) для их отмены.</p>
+    <p>Когда пользователь нажимает <kbd>Enter</kbd> (предполагаем, что редактируем однострочные данные), получаем <code>innerHTML</code> редактируемого блока и посылаем AJAX-запрос с изменениями на сервер.</p>
+    <p>Простой пример можно увидеть тут: <a href="http://jsbin.com/owavu3">Сохранение данных из элемента с <code>сontenteditable</code> при помощи AJAX</a>.</p>
+    <footer>
+        <cite><a href="http://remysharp.com/">Реми Шарп</a>.</cite>
+    </footer>
+<blockquote>
 
 ## Заключение
 

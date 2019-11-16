@@ -49,21 +49,27 @@ Electron объединяет Chromium и Node.js в одну среду исп�
 
 Убедитесь, что у вас установлен Node.js. Если нет, то его можно скачать [отсюда](https://nodejs.org/en/). Установите Electron Forge глобально, используя следующую команду:
 
-    npm install -g electron-forge
+```sh
+npm install -g electron-forge
+```
 
 ## Начнём с приложения
 
 Используйте следующую команду для создания вашего приложения:
 
-    electron-forge init simple-desktop-app-electronjs
+```
+electron-forge init simple-desktop-app-electronjs
+```
 
-simple-desktop-app-electronicjs — это название приложения.
+Где _simple-desktop-app-electronicjs_ — это название приложения.
 
 Потребуется некоторое время, чтобы команда, указанная выше, отработала. После завершения предыдущего процесса запустите приложение с помощью следующих команд:
 
-    cd simple-desktop-app-electronjs
-    npm i
-    npm start
+```sh
+cd simple-desktop-app-electronjs
+npm i
+npm start
+```
 
 Это должно открыть окно как на скрине ниже:
 
@@ -114,17 +120,21 @@ simple-desktop-app-electronicjs — это название приложения
 
 Большая часть кода, созданного в `index.js`, содержит хорошие комментарии, объясняющие, что происходит. Здесь я упомяну несколько ключевых моментов, которые следует отметить в `index.js`:
 
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
-    });
+```js
+mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+});
 
-    // и загрузи index.html из app.
-    mainWindow.loadURL(`file://${__dirname}/index.html`);
+// и загрузи index.html из app.
+mainWindow.loadURL(`file://${__dirname}/index.html`);
+```
 
 Приведенный выше фрагмент кода просто создает экземпляр `BrowserWindow` и загружает `index.html` в `BrowserWindow`. Вы увидите, что `app` часто используется в коде. Например, возьмите приведенный ниже фрагмент:
 
-    app.on('ready', createWindow);
+```js
+app.on('ready', createWindow);
+```
 
 `app` используется для управления жизненным циклом событий приложения. Приведенный выше фрагмент кода говорит, что, когда приложение будет готово, нужно загрузить первое окно.
 
@@ -136,30 +146,34 @@ simple-desktop-app-electronicjs — это название приложения
 
 Сначала давайте установим Bootstrap с помощью следующей команды:
 
-    npm install bootstrap --save
+```sh
+npm install bootstrap --save
+```
 
 Скопируйте следующий код в src/index.html:
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="utf-8">
-            <title>Конвертер температур</title>
-            <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        </head>
-        <body>
-            <h1>Конвертер температур</h1>
-            <div class="form-group col-md-3">
-                <label for="celcius">По Цельсию:</label>
-                <input type="text" class="form-control" id="celcius" onkeyup="celciusToFahrenheit()">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="fahrenheit">По Фаренгейту:</label>
-                <input type="text" class="form-control" id="fahrenheit" onkeyup="fahrenheitToCelcius()">
-            </div>
-            <script src="renderer.js"></script>
-        </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Конвертер температур</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Конвертер температур</h1>
+        <div class="form-group col-md-3">
+            <label for="celcius">По Цельсию:</label>
+            <input type="text" class="form-control" id="celcius" onkeyup="celciusToFahrenheit()">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="fahrenheit">По Фаренгейту:</label>
+            <input type="text" class="form-control" id="fahrenheit" onkeyup="fahrenheitToCelcius()">
+        </div>
+        <script src="renderer.js"></script>
+    </body>
+</html>
+```
 
 Приведенный выше код выполняет следующие действия:
 
@@ -172,17 +186,19 @@ simple-desktop-app-electronicjs — это название приложения
 
 Создайте файл с именем `renderer.js` внутри `src`. Скопируйте в него следующий код:
 
-    function celciusToFahrenheit(){
-        let celcius = document.getElementById('celcius').value;
-        let fahrenheit = (celcius * 9 / 5) + 32;
-        document.getElementById('fahrenheit').value = fahrenheit;
-    }
+```js
+function celciusToFahrenheit(){
+    let celcius = document.getElementById('celcius').value;
+    let fahrenheit = (celcius * 9 / 5) + 32;
+    document.getElementById('fahrenheit').value = fahrenheit;
+}
 
-    function fahrenheitToCelcius(){
-        let fahrenheit = document.getElementById('fahrenheit').value;
-        let celcius = (fahrenheit - 32) * 5 / 9;
-        document.getElementById('celcius').value = celcius;
-    }
+function fahrenheitToCelcius(){
+    let fahrenheit = document.getElementById('fahrenheit').value;
+    let celcius = (fahrenheit - 32) * 5 / 9;
+    document.getElementById('celcius').value = celcius;
+}
+```
 
 Функция `celciusToFahrenheit()` считывает значение в текстовом поле «По Цельсию», преобразует его в градусы Фаренгейта и записывает новую температуру в текстовое поле «По Фаренгейту».
 
@@ -192,7 +208,9 @@ simple-desktop-app-electronicjs — это название приложения
 
 Запустите приложение, используя следующую команду:
 
-    npm start
+```sh
+npm start
+```
 
 Должно открыться следующее окно. Попробуйте ввести разные значения в инпуты.
 
@@ -202,7 +220,9 @@ simple-desktop-app-electronicjs — это название приложения
 
 Команда для упаковки приложения:
 
-    npm run package
+```sh
+npm run package
+```
 
 Выполнение этой команды потребует некоторого времени. Как только выполнение закончится, проверьте папку out в папке проекта.
 
@@ -222,11 +242,15 @@ _При создании приложения на macOS, папка внутр�
 
 Допустим, мы хотим пакет для другой платформы и архитектуры. Тогда вы можете использовать следующий синтаксис:
 
-    npm run package -- --platform=<платформа> arch=<архитектура>
+```sh
+npm run package -- --platform=<платформа> arch=<архитектура>
+```
 
 Например, чтобы упаковать приложение для Linux, вы можете использовать следующую команду:
 
-    npm run package -- --platform=linux --arch=x64
+```sh
+npm run package -- --platform=linux --arch=x64
+```
 
 Это создаст папку с именем `simple-desktop-app-electronicjs-linux-x64` внутри папки `out`.
 
@@ -234,7 +258,9 @@ _При создании приложения на macOS, папка внутр�
 
 Чтобы создать файл `make` или установщик для приложения, используйте следующую команду:
 
-    npm run make
+```sh
+npm run make
+```
 
 Потребуется некоторое время на выполнение этой команды. Как только процесс закончится, проверьте папку `out` в папке проекта.
 

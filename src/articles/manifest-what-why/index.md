@@ -33,7 +33,9 @@ tags:
 
 Спецификация манифеста предлагает вам стандартный способ сделать это с помощью файла JSON. Просто сошлитесь на файл манифеста в HTML-странице следующим образом:
 
-    <link rel="manifest" href="/manifest.json">
+```html
+<link rel="manifest" href="/manifest.json">
+```
 
 Но что находится в этом загадочном файле манифеста? Хорошо, что вы спросили!
 
@@ -41,60 +43,66 @@ tags:
 
 Самый простой манифест может состоять всего-то из имени и одной или нескольких иконок.
 
-    {
-        "name": "Супергонщик 3000",
-        "icons": [{
-            "src": "icon/lowres.png",
-            "sizes": "64x64"
-        }]
-    }
+```json
+{
+    "name": "Супергонщик 3000",
+    "icons": [{
+        "src": "icon/lowres.png",
+        "sizes": "64x64"
+    }]
+}
+```
 
 ## Типичный манифест
 
 Более типичный манифест может выглядеть следующим образом. Имена его ключей должны говорить сами за себя, но мы подробнее опишем их использование ниже.
 
-    {
-        "lang": "ru",
-        "dir": "ltr",
-        "name": "Супергонщик 3000",
-        "description": "Потрясающая футуристичная гоночная игра из будущего!",
-        "short_name": "Гонщик3K",
-        "icons": [{
-            "src": "icon/lowres.webp",
-            "sizes": "64x64",
-            "type": "image/webp"
-        },{
-            "src": "icon/lowres.png",
-            "sizes": "64x64"
-        }, {
-            "src": "icon/hd_hi",
-            "sizes": "128x128"
-        }],
-        "scope": "/racer/",
-        "start_url": "/racer/start.html",
-        "display": "fullscreen",
-        "orientation": "landscape",
-        "theme_color": "aliceblue",
-        "background_color": "red",
-        "screenshots": [{
-            "src": "screenshots/in-game-1x.jpg",
-            "sizes": "640x480",
-            "type": "image/jpeg"
-        },{
-            "src": "screenshots/in-game-2x.jpg",
-            "sizes": "1280x920",
-            "type": "image/jpeg"
-        }]
-    }
+```json
+{
+    "lang": "ru",
+    "dir": "ltr",
+    "name": "Супергонщик 3000",
+    "description": "Потрясающая футуристичная гоночная игра из будущего!",
+    "short_name": "Гонщик3K",
+    "icons": [{
+        "src": "icon/lowres.webp",
+        "sizes": "64x64",
+        "type": "image/webp"
+    },{
+        "src": "icon/lowres.png",
+        "sizes": "64x64"
+    }, {
+        "src": "icon/hd_hi",
+        "sizes": "128x128"
+    }],
+    "scope": "/racer/",
+    "start_url": "/racer/start.html",
+    "display": "fullscreen",
+    "orientation": "landscape",
+    "theme_color": "aliceblue",
+    "background_color": "red",
+    "screenshots": [{
+        "src": "screenshots/in-game-1x.jpg",
+        "sizes": "640x480",
+        "type": "image/jpeg"
+    },{
+        "src": "screenshots/in-game-2x.jpg",
+        "sizes": "1280x920",
+        "type": "image/jpeg"
+    }]
+}
+```
 
 ## Название приложения
 
 Приложению нужно настоящее название или набор названий (которые обычно совсем не совпадают с содержимым элемента `<title>` документа). Для этого используются ключи name и short_name.
 
-    {
-        "name": "Моё вообще улётное фотоприложение",
-        "short_name": "Фотки"
-    }
+```json
+{
+    "name": "Моё вообще улётное фотоприложение",
+    "short_name": "Фотки"
+}
+```
 
 Ключ short_name служит названием приложения при отображении в условиях ограниченного пространства (например, под значком на домашнем экране телефона). Ключ name может быть немного длиннее, отображая название приложения полностью. Также он служит дополнительной информацией для пользователя, который ищет ваше приложения на телефоне. Так что, набрав «улётный» или «фото», пользователь сможет найти приложение на своем устройстве.
 
@@ -106,19 +114,21 @@ tags:
 
 Вместо обычной иконки браузера, у вашего веб-приложения должна быть иконка, которая будет с ним ассоциироваться. Для этого в манифесте есть ключ icons. Он принимает список иконок, их размеров и форматов. Это делает процесс выбора иконки очень эффективным, поскольку у иконок появляется адаптивное решение, которое позволяет избежать ненужных нагрузок и помогает иконкам всегда выглядеть отлично на широком диапазоне устройств и разрешений экрана.
 
-    {
-        "icons": [{
-            "src": "icon/lowres",
-            "sizes": "64x64",
-            "type": "image/webp"
-        }, {
-            "src": "icon/hd_small",
-            "sizes": "64x64"
-        }, {
-            "src": "icon/hd_hi",
-            "sizes": "128x128",
-        }]
-    }
+```json
+{
+    "icons": [{
+        "src": "icon/lowres",
+        "sizes": "64x64",
+        "type": "image/webp"
+    }, {
+        "src": "icon/hd_small",
+        "sizes": "64x64"
+    }, {
+        "src": "icon/hd_hi",
+        "sizes": "128x128",
+    }]
+}
+```
 
 Если вы не укажете иконки, браузер будет искать запасные варианты: `<link rel="icon">`, favicon.ico или, если не найдёт их, может даже использовать скриншот вашего сайта.
 
@@ -132,10 +142,12 @@ tags:
 
 Приложения при запуске должны иметь возможность контролировать свое отображение на экране. Если это игра, то ей, вероятно, нужно быть в полноэкранном режиме и в горизонтальной ориентации. Для этого формат манифеста предоставляет вам два ключа.
 
-    {
-        "display": "fullscreen",
-        "orientation": "landscape"
-    }
+```json
+{
+    "display": "fullscreen",
+    "orientation": "landscape"
+}
+```
 
 Доступные значения режимов отображения:
 
@@ -148,23 +160,29 @@ tags:
 
 Также вы можете применить другие стили для приложение в определённом режиме с помощью характеристики display-mode:
 
-    [@media](https://twitter.com/media) all and (display-mode: standalone) {
-        /* … */
-    }
+```css
+@media all and (display-mode: standalone){
+  /* … */
+}
+```
 
 Используйте метод window.matchMedia(), чтобы проверить это медиавыражение в JavaScript.
 
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-        // интересные модификации интерфейса
-    }
+```js
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    // интересные модификации интерфейса
+}
+```
 
 ## Стартовый адрес
 
 Иногда при запуске приложения вам нужно, чтобы пользователь всегда попадал на определенную страницу. Ключ start_url даёт возможность это указать.
 
-    {
-        "start_url": "/start_screen.html"
-    }
+```json
+{
+    "start_url": "/start_screen.html"
+}
+```
 
 ## «Область» приложения
 
@@ -176,11 +194,13 @@ tags:
 
 Формат манифеста решает эту проблему позволяя указывать «область адреса» для вашего приложения. Эта область устанавливает границы для приложения. Это может быть либо домен, либо директория на этом домене.
 
-    {
-        "scope": "/myapp"
-    }
+```json
+{
+    "scope": "/myapp"
+}
+```
 
-## Интернационализация: lang и dir
+## Интернационализация: `lang` и `dir`
 
 Нужно написать.
 
@@ -196,16 +216,18 @@ tags:
 
 Спецификация позволяет вам определить, когда пользователь устанавливает приложение с помощью регистрации события appinstalled.
 
-    function handleInstalled(ev) {
-        const date = new Date(ev.timeStamp / 1000);
-        console.log(`Ура! Установлено в ${date.toTimeString()}`);
-    }
+```js
+function handleInstalled(ev) {
+    const date = new Date(ev.timeStamp / 1000);
+    console.log(`Ура! Установлено в ${date.toTimeString()}`);
+}
 
-    // Используем атрибут IDL обработчика события
-    window.onappinstalled = handleInstalled;
+// Используем атрибут IDL обработчика события
+window.onappinstalled = handleInstalled;
 
-    // Используем .addEventListener()
-    window.addEventListener('appinstalled', handleInstalled);
+// Используем .addEventListener()
+window.addEventListener('appinstalled', handleInstalled);
+```
 
 Однако по причинам конфиденциальности вы не можете непосредственно обнаружить, установлено ли ваше приложение — только узнать, что в вашем веб-приложении используется файл манифеста.
 

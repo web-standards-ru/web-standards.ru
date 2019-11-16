@@ -43,28 +43,33 @@ _Сравнение возможностей форматов WebP, PNG, JPG, GI
 
 [Cwebp](https://www.npmjs.com/package/cwebp) — самая популярная утилита для командной строки, для преобразовать изображения в формат WebP. После установки, мы можем конвертировать изображения указав качество, входной и выходной файлы.
 
-    # cwebp -q [quality] [input_file] -o [output_file]
-
-    cwebp -q 75 image.png -o image.webp
+```sh
+# cwebp -q [quality] [input_file] -o [output_file]
+cwebp -q 75 image.png -o image.webp
+```
 
 ### Инструменты для Node.js
 
 [Imagemin](https://github.com/imagemin/imagemin), вместе с плагином [imagemin-webp](https://github.com/imagemin/imagemin-webp) — самая популярная библиотека для конвертации изображений в формат WebP. Вот пример скрипта, который преобразует в WebP все PNG- и JPG-файлы в папке.
 
-    /* convert-to-webp.js */
+```js
+/* convert-to-webp.js */
 
-    const imagemin = require("imagemin");
-    const webp = require("imagemin-webp");
+const imagemin = require("imagemin");
+const webp = require("imagemin-webp");
 
-    imagemin(["*.png", "*.jpg"], "images", {
-      use: [
-        webp({ quality: 75})
-      ]
-    });
+imagemin(["*.png", "*.jpg"], "images", {
+    use: [
+    webp({ quality: 75})
+    ]
+});
+```
 
 Теперь, мы можем использовать этот скрипт из командной строки или с помощью сборщика:
 
-    node convert-to-webp.js
+```sh
+node convert-to-webp.js
+```
 
 ### Sketch
 
@@ -84,11 +89,13 @@ _[Поддержка WebP на Can I use.](https://caniuse.com/#feat=webp)_
 
 Мы можем сделать фолбэк для WebP используя элемент `<picture>`. Этот HTML5-элемент позволяет нам добавлять несколько форматов для одной картинки.
 
-    <picture>
-        <source type="image/webp" srcset="image.webp">
-        <source type="image/jpeg" srcset="image.jpg">
-        <img src="image.jpg" alt="Моя картинка">
-    </picture>
+```html
+<picture>
+    <source type="image/webp" srcset="image.webp">
+    <source type="image/jpeg" srcset="image.jpg">
+    <img src="image.jpg" alt="Моя картинка">
+</picture>
+```
 
 Для добавления альтернативных форматов, мы используем элемент `<source>` вместе с `<picture>`. У элемента `<source>` есть несколько атрибутов, которые мы можем использовать, чтобы определить изображение и когда оно будет использовано.
 

@@ -37,24 +37,28 @@ Font Face Observer даёт вам возможность контролиров
 
 Чтобы не перегружать паттерны лишним кодом, будем считать, что вы размещаете веб-шрифты у себя. Это означает, что в ваших CSS-файлах будет одно или несколько объявлений `@font-face`, в которых указано, какие шрифты нужно загрузить через Font Face Observer. Для краткости мы не будем объявлять каждое из подобных правил в коде, но будем считать, что они есть.
 
-    @font-face {
-        font-family: Output Sans;
-        src: url(output-sans.woff2) format('woff2'),
-             url(output-sans.woff) format('woff');
-    }
+```css
+@font-face {
+    font-family: Output Sans;
+    src: url(output-sans.woff2) format('woff2'),
+            url(output-sans.woff) format('woff');
+}
+```
 
 Рассмотрим самую обычную задачу: вам надо загрузить один или несколько разных шрифтов. Создайте несколько экземпляров `FontFaceObserver`, по одному на каждый шрифт, и вызовите их метод `load`.
 
-    var output = new FontFaceObserver('Output Sans');
-    var input = new FontFaceObserver('Input Mono');
+```js
+var output = new FontFaceObserver('Output Sans');
+var input = new FontFaceObserver('Input Mono');
 
-    output.load().then(function () {
-        console.log('Загружен Output Sans');
-    });
+output.load().then(function () {
+    console.log('Загружен Output Sans');
+});
 
-    input.load().then(function () {
-        console.log('Загружен Input Mono');
-    });
+input.load().then(function () {
+    console.log('Загружен Input Mono');
+});
+```
 
 Этот способ загрузит каждый шрифт независимо от остальных. Это полезно, когда шрифты не связаны друг с другом, и мы ожидаем, что они отрисуются постепенно (т.е. как только загрузятся, так и отрисуются). В отличие от стандартного [API загрузки шрифтов](https://www.w3.org/TR/css-font-loading/) вы не передаёте URL шрифтов в Font Face Observer. Для загрузки шрифтов он использует объявления `@font-face`, уже доступные в CSS. Это позволяет загружать веб-шрифты вручную через JavaScript, предусмотрев постепенную деградацию к обычному CSS.
 
@@ -62,17 +66,19 @@ Font Face Observer даёт вам возможность контролиров
 
 Вы можете загружать несколько шрифтов одновременно, группируя их: вся группа либо загрузится полностью, либо выдаст ошибку. Это полезно использовать, когда загружаемые шрифты принадлежат к одному семейству, и вы не хотите, чтобы группа отрисовывалась, пока не загрузятся все шрифты из неё. Тем самым, браузер не будет отображать стили, пока шрифты представлены не полностью.
 
-    var normal = new FontFaceObserver('Output Sans');
-    var italic = new FontFaceObserver('Output Sans', {
-        style: 'italic'
-    });
+```js
+var normal = new FontFaceObserver('Output Sans');
+var italic = new FontFaceObserver('Output Sans', {
+    style: 'italic'
+});
 
-    Promise.all([
-        normal.load(),
-        italic.load()
-    ]).then(function () {
-        console.log('Загружено семейство Output Sans');
-    });
+Promise.all([
+    normal.load(),
+    italic.load()
+]).then(function () {
+    console.log('Загружено семейство Output Sans');
+});
+```
 
 Вы можете сгруппировать шрифты через `Promise.all`. Когда промис будет выполнен, мы будем знать, что все шрифты загружены. Если промис отклонён — как минимум один из шрифтов не смог загрузиться.
 
@@ -84,24 +90,28 @@ Font Face Observer даёт вам возможность контролиров
 
 Следующая вспомогательная функция создаёт таймеры, возвращающие промис, отклоняющийся по срабатыванию таймера.
 
-    function timer(time) {
-        return new Promise(function (resolve, reject) {
-            setTimeout(reject, time);
-        });
-    }
+```js
+function timer(time) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(reject, time);
+    });
+}
+```
 
 С помощью `Promise.race` мы можем заставить таймер и загрузку шрифта «соревноваться» друг с другом. Например, если загрузка завершилась до того, как сработал таймер, то шрифт победил, промис выполнен. А если раньше сработал таймер, промис отклонён.
 
-    var font = new FontFaceObserver('Output Sans');
+```js
+var font = new FontFaceObserver('Output Sans');
 
-    Promise.race([
-        timer(1000),
-        font.load()
-    ]).then(function () {
-        console.log('Загружен Output Sans');
-    }).catch(function () {
-        console.log('Время на загрузку Output Sans истекло');
-    });
+Promise.race([
+    timer(1000),
+    font.load()
+]).then(function () {
+    console.log('Загружен Output Sans');
+}).catch(function () {
+    console.log('Время на загрузку Output Sans истекло');
+});
+```
 
 В этом примере время загрузки шрифта ограничено одной секундой. Вместо того, чтобы работать с одним шрифтом, мы также можем назначить таймер целой группе шрифтов. Это позволит просто и эффективно ограничить время их загрузки.
 
@@ -109,16 +119,18 @@ Font Face Observer даёт вам возможность контролиров
 
 Обычно, для того, чтобы отрисовать первую половину экрана (_above the fold_ — верхняя половина первого экрана сайта, которую надо отобразить максимально быстро, _прим. переводчика_), нужно лишь несколько шрифтов. Если загружать эти шрифты раньше других, менее важных, мы получим выигрыш в производительности сайта. Это называется приоритетной загрузкой.
 
-    var primary = new FontFaceObserver('Primary');
-    var secondary = new FontFaceObserver('Secondary');
+```js
+var primary = new FontFaceObserver('Primary');
+var secondary = new FontFaceObserver('Secondary');
 
-    primary.load().then(function () {
-        console.log('Загружен основной шрифт')
+primary.load().then(function () {
+    console.log('Загружен основной шрифт')
 
-        secondary.load().then(function () {
-            console.log('Загружен второстепенный шрифт')
-        });
+    secondary.load().then(function () {
+        console.log('Загружен второстепенный шрифт')
     });
+});
+```
 
 При использовании приоритетной загрузки второстепенный шрифт зависит от основного: если не загрузится основной шрифт, то не загрузится и второстепенный. Это может оказаться полезным.
 
@@ -143,41 +155,47 @@ Internet Explorer и Edge используют FOUT и отображают з
 
 Простейший способ сделать это — устанавливать на элемент `<html>` по классу на каждое из трёх состояний загрузки веб-шрифта: сам процесс загрузки, его завершение и ошибку. Класс `fonts-loading` устанавливается сразу, как начинается загрузка, `fonts-loaded` — когда шрифт загружен, и `fonts-failed` — если загрузка не удалась.
 
-    var font = new FontFaceObserver('Output Sans');
-    var html = document.documentElement;
+```js
+var font = new FontFaceObserver('Output Sans');
+var html = document.documentElement;
 
-    html.classList.add('fonts-loading');
+html.classList.add('fonts-loading');
 
-    font.load().then(function () {
-        html.classList.remove('fonts-loading');
-        html.classList.add('fonts-loaded');
-    }).catch(function () {
-        html.classList.remove('fonts-loading');
-        html.classList.add('fonts-failed');
-    });
+font.load().then(function () {
+    html.classList.remove('fonts-loading');
+    html.classList.add('fonts-loaded');
+}).catch(function () {
+    html.classList.remove('fonts-loading');
+    html.classList.add('fonts-failed');
+});
+```
 
 При помощи этих классов и простого CSS вы можете кроссбраузерно использовать FOUT. Начнём с объявления запасных шрифтов для всех элементов, которым понадобятся веб-шрифты. Когда в `<html>` появляется класс `fonts-loaded`, мы применяем веб-шрифт, изменяя цепочку шрифтов для всех соответствующих элементов. Изменение правила в CSS заставит браузер загрузить веб-шрифт, однако, поскольку к этому моменту он уже будет загружен, перерисовка начнется практически мгновенно.
 
-    body {
-        font-family: Verdana, sans-serif;
-    }
+```css
+body {
+    font-family: Verdana, sans-serif;
+}
 
-    .fonts-loaded body {
-        font-family: Output Sans, Verdana, sans-serif;
-    }
+.fonts-loaded body {
+    font-family: Output Sans, Verdana, sans-serif;
+}
+```
 
 Такой способ загрузки шрифтов может показаться вам похожим на технику прогрессивного улучшения. Так оно и есть: _мелькание текста без стилей_ (FOUT) соответствует прогрессивному улучшению. Базовый вид в первую очередь отрисовывается запасными шрифтами, а затем улучшается веб-шрифтами.
 
 Реализация FOIT такая же простая. Когда веб-шрифты начинают загрузку, вы скрываете контент, использующий шрифты, а когда они загружены, вы показываете его снова. Не забывайте и об ошибке загрузки — контент должен быть доступен, даже если шрифты не смогли загрузиться.
 
-    .fonts-loading body {
-        visibility: hidden;
-    }
+```css
+.fonts-loading body {
+    visibility: hidden;
+}
 
-    .fonts-loaded body,
-    .fonts-failed body {
-        visibility: visible;
-    }
+.fonts-loaded body,
+.fonts-failed body {
+    visibility: visible;
+}
+```
 
 Такой способ сокрытия контента кажется вам странным? Хорошо, если так. Этот паттерн следует применять только в очень специфичных случаях. Например, если у вас нет подходящего запасного шрифта, или вы точно знаете, что шрифт был закэширован ранее.
 
@@ -187,19 +205,23 @@ Internet Explorer и Edge используют FOUT и отображают з
 
 Когда шрифт загружен, мы устанавливаем флаг в Session Storage. Флаг сохраняется на протяжении всей сессии, и с его помощью мы можем определить, находится файл в браузерном кэше или нет.
 
-    var font = new FontFaceObserver('Output Sans');
+```js
+var font = new FontFaceObserver('Output Sans');
 
-    font.load().then(function () {
-        sessionStorage.fontsLoaded = true;
-    }).catch(function () {
-        sessionStorage.fontsLoaded = false;
-    });
+font.load().then(function () {
+    sessionStorage.fontsLoaded = true;
+}).catch(function () {
+    sessionStorage.fontsLoaded = false;
+});
+```
 
 Теперь вы можете использовать эту информацию, чтобы изменить стратегию загрузки закэшированных шрифтов. Например, можно включить такой фрагмент JavaScript в элемент `<head>` вашей страницы, чтобы сразу же отрисовывать веб-шрифты.
 
-    if (sessionStorage.fontsLoaded) {
-        var html = document.documentElement;
-        html.classList.add('fonts-loaded');
-    }
+```js
+if (sessionStorage.fontsLoaded) {
+    var html = document.documentElement;
+    html.classList.add('fonts-loaded');
+}
+```
 
 Если вы будете загружать шрифты этим способом, ваши посетители увидят FOUT только при первом посещении сайта, а при всех дальнейших переходах шрифт будет отрисовываться мгновенно. А значит, с одной стороны, вы сохраните выгоды, которые даёт прогрессивное улучшение, а с другой — сделаете сайт удобным, поскольку загрузка страниц будет меньше раздражать при повторных посещениях.

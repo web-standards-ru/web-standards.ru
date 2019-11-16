@@ -31,36 +31,38 @@ _Я написала этот пост как альтернативное вв�
 
 А вот пример кода, с которым мы будем иметь дело в этой истории.
 
-    // Асинхронная операция
-    function cookBurger (type) { … }
+```js
+// Асинхронная операция
+function cookBurger (type) { … }
 
-    // Обычная операция
-    function makeMilkshake (type) { … }
+// Обычная операция
+function makeMilkshake (type) { … }
 
-    // Функция оформления заказа, возвращает промис
-    function order (type) {
-       return new Promise(function(resolve, reject) {
-          var burger = cookBurger(type)
-          burger.ready = function (err, burger) {
-             if (err) {
-                return reject(Error('Error while cooking'))
-             }
-             return resolve(burger)
-          }
-       })
-    }
+// Функция оформления заказа, возвращает промис
+function order (type) {
+    return new Promise(function(resolve, reject) {
+        var burger = cookBurger(type);
+        burger.ready = function (err, burger) {
+            if (err) {
+                return reject(Error('Error while cooking'));
+            }
+            return resolve(burger);
+        }
+    })
+}
 
-    order('JakeBurger')
-       .then( burger => {
-          const milkshake = makeMilkshake('vanila')
-          return { burger: burger, shake: milkshake }
-       })
-       .then( foodItems => {
-          console.log('BURGER PARTY !', foodItems)
-       })
-       .catch( err => {
-         console.log(err)
-       })
+order('JakeBurger')
+    .then( burger => {
+        const milkshake = makeMilkshake('vanila');
+        return { burger: burger, shake: milkshake }
+    })
+    .then( foodItems => {
+        console.log('BURGER PARTY !', foodItems);
+    })
+    .catch( err => {
+        console.log(err);
+    });
+```
 
 ### Устроим бургерную вечеринку!
 

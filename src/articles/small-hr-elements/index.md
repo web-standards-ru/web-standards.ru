@@ -25,23 +25,27 @@ tags:
 
 Теперь `<small>` применяется для пометок и является более локальным аналогом элемента `<aside>` — для второстепенной информации на странице. Типичным примером будет следующая за основным содержимым юридическая болтовня, вроде заявлений об авторском праве в подвале, отказе от ответственности, или же информации о лицензии. Он также может быть использован для указания авторства. **Не используйте его для содержимого на блочном уровне** (параграфы, списки и т.д.), иначе это будет воспринято как основное содержимое.
 
-    <p>
-        Я использую
-        <span class="museo">Museo Slab</span>,
-        <small class="font-license">
-            шрифт Жоса Буйвенга (exljbris)
-            <a href="http://www.exljbris.nl/">www.exljbris.nl</a>
-        </small>
-    </p>
+```html
+<p>
+    Я использую
+    <span class="museo">Museo Slab</span>,
+    <small class="font-license">
+        шрифт Жоса Буйвенга (exljbris)
+        <a href="http://www.exljbris.nl/">www.exljbris.nl</a>
+    </small>
+</p>
+```
 
 Использование `<small class="font-license">` для того, чтобы выполнить требования лицензионного соглашения
 
-    <small>
-        <a href="http://creativecommons.org/licenses/by-sa/3.0/"
-            rel="license">
-            Creative Commons Attribution Share-alike license
-        </a>
-    </small>
+```html
+<small>
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/"
+        rel="license">
+        Creative Commons Attribution Share-alike license
+    </a>
+</small>
+```
 
 Использование `<small>` вокруг ссылки на [Creative Commons license](http://creativecommons.org/choose/) с `rel="license"`
 
@@ -56,18 +60,20 @@ tags:
 
 <img src="images/hr-separator.png" alt="Оформление hr в виде вензеля">
 
-    hr {
-        margin: 3em 0;
-        height: 24px;
-        border: 0;
-        background: url(flourish.png) 50% 50% no-repeat;
-    }
+```css
+hr {
+    margin: 3em 0;
+    height: 24px;
+    border: 0;
+    background: url(flourish.png) 50% 50% no-repeat;
+}
+```
 
 Оформите `<hr>` красиво: уберите рамку, поля и добавьте фоновую картинку.
 
 IE7 и младше оправдывают свою дурную репутацию, добавляя рамку вокруг изображения, несмотря на наши усилия, [но и это можно исправить](http://blog.neatlysliced.com/2008/03/hr-image-replacement/). Или же вы можете просто скрыть `<hr>` в стилях для IE7 и младше. Если переход между частями содержимого очевиден или разделение чисто визуальное, а не смысловое, то вместо `<hr>` лучше нарисовать рамку или фоновую картинку на другом элементе.
 
-<img src="images/corkd.png" alt="Неподходящий случай для использования hr на Cork’d.">
+![Неподходящий случай для использования hr на Cork’d.](images/corkd.png)
 
 На [Cork’d](http://content.corkd.com/) используется декоративная фоновая картинка для заголовков. Но несмотря на обилие линеек, это совсем неподходящий случай для использования `<hr>`.
 

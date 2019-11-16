@@ -16,27 +16,33 @@ tags:
 
 Есть два варианта форматирования CSS-кода, иначе говоря, расположения правил: однострочный и многострочный, а также их комбинации. Однострочное форматирование, правила для селектора записаны в одну строку:
 
-    .example { position: absolute; top: 10px; display: block; width: 10px; height: 10px; background: url(icon.png) no-repeat }
+```css
+.example { position: absolute; top: 10px; display: block; width: 10px; height: 10px; background: url(icon.png) no-repeat }
+```
 
 Многострочное форматирование, каждая пара `свойство: значение` на новой строке:
 
-    .example {
-        position: absolute;
-        top: 10px;
-        display: block;
-        width: 10px;
-        height: 10px;
-        background: url(icon.png) no-repeat;
-    }
+```css
+.example {
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(icon.png) no-repeat;
+}
+```
 
 Однострочный способ хорош в «наборах», «батареях» селекторов с одинаковыми свойствами. Например, там, где одно свойство принимает разные значения:
 
-    .tag-cloud .xs    { font-size: 0.5em }
-    .tag-cloud .s     { font-size: 0.75em }
-    .tag-cloud .m     { font-size: 1em }
-    .tag-cloud .l     { font-size: 1.25em }
-    .tag-cloud .xl    { font-size: 1.5em }
-    .tag-cloud .xxl   { font-size: 1.75em }
+```css
+.tag-cloud .xs    { font-size: 0.5em }
+.tag-cloud .s     { font-size: 0.75em }
+.tag-cloud .m     { font-size: 1em }
+.tag-cloud .l     { font-size: 1.25em }
+.tag-cloud .xl    { font-size: 1.5em }
+.tag-cloud .xxl   { font-size: 1.75em }
+```
 
 Многострочный: перфекционистский, безопасный, наглядный. Давайте разберем по порядку все его преимущества.
 
@@ -56,36 +62,44 @@ tags:
 
 Например, довольно трудно найти отдельный элемент этого списка:
 
-    Я полюбил { Машеньку: болтушку; Юшечку: тихоню; Лизоньку: умницу; Алиночку: скромницу; }
+```css
+Я полюбил { Машеньку: болтушку; Юшечку: тихоню; Лизоньку: умницу; Алиночку: скромницу; }
+```
 
 Гораздо проще найти нужный нам пункт в таком виде:
 
-    Я полюбил {
-        Машеньку: болтушку;
-        Юшечку: тихоню;
-        Лизоньку: умницу;
-        Алиночку: скромницу;
-    }
+```css
+Я полюбил {
+    Машеньку: болтушку;
+    Юшечку: тихоню;
+    Лизоньку: умницу;
+    Алиночку: скромницу;
+}
+```
 
 Не нужно думать, что HTML-верстка это нечто обособленное в плане написания кода. Обратите внимание на практики, которые используют программисты, пишущие на JavaScript, PHP или Perl. Пара `свойство:значение` в CSS — это объявление той же переменной, только с ограниченным вариантом значений.
 
 Пример JavaScript-кода:
 
-    function example() {
-        var position = 'absolute', display = 'block', width = 10, height = 10, background = 'icon.png';
-        // …
-    }
+```js
+function example() {
+    var position = 'absolute', display = 'block', width = 10, height = 10, background = 'icon.png';
+    // …
+}
+```
 
 То же самое, но в традиционном для JavaScript стиле форматирования:
 
-    function example() {
-        var position = 'absolute',
-            display = 'block',
-            width = 10,
-            height = 10,
-            background = 'icon.png';
-        // …
-    }
+```js
+function example() {
+    var position = 'absolute',
+        display = 'block',
+        width = 10,
+        height = 10,
+        background = 'icon.png';
+    // …
+}
+```
 
 Теперь давайте вернёмся и еще раз перечитаем как [сформулирована цель №2](#target-2): ключевое слово _«свойства»_. Нам не так часто приходится править селектор или расположение блоков с селекторами, но очень часто приходится править набор правил, иметь ввиду значение свойств, следить, какие уже объявлены, а каких еще нет. Именно поэтому важно **сконцентрировать** свое внимание на наборе правил.
 

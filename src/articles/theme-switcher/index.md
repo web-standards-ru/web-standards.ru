@@ -27,9 +27,11 @@ tags: article
 
 В случае со светлой темой (чаще всего это тёмный текст на светлом фоне) самым разумным будет создать не полностью новую таблицу стилей, а расширить существующие стили настолько, насколько это возможно. К счастью, в CSS есть свойство `filter`, которое позволяет инвертировать цвета. Хотя его часто связывают с изображениями, оно может быть применено к любому элементу, включая `<html>`:
 
-    :root {
-      filter: invert(100%);
-    }
+```css
+:root {
+    filter: invert(100%);
+}
+```
 
 **Примечание**: далеко не все браузеры поддерживают сокращённую запись `invert()`. Используйте `100%` для лучшей поддержки.
 
@@ -37,22 +39,25 @@ tags: article
 
 Это легко исправить, присвоив для `background-color` светлый цвет.
 
-    :root {
-       background-color: #fefefe;
-       filter: invert(100%);
-    }
-
+```css
+:root {
+    background-color: #fefefe;
+    filter: invert(100%);
+}
+```
 
 Но у нас всё ещё остаётся проблема с дочерним элементом, у которого также нет цвета фона. И это тот случай, когда нам пригодится ключевое слово из CSS — `inherit`.
 
-    :root {
-       background-color: #fefefe;
-       filter: invert(100%);
-    }
+```css
+:root {
+    background-color: #fefefe;
+    filter: invert(100%);
+}
 
-    * {
-       background-color: inherit;
-    }
+* {
+    background-color: inherit;
+}
+```
 
 На первый взгляд может показаться, что мы обладаем слишком большими возможностями, но не стоит переживать: у селектора `*` очень низкая специфичность. Он влияет только на цвет фона для элементов, для которых он ещё не задан. На практике `#fefefe` — это просто фолбэк.
 
@@ -60,18 +65,20 @@ tags: article
 
 Когда мы хотим инвертировать тему, то, скорее всего, не собираемся инвертировать растровые изображения или видео. В противном случае интерфейс будет заполнен жуткими негативами. Хитрость заключается в дважды инвертированных `<img>`. Селектор, который я использую, исключает SVG-изображения. Они, как правило, легко и просто инвертируются из-за того, что представлены в виде простых цветовых схем.
 
-    :root {
-       background-color: #fefefe;
-       filter: invert(100%);
-    }
+```css
+:root {
+    background-color: #fefefe;
+    filter: invert(100%);
+}
 
-    * {
-       background-color: inherit;
-    }
+* {
+    background-color: inherit;
+}
 
-    img:not([src*=".svg"]), video {
-       filter: invert(100%);
-    }
+img:not([src*=".svg"]), video {
+    filter: invert(100%);
+}
+```
 
 Получилось 153 байта без сжатия: об этом позаботилась поддержка тёмных тем. Если вы всё ещё не не уверены, то вот стили, которые используются на популярных новостных сайтах:
 
@@ -95,64 +102,73 @@ tags: article
 
 Если у вас ещё не настроено окружение для React, то можете легко это сделать, установив `create-react-app`.
 
-    npm i -g create-react-app
-    create-react-app theme-switch
-    cd theme-switch
-    npm start
+```sh
+npm i -g create-react-app
+create-react-app theme-switch
+cd theme-switch
+npm start
+```
 
 Теперь заготовка приложения будет работать на `localhost:3000`. В новом проекте `theme-switch` наш компонент называется **ThemeSwitch** и будет добавлен в `render()` в `App.js` как `<ThemeSwitch/>`.
 
-    class App extends Component {
-      render() {
+```jsx
+class App extends Component {
+    render() {
         return (
-          <div className="App">
-            <div className="App-header">
-              <img src={logo} className="App-logo" alt="лого"/>
-              <h2>Добро пожаловать в React</h2>
+            <div className="App">
+                <div className="App-header">
+                    <img src={logo} className="App-logo" alt="лого"/>
+                    <h2>Добро пожаловать в React</h2>
+                </div>
+                <p className="App-intro">
+                    Чтобы начать, отредактируйте {gfm-js-extract-pre-1}
+                    и сохраните для перезагрузки.
+                </p>
+                <ThemeSwitch/>
             </div>
-            <p className="App-intro">
-              Чтобы начать, отредактируйте {gfm-js-extract-pre-1}
-              и сохраните для перезагрузки.
-            </p>
-            <ThemeSwitch/>
-          </div>
         );
-      }
     }
+}
+```
 
 **Примечание**: я ленивый, поэтому оставляю заготовку. Чтобы протестировать переключатель тем, добавьте его вместе со стилизованным контентом, взятым из другого проекта. Вы можете включить CSS в `App.css`.
 
 Не забудьте импортировать компонент **ThemeSwitch** в начале файла `App.js`:
 
-    import ThemeSwitch from './components/ThemeSwitch'
-
+```jsx
+import ThemeSwitch from './components/ThemeSwitch'
+```
 
 ## Файл основы компонента
 
 Как следует из пути в строке с импортом выше, мы будем работать с файлом `ThemeSwitch.js`, размещённом в новой папке «components». Так что нужно создать папку и файл. Основа для **ThemeSwitch** выглядит так:
 
-    import React, { Component } from 'react';
+```jsx
+import React, { Component } from 'react';
 
-    class ThemeSwitch extends Component {
-      render() {
-        // Разметка компонента в JSX
-      }
+class ThemeSwitch extends Component {
+    render() {
+    // Разметка компонента в JSX
     }
-    export default ThemeSwitch;
+}
+export default ThemeSwitch;
+```
 
 После рендеринга разметка переключателя, имеющего неактивное состояние и состояние по умолчанию, будет выглядеть таким образом (примечания после этого фрагмента кода):
 
-    <div>
-       <button aria-pressed="false">
-          тёмная тема:
-          <span aria-hidden="true">выключить</span>
-       </button>
-       <style media="none">
-          html { filter: invert(100%); background: #fefefe }
-          * { background-color: inherit }
-          img:not([src*=".svg"]), video { filter: invert(100%) }
-       </style>
-    </div>
+```jsx
+<div>
+    <button aria-pressed="false">
+        тёмная тема:
+        <span aria-hidden="true">выключить</span>
+    </button>
+    <style media="none">
+        html { filter: invert(100%); background: #fefefe }
+        * { background-color: inherit }
+        img:not([src*=".svg"]), video { filter: invert(100%) }
+    </style>
+</div>
+```
 
 - Не все переключатели создаются одинаково. В этом случае мы используем `aria-pressed` для переключения доступного состояния, и явных «включена» и «выключена» для тех, кто не пользуется скринридерами. Так что часть компонента с «включена» или «выключена» не объявляется. Чтобы не было конфликта между этими состояниями, она скрыта от вспомогательных технологий при помощи `aria-hidden`. Пользователи скринридеров услышат: _«кнопка переключения тёмной темы, не нажата»_, _«кнопка переключения тёмной темы, нажата»_ или что-то похожее на это.
 - CSS настолько лаконичен, что можно использовать его в инлайновом виде. Зададим `media="none"` или `media="screen"`, когда включена тёмная тема.
@@ -163,80 +179,95 @@ tags: article
 
 Наш компонент будет хранить текущее состояние. Это позволит пользователю переключаться между активным и неактивным состояниями тёмной темы. Сначала мы инициализируем состояние в конструкторе компонента:
 
-    constructor(props) {
-       super(props);`
+```jsx
+constructor(props) {
+    super(props);
 
-       this.state = {
-          active: 'false'
-       };
-    }
+    this.state = {
+        active: 'false'
+    };
+}
+```
 
 Чтобы оживить компонент, включим вспомогательную функцию `isActive()`, а также `toggle()`, которая фактически переключает состояние:
 
-    isActive = () => this.state.active;`
-      toggle = () => {
-        this.setState({
-          active: !this.isActive()
-        });
-      }
-
+```jsx
+isActive = () => this.state.active;
+toggle = () => {
+    this.setState({
+        active: !this.isActive()
+    });
+}
+```
 
 **Примечание**: стрелочные функции неявно возвращают отдельные операторы, отсюда и краткость функции `isActive()`.
 
 В `render()` для компонента мы можем использовать `isActive()` для переключения значения `aria-pressed`, текста кнопки и значения CSS-атрибута `media`:
 
-    return (
-      <div>
+```jsx
+return (
+    <div>
         <button aria-pressed={this.isActive()} onClick={this.toggle}>
-          тёмная тема:
-          <span aria-hidden="true">
-            {this.isActive() ? 'включена' : 'выключена'}
-          </span>
+            тёмная тема:
+            <span aria-hidden="true">
+                {this.isActive() ? 'включена' : 'выключена'}
+            </span>
         </Button>
         <style media={this.isActive() ? 'screen' : 'none'}>
-          {this.css}
+            {this.css}
         </style>
-      </div>
-    );
+    </div>
+);
+```
 
 ![Конечно, когда выбрана тёмная тема, то сама кнопка тоже инвертирована.](images/aria-pressed-state-example.png)**Конечно, когда выбрана тёмная тема, то сама кнопка тоже инвертирована.**
 
 Обратите внимание на часть с `{this.css}`. JSX напрямую не поддерживает встроенный CSS, поэтому мы должны сохранить его в переменной и ввести здесь динамически. В конструкторе:
 
-    this.css = `
-    html { filter: invert(100%); background: #fefefe; }
-    * { background-color: inherit }
-    img:not([src*=".svg"]), video { filter: invert(100%) }`;
+```jsx
+this.css = `
+html { filter: invert(100%); background: #fefefe; }
+* { background-color: inherit }
+img:not([src*=".svg"]), video { filter: invert(100%) }`;
+```
 
 ### Боремся с проблемами браузеров
 
 К сожалению, не во всех браузерах применяются нужные стили, когда переключаешься между `media="none"` и `media="screen"`. Для того, чтобы вызвать перерисовку, мы должны перезаписать текстовое содержимое тега `<style>`. Самый простой способ, который я нашёл, — это использовать метод `trim()`. Любопытно, что он нужен только для Chrome.
 
-    {this.isActive() ? this.css.trim() : this.css}
+```jsx
+{this.isActive() ? this.css.trim() : this.css}
+```
 
 ## Сохраняем настройки темы
 
 Для того, чтобы сохранить выбор темы, сделанный пользователем, нам нужно использовать `localStorage` и методы жизненного цикла. Во-первых, я задал алиасы для `localStorage` в конструкторе. Это устраняет ошибки линтинга, которые возникают при прямом вызове `localStorage`.
 
-    this.store = typeof localStorage === 'undefined' ? null : localStorage;
+```jsx
+this.store = typeof localStorage === 'undefined' ? null : localStorage;
+```
 
 Используя метод `componentDidMount`, я могу отследить и применить сохранённые настройки после того, как компонент подключится. В выражении по умолчанию используется значение `false`, если элемент ещё не создан.
 
-    componentDidMount() {
-      if (this.store) {
+```jsx
+componentDidMount() {
+    if (this.store) {
         this.setState({
-          active: this.store.getItem('ThemeSwitch') || false
+            active: this.store.getItem('ThemeSwitch') || false
         });
-      }
     }
+}
+```
 
 Так как управление состоянием в React происходит асинхронно, недостаточно просто сохранять изменённое состояние после того, как оно было дополнено. Вместо этого мне нужно использовать метод `componentDidUpdate`:
 
-    componentDidUpdate() {
-      if (this.store) {
+```jsx
+componentDidUpdate() {
+    if (this.store) {
         this.store.setItem('ThemeSwitch', this.state.active);
-      }
     }
+}
+```
 
 ## Скрываем в неподдерживаемых браузерах
 
@@ -244,57 +275,64 @@ tags: article
 
 Если вы когда-нибудь имели дело с [Modernizr](https://modernizr.com/), то могли бы использовать похожий тест свойства и его значения для CSS. Однако не стоит его здесь использовать, поскольку мы не хотим, чтобы наш компонент имел какие-либо зависимости, если в этом нет необходимости.
 
-    invertSupported (property, value) {
-      var prop = property + ':',
-          el = document.createElement('test'),
-          mStyle = el.style;
-      el.style.cssText = prop + value;
-      return mStyle[property];
-    }
+```jsx
+invertSupported (property, value) {
+    var prop = property + ':',
+        el = document.createElement('test'),
+        mStyle = el.style;
+    el.style.cssText = prop + value;
+    return mStyle[property];
+}
 
-    componentDidMount() {
-      if (this.store) {
+componentDidMount() {
+    if (this.store) {
         this.setState({
-          supported: this.invertSupported('filter', 'invert(100%)'),
-          active: this.store.getItem('ThemeSwitch') || false
+            supported: this.invertSupported('filter', 'invert(100%)'),
+            active: this.store.getItem('ThemeSwitch') || false
         });
-      }
     }
+}
+```
 
 Это можно использовать в нашем JSX для того, чтобы скрыть компонент интерфейса с помощью свойства `hidden` там, где оно не поддерживается.
 
-    <div hidden={!this.state.supported}>
-      <!-- контент компонента -->
-    </div>
+```html
+<div hidden={!this.state.supported}>
+    <!-- контент компонента -->
+</div>
+```
 
 В современных браузерах свойство `hidden` скроет компонент от вспомогательных технологий и запретит делать на них фокус с клавиатуры. Для того, чтобы в старых браузерах оно тоже работало, используйте в стилях этот селектор:
 
-    [hidden] {
-      display: none;
-    }
+```css
+[hidden] {
+    display: none;
+}
+```
 
 В качестве альтернативы вы можете вообще отказаться от отображения содержимого компонента на странице, возвращая `null`.
 
-    render() {
-      if (!this.supported) {
+```jsx
+render() {
+    if (!this.supported) {
         return null;
-      }
-
-      return (
-        <div>
-          <button aria-pressed={this.state.active}
-                  onClick={this.toggle}>
-            inverted theme:
-            <span aria-hidden="true">
-              {this.state.active ? 'on' : 'off'}
-            </span>
-          </button>
-          <style media={this.state.active ? 'screen' : 'none'}>
-            {this.state.active ? this.css.trim() : this.css}
-          </style>
-        </div>
-      );
     }
+
+    return (
+        <div>
+            <button aria-pressed={this.state.active} onClick={this.toggle}>
+                inverted theme:
+                <span aria-hidden="true">
+                    {this.state.active ? 'on' : 'off'}
+                </span>
+            </button>
+            <style media={this.state.active ? 'screen' : 'none'}>
+                {this.state.active ? this.css.trim() : this.css}
+            </style>
+        </div>
+    );
+}
+```
 
 ## Режим высокой контрастности в Windows
 
@@ -304,7 +342,7 @@ tags: article
 - Для инлайновых SVG-иконок используйте значение `currentColor` в `fill` и `stroke`. Благодаря этому цвет иконки будет меняться вместе с цветом окружающего текста при включении высококонтрастной темы.
 - Если вам нужно определить WHCM, чтобы добавить улучшения, вы можете использовать следующий медиазапрос:
 
-```
+```css
 @media (-ms-high-contrast: active) {
     /* Относящийся к WHCM код */
 }
@@ -316,14 +354,18 @@ tags: article
 
 В нашем случае, почему бы нам не сделать так, чтобы у Implementor был выбор: действительно ли сохранить растровые изображения или инвертировать их вместе со всем остальным контентом. Я создам проп `preserveRasters`, который принимает значения «true» или «false». Вот как это выглядит на примере нашего компонента:
 
-    <ThemeSwitch preserveRasters={false} />
+```jsx
+<ThemeSwitch preserveRasters={false} />
+```
 
 Я могу запросить этот проп в виде строки CSS и повторно инвертировать изображения, если её значение равно `true`:
 
-    this.css = `
-      html { filter: invert(100%); background: #fefefe; }
-      * { background-color: inherit }
-      ${this.props.preserveRasters === 'true' ? `img:not([src*=".svg"]), video { filter: invert(100%) }` : ``}`;
+```jsx
+this.css = `
+    html { filter: invert(100%); background: #fefefe; }
+    * { background-color: inherit }
+    ${this.props.preserveRasters === 'true' ? `img:not([src*=".svg"]), video { filter: invert(100%) }` : ``}`;
+```
 
 **Примечание**: допустимо, хотя и немного некрасиво, использовать таким образом тернарные операторы для интерполяции строк.
 
@@ -331,17 +373,21 @@ tags: article
 
 Чтобы сделать компонент более надёжным и дать Implementor возможность пропустить атрибут, мы также можем добавить `defaultProp`. После определения класса компонента можно использовать следующее:
 
-    ThemeSwitch.defaultProps = { preserveRasters: true }
+```jsx
+ThemeSwitch.defaultProps = { preserveRasters: true }
+```
 
 ## Устанавливаем компонент
 
 Пример [такого компонента](https://github.com/Heydon/react-theme-switch) есть в NPM:
 
-    npm i --save react-theme-switch
+```sh
+npm i --save react-theme-switch
+```
 
 Помимо этого, простой пример с JavaScript, в основе которого лежит чекбокс, есть на [СodePen](https://codepen.io/heydon/pen/Vzyrre):
-<iframe src="https://codepen.io/heydon/pen/Vzyrre"></iframe>
 
+<iframe src="https://codepen.io/heydon/pen/Vzyrre"></iframe>
 
 ## Расположение
 
