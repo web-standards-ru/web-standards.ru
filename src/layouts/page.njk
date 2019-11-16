@@ -13,15 +13,15 @@
     {% include '../images/blob.svg' %}
     <section class="page__navigation">
         <div class="navigation__logo logo">
-            <img class="logo__logotype" src="/images/logo.svg" width="40" height="40" alt="Логотип Веб-стандартов">
-            <p class="logo__title">
-                {% if page.url != '/' %}<a href="/">{% endif %}
+            {% if page.url != '/' %}<a class="logo__link" href="/">{% endif %}
+                <img class="logo__icon" src="/images/logo.svg" width="40" height="40" alt="Логотип Веб-стандартов">
+                <p class="logo__title">
                     Веб-стандарты
-                {% if page.url != '/' %}</a>{% endif %}
-            </p>
-            <p class="logo__tagline">
-                Сообщество разработчиков
-            </p>
+                </p>
+                <p class="logo__tagline">
+                    Сообщество разработчиков
+                </p>
+            {% if page.url != '/' %}</a>{% endif %}
         </div>
         <nav class="navigation__bar">
             <button class="navigation__button"
