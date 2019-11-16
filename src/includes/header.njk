@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__logo logo">
-        {% if page.url != '/' %}<a class="logo__link" href="/">{% endif %}
+        <a class="logo__link"{% if page.url != '/' %} href="/"{% endif %}>
             <img class="logo__icon" src="/images/logo.svg" width="40" height="40" alt="Логотип Веб-стандартов">
             <p class="logo__title">
                 Веб-стандарты
@@ -8,7 +8,7 @@
             <p class="logo__tagline">
                 Сообщество разработчиков
             </p>
-        {% if page.url != '/' %}</a>{% endif %}
+        </a>
     </div>
     <ul class="header__informer informer">
         <li class="informer__item informer__item--wave">
