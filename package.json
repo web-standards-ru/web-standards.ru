@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "start": "npx eleventy --serve --quiet",
-    "build": "npx eleventy --quiet",
-    "validate": "npx --quiet html-validator-cli --format=text --verbose --quiet",
-    "test": "stylelint 'src/styles/**/*.css' && remark 'src/articles/**/*.md' --quiet",
-    "w3c-validator": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH"
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy --quiet",
+    "css": "stylelint 'src/styles/**/*.css'",
+    "markdown": "remark 'src/articles/**/*.md' --quiet",
+    "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
+    "test": "npm run css && npm run markdown"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
@@ -169,10 +170,20 @@
     },
     "plugins": [
       "remark-frontmatter",
-      ["remark-lint-emphasis-marker"],
-      ["remark-lint-strong-marker"],
-      ["remark-lint-unordered-list-marker-style", "-"],
-      ["remark-lint-code-block-style", "fenced"]
+      [
+        "remark-lint-emphasis-marker"
+      ],
+      [
+        "remark-lint-strong-marker"
+      ],
+      [
+        "remark-lint-unordered-list-marker-style",
+        "-"
+      ],
+      [
+        "remark-lint-code-block-style",
+        "fenced"
+      ]
     ]
   }
 }

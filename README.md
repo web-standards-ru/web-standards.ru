@@ -1,4 +1,7 @@
-# Веб-стандарты ![](https://github.com/web-standards-ru/nouvelle/workflows/CI/badge.svg)
+# Веб-стандарты
+![](https://github.com/web-standards-ru/nouvelle/workflows/CSS/badge.svg)
+![](https://github.com/web-standards-ru/nouvelle/workflows/Markdown/badge.svg)
+![](https://github.com/web-standards-ru/nouvelle/workflows/HTML/badge.svg)
 
 Новый сайт сообщества: статьи, конференция, календарь, подкаст и всё остальное.
 
