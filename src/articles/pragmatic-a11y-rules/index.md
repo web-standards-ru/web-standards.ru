@@ -68,7 +68,7 @@ tags:
 
 Если хотите больше об этом узнать, то рекомендую пройти на Udacity бесплатный курс [Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891) от Google. Это видео из курса, которое рассказывает об этих видах нарушений:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LdVlbO7_hz8" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LdVlbO7_hz8" allowfullscreen></iframe>
 
 ### Хорошо, как обеспечить поддержку доступности?
 

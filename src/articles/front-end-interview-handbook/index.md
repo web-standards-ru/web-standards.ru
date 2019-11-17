@@ -154,7 +154,7 @@ tags:
 - [Stack Overflow: Script Tag — async & defer](https://stackoverflow.com/questions/10808109/script-tag-async-defer).
 - [Asynchronous vs Deferred JavaScript](https://bitsofco.de/async-vs-defer/).
 
-### Почему хорошей практикой считается располагать `<link>` для подключения CSS между `<head></head>`, а `<script>` для подключения JS ставить перед </body>? Знаете ли вы исключения?
+### Почему хорошей практикой считается располагать `<link>` для подключения CSS между `<head></head>`, а `<script>` для подключения JS ставить перед `</body>`? Знаете ли вы исключения?
 
 ### Размещение `<link>` внутри `<head>`
 

@@ -462,7 +462,7 @@ exampleMenuButton.open();
 
 Забавы ради, [вот CodePen c кнопкой меню без JavaScript](https://codepen.io/heydon/pen/afdeffcc8a349ab8138e32573ec85cd3).
 
-<iframe src="https://medium.com/media/03d2ec33ba6feba09a1a7971cb794343" frameborder=0></iframe>
+<iframe src="https://medium.com/media/03d2ec33ba6feba09a1a7971cb794343"></iframe>
 
 **Примечание**: меню открывает только пробел.
 
@@ -553,7 +553,7 @@ exampleMenuButton.addEventListener('choose', function (e) {
 
 В этом видео я покажу вам как использовать кнопку меню в VoiceOver и Chrome. В примере используются элементы с ролью `menuitemradio`, атрибутом `aria-checked` и обсуждается поведение кнопки при фокусе. Таким образом ведут себя и другие популярные скринридеры.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Aw_HMHdId88" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Aw_HMHdId88" allowfullscreen></iframe>
 
 ### Расшифровка
 
