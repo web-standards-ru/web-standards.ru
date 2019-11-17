@@ -10,7 +10,7 @@ tags: article
 
 ## Разбираем законы и стандарты по веб-доступности
 
-![](images/a11y-and-law.png)
+<img src="images/a11y-and-law.png" alt="">
 
 Часто встречаю комментарии о том, что доступность не нужна. «Зачем мне думать о слепых пользователях, их же мало!». «Зачем людям с инвалидностью интернет?». «А что мне за это будет? В чём выгода?». Тысячи их.
 
@@ -41,7 +41,10 @@ tags: article
 
 ## Евросоюз
 
-![Фото [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) (Unsplash).](images/europe-flag.jpg)_Фото [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) (Unsplash)._
+<figure>
+    <img src="images/europe-flag.jpg" alt="">
+    <figcaption>Фото <a href="https://unsplash.com/@markusspiske">Markus Spiske</a>.</figcaption>
+<figure>
 
 Принятие законов о доступности в Европе запустила [Конвенция ООН о защите прав людей с инвалидностью](https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html) (Convention on the Rights of Persons with Disabilities — CRPD). Она принята в 2006 году и запрещает дискриминацию людей с инвалидностью.
 
@@ -158,8 +161,12 @@ tags: article
 
 European Accessibility Act — EAA
 
-![Доступность для **всех**. С [edf-feph.org](http://www.edf-feph.org/european-accessibility-act-1).](images/accessibility-for-all.jpg)
-_Доступность для **всех**. С [edf-feph.org](http://www.edf-feph.org/european-accessibility-act-1)._
+<figure>
+    <img src="images/accessibility-for-all.jpg" alt="">
+    <figcaption>
+        Доступность для <strong>всех</strong>. С <a href="http://www.edf-feph.org/european-accessibility-act-1">edf-feph.org</a>.
+    </figcaption>
+<figure>
 
 Закон утверждён Европарламентом в Страсбурге весной 2019 года. Сейчас дорабатывается.
 
@@ -257,8 +264,12 @@ Standard EN 301 549 — EN 301 549
 
 ## США
 
-![Фото [Matthis Volquardsen](https://www.pexels.com/ru-ru/@einfoto?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) (Pexels).](images/usa-flag.jpg)
-_Фото [Matthis Volquardsen](https://www.pexels.com/ru-ru/@einfoto?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) (Pexels)._
+<figure>
+    <img src="images/usa-flag.jpg" alt="">
+    <figcaption>
+        Фото <a href="https://www.pexels.com/@einfoto">Matthis Volquardsen</a>.
+    </figcaption>
+<figure>
 
 Если вы интересуетесь темой доступности, то скорее всего уже что-то слышали о двух американских законах: Разделе 508 и ADA. Давайте их разберём.
 
@@ -316,8 +327,13 @@ Section 508, 508 Compliance
 
 ### Что, если я его нарушу?
 
-![В любой статье о законах должна быть картинка с молотком судьи. Фото [Pixabay](https://www.pexels.com/ru-ru/@pixabay?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) (Pexels).](images/gavel.jpg)
-_В любой статье о законах должна быть картинка с молотком судьи. Фото [Pixabay](https://www.pexels.com/ru-ru/@pixabay?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) (Pexels)._
+<figure>
+    <img src="images/gavel.jpg" alt="">
+    <figcaption>
+        В любой статье о законах должна быть картинка с молотком судьи. Фото <a href="https://www.pexels.com/@pixabay">Pixabay</a>.
+    </figcaption>
+<figure>
+
 
 Требования «Раздела 508» жёстче, чем у других американских законов.
 
@@ -432,8 +448,12 @@ ADA — это закон, который защищает права людей
 
 ## Россия
 
-![Фото [Ajinkya Tandle](https://www.pexels.com/ru-ru/@ajtandle?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) (Pexels).](images/russia-flag.jpg)
-_Фото [Ajinkya Tandle](https://www.pexels.com/ru-ru/@ajtandle?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) (Pexels)._
+<figure>
+    <img src="images/russia-flag.jpg" alt="">
+    <figcaption>
+        Фото <a href="https://www.pexels.com/@ajtandle">Ajinkya Tandle</a>.
+    </figcaption>
+<figure>
 
 Веб-доступность в России регулируется тремя законодательными актами и одним стандартом:
 
@@ -546,8 +566,12 @@ _Фото [Ajinkya Tandle](https://www.pexels.com/ru-ru/@ajtandle?utm_content=at
 
 На самом деле мы снова встретим требования из [WCAG 2.0](https://www.w3.org/TR/WCAG20/), которые ограничиваются _отдельной_ версией сайта для слепых и слабовидящих.
 
-![На [сайте Роскосмоса](https://www.roscosmos.ru/) что-то пошло не так.](images/special-roscosmos-site.png)
-_На [сайте Роскосмоса](https://www.roscosmos.ru/) что-то пошло не так._
+<figure>
+    <img src="images/special-roscosmos-site.png" alt="">
+    <figcaption>
+        На <a href="https://www.roscosmos.ru/">сайте Роскосмоса</a> что-то пошло не так.
+    </figcaption>
+<figure>
 
 ### Что, если я его нарушу?
 
@@ -601,8 +625,12 @@ _На [сайте Роскосмоса](https://www.roscosmos.ru/) что-то �
 
 ГОСТ Р 52872–2012 Интернет-ресурсы. Требования доступности для инвалидов по зрению
 
-![Таблица Снеллена. Фото [David Travis](https://unsplash.com/@dtravisphd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) (Unsplash).](images/snellen-chart.jpg)
-_Таблица Снеллена. Фото [David Travis](https://unsplash.com/@dtravisphd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) (Unsplash)._
+<figure>
+    <img src="images/snellen-chart.jpg" alt="">
+    <figcaption>
+        Таблица Снеллена. Фото <a href="https://unsplash.com/@dtravisphd">David Travis</a>.
+    </figcaption>
+<figure>
 
 Введён в 2014 после ратификации Россией в мае 2012 года [Конвенции о правах людей с инвалидностью](https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html), содержит рекомендации о доступности сайтов и их контента.
 

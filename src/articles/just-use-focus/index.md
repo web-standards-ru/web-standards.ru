@@ -16,7 +16,7 @@ tags:
   - a11y
 ---
 
-![If it’s interactive, it needs a focus style](images/1.png)
+<img src="images/1.png" alt="If it’s interactive, it needs a focus style.">
 
 За последнее время появилось несколько статей и рекомендаций от разных людей о том, как использовать псевдокласс `:focus-visible`, чтобы показать стили для `:focus`, когда кто-то пользуется клавиатурой, и скрывать их, если пользователь использует мышь.
 

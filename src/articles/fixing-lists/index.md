@@ -17,7 +17,7 @@ tags:
   - a11y
 ---
 
-![](images/1.png)
+<img src="images/1.png" alt="">
 
 [Джерард К. Коэн](https://twitter.com/gerardkcohen) в сентябре 2017 опубликовал на Unfettered Thoughts [статью о том](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/), как пропадает семантика у списков в VoiceOver и Safari (Webkit; macOS и iOS), когда используется свойство `list-style: none`. И это происходит не только из-за `list-style: none`, но и при использования любых CSS-свойств, которые убирают маркеры или нумерацию у элементов списка.
 
@@ -110,11 +110,11 @@ ul {
 
 После добавления `list-style: url(…)` для существующего селектора списка навигации, в верхней части каждого пункта в Internet Explorer 11 и Edge 42 появился отступ:
 
-![](images/2.jpg)
+<img src="images/2.jpg" alt="">
 
 При отключении `list-style` отступ исчезает и навигация отображается так, как нужно.
 
-![](images/3.jpg)
+<img src="images/3.jpg" alt="">
 
 Я предполагаю, что в моём CSS есть что-то другое, что приводит к появлению этих отступов. При [использовании этой техники](https://codepen.io/scottohara/pen/JweKEp) в более простых, но похожих наборах правил, он не появляется.
 

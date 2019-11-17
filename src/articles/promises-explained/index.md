@@ -16,8 +16,12 @@ tags:
   - js
 ---
 
-![](images/1.jpg)
-_Ай промис, фото [Бена Уайта](https://unsplash.com/photos/tX4-tYibILg)._
+<figure>
+    <img src="images/1.jpg" alt="">
+    <figcaption>
+        Ай промис, фото <a href="https://unsplash.com/photos/tX4-tYibILg">Бена Уайта</a>.
+    </figcaption>
+</figure>
 
 ## Промисы простыми словами
 
@@ -85,8 +89,12 @@ promise.then(function(result) {
 2. Успешное выполнение: `resolve`.
 3. Выход ошибкой: `reject`.
 
-![](images/2.jpg)
-_Промис успешно выполнился, [фото Скотта Вебба](https://www.pexels.com/photo/man-couple-love-people-136402/)._
+<figure>
+    <img src="images/2.jpg" alt="">
+    <figcaption>
+        Промис успешно выполнился, <a href="https://www.pexels.com/photo/man-couple-love-people-136402/">фото Скотта Вебба</a>.
+    </figcaption>
+</figure>
 
 ## Пример
 

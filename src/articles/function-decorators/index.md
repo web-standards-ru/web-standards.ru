@@ -15,8 +15,12 @@ tags:
   - js
 ---
 
-![Фото [Calum Lewis](https://unsplash.com/photos/rkT_TG5NKF8).](images/1.jpg)
-_Фото [Calum Lewis](https://unsplash.com/photos/rkT_TG5NKF8)._
+<figure>
+    <img src="images/1.jpg" alt="">
+    <figcaption>
+        Фото <a href="https://unsplash.com/photos/rkT_TG5NKF8">Calum Lewis</a>.
+    </figcaption>
+<figure>
 
 > Декораторы — это функции высшего порядка, которые принимают в качестве аргумента одну функцию и возвращают другую. Возвращаемая функция является преобразованным вариантом функции-аргумента [Javascript Allongé](https://leanpub.com/javascript-allonge/read#decorators)
 

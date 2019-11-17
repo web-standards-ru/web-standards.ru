@@ -12,7 +12,12 @@ tags:
 
 Что происходит при копировании текста с `text-transform`.
 
-![Alphabet, Le Bistronome (CC BY-NC 2.0)](images/1.jpg)
+<figure>
+    <img src="images/1.jpg" alt="">
+    <figcaption>
+        Alphabet, Le Bistronome (CC BY-NC 2.0)
+    </figcaption>
+</figure>
 
 В CSS есть свойство [`text-transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform). С помощью него можно менять регистр текста: можно преобразовать текст в ПРОПИСНЫЕ, строчные или Капитализировать Только Первые Буквы Слов. Это делается значениями `uppercase`, `lowercase` и `capitalize`, соответственно. Помимо них есть значения `full-width` и `full-size-kana`, про которые мы в этот раз говорить не будем.
 
@@ -40,7 +45,11 @@ tags:
 
 В результате обсуждений в рабочей группе, в 2018 году было принято решение: [дополнить стандарт CSS](https://github.com/w3c/csswg-drafts/commit/f736e8e1b9812a9e854d03328a0acca827310801) указанием, что свойство `text-transform` не должно влиять на копируемый текст.
 
-![Коммит, который вносит изменения в стандарт.](images/2.png)
-_Коммит, который вносит изменения в стандарт._
+<figure>
+    <img src="images/2.png" alt="">
+    <figcaption>
+        Коммит, который вносит изменения в стандарт.
+    </figcaption>
+</figure>
 
 Сейчас баг в Firefox закрыт как «wontfix», баг в WebKit по-прежнему открыт. Но уже можно надеяться, что скоро его поправят, и копирование текста с `text-transform` начнет работать во всех браузерах одинаково.

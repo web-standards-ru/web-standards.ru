@@ -13,7 +13,7 @@ layout: article.njk
 tags: article
 ---
 
-![](images/black-and-white-themes.png)
+<img src="images/black-and-white-themes.png" alt="">
 
 Моя мантра при создании веб-интерфейсов: «Если нельзя сделать это грамотно, не делай это вообще». Я учил людей [писать как можно меньше дурацкого кода](https://vimeo.com/190834530) в Великобритании, Европе и Китае. Если фича может быть реализована только при значительном снижении производительности, то конечный результат будет отрицательным: так что от такой фичи следует отказаться. Насколько важна в вебе производительность.
 
@@ -82,11 +82,19 @@ img:not([src*=".svg"]), video {
 
 Получилось 153 байта без сжатия: об этом позаботилась поддержка тёмных тем. Если вы всё ещё не не уверены, то вот стили, которые используются на популярных новостных сайтах:
 
-![The Boston Globe и The Independent.](images/the-boston-globe-and-independent.png)
-**The Boston Globe и The Independent.**
+<figure>
+    <img src="images/the-boston-globe-and-independent.png" alt="">
+    <figcaption>
+        The Boston Globe и The Independent.
+    </figcaption>
+</figure>
 
-![The New York Times и Private Eye.](images/the-ny-times-and-private-eye.png)
-**The New York Times и Private Eye.**
+<figure>
+    <img src="images/the-ny-times-and-private-eye.png" alt="">
+    <figcaption>
+        The New York Times и Private Eye.
+    </figcaption>
+</figure>
 
 ## Компонент переключения темы
 
@@ -220,7 +228,12 @@ return (
 );
 ```
 
-![Конечно, когда выбрана тёмная тема, то сама кнопка тоже инвертирована.](images/aria-pressed-state-example.png)**Конечно, когда выбрана тёмная тема, то сама кнопка тоже инвертирована.**
+<figure>
+    <img src="images/aria-pressed-state-example.png" alt="">
+    <figcaption>
+        Конечно, когда выбрана тёмная тема, то сама кнопка тоже инвертирована.
+    </figcaption>
+</figure>
 
 Обратите внимание на часть с `{this.css}`. JSX напрямую не поддерживает встроенный CSS, поэтому мы должны сохранить его в переменной и ввести здесь динамически. В конструкторе:
 

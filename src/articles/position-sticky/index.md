@@ -22,7 +22,7 @@ tags:
 
 Во-вторых, многие разработчики до конца не понимают логику, по которой это свойство работает. И тут появляюсь я!
 
-![](images/1.png)
+<img src="images/1.png" alt="">
 
 Я полагаю, что вы хорошо знакомы с позиционированием в CSS, но давайте кратко повторим основные моменты:
 
@@ -72,6 +72,7 @@ tags:
 Когда я добавлял больше элементов внутрь родителя-обёртки всё начинало работать как ожидалось.
 
 **Почему так происходит?**
+
 Причина кроется в том, что элемент с `position: sticky` может перемещаться только в пределах контейнера, в котором находится. А поскольку в моём случае он был единственным ребёнком, у него не было элементов-братьев, поверх которых он мог перемещаться.
 
 ### Как на самом деле работает position: sticky в CSS
@@ -98,11 +99,14 @@ tags:
 
 Наглядный пример:
 
-![](images/2.png)
+<img src="images/2.png" alt="">
 
-[Пример на CodePen:](https://codepen.io/elad2412/pen/QYLEdK)
-
-<iframe src="https://codepen.io/elad2412/embed/preview/MZZVjw"></iframe>
+<figure>
+    <iframe src="https://codepen.io/elad2412/embed/preview/MZZVjw"></iframe>
+    <figcaption>
+        <a href="https://codepen.io/elad2412/pen/QYLEdK">Пример на CodePen</a>.
+    </figcaption>
+</figure>
 
 ### Понимание «липкого» поведения
 
@@ -148,9 +152,12 @@ CSS
 }
 ```
 
-[Живой пример на CodePen:](https://codepen.io/elad2412/pen/MZZVjw)
-
-<iframe src="https://codepen.io/elad2412/embed/preview/MZZVjw"></iframe>
+<figure>
+    <iframe src="https://codepen.io/elad2412/embed/preview/MZZVjw"></iframe>
+    <figcaption>
+        <a href="https://codepen.io/elad2412/pen/MZZVjw">Пример на CodePen</a>.
+    </figcaption>
+</figure>
 
 В реальной жизни я использую такое поведение для сводных таблиц. И, я думаю, с помощью этого приёма можно реализовать «липкую» навигацию в футере.
 
@@ -164,8 +171,12 @@ position: -webkit-sticky; /* Safari */
 position: sticky;
 ```
 
-![Более 86% браузеров поддерживает sticky по данным Can I Use](images/3.png)
-_Более 86% браузеров поддерживает sticky по данным [Can I Use](https://caniuse.com/#search=sticky)_
+<figure>
+    <img src="images/3.png" alt="">
+    <figcaption>
+        Более 86% браузеров поддерживает sticky по данным <a href="https://caniuse.com/#search=sticky">Can I Use</a>.
+    </figcaption>
+</figure>
 
 ## В заключении
 
@@ -174,11 +185,7 @@ _Более 86% браузеров поддерживает sticky по данн
 ### Другие мои посты о CSS
 
 - [New CSS Logical Properties!](https://medium.com/@elad/new-css-logical-properties-bc6945311ce7)
-
 - [Becoming a CSS Grid Ninja!](https://medium.com/@elad/becoming-a-css-grid-ninja-f4c6db018cc1)
-
 - [The New Responsive Design Evolution](https://medium.com/@elad/the-new-responsive-design-evolution-2bfb9b504a4e)
-
 - [The Best Way to RTL Websites with SASS!](https://medium.com/@elad/the-best-way-to-rtl-your-website-with-sass-105e34a4298a)
-
 - [CSS Architecture for Multiple Websites With SASS](https://medium.com/@elad/css-architecture-for-multiple-websites-with-sass-7e923fc53f7a)
