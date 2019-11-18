@@ -175,11 +175,6 @@
 
 .navigation__item--patreon {
     margin: auto 0 0;
-    padding-left: 33px;
-    background-image: url('/images/patreon.svg');
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    background-size: 27px 27px;
 }
 
 @media (min-width: 769px) {
@@ -206,10 +201,14 @@
 }
 
 .navigation__link--patreon {
-    padding: 2px 0;
+    padding: 3px 0 3px 33px;
     font-size: 12px;
     line-height: 1.2;
     letter-spacing: -0.01em;
+    background-image: url('/images/patreon.svg');
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 27px 27px;
 }
 
 @media (min-width: 769px) {
