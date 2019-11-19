@@ -1,6 +1,6 @@
 .article {
     font-size: 12px;
-    line-height: 1.3em;
+    line-height: 1.3;
     letter-spacing: -0.02em;
 }
 
@@ -27,7 +27,7 @@
     min-height: 3.6em;
     margin: 16px;
     font-size: 21px;
-    line-height: 1.2em;
+    line-height: 1.2;
     letter-spacing: 0.03em;
 }
 
