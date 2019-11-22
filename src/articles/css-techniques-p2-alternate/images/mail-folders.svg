@@ -1,37 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="248" height="100">
+    <style>
+        svg {
+            font: 13px Arial,sans-serif;
+        }
 
-<style>
-svg {
-    font: 13px Arial,sans-serif;
-}
-.n {
-    font: 11px Verdana,sans-serif;
-    text-anchor: end;
-}
-</style>
-
-<linearGradient id="a" x2="0" y2="1">
-    <stop stop-color="#B4C4E2"/>
-    <stop offset="1" stop-color="#869DCA"/>
-</linearGradient>
-<path d="M240 0h-240v25h240l7.75-12.5z" fill="url(#a)"/>
-
-<filter id="s"><feGaussianBlur stdDeviation=".5"/></filter>
-<g fill="#FFF" font-weight="700">
-    <g fill="#6B7995" filter="url(#s)">
-        <text x="12" y="18">Входящие</text>
-        <text x="232" y="18" class="n">31</text>
+        .n {
+            font: 11px Verdana,sans-serif;
+            text-anchor: end;
+        }
+    </style>
+    <linearGradient id="a" x2="0" y2="1">
+        <stop stop-color="#B4C4E2"/>
+        <stop offset="1" stop-color="#869DCA"/>
+    </linearGradient>
+    <path d="M240 0h-240v25h240l7.75-12.5z" fill="url(#a)"/>
+    <filter id="s"><feGaussianBlur stdDeviation=".5"/></filter>
+    <g fill="#FFF" font-weight="700">
+        <g fill="#6B7995" filter="url(#s)">
+            <text x="12" y="18">Входящие</text>
+            <text x="232" y="18" class="n">31</text>
+        </g>
+        <text x="12" y="17">Входящие</text>
+        <text x="232" y="17" class="n">31</text>
     </g>
-    <text x="12" y="17">Входящие</text>
-    <text x="232" y="17" class="n">31</text>
-</g>
-
-<text x="25" y="43">Рассылка о полезных мел…</text>
-<text x="12" y="69">Отправленные</text>
-<text x="12" y="95" fill="#A3A7B7">Черновики</text>
-<g fill="#A3A7B7">
-    <text x="232" y="43" class="n">532</text>
-    <text x="232" y="69" class="n">2</text>
-</g>
-
+    <text x="25" y="43">Рассылка о полезных мел…</text>
+    <text x="12" y="69">Отправленные</text>
+    <text x="12" y="95" fill="#A3A7B7">Черновики</text>
+    <g fill="#A3A7B7">
+        <text x="232" y="43" class="n">532</text>
+        <text x="232" y="69" class="n">2</text>
+    </g>
 </svg>

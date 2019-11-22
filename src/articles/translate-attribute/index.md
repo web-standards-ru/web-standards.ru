@@ -6,13 +6,13 @@ source:
     title: 'HTML5 adds new translate attribute'
     url: 'http://rishida.net/blog/?p=831'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
+    - article
+    - html
 ---
 
 В HTML5 недавно [добавился новый атрибут](http://dev.w3.org/html5/spec/global-attributes.html#the-translate-attribute) — `translate`. На трёх [семинарах MultilingualWeb](http://multilingualweb.eu/), которые мы провели за последние два года, идея такого булева флага — «переводить или не переводить» постоянно вызывает довольно большой интерес у локализаторов, создателей текста, и всех тех, кто работает с языковыми технологиями.

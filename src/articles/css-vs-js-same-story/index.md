@@ -6,12 +6,12 @@ source:
     title: 'We’re seeing the same thing today…'
     url: 'https://twitter.com/tobie/status/1083316137826365442'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
-  - js
+    - article
+    - css
+    - js
 ---
 
 Мы видим ту же ситуацию с CSS, которую видели с HTML и JS раньше — она привела к текущей ситуацией с JS-фреймворками. Тред👇

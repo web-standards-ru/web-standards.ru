@@ -1,24 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="167" fill="none">
-
-<path d="M2.5 2.5h245v162h-245z" stroke="#E0E0E0" stroke-width="5"/>
-
-<path d="M5.5 5.5h76v76h-76z" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3"/>
-<path d="M13 13h61v61h-61z" fill="#EAEAEA"/>
-<path d="M14 14l59 59m-59 0l59-59" stroke="#CCC"/>
-<path d="M13.5 13.5h60v60h-60z" stroke="#000"/>
-
-<path d="M82.5 5.5v156h162v-156z" stroke="#FF69B4"/>
-
-<text x="86" y="19" style="fill: #000; font: 11px Arial,sans-serif">
-    Образец текста в блоке,
-    <tspan x="86" dy="17">имеющим свойство</tspan>
-    <tspan x="86" dy="17">overflow: hidden. Блок</tspan>
-    <tspan x="86" dy="17">уменьшает свою ширину</tspan>
-    <tspan x="86" dy="17">под действием обтекаемого</tspan>
-    <tspan x="86" dy="17">элемента, и текст</tspan>
-    <tspan x="86" dy="17">отображается ровной</tspan>
-    <tspan x="86" dy="17">колонкой даже будучи ниже</tspan>
-    <tspan x="86" dy="17">обтекаемого блока.</tspan>
-</text>
-
+    <path d="M2.5 2.5h245v162h-245z" stroke="#E0E0E0" stroke-width="5"/>
+    <path d="M5.5 5.5h76v76h-76z" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3"/>
+    <path d="M13 13h61v61h-61z" fill="#EAEAEA"/>
+    <path d="M14 14l59 59m-59 0l59-59" stroke="#CCC"/>
+    <path d="M13.5 13.5h60v60h-60z" stroke="#000"/>
+    <path d="M82.5 5.5v156h162v-156z" stroke="#FF69B4"/>
+    <text x="86" y="19" style="fill: #000; font: 11px Arial, sans-serif">
+        Образец текста в блоке,
+        <tspan x="86" dy="17">имеющим свойство</tspan>
+        <tspan x="86" dy="17">overflow: hidden. Блок</tspan>
+        <tspan x="86" dy="17">уменьшает свою ширину</tspan>
+        <tspan x="86" dy="17">под действием обтекаемого</tspan>
+        <tspan x="86" dy="17">элемента, и текст</tspan>
+        <tspan x="86" dy="17">отображается ровной</tspan>
+        <tspan x="86" dy="17">колонкой даже будучи ниже</tspan>
+        <tspan x="86" dy="17">обтекаемого блока.</tspan>
+    </text>
 </svg>

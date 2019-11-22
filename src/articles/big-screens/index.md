@@ -6,16 +6,16 @@ source:
     title: 'Surveying the Big Screen'
     url: 'http://alistapart.com/article/surveying-the-big-screen'
 translators:
-  - natasha-arefyeva
+    - natasha-arefyeva
 editors:
-  - yuliya-bukhvalova
-  - vadim-makeev
-  - olga-aleksashenko
+    - yuliya-bukhvalova
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - design
-  - typography
+    - article
+    - design
+    - typography
 ---
 
 Прошло больше трёх лет с тех пор, как [адаптивный веб-дизайн](http://alistapart.com/article/responsive-web-design) начал появляться в наших портфолио. Сегодня мы имеем солидный набор решений для создания сайтов, достойно отображающихся на маленьких устройствах. А как насчёт больших экранов?

@@ -6,15 +6,15 @@ source:
     title: 'Tips for making interactive elements accessible on mobile devices'
     url: 'https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/'
 translators:
-  - alena-batickaya
+    - alena-batickaya
 editors:
-  - natalya-ryzhova
-  - vadim-makeev
+    - natalya-ryzhova
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - a11y
+    - article
+    - html
+    - a11y
 ---
 
 [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/) (WCAG) — это набор правил для создания доступных сайтов. Вторая версия была опубликована в 2008 году, еще перед тем, как стало возможно просматривать сайты на мобильных устройствах.

@@ -3,6 +3,7 @@
   "scripts": {
     "start": "eleventy --serve --quiet",
     "build": "eleventy --quiet",
+    "editorconfig": "editorconfig-checker",
     "css": "stylelint 'src/styles/**/*.css'",
     "markdown": "remark 'src/articles/**/*.md' --quiet",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
@@ -10,6 +11,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
+    "editorconfig-checker": "^3.0.3",
     "node-w3c-validator": "^1.6.0",
     "pretty-data": "^0.40.0",
     "remark-cli": "^7.0.0",

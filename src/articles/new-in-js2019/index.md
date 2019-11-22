@@ -6,13 +6,13 @@ source:
     title: 'What’s New in JavaScript for 2019'
     url: 'https://developer.okta.com/blog/2019/01/22/whats-new-in-es2019'
 translators:
-  - alena-batickaya
+    - alena-batickaya
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
+    - article
+    - js
 ---
 
 <img src="images/1.jpg" alt="">

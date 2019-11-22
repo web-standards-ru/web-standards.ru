@@ -6,13 +6,13 @@ source:
     title: 'Understanding CSS’s vertical-align property'
     url: 'http://www.impressivewebs.com/css-vertical-align/'
 translators:
-  - andrey-motoshin
+    - andrey-motoshin
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
+    - article
+    - css
 ---
 
 «Опять `vertical-align` не работает!» — вздохнёт веб-разработчик.

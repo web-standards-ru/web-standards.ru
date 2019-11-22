@@ -6,15 +6,15 @@ source:
     title: 'Tooltips & Toggletips'
     url: 'https://inclusive-components.design/tooltips-toggletips/'
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
-  - a11y
+    - article
+    - html
+    - css
+    - a11y
 ---
 
 <img src="images/cover.png" alt="">

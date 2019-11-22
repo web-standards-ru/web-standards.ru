@@ -6,13 +6,13 @@ source:
     title: 'Easily center text vertically, with SVG!'
     url: 'http://lea.verou.me/2013/03/easily-center-text-vertically-with-svg/'
 translators:
-  - anton-nemtsev
+    - anton-nemtsev
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
+    - article
+    - js
 ---
 
 Существует множество способов вертикального выравнивания текста в контейнере произвольных размеров:

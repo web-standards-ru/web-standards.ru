@@ -6,14 +6,14 @@ source:
     title: 'Why and how to use WebP images today'
     url: 'https://bitsofco.de/why-and-how-to-use-webp-images-today/'
 translators:
-  - vladislav-ermolin
+    - vladislav-ermolin
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
-  - performance
+    - article
+    - js
+    - performance
 ---
 
 [WebP](https://developers.google.com/speed/webp/) — формат графики, разработанный Google в 2010. Он был создан, как альтернатива PNG и JPG, и отличается от них гораздо меньшим размером при том же качестве изображения.

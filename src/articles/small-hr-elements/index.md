@@ -6,11 +6,11 @@ source:
     title: 'The small & hr elements'
     url: 'https://html5doctor.com/small-hr-element/'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
+    - article
+    - html
 ---
 
 Не так давно мы писали [о презентационных элементах `<i>` и `<b>`](/articles/i-b-em-strong-elements/) из HTML4, возродившихся к новой семантической жизни. Другие два элемента, которые претерпели изменения, чтобы получить значения в HTML5 — это `<small>` и `<hr>`:

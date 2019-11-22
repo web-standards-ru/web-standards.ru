@@ -6,15 +6,15 @@ source:
     title: 'Why Sass?'
     url: 'http://alistapart.com/article/why-sass'
 translators:
-  - natasha-arefyeva
+    - natasha-arefyeva
 editors:
-  - yuliya-bukhvalova
-  - vadim-makeev
-  - olga-aleksashenko
+    - yuliya-bukhvalova
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - css
+    - article
+    - css
 ---
 
 Я не хотел верить в Sass. «Я пишу стили руками! Мне не нужна помощь. Я не хочу усложнять мой рабочий процесс! Отстаньте от меня!»

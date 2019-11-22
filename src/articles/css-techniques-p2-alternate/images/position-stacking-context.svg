@@ -1,44 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="457" height="125">
+    <style>
+        text {
+            font: 12px Consolas, monospace;
+        }
 
-<style>
-text {
-    font: 12px Consolas, monospace;
-}
-.b {
-    stroke-width: 2;
-    fill-opacity: .5;
-}
-.r {
-    text-anchor: end;
-}
-</style>
+        .b {
+            stroke-width: 2;
+            fill-opacity: .5;
+        }
 
-<g id="c1">
-    <path d="M1 1h113v113h-113z" fill="#FFB6C1" stroke="#F88379" class="b"/>
-    <path d="M2.5 30.5v25h115v-25z" id="s" fill="#FFF" stroke="#404040" stroke-dasharray="3 2" stroke-dashoffset="1.5"/>
-    <text x="5" y="46">z-index: -1</text>
-    <use xlink:href="#s" x="5" y="20" />
-    <text x="11" y="66">z-index: 3</text>
-    <use xlink:href="#s" x="10" y="40" />
-    <text x="16" y="86">z-index: 5</text>
-</g>
-<text x="6.5" y="15.5">z-index: 1</text>
+        .r {
+            text-anchor: end;
+        }
+    </style>
+    <g id="c1">
+        <path d="M1 1h113v113h-113z" fill="#FFB6C1" stroke="#F88379" class="b"/>
+        <path d="M2.5 30.5v25h115v-25z" id="s" fill="#FFF" stroke="#404040" stroke-dasharray="3 2" stroke-dashoffset="1.5"/>
+        <text x="5" y="46">z-index: -1</text>
+        <use xlink:href="#s" x="5" y="20" />
+        <text x="11" y="66">z-index: 3</text>
+        <use xlink:href="#s" x="10" y="40" />
+        <text x="16" y="86">z-index: 5</text>
+    </g>
+    <text x="6.5" y="15.5">z-index: 1</text>
 
-<g id="c2">
-    <path d="M107 11h113v113h-113z" fill="#CCF" stroke="#6495ED" class="b"/>
-    <use xlink:href="#s" x="101" y="5" />
-    <text x="215" y="51" class="r">z-index: -2</text>
-    <use xlink:href="#s" x="95" y="25" />
-    <text x="209" y="71" class="r">z-index: 0</text>
-    <use xlink:href="#s" x="89" y="45" />
-    <text x="203" y="91" class="r">z-index: 5</text>
-</g>
-<text x="214.5" y="25.5" class="r">z-index: 2</text>
-
-<use xlink:href="#c2" x="236"/>
-<text x="450.5" y="25.5" class="r">z-index: 1</text>
-
-<use xlink:href="#c1" x="236" />
-<text x="242.5" y="15.5">z-index: 2</text>
-
+    <g id="c2">
+        <path d="M107 11h113v113h-113z" fill="#CCF" stroke="#6495ED" class="b"/>
+        <use xlink:href="#s" x="101" y="5" />
+        <text x="215" y="51" class="r">z-index: -2</text>
+        <use xlink:href="#s" x="95" y="25" />
+        <text x="209" y="71" class="r">z-index: 0</text>
+        <use xlink:href="#s" x="89" y="45" />
+        <text x="203" y="91" class="r">z-index: 5</text>
+    </g>
+    <text x="214.5" y="25.5" class="r">z-index: 2</text>
+    <use xlink:href="#c2" x="236"/>
+    <text x="450.5" y="25.5" class="r">z-index: 1</text>
+    <use xlink:href="#c1" x="236" />
+    <text x="242.5" y="15.5">z-index: 2</text>
 </svg>

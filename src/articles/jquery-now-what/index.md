@@ -6,14 +6,14 @@ source:
     title: 'I know jQuery. Now what?'
     url: 'http://remysharp.com/2013/04/19/i-know-jquery-now-what/'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
-  - olga-aleksashenko
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - js
+    - article
+    - js
 ---
 
 На конференции jQuery UK 2013 я делал доклад под названием «[Я знаю jQuery. И что?](https://speakerdeck.com/rem/i-know-jquery-now-what)». Обычно я готовлюсь, устраивая взрыв из стикеров на своём столе, но в этот раз я сперва написал пост, а потом уже сделал слайды. Итак, вот мой практически не отредактированный и немного путаный рассказ о том, как я работал с jQuery, и как я смотрю на использование встроенных браузерных технологий.

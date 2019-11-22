@@ -3,13 +3,13 @@ title: 'Svable — простая генерация SVG на сервере'
 date: 2013-12-13
 author: ilya-zayats
 editors:
-  - vadim-makeev
-  - olga-aleksashenko
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - js
-  - svg
+    - article
+    - js
+    - svg
 ---
 
 _Мы начинаем серию статей, в которых вы можете рассказать о своём сервисе или разработке, которые могут быть полезны для фронтенд-разработчиков. Есть о чём рассказать? Пишите нам на [wst@web-standards.ru](mailto:wst@web-standards.ru). Редакция._

@@ -1,19 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="510" height="38" style="font: 12px Arial,sans-serif">
-
-<path fill="#F33" d="M29 4H18.46c-0.33 6.48-0.63 13.07-2.04 20.05c-0.62 2.81-1.49 5.86-3.49 8.04c-2.02 2.17-5.16 2.64-7.86 1.67l0.62-4.03c5.77 1.45 6.74-8.45 7.22-12.12C13.65 11.91 13.86 6.14 14 0h20v34h-5z"/>
-<path fill="#FB3" d="M53 8.75a11.9 12.75 0 1 1 0 25.5a11.9 12.75 0 1 1 0-25.5m0 3.74a7.25 9.15 0 1 0 0 18.3a7.25 9.15 0 1 0 0-18.3"/>
-<path fill="#1940FF" d="M72 9v25h5V13h12v-4z"/>
-<path fill="#4DBF4C" d="M103 8.75a11.9 12.75 0 1 1 0 25.5a11.9 12.75 0 1 1 0-25.5m0 3.74a7.25 9.15 0 1 0 0 18.3a7.25 9.15 0 1 0 0-18.3"/>
-
-<linearGradient id="m" x2="0" y2="1">
-    <stop stop-color="#F8F8F8"/>
-    <stop offset="1" stop-color="#D8D8D8"/>
-</linearGradient>
-<rect x="134.5" y="7.5" width="370" height="27" rx="13.5" fill="url(#m)" stroke="#CCC"/>
-<path d="M315.5 8v26m107-26v26" stroke="#FFF" stroke-opacity=".5"/>
-<path d="M314.5 8v26m107-26v26" stroke="#CCC"/>
-<text x="147" y="25">Константин Костатинопол…</text>
-<text x="326" y="25">Сообщения (3)</text>
-<text x="433" y="25">Настройки</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="510" height="38" style="font: 12px Arial, sans-serif">
+    <path fill="#F33" d="M29 4H18.46c-0.33 6.48-0.63 13.07-2.04 20.05c-0.62 2.81-1.49 5.86-3.49 8.04c-2.02 2.17-5.16 2.64-7.86 1.67l0.62-4.03c5.77 1.45 6.74-8.45 7.22-12.12C13.65 11.91 13.86 6.14 14 0h20v34h-5z"/>
+    <path fill="#FB3" d="M53 8.75a11.9 12.75 0 1 1 0 25.5a11.9 12.75 0 1 1 0-25.5m0 3.74a7.25 9.15 0 1 0 0 18.3a7.25 9.15 0 1 0 0-18.3"/>
+    <path fill="#1940FF" d="M72 9v25h5V13h12v-4z"/>
+    <path fill="#4DBF4C" d="M103 8.75a11.9 12.75 0 1 1 0 25.5a11.9 12.75 0 1 1 0-25.5m0 3.74a7.25 9.15 0 1 0 0 18.3a7.25 9.15 0 1 0 0-18.3"/>
+    <linearGradient id="m" x2="0" y2="1">
+        <stop stop-color="#F8F8F8"/>
+        <stop offset="1" stop-color="#D8D8D8"/>
+    </linearGradient>
+    <rect x="134.5" y="7.5" width="370" height="27" rx="13.5" fill="url(#m)" stroke="#CCC"/>
+    <path d="M315.5 8v26m107-26v26" stroke="#FFF" stroke-opacity=".5"/>
+    <path d="M314.5 8v26m107-26v26" stroke="#CCC"/>
+    <text x="147" y="25">Константин Костатинопол…</text>
+    <text x="326" y="25">Сообщения (3)</text>
+    <text x="433" y="25">Настройки</text>
 </svg>

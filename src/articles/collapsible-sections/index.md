@@ -6,9 +6,9 @@ source:
     title: 'Collapsible Sections'
     url: https://inclusive-components.design/collapsible-sections/
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags: article
 ---

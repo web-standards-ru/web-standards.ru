@@ -6,14 +6,14 @@ source:
     title: 'Just use :focus styles, damnit'
     url: 'https://gomakethings.com/just-use-focus-styles-damnit/'
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
-  - a11y
+    - article
+    - css
+    - a11y
 ---
 
 <img src="images/1.png" alt="If it’s interactive, it needs a focus style.">

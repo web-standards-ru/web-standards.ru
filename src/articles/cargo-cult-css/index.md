@@ -6,15 +6,15 @@ source:
     title: 'Cargo Cult CSS'
     url: 'http://www.kapowaz.net/articles/cargo-cult-css'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
-  - olga-aleksashenko
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
+    - article
+    - html
+    - css
 ---
 
 Все согласны с тем, что лучше иметь какую-то методологию для написания и поддержки CSS, чем не иметь никакой вовсе. Тем не менее, некоторые популярные среди разработчиков практики ухудшают как семантику кода, так и возможность его долгосрочной поддержки. Я хотел бы рассказать о проблемах с «методологиями фреймворков» CSS, и о том, как мы, веб-разработчики, можем разрешить эти проблемы.

@@ -6,16 +6,16 @@ source:
     title: 'CSS: A New Kind Of JavaScript'
     url: 'https://medium.com/p/fcf730d33ce7'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 editors:
-  - olga-aleksashenko
-  - andrey-melikhov
+    - olga-aleksashenko
+    - andrey-melikhov
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
-  - js
+    - article
+    - html
+    - css
+    - js
 ---
 
 Те из вас, кто знаком с веб-платформой, наверняка наслышаны и о двух дополнительных технологиях: **HTML** для структуризации документов и **JavaScript** для интерактивности и стилизации.

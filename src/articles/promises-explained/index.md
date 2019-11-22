@@ -7,13 +7,13 @@ source:
     title: 'JavaScript: promises explained with simple real life analogies'
     url: 'https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138'
 translators:
-  - artur-khrabrov
+    - artur-khrabrov
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
+    - article
+    - js
 ---
 
 <figure>

@@ -6,15 +6,15 @@ source:
     title: 'Menus & menu buttons'
     url: 'https://inclusive-components.design/menus-menu-buttons/'
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
-  - a11y
+    - article
+    - html
+    - css
+    - a11y
 ---
 
 <img src="images/cover.png" alt="">

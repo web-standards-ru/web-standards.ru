@@ -6,13 +6,13 @@ source:
     title: 'Linear gradient keywords'
     url: 'http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
+    - article
+    - css
 ---
 
 Использование линейных градиентов в CSS может приводить к самым разнообразным результатам, которые не назовёшь иначе как странными; иногда даже сам синтаксис кажется странным.

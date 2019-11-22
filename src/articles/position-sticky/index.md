@@ -6,14 +6,14 @@ source:
     title: 'CSS position: sticky — how it really works!'
     url: 'https://medium.com/p/54cd01dc2d46'
 translators:
-  - alena-batickaya
+    - alena-batickaya
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
+    - article
+    - html
+    - css
 ---
 
 У `position: sticky` уже очень неплохая браузерная поддержка, но большинство разработчиков так и не используют это свойство.

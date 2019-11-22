@@ -6,14 +6,14 @@ source:
     title: 'How to build a responsive grid system'
     url: 'https://zellwk.com/blog/responsive-grid-system/'
 translators:
-  - igor-lesnevskii
+    - igor-lesnevskii
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
+    - article
+    - html
+    - css
 ---
 
 Адаптивная сетка — один из лучших инструментов для создания уникального дизайна. Вы можете настроить всё, что нужно — количество и ширину колонок, отступы и даже контрольные точки, при достижении которых перестраивается раскладка страницы.

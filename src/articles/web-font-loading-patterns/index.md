@@ -6,16 +6,16 @@ source:
     title: 'Web font loading patterns'
     url: 'https://www.bramstein.com/writing/web-font-loading-patterns.html'
 translators:
-  - andrey-alexeev
+    - andrey-alexeev
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
-  - js
-  - performance
+    - article
+    - html
+    - css
+    - js
+    - performance
 ---
 
 _Загрузка веб-шрифтов может показаться сложной задачей. Однако, на самом деле, она довольно проста, если вы будете использовать описанные ниже паттерны. Комбинируя их, вы сможете управлять загрузкой веб-шрифтов во всех браузерах._

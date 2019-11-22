@@ -6,14 +6,14 @@ source:
     title: 'Learning to Love the Boring Bits of CSS'
     url: 'http://www.alistapart.com/articles/love-the-boring-bits-of-css/'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
-  - typography
+    - article
+    - css
+    - typography
 ---
 
 В будущем CSS есть много того, чего нам стоит ожидать с нетерпением: с одной стороны, там будет целый спектр новых методов, которые произведут революцию в вёрстке; с другой стороны — новый набор графических эффектов, которые позволят создавать на лету фильтры и шейдеры. Людям всё это страшно нравится, в журналах и блогах пишется огромное количество статей об этих нововведениях.

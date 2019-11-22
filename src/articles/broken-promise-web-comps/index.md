@@ -6,14 +6,14 @@ source:
     title: 'The broken promise of Web Components'
     url: 'https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/'
 translators:
-  - vladislav-pocheptsov
+    - vladislav-pocheptsov
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - js
+    - article
+    - html
+    - js
 ---
 
 <img src="images/cover.jpg" alt="Чёрно-белая фотография паутины.">

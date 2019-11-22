@@ -6,15 +6,15 @@ source:
     title: 'HTML5 — Check it Before you Wreck it with Mike™ Smith'
     url: 'https://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/'
 translators:
-  - maxim-usachev
-  - ilya-streltsin
+    - maxim-usachev
+    - ilya-streltsin
 editors:
-  - vadim-makeev
-  - olga-aleksashenko
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - html
+    - article
+    - html
 ---
 
 [Майк™ Смит](http://people.w3.org/mike/) (известный как [@sideshowbarker](https://twitter.com/sideshowbarker)) из W3C — человек, с головой увязший в исходном коде инструмента W3C для _проверки <del>валидности</del> разметки_; эта _магия_ работает именно благодаря ему. Вопросы были заданы на радость и в назидание читателю сайта.

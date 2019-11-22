@@ -6,13 +6,13 @@ source:
     title: 'Fetch vs. Axios.js for making HTTP requests'
     url: 'https://medium.com/p/2b261cdd3af5'
 translators:
-  - artur-khrabrov
+    - artur-khrabrov
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
+    - article
+    - js
 ---
 
 <figure>

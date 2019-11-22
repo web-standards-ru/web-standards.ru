@@ -6,13 +6,13 @@ source:
     title: 'New CSS Logical Properties!'
     url: 'https://medium.com/p/bc6945311ce7'
 translators:
-  - alena-batickaya
+    - alena-batickaya
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
+    - article
+    - css
 ---
 
 Следующий шаг в эволюции CSS

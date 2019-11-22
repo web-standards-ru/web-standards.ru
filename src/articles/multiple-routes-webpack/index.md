@@ -6,14 +6,14 @@ source:
     title: 'Multiple routes, bundling and lazy-loading'
     url: 'https://sgom.es/posts/2018-01-18-multiple-routes-webpack/'
 translators:
-  - artur-khrabrov
+    - artur-khrabrov
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
-  - performance
+    - article
+    - js
+    - performance
 ---
 
 ## Обзор проблемы

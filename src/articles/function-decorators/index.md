@@ -6,13 +6,13 @@ source:
     title: 'Here are a few function decorators you can write from scratch'
     url: 'https://medium.com/p/488549fe8f86'
 translators:
-  - vladislav-pocheptsov
+    - vladislav-pocheptsov
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
+    - article
+    - js
 ---
 
 <figure>

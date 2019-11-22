@@ -6,15 +6,15 @@ source:
     title: 'Cite and blockquote — reloaded'
     url: 'https://html5doctor.com/cite-and-blockquote-reloaded/'
 translators:
-  - natasha-arefyeva
+    - natasha-arefyeva
 editors:
-  - yuliya-bukhvalova
-  - vadim-makeev
-  - olga-aleksashenko
+    - yuliya-bukhvalova
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - html
+    - article
+    - html
 ---
 
 Недавно в [спецификации HTML](http://www.w3.org/html/wg/drafts/html/master/) было изменено определение элементов `<blockquote>` и `<cite>`. В статье рассказывается, что это значит для разработчиков.

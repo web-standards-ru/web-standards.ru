@@ -1,65 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="365" height="142">
+    <style>
+        svg {
+            font: 13px Arial,sans-serif;
+        }
 
-<style>
-svg {
-    font: 13px Arial,sans-serif;
-}
-.n {
-    font-size: 11px;
-    text-anchor: end;
-    fill: #484848;
-}
-.b {
-    fill: url(#b);
-    stroke: #666;
-}
-.l {
-    font: 13px Segoe UI, Lucida Grande, sans-serif;
-}
-</style>
+        .n {
+            font-size: 11px;
+            text-anchor: end;
+            fill: #484848;
+        }
 
-<linearGradient id="b" x2="0" y2="100%">
-    <stop stop-color="#FFF"/>
-    <stop stop-color="#D8D8D8" offset="1"/>
-</linearGradient>
+        .b {
+            fill: url(#b);
+            stroke: #666;
+        }
 
-<text x="100" y="19" class="n">Имя</text>
-<linearGradient id="i" x2="0" y2="100%">
-    <stop stop-color="#D0D0D0"/>
-    <stop stop-color="#FFF" offset=".17"/>
-</linearGradient>
-<rect x="115.5" y=".5" width="249" height="26" rx="5" fill="url(#i)" stroke="#666"/>
-<text x="121" y="19" font-size="14" fill="#808080">Например: Сергей</text>
-
-<text x="100" y="50" class="n">Пол</text>
-<radialGradient id="r" cx=".65" cy=".65" r=".8">
-    <stop stop-color="#FFF"/>
-    <stop stop-color="#B8B8B8" offset="1"/>
-</radialGradient>
-<g id="c">
-    <circle cx="121.5" cy="45.5" r="6.5" fill="#666"/>
-    <circle cx="121.5" cy="45.5" r="5" fill="url(#r)" stroke="#FFF"/>
-</g>
-<use xlink:href="#c" x="87"/>
-<text x="134" y="50">
-    Мужской
-    <tspan x="221">Женский</tspan>    
-</text>
-
-<text x="100" y="81" class="n">День рождения</text>
-<rect x="115.5" y="65.5" width="65" height="22" rx="5" id="s" class="b"/>
-<use xlink:href="#s" x="76"/>
-<rect x="267.5" y="65.5" width="96" height="22" rx="5" class="b"/>
-<path d="M167 75h8l-4 4zm76 0h8l-4 4zm107 0h8l-4 4z"/>
-<text x="122" y="81" class="l">
-    День
-    <tspan x="197">Месяц</tspan>
-    <tspan x="274">Год</tspan>
-</text>
-
-<text x="100" y="116" class="n">Фотография</text>
-<rect x="115.5" y="100.5" width="115" height="22" rx="10" class="b"/>
-<text x="173" y="116" text-anchor="middle" class="l">Выбрать файл</text>
-<text x="115" y="138" font-size="11" fill="#666">Загружаемый файл должен быть меньше 3 МБ</text>
-
+        .l {
+            font: 13px Segoe UI, Lucida Grande, sans-serif;
+        }
+    </style>
+    <linearGradient id="b" x2="0" y2="100%">
+        <stop stop-color="#FFF"/>
+        <stop stop-color="#D8D8D8" offset="1"/>
+    </linearGradient>
+    <text x="100" y="19" class="n">Имя</text>
+    <linearGradient id="i" x2="0" y2="100%">
+        <stop stop-color="#D0D0D0"/>
+        <stop stop-color="#FFF" offset=".17"/>
+    </linearGradient>
+    <rect x="115.5" y=".5" width="249" height="26" rx="5" fill="url(#i)" stroke="#666"/>
+    <text x="121" y="19" font-size="14" fill="#808080">Например: Сергей</text>
+    <text x="100" y="50" class="n">Пол</text>
+    <radialGradient id="r" cx=".65" cy=".65" r=".8">
+        <stop stop-color="#FFF"/>
+        <stop stop-color="#B8B8B8" offset="1"/>
+    </radialGradient>
+    <g id="c">
+        <circle cx="121.5" cy="45.5" r="6.5" fill="#666"/>
+        <circle cx="121.5" cy="45.5" r="5" fill="url(#r)" stroke="#FFF"/>
+    </g>
+    <use xlink:href="#c" x="87"/>
+    <text x="134" y="50">
+        Мужской
+        <tspan x="221">Женский</tspan>
+    </text>
+    <text x="100" y="81" class="n">День рождения</text>
+    <rect x="115.5" y="65.5" width="65" height="22" rx="5" id="s" class="b"/>
+    <use xlink:href="#s" x="76"/>
+    <rect x="267.5" y="65.5" width="96" height="22" rx="5" class="b"/>
+    <path d="M167 75h8l-4 4zm76 0h8l-4 4zm107 0h8l-4 4z"/>
+    <text x="122" y="81" class="l">
+        День
+        <tspan x="197">Месяц</tspan>
+        <tspan x="274">Год</tspan>
+    </text>
+    <text x="100" y="116" class="n">Фотография</text>
+    <rect x="115.5" y="100.5" width="115" height="22" rx="10" class="b"/>
+    <text x="173" y="116" text-anchor="middle" class="l">Выбрать файл</text>
+    <text x="115" y="138" font-size="11" fill="#666">Загружаемый файл должен быть меньше 3 МБ</text>
 </svg>

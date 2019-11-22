@@ -6,9 +6,9 @@ source:
     title: 'A Theme Switcher'
     url: https://inclusive-components.design/a-theme-switcher/
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags: article
 ---

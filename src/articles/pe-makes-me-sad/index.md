@@ -6,10 +6,10 @@ source:
     title: 'Progressive enhancement makes me sad'
     url: 'https://www.heydonworks.com/article/progressive-enhancement-makes-me-sad'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
+    - article
 ---
 
 Последнее время только и разговоров в защиту прогрессивного улучшения и «универсальных» (изоморфных) приложений. Оказывается, серверный рендеринг улучшает быстродействие, надёжность, совместимость и упрощает парсинг содержимого.

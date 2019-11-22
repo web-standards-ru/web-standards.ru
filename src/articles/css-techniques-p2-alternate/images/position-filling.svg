@@ -1,16 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="301" height="69" style="font: 12px Arial,sans-serif">
-
-<path d="M.5.5h300v68h-300z" fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3"/>
-
-<path d="M3 36.5h93" stroke="#000"/>
-<path d="M1 36.5l8 2v-4zm99 0l-8 2v-4z"/>
-<text x="51" y="32" style="font: 11px PT Sans,sans-serif; text-anchor: middle">left: 100px</text>
-
-<path d="M100.5 10.5v48h200v-48z" fill="none" stroke="#FF69B4"/>
-<text x="102" y="23">
-    Текст заполняется до правой
-    <tspan x="102" dy="15">границы, а затем переносится</tspan>
-    <tspan x="102" dy="15">по строкам.</tspan>
-</text>
-
+    <path d="M.5.5h300v68h-300z" fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3"/>
+    <path d="M3 36.5h93" stroke="#000"/>
+    <path d="M1 36.5l8 2v-4zm99 0l-8 2v-4z"/>
+    <text x="51" y="32" style="font: 11px PT Sans,sans-serif; text-anchor: middle">left: 100px</text>
+    <path d="M100.5 10.5v48h200v-48z" fill="none" stroke="#FF69B4"/>
+    <text x="102" y="23">
+        Текст заполняется до правой
+        <tspan x="102" dy="15">границы, а затем переносится</tspan>
+        <tspan x="102" dy="15">по строкам.</tspan>
+    </text>
 </svg>

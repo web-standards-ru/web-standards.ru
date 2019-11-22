@@ -6,16 +6,16 @@ source:
     title: 'Enhancing a comment form'
     url: 'https://justmarkup.com/log/2016/10/enhancing-a-comment-form/'
 translators:
-  - anna-kukhareva
+    - anna-kukhareva
 editors:
-  - vadim-makeev
-  - yuliya-bukhvalova
-  - alexey-simonenko
+    - vadim-makeev
+    - yuliya-bukhvalova
+    - alexey-simonenko
 layout: article.njk
 tags:
-  - article
-  - html
-  - js
+    - article
+    - html
+    - js
 ---
 
 От базовых до улучшенных сообщений об ошибках к фоновой синхронизации

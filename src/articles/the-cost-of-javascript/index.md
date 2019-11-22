@@ -6,14 +6,14 @@ source:
     title: 'The Cost Of JavaScript'
     url: 'https://medium.com/p/84009f51e99e'
 translators:
-  - artur-khrabrov
+    - artur-khrabrov
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
-  - performance
+    - article
+    - js
+    - performance
 ---
 
 По мере того, как мы создаём сайты, всё более и более зависящие от JavaScript, мы иногда теряем производительность. В этой статье я расскажу про соблюдение некоторых правил, которые могут помочь, если вы хотите, чтобы ваш интерактивный сайт быстро загружался на мобильных устройствах.

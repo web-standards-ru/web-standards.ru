@@ -6,13 +6,13 @@ source:
     title: 'Manifest? Eh? What? Why?'
     url: 'https://github.com/w3c/manifest/blob/gh-pages/explainer.md'
 translators:
-  - anna-kukhareva
+    - anna-kukhareva
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
+    - article
+    - js
 ---
 
 [Многие из нас](https://github.com/w3c/manifest/graphs/contributors), кто работает над вебом, активно стараются уменьшить разрыв между нативными и веб-приложениями.
@@ -162,7 +162,7 @@ tags:
 
 ```css
 @media all and (display-mode: standalone){
-  /* … */
+    /* … */
 }
 ```
 

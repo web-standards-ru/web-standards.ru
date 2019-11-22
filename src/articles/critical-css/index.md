@@ -6,9 +6,9 @@ source:
     title: 'Extract critical CSS'
     url: 'https://web.dev/extract-critical-css'
 translators:
-  - alena-batickaya
+    - alena-batickaya
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags: article
 ---

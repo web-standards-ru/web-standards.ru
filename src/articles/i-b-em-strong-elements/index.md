@@ -6,14 +6,14 @@ source:
     title: 'The i, b, em, & strong elements'
     url: 'https://html5doctor.com/i-b-em-strong-element/'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - a11y
+    - article
+    - html
+    - a11y
 ---
 
 В то время как многие элементы из HTML4 вошли в HTML5 без существенных изменений, некоторые исторически презентационные элементы обрели новую семантику.

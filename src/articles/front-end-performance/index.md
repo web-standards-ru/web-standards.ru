@@ -6,17 +6,17 @@ source:
     title: 'Front-end performance for web designers and front-end developers'
     url: 'http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
-  - olga-aleksashenko
+    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
-  - article
-  - js
-  - svg
-  - design
-  - performance
+    - article
+    - js
+    - svg
+    - design
+    - performance
 ---
 
 Вряд ли кто-то будет отрицать, что быстродействие — один из _ключевых_ аспектов любого более-менее серьёзного веб-проекта: будь это маленький сайт-портфолио, мобильное веб-приложение, или полноценный проект интернет-магазина. Исследования, статьи и ваш собственный опыт подсказывают: чем быстрее, тем лучше.

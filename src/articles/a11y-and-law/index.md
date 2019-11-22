@@ -3,7 +3,7 @@ title: 'Доступность и закон'
 date: 2019-11-04
 author: tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags: article
 ---

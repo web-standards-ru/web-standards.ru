@@ -6,14 +6,14 @@ source:
     title: 'Our pointless pursuit of semantic value'
     url: 'https://www.smashingmagazine.com/2011/11/our-pointless-pursuit-of-semantic-value/'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - a11y
+    - article
+    - html
+    - a11y
 ---
 
 > Мета-утопия — это мир достоверных метаданных. Когда же отравителю становится выгодно отравить колодец, то мета-воды становятся крайне токсичными очень быстро.

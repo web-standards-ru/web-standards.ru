@@ -6,13 +6,13 @@ source:
     url: 'https://html5doctor.com/the-contenteditable-attribute/'
 author: jack-osborne
 translators:
-  - anton-nemtsev
+    - anton-nemtsev
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
+    - article
+    - html
 ---
 
 Мы уже давно используем различные технологии для редактирования и хранения текста в браузере. С атрибутом `contenteditable` это становится намного проще. В этой статье я расскажу для чего этот атрибут, как он работает и куда нам двигаться дальше.

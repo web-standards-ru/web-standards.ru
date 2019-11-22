@@ -6,15 +6,15 @@ source:
     title: 'Accessible SVG Icons with Inline Sprites'
     url: 'https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/'
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - svg
-  - a11y
+    - article
+    - html
+    - svg
+    - a11y
 ---
 
 Если вы ищете повод использовать иконки в проекте, то далеко ходить не надо. Как хорошо заметил [Оливер Рейхенштейн](https://ia.net) в своём докладе [«Об иконках»](https://vimeo.com/184776819) на Smashing Conf во Фрайбурге: _«На определённом этапе проекта кто-нибудь обязательно приходит и говорит: нам нужны иконки!»_. Так зачем они нужны людям?

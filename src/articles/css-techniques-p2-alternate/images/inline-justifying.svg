@@ -1,29 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="215" height="163">
-
-<path d="M2.5 2.5h210v140h-210z" stroke="#E0E0E0" stroke-width="5" fill="none"/>
-
-<g id="i">
-    <path d="M5 5h40v30h-40z" fill="#EAEAEA"/>
-    <path d="M6 6l38 28m0-28l-38 28" stroke="#CCC"/>
-    <path d="M5.5 5.5h39v29h-39z" fill="none" stroke="#666"/>
-</g>
-<use xlink:href="#i" x="55"  y="0" />
-<use xlink:href="#i" x="110" y="0" />
-<use xlink:href="#i" x="165" y="0" />
-
-<use xlink:href="#i" x="0"   y="45" />
-<use xlink:href="#i" x="55"  y="45" />
-<use xlink:href="#i" x="110" y="45" />
-<use xlink:href="#i" x="165" y="45" />
-
-<use xlink:href="#i" x="0"   y="90" />
-<use xlink:href="#i" x="55"  y="90" />
-<use xlink:href="#i" x="110" y="90" />
-<use xlink:href="#i" x="165" y="90" />
-
-<path d="m7 135.5h203m0 1h-205" stroke="#808080" stroke-dasharray="1 3" />
-
-<text x="5" y="160" style="font: 12px Consolas, monospace">:after</text>
-<path d="M34.5 150.5l9-13" stroke="#000" stroke-linecap="round"/>
-
+    <path d="M2.5 2.5h210v140h-210z" stroke="#E0E0E0" stroke-width="5" fill="none"/>
+    <g id="i">
+        <path d="M5 5h40v30h-40z" fill="#EAEAEA"/>
+        <path d="M6 6l38 28m0-28l-38 28" stroke="#CCC"/>
+        <path d="M5.5 5.5h39v29h-39z" fill="none" stroke="#666"/>
+    </g>
+    <use xlink:href="#i" x="55"  y="0" />
+    <use xlink:href="#i" x="110" y="0" />
+    <use xlink:href="#i" x="165" y="0" />
+    <use xlink:href="#i" x="0"   y="45" />
+    <use xlink:href="#i" x="55"  y="45" />
+    <use xlink:href="#i" x="110" y="45" />
+    <use xlink:href="#i" x="165" y="45" />
+    <use xlink:href="#i" x="0"   y="90" />
+    <use xlink:href="#i" x="55"  y="90" />
+    <use xlink:href="#i" x="110" y="90" />
+    <use xlink:href="#i" x="165" y="90" />
+    <path d="m7 135.5h203m0 1h-205" stroke="#808080" stroke-dasharray="1 3" />
+    <text x="5" y="160" style="font: 12px Consolas, monospace">:after</text>
+    <path d="M34.5 150.5l9-13" stroke="#000" stroke-linecap="round"/>
 </svg>

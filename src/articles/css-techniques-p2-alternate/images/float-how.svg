@@ -1,37 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="317" height="249" style="font:11px Arial,sans-serif">
-
-<g fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3">
-    <path d="M.5.5h316v106h-316z"/>
-    <path d="M.5 90.5h316v158h-316z" stroke-dashoffset="2.5"/>
-</g>
-
-<path d="M9.5 14.5v76h299v-76zm0 92v128h299v-128z" fill="none" stroke="#FF69B4"/>
-
-<g fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3">
-    <path d="M16.5 18.5v68h284v-68z"/>
-    <path d="M16.5 110.5h284v120h-284z"/>
-    <path d="M16.5 38.5h76v116h-76z"/>
-</g>
-
-<path d="M25 47h59v99h-59z" fill="#EAEAEA"/>
-<path d="M26 48l57 97m-57 0l57-97" stroke="#CCC"/>
-<path d="M25.5 47.5h58v98h-58z" fill="none" stroke="#000"/>
-
-<text x="16" y="30">
-    Образец текста в первом абзаце. Он имеет
-    <tspan x="92" dy="17">обтекаемое изображение прямо (X)</tspan>
-    <tspan x="92" dy="17">в тексте. Изображение, однако, столь</tspan>
-    <tspan x="92" dy="17">большое, что выходит ниже абзаца.</tspan>
-</text>
-
-<text x="92" y="122">
-    Из-за этого второй абзац тоже
-    <tspan x="92" dy="17">подвержен эффекту. Любые строчные</tspan>
-    <tspan x="92" dy="17">элементы сдвинуты вбок и не должны</tspan>
-    <tspan x="16" dy="17">появляться внутри области, ограниченной полями</tspan>
-    <tspan x="16" dy="17">изображения. Отображаемый блок абзаца всё ещё</tspan>
-    <tspan x="16" dy="17">прямоугольный, но поверх рамки и фона</tspan>
-    <tspan x="16" dy="17">«вторгается» изображение.</tspan>
-</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="317" height="249" style="font: 11px Arial, sans-serif">
+    <g fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3">
+        <path d="M.5.5h316v106h-316z"/>
+        <path d="M.5 90.5h316v158h-316z" stroke-dashoffset="2.5"/>
+    </g>
+    <path d="M9.5 14.5v76h299v-76zm0 92v128h299v-128z" fill="none" stroke="#FF69B4"/>
+    <g fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3">
+        <path d="M16.5 18.5v68h284v-68z"/>
+        <path d="M16.5 110.5h284v120h-284z"/>
+        <path d="M16.5 38.5h76v116h-76z"/>
+    </g>
+    <path d="M25 47h59v99h-59z" fill="#EAEAEA"/>
+    <path d="M26 48l57 97m-57 0l57-97" stroke="#CCC"/>
+    <path d="M25.5 47.5h58v98h-58z" fill="none" stroke="#000"/>
+    <text x="16" y="30">
+        Образец текста в первом абзаце. Он имеет
+        <tspan x="92" dy="17">обтекаемое изображение прямо (X)</tspan>
+        <tspan x="92" dy="17">в тексте. Изображение, однако, столь</tspan>
+        <tspan x="92" dy="17">большое, что выходит ниже абзаца.</tspan>
+    </text>
+    <text x="92" y="122">
+        Из-за этого второй абзац тоже
+        <tspan x="92" dy="17">подвержен эффекту. Любые строчные</tspan>
+        <tspan x="92" dy="17">элементы сдвинуты вбок и не должны</tspan>
+        <tspan x="16" dy="17">появляться внутри области, ограниченной полями</tspan>
+        <tspan x="16" dy="17">изображения. Отображаемый блок абзаца всё ещё</tspan>
+        <tspan x="16" dy="17">прямоугольный, но поверх рамки и фона</tspan>
+        <tspan x="16" dy="17">«вторгается» изображение.</tspan>
+    </text>
 </svg>

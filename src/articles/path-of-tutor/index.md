@@ -3,10 +3,10 @@ title: 'Путь наставника'
 date: 2016-06-30
 author: maxim-usachev
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
+    - article
 ---
 
 Если звезды фронтенда зажигаются, значит, кто-то их зажигает? Кто? Приоткрываем завесу тайны над темой наставничества в вебе.

@@ -3,12 +3,12 @@ title: 'Всё, что нужно знать про ARIA Live Regions'
 date: 2019-03-12
 author: tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - a11y
+    - article
+    - html
+    - a11y
 ---
 
 Как сделать изменение контента доступным

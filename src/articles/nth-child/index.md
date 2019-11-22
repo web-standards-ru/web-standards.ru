@@ -6,11 +6,11 @@ source:
     title: 'How nth-child Works'
     url: 'http://css-tricks.com/5452-how-nth-child-works/'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
+    - article
+    - css
 ---
 
 Существует такой селектор, точнее псевдокласс, называемый `:nth-child`. Вот пример его использования:

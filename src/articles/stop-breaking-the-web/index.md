@@ -6,14 +6,14 @@ source:
     title: 'Stop breaking the Web'
     url: 'http://ponyfoo.com/articles/stop-breaking-the-web'
 translators:
-  - olga-aleksashenko
+    - olga-aleksashenko
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
-  - performance
+    - article
+    - js
+    - performance
 ---
 
 2014 год. Ниндзя-рок-звезды веба идут против забытой ныне техники [прогрессивного улучшения](http://alistapart.com/article/understandingprogressiveenhancement). Они отказываются от истоков веба и всего того, за что они когда-то стояли. В этой статье я собираюсь громко заявить о том, как **мы разрушаем веб**; о не всегда явных причинах, почему мы должны перестать это делать, и отчего _хорошей идеей будет это прекратить_.

@@ -6,13 +6,13 @@ source:
     title: 'The value of meaning'
     url: 'http://cssquirrel.com/blog/2011/11/11/the-value-of-meaning/'
 translators:
-  - vlad-andersen
+    - vlad-andersen
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - a11y
+    - article
+    - a11y
 ---
 
 <img src="images/comic.png" alt="">

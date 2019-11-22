@@ -3,12 +3,12 @@ title: 'Какой расклад?'
 date: 2010-08-30
 author: vyacheslav-olianchuk
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
+    - article
+    - html
+    - css
 ---
 
 Эта статья посвящается тем, кто задает правильные вопросы.

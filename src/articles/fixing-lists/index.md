@@ -6,15 +6,15 @@ source:
     title: 'Fixing Lists'
     url: 'https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html'
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
-  - a11y
+    - article
+    - html
+    - css
+    - a11y
 ---
 
 <img src="images/1.png" alt="">

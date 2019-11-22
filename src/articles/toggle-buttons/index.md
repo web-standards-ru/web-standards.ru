@@ -6,15 +6,15 @@ source:
     title: 'Toggle buttons'
     url: 'https://inclusive-components.design/toggle-button/'
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
-  - a11y
+    - article
+    - html
+    - css
+    - a11y
 ---
 
 <img src="images/buttons.jpg" alt="">

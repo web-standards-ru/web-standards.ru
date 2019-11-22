@@ -6,11 +6,11 @@ source:
     title: 'Prefix or posthack'
     url: 'http://www.alistapart.com/articles/prefix-or-posthack/'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
+    - article
+    - css
 ---
 
 В то время, как поддержка CSS в браузерах улучшается с каждым днём — включая впечатляющие успехи команды разработчиков IE9 — всё больше и больше авторов увлекаются CSS3. По этой причине им приходится сталкиваться с _браузерными префиксами_ — свойствами вида `-*-`, вроде `-moz-border-radius`, `-webkit-animation` и так далее.

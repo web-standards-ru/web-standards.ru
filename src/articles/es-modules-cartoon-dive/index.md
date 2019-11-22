@@ -6,14 +6,14 @@ source:
     title: 'ES modules: A cartoon deep-dive'
     url: 'https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/'
 translators:
-  - artur-khrabrov
+    - artur-khrabrov
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - js
-  - performance
+    - article
+    - js
+    - performance
 ---
 
 <img src="images/1.png" alt="">

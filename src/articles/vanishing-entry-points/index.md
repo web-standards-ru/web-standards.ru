@@ -6,14 +6,14 @@ source:
     title: 'HTML, CSS and our vanishing industry entry points'
     url: 'https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/'
 translators:
-  - alena-batickaya
+    - alena-batickaya
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - css
+    - article
+    - html
+    - css
 ---
 
 Все опять обозлились на CSS. Я даже не стану перечислять причины. В общей сложности всё сводится к тому, что CSS достаточно прост, но одновременно с этим и достаточно сложен. До такой степени, что, во избежание волнений общественности, проще завернуть его в JavaScript. Вы можете прочитать более осмысленный взгляд Криса Койера [«The Great Divide»](https://css-tricks.com/the-great-divide/).

@@ -3,11 +3,11 @@ title: 'Text-transform и копирование'
 date: 2019-01-24
 author: igor-shevchenko
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - css
+    - article
+    - css
 ---
 
 Что происходит при копировании текста с `text-transform`.

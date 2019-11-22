@@ -1,27 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="241" height="130" style="font: 11px PT Sans,sans-serif">
-
-<g text-anchor="middle">
-    <text x="191" y="9">margin</text>
-    <text x="121" y="12">top: 0</text>
-    <text x="121" y="129">bottom: 0</text>
-</g>
-<text x="194" y="68">right: 0</text>
-<text x="47" y="68" text-anchor="end">left: 0</text>
-
-<path d="M50.5 16.5h140v100h-140z" fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3"/>
-
-<path d="M95.5 41.5h50v50h-50z" fill="none" stroke="#FF69B4"/>
-
-<path d="M120.5 23v12m0 63v12M57 66.5h32m63 0h32M190 11l-9 20" stroke="#000"/>
-<path d="M51 66.5l8 2v-4zm44 0l-8 2v-4zm51 0l8 2v-4zm44 0l-8 2v-4zM120.5 17l2 8h-4zm0 24l-2-8h4zm0 51l2 8h-4zm0 24l-2-8h4z"/>
-
-<g fill="#808080">
-    <text x="124" y="32">auto</text>
-    <text x="124" y="107">auto</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="241" height="130" style="font: 11px PT Sans, sans-serif">
     <g text-anchor="middle">
-        <text x="73" y="63">auto</text>
-        <text x="168" y="63">auto</text>
+        <text x="191" y="9">margin</text>
+        <text x="121" y="12">top: 0</text>
+        <text x="121" y="129">bottom: 0</text>
     </g>
-</g>
-
+    <text x="194" y="68">right: 0</text>
+    <text x="47" y="68" text-anchor="end">left: 0</text>
+    <path d="M50.5 16.5h140v100h-140z" fill="none" stroke="#808080" stroke-dashoffset=".5" stroke-dasharray="1 3"/>
+    <path d="M95.5 41.5h50v50h-50z" fill="none" stroke="#FF69B4"/>
+    <path d="M120.5 23v12m0 63v12M57 66.5h32m63 0h32M190 11l-9 20" stroke="#000"/>
+    <path d="M51 66.5l8 2v-4zm44 0l-8 2v-4zm51 0l8 2v-4zm44 0l-8 2v-4zM120.5 17l2 8h-4zm0 24l-2-8h4zm0 51l2 8h-4zm0 24l-2-8h4z"/>
+    <g fill="#808080">
+        <text x="124" y="32">auto</text>
+        <text x="124" y="107">auto</text>
+        <g text-anchor="middle">
+            <text x="73" y="63">auto</text>
+            <text x="168" y="63">auto</text>
+        </g>
+    </g>
 </svg>

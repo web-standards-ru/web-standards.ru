@@ -6,9 +6,9 @@ source:
     title: 'Tabbed Interfaces'
     url: https://inclusive-components.design/tabbed-interfaces/
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags: article
 ---
@@ -72,9 +72,9 @@ section:not(:target) {
         </a>
     </li>
     <li role="presentation">
-         <a role="tab" href="#section3" id="tab3">
-             Раздел 3
-         </a>
+        <a role="tab" href="#section3" id="tab3">
+            Раздел 3
+        </a>
     </li>
 </ul>
 <section role="tabpanel" id="section1" aria-labelledby="tab1">
@@ -119,9 +119,9 @@ section:not(:target) {
             Раздел 2</a>
     </li>
     <li role="presentation">
-         <a role="tab" tabindex="-1" href="#section2">
-             Раздел 3
-         </a>
+        <a role="tab" tabindex="-1" href="#section2">
+            Раздел 3
+        </a>
     </li>
 </ul>
 ```

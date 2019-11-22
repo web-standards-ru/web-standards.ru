@@ -6,12 +6,12 @@ source:
     title: 'Avoiding common HTML5 mistakes'
     url: 'https://html5doctor.com/avoiding-common-html5-mistakes/'
 translators:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - a11y
+    - article
+    - html
+    - a11y
 ---
 
 Разбирая сайты для [Галереи HTML5](http://html5gallery.com/) и отвечая на вопросы читателей на сайте [Доктор HTML5](https://html5doctor.com/), я вынужден просматривать целую кучу страниц на HTML5 и, конечно же, их исходный код. В этой статье я расскажу вам об ошибках и сомнительной разметке, которые мне частенько приходится видеть, и объясню, как их избежать.

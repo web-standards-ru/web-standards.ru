@@ -6,14 +6,14 @@ source:
     title: 'Pragmatic rules of web accessibility that will stick to your mind'
     url: 'https://medium.com/p/9d3eb85a1a28'
 translators:
-  - tatiana-fokina
+    - tatiana-fokina
 editors:
-  - vadim-makeev
+    - vadim-makeev
 layout: article.njk
 tags:
-  - article
-  - html
-  - a11y
+    - article
+    - html
+    - a11y
 ---
 
 <figure>

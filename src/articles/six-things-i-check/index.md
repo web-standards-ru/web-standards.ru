@@ -6,10 +6,10 @@ source:
     title: 'Beyond automatic accessibility testing'
     url: 'https://www.matuzo.at/blog/beyond-automatic-accessibility-testing-6-things-i-check-on-every-website-i-build/'
 translators:
-  - glafira-zhur
+    - glafira-zhur
 editors:
-  - vadim-makeev
-  - nikita-dubko
+    - vadim-makeev
+    - nikita-dubko
 layout: article.njk
 tags: article
 ---
