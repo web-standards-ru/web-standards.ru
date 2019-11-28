@@ -32,8 +32,7 @@
     "suppressErrors": [
       "Bad value  for attribute “href” on element “a”: Illegal character in fragment: “#” is not allowed.",
       "Bad value “soft-light” for attribute “mode” on element “feBlend”.",
-      "Element “style” not allowed as child of element “div” in this context.",
-      "The “main” element must not appear as a descendant of the “section” element."
+      "Element “style” not allowed as child of element “div” in this context."
     ]
   },
   "stylelint": {
