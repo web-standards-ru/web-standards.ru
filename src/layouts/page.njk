@@ -11,7 +11,7 @@
 </head>
 <body class="page__body">
     {% include '../images/blob.svg' %}
-    <section class="page__navigation">
+    <div class="page__navigation navigation">
         <div class="navigation__logo logo">
             {% if page.url != '/' %}<a class="logo__link" href="/">{% endif %}
                 <img class="logo__icon" src="/images/logo.svg" width="40" height="40" alt="Логотип Веб-стандартов">
@@ -52,10 +52,10 @@
                 </li>
             </ul>
         </nav>
-    </section>
-    <section class="page__content">
+    </div>
+    <div class="page__content">
         {{ content | safe }}
-    </section>
+    </div>
     <script src="/scripts/navigation.js"></script>
 </body>
 </html>
