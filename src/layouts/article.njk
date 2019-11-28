@@ -75,6 +75,20 @@ layout: page.njk
             {{ content | safe }}
         </div>
     </div>
+    <div class="main__related-articles related-articles">
+        <h2 class="related-articles__title">По теме</h2>
+
+        {% set articleType %}{{ '--related' }}{% endset %}
+
+        <ul class="articles articles{{ articleType }}">
+            {# Необходима реализация показа статей "По теме" #}
+            {%- for article in collections.article | reverse -%}
+                <li class="articles__item articles__item{{ articleType }}">
+                    {% include 'article-card.njk' %}
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
 </main>
 
 {% include 'aside.njk' %}

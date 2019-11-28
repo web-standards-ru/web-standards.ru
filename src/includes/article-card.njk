@@ -1,0 +1,29 @@
+<article class="article-card article-card{{ articleType }}">
+    <h3 class="article-card__title article-card__title{{ articleType }}">
+        <a class="article-card__link article-card__link{{ articleType }}" href="{{ article.url }}">
+            {{ article.data.title }}
+        </a>
+    </h3>
+
+    <time class="article-card__date article-card__date{{ articleType }}" datetime="{{ article.date | isoDate }}">
+        {{ article.date | ruDate }}
+    </time>
+
+    {% set blobColor %}{{ ['teal', 'lightteal', 'moss', 'grass'] | random }}{% endset %}
+    {% set blobShape %}{{ [1, 2, 3, 4, 5, 6, 7] | random }}{% endset %}
+
+    {% for author in collections.people | filterPeople(article.data.author) %}
+        <a class="article-card__author article-card__author{{ articleType }}" href="{{ author.url }}">
+            {{ author.name }}
+        </a>
+
+        <img class="
+                article-card__picture
+                article-card__picture{{ articleType }}
+                blob--{{ blobColor }}
+                blob--shape-{{ blobShape }}"
+            src="/images/author--placeholder.jpg"
+            width="80" height="74"
+            alt="{{ author.name }}">
+    {% endfor %}
+</article>

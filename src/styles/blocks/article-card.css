@@ -1,0 +1,143 @@
+.article-card {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: min-content max-content 1fr;
+    grid-template-areas:
+        'picture title title'
+        'picture date author';
+    grid-gap: 14px 16px;
+}
+
+.article-card__picture {
+    grid-area: picture;
+    height: auto;
+}
+
+.article-card__title {
+    grid-area: title;
+    margin: 0;
+    font-family: 'RF Dewi', sans-serif;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.article-card__link {
+    color: var(--color-grey-darker);
+    text-decoration: none;
+}
+
+.article-card__meta {
+    margin: 0;
+}
+
+.article-card__date,
+.article-card__author {
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.article-card__date {
+    grid-area: date;
+    color: var(--color-grey-medium);
+}
+
+.article-card__author {
+    grid-area: author;
+    color: var(--color-grey-darker);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.article-card__link:hover,
+.article-card__author:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 800px) {
+    .article-card__title {
+        min-height: 4em;
+    }
+}
+
+@media (min-width: 900px) {
+    .article-card {
+        grid-template-rows: 1fr repeat(5, min-content);
+        grid-template-columns: 1fr min-content;
+        grid-template-areas:
+            'title title'
+            '. picture'
+            '. picture'
+            '. picture'
+            'date picture'
+            'author picture';
+        grid-gap: 0;
+        height: 100%;
+    }
+}
+
+/* Main */
+
+@media (min-width: 1024px) {
+    .article-card__title--main {
+        font-size: 32px;
+    }
+
+    .article-card__date--main,
+    .article-card__author--main {
+        font-size: 16px;
+    }
+
+    .article-card__picture--main {
+        width: 112px;
+    }
+}
+
+/* Articles */
+
+@media (min-width: 800px) {
+    .article-card--articles {
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr 1fr 2fr 7fr;
+        grid-template-areas: 'date picture author title';
+        grid-gap: 32px;
+        align-items: baseline;
+    }
+
+    .article-card__picture--articles {
+        align-self: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .article-card__title--articles {
+        font-size: 32px;
+    }
+
+    .article-card__date--articles,
+    .article-card__author--articles {
+        font-size: 16px;
+    }
+
+    .article-card__picture--articles {
+        width: 112px;
+    }
+}
+
+/* Related-articles */
+
+@media (min-width: 1250px) {
+    .article-card__title--related {
+        font-size: 32px;
+    }
+
+    .article-card__date--related,
+    .article-card__author--related {
+        font-size: 16px;
+    }
+
+    .article-card__picture--related {
+        width: 112px;
+        height: 104px;
+    }
+}

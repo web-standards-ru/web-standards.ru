@@ -11,7 +11,6 @@
 @import 'blocks/navigation.css';
 @import 'blocks/articles.css';
 @import 'blocks/archive.css';
-@import 'blocks/preview.css';
 @import 'blocks/notice.css';
 @import 'blocks/informer.css';
 @import 'blocks/main.css';
@@ -21,6 +20,8 @@
 @import 'blocks/article.css';
 @import 'blocks/authors.css';
 @import 'blocks/blob.css';
+@import 'blocks/related-articles.css';
+@import 'blocks/article-card.css';
 
 /* Globals */
 
