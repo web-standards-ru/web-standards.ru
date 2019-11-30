@@ -83,6 +83,46 @@ module.exports = function(config) {
             });
     });
 
+    config.addNunjucksTag('blob', function (nunjucksEngine) {
+        return new function () {
+            this.tags = ['blob'];
+
+            this.parse = function (parser, nodes, lexer) {
+                const token = parser.nextToken();
+
+                const arguments = parser.parseSignature(null, true);
+                parser.advanceAfterBlockEnd(token.value);
+
+                return new nodes.CallExtensionAsync(this, 'run', arguments);
+            };
+
+            this.run = function (context, authorName, callback) {
+                const blobColors = ['teal', 'lightteal', 'moss', 'grass'];
+                const blobShapes = [1, 2, 3, 4, 5, 6, 7];
+                const shapePrefix = 'blob--shape-';
+                const colorPrefix = 'blob--';
+
+                const getBlobClass = (basis, array, name) => (
+                    name.concat(array[basis % array.length])
+                );
+
+                const shapeBasis = authorName.split('').reduce(
+                    (previous, current) => previous + current.charCodeAt(0), 0
+                );
+                const colorBasis = authorName.length;
+
+                const colorClass = getBlobClass(colorBasis, blobColors, colorPrefix);
+                const shapeClass = getBlobClass(shapeBasis, blobShapes, shapePrefix);
+
+                callback(
+                    null, new nunjucksEngine.runtime.SafeString(
+                        colorClass.concat(' ', shapeClass)
+                    )
+                );
+            };
+        }();
+    });
+
     return {
         dir: {
             input: 'src',

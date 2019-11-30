@@ -33,14 +33,8 @@ layout: page.njk
         </div>
         <div class="article__authors authors">
             <div class="authors__author">
-                {% set blobColor %}{{ ['teal', 'lightteal', 'moss', 'grass'] | random }}{% endset %}
-                {% set blobShape %}{{ [1, 2, 3, 4, 5, 6, 7] | random }}{% endset %}
-
                 {% for author in collections.people | filterPeople(author) %}
-                    <img class="
-                            authors__author-avatar
-                            blob--{{ blobColor }}
-                            blob--shape-{{ blobShape }}"
+                    <img class="authors__author-avatar {% blob author.name %}"
                         src="/images/author--placeholder.jpg"
                         width="113" height="104" alt="{{ author.name }}">
                     <a class="authors__author-link" href="{{ author.url }}">

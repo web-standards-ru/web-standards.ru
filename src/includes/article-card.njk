@@ -9,9 +9,6 @@
         {{ article.date | ruDate }}
     </time>
 
-    {% set blobColor %}{{ ['teal', 'lightteal', 'moss', 'grass'] | random }}{% endset %}
-    {% set blobShape %}{{ [1, 2, 3, 4, 5, 6, 7] | random }}{% endset %}
-
     {% for author in collections.people | filterPeople(article.data.author) %}
         <a class="article-card__author article-card__author{{ articleType }}" href="{{ author.url }}">
             {{ author.name }}
@@ -19,9 +16,7 @@
 
         <img class="
                 article-card__picture
-                article-card__picture{{ articleType }}
-                blob--{{ blobColor }}
-                blob--shape-{{ blobShape }}"
+                article-card__picture{{ articleType }} {% blob author.name %}"
             src="/images/author--placeholder.jpg"
             width="80" height="74"
             alt="{{ author.name }}">
