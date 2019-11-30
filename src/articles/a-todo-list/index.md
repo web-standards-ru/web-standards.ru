@@ -478,7 +478,7 @@ deletedFeedback(todoName);
 
 Я создал [страницу на СodePen](https://codepen.io/heydon/pen/VpVNKW/), чтобы наглядно продемонстрировать технику из этой статьи. В демке используется Vue.js, но это можно реализовать с помощью любого JS-фреймворка. Её можно протестировать в разных браузерах и скринридерах.
 
-<iframe src="https://codepen.io/heydon/pen/VpVNKW/"></iframe>
+<iframe src="https://codepen.io/heydon/embed/VpVNKW/"></iframe>
 
 ## Заключение
 

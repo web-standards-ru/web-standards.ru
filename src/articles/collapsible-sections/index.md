@@ -191,7 +191,7 @@ h2 button:focus svg {
 
 [Вот демо на CodePen](https://codepen.io/heydon/pen/QqzRvQ/):
 
-<iframe src="https://codepen.io/heydon/pen/QqzRvQ/"></iframe>
+<iframe src="https://codepen.io/heydon/embed/QqzRvQ/"></iframe>
 
 ## Прогрессивное улучшение
 
@@ -424,7 +424,7 @@ this.switchState = () => {
 
 [Вот демо с CodePen с этой версией веб-компонента](https://codepen.io/heydon/pen/ZXdbxj/) с комментариями:
 
-<iframe src="https://codepen.io/heydon/pen/ZXdbxj/"></iframe>
+<iframe src="https://codepen.io/heydon/embed/ZXdbxj/"></iframe>
 
 ## Свернуть или развернуть всё
 

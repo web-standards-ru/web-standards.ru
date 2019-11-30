@@ -256,7 +256,7 @@ html {
 
 [Демо](https://codepen.io/elad2412/pen/oQJmYQ/) (попробуйте поменять язык):
 
-<iframe src="https://codepen.io/elad2412/pen/oQJmYQ/"></iframe>
+<iframe src="https://codepen.io/elad2412/embed/oQJmYQ/"></iframe>
 
 ## Браузерная поддержка
 
