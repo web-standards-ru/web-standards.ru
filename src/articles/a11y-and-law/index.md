@@ -44,7 +44,7 @@ tags: article
 <figure>
     <img src="images/europe-flag.jpg" alt="">
     <figcaption>Фото <a href="https://unsplash.com/@markusspiske">Markus Spiske</a>.</figcaption>
-<figure>
+</figure>
 
 Принятие законов о доступности в Европе запустила [Конвенция ООН о защите прав людей с инвалидностью](https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html) (Convention on the Rights of Persons with Disabilities — CRPD). Она принята в 2006 году и запрещает дискриминацию людей с инвалидностью.
 
@@ -166,7 +166,7 @@ European Accessibility Act — EAA
     <figcaption>
         Доступность для <strong>всех</strong>. С <a href="http://www.edf-feph.org/european-accessibility-act-1">edf-feph.org</a>.
     </figcaption>
-<figure>
+</figure>
 
 Закон утверждён Европарламентом в Страсбурге весной 2019 года. Сейчас дорабатывается.
 
@@ -269,7 +269,7 @@ Standard EN 301 549 — EN 301 549
     <figcaption>
         Фото <a href="https://www.pexels.com/@einfoto">Matthis Volquardsen</a>.
     </figcaption>
-<figure>
+</figure>
 
 Если вы интересуетесь темой доступности, то скорее всего уже что-то слышали о двух американских законах: Разделе 508 и ADA. Давайте их разберём.
 
@@ -332,7 +332,7 @@ Section 508, 508 Compliance
     <figcaption>
         В любой статье о законах должна быть картинка с молотком судьи. Фото <a href="https://www.pexels.com/@pixabay">Pixabay</a>.
     </figcaption>
-<figure>
+</figure>
 
 
 Требования «Раздела 508» жёстче, чем у других американских законов.
@@ -453,7 +453,7 @@ ADA — это закон, который защищает права людей
     <figcaption>
         Фото <a href="https://www.pexels.com/@ajtandle">Ajinkya Tandle</a>.
     </figcaption>
-<figure>
+</figure>
 
 Веб-доступность в России регулируется тремя законодательными актами и одним стандартом:
 
@@ -571,7 +571,7 @@ ADA — это закон, который защищает права людей
     <figcaption>
         На <a href="https://www.roscosmos.ru/">сайте Роскосмоса</a> что-то пошло не так.
     </figcaption>
-<figure>
+</figure>
 
 ### Что, если я его нарушу?
 
@@ -630,7 +630,7 @@ ADA — это закон, который защищает права людей
     <figcaption>
         Таблица Снеллена. Фото <a href="https://unsplash.com/@dtravisphd">David Travis</a>.
     </figcaption>
-<figure>
+</figure>
 
 Введён в 2014 после ратификации Россией в мае 2012 года [Конвенции о правах людей с инвалидностью](https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html), содержит рекомендации о доступности сайтов и их контента.
 
