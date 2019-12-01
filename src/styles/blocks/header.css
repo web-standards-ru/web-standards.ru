@@ -21,6 +21,18 @@
     }
 }
 
+@media (min-width: 768px) {
+    .page__content--inner .header {
+        padding: 16px 8px 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page__content--inner .header {
+        padding: 16px 64px 0;
+    }
+}
+
 /* Logo */
 
 @media (min-width: 769px) {
