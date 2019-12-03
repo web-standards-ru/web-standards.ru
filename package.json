@@ -21,7 +21,7 @@
     "remark-lint-emphasis-marker": "^1.0.3",
     "remark-lint-strong-marker": "^1.0.3",
     "remark-lint-unordered-list-marker-style": "^1.0.3",
-    "stylelint": "^11.0.0"
+    "stylelint": "^12.0.0"
   },
   "browserslist": [
     "last 2 version",
