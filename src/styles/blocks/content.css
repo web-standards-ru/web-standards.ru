@@ -5,6 +5,19 @@
     height: auto;
 }
 
+.content a:link {
+    color: var(--color-blue-darker);
+}
+
+.content a:visited {
+    color: var(--color-grey-lighter);
+}
+
+.content a:hover,
+.content a:active {
+    color: var(--color-turquoise-medium);
+}
+
 @media (min-width: 1240px) {
     .content {
         width: 863px;

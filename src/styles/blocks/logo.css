@@ -62,10 +62,20 @@
 
 .logo__title {
     margin: 0;
+    font-family: 'Dewi', sans-serif;
     font-weight: bold;
     font-size: 20px;
     line-height: 2;
     letter-spacing: -0.03em;
+}
+
+.logo__title:hover {
+    font-family: 'Dewi Expanded', sans-serif;
+    font-weight: bold;
+}
+
+.logo__link {
+    text-decoration: none;
 }
 
 @media (min-width: 769px) {

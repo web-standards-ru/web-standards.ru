@@ -24,7 +24,15 @@
 }
 
 .footer__link[href] {
+    color: var(--color-grey-lightest);
+}
+
+.footer__link[href]:hover {
     color: white;
+}
+
+.footer__link[href]:hover {
+    color: var(--color-turquoise-medium);
 }
 
 /* Copy */
