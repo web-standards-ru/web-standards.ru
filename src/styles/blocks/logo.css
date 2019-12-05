@@ -60,6 +60,10 @@
 
 /* Title */
 
+.logo__link {
+    text-decoration: none;
+}
+
 .logo__title {
     margin: 0;
     font-family: 'Dewi', sans-serif;
@@ -69,13 +73,9 @@
     letter-spacing: -0.03em;
 }
 
-.logo__title:hover {
+.logo__link[href]:hover .logo__title {
     font-family: 'Dewi Expanded', sans-serif;
     font-weight: bold;
-}
-
-.logo__link {
-    text-decoration: none;
 }
 
 @media (min-width: 769px) {
