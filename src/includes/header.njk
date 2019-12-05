@@ -13,18 +13,36 @@
     {% if page.url == '/' %}
     <ul class="header__informer informer">
         <li class="informer__item informer__item--wave">
-            <strong class="informer__meta informer__meta--wave">164</strong>
-            <p class="informer__text">
-                Автор JS-интенсивов, встроенный скроллер в Chrome развитие SVG и &amp; в CSS
-            </p>
+            {%- for podcast in collections.podcast -%}
+                <a class="informer__link" href={{ podcast.data.url }}>
+                    <strong class="informer__meta informer__meta--wave">
+                        {{ podcast.data.number }}
+                    </strong>
+                    <p class="informer__text">
+                        {{ podcast.data.title }}
+                    </p>
+                    <svg class="informer__icon informer__icon--wave" viewBox="0 0 38 31" width="32" height="25">
+                        <path d="M33.07 14.04a2.54 2.54 0 0 1-2.55-2.12c-.4-2.25-1.16-3.8-2-3.8S27 9.62 26.55 11.8c-.13.87-.96 1.5-1.86 1.5h-.83a1.88 1.88 0 0 1-1.92-1.75c-.32-5.5-1.2-9.68-2.43-10.6a.49.49 0 0 0-.25-.13c-.07 0-.07 0-.13-.06h-.26c-.06 0-.06 0-.13.06-.06.06-.2.06-.25.13-1.15.93-2.1 5.18-2.43 10.6-.07 1-.9 1.75-1.92 1.75h-.83c-.9 0-1.73-.62-1.86-1.5C11.07 9.6 10.3 8.1 9.47 8.1s-1.6 1.56-2 3.8a2.6 2.6 0 0 1-2.55 2.12c-2.75 0-4.93.7-4.93 1.5s2.18 1.5 4.93 1.5c1.28 0 2.36.87 2.55 2.12.4 2.25 1.16 3.8 2 3.8s1.53-1.5 1.98-3.68c.13-.87.96-1.5 1.86-1.5h.83c1.02 0 1.8.75 1.92 1.75.32 5.5 1.2 9.68 2.43 10.6.06.06.2.13.25.13.07 0 .07 0 .13.06h.26c.06 0 .06 0 .13-.06.06-.07.2-.07.25-.13 1.15-.93 2.1-5.18 2.43-10.6.07-1 .9-1.75 1.92-1.75h.83c.9 0 1.73.62 1.86 1.5.38 2.18 1.15 3.68 1.98 3.68s1.6-1.56 2-3.8a2.6 2.6 0 0 1 2.55-2.12c2.75 0 4.93-.7 4.93-1.5s-2.18-1.5-4.93-1.5z"/>
+                    </svg>
+                </a>
+            {%- endfor -%}
         </li>
         <li class="informer__item informer__item--calendar">
-            <strong class="informer__meta informer__meta--calendar">
-                <time datetime="2019-04-05">5 апр</time>
-            </strong>
-            <p class="informer__text">
-                Конференция в Москве, еще одна строка желательна
-            </p>
+            {%- for conference in collections.conference -%}
+                <a class="informer__link" href={{ conference.data.url }}>
+                    <strong class="informer__meta informer__meta--calendar">
+                        <time datetime="{{ conference.data.date | isoDate }}">
+                            {{ conference.data.date | shortDate }}
+                        </time>
+                    </strong>
+                <p class="informer__text">
+                    {{ conference.data.title }}
+                </p>
+                <svg class="informer__icon informer__icon--calendar" viewBox="0 0 38 29" width="32" height="23">
+                    <path d="M5.67 25.15a2.87 2.87 0 0 1-2.87 2.88A2.8 2.8 0 0 1 0 25.15a2.87 2.87 0 0 1 2.88-2.87 2.8 2.8 0 0 1 2.8 2.87zm0-10.8a2.87 2.87 0 0 1-2.87 2.87A2.8 2.8 0 0 1 0 14.35a2.87 2.87 0 0 1 2.88-2.88 2.8 2.8 0 0 1 2.8 2.88zm10.8 10.8a2.87 2.87 0 1 1-5.75 0 2.82 2.82 0 0 1 2.88-2.87 2.92 2.92 0 0 1 2.87 2.87zm0-10.8a2.87 2.87 0 1 1-5.75 0 2.82 2.82 0 0 1 2.88-2.88c1.55.08 2.87 1.32 2.87 2.88zm21.53 0a2.87 2.87 0 1 1-5.75 0 2.82 2.82 0 0 1 2.87-2.88c1.56.08 2.88 1.32 2.88 2.88zm0-10.72a2.87 2.87 0 1 1-5.75 0 2.87 2.87 0 1 1 5.75 0zM27.2 25.15a2.87 2.87 0 0 1-2.88 2.88 2.82 2.82 0 0 1-2.87-2.88 2.82 2.82 0 0 1 2.87-2.87 2.87 2.87 0 0 1 2.88 2.87zm0-10.8a2.87 2.87 0 0 1-2.88 2.87 2.82 2.82 0 0 1-2.87-2.87 2.82 2.82 0 0 1 2.87-2.88 2.87 2.87 0 0 1 2.88 2.88zm0-10.72a2.87 2.87 0 0 1-2.88 2.87 2.82 2.82 0 0 1-2.87-2.87C21.45 2 22.85.75 24.4.75a2.8 2.8 0 0 1 2.8 2.88z"/>
+                </svg>
+            </a>
+            {%- endfor -%}
         </li>
     </ul>
     {% endif %}

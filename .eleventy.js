@@ -37,6 +37,13 @@ module.exports = function(config) {
         }).replace(' г.', '');
     });
 
+    config.addFilter('shortDate', function(value) {
+        return value.toLocaleString('ru', {
+            month: 'short',
+            day: 'numeric'
+        });
+    });
+
     config.addFilter('isoDate', function(value) {
         return value.toISOString();
     });

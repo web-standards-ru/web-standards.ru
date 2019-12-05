@@ -1,0 +1,8 @@
+{%- for conference in collections.conference -%}
+    <a class="conference-link" href={{ conference.data.url }}>
+        <time class="conference-link__date" datetime="{{ conference.data.date | isoDate }}">
+            {{ conference.data.date | shortDate }}
+        </time>
+        <span class="conference-link__title">{{ conference.data.title }}</span>
+    </a>
+{%- endfor -%}

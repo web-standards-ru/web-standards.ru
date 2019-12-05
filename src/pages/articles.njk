@@ -24,11 +24,9 @@ permalink: articles/index.html
         {%- endfor -%}
     </ul>
 
-    <p class="notice">
-        <a class="notice__link notice__link--shout" href="">
-            12 мая конференция в Москве
-        </a>
-    </p>
+    <div class="main__conference-link">
+        {% include 'conference-link.njk' %}
+    </div>
 </main>
 
 {% include 'aside.njk' %}

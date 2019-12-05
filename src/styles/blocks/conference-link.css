@@ -1,0 +1,53 @@
+.conference-link {
+    position: relative;
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: black;
+}
+
+.conference-link:hover {
+    text-decoration: underline;
+}
+
+.conference-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 24px;
+    width: 40px;
+    background-image: url('/images/shout.svg');
+    background-repeat: no-repeat;
+    background-size: auto 24px;
+}
+
+@media (min-width: 900px) {
+    .conference-link {
+        font-size: 36px;
+        letter-spacing: normal;
+    }
+}
+
+@media (min-width: 1250px) {
+    .conference-link {
+        padding-top: 0;
+        font-size: 48px;
+    }
+
+    .conference-link::before {
+        position: relative;
+        display: inline-block;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+}
