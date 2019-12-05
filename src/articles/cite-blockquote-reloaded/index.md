@@ -1,5 +1,5 @@
 ---
-title: 'Сite и blockquote: перезагрузка'
+title: 'Сite и blockquote: перезагрузка'
 date: 2013-11-11
 author: steve-faulkner
 source:

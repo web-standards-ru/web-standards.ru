@@ -1,5 +1,5 @@
 ---
-title: 'JavaScript: топ тем и фреймворков для изучения в 2019 году'
+title: 'JavaScript: топ тем и фреймворков для изучения в 2019 году'
 date: 2019-01-16
 author: eric-elliot
 source:

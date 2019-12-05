@@ -1,5 +1,5 @@
 ---
-title: 'Доступные SVG-иконки с инлайновыми спрайтами'
+title: 'Доступные SVG-иконки с инлайновыми спрайтами'
 date: 2018-12-17
 author: marco-hengstenberg
 source:

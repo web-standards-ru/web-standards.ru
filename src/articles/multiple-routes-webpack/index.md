@@ -1,5 +1,5 @@
 ---
-title: 'Роутинг, бандлинг и ленивая загрузка на Webpack'
+title: 'Роутинг, бандлинг и ленивая загрузка на Webpack'
 date: 2018-02-09
 author: sergio-gomes
 source:

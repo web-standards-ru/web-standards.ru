@@ -1,5 +1,5 @@
 ---
-title: 'Что нового в JavaScript 2019'
+title: 'Что нового в JavaScript 2019'
 date: 2019-01-30
 author: david-neal
 source:

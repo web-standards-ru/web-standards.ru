@@ -1,5 +1,5 @@
 ---
-title: 'HTML, CSS и исчезающие точки входа в индустрию'
+title: 'HTML, CSS и исчезающие точки входа в индустрию'
 date: 2019-02-01
 author: rachel-andrew
 source:

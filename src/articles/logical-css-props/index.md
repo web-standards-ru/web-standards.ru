@@ -1,5 +1,5 @@
 ---
-title: 'Новые логические свойства в CSS!'
+title: 'Новые логические свойства в CSS!'
 date: 2019-02-06
 author: elad-shechter
 source:

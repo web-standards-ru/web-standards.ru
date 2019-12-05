@@ -1,5 +1,5 @@
 ---
-title: 'Элементы details и summary'
+title: 'Элементы details и summary'
 date: 2011-08-29
 author: tom-leadbetter
 source:

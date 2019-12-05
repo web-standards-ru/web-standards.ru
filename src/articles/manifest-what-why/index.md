@@ -1,5 +1,5 @@
 ---
-title: 'Манифест? А? Что? Зачем?'
+title: 'Манифест? А? Что? Зачем?'
 date: 2017-01-09
 author: alfred-myers
 source:

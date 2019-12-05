@@ -1,5 +1,5 @@
 ---
-title: 'Та же история, только с CSS'
+title: 'Та же история, только с CSS'
 date: 2019-01-16
 author: tobie-langel
 source:

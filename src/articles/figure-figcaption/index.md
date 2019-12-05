@@ -1,5 +1,5 @@
 ---
-title: 'Элементы figure и figcaption'
+title: 'Элементы figure и figcaption'
 date: 2012-03-12
 author: richard-clark
 source:

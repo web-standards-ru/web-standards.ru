@@ -1,5 +1,5 @@
 ---
-title: 'WebP сегодня: зачем и как?'
+title: 'WebP сегодня: зачем и как?'
 date: 2018-12-25
 author: ire-aderinokun
 source:

@@ -1,5 +1,5 @@
 ---
-title: 'Как я научился любить скучные мелочи CSS'
+title: 'Как я научился любить скучные мелочи CSS'
 date: 2012-08-21
 author: peter-gasston
 source:

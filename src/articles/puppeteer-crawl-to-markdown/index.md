@@ -1,5 +1,5 @@
 ---
-title: 'Puppeteer для краулинга страниц сайта и сохранения их в Markdown'
+title: 'Puppeteer для краулинга страниц сайта и сохранения их в Markdown'
 date: 2019-01-17
 author: michael-scharnagl
 source:

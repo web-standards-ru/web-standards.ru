@@ -1,5 +1,5 @@
 ---
-title: 'CSS и JS в состоянии войны: как это остановить'
+title: 'CSS и JS в состоянии войны: как это остановить'
 date: 2019-02-04
 author: andrey-sitnik
 source:

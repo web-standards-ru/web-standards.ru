@@ -1,5 +1,5 @@
 ---
-title: 'Text-transform и копирование'
+title: 'Text-transform и копирование'
 date: 2019-01-24
 author: igor-shevchenko
 editors:

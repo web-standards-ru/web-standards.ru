@@ -1,5 +1,5 @@
 ---
-title: 'Вам не нравится IE6? Что, правда?'
+title: 'Вам не нравится IE6? Что, правда?'
 date: 2011-08-02
 author: remy-sharp
 source:

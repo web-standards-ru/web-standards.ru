@@ -1,5 +1,5 @@
 ---
-title: 'Разбираемся с vertical-align'
+title: 'Разбираемся с vertical-align'
 date: 2012-03-09
 author: louis-lazaris
 source:

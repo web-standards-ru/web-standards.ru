@@ -1,5 +1,5 @@
 ---
-title: 'Как на самом деле работает position: sticky в CSS'
+title: 'Как на самом деле работает position: sticky в CSS'
 date: 2019-01-31
 author: elad-shechter
 source:

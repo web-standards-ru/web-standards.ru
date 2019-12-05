@@ -1,5 +1,5 @@
 ---
-title: 'Я знаю jQuery. И что?'
+title: 'Я знаю jQuery. И что?'
 date: 2013-12-16
 author: remy-sharp
 source:

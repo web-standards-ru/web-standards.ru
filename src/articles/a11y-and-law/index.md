@@ -1,5 +1,5 @@
 ---
-title: 'Доступность и закон'
+title: 'Доступность и закон'
 date: 2019-11-04
 author: tatiana-fokina
 editors:

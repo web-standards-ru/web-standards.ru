@@ -1,5 +1,5 @@
 ---
-title: 'Как быстро создать десктопное приложение на HTML, CSS и JavaScript'
+title: 'Как быстро создать десктопное приложение на HTML, CSS и JavaScript'
 date: 2019-02-06
 author: aditya-sridhar
 source:
