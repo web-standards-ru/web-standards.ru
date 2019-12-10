@@ -60,10 +60,6 @@
 
 /* Title */
 
-.logo__link {
-    text-decoration: none;
-}
-
 .logo__title {
     margin: 0;
     font-family: 'Dewi', sans-serif;
@@ -71,11 +67,6 @@
     font-size: 20px;
     line-height: 2;
     letter-spacing: -0.03em;
-}
-
-.logo__link[href]:hover .logo__title {
-    font-family: 'Dewi Expanded', sans-serif;
-    font-weight: bold;
 }
 
 @media (min-width: 769px) {
@@ -114,6 +105,22 @@
 @media (min-width: 1440px) {
     .page__content--inner .logo__title {
         font-size: 48px;
+    }
+}
+
+.logo__link[href]:link .logo__title {
+    font-family: 'Dewi', sans-serif;
+}
+
+.logo__link[href]:visited .logo__title {
+    font-family: 'Dewi', sans-serif;
+}
+
+
+@media (min-width: 1300px) {
+    .logo__link[href]:hover .logo__title,
+    .logo__link[href]:active .logo__title {
+        font-family: 'Dewi Expanded', sans-serif;
     }
 }
 

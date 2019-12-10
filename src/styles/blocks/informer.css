@@ -91,16 +91,17 @@
     display: flex;
     color: black;
     text-decoration: none;
+    transition: color 0.2s linear;
 }
 
 .informer__link:hover,
 .informer__link:active {
-    color: var(--color-turquoise-medium);
+    color: var(--color-turquoise);
 }
 
 .informer__link:hover .informer__icon,
 .informer__link:active .informer__icon {
-    fill: var(--color-turquoise-medium);
+    fill: var(--color-turquoise);
 }
 
 @media (min-width: 375px) {
@@ -193,6 +194,7 @@
     position: absolute;
     top: 0;
     left: -40px;
+    transition: fill 0.2s linear;
 }
 
 @media (min-width: 375px) {

@@ -33,7 +33,7 @@
             </button>
             <ul class="navigation__menu" id="navigation-menu">
                 <li class="navigation__item">
-                    <a class="navigation__link" href="/articles/">Статьи</a>
+                    <a class="navigation__link {% if page.url == '/articles/' %}navigation__link--active{% endif %}" href="/articles/">Статьи</a>
                 </li>
                 <li class="navigation__item">
                     <a class="navigation__link">Конференция</a>

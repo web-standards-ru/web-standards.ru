@@ -14,9 +14,10 @@ const isMenuHiddenCheck = () => {
 const handleNavigationMenuState = () => {
     if (isMenuHiddenCheck()) {
         navigationButton.setAttribute('aria-expanded', 'false');
-    setTimeout(() => pageBody.classList.toggle('page__body--active'), 200);
+        setTimeout(() => pageBody.classList.toggle('page__body--active'), 200);
         return;
     }
+
     navigationButton.setAttribute('aria-expanded', 'true');
     pageBody.classList.toggle('page__body--active');
 };

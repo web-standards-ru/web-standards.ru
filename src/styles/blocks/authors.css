@@ -20,25 +20,29 @@
     margin-right: 33px;
 }
 
-.authors__author-link,
-.authors__collaborators-link {
+.authors__collaborators-link:link {
     color: var(--color-grey-darker);
     letter-spacing: -0.03em;
 }
 
-.authors__collaborators-link:hover,
-.authors__collaborators-link:focus {
-    opacity: 0.6;
+.authors__collaborators-link:visited {
+    color: var(--color-grey-lighter);
 }
 
-.authors__author-link {
+.authors__collaborators-link:hover,
+.authors__collaborators-link:active {
+    color: var(--color-turquoise);
+}
+
+.authors__author-link:link {
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.05em;
+    color: var(--color-grey-darker);
+    transition: color 0.2s linear;
 }
 
-.authors__author-link:hover,
-.authors__author-link:focus {
+.authors__author-link:hover {
     text-decoration: underline;
 }
 

@@ -271,8 +271,14 @@
 
 @media (min-width: 1024px) {
     .page__navigation--inner .navigation__item {
-        margin-right: 20px;
+        margin-right: 15px;
         margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .page__navigation--inner .navigation__item {
+        margin-right: 20px;
     }
 }
 
@@ -297,6 +303,7 @@
     letter-spacing: 0.02em;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 0.2s linear;
 }
 
 @media (min-width: 1024px) {
@@ -338,19 +345,20 @@
     }
 }
 
-.navigation__link[href] {
-    color: black;
+.navigation__link--active {
+    font-family: 'Dewi Expanded', sans-serif;
+    font-weight: bold;
 }
 
-.navigation__link[href]:hover {
-    color: var(--color-turquoise-medium);
+.navigation__link[href]:link {
+    color: black;
 }
 
 .navigation__link[href]:visited {
     color: black;
 }
 
-.navigation__link--active[href] {
-    font-family: 'Dewi Expanded', sans-serif;
-    font-weight: 700;
+.navigation__link[href]:hover,
+.navigation__link[href]:active {
+    color: var(--color-turquoise);
 }
