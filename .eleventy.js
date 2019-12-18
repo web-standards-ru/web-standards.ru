@@ -20,11 +20,23 @@ module.exports = function(config) {
         return [...set].sort();
     });
 
+    config.addFilter('filterIndexArticles', function(array) {
+        const featured = array.find((item) => item.data.featured);
+        let notFeatured = [];
+        for (let i = 0; notFeatured.length < 4; i++) {
+            if (!array[i].data.featured) {
+                notFeatured.push(array[i]);
+            }
+        }
+        return [featured, ...notFeatured];
+    });
+
     config.addFilter('filterArticles', function(array) {
         return array.filter(post =>
             post.inputPath.startsWith('./src/articles/')
         );
     });
+
     config.addFilter('filterArticleTag', function(tagsCollection) {
         return tagsCollection.filter(tag => tag !== 'article');
     });
