@@ -13,8 +13,12 @@ permalink: index.html
 
     <ul class="articles articles{{ articleType }}">
         {%- for article in collections.article | reverse | filterIndexArticles -%}
-            <li class="articles__item articles__item{{ articleType }}
-            {% if article.data.featured == true %}articles__item{{ '--featured' }}{% endif %}">
+            <li class="
+                articles__item
+                articles__item{{ articleType }}
+                {% if article.data.featured == true %}
+                    articles__item--featured
+                {% endif %}">
                 {% include 'article-card.njk' %}
             </li>
         {%- endfor -%}
