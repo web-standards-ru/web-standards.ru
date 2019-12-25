@@ -1,34 +1,56 @@
-{% if article.data.featured == true %}
-    {% set featured %}{{ '--featured' }}{% endset %}
+{% if article.data.featured and page.url == '/' %}
+    {% set featured = true %}
+    {% set featuredClass %}{{ '--featured' }}{% endset %}
 {% endif %}
 
-<article class="article-card article-card{{ articleType }} article-card{{ featured }}">
-    <h3 class="article-card__title article-card__title{{ articleType }} article-card__title{{ featured }}">
-        <a class="article-card__link article-card__link{{ articleType }} article-card__link{{ featured }}" href="{{ article.url }}">
+<article class="
+    article-card
+    article-card{{ articleType }}
+    article-card{{ featuredClass }}">
+    <h3 class="
+        article-card__title
+        article-card__title{{ articleType }}
+        article-card__title{{ featuredClass }}">
+        <a class="
+            article-card__link
+            article-card__link{{ articleType }}
+            article-card__link{{ featuredClass }}"
+            href="{{ article.url }}">
             {{ article.data.title }}
         </a>
     </h3>
 
-    {% if article.data.featured == true %}
-        <p class="article-card__preview">{{ article.data.preview }}</p>
+    {% if featured %}
+        <p class="article-card__preview">
+            {{ article.data.preview }}
+        </p>
     {% endif %}
 
-    <time class="article-card__date article-card__date{{ articleType }} article-card__date{{ featured }}" datetime="{{ article.date | isoDate }}">
+    <time class="
+        article-card__date
+        article-card__date{{ articleType }}
+        article-card__date{{ featuredClass }}"
+        datetime="{{ article.date | isoDate }}">
         {{ article.date | ruDate }}
     </time>
 
     {% for author in collections.people | filterPeople(article.data.author) %}
-        <a class="article-card__author article-card__author{{ articleType }} article-card__author{{ featured }}" href="{{ author.url }}">
+        <a class="
+            article-card__author
+            article-card__author{{ articleType }}
+            article-card__author{{ featuredClass }}"
+            href="{{ author.url }}">
             {{ author.name }}
         </a>
 
-        {% if article.data.featured != true %}
-        <img class="
-                article-card__picture
-                article-card__picture{{ articleType }} {% blob author.name %}"
-            src="/images/author--placeholder.jpg"
-            width="80" height="74"
-            alt="{{ author.name }}">
+        {% if not featured %}
+            <img class="
+                    article-card__picture
+                    article-card__picture{{ articleType }}
+                    {% blob author.name %}"
+                src="/images/author--placeholder.jpg"
+                width="80" height="74"
+                alt="{{ author.name }}">
         {% endif %}
     {% endfor %}
 </article>
