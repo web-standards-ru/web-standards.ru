@@ -174,6 +174,7 @@
 
 .article-card__date--featured {
     margin-right: 16px;
+    color: var(--color-grey-lighter);
 }
 
 .article-card__author--featured {
