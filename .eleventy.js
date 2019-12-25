@@ -53,7 +53,7 @@ module.exports = function(config) {
         return value.toLocaleString('ru', {
             month: 'short',
             day: 'numeric'
-        });
+        }).replace('.', '');
     });
 
     config.addFilter('isoDate', function(value) {
