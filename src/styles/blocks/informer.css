@@ -238,7 +238,7 @@
 
 /* Animate */
 
-@keyframes side-slides-top {
+@keyframes wave-top {
     0% {
         transform: scaleY(1) translateY(0);
     }
@@ -252,21 +252,7 @@
     }
 }
 
-@keyframes side-slides-bottom {
-    0% {
-        transform: scaleY(1);
-    }
-
-    50% {
-        transform: scaleY(2) translateY(-170px);
-    }
-
-    100% {
-        transform: scaleY(1) translateY(0);
-    }
-}
-
-@keyframes middle-slides {
+@keyframes wave-middle {
     0% {
         transform: scaleY(1);
     }
@@ -280,7 +266,7 @@
     }
 }
 
-@keyframes center-slides {
+@keyframes wave-center {
     0% {
         transform: scaleY(1);
     }
@@ -294,7 +280,21 @@
     }
 }
 
-@keyframes top-calendar {
+@keyframes wave-bottom {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(2) translateY(-170px);
+    }
+
+    100% {
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes calendar-top {
     0% {
         transform: translateX(0);
     }
@@ -308,7 +308,7 @@
     }
 }
 
-@keyframes bottom-calendar {
+@keyframes calendar-bottom {
     0% {
         transform: translateX(0);
     }
@@ -327,29 +327,29 @@
     animation-duration: 0.8s;
 }
 
-.informer__link:hover .informer__icon--topleft,
-.informer__link:hover .informer__icon--topright {
-    animation-name: side-slides-top;
+.informer__link:hover .informer__icon--wave-top-left,
+.informer__link:hover .informer__icon--wave-top-right {
+    animation-name: wave-top;
 }
 
-.informer__link:hover .informer__icon--bottomleft,
-.informer__link:hover .informer__icon--bottomright {
-    animation-name: side-slides-bottom;
+.informer__link:hover .informer__icon--wave-top-middle,
+.informer__link:hover .informer__icon--wave-bottom-middle  {
+    animation-name: wave-middle;
 }
 
-.informer__link:hover .informer__icon--topmiddle,
-.informer__link:hover .informer__icon--bottommiddle  {
-    animation-name: middle-slides;
+.informer__link:hover .informer__icon--wave-center  {
+    animation-name: wave-center;
 }
 
-.informer__link:hover .informer__icon--topcalendar  {
-    animation-name: top-calendar;
+.informer__link:hover .informer__icon--wave-bottom-left,
+.informer__link:hover .informer__icon--wave-bottom-right {
+    animation-name: wave-bottom;
 }
 
-.informer__link:hover .informer__icon--bottomcalendar  {
-    animation-name: bottom-calendar;
+.informer__link:hover .informer__icon--calendar-top  {
+    animation-name: calendar-top;
 }
 
-.informer__link:hover .informer__icon--center  {
-    animation-name: center-slides;
+.informer__link:hover .informer__icon--calendar-bottom  {
+    animation-name: calendar-bottom;
 }
