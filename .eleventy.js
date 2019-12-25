@@ -4,7 +4,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
 
-    config.addCollection('tagList', function(collection) {
+    config.addCollection('tagList', (collection) => {
         const set = new Set();
         for (const item of collection.getAllSorted()) {
             if ('tags' in item.data) {
@@ -24,7 +24,7 @@ module.exports = function(config) {
         return array.slice(0, limit);
     });
 
-    config.addFilter('filterIndexArticles', function(array) {
+    config.addFilter('filterIndexArticles', (array) => {
         const featured = array.find((item) => item.data.featured);
         let notFeatured = [];
         for (let i = 0; notFeatured.length < 4; i++) {
@@ -35,23 +35,23 @@ module.exports = function(config) {
         return [featured, ...notFeatured];
     });
 
-    config.addFilter('filterArticles', function(array) {
+    config.addFilter('filterArticles', (array) => {
         return array.filter(post =>
             post.inputPath.startsWith('./src/articles/')
         );
     });
 
-    config.addFilter('filterCurrentPage', function(array, page) {
+    config.addFilter('filterCurrentPage', (array, page) => {
         return array.filter(post =>
             post.url != page.url
         );
     });
 
-    config.addFilter('filterArticleTag', function(tagsCollection) {
+    config.addFilter('filterArticleTag', (tagsCollection) => {
         return tagsCollection.filter(tag => tag !== 'article');
     });
 
-    config.addFilter('ruDate', function(value) {
+    config.addFilter('ruDate', (value) => {
         return value.toLocaleString('ru', {
             year: 'numeric',
             month: 'long',
@@ -59,18 +59,18 @@ module.exports = function(config) {
         }).replace(' г.', '');
     });
 
-    config.addFilter('shortDate', function(value) {
+    config.addFilter('shortDate', (value) => {
         return value.toLocaleString('ru', {
             month: 'short',
             day: 'numeric'
         }).replace('.', '');
     });
 
-    config.addFilter('isoDate', function(value) {
+    config.addFilter('isoDate', (value) => {
         return value.toISOString();
     });
 
-    config.addFilter('htmlmin', function(value) {
+    config.addFilter('htmlmin', (value) => {
         let htmlmin = require('html-minifier');
         return htmlmin.minify(
             value, {
@@ -80,14 +80,14 @@ module.exports = function(config) {
         );
     });
 
-    config.addFilter('markdown', function(value) {
+    config.addFilter('markdown', (value) => {
         let markdown = require('markdown-it')({
             html: true
         });
         return markdown.render(value);
     });
 
-    config.addTransform('xmlmin', function(content, outputPath) {
+    config.addTransform('xmlmin', (content, outputPath) => {
         if(outputPath && outputPath.endsWith('.xml')) {
             let prettydata = require('pretty-data');
             return prettydata.pd.xmlmin(content);
@@ -96,7 +96,7 @@ module.exports = function(config) {
     });
 
     // Возвращает данные о людях из списка filterList
-    config.addFilter('filterPeople', function(peopleList, filterList) {
+    config.addFilter('filterPeople', (peopleList, filterList) => {
         return peopleList
             .filter((person) => {
                 // Иногда filterList это строка, а не массив, поэтому всегда делаем массив
@@ -112,7 +112,7 @@ module.exports = function(config) {
             });
     });
 
-    config.addNunjucksTag('blob', function (nunjucksEngine) {
+    config.addNunjucksTag('blob', (nunjucksEngine) => {
         return new function () {
             this.tags = ['blob'];
 
