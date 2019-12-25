@@ -20,6 +20,10 @@ module.exports = function(config) {
         return [...set].sort();
     });
 
+    config.addFilter('limit', (array, limit) => {
+        return array.slice(0, limit);
+    });
+
     config.addFilter('filterIndexArticles', function(array) {
         const featured = array.find((item) => item.data.featured);
         let notFeatured = [];
@@ -34,6 +38,12 @@ module.exports = function(config) {
     config.addFilter('filterArticles', function(array) {
         return array.filter(post =>
             post.inputPath.startsWith('./src/articles/')
+        );
+    });
+
+    config.addFilter('filterCurrentPage', function(array, page) {
+        return array.filter(post =>
+            post.url != page.url
         );
     });
 

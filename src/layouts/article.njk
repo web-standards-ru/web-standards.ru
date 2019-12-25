@@ -75,8 +75,7 @@ layout: page.njk
         {% set articleType %}{{ '--related' }}{% endset %}
 
         <ul class="articles articles{{ articleType }}">
-            {# Необходима реализация показа статей "По теме" #}
-            {%- for article in collections.article | reverse -%}
+            {%- for article in collections.article | reverse | filterCurrentPage(page) | limit(3) -%}
                 <li class="articles__item articles__item{{ articleType }}">
                     {% include 'article-card.njk' %}
                 </li>
