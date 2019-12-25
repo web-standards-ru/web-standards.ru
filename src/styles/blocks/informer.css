@@ -235,3 +235,121 @@
         top: 15px;
     }
 }
+
+/* Animate */
+
+@keyframes side-slides-top {
+    0% {
+        transform: scaleY(1) translateY(0);
+    }
+
+    50% {
+        transform: scaleY(2) translateY(-100px);
+    }
+
+    100% {
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes side-slides-bottom {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(2) translateY(-170px);
+    }
+
+    100% {
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes middle-slides {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.5) translateY(200px);
+    }
+
+    100% {
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes center-slides {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.2) translateY(-30px);
+    }
+
+    100% {
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes top-calendar {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-18px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bottom-calendar {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(9px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.informer__icon-group {
+    transform-origin: center bottom;
+    animation-duration: 0.8s;
+}
+
+.informer__link:hover .informer__icon--topleft,
+.informer__link:hover .informer__icon--topright {
+    animation-name: side-slides-top;
+}
+
+.informer__link:hover .informer__icon--bottomleft,
+.informer__link:hover .informer__icon--bottomright {
+    animation-name: side-slides-bottom;
+}
+
+.informer__link:hover .informer__icon--topmiddle,
+.informer__link:hover .informer__icon--bottommiddle  {
+    animation-name: middle-slides;
+}
+
+.informer__link:hover .informer__icon--topcalendar  {
+    animation-name: top-calendar;
+}
+
+.informer__link:hover .informer__icon--bottomcalendar  {
+    animation-name: bottom-calendar;
+}
+
+.informer__link:hover .informer__icon--center  {
+    animation-name: center-slides;
+}
