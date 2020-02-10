@@ -1,0 +1,36 @@
+---
+title: Веб-стандарты — Статьи
+description: Авторские и переводные статьи по фронтенду
+language: ru
+url: https://web-standards.ru/articles
+domain: https://web-standards.ru
+permalink: articles/feed/index.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>{{ title }}</title>
+        <description>{{ description }}</description>
+        <language>{{ language }}</language>
+        <link>{{ url }}</link>
+
+        {%- for article in collections.article | filterLastArticles -%}
+            <lastBuildDate>{{ article.date.toUTCString() }}</lastBuildDate>
+        {%- endfor -%}
+
+        {%- for article in collections.article | reverse %}
+            <item>
+                <title>{{ article.data.title }}</title>
+                <link href="{{ domain }}{{ article.url }}"/>
+                <description>
+                    <![CDATA[
+                        {{ article | fixLinks | safe }}
+                    ]]>
+                </description>
+                <pubDate>{{ article.date.toUTCString() }}</pubDate>
+                <guid>{{ article.url | url }}</guid>
+            </item>
+        {%- endfor %}
+
+    </channel>
+</rss>

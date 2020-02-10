@@ -35,6 +35,12 @@ module.exports = function(config) {
         return [featured, ...notFeatured];
     });
 
+    config.addFilter('filterLastArticles', (array) => {
+        let lastElement = [];
+        lastElement.push(array[array.length - 1]);
+        return lastElement;
+    });
+
     config.addFilter('filterArticles', (array) => {
         return array.filter(post =>
             post.inputPath.startsWith('./src/articles/')
@@ -110,6 +116,19 @@ module.exports = function(config) {
 
                 return data;
             });
+    });
+
+    config.addFilter('fixLinks', (content) => {
+        const reg = /(src="[^(https:\/\/)])|(src="\/)|(href="[^(https:\/\/)])|(href="\/)/g;
+        const prefix = `https://web-standards.ru` + content.url;
+        return content.templateContent.replace(reg, (match) => {
+            if (match === `src="/` || match === `href="/`) {
+                match = match.slice(0, -1);
+                return match + prefix;
+            } else {
+                return match.slice(0, -1) + prefix + match.slice(-1);
+            }
+        });
     });
 
     config.addNunjucksTag('blob', (nunjucksEngine) => {
