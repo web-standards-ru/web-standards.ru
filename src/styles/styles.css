@@ -15,6 +15,7 @@
 @import 'blocks/informer.css';
 @import 'blocks/main.css';
 @import 'blocks/content.css';
+@import 'blocks/media.css';
 @import 'blocks/links.css';
 @import 'blocks/footer.css';
 @import 'blocks/article.css';
@@ -38,5 +39,6 @@
     --color-blue-medium: #26649f;
     --color-blue-darker: #0064a4;
     --color-green-light: #ddf2ea;
+    --color-green-darker: #a3cfd1;
     --color-turquoise: #00abbd;
 }

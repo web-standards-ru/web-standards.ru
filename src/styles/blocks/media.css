@@ -1,0 +1,75 @@
+.media {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.media figcaption {
+    display: block;
+    margin-top: 0.75em;
+    font-size: 10px;
+    line-height: 1.7;
+    font-style: normal;
+    color: var(--color-grey-darker);
+}
+
+@media (min-width: 1240px) {
+    .media {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .media figcaption {
+        font-size: 16px;
+    }
+
+    /* Подпись в левой колонке */
+
+    .media--floated-caption {
+        display: flex;
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    .media--floated-caption img {
+        max-width: var(--content-width, 100%);
+    }
+
+    .media--floated-caption figcaption {
+        order: -1;
+        max-width: 300px;
+        margin-right: auto;
+    }
+
+    /* Картинки на всю ширину */
+
+    .media--full {
+        width: 100%;
+    }
+
+    .media--full figcaption {
+        width: var(--content-width, 100%);
+        margin-left: auto;
+    }
+
+    /* Картинки с обтеканием текста */
+
+    .media--align-right {
+        width: var(--content-half, 50%);
+        float: right;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+
+    .media--align-right + * + * {
+        /* сброс обтекания после блока текста */
+        clear: both;
+    }
+}
