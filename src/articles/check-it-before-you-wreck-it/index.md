@@ -179,6 +179,6 @@ _Проверка соответствия документа_ — хороши
 **Спасибо, Майк!**
 
 <figure>
-    <iframe width="510" height="383" src="images/https://www.youtube.com/embed/FVbVCZw5BPQ" allowfullscreen></iframe>
+    <iframe width="510" height="383" src="https://www.youtube.com/embed/FVbVCZw5BPQ" allowfullscreen></iframe>
     <figcaption>Полезный совет — всегда <a href="http://validator.w3.org/nu">проверяй свой HTML</a> под <a href="http://youtu.be/FVbVCZw5BPQ">рок-н-ролл</a>, играющий… ГРОМКО!</figcaption>
 </figure>

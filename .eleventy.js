@@ -3,6 +3,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
+    config.addPassthroughCopy('src/articles/**/*.(html|gif|jpg|png|svg|zip)');
 
     config.addCollection('tagList', (collection) => {
         const set = new Set();
@@ -183,8 +184,7 @@ module.exports = function(config) {
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
         templateFormats: [
-            'md', 'html', 'njk',
-            'jpg', 'png', 'svg',
+            'md', 'njk'
         ],
     };
 };

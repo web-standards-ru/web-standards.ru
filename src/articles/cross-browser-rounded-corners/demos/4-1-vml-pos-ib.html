@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <style>
         .round {
+            display: inline-block;
             padding: 10px;
             -webkit-border-radius: 8px;
             -moz-border-radius: 8px;
             border-radius: 8px;
             background: #cccccc;
-    }
+        }
     </style>
     <!--[if VML&(lt IE 9)]>
         <style>
@@ -26,13 +27,8 @@
 
             v\:shape,
             v\:formulas,
-            v\:f {
-                behavior: url(#default#VML);
-            }
-
-            v\:shape {
-                display: block;
-            }
+            v\:f { behavior: url(#default#VML) }
+            v\:shape { display: inline-block }
         </style>
         <xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
     <![endif]-->
