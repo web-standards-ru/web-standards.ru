@@ -3,7 +3,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/articles/**/*.(html|gif|jpg|png|svg|zip)');
+    config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|zip)');
 
     config.addCollection('tagList', (collection) => {
         const set = new Set();
