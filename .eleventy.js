@@ -58,51 +58,6 @@ module.exports = function(config) {
         return tagsCollection.filter(tag => tag !== 'article');
     });
 
-    config.addFilter('ruDate', (value) => {
-        return value.toLocaleString('ru', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        }).replace(' г.', '');
-    });
-
-    config.addFilter('shortDate', (value) => {
-        return value.toLocaleString('ru', {
-            month: 'short',
-            day: 'numeric'
-        }).replace('.', '');
-    });
-
-    config.addFilter('isoDate', (value) => {
-        return value.toISOString();
-    });
-
-    config.addFilter('htmlmin', (value) => {
-        let htmlmin = require('html-minifier');
-        return htmlmin.minify(
-            value, {
-                removeComments: true,
-                collapseWhitespace: true
-            }
-        );
-    });
-
-    config.addFilter('markdown', (value) => {
-        let markdown = require('markdown-it')({
-            html: true
-        });
-        return markdown.render(value);
-    });
-
-    config.addTransform('xmlmin', (content, outputPath) => {
-        if(outputPath && outputPath.endsWith('.xml')) {
-            let prettydata = require('pretty-data');
-            return prettydata.pd.xmlmin(content);
-        }
-        return content;
-    });
-
-    // Возвращает данные о людях из списка filterList
     config.addFilter('filterPeople', (peopleList, filterList) => {
         return peopleList
             .filter((person) => {
@@ -131,6 +86,61 @@ module.exports = function(config) {
             }
         });
     });
+
+    // Даты
+
+    config.addFilter('ruDate', (value) => {
+        return value.toLocaleString('ru', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }).replace(' г.', '');
+    });
+
+    config.addFilter('shortDate', (value) => {
+        return value.toLocaleString('ru', {
+            month: 'short',
+            day: 'numeric'
+        }).replace('.', '');
+    });
+
+    config.addFilter('isoDate', (value) => {
+        return value.toISOString();
+    });
+
+    config.addFilter('markdown', (value) => {
+        let markdown = require('markdown-it')({
+            html: true
+        });
+        return markdown.render(value);
+    });
+
+    // Трансформации
+
+    config.addTransform('htmlmin', (content, outputPath) => {
+        if(outputPath && outputPath.endsWith('.html')) {
+            let htmlmin = require('html-minifier');
+            let result = htmlmin.minify(
+                content, {
+                    removeComments: true,
+                    collapseWhitespace: true
+                }
+            );
+            return result;
+        }
+        return content;
+    });
+
+    config.addTransform('xmlmin', function(content, outputPath) {
+        if(outputPath && outputPath.endsWith('.xml')) {
+            let prettydata = require('pretty-data');
+            let result = prettydata.pd.xmlmin(content);
+            return result;
+        }
+        return content;
+    });
+
+    // Теги
 
     config.addNunjucksTag('blob', (nunjucksEngine) => {
         return new function () {
