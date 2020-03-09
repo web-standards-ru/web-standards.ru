@@ -53,6 +53,13 @@
 
 @media (min-width: 1440px) {
     .page__content--inner .logo__icon {
+        height: 72px;
+        width: 66px;
+    }
+}
+
+@media (min-width: 1550px) {
+    .page__content--inner .logo__icon {
         height: 87px;
         width: 76px;
     }
@@ -103,6 +110,12 @@
 }
 
 @media (min-width: 1440px) {
+    .page__content--inner .logo__title {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1550px) {
     .page__content--inner .logo__title {
         font-size: 48px;
     }
@@ -180,6 +193,12 @@
 }
 
 @media (min-width: 1440px) {
+    .page__content--inner .logo__tagline {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1550px) {
     .page__content--inner .logo__tagline {
         font-size: 16px;
     }
