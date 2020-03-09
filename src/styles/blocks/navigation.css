@@ -86,10 +86,11 @@
 
 .navigation__button {
     position: relative;
+    top: -13px;
     z-index: 1;
     display: inline-block;
-    height: 14px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     padding: 0;
     background-color: transparent;
     border: none;
@@ -122,6 +123,7 @@
 .navigation__inner::before,
 .navigation__inner::after {
     position: absolute;
+    left: 10px;
     height: 2px;
     width: 20px;
     background-color: black;
@@ -130,6 +132,7 @@
 
 .navigation__inner::before {
     top: -6px;
+    left: 0;
     display: block;
     transition: top 0.1s 0.2s linear;
     content: '';
@@ -137,6 +140,7 @@
 
 .navigation__inner::after {
     bottom: -6px;
+    left: 0;
     display: block;
     transition: bottom 0.1s 0.2s linear, transform 0.1s linear;
     content: '';
