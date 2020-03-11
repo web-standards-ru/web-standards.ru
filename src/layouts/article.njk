@@ -70,7 +70,7 @@ layout: page.njk
         </div>
     </div>
     <div class="main__related-articles related-articles">
-        <h2 class="related-articles__title">По теме</h2>
+        <h2 class="related-articles__title">Ещё</h2>
 
         {% set articleType %}{{ '--related' }}{% endset %}
 
@@ -82,9 +82,9 @@ layout: page.njk
             {%- endfor -%}
         </ul>
     </div>
-    <div class="main__conference-link">
+    {# <div class="main__conference-link">
         {% include 'conference-link.njk' %}
-    </div>
+    </div> #}
 </main>
 
 {% include 'aside.njk' %}
