@@ -32,6 +32,10 @@
     font-size: 24px;
 }
 
+.notice__link:hover {
+    text-decoration: underline;
+}
+
 .notice__link--shout {
     background-image: url('/images/shout.svg');
     background-position: 50% 0;
