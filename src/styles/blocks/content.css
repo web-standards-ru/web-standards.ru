@@ -64,8 +64,8 @@
 .content ol,
 .content ul {
     list-style: none;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 10px;
+    margin-bottom: 29px;
     padding-left: 0;
 }
 
@@ -244,8 +244,8 @@
 
     .content ol,
     .content ul {
-        margin-top: 32px;
-        margin-bottom: 32px;
+        margin-top: 19px;
+        margin-bottom: 57px;
     }
 
     .content ol > li,
