@@ -84,7 +84,7 @@
     content: '—';
     position: absolute;
     left: 0;
-    top: -0.4em;
+    top: -10px;
     bottom: 0;
     font-size: 21px;
     color: var(--color-grey-lighter);
@@ -253,12 +253,13 @@
 
     .content ol > li,
     .content ul > li {
-        padding-left: 43px;
+        padding-left: 42px;
     }
 
     .content ul > li::before {
-        left: 6px;
-        top: 0;
+        left: 0;
+        top: -2px;
+        font-family: 'Dewi Expanded', sans-serif;
     }
 
     .content ol > li::before {
