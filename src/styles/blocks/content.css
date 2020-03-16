@@ -205,12 +205,15 @@
 /* Буквица */
 
 .content > p:first-of-type::first-letter {
-    float: left;
-    margin: -0.1em 0;
-    padding: 0 5px;
-    font-size: 2em;
-    font-family: 'Dewi Expanded';
+    margin-top: -5px;
+    margin-left: -5px;
+    padding-right: 15px;
     color: var(--color-grey-medium);
+    font-family: 'Dewi Expanded', sans-serif;
+    font-weight: normal;
+    font-size: 3.5em;
+    line-height: 1;
+    float: left;
 }
 
 
