@@ -44,13 +44,15 @@
         </a>
 
         {% if not featured %}
-            <img class="
-                    article-card__picture
-                    article-card__picture{{ articleType }}
-                    {% blob author.name %}"
-                src="/images/author--placeholder.jpg"
-                width="80" height="74"
-                alt="{{ author.name }}">
+            <a href="{{ author.url }}">
+                <img class="
+                        article-card__picture
+                        article-card__picture{{ articleType }}
+                        {% blob author.name %}"
+                    src="/images/author--placeholder.jpg"
+                    width="80" height="74"
+                    alt="{{ author.name }}">
+            </a>
         {% endif %}
     {% endfor %}
 </article>
