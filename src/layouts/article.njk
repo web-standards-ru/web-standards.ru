@@ -22,7 +22,7 @@ layout: page.njk
                     <ul class="article__tags">
                         {%- for tag in tags | filterArticleTag -%}
                             <li class="article__tags-item">
-                                <a class="article__tags-link" href="/articles/tags/{{ tag }}">
+                                <a class="article__link" href="/articles/tags/{{ tag }}">
                                     {{ tag }}
                                 </a>
                             </li>

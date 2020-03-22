@@ -36,8 +36,16 @@
 }
 
 .article__link {
-    color: var(--color-blue-light);
-    text-decoration: none;
+    color: white;
+}
+
+.article__link:hover,
+.article__link:focus {
+    color: var(--color-grey-lighter);
+}
+
+.article__link:active {
+    opacity: 0.5;
 }
 
 .article__meta {
@@ -63,23 +71,6 @@
 
 .article__tags-item:last-child {
     margin-right: 0;
-}
-
-.article__tags-link {
-    color: white;
-    text-decoration: none;
-}
-
-.article__link:hover,
-.article__link:focus,
-.article__tags-link:hover,
-.article__tags-link:focus {
-    text-decoration: underline;
-}
-
-.article__link:active,
-.article__tags-link:active {
-    opacity: 0.5;
 }
 
 .article__authors {
