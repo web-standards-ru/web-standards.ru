@@ -171,8 +171,13 @@
         margin: 10% 0 0;
     }
 
-    .article__tags-link {
+    .article__link {
         color: black;
+    }
+
+    .article__link:hover,
+    .article__link:focus {
+        color: var(--color-turquoise);
     }
 }
 
