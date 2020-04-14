@@ -34,25 +34,29 @@
         {{ article.date | ruDate }}
     </time>
 
-    {% for author in collections.people | filterPeople(article.data.author) %}
+    {% for person in collections.people | filterPeople(article.data.author) %}
+        {% if person.data.photo %}
+            {% set personPhoto = [article.data.author, '/photo.jpg'] | join %}
+        {% else %}
+            {% set personPhoto = 'person.png' %}
+        {% endif %}
+
         <a class="
             article-card__author
             article-card__author{{ articleType }}
             article-card__author{{ featuredClass }}"
-            href="{{ author.url }}">
-            {{ author.name }}
+            href="{{ person.url }}">
+            {{ person.name }}
         </a>
 
         {% if not featured %}
-            <a href="{{ author.url }}">
-                <img class="
-                        article-card__picture
-                        article-card__picture{{ articleType }}
-                        {% blob author.name %}"
-                    src="/images/author--placeholder.jpg"
-                    width="80" height="74"
-                    alt="{{ author.name }}">
-            </a>
+            <img class="
+                    article-card__picture
+                    article-card__picture{{ articleType }}
+                    {% blob person.name %}"
+                src="/people/{{ personPhoto }}"
+                width="80" height="74"
+                alt="{{ person.name }}">
         {% endif %}
     {% endfor %}
 </article>

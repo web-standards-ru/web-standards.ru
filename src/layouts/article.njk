@@ -33,12 +33,17 @@ layout: page.njk
         </div>
         <div class="article__authors authors">
             <div class="authors__author">
-                {% for author in collections.people | filterPeople(author) %}
-                    <img class="authors__author-avatar {% blob author.name %}"
-                        src="/images/author--placeholder.jpg"
-                        width="113" height="104" alt="{{ author.name }}">
-                    <a class="authors__author-link" href="{{ author.url }}">
-                        {{ author.name }}
+                {% for person in collections.people | filterPeople(author) %}
+                    {% if person.photo %}
+                        {% set personPhoto = [author, '/photo.jpg'] | join %}
+                    {% else %}
+                        {% set personPhoto = 'person.png' %}
+                    {% endif %}
+                    <img class="authors__author-avatar {% blob person.name %}"
+                        src="/people/{{ personPhoto }}"
+                        width="113" height="104" alt="{{ person.name }}">
+                    <a class="authors__author-link" href="{{ person.url }}">
+                        {{ person.name }}
                     </a>
                 {% endfor %}
             </div>

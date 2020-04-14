@@ -68,10 +68,7 @@ module.exports = function(config) {
                 return filterListNormalized.includes(person.fileSlug);
             })
             .map((person) => {
-                // Берёт все данные, кроме pkg и collections для оптимизации памяти
-                const { pkg, collections, ...data } = person.data;
-
-                return data;
+                return person.data;
             });
     });
 
