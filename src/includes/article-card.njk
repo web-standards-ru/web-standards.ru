@@ -50,13 +50,18 @@
         </a>
 
         {% if not featured %}
-            <img class="
-                    article-card__picture
-                    article-card__picture{{ articleType }}
-                    {% blob person.name %}"
-                src="/people/{{ personPhoto }}"
-                width="80" height="74"
-                alt="{{ person.name }}">
+            <a class="
+                article-card__picture-link
+                article-card__picture-link{{ articleType }}"
+                href="{{ person.url }}">
+                <img class="
+                        article-card__picture
+                        article-card__picture{{ articleType }}
+                        {% blob person.name %}"
+                    src="/people/{{ personPhoto }}"
+                    width="80" height="74"
+                    alt="{{ person.name }}">
+            </a>
         {% endif %}
     {% endfor %}
 </article>

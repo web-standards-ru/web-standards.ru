@@ -8,8 +8,11 @@
     grid-gap: 14px 16px;
 }
 
-.article-card__picture {
+.article-card__picture-link {
     grid-area: picture;
+}
+
+.article-card__picture {
     height: auto;
 }
 
@@ -102,7 +105,7 @@
         align-items: baseline;
     }
 
-    .article-card__picture--articles {
+    .article-card__picture-link--articles {
         align-self: flex-start;
     }
 }
