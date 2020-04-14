@@ -114,6 +114,10 @@
     }
 }
 
+.navigation__button:focus {
+    outline: none;
+}
+
 .navigation__inner {
     display: block;
     margin-top: -1px;
