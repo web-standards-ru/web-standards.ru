@@ -17,18 +17,33 @@ permalink: /articles/tags/{{ tag | slug }}/
 {% include 'header.njk' %}
 
 <main class="main">
-    {% set taglist = collections[tag] %}
-    <h1>Статьи с тегом «{{ tag }}» ({{ taglist | length }})</h1>
-    <ol>
-        {% for article in taglist | filterArticles | reverse %}
-            <li>
-                <a href="{{ article.url | url }}">{{ article.data.title }}</a>
-            </li>
+    <div class="archive">
+        <h1 class="archive__title">
+            Теги
+        </h1>
+    </div>
+
+    <p class="archive__tags">
+        {% for tags in collections.tagList | filterArticleTag %}
+            <a class="archive__tags-link"
+            {% if tag != tags %}
+                href="/articles/tags/{{ tags | slug }}"
+            {% endif %}>
+                {{- tags -}}
+            </a>{% if not loop.last %}, {% endif %}
         {% endfor %}
-    </ol>
-    <p>
-        <a href="/articles/tags/">Все теги</a>
     </p>
+
+    {% set tagList = collections[tag] %}
+    {% set articleType %}{{ '--articles' }}{% endset %}
+
+    <ul class="articles articles{{ articleType }}">
+        {%- for article in tagList | filterArticles | reverse -%}
+            <li class="articles__item articles__item{{ articleType }}">
+                {% include 'article-card.njk' %}
+            </li>
+        {%- endfor -%}
+    </ul>
 </main>
 
 {% include 'aside.njk' %}

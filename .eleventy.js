@@ -56,7 +56,12 @@ module.exports = function(config) {
     });
 
     config.addFilter('filterArticleTag', (tagsCollection) => {
-        return tagsCollection.filter(tag => tag !== 'article');
+        return tagsCollection.filter(
+            tag => (
+                tag !== 'article' &&
+                tag !== 'people'
+            )
+        );
     });
 
     config.addFilter('filterPeople', (peopleList, filterList) => {

@@ -7,6 +7,10 @@
     text-transform: uppercase;
 }
 
+.archive__title-link {
+    color: inherit;
+}
+
 @media (min-width: 630px) {
     .archive__title {
         margin: 20px 0 50px;
@@ -40,4 +44,34 @@
         margin-bottom: 23px;
         font-size: 24px;
     }
+}
+
+/* Tags */
+
+.archive__tags {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+@media (min-width: 630px) {
+    .archive__tags {
+        margin-bottom: 56px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .archive__tags {
+        margin-bottom: 72px;
+        font-size: 24px;
+    }
+}
+
+.archive__tags-link {
+    color: inherit;
+}
+
+.archive__tags-link:not([href]) {
+    font-family: 'Dewi Expanded';
+    font-weight: 900;
+    color: black;
 }

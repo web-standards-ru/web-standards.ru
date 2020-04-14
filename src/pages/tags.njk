@@ -7,17 +7,17 @@ permalink: /articles/tags/
 {% include 'header.njk' %}
 
 <main class="main">
-    {{ content | safe }}
-    <h1>Теги</h1>
-    <ul>
+    <div class="archive">
+        <h1 class="archive__title">Теги</h1>
+    </div>
+
+    <p class="archive__tags">
         {% for tag in collections.tagList | filterArticleTag %}
-            <li>
-                <h2>
-                    <a href="/articles/tags/{{ tag | slug }}">{{ tag }}</a>
-                </h2>
-            </li>
+            <a class="archive__tags-link" href="/articles/tags/{{ tag | slug }}">
+                {{- tag -}}
+            </a>{% if not loop.last %}, {% endif %}
         {% endfor %}
-    </ul>
+    </p>
 </main>
 
 {% include 'aside.njk' %}
