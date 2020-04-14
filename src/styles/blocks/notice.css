@@ -32,8 +32,10 @@
     font-size: 24px;
 }
 
-.notice__link:hover {
-    text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+    .notice__link:hover {
+        text-decoration: underline;
+    }
 }
 
 .notice__link--shout {

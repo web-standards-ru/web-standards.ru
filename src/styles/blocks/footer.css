@@ -32,8 +32,10 @@
     color: white;
 }
 
-.footer__link[href]:hover {
-    color: white;
+@media (hover: hover) and (pointer: fine) {
+    .footer__link[href]:hover {
+        color: white;
+    }
 }
 
 .footer__link[href]:active {

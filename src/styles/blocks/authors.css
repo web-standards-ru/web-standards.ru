@@ -29,7 +29,12 @@
     color: var(--color-grey-lighter);
 }
 
-.authors__collaborators-link:hover,
+@media (hover: hover) and (pointer: fine) {
+    .authors__collaborators-link:hover {
+        color: var(--color-turquoise);
+    }
+}
+
 .authors__collaborators-link:active {
     color: var(--color-turquoise);
 }
@@ -42,8 +47,10 @@
     transition: color 0.2s linear;
 }
 
-.authors__author-link:hover {
-    text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+    .authors__author-link:hover {
+        text-decoration: underline;
+    }
 }
 
 .authors__collaborators-heading {

@@ -52,9 +52,11 @@
     text-transform: uppercase;
 }
 
-.article-card__link:hover,
-.article-card__author:hover {
-    text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+    .article-card__link:hover,
+    .article-card__author:hover {
+        text-decoration: underline;
+    }
 }
 
 @media (min-width: 800px) {

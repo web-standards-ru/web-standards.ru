@@ -93,12 +93,22 @@
     transition: color 0.2s linear;
 }
 
-.informer__link:hover,
+@media (hover: hover) and (pointer: fine) {
+    .informer__link:hover {
+        color: var(--color-turquoise);
+    }
+}
+
 .informer__link:active {
     color: var(--color-turquoise);
 }
 
-.informer__link:hover .informer__icon,
+@media (hover: hover) and (pointer: fine) {
+    .informer__link:hover .informer__icon {
+        fill: var(--color-turquoise);
+    }
+}
+
 .informer__link:active .informer__icon {
     fill: var(--color-turquoise);
 }
@@ -256,13 +266,17 @@
     50% { transform: scaleY(0.5); }
 }
 
-.informer__link:hover .informer__icon-wave-left,
-.informer__link:hover .informer__icon-wave-right {
-    animation-name: wave-sides;
+@media (hover: hover) and (pointer: fine) {
+    .informer__link:hover .informer__icon-wave-left,
+    .informer__link:hover .informer__icon-wave-right {
+        animation-name: wave-sides;
+    }
 }
 
-.informer__link:hover .informer__icon-wave-center {
-    animation-name: wave-center;
+@media (hover: hover) and (pointer: fine) {
+    .informer__link:hover .informer__icon-wave-center {
+        animation-name: wave-center;
+    }
 }
 
 /* Calendar */
@@ -279,10 +293,14 @@
     50% { transform: translateX(9px); }
 }
 
-.informer__link:hover .informer__icon-calendar-top  {
-    animation-name: calendar-top;
+@media (hover: hover) and (pointer: fine) {
+    .informer__link:hover .informer__icon-calendar-top {
+        animation-name: calendar-top;
+    }
 }
 
-.informer__link:hover .informer__icon-calendar-bottom  {
-    animation-name: calendar-bottom;
+@media (hover: hover) and (pointer: fine) {
+    .informer__link:hover .informer__icon-calendar-bottom {
+        animation-name: calendar-bottom;
+    }
 }

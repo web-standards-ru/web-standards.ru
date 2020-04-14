@@ -39,7 +39,12 @@
     color: white;
 }
 
-.article__link:hover,
+@media (hover: hover) and (pointer: fine) {
+    .article__link:hover {
+        color: var(--color-grey-lighter);
+    }
+}
+
 .article__link:focus {
     color: var(--color-grey-lighter);
 }
@@ -175,7 +180,12 @@
         color: black;
     }
 
-    .article__link:hover,
+    @media (hover: hover) and (pointer: fine) {
+        .article__link:hover {
+            color: var(--color-turquoise);
+        }
+    }
+
     .article__link:focus {
         color: var(--color-turquoise);
     }

@@ -12,8 +12,10 @@
     color: black;
 }
 
-.conference-link:hover {
-    text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+    .conference-link:hover {
+        text-decoration: underline;
+    }
 }
 
 .conference-link::before {

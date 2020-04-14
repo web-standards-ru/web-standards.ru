@@ -131,7 +131,13 @@
 
 
 @media (min-width: 1300px) {
-    .logo__link[href]:hover .logo__title,
+
+    @media (hover: hover) and (pointer: fine) {
+        .logo__link[href]:hover .logo__title {
+            font-family: 'Dewi Expanded', sans-serif;
+        }
+    }
+
     .logo__link[href]:active .logo__title {
         font-family: 'Dewi Expanded', sans-serif;
     }
