@@ -35,7 +35,7 @@
     </time>
 
     {% for person in collections.people | filterPeople(article.data.author) %}
-        {% if person.data.photo %}
+        {% if person.photo %}
             {% set personPhoto = [article.data.author, '/photo.jpg'] | join %}
         {% else %}
             {% set personPhoto = 'person.png' %}
