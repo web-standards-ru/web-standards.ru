@@ -8,7 +8,7 @@
     "css": "stylelint \"src/styles/**/*.css\"",
     "markdown": "remark 'src/articles/**/*.md' --quiet",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
-    "test": "npm run css && npm run markdown"
+    "test": "npm run editorconfig && npm run css && npm run markdown"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
