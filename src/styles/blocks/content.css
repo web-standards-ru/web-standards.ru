@@ -197,11 +197,18 @@
 
 .content iframe {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    min-height: 400px;
     margin: 0;
     margin-top: 16px;
     border: 0;
+}
+
+@media (min-width: 1240px) {
+    .content iframe {
+        width: var(--content-width);
+        margin-left: auto;
+    }
 }
 
 /* Буквица */
