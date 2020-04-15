@@ -183,7 +183,7 @@ tags:
 
 Важно то, что мы не хотим отслеживать поддержку тача на уровне устройства, так как многие поддерживают его наравне с другими способами. Мы просто хотим знать, что _пользователь коснулся_ экрана. Это возможно с помощью отслеживания одного события `touchstart`. Вот крошечный скрипт (все лучшие скрипты такие!):
 
-```css
+```js
 window.addEventListener('touchstart', function touched() {
     document.body.classList.add('touch')
     window.removeEventListener('touchstart', touched, false)
@@ -429,7 +429,7 @@ slides.forEach(entry => {
 
 Мы создали контролы для браузера, который поддерживает `IntesectionObserver`. Для других браузеров, которые его не поддерживают, слайдер всё ещё рендерится и доступен для мыши, клавиатуры и тача.
 
-```css
+```js
 instructions.parentNode.insertBefore(
     controls, instructions.nextElementSibling
 );
