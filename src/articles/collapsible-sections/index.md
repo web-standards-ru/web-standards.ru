@@ -10,7 +10,12 @@ translators:
 editors:
     - vadim-makeev
 layout: article.njk
-tags: article
+tags:
+    - article
+    - html
+    - css
+    - js
+    - a11y
 ---
 
 <img src="images/collapsible-sections.png" alt="">

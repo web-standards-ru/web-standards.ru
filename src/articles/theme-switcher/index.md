@@ -10,7 +10,11 @@ translators:
 editors:
     - vadim-makeev
 layout: article.njk
-tags: article
+tags:
+    - article
+    - css
+    - js
+    - a11y
 ---
 
 <img src="images/black-and-white-themes.png" alt="">

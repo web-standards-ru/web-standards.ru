@@ -5,7 +5,9 @@ author: tatiana-fokina
 editors:
     - vadim-makeev
 layout: article.njk
-tags: article
+tags:
+    - article
+    - a11y
 ---
 
 <img src="images/diagrams.png" alt="">

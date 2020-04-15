@@ -9,7 +9,12 @@ translators: tatiana-fokina
 editors:
     - vadim-makeev
 layout: article.njk
-tags: article
+tags:
+    - article
+    - html
+    - css
+    - js
+    - a11y
 ---
 
 <img src="images/slider.png" alt="">
