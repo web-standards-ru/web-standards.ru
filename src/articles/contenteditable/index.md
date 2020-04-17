@@ -44,14 +44,14 @@ tags:
 <div id="example-one" contenteditable="true">
     <style scoped>
         #example-one {
-            margin:12px 0;
+            margin: 12px 0;
         }
         #example-one[contenteditable="true"] {
-            padding:10px;
-            outline:3px dashed #CCC;
+            padding: 10px;
+            outline: 3px dashed #CCC;
         }
         #example-one[contenteditable="true"]:hover {
-            outline:3px dashed #2B8BAD;
+            outline: 3px dashed #2B8BAD;
         }
     </style>
     <p>Всё что находится в этом блоке, доступно для редактирования в браузерах, поддерживающих <code>HTML5</code>. Давайте, попробуйте: кликните для начала редактирования.</p>
@@ -79,7 +79,7 @@ tags:
 
     #example-one[contenteditable="true"]:hover {
         background: #e4f3f9;
-        outline:3px dashed #2b8bad;
+        outline: 3px dashed #2b8bad;
     }
 </style>
 
@@ -93,7 +93,7 @@ tags:
 
 ### Пример №2
 
-[Крис Койер](https://twitter.com/chriscoyier) рассказывал на CSS-Tricks, что вы можете позволить вашим пользователям [редактировать CSS в реальном времени](http://css-tricks.com/show-and-edit-style-element/), так как `<style>` элемент имеет `display:none` по умолчанию, но ведь значение можно изменить на `block`.
+[Крис Койер](https://twitter.com/chriscoyier) рассказывал на CSS-Tricks, что вы можете позволить вашим пользователям [редактировать CSS в реальном времени](http://css-tricks.com/show-and-edit-style-element/), так как `<style>` элемент имеет `display: none` по умолчанию, но ведь значение можно изменить на `block`.
 
 Попробуйте отредактировать CSS, приведенный ниже:
 

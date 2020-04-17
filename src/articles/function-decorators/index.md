@@ -22,13 +22,13 @@ tags:
     </figcaption>
 </figure>
 
-> Декораторы — это функции высшего порядка, которые принимают в качестве аргумента одну функцию и возвращают другую. Возвращаемая функция является преобразованным вариантом функции-аргумента [Javascript Allongé](https://leanpub.com/javascript-allonge/read#decorators)
+> Декораторы — это функции высшего порядка, которые принимают в качестве аргумента одну функцию и возвращают другую. Возвращаемая функция является преобразованным вариантом функции-аргумента [Javascript Allongé](https://leanpub.com/javascript-allonge/read#decorators)
 
-Давайте самостоятельно напишем некоторые базовые дектораторы, представленные в таких библиотеках, как [underscore.js](http://underscorejs.org/#functions), [lodash.js](https://lodash.com/docs/4.17.5), [ramda.js](http://ramdajs.com/docs/).
+Давайте самостоятельно напишем некоторые базовые дектораторы, представленные в таких библиотеках, как [underscore.js](http://underscorejs.org/#functions), [lodash.js](https://lodash.com/docs/4.17.5), [ramda.js](http://ramdajs.com/docs/).
 
 ## `once()`
 
-- [once(fn)](https://jsfiddle.net/cristi_salcescu/zpLeLp0v/) создает экземпляр функции, которая должна быть выполнена только один раз. Паттерн может быть использован, например, для инициализации, когда нужно быть уверенным в единичном запуске функциональности, даже если сама функция вызвана в нескольких местах.
+- [once(fn)](https://jsfiddle.net/cristi_salcescu/zpLeLp0v/) создает экземпляр функции, которая должна быть выполнена только один раз. Паттерн может быть использован, например, для инициализации, когда нужно быть уверенным в единичном запуске функциональности, даже если сама функция вызвана в нескольких местах.
 
 ```js
 function once(fn){
@@ -48,13 +48,13 @@ processonce(); // process
 processonce(); //
 ```
 
-Функция once() возвращает другую функцию — runOnce(), использующую [замыкание](https://medium.freecodecamp.org/why-you-should-give-the-closure-function-another-chance-31253e44cfa0). Обратите также внимание, как осуществлен вызов оригинальной функции, а именно через передачу this и arguments в метод apply: fn.apply(this, arguments).
+Функция once() возвращает другую функцию — runOnce(), использующую [замыкание](https://medium.freecodecamp.org/why-you-should-give-the-closure-function-another-chance-31253e44cfa0). Обратите также внимание, как осуществлен вызов оригинальной функции, а именно через передачу this и arguments в метод apply: fn.apply(this, arguments).
 
-Если хотите узнать замыкания глубже, обратите внимание на статью «[Why you should give the Closure function another chance](https://medium.com/p/31253e44cfa0)».
+Если хотите узнать замыкания глубже, обратите внимание на статью «[Why you should give the Closure function another chance](https://medium.com/p/31253e44cfa0)».
 
 ## after()
 
-- [after(count, fn)](https://jsfiddle.net/cristi_salcescu/4evuoxe6/) создает вариант функции, которая будет выполнена только после определенного количества вызовов. Функция полезна, например, если должна быть выполнена _только_ по завершению асинхронных операций.
+- [after(count, fn)](https://jsfiddle.net/cristi_salcescu/4evuoxe6/) создает вариант функции, которая будет выполнена только после определенного количества вызовов. Функция полезна, например, если должна быть выполнена _только_ по завершению асинхронных операций.
 
 ```js
 function after(count, fn) {
@@ -81,7 +81,7 @@ setTimeout(function logSecondCall() {
 }, 4000);
 ```
 
-В примере выше при помощи after() я создаю функцию logResultAfter2Calls(). Она в свою очередь выполняет logResult() только после второго вызова.
+В примере выше при помощи after() я создаю функцию logResultAfter2Calls(). Она в свою очередь выполняет logResult() только после второго вызова.
 
 ## throttle()
 
@@ -103,11 +103,11 @@ let throttledProcess = throttle(process, 1000);
 $(window).mousemove(throttledProcess);
 ```
 
-Здесь движение мыши генерирует множество событий mousemove, тогда как оригинальная функция process() вызывается лишь раз в секунду.
+Здесь движение мыши генерирует множество событий mousemove, тогда как оригинальная функция process() вызывается лишь раз в секунду.
 
 ## debounce()
 
-- [debounce(fn, wait)](https://jsfiddle.net/cristi_salcescu/424unsa7/) создает вариант функции, которая выполняет _оригинальную_ функцию спустя wait миллисекунд _после_ предыдущего вызова _декорированной_ функции. Паттерн также применяется в работе с повторяющимися событиями. Он полезен, если функциональность должна быть выполнена по завершению очереди событий.
+- [debounce(fn, wait)](https://jsfiddle.net/cristi_salcescu/424unsa7/) создает вариант функции, которая выполняет _оригинальную_ функцию спустя wait миллисекунд _после_ предыдущего вызова _декорированной_ функции. Паттерн также применяется в работе с повторяющимися событиями. Он полезен, если функциональность должна быть выполнена по завершению очереди событий.
 
 ```js
 function debounce(fn, interval) {
@@ -117,7 +117,7 @@ function debounce(fn, interval) {
         let args = arguments;
         let that = this;
         timer = setTimeout(function callOriginalFn() {
-                fn.apply(that, args);
+            fn.apply(that, args);
         }, interval);
     };
 }
@@ -126,15 +126,15 @@ let delayProcess = debounce(process, 400);
 $(window).resize(delayProcess);
 ```
 
-Функция debounce() часто используется вместе с событиями scroll, resize, mousemove и keypress.
+Функция debounce() часто используется вместе с событиями scroll, resize, mousemove и keypress.
 
 ## Частичное применение
 
-Частичное применение преобразует функцию за счет изменения количества параметров. Это один из примеров движения от общего к частному.
+Частичное применение преобразует функцию за счет изменения количества параметров. Это один из примеров движения от общего к частному.
 
 ## partial()
 
-На этот раз [создадим метод partial()](https://jsfiddle.net/cristi_salcescu/sbborekp/) и сделаем его доступным для всех функций. В данном примере я использую синтаксис ECMAScript 6, а именно оператор rest. С его помощью набор аргументов функции преобразуется в массив `...leftArguments`. Это нужно для конкатенации массивов, тогда как специальный объект arguments массивом не является.
+На этот раз [создадим метод partial()](https://jsfiddle.net/cristi_salcescu/sbborekp/) и сделаем его доступным для всех функций. В данном примере я использую синтаксис ECMAScript 6, а именно оператор rest. С его помощью набор аргументов функции преобразуется в массив `...leftArguments`. Это нужно для конкатенации массивов, тогда как специальный объект arguments массивом не является.
 
 ```js
 function.prototype.partial = function(...leftArguments){
@@ -146,24 +146,24 @@ function.prototype.partial = function(...leftArguments){
 }
 
 function log(level, message){
-    console.log(level  + ' : ' + message);
+    console.log(level + ' : ' + message);
 }
 
 let logInfo = log.partial('Info');
-logInfo('here is a message');
+logInfo('here is a message');
 ```
 
 Обратите внимание, созданная таким образом logInfo() использует лишь один аргумент message.
 
 ## Заключение
 
-Применение указанных функций помогает понять принципы работы декораторов и саму идею инкапсуляции логики внутри них.
+Применение указанных функций помогает понять принципы работы декораторов и саму идею инкапсуляции логики внутри них.
 
-Декораторы — мощный инструмент расширения функциональности без изменения исходной функции. Это отличный путь переиспользовать код, и он соответствует функциональной парадигме программирования.
+Декораторы — мощный инструмент расширения функциональности без изменения исходной функции. Это отличный путь переиспользовать код, и он соответствует функциональной парадигме программирования.
 
-### Больше о ФП в JavaScript
+### Больше о ФП в JavaScript
 
-- [How point-free composition will make you a better functional programmer](https://medium.com/p/33dcb910303a)
+- [How point-free composition will make you a better functional programmer](https://medium.com/p/33dcb910303a)
 - [You will finally understand what Closure is](https://medium.com/p/13ba11825319)
-- [Class vs Factory function: exploring the way forward](https://medium.com/p/73258b6a8d15) (см. [перевод](https://medium.com/@kanby/класс-vs-фабрика-объектов-перспективы-9b4c696823c8)).
-- [Make your code easier to read with Functional Programming](https://medium.com/p/94fb8cc69f9d)
+- [Class vs Factory function: exploring the way forward](https://medium.com/p/73258b6a8d15) (см. [перевод](https://medium.com/@kanby/класс-vs-фабрика-объектов-перспективы-9b4c696823c8)).
+- [Make your code easier to read with Functional Programming](https://medium.com/p/94fb8cc69f9d)

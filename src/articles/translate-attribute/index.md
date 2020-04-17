@@ -1,5 +1,5 @@
 ---
-title: 'В HTML5 добавлен новый атрибут translate'
+title: 'В HTML5 добавлен новый атрибут translate'
 date: 2012-07-30
 author: richard-ishida
 source:
@@ -34,13 +34,13 @@ tags:
 Потребность в этом встречается довольно-таки часто. В спецификации HTML5 есть [пример с игрой про пчелу и мёд](http://developers.whatwg.org/elements.html#the-translate-attribute). Вот похожий, но на этот раз реальный пример из моего опыта работы в Xerox, где документация, которая переводилась на другой язык, относилась к устройству, на котором текст находился прямо на «железе» и поэтому не переводился.
 
 ```html
-<p>Click the Resume button on the Status Display or the <span class="panelmsg" translate="no">CONTINUE</span> button the printer panel.</p>
+<p>Click the Resume button on the Status Display or the <span class="panelmsg" translate="no">CONTINUE</span> button the printer panel.</p>
 ```
 
 Оригинальный текст на английском — _прим. переводчика._
 
 ```html
-<p>Нажмите кнопку «Продолжить» на дисплее состояния или кнопку <span class="panelmsg" translate="no">CONTINUE</span> на панели принтера.</p>
+<p>Нажмите кнопку «Продолжить» на дисплее состояния или кнопку <span class="panelmsg" translate="no">CONTINUE</span> на панели принтера.</p>
 ```
 
 Текст при переводе на русский язык — _прим. переводчика._
@@ -48,13 +48,13 @@ tags:
 Вот ещё несколько примеров текста из жизни, которым принесет пользу атрибут `translate`. Отрывок из книги, цитирующий название работы.
 
 ```html
-<p>The question in the title <cite translate="no">How Far Can You Go?</cite> applies to both the undermining of traditional religious belief by radical theology and the undermining of literary convention by the device of “breaking frame”…</p>
+<p>The question in the title <cite translate="no">How Far Can You Go?</cite> applies to both the undermining of traditional religious belief by radical theology and the undermining of literary convention by the device of “breaking frame”…</p>
 ```
 
 Оригинальный текст на английском — _прим. переводчика._
 
 ```html
-<p>Вопрос в названии, <cite translate="no">How Far Can You Go?</cite>, относится и к отрицательному влиянию радикальной теологии на традиционные религиозные воззрения, и к отрицательному влиянию приема «разрыва рамок» на правила построения литературного произведения…</p>
+<p>Вопрос в названии, <cite translate="no">How Far Can You Go?</cite>, относится и к отрицательному влиянию радикальной теологии на традиционные религиозные воззрения, и к отрицательному влиянию приема «разрыва рамок» на правила построения литературного произведения…</p>
 ```
 
 При переводе на русский язык. На русском языке в таких случаях, впрочем, название работы обычно принято переводить — _прим. переводчика._
@@ -62,26 +62,26 @@ tags:
 Следующий пример со страницы о французском хлебе — «хлеб» по-французски «pain».
 
 ```html
-<p>Welcome to <strong translate="no">french pain</strong> on Facebook. Join now to write reviews and connect with <strong translate="no">french pain</strong>. Help your friends discover great places to visit by recommending <strong translate="no">french pain</strong>.</p>
+<p>Welcome to <strong translate="no">french pain</strong> on Facebook. Join now to write reviews and connect with <strong translate="no">french pain</strong>. Help your friends discover great places to visit by recommending <strong translate="no">french pain</strong>.</p>
 ```
 
 Оригинальный текст на английском — _прим. переводчика._
 
 ```html
-<p>Добро пожаловать на страницу <strong translate="no">french pain</strong> на Facebook. Присоединяйтесь, пишите отчеты и свяжитесь с <strong translate="no">french pain</strong>. Помогите друзьям узнать отличные новые места, порекомендовав им <strong translate="no">french pain</strong>.</p>
+<p>Добро пожаловать на страницу <strong translate="no">french pain</strong> на Facebook. Присоединяйтесь, пишите отчеты и свяжитесь с <strong translate="no">french pain</strong>. Помогите друзьям узнать отличные новые места, порекомендовав им <strong translate="no">french pain</strong>.</p>
 ```
 
 При переводе на русский язык. Речь идет о французской компании, которая называется «french pain» — _прим. переводчика._
 
 Таким образом, добавив на вашу страницу атрибут `translate`, вы поможете читателям лучше понять ваш текст, если они читают его через системы автоматического перевода, и значительно сэкономить денежные и временные затраты системам перевода с большим потоком информации на разных языках.
 
-## Как обстоят дела у Google Translate и Microsoft Translator?
+## Как обстоят дела у Google Translate и Microsoft Translator?
 
 Службы перевода Google и Microsoft и ранее предоставляли возможность предохранять текст от перевода посредством добавления разметки, но делали они это (несколькими) разными способами. Будем надеяться, что новый атрибут очень поможет тем, что предоставит стандартный подход.
 
 И Google, и Microsoft в настоящее время поддерживают синтаксис `class="notranslate"`, но замена названия класса атрибутом — формальной частью языка — сделает эту функцию гораздо более надежной, особенно в более широких контекстах. Например, инструмент переводчика может всегда считать, что HTML5-атрибут `translate` значит именно то, что он должен значить. Становится проще портировать эту идею и для других сценариев использования: скажем, для других API перевода или стандартов локализации (например, XLIFF).
 
-Кстати, онлайн-сервис перевода компании Microsoft (которая, собственно, и предложила флаг `translate` в HTML5 некоторое время назад) уже поддерживает `translate="no"`. До сих пор, конечно, это был проприетарный атрибут, и Google не поддерживал его. Однако, буквально вчера утром я совершенно случайно узнал, что Webkit и Chromium только что добавили поддержку атрибута `translate`, а вчера днем Google добавил поддержку `translate="no"` к своему сервису онлайн-перевода. [Вот результаты нескольких тестов](http://www.w3.org/International/tests/html-css/translate/results-online), которые я провел этим утром. Ни Microsoft, ни Google пока не поддерживают переопределение `translate="yes"`. _Статья опубликована 22 февраля 2012 года (прим. переводчика)_
+Кстати, онлайн-сервис перевода компании Microsoft (которая, собственно, и предложила флаг `translate` в HTML5 некоторое время назад) уже поддерживает `translate="no"`. До сих пор, конечно, это был проприетарный атрибут, и Google не поддерживал его. Однако, буквально вчера утром я совершенно случайно узнал, что WebKit и Chromium только что добавили поддержку атрибута `translate`, а вчера днем Google добавил поддержку `translate="no"` к своему сервису онлайн-перевода. [Вот результаты нескольких тестов](http://www.w3.org/International/tests/html-css/translate/results-online), которые я провел этим утром. Ни Microsoft, ни Google пока не поддерживают переопределение `translate="yes"`. _Статья опубликована 22 февраля 2012 года (прим. переводчика)_
 
 Во всех этих проприетарных системах, впрочем, есть масса нестандартных способов синтаксически выразить эту же идею (даже если мы говорим только о Google и Microsoft).
 
