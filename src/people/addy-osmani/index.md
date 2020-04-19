@@ -1,6 +1,7 @@
 ---
 name: Эдди Османи
-url: https://medium.com/@addyosmani
+url: https://addyosmani.com/
 tags: people
+photo: true
 permalink: false
 ---

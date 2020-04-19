@@ -1,6 +1,7 @@
 ---
 name: Ричард Кларк
-url: https://html5doctor.com/author/richc/
+url: http://richclarkdesign.com/
 tags: people
+photo: true
 permalink: false
 ---

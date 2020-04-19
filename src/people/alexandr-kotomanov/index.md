@@ -1,6 +1,7 @@
 ---
 name: Александр Котоманов
-url: http://alex.kotomanov.com/
+url: http://kotomanov.com/
 tags: people
+photo: true
 permalink: false
 ---

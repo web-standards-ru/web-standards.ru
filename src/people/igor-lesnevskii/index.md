@@ -1,6 +1,7 @@
 ---
 name: Игорь Лесневский
-url: https://www.facebook.com/lesnevskii.igor
+url: https://ilesnevskiy.dev/
 tags: people
+photo: true
 permalink: false
 ---

@@ -1,6 +1,7 @@
 ---
 name: Тьяго Ромеро Гарсия
-url: https://medium.com/@themindfuldev
+url: https://tiagorg.com/
 tags: people
+photo: true
 permalink: false
 ---

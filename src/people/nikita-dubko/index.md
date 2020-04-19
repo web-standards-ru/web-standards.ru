@@ -1,6 +1,7 @@
 ---
 name: Никита Дубко
-url: https://twitter.com/dark_mefody
+url: https://mefody.dev
 tags: people
+photo: true
 permalink: false
 ---

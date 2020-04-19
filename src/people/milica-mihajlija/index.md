@@ -1,6 +1,7 @@
 ---
 name: Милица Михайлия
-url: https://twitter.com/bibydigital
+url: https://mihajlija.github.io/
 tags: people
+photo: true
 permalink: false
 ---

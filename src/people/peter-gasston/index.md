@@ -1,6 +1,7 @@
 ---
 name: Питер Гастон
-url: https://alistapart.com/author/stopsatgreen/
+url: https://broken-links.com/
 tags: people
+photo: true
 permalink: false
 ---

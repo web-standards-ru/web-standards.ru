@@ -1,6 +1,7 @@
 ---
 name: Адитья Шридхар
-url: https://medium.com/@aditya_sridhar
+url: https://adityasridhar.com/
 tags: people
+photo: true
 permalink: false
 ---
