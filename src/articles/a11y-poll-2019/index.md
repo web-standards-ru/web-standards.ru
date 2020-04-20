@@ -8,9 +8,9 @@ layout: article.njk
 tags:
     - article
     - a11y
+hero:
+    src: images/diagrams.png
 ---
-
-<img src="images/diagrams.png" alt="">
 
 [Сергей Кригер](https://www.sergeikriger.com/) и я проводили опрос с апреля по декабрь 2019 года. В нём участвовало 143 человека. Выборка не самая большая, но хотелось бы поделиться с вами результатами.
 

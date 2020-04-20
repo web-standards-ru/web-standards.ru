@@ -12,7 +12,21 @@
     background-color: var(--color-grey-dark);
 }
 
-.article__heading-wrapper::after {
+.article__hero {
+    display: block;
+    align-self: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--color-grey-dark);
+}
+
+.article__hero-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.article__heading-wrapper--no-hero::after {
     content: ' ';
     display: block;
     align-self: center;
@@ -95,7 +109,12 @@
         padding-right: 16px;
     }
 
-    .article__heading-wrapper::after {
+    .article__hero {
+        width: 100%;
+        height: 100%;
+    }
+
+    .article__heading-wrapper--no-hero::after {
         width: 100%;
         height: 100%;
         background-size: cover;

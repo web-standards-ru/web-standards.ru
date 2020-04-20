@@ -14,9 +14,10 @@ tags:
     - article
     - html
     - js
+hero:
+    src: images/cover.jpg
+    alt: 'Чёрно-белая фотография паутины.'
 ---
-
-<img src="images/cover.jpg" alt="Чёрно-белая фотография паутины.">
 
 **Дисклеймер:** в статье я часто говорю о React, но вы можете понимать под ним любую библиотеку на JavaScript: Inferno, Preact, Vue, Snabbdom, Virtual DOM или без него: Elm, Om и другие. Точно так же под Polymer можно иметь в виду Vaadin или X-Tag, или…
 

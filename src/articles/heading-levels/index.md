@@ -15,9 +15,9 @@ tags:
     - html
     - css
     - a11y
+hero:
+    src: images/1.jpg
 ---
-
-<img src="images/1.jpg" alt="">
 
 [Спецификация HTML](https://www.w3.org/TR/html52/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements) описывает шесть видов заголовков: `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` и `<h6>`. Число в названии элемента отражает его приоритет. При этом `<h1>` самый общий, а `<h6>` наиболее специфичный.
 

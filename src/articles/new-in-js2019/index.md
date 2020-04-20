@@ -13,9 +13,9 @@ layout: article.njk
 tags:
     - article
     - js
+hero:
+    src: images/1.jpg
 ---
-
-<img src="images/1.jpg" alt="">
 
 На протяжении последних лет JavaScript развивался и получал новые фичи. Если вам любопытно, чего ждать от новой версии JavaScript, то этот пост для вас!
 

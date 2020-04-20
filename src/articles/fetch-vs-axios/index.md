@@ -13,12 +13,10 @@ layout: article.njk
 tags:
     - article
     - js
+hero:
+    src: images/1.jpg
+    alt: 'Какой хороший пёсик!'
 ---
-
-<figure>
-    <img src="images/1.jpg" alt="">
-    <figcaption>Какой хороший пёсик!</figcaption>
-</figure>
 
 В одном из заключительных разделов курса [ES6 Javascript: The Complete Developer’s Guide](https://www.udemy.com/javascript-es6-tutorial/learn/v4/overview) на Udemy Стефан Гридер рассказывает о методе fetch() и о некоторых его недостатках. Он отмечает, что реализация `fetch()` не идеальна и предлагает другие варианты для выполнения HTTP-запросов. Один из таких вариантов — [Axios](https://www.npmjs.com/package/axios). Раньше я даже не слышал об Axios и подумал, что подвернулась отличная возможность, чтобы немного покопаться и изучить его. Поскольку это ссылка на материал из курса Стивена, я использую похожие примеры.
 
