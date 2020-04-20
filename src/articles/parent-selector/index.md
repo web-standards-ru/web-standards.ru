@@ -50,7 +50,7 @@ tags:
 
 Вот как выглядит визуализация процессов перерисовки в Firefox:
 
-<iframe width="510" height="382" src="http://www.youtube.com/embed/ZTnIxIA5KGw"></iframe>
+<iframe src="https://www.youtube.com/embed/ZTnIxIA5KGw"></iframe>
 
 ## CSS селекторы анализируется справа налево
 

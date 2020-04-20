@@ -284,7 +284,7 @@ button:focus + [role="tooltip"] {
 }());
 ```
 
-<iframe src="https://codepen.io/heydon/embed/zdYdQv/?height=265&theme-id=0&amp;default-tab=js,result"></iframe>
+<iframe src="https://codepen.io/heydon/embed/zdYdQv"></iframe>
 
 ### Примечания
 
@@ -319,7 +319,7 @@ Array.prototype.forEach(toggletips, function (toggletip) {
 
 Вот ещё один CodePen, в котором обычный параграф прогрессивно улучшается до тоглтипа:
 
-<iframe src="https://codepen.io/heydon/embed/Vzwdpy/?height=265&theme-id=0&default-tab=js,result"></iframe>
+<iframe src="https://codepen.io/heydon/embed/Vzwdpy"></iframe>
 
 ## Тесты и сообщения об ошибках
 

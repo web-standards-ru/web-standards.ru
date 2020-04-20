@@ -207,7 +207,7 @@ h2 button:focus svg {
 
 Вместо этого мы можем взять базовый ввод текста, скажем, в виде разметки или WYSIWYG _(от англ. «What You See Is What You Get», проще говоря — визуальный редактор. — прим. переводчика)_ и улучшить его _постфактум_ с помощью скрипта. Это довольно просто сделать с помощью jQuery, учитывая методы `nextUntil` и `wrapAll`, однако в обычном JavaScript нам нужно сделать некоторую итерацию. Вот другое демо на CodePen, в котором автоматически добавляются переключатель и группа с контентом для переключения. Он нацелен на все `<h2>`, найденные на странице в `<main>`.
 
-<iframe src="https://codepen.io/heydon/pen/gGNaoM"></iframe>
+<iframe src="https://codepen.io/heydon/embed/gGNaoM"></iframe>
 
 Почему это написано на JavaScript? Потому что современные браузеры одинаково поддерживают методы Web API и такой небольшой интерактив не должен зависеть от большой библиотеки.
 
@@ -490,7 +490,7 @@ this.btn.onclick = () => {
 
 [А вот демо с добавленной возможностью отслеживания `hash`](https://codepen.io/heydon/pen/ZXgqKG):
 
-<iframe src="https://codepen.io/heydon/pen/ZXgqKG"></iframe>
+<iframe src="https://codepen.io/heydon/embed/ZXgqKG"></iframe>
 
 ## Заключение
 

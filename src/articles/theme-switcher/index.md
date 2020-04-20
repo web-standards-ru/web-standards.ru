@@ -404,7 +404,7 @@ npm i --save react-theme-switch
 
 Помимо этого, простой пример с JavaScript, в основе которого лежит чекбокс, есть на [СodePen](https://codepen.io/heydon/pen/Vzyrre):
 
-<iframe src="https://codepen.io/heydon/pen/Vzyrre"></iframe>
+<iframe src="https://codepen.io/heydon/embed/Vzyrre"></iframe>
 
 ## Расположение
 

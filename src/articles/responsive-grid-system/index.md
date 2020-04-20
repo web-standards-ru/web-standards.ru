@@ -357,7 +357,7 @@ html {
 Это всё, что нужно для создания односторонних внешних отступов. Вот CodePen, чтобы вы сами поиграли:
 
 <figure>
-    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/RoZpva/?height=265&theme-id=0&default-tab=css,result&embed-version=2" title="Односторонняя сетка с использованием внешних отступов" allowfullscreen></iframe>
+    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/RoZpva" title="Односторонняя сетка с использованием внешних отступов" allowfullscreen></iframe>
     <figcaption>Односторонняя сетка с использованием внешних отступов.</figcaption>
 </figure>
 
@@ -420,7 +420,7 @@ html {
 Это всё! Вам не нужно ничего дополнительно делать для сеток с несколькими строками 😉 Вот CodePen, чтобы вы могли поиграть:
 
 <figure>
-    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/KNvWYR/?height=265&theme-id=0&default-tab=css,result&embed-version=2" title="Сетка с внешними разделенными отступами." allowfullscreen></iframe>
+    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/KNvWYR" title="Сетка с внешними разделенными отступами." allowfullscreen></iframe>
     <figcaption>Сетка с внешними разделенными отступами.</figcaption>
 </figure>
 
@@ -457,7 +457,7 @@ html {
 Вот CodePen, чтобы вы могли поиграть:
 
 <figure>
-    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/qqXrzB/?height=265&theme-id=0&default-tab=css,result&embed-version=2" title="Сетка с внутренними разделенными отступами." allowfullscreen></iframe>
+    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/qqXrzB" title="Сетка с внутренними разделенными отступами." allowfullscreen></iframe>
     <figcaption>Сетка с внутренними разделенными отступами.</figcaption>
 </figure>
 
@@ -517,7 +517,7 @@ CSS для отладочной сетки выглядит следующим �
 ```
 
 <figure>
-    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/RoZVbG/?height=265&theme-id=0&default-tab=css,result&embed-version=2" title="Отладочная сетка с фиксированными отступами." allowfullscreen></iframe>
+    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/RoZVbG" title="Отладочная сетка с фиксированными отступами." allowfullscreen></iframe>
     <figcaption>Отладочная сетка с фиксированными отступами.</figcaption>
 </figure>
 
@@ -584,7 +584,7 @@ CSS для отладочной сетки выглядит следующим �
 ```
 
 <figure>
-    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/QGMvLm/?height=265&theme-id=0&default-tab=css,result&embed-version=2" title="Сетка с фиксированными отступами для раскладки гостевой статьи." allowfullscreen></iframe>
+    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/QGMvLm" title="Сетка с фиксированными отступами для раскладки гостевой статьи." allowfullscreen></iframe>
     <figcaption>Сетка с фиксированными отступами для раскладки гостевой статьи.</figcaption>
 </figure>
 
@@ -726,7 +726,7 @@ CSS для отладочной сетки выглядит следующим �
 Вот CodePen с финальной раскладкой, которую мы создали:
 
 <figure>
-    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/zodwOQ/?height=265&theme-id=0&default-tab=css,result&embed-version=2" title="Сетка с фиксированными отступами для раскладки гостевой статьи, финальная версия." allowfullscreen></iframe>
+    <iframe height="265" src="https://codepen.io/Lesnevskiy/embed/zodwOQ" title="Сетка с фиксированными отступами для раскладки гостевой статьи, финальная версия." allowfullscreen></iframe>
     <figcaption>Сетка с фиксированными отступами для раскладки гостевой статьи, финальная версия.</figcaption>
 </figure>
 

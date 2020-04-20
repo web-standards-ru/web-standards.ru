@@ -178,7 +178,6 @@ _Проверка соответствия документа_ — хороши
 
 **Спасибо, Майк!**
 
-<figure>
-    <iframe width="510" height="383" src="https://www.youtube.com/embed/FVbVCZw5BPQ" allowfullscreen></iframe>
-    <figcaption>Полезный совет — всегда <a href="http://validator.w3.org/nu">проверяй свой HTML</a> под <a href="http://youtu.be/FVbVCZw5BPQ">рок-н-ролл</a>, играющий… ГРОМКО!</figcaption>
-</figure>
+### Полезный совет — всегда [проверяй свой HTML](http://validator.w3.org/nu) под [рок-н-ролл](https://youtu.be/FVbVCZw5BPQ), играющий… ГРОМКО!
+
+<iframe src="https://www.youtube.com/embed/FVbVCZw5BPQ" allowfullscreen></iframe>

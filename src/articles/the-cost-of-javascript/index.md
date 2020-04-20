@@ -194,7 +194,7 @@ JavaScript может влиять на производительность с
 
 ### Подробнее
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_srJ7eHS3IM" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/_srJ7eHS3IM" allowfullscreen></iframe>
 
 - [JavaScript Start-up Performance](https://medium.com/reloading/javascript-start-up-performance-69200f43b201)
 - [Solving the web performance crisis](https://nolanlawson.github.io/frontendday-2016/) Нолана Лоусон
