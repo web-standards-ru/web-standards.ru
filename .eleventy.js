@@ -90,6 +90,23 @@ module.exports = function(config) {
         });
     });
 
+    config.addFilter('mapToYears', (articlesList) => {
+        const articlesByYear = {};
+        articlesList.forEach((article) => {
+            const year = new Date(article.date).getFullYear();
+            if (!articlesByYear[year]) {
+                articlesByYear[year] = [];
+            }
+            articlesByYear[year].push(article);
+        });
+        return Object.getOwnPropertyNames(articlesByYear).map((year) => {
+            return {
+                year,
+                articles: articlesByYear[year],
+            };
+        });
+    });
+
     // Даты
 
     config.addFilter('ruDate', (value) => {

@@ -9,18 +9,20 @@ permalink: articles/index.html
 <main class="main">
     <div class="archive">
         <h1 class="archive__title">Статьи</h1>
-        <time class="archive__year">2019</time>
-    </div>
 
-    {% set articleType %}{{ '--articles' }}{% endset %}
+        {% set articleType %}{{ '--articles' }}{% endset %}
 
-    <ul class="articles articles{{ articleType }}">
-        {%- for article in collections.article | reverse -%}
-            <li class="articles__item articles__item{{ articleType }}">
-                {% include 'article-card.njk' %}
-            </li>
+        {%- for year in collections.article | mapToYears | reverse -%}
+            <time class="archive__year" datetime="{{year.year}}-01-01">{{ year.year }}</time>
+            <ul class="archive__articles articles articles{{ articleType }}">
+                {%- for article in year.articles | reverse -%}
+                    <li class="articles__item articles__item{{ articleType }}">
+                        {% include 'article-card.njk' %}
+                    </li>
+                {%- endfor -%}
+            </ul>
         {%- endfor -%}
-    </ul>
+    </div>
 
     {# <div class="main__conference-link">
         {% include 'conference-link.njk' %}

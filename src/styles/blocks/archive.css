@@ -46,6 +46,10 @@
     }
 }
 
+.archive__articles {
+    margin-bottom: 80px;
+}
+
 /* Tags */
 
 .archive__tags {
