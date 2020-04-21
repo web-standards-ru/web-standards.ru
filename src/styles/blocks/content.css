@@ -135,7 +135,6 @@
     padding: 5px 0;
     padding-left: 14px;
     font-size: 18px;
-    line-height: 1.7;
     color: black;
 }
 
@@ -281,6 +280,7 @@
         margin-bottom: 60px;
         padding-left: 40px;
         font-size: 32px;
+        line-height: 1.42;
     }
 
     .content blockquote::before {
