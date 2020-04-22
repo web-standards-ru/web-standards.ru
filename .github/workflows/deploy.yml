@@ -22,4 +22,4 @@ jobs:
       - run: npm run build
       - run: npm run pack
       # Deploy
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" -az --delete . pepelsbey@web-standards.dev:/var/www/web-standards.dev/html/
+      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" -az --delete . wst@web-standards.dev:/var/www/web-standards.dev/html/
