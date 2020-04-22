@@ -208,6 +208,7 @@ module.exports = function(config) {
             output: 'dist',
             includes: 'includes',
             layouts: 'layouts',
+            data: 'data',
         },
         dataTemplateEngine: 'njk',
         markdownTemplateEngine: false,
