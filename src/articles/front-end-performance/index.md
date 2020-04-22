@@ -333,7 +333,7 @@ Gzip _действительно_ очень сильно уменьшает р�
 
 Если вам понравилась эта статья и вы хотите узнать ещё, я настоятельно рекомендую следующее:
 
-- Книги Стива Саудерса: [High Performance Web Sites](http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) и [Even Faster Web Sites](http://www.amazon.com/Even-Faster-Web-Sites-Performance/dp/0596522304).
+- Книги Стива Саудерса: [High Performance Web Sites](https://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) и [Even Faster Web Sites](https://www.amazon.com/Even-Faster-Web-Sites-Performance/dp/0596522304).
 - [Сайт Стояна Стефанова](http://www.phpied.com/).
 - [Сайт Ильи Григорика](http://www.igvita.com/).
 - [Читать Энди Дэвиса](https://twitter.com/andydavies).

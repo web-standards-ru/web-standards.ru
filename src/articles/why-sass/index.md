@@ -4,7 +4,7 @@ date: 2013-12-10
 author: dan-cederholm
 source:
     title: 'Why Sass?'
-    url: 'http://alistapart.com/article/why-sass'
+    url: 'https://alistapart.com/article/why-sass'
 translators:
     - natasha-arefyeva
 editors:

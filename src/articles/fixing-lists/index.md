@@ -124,7 +124,7 @@ ul {
 
 Такое решение движется в другом направлении и нарушает форму того, как представляют другие браузеры стилизованные списки, а скринридеры их интерпретируют. Обычно разработчики не ожидают, что CSS влияет на семантику HTML. Это был своего рода способ устранения таких элементов, как: `<center>`, `<big>`, `<font>` и т. д. HTML предназначен для семантики, а CSS — для стиля.
 
-Но, как я писал в своей статье [«Unbuttoning Buttons»](https://www.scottohara.me/blog/2018/10/03/unbutton-buttons.html), а также Адриан Розелли в [«Display: Contents Is Not a CSS Reset»](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html) и [«Tables, CSS Display Properties, and ARIA»](http://adrianroselli.com/2018/02/tables-css-display-properties-and-aria.html), CSS может оказать негативный эффект на семантику, и разработчики могут не поступить мудрее.
+Но, как я писал в своей статье [«Unbuttoning Buttons»](https://www.scottohara.me/blog/2018/10/03/unbutton-buttons.html), а также Адриан Розелли в [«Display: Contents Is Not a CSS Reset»](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html) и [«Tables, CSS Display Properties, and ARIA»](https://adrianroselli.com/2018/02/tables-css-display-properties-and-aria.html), CSS может оказать негативный эффект на семантику, и разработчики могут не поступить мудрее.
 
 Просто посмотрите на количество ответов, ретвитов и лайков к твиту Сары Суайдан:
 

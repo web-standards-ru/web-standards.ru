@@ -24,7 +24,7 @@ tags:
 <blockquote>
     <p>Атрибут <code>contenteditable</code> обладает фиксированным набором значений, он может быть пустой строкой, <code>true</code> или <code>false</code>. Пустая строка или <code>true</code> обозначают, что элемент доступен для редактирования. <code>false</code> обозначает, что элемент недоступен для редактирования. Есть еще третье состояние — <code>inherit</code>, это значение атрибута по умолчанию и оно означает, что значение наследуется от родительского элемента.</p>
     <footer>
-        <cite><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable">WHATWG</a>.</cite>
+        <cite><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable">WHATWG</a>.</cite>
     </footer>
 <blockquote>
 
@@ -144,7 +144,7 @@ tags:
 
 Должен отметить, что появлением и отличной поддержкой атрибута мы обязаны IE 5.5, хотя на самом деле ранний вариант `contenteditable` был [разработан и внедрен Microsoft в июле 2000 года](http://msdn.microsoft.com/en-us/library/ms537837(VS.85).aspx).
 
-Более подробную таблицу совместимости можно увидеть тут: [When Can I Use](http://caniuse.com/contenteditable).
+Более подробную таблицу совместимости можно увидеть тут: [When Can I Use](https://caniuse.com/contenteditable).
 
 ## Сохранение изменений
 
@@ -153,9 +153,9 @@ tags:
 <blockquote>
     <p>В зависимости от сложности блока ваш код может отлавливать нажатие <kbd>Enter</kbd> (код 13) для сохранения изменения и <kbd>Esc</kbd> (код 27) для их отмены.</p>
     <p>Когда пользователь нажимает <kbd>Enter</kbd> (предполагаем, что редактируем однострочные данные), получаем <code>innerHTML</code> редактируемого блока и посылаем AJAX-запрос с изменениями на сервер.</p>
-    <p>Простой пример можно увидеть тут: <a href="http://jsbin.com/owavu3">Сохранение данных из элемента с <code>сontenteditable</code> при помощи AJAX</a>.</p>
+    <p>Простой пример можно увидеть тут: <a href="https://jsbin.com/owavu3">Сохранение данных из элемента с <code>сontenteditable</code> при помощи AJAX</a>.</p>
     <footer>
-        <cite><a href="http://remysharp.com/">Реми Шарп</a>.</cite>
+        <cite><a href="https://remysharp.com/">Реми Шарп</a>.</cite>
     </footer>
 <blockquote>
 

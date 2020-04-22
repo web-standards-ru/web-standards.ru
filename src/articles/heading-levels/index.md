@@ -62,7 +62,7 @@ hero:
 
 ### Алгоритм структуры документа (несуществующий)
 
-К сожалению, существует заблуждение о том, что можно использовать заголовки первого уровня для каждого [элемента секционного контента](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning) на странице, а браузер дальше сам во всём разберётся с помощью алгоритма построения структуры документа (Document Outline Algorithm). Этот алгоритм [спекулятивная фантастика](http://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html). В момент написания этой статьи алгоритм не поддерживается ни одним браузером. По этой причине мы должны придерживаться подхода [«Priority of Constituencies»](https://www.w3.org/TR/html-design-principles/#priority-of-constituencies)», описанного в спецификации, и использовать другие заголовки.
+К сожалению, существует заблуждение о том, что можно использовать заголовки первого уровня для каждого [элемента секционного контента](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning) на странице, а браузер дальше сам во всём разберётся с помощью алгоритма построения структуры документа (Document Outline Algorithm). Этот алгоритм [спекулятивная фантастика](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html). В момент написания этой статьи алгоритм не поддерживается ни одним браузером. По этой причине мы должны придерживаться подхода [«Priority of Constituencies»](https://www.w3.org/TR/html-design-principles/#priority-of-constituencies)», описанного в спецификации, и использовать другие заголовки.
 
 ### Другие заголовки
 

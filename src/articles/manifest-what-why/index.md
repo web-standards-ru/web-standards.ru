@@ -136,7 +136,7 @@ tags:
 
 Нужно написать.
 
-Больше подробностей о назначении иконок можно найти в спецификации [Web App Manifest](http://www.w3.org/TR/appmanifest/#purpose-member).
+Больше подробностей о назначении иконок можно найти в спецификации [Web App Manifest](https://www.w3.org/TR/appmanifest/#purpose-member).
 
 ## Режимы отображения и ориентация
 

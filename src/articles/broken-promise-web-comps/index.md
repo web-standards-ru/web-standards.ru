@@ -76,7 +76,7 @@ Reaсt позволяет следующее:
 
 Расцвет экосистемы пошёл дальше идеи веб-компонентов. Если я не ошибаюсь, [CSS-модули](https://github.com/css-modules/css-modules) впервые реализовали в React и для React.
 
-В 2017 спецификация веб-компонентов всё ещё [в разработке](http://caniuse.com/#search=web%20components), и это несмотря на выход двух версий для каждого из двух базовых стандартов. На момент написания статьи (март 2017) ситуация с поддержкой такая:
+В 2017 спецификация веб-компонентов всё ещё [в разработке](https://caniuse.com/#search=web%20components), и это несмотря на выход двух версий для каждого из двух базовых стандартов. На момент написания статьи (март 2017) ситуация с поддержкой такая:
 
 <img src="images/caniuse.jpg" alt="Таблица поддержки веб-компонентов с «Can I use…»">
 
@@ -224,7 +224,7 @@ static get properties() {
 - кастомные элементы [работают на JS](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements);
 - HTML-шаблоны существует только для [обработки скриптом](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element);
 - я вообще не уверен, может ли [Shadow DOM](https://www.w3.org/TR/shadow-dom/) работать без JavaScript;
-- и только [HTML-импорты](http://w3c.github.io/webcomponents/spec/imports/) не нуждаются в JS.
+- и только [HTML-импорты](https://w3c.github.io/webcomponents/spec/imports/) не нуждаются в JS.
 
 Веб-компоненты — это DOM, поэтому:
 
