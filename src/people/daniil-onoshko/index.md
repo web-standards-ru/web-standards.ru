@@ -1,6 +1,6 @@
 ---
 name: Даниил Оношко
-url: https://trigen.pro/
+url: https://twitter.com/dangreen58
 tags: people
 photo: true
 permalink: false

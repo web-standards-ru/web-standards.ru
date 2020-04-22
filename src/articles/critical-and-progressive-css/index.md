@@ -3,6 +3,7 @@ title: 'Критический CSS + прогрессивный CSS = ?'
 date: 2017-10-24
 author: daniil-onoshko
 editors:
+    - irina-pitaeva
     - vadim-makeev
 layout: article.njk
 tags:
