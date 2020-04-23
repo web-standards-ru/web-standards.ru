@@ -6,8 +6,32 @@
     background-color: var(--color-grey-lightest);
 }
 
+@media (min-width: 568px) {
+    .links {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .links {
+        padding: 30px 48px;
+    }
+}
+
 .links__list {
     margin: 0;
+}
+
+@media (min-width: 568px) {
+    .links__list {
+        flex: 0 0 320px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .links__list {
+        flex: 0 0 490px;
+    }
 }
 
 .links__title {
@@ -16,6 +40,18 @@
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+@media (min-width: 568px) {
+    .links__title {
+        flex: 1 1 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .links__title {
+        font-size: 24px;
+    }
 }
 
 .links__section {
@@ -27,12 +63,31 @@
     font-size: 12px;
 }
 
+@media (min-width: 1024px) {
+    .links__section {
+        padding: 20px 0;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .links__section:first-child {
+        padding-top: 0;
+    }
+}
+
 .links__section:not(:last-child) {
     border-bottom: 1px solid var(--color-grey-medium);
 }
 
 .links__definition {
     flex: 1 1 auto;
+}
+
+@media (min-width: 1024px) {
+    .links__definition {
+        flex: 1 1 auto;
+    }
 }
 
 .links__description {
@@ -42,8 +97,21 @@
     text-align: left;
 }
 
+@media (min-width: 1024px) {
+    .links__description {
+        margin-right: 15px;
+        flex: 0 0 252px;
+    }
+}
+
 .links__link {
     margin-right: 10px;
+}
+
+@media (min-width: 1024px) {
+    .links__link {
+        margin-right: 15px;
+    }
 }
 
 .links__link::before {
@@ -53,55 +121,7 @@
     height: 33px;
 }
 
-@media (min-width: 568px) {
-    .links {
-        display: flex;
-    }
-
-    .links__title {
-        flex: 1 1 auto;
-    }
-
-    .links__list {
-        flex: 0 0 320px;
-    }
-}
-
 @media (min-width: 1024px) {
-    .links {
-        padding: 30px 48px;
-    }
-
-    .links__title {
-        font-size: 24px;
-    }
-
-    .links__section {
-        padding: 20px 0;
-        font-size: 16px;
-    }
-
-    .links__section:first-child {
-        padding-top: 0;
-    }
-
-    .links__list {
-        flex: 0 0 490px;
-    }
-
-    .links__definition {
-        flex: 1 1 auto;
-    }
-
-    .links__description {
-        margin-right: 15px;
-        flex: 0 0 252px;
-    }
-
-    .links__link {
-        margin-right: 15px;
-    }
-
     .links__link::before {
         width: 48px;
         height: 48px;

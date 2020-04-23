@@ -32,6 +32,21 @@
     font-size: 24px;
 }
 
+@media (min-width: 630px) {
+    .notice__link {
+        padding-top: 0;
+        background-position: 0 50%;
+        letter-spacing: normal;
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .notice__link {
+        font-size: 48px;
+    }
+}
+
 @media (hover: hover) and (pointer: fine) {
     .notice__link:hover {
         text-decoration: underline;
@@ -46,23 +61,12 @@
 }
 
 @media (min-width: 630px) {
-    .notice__link {
-        padding-top: 0;
-        background-position: 0 50%;
-        letter-spacing: normal;
-        font-size: 32px;
-    }
-
     .notice__link--shout {
         padding-left: 50px;
     }
 }
 
 @media (min-width: 1024px) {
-    .notice__link {
-        font-size: 48px;
-    }
-
     .notice__link--shout {
         padding-left: 56px;
     }

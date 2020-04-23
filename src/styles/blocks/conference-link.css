@@ -12,6 +12,20 @@
     color: black;
 }
 
+@media (min-width: 900px) {
+    .conference-link {
+        font-size: 36px;
+        letter-spacing: normal;
+    }
+}
+
+@media (min-width: 1250px) {
+    .conference-link {
+        padding-top: 0;
+        font-size: 48px;
+    }
+}
+
 @media (hover: hover) and (pointer: fine) {
     .conference-link:hover {
         text-decoration: underline;
@@ -32,19 +46,7 @@
     background-size: auto 24px;
 }
 
-@media (min-width: 900px) {
-    .conference-link {
-        font-size: 36px;
-        letter-spacing: normal;
-    }
-}
-
 @media (min-width: 1250px) {
-    .conference-link {
-        padding-top: 0;
-        font-size: 48px;
-    }
-
     .conference-link::before {
         position: relative;
         display: inline-block;
