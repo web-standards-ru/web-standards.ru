@@ -328,7 +328,7 @@
     background-image: linear-gradient(
         to left,
         var(--color-blue-lightest) 0%,
-        transparent 100%
+        var(--color-blue-lightest-transparent) 100%
     );
 }
 
