@@ -20,6 +20,5 @@ jobs:
       # Build
       - run: npm ci
       - run: npm run build
-      - run: npm run pack
       # Deploy
       - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" -az --delete . wst@web-standards.dev:/var/www/web-standards.dev/html/
