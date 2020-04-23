@@ -5,6 +5,13 @@
     margin-right: 0;
 }
 
+@media (min-width: 1240px) {
+    .media {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
 .media img {
     display: block;
     width: 100%;
@@ -21,15 +28,12 @@
 }
 
 @media (min-width: 1240px) {
-    .media {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-
     .media figcaption {
         font-size: 16px;
     }
+}
 
+@media (min-width: 1240px) {
     /* Подпись в левой колонке */
 
     .media--floated-caption {

@@ -1,14 +1,32 @@
 /* Content */
 
 .content {
+    max-width: 700px;
+    margin: 0 auto;
     font-size: 12px;
     line-height: 1.7;
     color: black;
     box-sizing: border-box;
 }
 
-.content * {
-    box-sizing: inherit;
+@media (min-width: 600px) {
+    .content {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .content {
+        max-width: none;
+        margin: 0;
+        font-size: 21px;
+    }
 }
 
 .content h2,
@@ -22,8 +40,37 @@
     letter-spacing: 0.08em;
 }
 
-.content h3 {
-    font-size: 14px;
+@media (min-width: 600px) {
+    .content h2,
+    .content h3 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .content h2,
+    .content h3 {
+        margin-top: 60px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content h2 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .content h2 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .content h3 {
+        font-size: 20px;
+    }
 }
 
 .content h2 code,
@@ -37,12 +84,24 @@
     margin-bottom: 0;
 }
 
+@media (min-width: 1240px) {
+    .content p {
+        letter-spacing: 0.03em;
+    }
+}
+
 .content p:first-child {
     margin-top: 0;
 }
 
 .content a {
     text-decoration: none;
+}
+
+@media (min-width: 1240px) {
+    .content a {
+        text-decoration: underline;
+    }
 }
 
 .content a:link {
@@ -74,6 +133,14 @@
     padding-left: 0;
 }
 
+@media (min-width: 1240px) {
+    .content ol,
+    .content ul {
+        margin-top: 19px;
+        margin-bottom: 57px;
+    }
+}
+
 .content li {
     position: relative;
     margin-top: 16px;
@@ -86,6 +153,13 @@
     padding-left: 25px;
 }
 
+@media (min-width: 1240px) {
+    .content ol > li,
+    .content ul > li {
+        padding-left: 42px;
+    }
+}
+
 .content ul > li::before {
     content: '—';
     position: absolute;
@@ -95,6 +169,25 @@
     font-family: 'Dewi Expanded', sans-serif;
     font-size: 12px;
     color: var(--color-grey-lighter);
+}
+
+@media (min-width: 600px) {
+    .content ul > li::before {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content ul > li::before {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .content ul > li::before {
+        font-size: 21px;
+        top: -2px;
+    }
 }
 
 /* Ordered Lists */
@@ -114,6 +207,24 @@
     color: var(--color-grey-lighter);
 }
 
+@media (min-width: 600px) {
+    .content ol > li::before {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content ol > li::before {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .content ol > li::before {
+        font-size: 21px;
+    }
+}
+
 /*
     Картинки
 
@@ -124,6 +235,13 @@
     display: block;
     max-width: 100%;
     height: auto;
+    margin: 16px 0 8px;
+}
+
+@media (min-width: 1240px) {
+    .content img {
+        margin: 60px 0 60px auto;
+    }
 }
 
 /* Цитаты */
@@ -138,6 +256,27 @@
     color: black;
 }
 
+@media (min-width: 600px) {
+    .content blockquote {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content blockquote {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .content blockquote {
+        margin-top: 40px;
+        margin-bottom: 60px;
+        padding-left: 40px;
+        font-size: 32px;
+    }
+}
+
 .content blockquote::before {
     content: '';
     position: absolute;
@@ -146,6 +285,14 @@
     bottom: 0;
     width: 1px;
     background-color: var(--color-grey-lighter);
+}
+
+@media (min-width: 1240px) {
+    .content blockquote::before {
+        width: 4px;
+        top: 0.5em;
+        bottom: 0.5em;
+    }
 }
 
 /* Код */
@@ -161,6 +308,14 @@
         var(--color-green-light) 0%,
         var(--color-blue-lightest) 100%
     );
+}
+
+@media (min-width: 1240px) {
+    .content pre {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding-left: 36px;
+    }
 }
 
 .content pre::after {
@@ -185,6 +340,12 @@
     scrollbar-color: var(--color-green-darker) transparent;
 }
 
+@media (min-width: 1240px) {
+    .content pre code {
+        padding: 32px 0;
+    }
+}
+
 .content code::-webkit-scrollbar {
     height: 3px;
 }
@@ -203,13 +364,6 @@
     border: 0;
 }
 
-@media (min-width: 1240px) {
-    .content iframe {
-        width: var(--content-width);
-        margin-left: auto;
-    }
-}
-
 /* Буквица */
 
 .content > p:first-of-type::first-letter {
@@ -222,80 +376,4 @@
     font-size: 3.5em;
     line-height: 1;
     float: left;
-}
-
-
-@media (min-width: 1240px) {
-    .content {
-        --content-width: 65%;
-        --content-half: calc(var(--content-width) / 2);
-        font-size: 21px;
-    }
-
-    .content > * {
-        width: var(--content-width);
-        margin-left: auto;
-        margin-right: 0;
-    }
-
-    .content h2,
-    .content h3 {
-        margin-top: 60px;
-        margin-bottom: 24px;
-        font-size: 24px;
-    }
-
-    .content p {
-        letter-spacing: 0.03em;
-    }
-
-    .content a {
-        text-decoration: underline;
-    }
-
-    .content ol,
-    .content ul {
-        margin-top: 19px;
-        margin-bottom: 57px;
-    }
-
-    .content ol > li,
-    .content ul > li {
-        padding-left: 42px;
-    }
-
-    .content ul > li::before {
-        font-size: 21px;
-        top: -2px;
-    }
-
-    .content ol > li::before {
-        font-size: 21px;
-    }
-
-    /* Картинки */
-
-    .content blockquote {
-        margin-top: 40px;
-        margin-bottom: 60px;
-        padding-left: 40px;
-        font-size: 32px;
-        line-height: 1.42;
-    }
-
-    .content blockquote::before {
-        width: 4px;
-        top: 0.5em;
-        bottom: 0.5em;
-    }
-
-    .content pre {
-        margin-top: 60px;
-        margin-bottom: 60px;
-        padding-left: 36px;
-    }
-
-    .content pre code {
-        padding: 32px 0;
-    }
 }
