@@ -299,6 +299,7 @@
 
 .content pre {
     position: relative;
+    display: grid;
     margin-top: 16px;
     margin-bottom: 16px;
     padding: 4px 16px;
