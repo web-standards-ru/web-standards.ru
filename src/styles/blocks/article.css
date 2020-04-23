@@ -228,6 +228,7 @@
 
 .article__meta {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 16px 32px;
 }
 
@@ -250,6 +251,7 @@
 
 .article__tags {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -261,6 +263,11 @@
 
 .article__tags-item:last-child {
     margin-right: 0;
+}
+
+.article__edit {
+    flex-basis: 100%;
+    margin: 8px 0 0;
 }
 
 .article__authors {
