@@ -10,6 +10,8 @@ gulp.task('styles', () => {
     return gulp.src('dist/styles/styles.css')
         .pipe(postcss([
             require('postcss-import'),
+            require('postcss-color-hex-alpha'),
+            require('autoprefixer'),
             require('postcss-csso'),
         ]))
         .pipe(gulp.dest('dist/styles'));

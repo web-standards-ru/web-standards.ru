@@ -236,7 +236,7 @@
     width: 10px;
     background-image: linear-gradient(
         to left,
-        #273238, rgba(39, 50, 56, 0)
+        #273238, #27323800
     );
     filter: blur(36px);
     content: '';

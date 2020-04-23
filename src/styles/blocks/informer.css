@@ -37,7 +37,7 @@
     width: 20%;
     background-image: linear-gradient(
         to left,
-        white, rgba(255, 255, 255, 0)
+        white, #ffffff00
     );
     content: '';
     pointer-events: none;

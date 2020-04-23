@@ -12,16 +12,18 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "autoprefixer": "^9.7.6",
     "del": "^5.1.0",
-    "editorconfig-checker": "^3.0.3",
+    "editorconfig-checker": "^3.0.4",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-terser": "^1.2.0",
     "html-minifier": "^4.0.0",
-    "node-w3c-validator": "^1.6.0",
+    "node-w3c-validator": "^1.6.1",
+    "postcss-color-hex-alpha": "^5.0.3",
     "postcss-csso": "^4.0.0",
     "postcss-import": "^12.0.1",
     "pretty-data": "^0.40.0",
@@ -33,7 +35,7 @@
     "remark-lint-ordered-list-marker-value": "^2.0.0",
     "remark-lint-strong-marker": "^2.0.0",
     "remark-lint-unordered-list-marker-style": "^2.0.0",
-    "stylelint": "^13.0.0"
+    "stylelint": "^13.3.3"
   },
   "browserslist": [
     "last 2 version",
