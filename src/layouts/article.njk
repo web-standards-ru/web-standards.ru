@@ -36,9 +36,12 @@ layout: page.njk
                 </div>
             </div>
             {% if hero %}
-            <div class="article__hero">
-                <img src="{{ hero.src }}" class="article__hero-image" alt="{% if hero.alt %}{{ hero.alt }}{% endif %}">
-            </div>
+                {% if hero.alt %}
+                    {% set heroAlt = hero.alt %}
+                {% endif %}
+                <div class="article__hero">
+                    <img src="{{ hero.src }}" class="article__hero-image" alt="{{ heroAlt }}">
+                </div>
             {% endif %}
         </div>
         <div class="article__authors authors">
