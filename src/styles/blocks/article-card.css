@@ -25,11 +25,18 @@
 }
 
 .article-card__picture-link {
+    position: relative;
     grid-area: picture;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
 }
 
-.article-card__picture {
-    height: auto;
+@media (min-width: 1024px) {
+    .article-card__picture-link {
+        width: 112px;
+        height: 112px;
+    }
 }
 
 .article-card__title {
@@ -92,10 +99,6 @@
     .article-card__author--main {
         font-size: 16px;
     }
-
-    .article-card__picture--main {
-        width: 112px;
-    }
 }
 
 /* Articles */
@@ -122,10 +125,6 @@
     .article-card__date--articles,
     .article-card__author--articles {
         font-size: 16px;
-    }
-
-    .article-card__picture--articles {
-        width: 112px;
     }
 }
 

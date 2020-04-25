@@ -30,15 +30,19 @@
 
 @media (min-width: 1024px) {
     .authors__author-avatar {
+        position: relative;
         display: block;
+        width: 113px;
+        height: 113px;
         margin-right: 39px;
+        object-fit: cover;
     }
 }
 
 @media (min-width: 1240px) {
     .authors__author-avatar {
         width: 128px;
-        height: auto;
+        height: 128px;
         margin-bottom: 26px;
         margin-right: 0;
     }

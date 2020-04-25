@@ -33,12 +33,19 @@
     --color-grey-medium: #696969;
     --color-grey-dark: #273238;
     --color-grey-darker: #333333;
+
     --color-blue-lightest: #def3f6;
     --color-blue-lightest-transparent: #def3f600;
     --color-blue-light: #32adfd;
     --color-blue-medium: #26649f;
     --color-blue-darker: #0064a4;
+
     --color-green-light: #ddf2ea;
     --color-green-darker: #a3cfd1;
+
+    --color-teal: #33779d;
+    --color-lightteal: #42abb4;
     --color-turquoise: #00abbd;
+    --color-moss: #69bb72;
+    --color-grass: #95d445;
 }

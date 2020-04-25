@@ -176,10 +176,10 @@ module.exports = function(config) {
             };
 
             this.run = function (context, authorName, callback) {
-                const blobColors = ['teal', 'lightteal', 'moss', 'grass'];
+                const blobColors = [1, 2, 3, 4];
                 const blobShapes = [1, 2, 3, 4, 5, 6, 7];
                 const shapePrefix = 'blob--shape-';
-                const colorPrefix = 'blob--';
+                const colorPrefix = 'blob--color-';
 
                 const getBlobClass = (basis, array, name) => (
                     name.concat(array[basis % array.length])

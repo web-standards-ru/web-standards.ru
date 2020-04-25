@@ -52,12 +52,13 @@
         {% if not featured %}
             <a class="
                 article-card__picture-link
-                article-card__picture-link{{ articleType }}"
+                article-card__picture-link{{ articleType }}
+                blob {% blob person.name %}"
                 href="{{ person.url }}">
                 <img class="
                         article-card__picture
                         article-card__picture{{ articleType }}
-                        {% blob person.name %}"
+                        blob__photo"
                     src="/people/{{ personPhoto }}"
                     width="80" height="74"
                     alt="{{ person.name }}">

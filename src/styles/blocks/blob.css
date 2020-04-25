@@ -1,54 +1,71 @@
 /* Blob */
 
-.blob--teal {
-    filter: url('#blob--teal');
+.blob::before {
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
 }
 
-.blob--lightteal {
-    filter: url('#blob--lightteal');
+/* Colors */
+
+.blob--color-1 {
+    background-color: var(--color-teal);
 }
 
-.blob--moss {
-    filter: url('#blob--moss');
+.blob--color-2 {
+    background-color: var(--color-lightteal);
 }
 
-.blob--grass {
-    filter: url('#blob--grass');
+.blob--color-3 {
+    background-color: var(--color-moss);
+}
+
+.blob--color-4 {
+    background-color: var(--color-grass);
 }
 
 /* Crop */
 
-.blob--shape-1 {
-    -webkit-clip-path: url('#blob--shape-1');
-    clip-path: url('#blob--shape-1');
+.blob--shape-1::before {
+    content: url('/images/shape/1.svg');
 }
 
-.blob--shape-2 {
-    -webkit-clip-path: url('#blob--shape-2');
-    clip-path: url('#blob--shape-2');
+.blob--shape-2::before {
+    content: url('/images/shape/2.svg');
 }
 
-.blob--shape-3 {
-    -webkit-clip-path: url('#blob--shape-3');
-    clip-path: url('#blob--shape-3');
+.blob--shape-3::before {
+    content: url('/images/shape/3.svg');
 }
 
-.blob--shape-4 {
-    -webkit-clip-path: url('#blob--shape-4');
-    clip-path: url('#blob--shape-4');
+.blob--shape-4::before {
+    content: url('/images/shape/4.svg');
 }
 
-.blob--shape-5 {
-    -webkit-clip-path: url('#blob--shape-5');
-    clip-path: url('#blob--shape-5');
+.blob--shape-5::before {
+    content: url('/images/shape/5.svg');
 }
 
-.blob--shape-6 {
-    -webkit-clip-path: url('#blob--shape-6');
-    clip-path: url('#blob--shape-6');
+.blob--shape-6::before {
+    content: url('/images/shape/6.svg');
 }
 
-.blob--shape-7 {
-    -webkit-clip-path: url('#blob--shape-7');
-    clip-path: url('#blob--shape-7');
+.blob--shape-7::before {
+    content: url('/images/shape/7.svg');
+}
+
+/* Photo */
+
+.blob__photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: soft-light;
+    filter:
+        grayscale(1)
+        brightness(1.1)
+        contrast(1.3);
 }

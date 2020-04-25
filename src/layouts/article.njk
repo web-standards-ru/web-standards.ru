@@ -49,9 +49,13 @@ layout: page.njk
                     {% else %}
                         {% set personPhoto = 'person.png' %}
                     {% endif %}
-                    <img class="authors__author-avatar {% blob person.name %}"
-                        src="/people/{{ personPhoto }}"
-                        width="113" height="104" alt="{{ person.name }}">
+                    <div class="
+                        authors__author-avatar
+                        blob {% blob person.name %}">
+                        <img class="authors__author-photo blob__photo"
+                            src="/people/{{ personPhoto }}"
+                            width="113" height="104" alt="{{ person.name }}">
+                    </div>
                     <a class="authors__author-link" href="{{ person.url }}">
                         {{ person.name }}
                     </a>
