@@ -336,7 +336,7 @@
 .content pre code {
     display: block;
     padding: 16px 0;
-    overflow: auto;
+    overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker) transparent;
 }
