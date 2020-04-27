@@ -1,3 +1,15 @@
+.related-articles {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1240px) {
+    .related-articles {
+        max-width: none;
+        margin: 0;
+    }
+}
+
 .related-articles__title {
     margin: 0 0 16px;
     font-family: 'Dewi Expanded', sans-serif;
