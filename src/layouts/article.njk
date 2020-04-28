@@ -29,19 +29,16 @@ layout: page.njk
                         {%- endfor -%}
                     </ul>
                     <p class="article__edit">
-                        <a class="article__link" href="https://github.com/web-standards-ru/web-standards.ru/blob/master/{{ page.inputPath }}">
+                        <a class="article__link" href="https://github.com/web-standards-ru/nouvelle/blob/master/{{ page.inputPath }}">
                             Редактировать статью на Гитхабе
                         </a>
                     </p>
                 </div>
             </div>
             {% if hero %}
-                {% if hero.alt %}
-                    {% set heroAlt = hero.alt %}
-                {% endif %}
-                <div class="article__hero">
-                    <img src="{{ hero.src }}" class="article__hero-image" alt="{{ heroAlt }}">
-                </div>
+            <div class="article__hero">
+                <img src="{{ hero.src }}" class="article__hero-image" alt="{% if hero.alt %}{{ hero.alt }}{% endif %}">
+            </div>
             {% endif %}
         </div>
         <div class="article__authors authors">
@@ -52,14 +49,13 @@ layout: page.njk
                     {% else %}
                         {% set personPhoto = 'person.png' %}
                     {% endif %}
-                    <div class="
-                        authors__author-avatar
-                        blob {% blob person.name %}">
-                        <img class="authors__author-photo blob__photo"
-                            src="/people/{{ personPhoto }}"
-                            width="113" height="104" alt="{{ person.name }}">
-                    </div>
-                    <a class="authors__author-link" href="{{ person.url }}">
+                    <a class="authors__author-link"
+                        href="{{ person.url }}">
+                        <span class="authors__author-avatar blob {% blob person.name %}">
+                            <img class="authors__author-photo blob__photo"
+                                src="/people/{{ personPhoto }}"
+                                width="113" height="104" alt="{{ person.name }}">
+                        </span>
                         {{ person.name }}
                     </a>
                 {% endfor %}

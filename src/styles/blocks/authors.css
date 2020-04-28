@@ -31,6 +31,8 @@
 @media (min-width: 1024px) {
     .authors__author-avatar {
         position: relative;
+        top: 2px;
+        left: 2px;
         display: block;
         width: 113px;
         height: 113px;

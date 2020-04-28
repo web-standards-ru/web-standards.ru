@@ -41,28 +41,26 @@
             {% set personPhoto = 'person.png' %}
         {% endif %}
 
-        <a class="
+        <span class="
             article-card__author
             article-card__author{{ articleType }}
-            article-card__author{{ featuredClass }}"
-            href="{{ person.url }}">
+            article-card__author{{ featuredClass }}">
             {{ person.name }}
-        </a>
+        </span>
 
         {% if not featured %}
-            <a class="
-                article-card__picture-link
-                article-card__picture-link{{ articleType }}
-                blob {% blob person.name %}"
-                href="{{ person.url }}">
+            <div class="
+                article-card__avatar
+                article-card__avatar{{ articleType }}
+                blob {% blob person.name %}">
                 <img class="
-                        article-card__picture
-                        article-card__picture{{ articleType }}
+                        article-card__photo
+                        article-card__photo{{ articleType }}
                         blob__photo"
                     src="/people/{{ personPhoto }}"
                     width="80" height="74"
                     alt="{{ person.name }}">
-            </a>
+            </div>
         {% endif %}
     {% endfor %}
 </article>
