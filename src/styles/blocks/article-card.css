@@ -1,4 +1,5 @@
 .article-card {
+    position: relative;
     display: grid;
     grid-template-rows: min-content min-content;
     grid-template-columns: min-content max-content 1fr;
@@ -24,7 +25,7 @@
     }
 }
 
-.article-card__picture-link {
+.article-card__avatar {
     position: relative;
     grid-area: picture;
     width: 80px;
@@ -33,7 +34,7 @@
 }
 
 @media (min-width: 1024px) {
-    .article-card__picture-link {
+    .article-card__avatar {
         width: 112px;
         height: 112px;
     }
@@ -59,6 +60,16 @@
     text-decoration: none;
 }
 
+.article-card__link::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    content: '';
+}
+
 .article-card__meta {
     margin: 0;
 }
@@ -77,13 +88,11 @@
 .article-card__author {
     grid-area: author;
     color: var(--color-grey-darker);
-    text-decoration: none;
     text-transform: uppercase;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .article-card__link:hover,
-    .article-card__author:hover {
+    .article-card__link:hover {
         text-decoration: underline;
     }
 }
@@ -112,7 +121,7 @@
         align-items: baseline;
     }
 
-    .article-card__picture-link--articles {
+    .article-card__avatar--articles {
         align-self: flex-start;
     }
 }
@@ -140,7 +149,7 @@
         font-size: 16px;
     }
 
-    .article-card__picture--related {
+    .article-card__photo--related {
         width: 112px;
         height: 104px;
     }
@@ -152,7 +161,35 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 16px;
-    margin-bottom: 16px;
+}
+
+.article-card--featured::after {
+    width: 100%;
+    min-height: 170px;
+    margin-top: 16px;
+    background-image: url('/images/patterns/dots.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: '';
+}
+
+@media (min-width: 500px) {
+    .article-card--featured::after {
+        min-height: 220px;
+    }
+}
+
+@media (min-width: 800px) {
+    .article-card--featured::after {
+        min-height: 170px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .article-card--featured::after {
+        min-height: 220px;
+    }
 }
 
 .article-card__title--featured {
