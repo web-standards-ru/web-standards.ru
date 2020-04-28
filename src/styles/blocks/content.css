@@ -383,9 +383,15 @@
 
 .content table {
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     width: 100%;
     border-collapse: collapse;
+}
+
+.content table caption {
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: bold;
 }
 
 .content thead {
