@@ -3,6 +3,7 @@
 ![](https://github.com/web-standards-ru/web-standards.ru/workflows/Markdown/badge.svg)
 ![](https://github.com/web-standards-ru/web-standards.ru/workflows/HTML/badge.svg)
 ![](https://github.com/web-standards-ru/web-standards.ru/workflows/CSS/badge.svg)
+![](https://github.com/web-standards-ru/web-standards.ru/workflows/Deploy/badge.svg)
 
 Новый сайт сообщества: статьи, конференция, календарь, подкаст и всё остальное.
 
