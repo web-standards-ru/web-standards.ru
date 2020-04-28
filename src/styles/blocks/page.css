@@ -51,6 +51,12 @@
     transition: transform 0.2s linear;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .page__content {
+        transition: none;
+    }
+}
+
 @media (min-width: 1024px) {
     .page__content--inner {
         grid-row: 1 / 3;
