@@ -321,7 +321,7 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
             <td colspan="2"></td>
         </tr>
         <tr>
-            <th colspan="4">bdsl-webpack-plugin, 3 среды (modern, actual, legacy)</th>
+            <th colspan="4">С плагином BDSL для Webpack</th>
         </tr>
         <tr>
             <td>Среднее время загрузки</td>
