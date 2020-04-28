@@ -1,8 +1,8 @@
 # Веб-стандарты
-![](https://github.com/web-standards-ru/nouvelle/workflows/EditorConfig/badge.svg)
-![](https://github.com/web-standards-ru/nouvelle/workflows/Markdown/badge.svg)
-![](https://github.com/web-standards-ru/nouvelle/workflows/HTML/badge.svg)
-![](https://github.com/web-standards-ru/nouvelle/workflows/CSS/badge.svg)
+![](https://github.com/web-standards-ru/web-standards.ru/workflows/EditorConfig/badge.svg)
+![](https://github.com/web-standards-ru/web-standards.ru/workflows/Markdown/badge.svg)
+![](https://github.com/web-standards-ru/web-standards.ru/workflows/HTML/badge.svg)
+![](https://github.com/web-standards-ru/web-standards.ru/workflows/CSS/badge.svg)
 
 Новый сайт сообщества: статьи, конференция, календарь, подкаст и всё остальное.
 
@@ -18,7 +18,7 @@
 
 ## Участие в разработке
 
-Вы можете выбрать [ишью из списка](https://github.com/web-standards-ru/nouvelle/issues) и сказать, что берётесь за работу. Этапы разработки сайта заведены [в проектах](https://github.com/web-standards-ru/nouvelle/projects). Для удобства, у задач указаны требуемые навыки в лейблах — фильтруйте по ним, выбирайте подходящие.
+Вы можете выбрать [ишью из списка](https://github.com/web-standards-ru/web-standards.ru/issues) и сказать, что берётесь за работу. Этапы разработки сайта заведены [в проектах](https://github.com/web-standards-ru/web-standards.ru/projects). Для удобства, у задач указаны требуемые навыки в лейблах — фильтруйте по ним, выбирайте подходящие.
 
 Форкните и присылайте пулреквесты.
 
