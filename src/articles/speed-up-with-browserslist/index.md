@@ -317,7 +317,7 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
         </tr>
         <tr>
             <td>Размер без сжатия</td>
-            <td>1.08 МБ</td>
+            <td>1,08 МБ</td>
             <td colspan="2"></td>
         </tr>
         <tr>
