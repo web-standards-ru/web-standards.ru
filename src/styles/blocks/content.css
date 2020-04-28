@@ -378,3 +378,37 @@
     line-height: 1;
     float: left;
 }
+
+/* Таблицы */
+
+.content table {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content thead {
+    background-color: var(--color-green-light);
+    background-image: linear-gradient(
+        to right,
+        var(--color-green-light) 0%,
+        var(--color-blue-lightest) 100%
+    );
+}
+
+.content tr {
+    border-bottom: 1px solid var(--color-grey-lighter);
+}
+
+.content th,
+.content td {
+    padding: 16px 0;
+    vertical-align: top;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.content tr > * + * {
+    padding-left: 16px;
+}

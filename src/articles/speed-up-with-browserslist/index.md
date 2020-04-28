@@ -312,14 +312,16 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
         </tr>
         <tr>
             <td>Размер после сжатия</td>
-            <td colspan="3">292 кБ</td>
+            <td>292 кБ</td>
+            <td colspan="2"></td>
         </tr>
         <tr>
             <td>Размер без сжатия</td>
-            <td colspan="3">1.08 МБ</td>
+            <td>1,08 МБ</td>
+            <td colspan="2"></td>
         </tr>
         <tr>
-            <th colspan="4">bdsl-webpack-plugin, 3 среды (modern, actual, legacy)</th>
+            <th colspan="4">С плагином BDSL для Webpack</th>
         </tr>
         <tr>
             <td>Среднее время загрузки</td>
@@ -335,11 +337,13 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
         </tr>
         <tr>
             <td>Размер после сжатия</td>
-            <td colspan="3">218 кБ</td>
+            <td>218 кБ</td>
+            <td colspan="2"></td>
         </tr>
         <tr>
             <td>Размер без сжатия</td>
-            <td colspan="3">806 кБ</td>
+            <td>806 кБ</td>
+            <td colspan="2"></td>
         </tr>
     </tbody>
 </table>
