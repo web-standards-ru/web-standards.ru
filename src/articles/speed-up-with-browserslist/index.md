@@ -286,6 +286,30 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
 Я замерил размеры бандла и скорости загрузки до и после применения дифференциальной загрузки вместе с транспиляцией зависимостей, на примере сайта [DevFest Siberia 2019](https://github.com/TrigenSoftware/DevFest-Siberia):
 
 <table>
+    <caption>Размеры бандла</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Без сжатия</th>
+            <th>После сжатия</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Без DSL</td>
+            <td>1,08 Мб</td>
+            <td>292 Кб</td>
+        </tr>
+        <tr>
+            <td>С плагином BDSL для Webpack</td>
+            <td>0,80 Мб</td>
+            <td>218 Кб</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>Среднее время загрузки, мс</caption>
     <thead>
         <tr>
             <th></th>
@@ -296,54 +320,42 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
     </thead>
     <tbody>
         <tr>
-            <th colspan="4">Без DSL</th>
+            <td>Без DSL</td>
+            <td>1,511</td>
+            <td>4,240</td>
+            <td>8,696</td>
         </tr>
         <tr>
-            <td>Среднее время загрузки</td>
-            <td>1,511 мс</td>
-            <td>4,240 мс</td>
-            <td>8,696 мс</td>
+            <td>С плагином BDSL для Webpack</td>
+            <td>1,594</td>
+            <td>3,409</td>
+            <td>8,561</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>Лучшее время загрузки, мс</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Обычный интернет</th>
+            <th>Обычный 4G</th>
+            <th>Хороший 3G</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Без DSL</td>
+            <td>1,266</td>
+            <td>3,366</td>
+            <td>8,349</td>
         </tr>
         <tr>
-            <td>Быстрейшее время загрузки</td>
-            <td>1,266 мс</td>
-            <td>3,366 мс</td>
-            <td>8,349 мс</td>
-        </tr>
-        <tr>
-            <td>Размер после сжатия</td>
-            <td>292 кБ</td>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td>Размер без сжатия</td>
-            <td>1,08 МБ</td>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <th colspan="4">С плагином BDSL для Webpack</th>
-        </tr>
-        <tr>
-            <td>Среднее время загрузки</td>
-            <td>1,594 мс</td>
-            <td>3,409 мс</td>
-            <td>8,561 мс</td>
-        </tr>
-        <tr>
-            <td>Быстрейшее время загрузки</td>
-            <td>1,143 мс</td>
-            <td>3,142 мс</td>
-            <td>6,673 мс</td>
-        </tr>
-        <tr>
-            <td>Размер после сжатия</td>
-            <td>218 кБ</td>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td>Размер без сжатия</td>
-            <td>806 кБ</td>
-            <td colspan="2"></td>
+            <td>С плагином BDSL для Webpack</td>
+            <td>1,143</td>
+            <td>3,142</td>
+            <td>6,673</td>
         </tr>
     </tbody>
 </table>
