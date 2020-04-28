@@ -9,7 +9,8 @@
 
 ## Дизайн
 
-[Макет в Figma](https://www.figma.com/file/kHj7Cs5lJsKDgFZS0UjOij/milestone-1).
+- [Текущий макет в Figma](https://www.figma.com/file/kHj7Cs5lJsKDgFZS0UjOij).
+- [Новый макет в Figma](https://www.figma.com/file/dV7oWbRYHt8W1076LueOOy).
 
 ## Разработка
 
@@ -19,15 +20,15 @@
 
 ## Участие в разработке
 
-Вы можете выбрать [ишью из списка](https://github.com/web-standards-ru/web-standards.ru/issues) и сказать, что берётесь за работу. Этапы разработки сайта заведены [в проектах](https://github.com/web-standards-ru/web-standards.ru/projects). Для удобства, у задач указаны требуемые навыки в лейблах — фильтруйте по ним, выбирайте подходящие.
+Вы можете выбрать [ишью из списка](https://github.com/web-standards-ru/web-standards.ru/issues) и сказать, что берётесь за работу.
 
 Форкните и присылайте пулреквесты.
 
-Для разработчиков проекта есть чат в Телеграме, где можно синхронизироваться, обсуждать и планировать процесс. Постучите [@pepelsbey](https://t.me/pepelsbey) или [@higimo](https://t.me/higimo) в Телеграме, если хотите попасть туда.
+Для разработчиков проекта есть чат в Телеграме, где можно синхронизироваться, обсуждать и планировать процесс. Постучите [@pepelsbey](https://t.me/pepelsbey) или [@dark_mefody](https://t.me/dark_mefody) в Телеграме, если хотите попасть туда.
 
 ## Окружение и технологии
 
-Движок [Eleventy](https://www.11ty.io/) собирает Markdown или JSON по Nunjucks-шаблонам и генерирует статичные HTML-страницы. Стили пишутся на чистом CSS, соединяются импортами, сжимаются и оптимизируются. Браузерная совместимость пока уточняется, но пока «без IE11».
+Движок [Eleventy](https://www.11ty.io/) собирает Markdown и JSON по шаблонам [Nunjucks](https://mozilla.github.io/nunjucks/) и генерирует статичные HTML-страницы. Стили пишутся на чистом CSS, соединяются импортами, сжимаются и оптимизируются. Браузерная совместимость описана в [Browserlist](https://github.com/web-standards-ru/web-standards.ru/blob/master/package.json#L40-L44), если коротко — «без IE11».
 
 ## Принципы верстки
 
