@@ -19,9 +19,9 @@ layout: page.njk
                     <time class="article__date" datetime="{{ date | isoDate }}" itemprop="datePublished">
                         {{ date | ruDate }}
                     </time>
-                    <ul class="article__tags">
+                    <ul class="article__tags" itemprop="keywords" content="{{ tags | filterArticleTag | join(', ') }}">
                         {%- for tag in tags | filterArticleTag -%}
-                            <li class="article__tags-item" itemprop="keywords">
+                            <li class="article__tags-item">
                                 <a class="article__link" href="/articles/tags/{{ tag }}">
                                     {{ tag }}
                                 </a>
@@ -37,7 +37,7 @@ layout: page.njk
             </div>
             {% if hero %}
             <div class="article__hero">
-                <img src="{{ hero.src }}" class="article__hero-image" alt="{% if hero.alt %}{{ hero.alt }}{% endif %}">
+                <img src="{{ hero.src }}" class="article__hero-image" alt="{% if hero.alt %}{{ hero.alt }}{% endif %}" itemprop="image">
             </div>
             {% endif %}
         </div>
