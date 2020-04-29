@@ -5,10 +5,10 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main">
-    <div class="main__content article">
+    <div class="main__content article" itemscope itemtype="http://schema.org/Article">
         <div class="article__heading-wrapper{% if not hero %} article__heading-wrapper--no-hero{% endif %}">
             <div class="article__heading">
-                <h1 class="article__title">{{ title }}</h1>
+                <h1 class="article__title" itemprop="headline name">{{ title }}</h1>
                 {% if source %}
                     <p class="article__source">
                         Перевод
@@ -16,12 +16,12 @@ layout: page.njk
                     </p>
                 {% endif %}
                 <div class="article__meta">
-                    <time class="article__date" datetime="{{ date | isoDate }}">
+                    <time class="article__date" datetime="{{ date | isoDate }}" itemprop="datePublished">
                         {{ date | ruDate }}
                     </time>
                     <ul class="article__tags">
                         {%- for tag in tags | filterArticleTag -%}
-                            <li class="article__tags-item">
+                            <li class="article__tags-item" itemprop="keywords">
                                 <a class="article__link" href="/articles/tags/{{ tag }}">
                                     {{ tag }}
                                 </a>
@@ -56,7 +56,9 @@ layout: page.njk
                                 src="/people/{{ personPhoto }}"
                                 width="113" height="104" alt="{{ person.name }}">
                         </span>
-                        {{ person.name }}
+                        <span itemprop="author">
+                            {{ person.name }}
+                        </span>
                     </a>
                 {% endfor %}
             </div>
@@ -65,16 +67,18 @@ layout: page.njk
                 <p class="authors__collaborators">
                     <span class="authors__collaborators-heading">Перевод</span>
                     {%- for translator in collections.people | filterPeople(translators) -%}
-                        {% if translator.url %}
-                            <a class="authors__collaborators-link"
-                                href="{{ translator.url }}">
-                                {{ translator.name }}
-                            </a>
-                        {% else %}
-                            <span class="authors__collaborators-name">
-                                {{ translator.name }}
-                            </span>
-                        {% endif %}
+                        <span itemprop="translator">
+                            {% if translator.url %}
+                                <a class="authors__collaborators-link"
+                                    href="{{ translator.url }}">
+                                    {{ translator.name }}
+                                </a>
+                            {% else %}
+                                <span class="authors__collaborators-name">
+                                    {{ translator.name }}
+                                </span>
+                            {% endif %}
+                        </span>
                     {%- endfor -%}
                 </p>
             {% endif %}
@@ -84,13 +88,15 @@ layout: page.njk
                     <span class="authors__collaborators-heading">Редактура</span>
                     {%- for editor in collections.people | filterPeople(editors) -%}
                         <a class="authors__collaborators-link" href="{{ editor.url }}">
-                            {{ editor.name }}
+                            <span itemprop="contributor">
+                                {{ editor.name }}
+                            </span>
                         </a>
                     {%- endfor -%}
                 </p>
             {% endif %}
         </div>
-        <div class="article__content content">
+        <div class="article__content content" itemprop="articleBody">
             {{ content | safe }}
         </div>
     </div>
