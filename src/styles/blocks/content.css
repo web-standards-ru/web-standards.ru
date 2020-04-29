@@ -337,6 +337,7 @@
     display: block;
     padding: 16px 0;
     overflow-x: auto;
+    font-family: 'Rostin', monospace;
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker) transparent;
 }
