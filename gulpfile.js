@@ -3,6 +3,10 @@ const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const del = require('del');
+const rev = require('gulp-rev');
+const revCollector = require('gulp-rev-collector');
+
+const fs = require('fs');
 
 // Styles
 
@@ -39,10 +43,44 @@ gulp.task('clean', () => {
     ]);
 });
 
+// Revision
+
+gulp.task('revision', (done) => {
+    return gulp.src([
+            'dist/styles/styles.css',
+            'dist/scripts/scripts.js'
+        ], {
+            base: 'dist'
+        })
+        .pipe(rev())
+        .pipe(gulp.dest('dist'))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('dist/rev'))
+        .on('end', done);
+});
+
+// HTML manifest
+gulp.task('htmlManifest', (done) => {
+	if ((fs.existsSync('dist/rev/rev-manifest.json'))) {
+		return gulp.src(['dist/rev/rev-manifest.json', 'dist/index.html'])
+			.pipe(revCollector({
+				replaceReved: true
+			}))
+			.pipe(gulp.dest('dist'))
+			.on('end', done);
+	} else {
+		console.log('HTML manifest error, file not exist.');
+		return false;
+	}
+});
+
+
 // Build
 
 gulp.task('build', gulp.series(
     'styles',
     'scripts',
     'clean',
+    'revision',
+    'htmlManifest'
 ));
