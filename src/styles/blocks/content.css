@@ -365,6 +365,47 @@
     border: 0;
 }
 
+/* Видео */
+
+.content div[data-video] {
+    position: relative;
+}
+
+.content div[data-video] button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 68px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.content div[data-video-show='true'] {
+    cursor: pointer;
+}
+
+.content div[data-video] path:first-of-type {
+    fill: #212121;
+    fill-opacity: 0.8;
+}
+
+.content div[data-video]:hover path:first-of-type,
+.content div[data-video] button:focus path:first-of-type {
+    fill: #ff0000;
+    fill-opacity: 1;
+}
+
+.content div[data-video] path:last-of-type {
+    fill: #ffffff;
+    fill-opacity: 0.8;
+}
+
 /* Буквица */
 
 .content > p:first-of-type::first-letter {
