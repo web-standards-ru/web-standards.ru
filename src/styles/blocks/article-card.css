@@ -76,8 +76,15 @@
 
 .article-card__date,
 .article-card__author {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.3;
+}
+
+@media (min-width: 800px) {
+    .article-card__date,
+    .article-card__author {
+        font-size: 16px;
+    }
 }
 
 .article-card__date {
@@ -103,11 +110,6 @@
     .article-card__title--main {
         font-size: 32px;
     }
-
-    .article-card__date--main,
-    .article-card__author--main {
-        font-size: 16px;
-    }
 }
 
 /* Articles */
@@ -130,11 +132,6 @@
     .article-card__title--articles {
         font-size: 32px;
     }
-
-    .article-card__date--articles,
-    .article-card__author--articles {
-        font-size: 16px;
-    }
 }
 
 /* Related-articles */
@@ -142,11 +139,6 @@
 @media (min-width: 1250px) {
     .article-card__title--related {
         font-size: 32px;
-    }
-
-    .article-card__date--related,
-    .article-card__author--related {
-        font-size: 16px;
     }
 
     .article-card__photo--related {
@@ -206,7 +198,7 @@
 .article-card__preview {
     width: 100%;
     margin-bottom: 32px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.3;
 }
 
@@ -227,11 +219,5 @@
 @media (min-width: 800px) {
     .article-card__preview {
         min-height: 5em;
-    }
-}
-
-@media (min-width: 1024px) {
-    .article-card__preview {
-        font-size: 16px;
     }
 }

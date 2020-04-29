@@ -3,22 +3,10 @@
 .content {
     max-width: 700px;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.7;
     color: black;
     box-sizing: border-box;
-}
-
-@media (min-width: 600px) {
-    .content {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content {
-        font-size: 16px;
-    }
 }
 
 @media (min-width: 1240px) {
@@ -167,20 +155,8 @@
     left: 0;
     bottom: 0;
     font-family: 'Dewi Expanded', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: var(--color-grey-lighter);
-}
-
-@media (min-width: 600px) {
-    .content ul > li::before {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content ul > li::before {
-        font-size: 16px;
-    }
 }
 
 @media (min-width: 1240px) {
@@ -203,20 +179,8 @@
     left: 0;
     top: 0;
     font-family: 'Dewi Expanded', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: var(--color-grey-lighter);
-}
-
-@media (min-width: 600px) {
-    .content ol > li::before {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content ol > li::before {
-        font-size: 16px;
-    }
 }
 
 @media (min-width: 1240px) {
