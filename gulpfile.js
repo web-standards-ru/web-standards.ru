@@ -61,17 +61,17 @@ gulp.task('revision', (done) => {
 
 // HTML manifest
 gulp.task('htmlManifest', (done) => {
-	if ((fs.existsSync('dist/rev/rev-manifest.json'))) {
-		return gulp.src(['dist/rev/rev-manifest.json', 'dist/index.html'])
-			.pipe(revCollector({
-				replaceReved: true
-			}))
-			.pipe(gulp.dest('dist'))
-			.on('end', done);
-	} else {
-		console.log('HTML manifest error, file not exist.');
-		return false;
-	}
+    if ((fs.existsSync('dist/rev/rev-manifest.json'))) {
+        return gulp.src(['dist/rev/rev-manifest.json', 'dist/index.html'])
+            .pipe(revCollector({
+                replaceReved: true
+            }))
+            .pipe(gulp.dest('dist'))
+            .on('end', done);
+    } else {
+        console.log('HTML manifest error, file not exist.');
+        return false;
+    }
 });
 
 
