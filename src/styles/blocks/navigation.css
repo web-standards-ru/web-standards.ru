@@ -320,24 +320,6 @@
     }
 }
 
-@media (min-width: 769px) {
-    .page__navigation--inner .navigation__link {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .page__navigation--inner .navigation__link {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1440px) {
-    .page__navigation--inner .navigation__link {
-        font-size: 16px;
-    }
-}
-
 .navigation__link--patreon {
     padding: 4px 0 4px 33px;
     letter-spacing: -0.01em;
