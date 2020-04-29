@@ -60,9 +60,7 @@
     function parseMediaURL(link) {
         let regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/i;
         let url = link.href;
-        console.log(url);
         let match = url.match(regexp);
-        console.log(match);
 
         return match[1];
     }
