@@ -307,7 +307,7 @@
 .navigation__link {
     font-size: 14px;
     line-height: 1.2;
-    color: var(--color-grey-lighter);
+    color: var(--color-grey-medium);
     letter-spacing: 0.02em;
     text-decoration: none;
     text-transform: uppercase;
@@ -336,16 +336,18 @@
 }
 
 .navigation__link--active {
+    color: black;
     font-family: 'Dewi Expanded', sans-serif;
     font-weight: bold;
 }
 
 .navigation__link[href]:link {
-    color: black;
+    color: var(--color-blue-medium);
+    text-decoration: underline;
 }
 
 .navigation__link[href]:visited {
-    color: black;
+    color: var(--color-blue-medium);
 }
 
 @media (hover: hover) and (pointer: fine) {
