@@ -50,8 +50,6 @@ tags:
 
 Вот как выглядит визуализация процессов перерисовки в Firefox:
 
-<!-- <iframe src="https://www.youtube.com/embed/ZTnIxIA5KGw"></iframe> -->
-
 <div class="video">
     <a class="video__link" href ="https://youtu.be/ZTnIxIA5KGw">
         <picture>
