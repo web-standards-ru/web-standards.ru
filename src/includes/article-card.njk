@@ -63,4 +63,14 @@
             </div>
         {% endif %}
     {% endfor %}
+
+    {% if featured %}
+        {% if article.data.hero.src %}
+            {% set featuredImg = [article.url, article.data.hero.src] | join %}
+        {% else %}
+            {% set featuredImg = '/images/patterns/dots.svg' %}
+        {% endif %}
+        <img class="article-card__hero-image--featured" src="{{featuredImg}}" alt="{% if article.data.hero.alt %}{{ article.data.hero.alt }}{% endif %}" itemprop="image">
+    {% endif %}
+
 </article>

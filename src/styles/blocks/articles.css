@@ -82,7 +82,7 @@
 
 .articles__item--featured {
     display: flex;
-    padding: 16px 0 0;
+    padding: 16px 0;
     flex-direction: column;
     background-color: var(--color-grey-dark);
     border-top: none;

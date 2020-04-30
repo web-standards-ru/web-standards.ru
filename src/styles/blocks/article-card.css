@@ -155,31 +155,28 @@
     padding: 0 16px;
 }
 
-.article-card--featured::after {
+.article-card__hero-image--featured {
     width: 100%;
     min-height: 170px;
+    max-height: 220px;
     margin-top: 16px;
-    background-image: url('/images/patterns/dots.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    content: '';
+    object-fit: cover;
 }
 
 @media (min-width: 500px) {
-    .article-card--featured::after {
+    .article-card__hero-image--featured {
         min-height: 220px;
     }
 }
 
 @media (min-width: 800px) {
-    .article-card--featured::after {
+    .article-card__hero-image--featured {
         min-height: 170px;
     }
 }
 
 @media (min-width: 1024px) {
-    .article-card--featured::after {
+    .article-card__hero-image--featured {
         min-height: 220px;
     }
 }
