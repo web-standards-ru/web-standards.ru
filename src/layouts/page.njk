@@ -31,9 +31,14 @@
                 type="button">
                 <span class="navigation__inner"></span>
             </button>
+            {% if page.url == '/articles/' %}
+                {% set articlesClass = 'navigation__link--active' %}
+            {% else %}
+                {% set articlesHref = 'href="/articles/"' %}
+            {% endif %}
             <ul class="navigation__menu" id="navigation-menu">
                 <li class="navigation__item">
-                    <a class="navigation__link {% if page.url == '/articles/' %}navigation__link--active{% endif %}" href="/articles/">Статьи</a>
+                    <a class="navigation__link {{ articlesClass }}" {{ articlesHref | safe }}>Статьи</a>
                 </li>
                 <li class="navigation__item">
                     <a class="navigation__link">Календарь</a>

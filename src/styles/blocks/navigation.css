@@ -336,6 +336,7 @@
 }
 
 .navigation__link--active {
+    color: black;
     font-family: 'Dewi Expanded', sans-serif;
     font-weight: bold;
 }
