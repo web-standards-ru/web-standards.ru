@@ -307,7 +307,7 @@
 .navigation__link {
     font-size: 14px;
     line-height: 1.2;
-    color: var(--color-grey-lighter);
+    color: var(--color-grey-medium);
     letter-spacing: 0.02em;
     text-decoration: none;
     text-transform: uppercase;
