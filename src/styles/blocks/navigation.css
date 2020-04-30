@@ -341,11 +341,12 @@
 }
 
 .navigation__link[href]:link {
-    color: black;
+    color: var(--color-blue-medium);
+    text-decoration: underline;
 }
 
 .navigation__link[href]:visited {
-    color: black;
+    color: var(--color-blue-medium);
 }
 
 @media (hover: hover) and (pointer: fine) {
