@@ -17,6 +17,8 @@
     }
 }
 
+/* Headings */
+
 .content h2,
 .content h3 {
     margin-top: 32px;
@@ -63,9 +65,10 @@
 
 .content h2 code,
 .content h3 code {
-    /* fixes default monospace font */
     font-family: inherit;
 }
+
+/* Paragraphs */
 
 .content p {
     margin-top: 1em;
@@ -81,6 +84,8 @@
 .content p:first-child {
     margin-top: 0;
 }
+
+/* Links */
 
 .content a {
     text-decoration: none;
@@ -189,13 +194,22 @@
     }
 }
 
-/*
-    Картинки
+/* Figures */
 
-    Основные стили задаются через блок media
-*/
+.content figure {
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
 
-.content > img {
+.content figcaption {
+    font-size: 0.8em;
+}
+
+/* Images */
+
+.content > img,
+.content figure > img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -208,7 +222,7 @@
     }
 }
 
-/* Цитаты */
+/* Quotes */
 
 .content blockquote {
     position: relative;
@@ -259,7 +273,11 @@
     }
 }
 
-/* Код */
+/* Code */
+
+.content code {
+    font-family: 'Rostin', monospace;
+}
 
 .content pre {
     position: relative;
@@ -301,7 +319,6 @@
     display: block;
     padding: 16px 0;
     overflow-x: auto;
-    font-family: 'Rostin', monospace;
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker) transparent;
 }
@@ -312,14 +329,16 @@
     }
 }
 
-.content code::-webkit-scrollbar {
+.content pre code::-webkit-scrollbar {
     height: 3px;
 }
 
-.content code::-webkit-scrollbar-thumb {
+.content pre code::-webkit-scrollbar-thumb {
     background-color: var(--color-green-darker);
     border-radius: 24px;
 }
+
+/* Frame */
 
 .content > iframe {
     display: block;
@@ -330,7 +349,7 @@
     border: 0;
 }
 
-/* Буквица */
+/* Letter */
 
 .content > p:first-of-type::first-letter {
     margin-top: -5px;
@@ -344,7 +363,7 @@
     float: left;
 }
 
-/* Таблицы */
+/* Tables */
 
 .content table {
     margin-top: 16px;
