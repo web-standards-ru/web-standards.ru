@@ -70,9 +70,12 @@
         {% else %}
             {% set featuredImg = '/images/patterns/dots.svg' %}
         {% endif %}
+        {% if article.data.hero.alt %}
+            {% set featuredAlt = article.data.hero.alt %}
+        {% endif %}
         <img class="article-card__hero-image--featured"
             src="{{ featuredImg }}"
-            alt="{% if article.data.hero.alt %}{{ article.data.hero.alt }}{% endif %}"
+            alt="{{ featuredAlt }}"
             itemprop="image">
     {% endif %}
 
