@@ -4,9 +4,8 @@ const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const del = require('del');
 const rev = require('gulp-rev');
-const revCollector = require('gulp-rev-collector');
-
-const fs = require('fs');
+const revRewrite = require('gulp-rev-rewrite');
+const paths = require('vinyl-paths');
 
 // Styles
 
@@ -43,36 +42,39 @@ gulp.task('clean', () => {
     ]);
 });
 
-// Revision
+// Cache
 
-gulp.task('revision', (done) => {
+gulp.task('cache:hash', () => {
     return gulp.src([
-            'dist/styles/styles.css',
-            'dist/scripts/scripts.js'
+            'dist/**/*.{css,js,svg,png,woff2}',
+            '!dist/articles/*',
+            '!dist/people/*'
         ], {
             base: 'dist'
         })
+        .pipe(paths(del))
         .pipe(rev())
         .pipe(gulp.dest('dist'))
-        .pipe(rev.manifest())
-        .pipe(gulp.dest('dist/rev'))
-        .on('end', done);
+        .pipe(rev.manifest('rev.json'))
+        .pipe(gulp.dest('dist'));
 });
 
-// HTML manifest
-gulp.task('htmlManifest', (done) => {
-    if ((fs.existsSync('dist/rev/rev-manifest.json'))) {
-        return gulp.src(['dist/rev/rev-manifest.json', 'dist/index.html'])
-            .pipe(revCollector({
-                replaceReved: true
-            }))
-            .pipe(gulp.dest('dist'))
-            .on('end', done);
-    } else {
-        console.log('HTML manifest error, file not exist.');
-        return false;
-    }
+gulp.task('cache:replace', () => {
+    return gulp.src([
+            'dist/**/*.{html,css}',
+            'dist/manifest-*.json',
+        ])
+        .pipe(revRewrite({
+            manifest:
+            gulp.src('dist/rev.json').pipe(paths(del))
+        }))
+        .pipe(gulp.dest('dist'));
 });
+
+gulp.task('cache', gulp.series(
+    'cache:hash',
+    'cache:replace',
+));
 
 
 // Build
@@ -81,6 +83,5 @@ gulp.task('build', gulp.series(
     'styles',
     'scripts',
     'clean',
-    'revision',
-    'htmlManifest'
+    'cache'
 ));
