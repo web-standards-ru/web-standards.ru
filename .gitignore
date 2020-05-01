@@ -1,2 +1,5 @@
 node_modules
 dist
+
+# Mac OS special files
+.DS_Store
