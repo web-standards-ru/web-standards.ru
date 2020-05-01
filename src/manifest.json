@@ -4,7 +4,6 @@
   "start_url": "/",
   "display": "browser",
   "orientation": "any",
-  "theme_color": "cerulean",
   "background_color": "white",
   "description": "Веб-стандарты",
   "icons": [{
