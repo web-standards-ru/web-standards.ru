@@ -46,9 +46,10 @@ gulp.task('clean', () => {
 
 gulp.task('cache:hash', () => {
     return gulp.src([
-            'dist/**/*.{css,js,svg,png,woff2}',
-            '!dist/articles/*',
-            '!dist/people/*'
+            'dist/fonts/*.woff2',
+            'dist/images/**/*.{svg,png,jpg}',
+            'dist/scripts/*.js',
+            'dist/styles/*.css',
         ], {
             base: 'dist'
         })
