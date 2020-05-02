@@ -12,13 +12,10 @@
 
     {% include 'social.njk' %}
 
+    {% include 'icon.njk' %}
+
     <link rel="alternate" href="{{ site.paths.feed }}" type="application/rss+xml" title="Новости — Веб-стандарты">
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" sizes="160x160" href="/images/icons/160.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/16.png">
-    <link rel="icon" type="image/svg+xml" sizes="any" href="/images/icons/any.svg">
-    <link rel="apple-touch-icon" href="/images/icons/160.png">
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body class="page__body{% if page.url != '/' %} page__body--inner{% endif %}">
