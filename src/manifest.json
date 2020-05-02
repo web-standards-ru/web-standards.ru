@@ -4,23 +4,22 @@
   "start_url": "/",
   "display": "browser",
   "orientation": "any",
-  "theme_color": "cerulean",
   "background_color": "white",
-  "description": "Веб-стандарты - сообщество разработчиков",
+  "description": "Веб-стандарты",
   "icons": [{
-    "src": "images/icons/160.png",
+    "src": "/images/icons/160.png",
     "sizes": "160x160",
     "type": "image/png"
   }, {
-    "src": "images/icons/32.png",
+    "src": "/images/icons/32.png",
     "sizes": "32x32",
     "type": "image/png"
   }, {
-    "src": "images/icons/16.png",
+    "src": "/images/icons/16.png",
     "sizes": "16x16",
     "type": "image/png"
   }, {
-    "src": "images/icons/any.svg",
+    "src": "/images/icons/any.svg",
     "sizes": "any",
     "type": "image/svg+xml"
   }]
