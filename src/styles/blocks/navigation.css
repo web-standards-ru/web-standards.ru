@@ -296,7 +296,7 @@
     }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
     .page__navigation--inner .navigation__item--patreon {
         margin: 0;
     }
