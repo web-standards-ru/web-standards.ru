@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
+    {% if page.url == '/' %}
+        {% set isIndex = true %}
+    {% else %}
+        {% set titleSuffix = ' — Веб-стандарты' %}
+        {% set isIndex = false %}
+    {% endif %}
+
     <title>
-        {{ renderData.title or title }}
-        {% if page.url != '/' %} — Веб-стандарты{% endif %}
+        {{ renderData.title or title }}{{ titleSuffix }}
     </title>
 
     <meta charset="utf-8">
@@ -11,17 +17,16 @@
     <meta name="description" content="{{ preview or site.description }}">
 
     {% include 'social.njk' %}
-
     {% include 'icon.njk' %}
 
     <link rel="alternate" href="{{ site.paths.feed }}" type="application/rss+xml" title="Новости — Веб-стандарты">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
-<body class="page__body{% if page.url != '/' %} page__body--inner{% endif %}">
-    <div class="page__navigation{% if page.url != '/' %} page__navigation--inner{% endif %} navigation">
+<body class="page__body{% if isIndex %} page__body--inner{% endif %}">
+    <div class="page__navigation{% if isIndex %} page__navigation--inner{% endif %} navigation">
         <div class="navigation__logo logo">
-            {% if page.url != '/' %}<a class="logo__link" href="/">{% endif %}
+            {% if isIndex %}<a class="logo__link" href="/">{% endif %}
                 <img class="logo__icon" src="/images/logo.svg" width="40" height="40" alt="Логотип Веб-стандартов">
                 <p class="logo__title">
                     Веб-стандарты
@@ -29,7 +34,7 @@
                 <p class="logo__tagline">
                     Сообщество разработчиков
                 </p>
-            {% if page.url != '/' %}</a>{% endif %}
+            {% if isIndex %}</a>{% endif %}
         </div>
         <nav class="navigation__bar">
             <button class="navigation__button"
@@ -63,7 +68,7 @@
             </ul>
         </nav>
     </div>
-    <div class="page__content{% if page.url != '/' %} page__content--inner{% endif %}">
+    <div class="page__content{% if isIndex %} page__content--inner{% endif %}">
         {{ content | safe }}
     </div>
     <script src="/scripts/scripts.js"></script>
