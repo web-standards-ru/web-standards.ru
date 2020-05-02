@@ -110,7 +110,7 @@
 }
 
 .authors__collaborators-link:visited {
-    color: var(--color-grey-lighter);
+    color: var(--color-grey-medium);
 }
 
 @media (hover: hover) and (pointer: fine) {
