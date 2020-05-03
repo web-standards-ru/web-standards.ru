@@ -30,7 +30,7 @@ tags:
 
 ### Про серверную часть
 
-Конечно же, мой любимый [Express.js](https://expressjs.com/) и [Node.js](https://nodejs.org/en/)
+Конечно же, мой любимый [Express.js](https://expressjs.com/) и [Node.js](https://nodejs.org/en/).
 
 ### Хостинг
 
