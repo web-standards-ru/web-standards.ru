@@ -22,7 +22,7 @@ tags:
 
 ### Про верстку
 
-Подумав немного, понял, что старый добрый [Preact](https://github.com/preactjs/preact) c его подходом к **Server Side Rendering** через [Hyperscript Tagged Markup](https://github.com/developit/htm), поможет в разделении частей страниц, на компоненты. При этом решил, что на первых порах стоит обойтись без клиентского JS, использовать только лишь CSS и HTML на клиенте.
+Подумав немного, понял, что старый добрый [Preact](https://github.com/preactjs/preact) c его подходом к **Server Side Rendering** через [Hyperscript Tagged Markup](https://github.com/developit/htm) поможет в разделении частей страниц на компоненты. При этом решил, что на первых порах стоит обойтись без клиентского JS, использовать только CSS и HTML на клиенте.
 
 ### Про стили
 
