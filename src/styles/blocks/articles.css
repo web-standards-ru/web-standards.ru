@@ -59,7 +59,7 @@
 
 /* Related */
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
     .articles--related {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
