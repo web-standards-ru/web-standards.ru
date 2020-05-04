@@ -1,6 +1,6 @@
 module.exports = function(config) {
     config.addPassthroughCopy('src/favicon.ico');
-    config.addPassthroughCopy('src/robots.txt');
+    config.addPassthroughCopy('src/manifest.json');
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
