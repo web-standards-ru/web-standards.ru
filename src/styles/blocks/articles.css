@@ -18,7 +18,7 @@
 @media (min-width: 1024px) {
     .articles__item {
         min-height: 107px;
-        padding: 16px 0;
+        padding-top: 16px;
     }
 }
 
@@ -92,6 +92,7 @@
     .articles__item--featured {
         grid-row-start: 1;
         grid-row-end: 3;
+        padding: 16px 0;
         box-shadow: 0 0 0 1px var(--color-grey-dark);
         z-index: 1;
     }

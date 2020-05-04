@@ -285,7 +285,7 @@
 }
 
 @media (min-width: 1440px) {
-    .page__navigation--inner .navigation__item {
+    .page__navigation--inner .navigation__item:not(:last-child) {
         margin-right: 20px;
     }
 }
