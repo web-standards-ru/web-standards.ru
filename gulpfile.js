@@ -12,6 +12,7 @@ gulp.task('styles', () => {
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
             require('autoprefixer'),
+            require('postcss-sort-media-queries'),
             require('postcss-csso'),
         ]))
         .pipe(gulp.dest('dist/styles'));
