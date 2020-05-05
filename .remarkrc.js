@@ -56,6 +56,7 @@ module.exports = {
     plugins: [
         'remark-frontmatter',
         ['remark-lint-emphasis-marker'],
+        ['remark-lint-list-item-content-indent'],
         ['remark-lint-strong-marker'],
         ['remark-lint-unordered-list-marker-style', '-'],
         ['remark-lint-ordered-list-marker-value', 'ordered'],
