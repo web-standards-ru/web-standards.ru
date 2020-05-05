@@ -160,7 +160,7 @@ module.exports = function(config) {
         return content;
     });
 
-    config.addTransform('videoInsert', (content, outputPath) => {
+    config.addTransform('lazyYouTube', (content, outputPath) => {
         let articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
         let iframes = /\<iframe src\=\"https\:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)\"(.*?)\>\<\/iframe>/ig;
 
