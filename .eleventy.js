@@ -161,9 +161,11 @@ module.exports = function(config) {
     });
 
     config.addTransform('videoInsert', (content, outputPath) => {
-        let reg = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
-        if (outputPath && outputPath.match(reg)) {
-            content = content.replace(/\<iframe src\=\"https\:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)\"(.*?)\>\<\/iframe>/ig, (match, p1) => {
+        let articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
+        let iframes = /\<iframe src\=\"https\:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)\"(.*?)\>\<\/iframe>/ig;
+
+        if (outputPath && outputPath.match(articles)) {
+            content = content.replace(iframes, (match, p1) => {
                 return `
                     <div class="video">
                         <a class="video__link" href="https://youtu.be/${p1}">
