@@ -12,7 +12,10 @@ module.exports = function(config) {
     const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
 
     config.setLibrary('md', markdownIt({
-        html: true
+        html: true,
+        highlight: function (str, lang) {
+            return `<pre><code tabindex="0"${lang ? ` class="language-${lang}"` : ''}>${md.utils.escapeHtml(str)}</code></pre>`;
+        },
     }).use(markdownItAnchor, {
         permalink: true,
         permalinkClass: 'article__heading-anchor',
