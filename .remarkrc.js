@@ -50,7 +50,7 @@ module.exports = {
         strong: '*',
         bullet: '-',
         incrementListMarker: true,
-        listItemIndent: 'mixed',
+        listItemIndent: '1',
         fences: true,
     },
     plugins: [
