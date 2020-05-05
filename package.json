@@ -15,7 +15,7 @@
     "@11ty/eleventy": "^0.10.0",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
-    "@mavrin/remark-typograf": "^2.1.1",
+    "@mavrin/remark-typograf": "^2.1.6",
     "autoprefixer": "^9.7.6",
     "del": "^5.1.0",
     "editorconfig-checker": "^3.0.4",
