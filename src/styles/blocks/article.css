@@ -270,20 +270,17 @@
     margin: 8px 0 0;
 }
 
-.article__authors {
-    margin-bottom: 48px;
+.article__creators {
+    max-width: 700px;
+    margin: 0 auto 48px;
 }
 
 @media (min-width: 1240px) {
-    .article__authors {
+    .article__creators {
         grid-row: 2 / -1;
         grid-column: 1 / 3;
-    }
-}
-
-@media (min-width: 1240px) {
-    .article__authors {
-        margin-bottom: 0;
+        max-width: none;
+        margin: 0;
     }
 }
 
