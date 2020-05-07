@@ -191,8 +191,5 @@
       "no-eol-whitespace": true,
       "no-missing-end-of-source-newline": true
     }
-  },
-  "dependencies": {
-    "markdown-it-anchor": "^5.2.7"
   }
 }

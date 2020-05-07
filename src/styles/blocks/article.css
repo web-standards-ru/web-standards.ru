@@ -164,6 +164,10 @@
     margin-left: 8px;
 }
 
+.content .article__heading-anchor:visited {
+    color: var(--color-blue-darker);
+}
+
 .article__source {
     margin: 0 16px 16px;
 }
