@@ -87,16 +87,6 @@
 
 /* Links */
 
-.content a {
-    text-decoration: none;
-}
-
-@media (min-width: 1240px) {
-    .content a {
-        text-decoration: underline;
-    }
-}
-
 .content a:link {
     color: var(--color-blue-darker);
     transition: color 0.2s linear;
