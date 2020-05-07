@@ -180,6 +180,18 @@ module.exports = function(config) {
         return content;
     });
 
+    config.addTransform('addingPointsInAlt', (content, outputPath) => {
+        if (outputPath && outputPath.endsWith('.html')) {
+            let img = /\<img(.*?)alt\=\"(.*?)\"/ig;
+            return content.replace(img, (match, p1, p2) => {
+                if (p2 && !p2.endsWith('.')) {
+                    return match.replace(p2, p2 + '.');
+                }
+                return match;
+            });
+        }
+    });
+
     // Теги
 
     config.addNunjucksTag('blob', (nunjucksEngine) => {
