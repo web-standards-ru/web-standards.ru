@@ -13,8 +13,6 @@ layout: article.njk
 tags:
     - article
     - html
-    - css
-    - js
     - a11y
 hero:
     src: images/3-tabs-example.png

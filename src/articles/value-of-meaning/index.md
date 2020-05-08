@@ -12,7 +12,7 @@ editors:
 layout: article.njk
 tags:
     - article
-    - a11y
+    - html
 hero:
     src: images/comic.png
 ---
