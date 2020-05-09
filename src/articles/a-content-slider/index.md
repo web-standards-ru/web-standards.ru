@@ -12,8 +12,6 @@ layout: article.njk
 tags:
     - article
     - html
-    - css
-    - js
     - a11y
 hero:
     src: images/slider.png
