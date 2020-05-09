@@ -50,6 +50,7 @@ gulp.task('cache:hash', () => {
             'dist/images/**/*.{svg,png,jpg}',
             'dist/scripts/*.js',
             'dist/styles/*.css',
+            'dist/manifest.json'
         ], {
             base: 'dist'
         })
@@ -63,7 +64,7 @@ gulp.task('cache:hash', () => {
 gulp.task('cache:replace', () => {
     return gulp.src([
             'dist/**/*.{html,css}',
-            'dist/manifest.json',
+            'dist/manifest-*.json',
         ])
         .pipe(revRewrite({
             manifest:
