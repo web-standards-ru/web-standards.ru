@@ -9,7 +9,7 @@ module.exports = function(config) {
     // Markdown Options
 
     const markdownIt = require('markdown-it');
-    const markdownItAnchor = require('./markdownItAnchor');
+    const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
 
     config.setLibrary('md', markdownIt({
         html: true
