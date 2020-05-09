@@ -15,6 +15,12 @@
         const isMenuHidden = isMenuHiddenCheck();
         navigationButton.setAttribute('aria-expanded', !isMenuHidden);
 
+        if (isMenuHidden) {
+            navigationButton.setAttribute('aria-label', 'Открыть меню');
+        } else {
+            navigationButton.setAttribute('aria-label', 'Закрыть меню');
+        }
+
         setTimeout(() => pageBody.classList.toggle('page__body--active'), 200);
     };
 
