@@ -12,10 +12,10 @@
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.dev:/var/www/web-standards.dev/html/"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@mavrin/remark-typograf": "^2.1.1",
+    "@11ty/eleventy": "^0.11.0",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@mavrin/remark-typograf": "^2.1.6",
     "autoprefixer": "^9.7.6",
     "del": "^5.1.0",
     "editorconfig-checker": "^3.0.4",
@@ -40,7 +40,7 @@
     "remark-lint-strong-marker": "^2.0.0",
     "remark-lint-unordered-list-marker-style": "^2.0.0",
     "stylelint": "^13.3.3",
-    "typograf": "^6.11.0",
+    "typograf": "^6.11.1",
     "vinyl-paths": "^3.0.1"
   },
   "browserslist": [
