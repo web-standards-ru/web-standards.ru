@@ -19,7 +19,7 @@ module.exports = function(config) {
         permalinkSymbol: '#',
         permalinkSpace: false,
         permalinkAttrs: () => ({
-            'aria-label': 'Ссылка на этот заголовок',
+            'aria-label': 'Этот заголовок',
         }),
         slugify: () => 'section',
     }));
