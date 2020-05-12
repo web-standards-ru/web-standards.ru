@@ -6,7 +6,6 @@
     font-size: 16px;
     line-height: 1.7;
     color: black;
-    box-sizing: border-box;
 }
 
 @media (min-width: 1240px) {
