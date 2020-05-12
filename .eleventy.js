@@ -18,6 +18,9 @@ module.exports = function(config) {
         permalinkClass: 'article__heading-anchor',
         permalinkSymbol: '#',
         permalinkSpace: false,
+        permalinkAttrs: () => ({
+            'aria-label': 'Ссылка на этот заголовок',
+        }),
         slugify: () => 'section',
     }));
 
