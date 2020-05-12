@@ -115,7 +115,6 @@
     .article__heading {
         display: flex;
         flex-direction: column;
-        box-sizing: border-box;
         padding: 24px 24px 39px;
         border-top: 1px solid var(--color-grey-medium);
         border-bottom: 1px solid var(--color-grey-medium);
