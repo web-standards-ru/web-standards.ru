@@ -232,7 +232,8 @@ const misc = {
         'fill',
         'fill-rule',
         'clip-rule',
-        'stroke'
+        'stroke',
+        'stroke-width'
     ]
 };
 
