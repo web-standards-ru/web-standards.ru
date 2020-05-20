@@ -9,7 +9,7 @@
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
     "test": "npm run editorconfig && npm run css && npm run markdown",
     "build": "eleventy && gulp build",
-    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.dev:/var/www/web-standards.dev/html/"
+    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
