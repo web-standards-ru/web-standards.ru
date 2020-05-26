@@ -120,6 +120,7 @@ layout: page.njk
         <h2 class="related-articles__title">Ещё</h2>
 
         {% set articleType %}{{ '--related' }}{% endset %}
+        {% set articleCardVariant = 'related' %}
 
         <ul class="articles articles{{ articleType }}">
             {%- for article in collections.article | reverse | filterCurrentPage(page) | limit(3) -%}
