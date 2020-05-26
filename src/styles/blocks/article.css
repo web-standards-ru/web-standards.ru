@@ -172,15 +172,10 @@
     opacity: 1;
 }
 
-.content h2:hover .article__heading-anchor {
-    opacity: 1;
-}
-
-.content h3:hover .article__heading-anchor {
-    opacity: 1;
-}
-
-.content h4:hover .article__heading-anchor {
+.content h2:hover .article__heading-anchor,
+.content h3:hover .article__heading-anchor,
+.content h4:hover .article__heading-anchor,
+.content h5:hover .article__heading-anchor {
     opacity: 1;
 }
 
