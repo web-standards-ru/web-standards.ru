@@ -12,6 +12,7 @@ editors:
 layout: article.njk
 tags:
     - article
+    - satire
     - html
     - css
 featured: true
