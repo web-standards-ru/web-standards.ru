@@ -1,5 +1,5 @@
 ---
-title: 'Взгляд на JavaScript со стороны'
+title: 'Взгляд на JavaScript со стороны'
 date: 2020-05-29
 author: lea-verou
 source:
