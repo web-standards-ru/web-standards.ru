@@ -9,6 +9,7 @@ translators:
     - nikita-dubko
 editors:
     - olga-aleksashenko
+    - vadim-makeev
 layout: article.njk
 tags:
     - article
