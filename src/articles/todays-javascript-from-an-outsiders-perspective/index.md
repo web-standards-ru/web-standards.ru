@@ -8,7 +8,7 @@ source:
 translators:
     - nikita-dubko
 editors:
-    - vadim-makeev
+    - olga-aleksashenko
 layout: article.njk
 tags:
     - article
