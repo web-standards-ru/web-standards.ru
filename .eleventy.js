@@ -6,6 +6,24 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/scripts');
     config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|zip)');
 
+    // Markdown Options
+
+    const markdownIt = require('markdown-it');
+    const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
+
+    config.setLibrary('md', markdownIt({
+        html: true
+    }).use(markdownItAnchor, {
+        permalink: true,
+        permalinkClass: 'article__heading-anchor',
+        permalinkSymbol: '#',
+        permalinkSpace: false,
+        permalinkAttrs: () => ({
+            'aria-label': 'Этот заголовок',
+        }),
+        slugify: () => 'section',
+    }));
+
     config.addCollection('tagList', (collection) => {
         const set = new Set();
         for (const item of collection.getAllSorted()) {

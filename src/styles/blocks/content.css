@@ -6,7 +6,6 @@
     font-size: 16px;
     line-height: 1.7;
     color: black;
-    box-sizing: border-box;
 }
 
 @media (min-width: 1240px) {
@@ -86,16 +85,6 @@
 }
 
 /* Links */
-
-.content a {
-    text-decoration: none;
-}
-
-@media (min-width: 1240px) {
-    .content a {
-        text-decoration: underline;
-    }
-}
 
 .content a:link {
     color: var(--color-blue-darker);

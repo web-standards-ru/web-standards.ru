@@ -13,7 +13,6 @@ layout: article.njk
 tags:
     - article
     - html
-    - css
     - a11y
 hero:
     src: images/cover.png

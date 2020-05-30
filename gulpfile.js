@@ -50,6 +50,7 @@ gulp.task('cache:hash', () => {
             'dist/images/**/*.{svg,png,jpg}',
             'dist/scripts/*.js',
             'dist/styles/*.css',
+            'dist/manifest.json'
         ], {
             base: 'dist'
         })

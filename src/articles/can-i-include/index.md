@@ -74,7 +74,7 @@ hero:
 При обращении по адресу **caninclude.glitch.me** открывается следующая страница:
 
 <figure>
-    <img src="images/page.png" alt="" width="100%" height="100%">
+    <img src="images/page.png" alt="" width="1824" height="1042">
     <figcaption>
         Главная страница Can I Include.
     </figcaption>
@@ -85,7 +85,7 @@ hero:
 В результате отправки формы по методу GET рендерится страница с информацией по двум тегам и вердиктом о вложенности.
 
 <figure>
-    <img src="images/positive.png" alt="">
+    <img src="images/positive.png" width="1654" height="1466" alt="">
     <figcaption>
         Страница с успешным вердиктом.
     </figcaption>
@@ -94,7 +94,7 @@ hero:
 Если определить возможность вкладывания не получилось из-за «прозрачной» контентной модели внешнего тега, то страница будет выглядеть так:
 
 <figure>
-    <img src="images/doubt.png" alt="">
+    <img src="images/doubt.png" width="1690" height="1672" alt="">
     <figcaption>
         Страница с неопределённым вердиктом.
     </figcaption>
@@ -103,7 +103,7 @@ hero:
 В случае, если вкладывать теги нельзя, то страница с вердиктом будет выглядеть так:
 
 <figure>
-    <img src="images/negative.png" alt="">
+    <img src="images/negative.png" width="1692" height="1678" alt="">
     <figcaption>
         Страница с отрицательным вердиктом.
     </figcaption>
