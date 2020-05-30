@@ -174,7 +174,6 @@
     top: 80px;
     left: 0;
     z-index: -1;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     overflow-y: auto;

@@ -12,8 +12,8 @@ editors:
 layout: article.njk
 tags:
     - article
-    - html
     - css
+    - fonts
 ---
 
 Недавно в проект [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) была добавлена новая техника замены текста изображением. В этой записи я расскажу, как она работает и как соотносится с альтернативными методами.

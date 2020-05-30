@@ -13,7 +13,7 @@ editors:
 layout: article.njk
 tags:
     - article
-    - html
+    - satire
     - css
     - js
 ---

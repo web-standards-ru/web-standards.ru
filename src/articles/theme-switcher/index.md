@@ -13,7 +13,6 @@ layout: article.njk
 tags:
     - article
     - css
-    - js
     - a11y
 hero:
     src: images/black-and-white-themes.png

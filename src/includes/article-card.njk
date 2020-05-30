@@ -20,7 +20,7 @@
         </a>
     </h3>
 
-    {% if featured %}
+    {% if featured and articleCardVariant !== 'related' %}
         <p class="article-card__preview">
             {{ article.data.preview }}
         </p>
@@ -48,7 +48,7 @@
             {{ person.name }}
         </span>
 
-        {% if not featured %}
+        {% if not featured or articleCardVariant == 'related' %}
             <div class="
                 article-card__avatar
                 article-card__avatar{{ articleType }}
@@ -64,7 +64,7 @@
         {% endif %}
     {% endfor %}
 
-    {% if featured %}
+    {% if featured and articleCardVariant !== 'related' %}
         {% if article.data.hero.src %}
             {% set featuredImg = [article.url, article.data.hero.src] | join %}
         {% else %}

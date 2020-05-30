@@ -12,7 +12,6 @@ editors:
 layout: article.njk
 tags:
     - article
-    - html
     - css
 ---
 

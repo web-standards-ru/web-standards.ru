@@ -41,57 +41,73 @@ layout: page.njk
             </div>
             {% endif %}
         </div>
-        <div class="article__authors authors">
-            <div class="authors__author">
-                {% for person in collections.people | filterPeople(author) %}
-                    {% if person.photo %}
-                        {% set personPhoto = [author, '/photo.jpg'] | join %}
-                    {% else %}
-                        {% set personPhoto = 'person.png' %}
-                    {% endif %}
-                    <a class="authors__author-link"
+        <div class="article__creators creators">
+            {% for person in collections.people | filterPeople(author) %}
+                {% if person.photo %}
+                    {% set personPhoto = [author, '/photo.jpg'] | join %}
+                {% else %}
+                    {% set personPhoto = 'person.png' %}
+                {% endif %}
+                {% if person.url %}
+                    <a class="creators__author"
                         href="{{ person.url }}">
-                        <span class="authors__author-avatar blob {% blob person.name %}">
-                            <img class="authors__author-photo blob__photo"
+                        <span class="creators__author-avatar blob {% blob person.name %}">
+                            <img class="blob__photo"
                                 src="/people/{{ personPhoto }}"
                                 width="113" height="104" alt="{{ person.name }}">
                         </span>
-                        <span itemprop="author">
+                        <span class="creators__author-name" itemprop="author">
                             {{ person.name }}
                         </span>
                     </a>
-                {% endfor %}
-            </div>
+                {% else %}
+                    <span class="creators__author">
+                        <span class="creators__author-avatar blob {% blob person.name %}">
+                            <img class="blob__photo"
+                                src="/people/{{ personPhoto }}"
+                                width="113" height="104" alt="{{ person.name }}">
+                        </span>
+                        <span class="creators__author-name" itemprop="author">
+                            {{ person.name }}
+                        </span>
+                    </span>
+                {% endif %}
+            {% endfor %}
 
             {% if translators %}
-                <p class="authors__collaborators">
-                    <span class="authors__collaborators-heading">Перевод</span>
+                <p class="creators__collaborators">
+                    <span class="creators__collaborators-heading">Перевод</span>
                     {%- for translator in collections.people | filterPeople(translators) -%}
-                        <span itemprop="translator">
-                            {% if translator.url %}
-                                <a class="authors__collaborators-link"
-                                    href="{{ translator.url }}">
-                                    {{ translator.name }}
-                                </a>
-                            {% else %}
-                                <span class="authors__collaborators-name">
-                                    {{ translator.name }}
-                                </span>
-                            {% endif %}
-                        </span>
+                        {% if translator.url %}
+                            <a class="creators__collaborators-link"
+                                href="{{ translator.url }}"
+                                itemprop="translator">
+                                {{ translator.name }}
+                            </a>
+                        {% else %}
+                            <span itemprop="translator">
+                                {{ translator.name }}
+                            </span>
+                        {% endif %}
                     {%- endfor -%}
                 </p>
             {% endif %}
 
             {% if editors %}
-                <p class="authors__collaborators">
-                    <span class="authors__collaborators-heading">Редактура</span>
+                <p class="creators__collaborators">
+                    <span class="creators__collaborators-heading">Редактура</span>
                     {%- for editor in collections.people | filterPeople(editors) -%}
-                        <a class="authors__collaborators-link" href="{{ editor.url }}">
+                        {% if editor.url %}
+                            <a class="creators__collaborators-link"
+                                href="{{ editor.url }}"
+                                itemprop="contributor">
+                                {{ editor.name }}
+                            </a>
+                        {% else %}
                             <span itemprop="contributor">
                                 {{ editor.name }}
                             </span>
-                        </a>
+                        {% endif %}
                     {%- endfor -%}
                 </p>
             {% endif %}
@@ -104,6 +120,7 @@ layout: page.njk
         <h2 class="related-articles__title">Ещё</h2>
 
         {% set articleType %}{{ '--related' }}{% endset %}
+        {% set articleCardVariant = 'related' %}
 
         <ul class="articles articles{{ articleType }}">
             {%- for article in collections.article | reverse | filterCurrentPage(page) | limit(3) -%}
