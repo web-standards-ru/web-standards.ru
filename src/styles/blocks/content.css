@@ -198,7 +198,8 @@
 /* Images */
 
 .content > img,
-.content figure > img {
+.content figure > img,
+.content a > img {
     display: block;
     max-width: 100%;
     height: auto;
