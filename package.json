@@ -41,8 +41,7 @@
     "remark-lint-unordered-list-marker-style": "^2.0.0",
     "stylelint": "^13.3.3",
     "typograf": "^6.11.1",
-    "vinyl-paths": "^3.0.1",
-    "hyphen": "^1.6.1"
+    "vinyl-paths": "^3.0.1"
   },
   "browserslist": [
     "last 2 version",
