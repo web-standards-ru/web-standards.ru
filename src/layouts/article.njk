@@ -8,7 +8,7 @@ layout: page.njk
     <div class="main__content article" itemscope itemtype="http://schema.org/Article">
         <div class="article__heading-wrapper{% if not hero %} article__heading-wrapper--no-hero{% endif %}">
             <div class="article__heading">
-                <h1 class="article__title" itemprop="headline name">{{ title }}</h1>
+                <h1 class="article__title" itemprop="headline name">{{ title | addHyphens(13) }}</h1>
                 {% if source %}
                     <p class="article__source">
                         Перевод

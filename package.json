@@ -35,7 +35,8 @@
     "remark-lint-ordered-list-marker-value": "^2.0.0",
     "remark-lint-strong-marker": "^2.0.0",
     "remark-lint-unordered-list-marker-style": "^2.0.0",
-    "stylelint": "^13.3.3"
+    "stylelint": "^13.3.3",
+    "hyphen": "^1.6.1"
   },
   "browserslist": [
     "last 2 version",
