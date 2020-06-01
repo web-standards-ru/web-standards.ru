@@ -4,6 +4,7 @@
 
 /* Blocks */
 
+@import 'blocks/box-sizing.css';
 @import 'blocks/visually-hidden.css';
 @import 'blocks/page.css';
 @import 'blocks/header.css';
@@ -18,11 +19,12 @@
 @import 'blocks/links.css';
 @import 'blocks/footer.css';
 @import 'blocks/article.css';
-@import 'blocks/authors.css';
+@import 'blocks/creators.css';
 @import 'blocks/blob.css';
 @import 'blocks/related-articles.css';
 @import 'blocks/article-card.css';
 @import 'blocks/conference-link.css';
+@import 'blocks/video.css';
 
 /* Globals */
 
@@ -37,7 +39,7 @@
     --color-blue-lightest: #def3f6;
     --color-blue-lightest-transparent: #def3f600;
     --color-blue-light: #32adfd;
-    --color-blue-medium: #26649f;
+    --color-blue-medium: #377db3;
     --color-blue-darker: #0064a4;
 
     --color-green-light: #ddf2ea;

@@ -6,7 +6,6 @@
     font-size: 16px;
     line-height: 1.7;
     color: black;
-    box-sizing: border-box;
 }
 
 @media (min-width: 1240px) {
@@ -16,6 +15,8 @@
         font-size: 21px;
     }
 }
+
+/* Headings */
 
 .content h2,
 .content h3 {
@@ -63,9 +64,10 @@
 
 .content h2 code,
 .content h3 code {
-    /* fixes default monospace font */
     font-family: inherit;
 }
+
+/* Paragraphs */
 
 .content p {
     margin-top: 1em;
@@ -82,15 +84,7 @@
     margin-top: 0;
 }
 
-.content a {
-    text-decoration: none;
-}
-
-@media (min-width: 1240px) {
-    .content a {
-        text-decoration: underline;
-    }
-}
+/* Links */
 
 .content a:link {
     color: var(--color-blue-darker);
@@ -98,7 +92,7 @@
 }
 
 .content a:visited {
-    color: var(--color-grey-lighter);
+    color: var(--color-grey-medium);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -189,13 +183,23 @@
     }
 }
 
-/*
-    Картинки
+/* Figures */
 
-    Основные стили задаются через блок media
-*/
+.content figure {
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
 
-.content img {
+.content figcaption {
+    font-size: 0.8em;
+}
+
+/* Images */
+
+.content > img,
+.content figure > img,
+.content a > img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -203,12 +207,12 @@
 }
 
 @media (min-width: 1240px) {
-    .content img {
+    .content > img {
         margin: 60px 0 60px auto;
     }
 }
 
-/* Цитаты */
+/* Quotes */
 
 .content blockquote {
     position: relative;
@@ -259,7 +263,11 @@
     }
 }
 
-/* Код */
+/* Code */
+
+.content code {
+    font-family: 'Rostin', monospace;
+}
 
 .content pre {
     position: relative;
@@ -301,7 +309,6 @@
     display: block;
     padding: 16px 0;
     overflow-x: auto;
-    font-family: 'Rostin', monospace;
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker) transparent;
 }
@@ -312,16 +319,18 @@
     }
 }
 
-.content code::-webkit-scrollbar {
+.content pre code::-webkit-scrollbar {
     height: 3px;
 }
 
-.content code::-webkit-scrollbar-thumb {
+.content pre code::-webkit-scrollbar-thumb {
     background-color: var(--color-green-darker);
     border-radius: 24px;
 }
 
-.content iframe {
+/* Frame */
+
+.content > iframe {
     display: block;
     width: 100%;
     min-height: 400px;
@@ -330,7 +339,7 @@
     border: 0;
 }
 
-/* Буквица */
+/* Letter */
 
 .content > p:first-of-type::first-letter {
     margin-top: -5px;
@@ -344,7 +353,7 @@
     float: left;
 }
 
-/* Таблицы */
+/* Tables */
 
 .content table {
     margin-top: 16px;

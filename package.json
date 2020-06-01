@@ -5,21 +5,25 @@
     "editorconfig": "editorconfig-checker",
     "css": "stylelint \"src/styles/**/*.css\"",
     "markdown": "remark 'src/articles/**/*.md' --quiet",
+    "typograph": "remark",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
     "test": "npm run editorconfig && npm run css && npm run markdown",
     "build": "eleventy && gulp build",
-    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.dev:/var/www/web-standards.dev/html/"
+    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@11ty/eleventy": "^0.11.0",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@mavrin/remark-typograf": "^2.1.6",
     "autoprefixer": "^9.7.6",
     "del": "^5.1.0",
     "editorconfig-checker": "^3.0.4",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-rewrite": "^3.0.3",
     "gulp-terser": "^1.2.0",
     "html-minifier": "^4.0.0",
     "node-w3c-validator": "^1.6.1",
@@ -36,6 +40,8 @@
     "remark-lint-strong-marker": "^2.0.0",
     "remark-lint-unordered-list-marker-style": "^2.0.0",
     "stylelint": "^13.3.3",
+    "typograf": "^6.11.1",
+    "vinyl-paths": "^3.0.1",
     "hyphen": "^1.6.1"
   },
   "browserslist": [
@@ -186,34 +192,5 @@
       "no-eol-whitespace": true,
       "no-missing-end-of-source-newline": true
     }
-  },
-  "remarkConfig": {
-    "settings": {
-      "emphasis": "_",
-      "strong": "**",
-      "bullet": "-",
-      "incrementListMarker": "true"
-    },
-    "plugins": [
-      "remark-frontmatter",
-      [
-        "remark-lint-emphasis-marker"
-      ],
-      [
-        "remark-lint-strong-marker"
-      ],
-      [
-        "remark-lint-unordered-list-marker-style",
-        "-"
-      ],
-      [
-        "remark-lint-ordered-list-marker-value",
-        "ordered"
-      ],
-      [
-        "remark-lint-code-block-style",
-        "fenced"
-      ]
-    ]
   }
 }

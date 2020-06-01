@@ -22,7 +22,7 @@ tags:
 **Во-первых, расскажите нам немного о том, чем вы занимаетесь и над чем работаете**
 
 <figure>
-    <img src="images/mike.jpg" alt="Майк™ Смит">
+    <img src="images/mike.jpg" alt="Майк™ Смит.">
     <figcaption>Майк™ Смит — заместитель директора @W3C: вариант либерального подхода к работе</figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ tags:
 
 <figure>
     <a href="https://validator.w3.org/nu/">
-        <img src="images/nu-markup.png" alt="Новая проверка разметки">
+        <img src="images/nu-markup.png" alt="">
     </a>
     <figcaption>Новая проверка разметки.</figcaption>
 </figure>
@@ -41,7 +41,7 @@ DTD-шки высечены на каменных плитах. И поэто�
 
 <figure>
     <a href="https://validator.w3.org/">
-        <img src="images/w3c-validator.png" alt="Валидатор W3C">
+        <img src="images/w3c-validator.png" alt="">
     </a>
     <figcaption>Валидатор W3C.</figcaption>
 </figure>

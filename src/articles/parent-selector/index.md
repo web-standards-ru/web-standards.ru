@@ -50,9 +50,9 @@ tags:
 
 Вот как выглядит визуализация процессов перерисовки в Firefox:
 
-<iframe src="https://www.youtube.com/embed/ZTnIxIA5KGw"></iframe>
+<iframe src="https://www.youtube.com/embed/ZTnIxIA5KGw" allowfullscreen></iframe>
 
-## CSS селекторы анализируется справа налево
+## CSS-селекторы анализируются справа налево
 
 Чтобы определить, применяется ли CSS-правило к определенному элементу, браузер рассматривает селектор справа налево.
 
