@@ -36,8 +36,14 @@ layout: page.njk
                 </div>
             </div>
             {% if hero %}
-            <div class="article__hero">
-                <img src="{{ hero.src }}" class="article__hero-image" alt="{% if hero.alt %}{{ hero.alt }}{% endif %}" itemprop="image">
+            <div class="article__hero"
+                {% if hero.contain %}
+                    style="background-color: {{ hero.contain }};"
+                {% endif %}>
+                <img src="{{ hero.src }}" class="article__hero-image" alt="{% if hero.alt %}{{ hero.alt }}{% endif %}" itemprop="image"
+                {% if hero.contain %}
+                    style="object-fit: contain;"
+                {% endif%}>
             </div>
             {% endif %}
         </div>
