@@ -95,9 +95,8 @@ module.exports = function(config) {
             });
     });
 
-    config.addFilter('addHyphens', (content, maxLength) => {
-        maxLength = maxLength || 0;
-        if(!content ||  content.length <= maxLength) {
+    config.addFilter('addHyphens', (content, maxLength = 0) => {
+        if (!content || content.length <= maxLength) {
             return content;
         }
         let hyphenLibRu = require('hyphen/ru');
