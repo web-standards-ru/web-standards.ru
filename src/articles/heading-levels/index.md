@@ -16,6 +16,8 @@ tags:
     - a11y
 hero:
     src: images/1.jpg
+    contain: true
+    background: "linear-gradient(to bottom, #64b5f6, #64b5f6 50%, #ffffff 50%, #ffffff)"
 ---
 
 [Спецификация HTML](https://www.w3.org/TR/html52/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements) описывает шесть видов заголовков: `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` и `<h6>`. Число в названии элемента отражает его приоритет. При этом `<h1>` самый общий, а `<h6>` наиболее специфичный.
