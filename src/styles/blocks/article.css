@@ -79,6 +79,10 @@
     height: 100%;
 }
 
+.article__hero-image--contain {
+    object-fit: contain;
+}
+
 .article__heading-wrapper--no-hero::after {
     content: ' ';
     display: block;
