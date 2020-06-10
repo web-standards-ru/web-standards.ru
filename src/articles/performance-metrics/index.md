@@ -12,7 +12,7 @@ tags:
 hero:
     src: images/1.png
     contain: true
-    background: "#ffffff"
+    background: '#ffffff'
 ---
 
 Что все они означают?

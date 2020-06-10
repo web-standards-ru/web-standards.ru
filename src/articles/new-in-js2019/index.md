@@ -16,7 +16,7 @@ tags:
 hero:
     src: images/1.jpg
     contain: true
-    background: "#ffffff"
+    background: '#ffffff'
 ---
 
 На протяжении последних лет JavaScript развивался и получал новые фичи. Если вам любопытно, чего ждать от новой версии JavaScript, то этот пост для вас!

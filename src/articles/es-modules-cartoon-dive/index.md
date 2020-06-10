@@ -17,7 +17,7 @@ tags:
 hero:
     src: images/1.png
     contain: true
-    background: "#ffffff"
+    background: '#ffffff'
 ---
 
 ES-модули приносят в JavaScript официальную, унифицированную модульную систему. Однако, чтобы прийти к этому, потребовалось почти 10 лет работы по стандартизации.
