@@ -95,6 +95,15 @@ module.exports = function(config) {
             });
     });
 
+    config.addFilter('addHyphens', (content, maxLength = 0) => {
+        if (!content || content.length <= maxLength) {
+            return content;
+        }
+        let hyphenLibRu = require('hyphen/ru');
+        let contentWithHyps = hyphenLibRu.hyphenateSync(content);
+        return contentWithHyps;
+    });
+
     config.addFilter('fixLinks', (content) => {
         const reg = /(src="[^(https:\/\/)])|(src="\/)|(href="[^(https:\/\/)])|(href="\/)/g;
         const prefix = `https://web-standards.ru` + content.url;
