@@ -201,18 +201,24 @@ const visual = {
         'outline-color',
         'outline-offset',
         'box-shadow',
+        'visibility',
+        'cursor',
+        'mix-blend-mode'
+    ]
+};
+
+const compositing = {
+    properties: [
+        'backdrop-filter',
+        'will-change',
         'transform',
         'transform-origin',
         'transform-style',
         'backface-visibility',
-        'perspective',
-        'perspective-origin',
-        'visibility',
-        'cursor',
         'opacity',
         'filter',
-        'backdrop-filter',
-        'mix-blend-mode'
+        'perspective',
+        'perspective-origin'
     ]
 };
 
@@ -252,7 +258,6 @@ const misc = {
         'pointer-events',
         'quotes',
         'touch-action',
-        'will-change',
         'zoom',
         'fill',
         'fill-rule',
@@ -269,6 +274,7 @@ const propertiesOrder = [
     typography,
     visual,
     animation,
+    compositing,
     misc
 ];
 
