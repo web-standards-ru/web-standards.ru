@@ -211,7 +211,8 @@ const visual = {
         'cursor',
         'opacity',
         'filter',
-        'backdrop-filter'
+        'backdrop-filter',
+        'mix-blend-mode'
     ]
 };
 
