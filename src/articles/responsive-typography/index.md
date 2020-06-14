@@ -12,6 +12,7 @@ editors:
 layout: article.njk
 tags:
     - article
+    - fonts
     - typography
 ---
 

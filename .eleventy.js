@@ -1,10 +1,28 @@
 module.exports = function(config) {
     config.addPassthroughCopy('src/favicon.ico');
-    config.addPassthroughCopy('src/robots.txt');
+    config.addPassthroughCopy('src/manifest.json');
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
     config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|zip)');
+
+    // Markdown Options
+
+    const markdownIt = require('markdown-it');
+    const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
+
+    config.setLibrary('md', markdownIt({
+        html: true
+    }).use(markdownItAnchor, {
+        permalink: true,
+        permalinkClass: 'article__heading-anchor',
+        permalinkSymbol: '#',
+        permalinkSpace: false,
+        permalinkAttrs: () => ({
+            'aria-label': 'Этот заголовок',
+        }),
+        slugify: () => 'section',
+    }));
 
     config.addCollection('tagList', (collection) => {
         const set = new Set();
@@ -75,6 +93,15 @@ module.exports = function(config) {
             .map((person) => {
                 return person.data;
             });
+    });
+
+    config.addFilter('addHyphens', (content, maxLength = 0) => {
+        if (!content || content.length <= maxLength) {
+            return content;
+        }
+        let hyphenLibRu = require('hyphen/ru');
+        let contentWithHyps = hyphenLibRu.hyphenateSync(content);
+        return contentWithHyps;
     });
 
     config.addFilter('fixLinks', (content) => {
@@ -156,6 +183,29 @@ module.exports = function(config) {
             let prettydata = require('pretty-data');
             let result = prettydata.pd.xmlmin(content);
             return result;
+        }
+        return content;
+    });
+
+    config.addTransform('lazyYouTube', (content, outputPath) => {
+        let articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
+        let iframes = /\<iframe src\=\"https\:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)\"(.*?)\>\<\/iframe>/ig;
+
+        if (outputPath && outputPath.match(articles)) {
+            content = content.replace(iframes, (match, p1) => {
+                return `
+                    <div class="video">
+                        <a class="video__link" href="https://youtu.be/${p1}">
+                            <picture>
+                                <source srcset="https://img.youtube.com/vi/${p1}/maxresdefault.jpg" media="(min-width: 736px)">
+                                <img class="video__media" src="https://img.youtube.com/vi/${p1}/mqdefault.jpg" alt="">
+                            </picture>
+                        </a>
+                        <button class="video__button" type="button" aria-label="Запустить видео">
+                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                        </button>
+                    </div>`
+            });
         }
         return content;
     });

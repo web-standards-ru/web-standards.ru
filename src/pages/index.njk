@@ -11,6 +11,13 @@ permalink: index.html
 
     {% set articleType %}{{ '--main' }}{% endset %}
 
+    <div class="visually-hidden">
+        <h1>Веб-стандарты</h1>
+        <p>Сообщество разработчиков</p>
+    </div>
+
+    <h2 class="visually-hidden">Статьи</h2>
+
     <ul class="articles articles{{ articleType }}">
         {%- for article in collections.article | reverse | filterIndexArticles -%}
             <li class="

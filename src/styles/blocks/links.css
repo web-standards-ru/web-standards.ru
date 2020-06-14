@@ -2,7 +2,6 @@
 
 .links {
     padding: 16px 9px;
-    box-sizing: border-box;
     background-color: var(--color-grey-lightest);
 }
 
@@ -37,7 +36,7 @@
 .links__title {
     margin: 0 0 15px 0;
     font-family: 'Dewi Expanded', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -60,13 +59,12 @@
     flex-direction: row-reverse;
     align-items: center;
     font-family: 'Dewi';
-    font-size: 12px;
+    font-size: 16px;
 }
 
 @media (min-width: 1024px) {
     .links__section {
         padding: 20px 0;
-        font-size: 16px;
     }
 }
 

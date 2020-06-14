@@ -10,6 +10,9 @@ tags:
     - a11y
 hero:
     src: images/a11y-and-law.png
+    alt: 'Доступность и закон.'
+    contain: true
+    background: '#e1e4eb'
 ---
 
 ## Разбираем законы и стандарты по веб-доступности

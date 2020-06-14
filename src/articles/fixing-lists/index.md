@@ -12,11 +12,12 @@ editors:
 layout: article.njk
 tags:
     - article
-    - html
     - css
     - a11y
 hero:
     src: images/1.png
+    contain: true
+    background: 'linear-gradient(to bottom, #63b6f6, #63b6f6 50%, #fefdff 50%, #fefdff)'
 ---
 
 [Джерард К. Коэн](https://twitter.com/gerardkcohen) в сентябре 2017 опубликовал на Unfettered Thoughts [статью о том](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/), как пропадает семантика у списков в VoiceOver и Safari (WebKit; macOS и iOS), когда используется свойство `list-style: none`. И это происходит не только из-за `list-style: none`, но и при использования любых CSS-свойств, которые убирают маркеры или нумерацию у элементов списка.

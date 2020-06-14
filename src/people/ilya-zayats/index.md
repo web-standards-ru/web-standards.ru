@@ -1,6 +1,7 @@
 ---
 name: Илья Заяц
-url: http://svable.com/
+url: https://github.com/somebody32
 tags: people
+photo: true
 permalink: false
 ---
