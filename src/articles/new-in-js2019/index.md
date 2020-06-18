@@ -13,6 +13,7 @@ layout: article.njk
 tags:
     - article
     - js
+preview: 'На протяжении последних лет JavaScript развивался и получал новые фичи. Если вам любопытно, чего ждать от новой версии JavaScript, то этот пост для вас!'
 hero:
     src: images/1.jpg
 ---
