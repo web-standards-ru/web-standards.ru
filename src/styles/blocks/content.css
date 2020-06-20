@@ -311,6 +311,17 @@
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker) transparent;
+    user-select: all;
+}
+
+.content pre code:focus {
+    animation: code-select 100ms step-end forwards;
+}
+
+@keyframes code-select {
+    to {
+        user-select: text;
+    }
 }
 
 @media (min-width: 1240px) {
