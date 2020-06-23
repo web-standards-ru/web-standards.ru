@@ -135,8 +135,7 @@
     .article-card--articles {
         grid-template-rows: 1fr;
         grid-template-columns: 2fr 1fr 2fr 7fr;
-        grid-template-areas:
-        'date picture author title';
+        grid-template-areas: 'date picture author title';
         grid-gap: 32px;
         align-items: baseline;
     }
