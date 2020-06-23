@@ -66,6 +66,12 @@ layout: page.njk
                         <span class="creators__author-name" itemprop="author">
                             {{ person.name }}
                         </span>
+
+                        {% if person.nameOriginal %}
+                            <span class="creators__author-name creators__author-name--original" itemprop="author">
+                                {{ person.nameOriginal }}
+                            </span>
+                        {% endif %}
                     </a>
                 {% else %}
                     <span class="creators__author">

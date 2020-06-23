@@ -41,12 +41,23 @@
             {% set personPhoto = 'person.png' %}
         {% endif %}
 
-        <span class="
-            article-card__author
-            article-card__author{{ articleType }}
-            article-card__author{{ featuredClass }}">
-            {{ person.name }}
-        </span>
+        <p class="article-card__author">
+            <span class="
+                article-card__name
+                article-card__name{{ articleType }}
+                article-card__name{{ featuredClass }}">
+                {{ person.name }}
+            </span>
+
+            {% if person.nameOriginal %}
+                <span class="
+                    article-card__name--original
+                    article-card__name{{ articleType }}
+                    article-card__name{{ featuredClass }}">
+                    {{ person.nameOriginal }}
+                </span>
+            {% endif %}
+        </p>
 
         {% if not featured or articleCardVariant == 'related' %}
             <div class="

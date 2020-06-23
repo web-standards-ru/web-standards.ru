@@ -16,6 +16,9 @@
 }
 
 .creators__author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-right: 32px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -74,6 +77,16 @@
 
 .creators__author-name {
     color: inherit;
+}
+
+.creators__author-name--original {
+    font-size: 12px;
+}
+
+@media (min-width: 1024px) {
+    .creators__author-name--original {
+        font-size: 14px;
+    }
 }
 
 .creators__collaborators {
