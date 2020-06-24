@@ -29,7 +29,7 @@ hero:
 
 И хотя не существует универсального подхода для CSS-иллюстраций, я могу предложить несколько техник, которые помогут вам в вашем путешествии.
 
-<iframe height="500" style="width: 100%;" scrolling="no" title="Pure CSS drawers using <details> &amp; <summary> 🔨🔩🤓 #CodePenChallenge" src="https://codepen.io/jh3y/embed/preview/mLaXRe?height=500&amp;theme-id=dark&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">See the Pen <a href="https://codepen.io/jh3y/pen/mLaXRe">Pure CSS drawers using &lt;details&gt; &amp; &lt;summary&gt; 🔨🔩🤓 #CodePenChallenge</a> by Jhey (<a href="https://codepen.io/jh3y">@jh3y</a>) on <a href="https://codepen.io">CodePen</a>.</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/mLaXRe" title="Комод на чистом CSS при помощи <details> и <summary>"></iframe>
 
 ## Время и практика
 
@@ -70,10 +70,7 @@ CSS-иллюстрация требует много времени и прак
 
 И попробуйте его здесь:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Toggle PS5 CSS &quot;Tracing&quot;" src="https://codepen.io/jh3y/embed/preview/OJMNVZR?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/OJMNVZR'>Toggle PS5 CSS &quot;Tracing&quot;</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/OJMNVZR" title="Переключатель CSS-трейсинга PS5"></iframe>
 
 ## Обращайте внимание на отзывчивость
 
@@ -93,12 +90,12 @@ CSS-иллюстрация требует много времени и прак
 
 ```css
 img {
-  height: 50vmin;
-  left: 50%;
-  opacity: 0.25;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
+    height: 50vmin;
+    left: 50%;
+    opacity: 0.25;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 ```
 
@@ -108,14 +105,14 @@ img {
 
 ```css
 /**
-  * размеры изображения 742 x 769
-  * ширина — 742
-  * высота — 769
-  * желаемый размер — 50vmin
+* размеры изображения 742 x 769
+* ширина — 742
+* высота — 769
+* желаемый размер — 50vmin
 */
 :root {
-  --size: 50;
-  --unit: calc((var(--size) / 769) * 1vmin);
+    --size: 50;
+    --unit: calc((var(--size) / 769) * 1vmin);
 }
 ```
 
@@ -131,10 +128,10 @@ img {
 
 ```css
 .egg {
-  height: calc(769 * var(--unit));
-  position: relative;
-  width: calc(742 * var(--unit));
-  z-index: 2;
+    height: calc(769 * var(--unit));
+    position: relative;
+    width: calc(742 * var(--unit));
+    z-index: 2;
 }
 ```
 
@@ -142,42 +139,36 @@ img {
 
 Поизменяйте размеры этого демо, чтобы увидеть, что все пропорции сохраняются, ограничиваясь по размеру до `50vmin`.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Responsive CSS Egghead 🍳" src="https://codepen.io/jh3y/embed/preview/rNOzYJZ?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/rNOzYJZ'>Responsive CSS Egghead 🍳</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/rNOzYJZ" title="Отзывчивое CSS-яйцо"></iframe>
 
 ## Семь раз отмерь, один отрежь
 
 Следующий совет: замеряйте. Чёрт возьми, вы даже можете взять рулетку, если работаете с физическим объектом!
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Pure CSS Home Media 📺😎 (Ambilight - Try the lights! 😉)" src="https://codepen.io/jh3y/embed/preview/BaNGKPw?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/BaNGKPw'>Pure CSS Home Media 📺😎 (Ambilight - Try the lights! 😉)</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/BaNGKPw" title="Домашний кинотеатр на чистом CSS"></iframe>
 
 Это может показаться немного странным, но я замерял эту сцену. Это телевизор с полками, которые стоят в моей гостиной. Все замеры сделаны в сантиметрах. Я использовал их для получения отзывчивой единицы измерения, основанной на фактической высоте телевизора. Благодаря кастомным свойствам мы можем дать этому числу — и всем остальным — имя, которое позволит легко запомнить, для чего оно предназначено.
 
 ```css
 :root {
-  --light-switch: 15;
-  --light-switch-border: 10;
-  --light-switch-top: 15;
-  --light-switch-bottom: 25;
-  --tv-bezel: 15;
-  --tv-unit-bezel: 4;
-  --desired-height: 25vmin;
-  --one-cm: calc(var(--desired-height) / var(--tv-height));
-  --tv-width: 158.1;
-  --tv-height: 89.4;
-  --unit-height: 42;
-  --unit-width: 180;
-  --unit-top: 78.7;
-  --tv-bottom: 114.3;
-  --scaled-tv-width: calc(var(--tv-width) * var(--one-cm));
-  --scaled-tv-height: calc(var(--tv-height) * var(--one-cm));
-  --scaled-unit-width: calc(var(--unit-width) * var(--one-cm));
-  --scaled-unit-height: calc(var(--unit-height) * var(--one-cm));
+    --light-switch: 15;
+    --light-switch-border: 10;
+    --light-switch-top: 15;
+    --light-switch-bottom: 25;
+    --tv-bezel: 15;
+    --tv-unit-bezel: 4;
+    --desired-height: 25vmin;
+    --one-cm: calc(var(--desired-height) / var(--tv-height));
+    --tv-width: 158.1;
+    --tv-height: 89.4;
+    --unit-height: 42;
+    --unit-width: 180;
+    --unit-top: 78.7;
+    --tv-bottom: 114.3;
+    --scaled-tv-width: calc(var(--tv-width) * var(--one-cm));
+    --scaled-tv-height: calc(var(--tv-height) * var(--one-cm));
+    --scaled-unit-width: calc(var(--unit-width) * var(--one-cm));
+    --scaled-unit-height: calc(var(--unit-height) * var(--one-cm));
 }
 ```
 
@@ -194,8 +185,8 @@ img {
 .css-illustration *:before,
 .css-illustration:after,
 .css-illustration:before {
-  box-sizing: border-box;
-  position: absolute;
+    box-sizing: border-box;
+    position: absolute;
 }
 ```
 
@@ -203,10 +194,7 @@ img {
 
 Или поиграйте с этой песочницей:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="position: absolute playground" src="https://codepen.io/jh3y/embed/preview/pogyJbw?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/pogyJbw'>position: absolute playground</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/pogyJbw" title="Песочница для position: absolute"></iframe>
 
 ## Придерживайтесь подхода
 
@@ -220,10 +208,7 @@ img {
 
 Это приводит нас к структуре. Старайтесь избегать плоской DOM-структуры для вашей иллюстрации. Сохранение вещей атомарными позволяет проще двигать части вашей иллюстрации. Также так гораздо проще показывать или прятать части иллюстрации или даже потом анимировать их. Рассмотрим демо CSS Snorlax. Руки, ноги, голова и прочие части являются отдельными элементами. Это сделало анимирование руки гораздо проще, чем если бы я пытался держать всё вместе, так как я смог просто применить анимацию к классу `.snorlax__arm-left`.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Pure Responsive CSS Snorlax 😅" src="https://codepen.io/jh3y/embed/preview/yLYXVJa?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/yLYXVJa'>Pure Responsive CSS Snorlax 😅</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/yLYXVJa" title="Отзывчивый Снорлакс на чистом CSS"></iframe>
 
 Вот ускоренная запись того, как я делал это демо:
 
@@ -235,19 +220,13 @@ img {
 
 Посмотрим на демо CSS Jigglypuff. Нажмите на чекбокс.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Jigglypuff with body toggle" src="https://codepen.io/jh3y/embed/preview/gOaVJMB?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/gOaVJMB'>Jigglypuff with body toggle</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/gOaVJMB" title="Джиглипафф с переключателем тела"></iframe>
 
 Вот ключ к созданию искривлённых фигур! У нас есть элемент, который гораздо больше тела, к которому применяется `border-radius`. Затем мы применяем `overflow: hidden` к телу, чтобы обрезать этот лишний кусок.
 
 Как мы можем сделать обводку? Это уже немного сложнее. Но мне нравится следующий приём: используйте прозрачный элемент с толстой рамкой. Затем примените `border-radius` и обрежьте лишнее, если нужно.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Creating an outer curve with CSS" src="https://codepen.io/jh3y/embed/preview/ZEbgNKO?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/ZEbgNKO'>Creating an outer curve with CSS</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/ZEbgNKO" title="Создание обводки на CSS"></iframe>
 
 Если вы нажмёте на чекбокс, покажется элемент, который мы используем для обводки этого угла. Другой приём может заключаться в том, чтобы наложить поверх круг, совпадающий по цвету с фоном. Это нормально, пока нам не понадобится изменить цвет фона. Хорошо, если у вас есть переменная или что-то вроде для этого цвета. Но такой подход слегка сложнее поддерживать.
 
@@ -257,17 +236,11 @@ img {
 
 Вот небольшое демо, которое я собрал некоторое время назад, чтобы показать различные возможности `clip-path`.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="clip-path generator w/ React + CSS variables 😎🤓" src="https://codepen.io/jh3y/embed/preview/XqVQqa?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/XqVQqa'>clip-path generator w/ React + CSS variables 😎🤓</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/XqVQqa" title="Генератор clip-path на React и CSS-переменных"></iframe>
 
 Есть ещё такое демо, которое берёт идеи из статьи [Shapes of CSS](https://css-tricks.com/the-shapes-of-css/) и воссоздаёт фигуры при помощи `clip-path`.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="The Clips of CSS 👇" src="https://codepen.io/jh3y/embed/preview/gOpLBEa?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/gOpLBEa'>The Clips of CSS 👇</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/gOpLBEa" title="Обрезания CSS"></iframe>
 
 ## `border-radius` — ещё один друг
 
@@ -275,10 +248,7 @@ img {
 
 Поиграйте с этим демо, чтобы по-настоящему оценить мощь `border-radius`. Я пропагандирую использование процентов для значений, чтобы сохранять отзывчивость элементов.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="border-radius playground" src="https://codepen.io/jh3y/embed/preview/XWmvwYg?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/XWmvwYg'>border-radius playground</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/XWmvwYg" title="Песочница для border-radius"></iframe>
 
 ## Техники создания теней
 
@@ -286,10 +256,7 @@ img {
 
 Тени добавляют глубину и создают реалистичные ощущения. Посмотрим на это воссоздание иллюстрации Галь Шир. Галь великолепно использует тени и градиенты для создания красивой иллюстрации. Я подумал, что было бы интересно воссоздать её и добавить переключатель, который включает и выключает затенение, чтобы оценить разницу, которое оно создаёт.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="CSS cauldron with toggle shading" src="https://codepen.io/jh3y/embed/preview/OJMNyVg?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/OJMNyVg'>CSS cauldron with toggle shading</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/OJMNyVg" title="CSS-котелок с переключателем затенения"></iframe>
 
 Эффекты затенения часто создаются при помощи комбинации `box-shadow` и `background-image`.
 
@@ -297,11 +264,11 @@ img {
 
 ```css
 .cauldron {
-  background:
-    radial-gradient(25% 25% at 25% 55%, var(--rim-color), transparent),
-    radial-gradient(100% 100% at -2% 50%, transparent, transparent 92%, var(--cauldron-color)),
-    radial-gradient(100% 100% at -5% 50%, transparent, transparent 80%, var(--darkness)),
-    linear-gradient(310deg, var(--inner-rim-color) 25%, transparent), var(--cauldron-color);
+    background:
+        radial-gradient(25% 25% at 25% 55%, var(--rim-color), transparent),
+        radial-gradient(100% 100% at -2% 50%, transparent, transparent 92%, var(--cauldron-color)),
+        radial-gradient(100% 100% at -5% 50%, transparent, transparent 80%, var(--darkness)),
+        linear-gradient(310deg, var(--inner-rim-color) 25%, transparent), var(--cauldron-color);
 }
 ```
 
@@ -311,10 +278,10 @@ img {
 
 ```css
 .cauldron__opening {
-  box-shadow:
-    0 0px calc(var(--size) * 0.05px) calc(var(--size) * 0.005px) var(--rim-color) inset,
-    0 calc(var(--size) * 0.025px) 0 calc(var(--size) * 0.025px) var(--inner-rim-color) inset,
-    0 10px 20px 0px var(--darkness), 0 10px 20px -10px var(--inner-rim-color);
+    box-shadow:
+        0 0px calc(var(--size) * 0.05px) calc(var(--size) * 0.005px) var(--rim-color) inset,
+        0 calc(var(--size) * 0.025px) 0 calc(var(--size) * 0.025px) var(--inner-rim-color) inset,
+        0 10px 20px 0px var(--darkness), 0 10px 20px -10px var(--inner-rim-color);
 }
 ```
 
@@ -332,27 +299,21 @@ img {
 
 Хоть это и не необходимо, использование препроцессоров может помочь содержать ваш код в чистоте и порядке. Например, Pug позволяет писать HTML быстрее, особенно когда нужно использовать циклы для работы с группой повторяющихся элементов. А дальше мы можем [ограничить кастомные CSS-свойства](https://css-tricks.com/the-power-and-fun-of-scope-with-css-custom-properties/) таким образом, чтобы нужно было определить стили всего один раз, а затем переопределять их при необходимости.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Pure CSS &lt;table&gt; flip toggle! 😉🎉 #CodePenChallenge" src="https://codepen.io/jh3y/embed/preview/xJXvjP?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/xJXvjP'>Pure CSS &lt;table&gt; flip toggle! 😉🎉 #CodePenChallenge</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/xJXvjP" title="Стол-переключатель с кувырком на чистом CSS"></iframe>
 
 Вот другой пример, который демонстрирует структуру по принципу DRY. Цветы свёрстаны с одинаковой разметкой, но каждый имеет свой собственный класс с индексом, который используется для переопределения CSS-свойств.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Responsive CSS Leif - Animal Crossing 🐻" src="https://codepen.io/jh3y/embed/preview/eYpjXvj?height=450&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/jh3y/pen/eYpjXvj'>Responsive CSS Leif - Animal Crossing 🐻</a> by Jhey
-  (<a href='https://codepen.io/jh3y'>@jh3y</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codepen.io/jh3y/embed/preview/eYpjXvj" title="Отзывчивый Лейф из Animal Crossing"></iframe>
 
 У первого цветка такие свойства:
 
 ```css
 .flower--1 {
-  --hue: 190;
-  --x: 0;
-  --y: 0;
-  --size: 125;
-  --r: 0;
+    --hue: 190;
+    --x: 0;
+    --y: 0;
+    --size: 125;
+    --r: 0;
 }
 ```
 
@@ -360,11 +321,11 @@ img {
 
 ```css
 .flower--2 {
-  --hue: 320;
-  --x: 140;
-  --y: -75;
-  --size: 75;
-  --r: 40;
+    --hue: 320;
+    --x: 140;
+    --y: -75;
+    --size: 75;
+    --r: 40;
 }
 ```
 
