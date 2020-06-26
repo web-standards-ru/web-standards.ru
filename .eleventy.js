@@ -8,11 +8,13 @@ module.exports = function(config) {
 
     // Markdown Options
 
-    const markdownIt = require('markdown-it');
     const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
 
-    config.setLibrary('md', markdownIt({
-        html: true
+    const md = require('markdown-it')({
+        html: true,
+        highlight: function (str, lang) {
+            return `<pre><code tabindex="0"${lang ? ` class="language-${lang}"` : ''}>${md.utils.escapeHtml(str)}</code></pre>`;
+        },
     }).use(markdownItAnchor, {
         permalink: true,
         permalinkClass: 'article__heading-anchor',
@@ -22,7 +24,8 @@ module.exports = function(config) {
             'aria-label': 'Этот заголовок',
         }),
         slugify: () => 'section',
-    }));
+    });
+    config.setLibrary('md', md);
 
     config.addCollection('tagList', (collection) => {
         const set = new Set();
