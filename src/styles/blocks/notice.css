@@ -27,17 +27,17 @@
     display: inline-block;
     padding-top: 39px;
     color: black;
+    font-size: 24px;
     letter-spacing: -0.02em;
     text-decoration: none;
-    font-size: 24px;
 }
 
 @media (min-width: 630px) {
     .notice__link {
         padding-top: 0;
-        background-position: 0 50%;
-        letter-spacing: normal;
         font-size: 32px;
+        letter-spacing: normal;
+        background-position: 0 50%;
     }
 }
 
@@ -55,9 +55,9 @@
 
 .notice__link--shout {
     background-image: url('/images/shout.svg');
+    background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: auto 24px;
-    background-repeat: no-repeat;
 }
 
 @media (min-width: 630px) {

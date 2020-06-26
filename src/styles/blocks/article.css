@@ -47,8 +47,8 @@
         grid-template-columns: 1fr 1fr;
         margin: 0 0 64px;
         padding-right: 0;
-        background-color: transparent;
         color: black;
+        background-color: transparent;
     }
 }
 
@@ -277,8 +277,8 @@
 }
 
 .article__tags-item {
-    list-style: none;
     margin-right: 5px;
+    list-style: none;
 }
 
 .article__tags-item:last-child {

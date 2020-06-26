@@ -43,9 +43,9 @@
 .article-card__title {
     grid-area: title;
     margin: 0;
-    font-family: 'RF Dewi', sans-serif;
     font-weight: normal;
     font-size: 21px;
+    font-family: 'RF Dewi', sans-serif;
     line-height: 1.2;
 }
 
@@ -119,8 +119,8 @@
         grid-template-rows: 1fr;
         grid-template-columns: 2fr 1fr 2fr 7fr;
         grid-template-areas: 'date picture author title';
-        grid-gap: 32px;
         align-items: baseline;
+        grid-gap: 32px;
     }
 
     .article-card__avatar--articles {

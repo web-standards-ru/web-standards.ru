@@ -17,9 +17,9 @@
 
 .creators__author {
     margin-right: 32px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     color: var(--color-grey-darker);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 @media (min-width: 1240px) {
@@ -94,8 +94,8 @@
 }
 
 .creators__collaborators-heading {
-    font-weight: 600;
     margin-bottom: 4px;
+    font-weight: 600;
     letter-spacing: 0.01em;
 }
 
