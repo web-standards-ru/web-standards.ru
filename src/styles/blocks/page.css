@@ -6,8 +6,8 @@
 }
 
 .page {
-    font-family: 'Dewi', sans-serif;
     color: black;
+    font-family: 'Dewi', sans-serif;
     background-color: white;
 }
 
@@ -41,12 +41,12 @@
 
 .page__content {
     display: grid;
-    grid-template-columns: 100%;
     grid-template-rows:
         min-content
         1fr
         min-content
         min-content;
+    grid-template-columns: 100%;
     overflow: hidden;
     transition: transform 0.2s linear;
 }

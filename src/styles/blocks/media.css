@@ -1,8 +1,8 @@
 .media {
     margin-top: 32px;
+    margin-right: 0;
     margin-bottom: 32px;
     margin-left: 0;
-    margin-right: 0;
 }
 
 @media (min-width: 1240px) {
@@ -21,10 +21,10 @@
 .media figcaption {
     display: block;
     margin-top: 0.75em;
-    font-size: 10px;
-    line-height: 1.7;
-    font-style: normal;
     color: var(--color-grey-darker);
+    font-size: 10px;
+    font-style: normal;
+    line-height: 1.7;
 }
 
 @media (min-width: 1240px) {
@@ -66,8 +66,8 @@
     /* Картинки с обтеканием текста */
 
     .media--align-right {
-        width: var(--content-half, 50%);
         float: right;
+        width: var(--content-half, 50%);
         margin-top: 1em;
         margin-left: 1em;
     }
