@@ -348,8 +348,8 @@
     display: block;
     width: 100%;
     min-height: 400px;
-    margin: 0;
-    margin-top: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     border: 0;
 }
 
