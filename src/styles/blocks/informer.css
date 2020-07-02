@@ -2,9 +2,9 @@
 
 .informer {
     position: relative;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     white-space: nowrap;
     list-style: none;
 }
@@ -33,14 +33,14 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
     width: 20%;
+    height: 100%;
     background-image: linear-gradient(
         to left,
         white, #ffffff00
     );
-    content: '';
     pointer-events: none;
+    content: '';
 }
 
 @media (min-width: 375px) {
@@ -129,9 +129,9 @@
 
 @media (min-width: 375px) {
     .informer__meta {
-        padding-left: 40px;
         margin-right: 0;
         margin-bottom: 8px;
+        padding-left: 40px;
         font-size: 21px;
         line-height: 1.2;
         letter-spacing: 0.03em;

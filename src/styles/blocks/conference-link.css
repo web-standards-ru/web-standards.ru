@@ -4,12 +4,12 @@
     width: max-content;
     margin: 0 auto;
     padding-top: 40px;
-    text-decoration: none;
+    color: black;
     font-size: 24px;
     line-height: 1.2;
     letter-spacing: -0.02em;
     text-align: center;
-    color: black;
+    text-decoration: none;
 }
 
 @media (min-width: 900px) {
@@ -33,25 +33,25 @@
 }
 
 .conference-link::before {
-    content: '';
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
     display: block;
-    height: 24px;
     width: 40px;
+    height: 24px;
     background-image: url('/images/shout.svg');
     background-repeat: no-repeat;
     background-size: auto 24px;
+    transform: translateX(-50%);
+    content: '';
 }
 
 @media (min-width: 1250px) {
     .conference-link::before {
         position: relative;
-        display: inline-block;
         top: auto;
         left: auto;
+        display: inline-block;
         transform: none;
     }
 }

@@ -75,7 +75,7 @@
 }
 
 .archive__tags-link:not([href]) {
-    font-family: 'Dewi Expanded';
-    font-weight: 900;
     color: black;
+    font-weight: 900;
+    font-family: 'Dewi Expanded';
 }
