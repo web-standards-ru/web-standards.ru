@@ -198,7 +198,9 @@
 /* Images */
 
 .content > img,
+.content > video,
 .content figure > img,
+.content figure > video,
 .content a > img {
     display: block;
     max-width: 100%;
@@ -207,7 +209,8 @@
 }
 
 @media (min-width: 1240px) {
-    .content > img {
+    .content > img,
+    .content > video {
         margin: 60px 0 60px auto;
     }
 }
@@ -345,8 +348,8 @@
     display: block;
     width: 100%;
     min-height: 400px;
-    margin: 0;
-    margin-top: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     border: 0;
 }
 
