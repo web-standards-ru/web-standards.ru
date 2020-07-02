@@ -51,7 +51,7 @@ CSS-иллюстрация требует много времени и прак
 Это требует времени!
 
 <figure>
-    <img src="images/tweet/cup.jpg" alt="Фотореалистичное изображение белой чашки на белом столе.">
+    <img src="images/tweets/cup.jpg" alt="Фотореалистичное изображение белой чашки на белом столе.">
     <figcaption>
         <a href="https://twitter.com/jh3yy/status/1259487385554911233">CSS-иллюстрация</a>.
     </figcaption>
@@ -74,8 +74,8 @@ CSS-иллюстрация требует много времени и прак
 <figure>
     <video src="images/tweets/timelapse-1.mp4" controls></video>
     <figcaption>
-        Here’s a timelapse of creating that CSS <a href="https://twitter.com/eggheadio">@eggheadio</a> 😎
-        Tweaked the shadows with clip-path after 🛠️
+        Вот таймлапс создания логотипа <a href="https://twitter.com/eggheadio">@eggheadio</a> на CSS 😎
+        Поигрался с тенями и применил clip-path поверх 🛠️
         <a href="https://twitter.com/jh3yy/status/1256281143244136448">@jh3yy</a>
     </figcaption>
 </figure>
@@ -227,8 +227,8 @@ img {
 <figure>
     <video src="images/tweets/timelapse-2.mp4" controls></video>
     <figcaption>
-        Attempted to put together a timelapse of the CSS Snorlax we built last night
-        Amusing watching it back!
+        Попытался собрать таймлапс создания CSS Snorlax, которого мы делали вчера ночью.
+        Забавно пересматривать!
         <a href="https://twitter.com/jh3yy/status/1255207715137339396">@jh3yy</a>
     </figcaption>
 </figure>
@@ -351,9 +351,9 @@ img {
 <figure>
     <video src="images/tweets/timelapse-3.mp4" controls></video>
     <figcaption>
-        Animated responsive CSS Leif features in the latest CodePen Spark! ✨
-        For those who don't know Animal Crossing, Leif is a green-thumbed Sloth who visits your island 🌻
-        Here's a timelapse! 📹
+        Анимированный отзывчивый CSS Leif попал в последний CodePen Spark! ✨
+        Для тех, кто не знаком с Animal Crossing, Leif — ленивец с зелеными пальцами, который посещает ваш остров 🌻
+        Вот таймлапс! 📹
         <a href="https://twitter.com/jh3yy/status/1262856791873945601">@jh3yy</a>
     </figcaption>
 </figure>
