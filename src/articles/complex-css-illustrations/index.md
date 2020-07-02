@@ -1,6 +1,6 @@
 ---
 title: 'Советы по сложным CSS-иллюстрациям'
-date: 2020-06-25
+date: 2020-07-02
 author: jhey-tompkins
 source:
     title: 'Advice for Complex CSS Illustrations'
