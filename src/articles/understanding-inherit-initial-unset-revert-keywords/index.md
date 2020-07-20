@@ -111,8 +111,8 @@ div.box {
 
 ```css
 .some-class {
-   color: unset; /* будет равно `inherit` */
-   display: unset; /* будет равно `initial` */
+    color: unset; /* будет равно `inherit` */
+    display: unset; /* будет равно `initial` */
 }
 ```
 
