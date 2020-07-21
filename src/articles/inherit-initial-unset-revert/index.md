@@ -195,3 +195,14 @@ h1 {
 ## Заключение
 
 На этом всё. Надеюсь, вам понравилась эта статья, и вы чему-то научились из моего опыта.
+
+## Видео доклада по теме
+
+Я сделал короткий доклад на эту тему, смотрите видео целиком на YouTube:
+
+<figure>
+    <iframe src="https://www.youtube.com/embed/8IaKXJHRSXc" allowfullscreen></iframe>
+    <figcaption>
+        Мой доклад <a href="https://youtu.be/8IaKXJHRSXc">«Ключевые слова в CSS, которые никто не понимает»</a>.
+    </figcaption>
+</figure>
