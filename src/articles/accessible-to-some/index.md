@@ -80,7 +80,7 @@ hero:
 
 **Читать дальше:**
 
-- [Семантическая структура: области, заголовки и списки](https://webaim.org/techniques/semanticstructure/#headings)
+- [Semantic structure: regions, headings, and lists](https://webaim.org/techniques/semanticstructure/#headings)
 
 ### Управляющие подсказки
 
@@ -97,7 +97,7 @@ hero:
 
 **Читать дальше:**
 
-- [Перестаньте добавлять инструкции для скринридеров](https://adrianroselli.com/2019/10/stop-giving-control-hints-to-screen-readers.html)
+- [Stop giving control hints to screen readers](https://adrianroselli.com/2019/10/stop-giving-control-hints-to-screen-readers.html)
 
 ### Другой язык
 
@@ -126,7 +126,7 @@ hero:
 
 **Читать дальше:**
 
-- [Об использовании атрибута `lang`](https://adrianroselli.com/2015/01/on-use-of-lang-attribute.html)
+- [On use of the `lang` attribute](https://adrianroselli.com/2015/01/on-use-of-lang-attribute.html)
 
 ### Изображения
 
@@ -143,7 +143,7 @@ hero:
 
 **Читать дальше:**
 
-- [Доступность изображений, когда она важнее всего](https://www.smashingmagazine.com/2020/05/accessible-images/)
+- [Accessible images for when they matter most](https://www.smashingmagazine.com/2020/05/accessible-images/)
 
 ### Пустые ссылки
 
@@ -159,8 +159,8 @@ hero:
 
 **Читать дальше:**
 
-- [Удобство использования иконок](https://www.nngroup.com/articles/icon-usability/)
-- [Дизайн-принципы для уменьшения когнитивной нагрузки](https://jonyablonski.com/articles/2015/design-principles-for-reducing-cognitive-load/)
+- [Icon usability](https://www.nngroup.com/articles/icon-usability/)
+- [Design principles for reducing cognitive load](https://jonyablonski.com/articles/2015/design-principles-for-reducing-cognitive-load/)
 
 ### Неправильный порядок
 
@@ -178,8 +178,8 @@ hero:
 
 **Читать дальше:**
 
-- [Разрыв между флексбоксами и клавиатурной навигацией](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Порядок кода в HTML против порядка отображения в CSS](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)
+- [Flexbox & the keyboard navigation disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [HTML source order vs CSS display order](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)
 
 ### Скрытый контент
 
@@ -197,7 +197,7 @@ hero:
 
 **Читать дальше:**
 
-- [Челюсти HTML5-доступности: hidden и aria-hidden](https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)
+- [HTML5 accessibility chops: hidden and aria-hidden](https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)
 
 ### Нажмите здесь
 
@@ -215,7 +215,7 @@ hero:
 
 **Читать дальше:**
 
-- [Ссылки и гипертекст](https://webaim.org/techniques/hypertext/)
+- [Links and hypertext](https://webaim.org/techniques/hypertext/)
 
 ### Чрезмерная вложенность
 
@@ -257,7 +257,7 @@ hero:
 
 **Читать дальше:**
 
-- [#10 `<section>` не замена для `<div>`](https://www.htmhell.dev/10-section-is-no-replacement-for-div/)
+- [#10 `<section>` is no replacement for `<div>`](https://www.htmhell.dev/10-section-is-no-replacement-for-div/)
 
 ### Формы
 
@@ -293,7 +293,7 @@ hero:
 
 **Читать дальше:**
 
-- [Просто используйте кнопку — A11ycasts #05](https://youtu.be/CZGqnp06DnI)
+- [Just use button — A11ycasts #05](https://youtu.be/CZGqnp06DnI)
 
 ## Заключение
 
