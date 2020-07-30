@@ -2,13 +2,13 @@ const slugify = (s) => encodeURIComponent(String(s).trim().toLowerCase().replace
 
 const position = {
     false: 'push',
-    true: 'unshift',
-}
+    true: 'unshift'
+};
 
 const hasProp = Object.prototype.hasOwnProperty;
 
 const permalinkHref = slug => `#${slug}`;
-const permalinkAttrs = slug => ({});
+const permalinkAttrs = () => ({});
 
 const renderPermalink = (slug, opts, state, idx) => {
     const space = () => Object.assign(new state.Token('text', '', 0), { content: ' ' });
@@ -19,10 +19,10 @@ const renderPermalink = (slug, opts, state, idx) => {
                 ['class', opts.permalinkClass],
                 ['href', opts.permalinkHref(slug, state)],
                 ...Object.entries(opts.permalinkAttrs(slug, state))
-            ],
+            ]
         }),
         Object.assign(new state.Token('html_block', '', 0), { content: opts.permalinkSymbol }),
-        new state.Token('link_close', 'a', -1),
+        new state.Token('link_close', 'a', -1)
     ];
 
     // `push` or `unshift` according to position option.
@@ -31,7 +31,7 @@ const renderPermalink = (slug, opts, state, idx) => {
         linkTokens[position[!opts.permalinkBefore]](space());
     }
     state.tokens[idx + 1].children[position[opts.permalinkBefore]](...linkTokens);
-}
+};
 
 const uniqueSlug = (slug, slugs) => {
     let uniq = `${slug}-1`;
@@ -39,7 +39,7 @@ const uniqueSlug = (slug, slugs) => {
     while (hasProp.call(slugs, uniq)) uniq = `${slug}-${i++}`;
     slugs[uniq] = true;
     return uniq;
-}
+};
 
 const isLevelSelectedNumber = selection => level => level >= selection;
 const isLevelSelectedArray = selection => level => selection.includes(level);
@@ -67,7 +67,7 @@ const anchor = (md, opts) => {
 
                 let slug = token.attrGet('id');
 
-                if (slug == null) {
+                if (slug === null) {
                     slug = uniqueSlug(opts.slugify(title), slugs);
                     token.attrPush(['id', slug]);
                 }
@@ -93,7 +93,7 @@ anchor.defaults = {
     permalinkSymbol: '¶',
     permalinkBefore: false,
     permalinkHref,
-    permalinkAttrs,
-}
+    permalinkAttrs
+};
 
 module.exports = anchor;

@@ -15,7 +15,7 @@ gulp.task('styles', () => {
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
             require('autoprefixer'),
-            require('postcss-csso'),
+            require('postcss-csso')
         ]))
         .pipe(gulp.dest('dist/styles'));
 });
@@ -38,7 +38,7 @@ gulp.task('clean', () => {
         'dist/styles/**/*',
         '!dist/styles/{styles,print}.css',
         'dist/scripts/**/*',
-        '!dist/scripts/scripts.js',
+        '!dist/scripts/scripts.js'
     ]);
 });
 
@@ -46,14 +46,14 @@ gulp.task('clean', () => {
 
 gulp.task('cache:hash', () => {
     return gulp.src([
-            'dist/fonts/*.woff2',
-            'dist/images/**/*.{svg,png,jpg}',
-            'dist/scripts/*.js',
-            'dist/styles/*.css',
-            'dist/manifest.json'
-        ], {
-            base: 'dist'
-        })
+        'dist/fonts/*.woff2',
+        'dist/images/**/*.{svg,png,jpg}',
+        'dist/scripts/*.js',
+        'dist/styles/*.css',
+        'dist/manifest.json'
+    ], {
+        base: 'dist'
+    })
         .pipe(paths(del))
         .pipe(rev())
         .pipe(gulp.dest('dist'))
@@ -63,9 +63,9 @@ gulp.task('cache:hash', () => {
 
 gulp.task('cache:replace', () => {
     return gulp.src([
-            'dist/**/*.{html,css}',
-            'dist/manifest-*.json',
-        ])
+        'dist/**/*.{html,css}',
+        'dist/manifest-*.json'
+    ])
         .pipe(revRewrite({
             manifest:
                 gulp.src('dist/rev.json').pipe(paths(del))
@@ -75,7 +75,7 @@ gulp.task('cache:replace', () => {
 
 gulp.task('cache', gulp.series(
     'cache:hash',
-    'cache:replace',
+    'cache:replace'
 ));
 
 
