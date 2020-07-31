@@ -7,5 +7,5 @@ module.exports = {
         'feed': 'https://web-standards.ru/articles/feed/',
         'social': 'https://web-standards.ru/images/social.png'
     },
-    'buildYear': new Date().getFullYear()
+    'buildYear': new Date().getFullYear(),
 };

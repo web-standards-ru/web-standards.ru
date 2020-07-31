@@ -2,7 +2,7 @@ const slugify = (s) => encodeURIComponent(String(s).trim().toLowerCase().replace
 
 const position = {
     false: 'push',
-    true: 'unshift'
+    true: 'unshift',
 };
 
 const hasProp = Object.prototype.hasOwnProperty;
@@ -19,10 +19,10 @@ const renderPermalink = (slug, opts, state, idx) => {
                 ['class', opts.permalinkClass],
                 ['href', opts.permalinkHref(slug, state)],
                 ...Object.entries(opts.permalinkAttrs(slug, state))
-            ]
+            ],
         }),
         Object.assign(new state.Token('html_block', '', 0), { content: opts.permalinkSymbol }),
-        new state.Token('link_close', 'a', -1)
+        new state.Token('link_close', 'a', -1),
     ];
 
     // `push` or `unshift` according to position option.
@@ -67,7 +67,7 @@ const anchor = (md, opts) => {
 
                 let slug = token.attrGet('id');
 
-                if (slug === null) {
+                if (slug == null) {
                     slug = uniqueSlug(opts.slugify(title), slugs);
                     token.attrPush(['id', slug]);
                 }
@@ -93,7 +93,7 @@ anchor.defaults = {
     permalinkSymbol: '¶',
     permalinkBefore: false,
     permalinkHref,
-    permalinkAttrs
+    permalinkAttrs,
 };
 
 module.exports = anchor;

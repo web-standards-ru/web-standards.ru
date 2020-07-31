@@ -15,7 +15,7 @@ gulp.task('styles', () => {
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
             require('autoprefixer'),
-            require('postcss-csso')
+            require('postcss-csso'),
         ]))
         .pipe(gulp.dest('dist/styles'));
 });
@@ -38,7 +38,7 @@ gulp.task('clean', () => {
         'dist/styles/**/*',
         '!dist/styles/{styles,print}.css',
         'dist/scripts/**/*',
-        '!dist/scripts/scripts.js'
+        '!dist/scripts/scripts.js',
     ]);
 });
 
@@ -64,7 +64,7 @@ gulp.task('cache:hash', () => {
 gulp.task('cache:replace', () => {
     return gulp.src([
         'dist/**/*.{html,css}',
-        'dist/manifest-*.json'
+        'dist/manifest-*.json',
     ])
         .pipe(revRewrite({
             manifest:
@@ -75,7 +75,7 @@ gulp.task('cache:replace', () => {
 
 gulp.task('cache', gulp.series(
     'cache:hash',
-    'cache:replace'
+    'cache:replace',
 ));
 
 
