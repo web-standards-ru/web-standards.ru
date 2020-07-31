@@ -16,7 +16,7 @@ gulp.task('styles', () => {
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
             require('autoprefixer'),
-            require('postcss-csso')
+            require('postcss-csso'),
         ]))
         .pipe(gulp.dest('dist/styles'));
 });
@@ -39,7 +39,7 @@ gulp.task('clean', () => {
         'dist/styles/**/*',
         '!dist/styles/{styles,print}.css',
         'dist/scripts/**/*',
-        '!dist/scripts/scripts.js'
+        '!dist/scripts/scripts.js',
     ]);
 });
 
