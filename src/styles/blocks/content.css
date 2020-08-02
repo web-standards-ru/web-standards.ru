@@ -303,7 +303,7 @@
     background-image: linear-gradient(
         to left,
         var(--color-blue-lightest) 0%,
-        var(--color-blue-lightest-transparent) 100%
+        var(--color-blue-lightest-0a) 100%
     );
     content: '';
     pointer-events: none;
@@ -314,7 +314,7 @@
     padding: 16px 0;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-green-darker-transparent) transparent;
+    scrollbar-color: var(--color-green-darker-50a) transparent;
     user-select: all;
 }
 
@@ -339,7 +339,7 @@
 }
 
 .content pre code::-webkit-scrollbar-thumb {
-    background-color: var(--color-green-darker-transparent);
+    background-color: var(--color-green-darker-50a);
     border-top: 4px solid var(--color-green-light);
 }
 
