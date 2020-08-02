@@ -69,7 +69,7 @@
             </ul>
         </nav>
     </div>
-    <div class="page__content{% if isIndex %} page__content--inner{% endif %}">
+    <div class="page__content{% if isIndex != true %} page__content--inner{% endif %}">
         {{ content | safe }}
     </div>
     <script src="/scripts/scripts.js"></script>
