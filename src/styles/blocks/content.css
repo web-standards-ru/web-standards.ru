@@ -368,14 +368,14 @@
 
 .content > p:first-of-type::first-letter {
     float: left;
-    margin-top: -5px;
+    margin-top: 0.13em;
     margin-left: -5px;
     padding-right: 15px;
     color: var(--color-grey-medium);
     font-weight: normal;
     font-size: 3.5em;
     font-family: 'Dewi Expanded', sans-serif;
-    line-height: 1;
+    line-height: 0.65;
 }
 
 /* Tables */
