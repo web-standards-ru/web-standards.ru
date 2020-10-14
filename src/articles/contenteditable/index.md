@@ -130,16 +130,50 @@ preview: 'Мы уже давно используем различные тех
 
 Поддержка атрибута `contenteditable` браузерами на удивление хороша:
 
-| Браузер           | Версия |
-| ----------------- | ------ |
-| Chrome            | 4.0+   |
-| Safari            | 3.1+   |
-| Mobile Safari     | 5.0+   |
-| Firefox           | 3.5+   |
-| Opera             | 9.0+   |
-| Opera Mini/Mobile | Нет    |
-| Internet Explorer | 5.5+   |
-| Android           | 3.0+   |
+<div class="content__table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Браузер</th>
+                <th>Версия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chrome</td>
+                <td>4.0+</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>3.1+</td>
+            </tr>
+            <tr>
+                <td>Mobile Safari</td>
+                <td>5.0+</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>3.5+</td>
+            </tr>
+            <tr>
+                <td>Opera</td>
+                <td>9.0+</td>
+            </tr>
+            <tr>
+                <td>Opera Mini/Mobile</td>
+                <td>Нет</td>
+            </tr>
+            <tr>
+                <td>Internet Explorer</td>
+                <td>5.5+</td>
+            </tr>
+            <tr>
+                <td>Android</td>
+                <td>3.0+</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 Поддержка браузерами свойства `contenteditable`.
 

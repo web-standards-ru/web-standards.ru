@@ -68,14 +68,77 @@ ul li:nth-child(5) {
 
 На SitePoint есть хороший справочник [с милой табличкой](http://reference.sitepoint.com/css/understandingnthchildexpressions), которую я бесстыдно опубликую здесь:
 
-| n | 2n+1 | 4n+1 | 4n+4 | 4n | 5n-2 | -n+3 |
-| - | ---- | ---- | ---- | -- | ---- | ---- |
-| 0 | 1    | 1    | 4    | –  | –    | 3    |
-| 1 | 3    | 5    | 8    | 4  | 3    | 2    |
-| 2 | 5    | 9    | 1    | 8  | 8    | 1    |
-| 3 | 7    | 1    | 1    | 1  | 1    | –    |
-| 4 | 9    | 17   | 20   | 16 | 18   | –    |
-| 5 | 11   | 21   | 24   | 20 | 23   | –    |
+<div class="content__table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>n</th>
+                <th>2n+1</th>
+                <th>4n+1</th>
+                <th>4n+4</th>
+                <th>4n</th>
+                <th>5n-2</th>
+                <th>-n+3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>4</td>
+                <td>–</td>
+                <td>–</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>5</td>
+                <td>8</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>9</td>
+                <td>1</td>
+                <td>8</td>
+                <td>8</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>7</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>–</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>9</td>
+                <td>17</td>
+                <td>20</td>
+                <td>16</td>
+                <td>18</td>
+                <td>–</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>11</td>
+                <td>21</td>
+                <td>24</td>
+                <td>20</td>
+                <td>23</td>
+                <td>–</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ## Поддержка браузерами
 

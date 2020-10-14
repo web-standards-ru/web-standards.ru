@@ -27,6 +27,7 @@
     "gulp-terser": "^1.4.0",
     "html-minifier": "^4.0.0",
     "hyphen": "^1.6.2",
+    "markdown-it-multimd-table": "^4.0.3",
     "node-w3c-validator": "^1.6.4",
     "postcss": "^8.1.1",
     "postcss-color-hex-alpha": "^6.0.0",
