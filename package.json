@@ -60,7 +60,9 @@
   },
   "stylelint": {
     "extends": "./stylelint.config.rational-order.js",
-    "plugins": "stylelint-order",
+    "plugins": [
+      "stylelint-order"
+    ],
     "rules": {
       "color-no-invalid-hex": true,
       "font-family-no-duplicate-names": true,
@@ -71,7 +73,9 @@
       "property-no-unknown": [
         true,
         {
-          "ignoreProperties": "print-color-adjust"
+          "ignoreProperties": [
+            "print-color-adjust"
+          ]
         }
       ],
       "declaration-block-no-shorthand-property-overrides": true,
@@ -90,7 +94,7 @@
       "number-max-precision": 2,
       "declaration-block-single-line-max-declarations": 1,
       "selector-max-empty-lines": 0,
-      "comment-word-blacklist": [
+      "comment-word-disallowed-list": [
         "todo"
       ],
       "color-hex-case": "lower",
@@ -132,10 +136,10 @@
       "declaration-block-semicolon-space-before": "never",
       "declaration-block-trailing-semicolon": "always",
       "declaration-empty-line-before": "never",
-      "declaration-property-unit-whitelist": {
+      "declaration-property-unit-allowed-list": {
         "line-height": []
       },
-      "declaration-property-value-blacklist": {
+      "declaration-property-value-disallowed-list": {
         "/.*/": [
           "/rgb/",
           "/rgba/"
