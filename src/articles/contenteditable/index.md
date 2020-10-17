@@ -27,7 +27,7 @@ preview: 'Мы уже давно используем различные тех
     <footer>
         <cite><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable">WHATWG</a>.</cite>
     </footer>
-<blockquote>
+</blockquote>
 
 В основном, атрибут `contenteditable` должен был обеспечивать работу WYSIWYG-редакторов. Скорее всего, вы встречали его в инструментах подобных Symphony или на сайтах вроде Flickr, где вы начинаете редактировать материалы, просто кликнув в определенную область.
 
@@ -75,6 +75,7 @@ preview: 'Мы уже давно используем различные тех
 
     #example-one[contenteditable="true"] {
         padding: 10px;
+        overflow-x: auto;
         outline: 3px dashed #cccccc;
     }
 
@@ -113,6 +114,7 @@ preview: 'Мы уже давно используем различные тех
 
     #example-two[contenteditable="true"] {
         padding: 10px;
+        overflow-x: auto;
         outline: 3px dashed #cccccc;
     }
 
@@ -158,7 +160,7 @@ preview: 'Мы уже давно используем различные тех
     <footer>
         <cite><a href="https://remysharp.com/">Реми Шарп</a>.</cite>
     </footer>
-<blockquote>
+</blockquote>
 
 ## Заключение
 
