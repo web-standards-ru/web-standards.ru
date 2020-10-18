@@ -88,6 +88,12 @@
     }
 }
 
+@media (min-width: 1000px) {
+    .footer__design {
+        padding: 0 0 0 90px;
+    }
+}
+
 .footer__design-caption {
     display: block;
 }
@@ -130,5 +136,11 @@
 
     .footer__page:last-child {
         margin: 0 0 8px 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer__pages {
+        padding: 0 0 0 90px;
     }
 }
