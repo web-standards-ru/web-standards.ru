@@ -1,6 +1,6 @@
 ---
-title: ''
-date:
+title: 'Focus management and inert'
+date: 2020-10-19
 author: eric-bailey
 source:
     title: 'Focus management and inert'
@@ -8,11 +8,12 @@ source:
 translators:
     -
 editors:
-    -
+    - vadim-makeev
 layout: article.njk
 tags:
     - article
-
+    - html
+    - a11y
 preview: ''
 featured: true
 ---
