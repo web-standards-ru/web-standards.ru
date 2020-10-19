@@ -133,22 +133,22 @@ Discoverability can be suppressed via a judicious application of [`aria-hidden="
 
 ```html
 <body>
-  <div
-    aria-labelledby="modal-title"
-    class="c-modal"
-    id="modal"
-    role="dialog"
-    tabindex="-1">
-    <div role="document">
-      <h2 id="modal-title">Save changes?</h2>
-      <p>The changes you have made will be lost if you do not save them.<p>
-      <button type="button">Save</button>
-      <button type="button">Discard</button>
+    <div
+        aria-labelledby="modal-title"
+        class="c-modal"
+        id="modal"
+        role="dialog"
+        tabindex="-1">
+        <div role="document">
+            <h2 id="modal-title">Save changes?</h2>
+            <p>The changes you have made will be lost if you do not save them.<p>
+            <button type="button">Save</button>
+            <button type="button">Discard</button>
+        </div>
     </div>
-  </div>
-  <main inert>
-    <!-- ... -->
-  </main>
+    <main inert>
+        <!-- ... -->
+    </main>
 </body>
 ```
 
