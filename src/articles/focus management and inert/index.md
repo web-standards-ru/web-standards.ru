@@ -8,7 +8,7 @@ source:
 translators:
     -
 editors:
-    -
+    - ***
 layout: article.njk
 tags:
     - article
@@ -17,35 +17,38 @@ preview: ''
 featured: true
 ---
 
-Many forms of assistive technology use keyboard navigation to understand and take action on screen content. One way of navigating is via the Tab key. You may already be familiar with this way of navigating if you use it to quickly jump from input to input on a form without having to reach for your mouse or trackpad.
+Множество вспомогательных технологий подразумевает использование навигации с клавиатуры в целях восприятия контента и взаимодействия с ним. Один из способов подобной навигации - клавиша Tab. Вы можете быть знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
 
-Tab will jump to interactive elements in the order they show up in the DOM. This is one of the reasons why it is so important that the order of your source code matches the visual hierarchy of your design.
+Tab будет перемещаться по интерактивным элементам в том порядке, в котором они отображаются в DOM. Это одна из причин, почему так важно, чтобы порядок исходного кода соответствовал визуальной иерархии вашего дизайна.
 
-The list of interactive elements that are tabbable is:
+Список интерактивных элементов, по которым можно пройтись клавишей Tab:
 
-Anchors, when the href attribute is present,
-<button>,
-<input> and <textarea>, with an accompanying label,
-<select>,
-<details>,
-<audio> and <video> when controls are present,
-<object>, depending on how it is used,
-any element with scroll overflow in Firefox,
-any element with the contenteditable attribute applied to it, and
-any element with the tabindex attribute applied to it (more on this one in a bit).
-An interactive element gains focus when:
+- [Якорные ссылки](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), с заполненным атрибутом `href`
+- [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+- [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) и [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), с сопутствующим им [`<label>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
+- [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+- [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+- [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) и [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) при наличии контроллов
+- [`<object>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object), в зависимости от того, как он используется
+- любой элемент с `overflow: scroll;` в Firefox
+- любой элемент с атрибутом `contenteditable`
+- любой элемент с атрибутом `tabindex` (о нем чуть позже)
 
-It has been navigated to via the Tab key,
-it is clicked on, following an anchor that links to another focusable element,
-or focus is programmatically set through element.focus() in JavaScript.
-Focus is analogous to hovering over an element with your mouse cursor, in that you’re identifying the thing you want to activate. It’s also why visually obvious focus styles are so important.
+Интерактивный элемент в состоянии фокуса, когда:
 
+- пользователь использует клавишу Tab
+- на него нажимают, переходя по якорной ссылке, ведущей к другому фокусируемому элементу
+- фокус задан с помощью element.focus() в JavaScript
 
+Состояние фокуса похоже на hover, поскольку таким образом вы определяете элемент, с которым хотите провзаимодействовать. Поэтому так важно задавать визуально очевидные стили для фокуса.
 
-Focus management
-Focus management is the practice of coordinating what can and cannot receive focus events. It is one of the trickier things to do in front-end development, but it is important for making websites and web apps accessible.
+## Управление фокусом
 
-Good practices for focus management
+Управление фокусом - это практика определения того, что может получать событие фокуса, а что нет.
+Это одна из самых сложных вещей при разработке веб-интерфейсов, но она важна для доступности сайтов и приложений.
+
+###
+
 99% of the time, you want to leave focus order alone. I cannot stress this enough.
 
 Focus will just work for you with no additional effort required, provided you’re using the <button> element for buttons, the anchor element for links, the <input> element for user input, etc.
