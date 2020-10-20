@@ -18,9 +18,9 @@ preview: ''
 featured: true
 ---
 
-Множество вспомогательных технологий  используют навигацию с клавиатуры в целях восприятия и взаимодействия с контентом. Один из способов подобной навигации - клавиша Tab. Вы знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
+Множество вспомогательных технологий  используют навигацию с клавиатуры в целях восприятия и взаимодействия с контентом. Один из способов подобной навигации - клавиша Tab. Должно быть вы знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
 
-Tab будет перемещаться по интерактивным элементам в том порядке, в котором они отображаются в DOM. Это одна из причин, почему так важно, чтобы порядок исходного кода соответствовал визуальной иерархии вашего дизайна.
+Tab будет перемещаться по интерактивным элементам в том порядке, в котором они отображаются в DOM. Вот почему так важно, чтобы порядок исходного кода соответствовал визуальной иерархии вашего дизайна.
 
 Список [интерактивных элементов](https://www.w3.org/TR/html52/dom.html%23interactive-content), по которым можно пройтись клавишей Tab:
 
@@ -38,7 +38,7 @@ Tab будет перемещаться по интерактивным элем
 
 Интерактивный элемент получает состояние фокуса, когда:
 
-- пользователь использует клавишу Tab
+- пользователь нажимает клавишу Tab
 - на него кликают, переходя по ссылке  <!--Может, имеется ввиду кликают по ссылке просто? -->
 - фокус задан с помощью `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` в JavaScript.
 
@@ -50,42 +50,45 @@ Tab будет перемещаться по интерактивным элем
 
 ## Управление фокусом
 
-<!-- Управление фокусом - это практика определения того, что может получать событие фокуса, а что нет.
-Это одна из самых сложных вещей при разработке веб-интерфейсов, но она важна для доступности сайтов и приложений. -->
+Управлять фокусом значит определять какие элементы могут его получать, а какие нет.
+При разработке веб-интерфейсов это один из самых сложных аспектов, но он важен для доступности сайтов и приложений.
 
-### Good practices for focus management
+### Полезные практики управления фокусом
 
-**99% of the time, you want to leave focus order alone.** I cannot stress this enough.
+**Оставьте фокус в покое.** Я не знаю как еще это подчеркнуть. <!-- Предлагаю убрать тут предложение после заголовка-->
 
-Focus will just work for you with no additional effort required, provided you’re using the `<button>` element for buttons, the anchor element for links, the `<input>` element for user input, etc.
+Состояние фокуса будет работать без дополнительных услилий, если вы используете `<button>` для кнопок, `<a>` для ссылок, `<input>` для полей форм и т.д
 
-There are rare cases where you might want to apply focus to something out of focus order, or make something that typically can’t receive focus events be focusable. Here are some guidelines for how to go about it in an accessible, intuitive to navigate way:
+В редких случаях необходимо прописать фокус элементам, не предназначенным для этого. Вот некоторые рекомендации относительно того, как реализовать это доступно и интуитивно понятно для пользователя.
 
-✅ **Do: learn about the `tabindex` attribute**
+✅ **Следует: Узнать побольше про атрибут `tabindex`**
 
-`tabindex` allows an element to be focused. It accepts an integer as a value. Its behavior changes depending on what integer is used.
+`tabindex` делает элементы фокусируемыми. В качестве значения он принимает число, в зависимости от которого меняется поведение фокуса.
 
-❌ **Don’t: Apply `tabindex="0"` to things that don’t need it**
+❌ **Не следует: Устанавливать `tabindex='0'` там, где это не надо**
 
-Interactive elements  that can receive keyboard focus (such as the `<button>` element) don’t need to have the `tabindex` attribute applied to them.
+Нет необходимости устанавливать  `tabindex` интерактивным элементам, которые могут получать фокус с клавиатуры(такие, как, например, `<button>`)
 
-Additionally, you don’t need to declare `tabindex` on non-interactive elements to ensure that they can be read by assistive technology (in fact, this is a WCAG failure if no role and accessible name is present). Doing so actually creates [an unexpected and difficult to navigate experience](https://adrianroselli.com/2019/02/uncanny-a11y.html#Tabindex) for a person who uses assistive technology — they have other, expected ways to read this content.
+Кроме того, вам не нужно прописывать `tabindex` неинтерактивным элементам в целях возможности их прочтения вспомогательными устройствами <!--технологиями --> (на самом деле,  отсутствие `role` и доступного имени является ошибкой WCAG). Это может повлечь  [нежелательный для пользователя опыт](https://adrianroselli.com/2019/02/uncanny-a11y.html#Tabindex) использования вспомогательных устройств — у которых попросту есть свои собственные способы чтения контента.
 
-#### ✅ Do: Use `tabindex="-1"` for focusing with JavaScript
+#### ✅ Следует: Устанавливать `tabindex="-1"` для фокуса с помощью JavaScript
 
-`tabindex="-1"` is used to create accessible interactive widgets with JavaScript.
+`tabindex="-1"` используется для создания доступных интерактивных виджетов посредством JS.
 
-A declaration of `tabindex="-1"` will make an element focusable via JavaScript or click/tap. It will not, however, let it be navigated to via the Tab key.
+Прописав `tabindex="-1"` вы сделаете элемент фокусируемым для JS, а также по клику/нажатию пальцем, но недоступным через клавишу Tab.
 
-#### ❌ Don’t: Use a positive integer as a `tabindex` value
+#### ❌ Не следует: Использовать положительное значение `tabindex`
 
-This is a serious antipattern. Using a positive integer will override the expected tab order, and create a confusing and disorienting experience for the person trying to navigate your content.
+Это антипаттерн. Установив положительное значение `tabindex` вы переопределите ожидемый порядок элементов для фокуса через Tab и запутаете пользователя.
 
-One instance of this is bad enough. Multiple declarations is a total nightmare. Seriously: don’t do it.
+Сделать так один раз - уже плохо, несколько - полный кошмар. Серьезно, не надо так.
 
-#### ❌ Don’t: Create a manual focus order
+#### ❌ Не следует: создавать собственный порядок фокусировки
 
-Interactive elements can be tabbed to just by virtue of being used. You don’t need to set a series of `tabindex` attributes with incrementing values on every interactive element in the order you think the person navigating your site should use. You’ll let the order of the elements in the DOM do this for you instead.
+Интерактивные элементы можно вкладывать в друг друга только в соответствии с тем, как они следуют друг за другом.
+<!-- Вот тут совсем не понял. Оригинал - Interactive elements can be tabbed to just by virtue of being used. -->
+
+Не следует создавать множество `tabindex` с инкрименируемым каждым раз значением для каждого последующего элемента, в соответствии с вашим представлением о том, как пользователь должен читать ваш сайт. Позвольте DOM сделать это за вас.
 
 ## Focus trapping
 
