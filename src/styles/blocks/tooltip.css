@@ -35,9 +35,9 @@
 }
 
 .tooltip--error {
-    background: green;
+    background: red;
 }
 
 .tooltip--error::after {
-    border-top-color: green;
+    border-top-color: red;
 }
