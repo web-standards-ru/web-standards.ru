@@ -17,7 +17,7 @@ module.exports = function(config) {
         },
     }).use(markdownItAnchor, {
         permalink: true,
-        permalinkClass: 'article__heading-anchor',
+        permalinkClass: 'article__copy-button',
         permalinkSymbol: '',
         permalinkSpace: false,
         permalinkAttrs: () => ({

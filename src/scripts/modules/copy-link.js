@@ -1,4 +1,4 @@
-const buttons = [...document.querySelectorAll('.article__heading-anchor')];
+const buttons = [...document.querySelectorAll('.article__copy-button')];
 
 let timeout
 

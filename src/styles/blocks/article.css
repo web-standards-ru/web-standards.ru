@@ -183,10 +183,6 @@
     border: 0;
     cursor: pointer;
     appearance: none;
-
-    &:focus {
-        outline: 0;
-    }
 }
 
 .article__tooltip {
