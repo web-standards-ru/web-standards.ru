@@ -18,36 +18,40 @@ preview: ''
 featured: true
 ---
 
-Many forms of assistive technology use keyboard navigation to understand and take action on screen content. One way of navigating is via the Tab key. You may already be familiar with this way of navigating if you use it to quickly jump from input to input on a form without having to reach for your mouse or trackpad.
+Множество вспомогательных технологий  используют навигацию с клавиатуры в целях восприятия и взаимодействия с контентом. Один из способов подобной навигации - клавиша Tab. Вы знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
 
-Tab will jump to interactive elements in the order they show up in the DOM. This is one of the reasons why it is so important that the order of your source code matches the visual hierarchy of your design.
+Tab будет перемещаться по интерактивным элементам в том порядке, в котором они отображаются в DOM. Это одна из причин, почему так важно, чтобы порядок исходного кода соответствовал визуальной иерархии вашего дизайна.
 
-The list of [interactive elements](https://www.w3.org/TR/html52/dom.html%23interactive-content) that are tabbable is:
+Список [интерактивных элементов](https://www.w3.org/TR/html52/dom.html%23interactive-content), по которым можно пройтись клавишей Tab:
 
-- [Anchors](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), when the `href` attribute is present,
+
+- [Ссылки](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), с заполненным атрибутом `href`
 - `[<button>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)`,
-- `[<input>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)` and `[<textarea>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)`, with an accompanying [label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label),
+- `[<input>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)` и `[<textarea>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)`, с сопутствующим им [label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label),
 - `[<select>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)`,
 - `[<details>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)`,
-- `[<audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)` and `[<video>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)` when controls are present,
-- `[<object>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)`, depending on how it is used,
-- any element with scroll overflow in Firefox,
-- any element with the [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute applied to it, and
-- any element with the `[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)` attribute applied to it (more on this one in a bit).
+- `[<audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)` и `[<video>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)` при наличии контроллов,
+- `[<object>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)`, в зависимости от того, как он используется,
+- любой элемент с `overflow: scroll;` в Firefox,
+- любой элемент с атрибутом [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable), и
+- любой элемент с установленным `[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)` (о нем чуть позже).
 
-An interactive element gains focus when:
+Интерактивный элемент получает состояние фокуса, когда:
 
-- It has been navigated to via the Tab key,
-- it is clicked on, following an anchor that links to another focusable element,
-- or focus is programmatically set through `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` in JavaScript.
+- пользователь использует клавишу Tab
+- на него кликают, переходя по ссылке  <!--Может, имеется ввиду кликают по ссылке просто? -->
+- фокус задан с помощью `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` в JavaScript.
 
-Focus is analogous to hovering over an element with your mouse cursor, in that you’re identifying the thing you want to activate. It’s also [why visually obvious focus styles are so important](https://css-tricks.com/focusing-on-focus-styles/).
+Фокус похож на hover, поскольку так мы определяем элемент, с которым хотим провзаимодействовать. Вот почему [визуально очевидные стили для фокуса](https://css-tricks.com/focusing-on-focus-styles/) имеют огромное значение.
 
-Focus indication moving through a homepage wireframe. It starts on the logo, moves to products, then services, then careers, blog, contact, and stops on a Learn more button.
+<!-- Тут должно быть видео -->
 
-## Focus management
+Фокус следует по домашней странице. Начиная с логотипа, затем к товарам, услугам, вакансиям, блогу, контактам и останавливается на кнопке Learn more.
 
-Focus management is the practice of coordinating what can and cannot receive focus events. It is one of the trickier things to do in front-end development, but it is important for making websites and web apps accessible.
+## Управление фокусом
+
+<!-- Управление фокусом - это практика определения того, что может получать событие фокуса, а что нет.
+Это одна из самых сложных вещей при разработке веб-интерфейсов, но она важна для доступности сайтов и приложений. -->
 
 ### Good practices for focus management
 
