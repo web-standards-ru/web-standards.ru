@@ -6,6 +6,9 @@ const del = require('del');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const paths = require('vinyl-paths');
+const buffer = require('vinyl-buffer');
+const source = require('vinyl-source-stream');
+const rollup = require('rollup-stream');
 
 // Styles
 
@@ -22,14 +25,20 @@ gulp.task('styles', () => {
 
 // Scripts
 
-gulp.task('scripts', () => {
-    return gulp.src('dist/scripts/scripts.js')
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(terser())
-        .pipe(gulp.dest('dist/scripts'));
+gulp.task('scripts', function() {
+    return rollup({
+        input: 'dist/scripts/scripts.js',
+        format: 'iife',
+    })
+    .pipe(source('scripts.js'))
+    .pipe(buffer())
+    .pipe(babel({
+        presets: ['@babel/preset-env']
+    }))
+    .pipe(terser())
+    .pipe(gulp.dest('dist'));
 });
+
 
 // Clean
 

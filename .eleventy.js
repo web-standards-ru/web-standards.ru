@@ -18,7 +18,7 @@ module.exports = function(config) {
     }).use(markdownItAnchor, {
         permalink: true,
         permalinkClass: 'article__heading-anchor',
-        permalinkSymbol: '#',
+        permalinkSymbol: '',
         permalinkSpace: false,
         permalinkAttrs: () => ({
             'aria-label': 'Этот заголовок',

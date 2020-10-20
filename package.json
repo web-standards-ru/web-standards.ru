@@ -42,10 +42,13 @@
     "remark-lint-ordered-list-marker-value": "^2.0.1",
     "remark-lint-strong-marker": "^2.0.1",
     "remark-lint-unordered-list-marker-style": "^2.0.1",
+    "rollup-stream": "^1.24.1",
     "stylelint": "^13.7.2",
     "stylelint-order": "^4.1.0",
     "typograf": "^6.11.2",
-    "vinyl-paths": "^3.0.1"
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-paths": "^3.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "browserslist": [
     "last 2 version",

@@ -1,0 +1,43 @@
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    padding: 8px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Dewi', sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    text-transform: none;
+    background: var(--color-grey-dark);
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.tooltip::after {
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 8px);
+    display: block;
+    content: '';
+    border: solid transparent;
+    border-width: 8px 8px 0 8px;
+    border-top-color: var(--color-grey-dark);
+}
+
+.tooltip--success {
+    background: green;
+}
+
+.tooltip--success::after {
+    border-top-color: green;
+}
+
+.tooltip--error {
+    background: green;
+}
+
+.tooltip--error::after {
+    border-top-color: green;
+}
