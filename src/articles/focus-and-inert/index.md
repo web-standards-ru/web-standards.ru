@@ -1,5 +1,5 @@
 ---
-title: 'Focus management and inert'
+title: 'Управление фокусом и атрибут inert'
 date: 2020-10-19
 author: eric-bailey
 source:
