@@ -44,7 +44,10 @@ Tab будет перемещаться по интерактивным элем
 
 Фокус похож на hover, поскольку так мы определяем элемент, с которым хотим провзаимодействовать. Вот почему [визуально очевидные стили для фокуса](https://css-tricks.com/focusing-on-focus-styles/) имеют огромное значение.
 
-<!-- Тут должно быть видео -->
+<video src="video/focus-navigation.mp4"
+    width="960" height="540"
+    controls loop muted playsinline>
+</video>
 
 Фокус следует по домашней странице. Начиная с логотипа, затем к товарам, услугам, вакансиям, блогу, контактам и останавливается на кнопке Learn more.
 
@@ -97,6 +100,11 @@ There may be times where you need to prevent things from being focused. A good e
 Focus trapping is not to be confused with [keyboard traps](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html) (sometimes referred to as focus traps). Keyboard traps are situations where someone navigating via keyboard cannot escape out of a widget or component because of a nasty loop of poorly-written logic.
 
 A practical example of what you would use focus trapping for would be for a modal:
+
+<video src="video/trapped-focus.mp4"
+    width="960" height="540"
+    controls loop muted playsinline>
+</video>
 
 Focus indication moving through a homepage wireframe and opening a modal to demonstrate focus trapping. Inside the modal are tab stops for the modal container, a video play button, a cancel button, a purchase button, and a close button. After the modal is closed focus is returned to the button that triggered the modal.
 
