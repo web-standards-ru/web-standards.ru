@@ -90,23 +90,25 @@ Tab будет перемещаться по интерактивным элем
 
 Не следует создавать множество `tabindex` с инкрименируемым каждым раз значением для каждого последующего элемента, в соответствии с вашим представлением о том, как пользователь должен читать ваш сайт. Позвольте DOM сделать это за вас.
 
-## Focus trapping
+## Запрет фокуса  <!-- Запрет или все таки захват? -->
 
-There may be times where you need to prevent things from being focused. A good example of this is [focus trapping](https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element), which is the act of conditionally restricting focus events to an element and its children.
+Иногда бывает необходимость запретить состояние фокуса. [Вот](https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element) хороший пример отмены фокуса на родительском элементе.
 
-Focus trapping is not to be confused with [keyboard traps](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html) (sometimes referred to as focus traps). Keyboard traps are situations where someone navigating via keyboard cannot escape out of a widget or component because of a nasty loop of poorly-written logic.
+Запрет фокуса не стоит путать с ограничением [навигации с клавиатуры](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html). Ограничение навигации с клавиатуры является причиной невозможности закрыть виджет или перейти к другому компоненту из за неправильно прописанной логики.
 
-A practical example of what you would use focus trapping for would be for a modal:
+Примером ситуации, когда необхдимо запретить фокус, может быть появление модального окна.
 
-Focus indication moving through a homepage wireframe and opening a modal to demonstrate focus trapping. Inside the modal are tab stops for the modal container, a video play button, a cancel button, a purchase button, and a close button. After the modal is closed focus is returned to the button that triggered the modal.
+<!-- Тут видео -->
 
-### Why is it important?
+Фокус проходит по странице и открывает модальное окно, чтобы продемонстрировать отмену фокуса. Далее фокус двигается в рамках контента модального окна, на кнопку play, кнопку отмена, кнопку купить и кнопку закрытия.(все это время фокус на странице заблокирован). После закрытия модального окна он возвращается к исходному положению на странице до его открытия.
 
-Keeping focus within a modal communicates its bounds, and helps inform what is and is not modal content — it is analogous to how a sighted person can see how a modal “floats” over other website or web app content. This is important information if:
+### Почему это важно?
 
-- You have [low or no vision](https://adrianroselli.com/2017/02/not-all-screen-reader-users-are-blind.html) and rely on screen reader announcements to help communicate the shift in interaction mode.
-- You have low vision and a magnified display, where focusing outside of the bounds of the modal may be confusing and disorienting.
-- You navigate solely via keyboard and could otherwise tab out of the modal and get lost on the underlying page or view trying to get back into the modal.
+Удержание фокуса в пределах модального окна помогает понять, что является его контентом, а что нет. Это аналогично тому, как зрячий человек может видеть, как окно всплывает над контентом страницы. Это важно знать, если:
+
+- У вас [очень плохое зрение](https://adrianroselli.com/2017/02/not-all-screen-reader-users-are-blind.html) и вы полагаетесь на скринридер, чтобы узнать об изменениях после взаимодействия со страницей.
+- У вас плохое зрение и увеличенный дисплей, при котром фокусировка за пределами модального окна может сбить с толку и дезориентировать.
+- Вы перемещаетесь исключительно с помощью клавиатуры и в случае закрытия модального окна можете потеряться среди страницы в попытках к нему вернуться.
 
 ### How do you do it?
 
