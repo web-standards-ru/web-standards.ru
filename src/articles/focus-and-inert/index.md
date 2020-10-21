@@ -18,29 +18,28 @@ preview: ''
 featured: true
 ---
 
-Множество вспомогательных технологий  используют навигацию с клавиатуры в целях восприятия и взаимодействия с контентом. Один из способов подобной навигации - клавиша Tab. Должно быть вы знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
+Множество вспомогательных технологий  используют навигацию с клавиатуры в целях восприятия и взаимодействия с контентом. Один из способов подобной навигации — клавиша Tab. Должно быть вы знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
 
 Tab будет перемещаться по интерактивным элементам в том порядке, в котором они отображаются в DOM. Вот почему так важно, чтобы порядок исходного кода соответствовал визуальной иерархии вашего дизайна.
 
 Список [интерактивных элементов](https://www.w3.org/TR/html52/dom.html%23interactive-content), по которым можно пройтись клавишей Tab:
 
-
 - [Ссылки](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), с заполненным атрибутом `href`
-- `[<button>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)`,
-- `[<input>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)` и `[<textarea>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)`, с сопутствующим им [label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label),
-- `[<select>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)`,
-- `[<details>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)`,
-- `[<audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)` и `[<video>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)` при наличии контроллов,
-- `[<object>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)`, в зависимости от того, как он используется,
-- любой элемент с `overflow: scroll;` в Firefox,
+- [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button),
+- [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) и `[<textarea>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)`, с сопутствующим им [label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label),
+- [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select),
+- [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details),
+- [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) и [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) при наличии контролов,
+- [`<object>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object), в зависимости от того, как он используется,
+- любой элемент с `overflow: scroll` в Firefox,
 - любой элемент с атрибутом [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable), и
-- любой элемент с установленным `[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)` (о нем чуть позже).
+- любой элемент с установленным `[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)` (о нём чуть позже).
 
 Интерактивный элемент получает состояние фокуса, когда:
 
-- пользователь нажимает клавишу Tab
-- на него кликают, переходя по ссылке  <!--Может, имеется ввиду кликают по ссылке просто? -->
-- фокус задан с помощью `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` в JavaScript.
+- На него переходят с помощью клавиши Tab
+- На него кликают, переходя по ссылке  <!--Может, имеется ввиду кликают по ссылке просто? -->
+- Фокус программно задан с помощью `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` в JavaScript.
 
 Фокус похож на hover, поскольку так мы определяем элемент, с которым хотим провзаимодействовать. Вот почему [визуально очевидные стили для фокуса](https://css-tricks.com/focusing-on-focus-styles/) имеют огромное значение.
 
