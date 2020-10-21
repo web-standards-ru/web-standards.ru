@@ -1,4 +1,43 @@
-.tooltip {
+/* Tooltip */
+
+.tooltip__copy {
+    position: relative;
+    margin-left: 8px;
+}
+
+.tooltip__button {
+    position: relative;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0;
+    padding: 0.2em;
+    vertical-align: middle;
+    background-color: transparent;
+    background-image: url('/images/link.svg');
+    border: none;
+    cursor: pointer;
+    appearance: none;
+}
+
+.tooltip__label {
+    display: none;
+}
+
+.tooltip__button:hover + .tooltip__label,
+.tooltip__button:focus + .tooltip__label {
+    display: block;
+}
+
+.content .tooltip__button:visited {
+    color: var(--color-blue-darker);
+}
+
+.tooltip__button:focus {
+    opacity: 1;
+}
+
+.tooltip__label {
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -15,7 +54,7 @@
     transform: translateX(-50%);
 }
 
-.tooltip::after {
+.tooltip__label::after {
     position: absolute;
     top: 100%;
     left: calc(50% - 8px);
@@ -26,18 +65,18 @@
     border-top-color: var(--color-grey-dark);
 }
 
-.tooltip--success {
+.tooltip__label--success {
     background: green;
 }
 
-.tooltip--success::after {
+.tooltip__label--success::after {
     border-top-color: green;
 }
 
-.tooltip--error {
+.tooltip__label--error {
     background: red;
 }
 
-.tooltip--error::after {
+.tooltip__label--error::after {
     border-top-color: red;
 }

@@ -10,7 +10,7 @@ function handleCopy(evt) {
     clearTimeout(clearTimeout)
 
     navigator.clipboard.writeText(`${window.location.href}${hash}`).then(() => {
-        tooltip.innerText = 'Скопированно'
+        tooltip.innerText = 'Скопировано'
         tooltip.classList.add('tooltip--success')
 
         timeout = setTimeout(() => {

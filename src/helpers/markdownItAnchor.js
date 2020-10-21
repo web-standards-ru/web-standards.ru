@@ -16,7 +16,7 @@ const renderPermalink = (slug, opts, state, idx) => {
     const linkTokens = [
         Object.assign(new state.Token('html_span', 'span', 1), {
             attrs: [
-                ['class', 'article__copy'],
+                ['class', 'tooltip'],
             ],
         }),
         Object.assign(new state.Token('html_button', 'button', 1), {
@@ -29,7 +29,7 @@ const renderPermalink = (slug, opts, state, idx) => {
         }),
         new state.Token('html_button', 'button', -1),
         Object.assign(new state.Token('html_block', 'span', 1), {
-            content: `<span class="article__tooltip tooltip" role="tooltip" id="copy-${slug}">Скопировать ссылку</span>`
+            content: `<span class="tooltip__label" role="tooltip" id="copy-${slug}">Скопировать ссылку</span>`
         }),
         new state.Token('html_span', 'span', -1),
     ];
