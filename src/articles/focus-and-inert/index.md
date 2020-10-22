@@ -1,5 +1,5 @@
 ---
-title: 'Focus management and inert'
+title: 'Управление фокусом и атрибут inert'
 date: 2020-10-19
 author: eric-bailey
 source:
@@ -18,33 +18,35 @@ preview: ''
 featured: true
 ---
 
-Множество вспомогательных технологий  используют навигацию с клавиатуры в целях восприятия и взаимодействия с контентом. Один из способов подобной навигации - клавиша Tab. Должно быть вы знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
+Множество вспомогательных технологий  используют навигацию с клавиатуры в целях восприятия и взаимодействия с контентом. Один из способов подобной навигации — клавиша Tab. Должно быть вы знакомы с ним, если используете Tab для быстрого перемещения между полями формы без необхдимости тянуться к мышке или трекпаду.
 
 Tab будет перемещаться по интерактивным элементам в том порядке, в котором они отображаются в DOM. Вот почему так важно, чтобы порядок исходного кода соответствовал визуальной иерархии вашего дизайна.
 
 Список [интерактивных элементов](https://www.w3.org/TR/html52/dom.html%23interactive-content), по которым можно пройтись клавишей Tab:
 
-
 - [Ссылки](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), с заполненным атрибутом `href`
-- `[<button>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)`,
-- `[<input>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)` и `[<textarea>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)`, с сопутствующим им [label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label),
-- `[<select>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)`,
-- `[<details>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)`,
-- `[<audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)` и `[<video>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)` при наличии контроллов,
-- `[<object>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)`, в зависимости от того, как он используется,
-- любой элемент с `overflow: scroll;` в Firefox,
+- [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button),
+- [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) и `[<textarea>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)`, с сопутствующим им [label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label),
+- [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select),
+- [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details),
+- [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) и [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) при наличии контролов,
+- [`<object>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object), в зависимости от того, как он используется,
+- любой элемент с `overflow: scroll` в Firefox,
 - любой элемент с атрибутом [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable), и
-- любой элемент с установленным `[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)` (о нем чуть позже).
+- любой элемент с установленным `[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)` (о нём чуть позже).
 
 Интерактивный элемент получает состояние фокуса, когда:
 
-- пользователь нажимает клавишу Tab
-- на него кликают, переходя по ссылке  <!--Может, имеется ввиду кликают по ссылке просто? -->
-- фокус задан с помощью `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` в JavaScript.
+- На него переходят с помощью клавиши Tab
+- На него кликают, переходя по ссылке  <!--Может, имеется ввиду кликают по ссылке просто? -->
+- Фокус программно задан с помощью `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` в JavaScript.
 
 Фокус похож на hover, поскольку так мы определяем элемент, с которым хотим провзаимодействовать. Вот почему [визуально очевидные стили для фокуса](https://css-tricks.com/focusing-on-focus-styles/) имеют огромное значение.
 
-<!-- Тут должно быть видео -->
+<video src="video/focus-navigation.mp4"
+    width="960" height="540"
+    controls loop muted playsinline>
+</video>
 
 Фокус следует по домашней странице. Начиная с логотипа, затем к товарам, услугам, вакансиям, блогу, контактам и останавливается на кнопке Learn more.
 
@@ -90,38 +92,41 @@ Tab будет перемещаться по интерактивным элем
 
 Не следует создавать множество `tabindex` с инкрименируемым каждым раз значением для каждого последующего элемента, в соответствии с вашим представлением о том, как пользователь должен читать ваш сайт. Позвольте DOM сделать это за вас.
 
-## Запрет фокуса  <!-- Запрет или все таки захват? -->
+## Захват фокуса
 
-Иногда бывает необходимость запретить состояние фокуса. [Вот](https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element) хороший пример отмены фокуса на родительском элементе.
+Иногда бывает необходимость запретить состояние фокуса. Хороший пример запрета  - это [захват фокуса](https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element), временно ограничивающий его события на родительском элементе.
 
-Запрет фокуса не стоит путать с ограничением [навигации с клавиатуры](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html). Ограничение навигации с клавиатуры является причиной невозможности закрыть виджет или перейти к другому компоненту из за неправильно прописанной логики.
+Захват фокуса не стоит путать с ограничением [навигации с клавиатуры](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html). Ограничение навигации с клавиатуры является причиной невозможности закрыть виджет или перейти к другому компоненту из за неправильно прописанной логики.
 
-Примером ситуации, когда необхдимо запретить фокус, может быть появление модального окна.
+Примером ситуации, когда необхдимо захватить фокус, может быть появление модального окна.
 
-<!-- Тут видео -->
+<video src="video/trapped-focus.mp4"
+    width="960" height="540"
+    controls loop muted playsinline>
+</video>
 
 Фокус проходит по странице и открывает модальное окно, чтобы продемонстрировать отмену фокуса. Далее фокус двигается в рамках контента модального окна, на кнопку play, кнопку отмена, кнопку купить и кнопку закрытия.(все это время фокус на странице заблокирован). После закрытия модального окна он возвращается к исходному положению на странице до его открытия.
 
 ### Почему это важно?
 
-Удержание фокуса в пределах модального окна помогает понять, что является его контентом, а что нет. Это аналогично тому, как зрячий человек может видеть, как окно всплывает над контентом страницы. Это важно знать, если:
+Удержание фокуса в пределах модального окна помогает понять, что является его контентом, а что нет. Это аналогично тому, как зрячий человек может видеть, как окно всплывает над контентом страницы.Полезно знать это, если:
 
 - У вас [очень плохое зрение](https://adrianroselli.com/2017/02/not-all-screen-reader-users-are-blind.html) и вы полагаетесь на скринридер, чтобы узнать об изменениях после взаимодействия со страницей.
 - У вас плохое зрение и увеличенный дисплей, при котром фокусировка за пределами модального окна может сбить с толку и дезориентировать.
 - Вы перемещаетесь исключительно с помощью клавиатуры и в случае закрытия модального окна можете потеряться среди страницы в попытках к нему вернуться.
 
-### How do you do it?
+### Как это сделать?
 
-Reliably managing focus is a complicated affair. You need to use JavaScript to:
+Надежно управлять фокусом - дело сложное. Нужно прибегнуть к JavaScript, чтобы:
 
-1.  Determine the container elements of all focusable elements on the current page or view.
-2.  Identify the bounds of the trapped content, including the first and last focusable item.
-3.  Remove both interactivity and discoverability from anything identified as focusable that isn’t within that set of trapped content.
-4.  Move focus into the trapped content.
-5.  Listen for events that signals dismissing the trapped content (save, cancel, dismissal/hitting the Esc key, etc.).
-6.  Dismiss the trapped content area when triggered by a pertinent event.
-7.  Restore previously removed interactivity.
-8.  Move focus back to the interactive element that triggered the trapped content.
+1.  Определить родительский блок для всех фокусируемых элементов на странице.
+2.  Определить границы захваченного контента (например, модального окна), включая первый и последний фокусируемый элемент.
+3.  Убрать как интерактивность, так и видимость всего, что может иметь фокус и находится вне рамок захваченного контента.
+4.  Переместить фокус в захваченный контент.
+5.  Слушать события, сигнализирующие об уходе с выделенной области (сохрание, отмена, нажатие Esc и т.д.)
+6.  Уйти с захваченной области
+7.  Восстановить раннее отмененную интерактивность.
+8.  Переместить фокус обратно на интерактивный элемент, вызвавший блокировку содержимого.
 
 ### Why do we do it?
 
