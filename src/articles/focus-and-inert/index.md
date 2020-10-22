@@ -128,24 +128,23 @@ Tab будет перемещаться по интерактивным элем
 7.  Восстановить раннее отмененную интерактивность.
 8.  Переместить фокус обратно на интерактивный элемент, вызвавший блокировку содержимого.
 
-### Why do we do it?
+### Зачем нам это?
 
-I’m not going to lie: this is all tricky and time-consuming to do. However, focus management and a sensible, usable focus order is a [Web Content Accessibility Guideline](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html). It’s important enough that it’s considered part of [an international, legally-binding standard about usability](https://www.w3.org/WAI/policies/).
+Не стану врать: все эти действия отнимают много времени. Но все же, управление фокусом и удобный порядок фокусировки являются частью [руководства по доступности в вебе](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html). Тема достаточна важна, чтобы считать ее частью [международного правового стандарта об удобстве пользования](https://www.w3.org/WAI/policies/).
 
-### Tabbable and discoverable
+### Видимость
 
-There’s a bit of a trick to removing both discoverability _and_ interactivity.
+Существует небольшой трюк, с помощью которого можно легко ограничить видимость и интерактивность элемента.
 
-[Screen readers have an interaction mode](https://tink.uk/understanding-screen-reader-interaction-modes/) that allows them to explore the page or view via a virtual cursor. The virtual cursor also lets the person using the screen reader discover non-interactive parts of the page (headings, lists, etc.). Unlike using Tab and focus styles, the virtual cursor is only available to people using a screen reader.
+[Скринридеры обладают режимом взаимодействия](https://tink.uk/understanding-screen-reader-interaction-modes/), который позволяет им проходить по странице виртуальным курсором. Виртуальный курсор также позволяет пользователю скринридера обнаруживать неинтерактивные части страницы. (заголовки, списки и т.д.). В отличие от использования Tab, виртуальный курсор доступен только пользователям скринридера.
 
-When you are managing focus, you may want to restrict the ability for the virtual cursor to discover content. For our modal example, this means preventing someone from accidentally “breaking out” of the bounds of the modal when they’re reading it.
+При управлении фокусом может потребоваться ограничить возможность обнаружения содержимого виртуальным курсором. В нашем примере с модальным окном это значит предотвратить пользователя от случайного выхода за рамки окна при чтении контента.
 
-Discoverability can be suppressed via a judicious application of [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute). However, interactivity is a little more nuanced.
+Видимость может быть заблокирована с помощтю правильного применения атрибута [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute). А вот с интерактивностью есть один тонкий нюанс.
 
-## Enter `inert`
+## Знакомство с `inert`
 
-[The `inert` attribute](https://whatpr.org/html/4288/interaction.html#the-inert-attribute) is a [global HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) that would make removing, then restoring the ability of interactive elements to be discovered and focused a lot easier. Here’s an example of how it would work:
-
+[Атрибут `inert`](https://whatpr.org/html/4288/interaction.html#the-inert-attribute) - [глобальный атрибут в HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes), позволяющий легко убирать и восстанавливать видимость интерактивных
 ```html
 <body>
     <div
