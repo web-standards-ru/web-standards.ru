@@ -1,37 +1,61 @@
-const buttons = [...document.querySelectorAll('.article__copy-button')];
-
+const buttons = [...document.querySelectorAll('.tooltip__button')];
+const successClassName = 'tooltip__label--success'
+const errorClassName = 'tooltip__label--error'
 let timeout
 
-function handleCopy(evt) {
+function setDefaultState(tooltip) {
+    tooltip.innerText = 'Скопировать ссылку'
+    tooltip.classList.remove(successClassName)
+}
+
+function setSuccessState(tooltip) {
+    tooltip.innerText = 'Скопировано'
+    tooltip.classList.add(successClassName)
+}
+
+function setErrorState(tooltip) {
+    tooltip.innerText = 'Не удалось скопировать'
+    tooltip.classList.remove(errorClassName)
+}
+
+function handleCopy() {
     const tooltip = this.nextSibling
     const hash = this.getAttribute('data-href')
 
-    evt.preventDefault()
-    clearTimeout(clearTimeout)
+    navigator.clipboard.writeText(`${window.location.href}${hash}`)
+        .then(() => {
+            setSuccessState(tooltip)
+        })
+        .catch(() => {
+            setErrorState(tooltip)
+        })
+}
 
-    navigator.clipboard.writeText(`${window.location.href}${hash}`).then(() => {
-        tooltip.innerText = 'Скопировано'
-        tooltip.classList.add('tooltip--success')
+function handleMouseEnter() {
+    const tooltip = this.nextSibling
 
-        timeout = setTimeout(() => {
-            tooltip.innerText = 'Скопировать ссылку'
-            tooltip.classList.remove('tooltip--success')
-        }, 5000)
-    }).catch(() => {
-        timeout = setTimeout(() => {
-            tooltip.innerText = 'Не удалось скопировать'
-            tooltip.classList.remove('tooltip--error')
-        }, 5000)
-    })
+    if (timeout) {
+        return
+    }
+
+    setDefaultState(tooltip)
 }
 
 function handleMouseOut() {
-    setTimeout(() => {
+    const tooltip = this.nextSibling
+
+    if (!tooltip.classList.contains(successClassName) && !tooltip.classList.contains(errorClassName)) {
+        return
+    }
+
+    timeout = setTimeout(() => {
         this.blur()
+        setDefaultState(tooltip)
     }, 1000)
 }
 
 buttons.forEach((button) => {
     button.addEventListener('click', handleCopy)
+    button.addEventListener('mouseenter', handleMouseEnter)
     button.addEventListener('mouseout', handleMouseOut)
 })

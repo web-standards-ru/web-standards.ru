@@ -24,6 +24,7 @@ const renderPermalink = (slug, opts, state, idx) => {
                 ['class', opts.permalinkClass],
                 ['data-href', opts.permalinkHref(slug, state)],
                 ['aria-labelledby', `copy-${slug}`],
+                ['aria-label', 'Копировать ссылку на заголовок'],
                 ...Object.entries(opts.permalinkAttrs(slug, state))
             ],
         }),

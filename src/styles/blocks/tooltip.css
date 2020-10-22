@@ -1,8 +1,9 @@
 /* Tooltip */
 
-.tooltip__copy {
+.tooltip {
     position: relative;
-    margin-left: 8px;
+    display: inline-block;
+    margin-left: 0.3em;
 }
 
 .tooltip__button {
@@ -11,22 +12,13 @@
     width: 1.5em;
     height: 1.5em;
     margin: 0;
-    padding: 0.2em;
-    vertical-align: middle;
+    padding: 0;
+    vertical-align: inherit;
     background-color: transparent;
     background-image: url('/images/link.svg');
     border: none;
     cursor: pointer;
     appearance: none;
-}
-
-.tooltip__label {
-    display: none;
-}
-
-.tooltip__button:hover + .tooltip__label,
-.tooltip__button:focus + .tooltip__label {
-    display: block;
 }
 
 .content .tooltip__button:visited {
@@ -39,7 +31,7 @@
 
 .tooltip__label {
     position: absolute;
-    bottom: 100%;
+    bottom: calc(100% + 10px);
     left: 50%;
     padding: 8px;
     color: #ffffff;
@@ -49,7 +41,7 @@
     letter-spacing: normal;
     white-space: nowrap;
     text-transform: none;
-    background: var(--color-grey-dark);
+    background-color: var(--color-grey-dark);
     border-radius: 3px;
     transform: translateX(-50%);
 }
@@ -65,8 +57,17 @@
     border-top-color: var(--color-grey-dark);
 }
 
+.tooltip__label {
+    display: none;
+}
+
+.tooltip__button:hover + .tooltip__label,
+.tooltip__button:focus + .tooltip__label {
+    display: block;
+}
+
 .tooltip__label--success {
-    background: green;
+    background-color: green;
 }
 
 .tooltip__label--success::after {
@@ -74,7 +75,7 @@
 }
 
 .tooltip__label--error {
-    background: red;
+    background-color: red;
 }
 
 .tooltip__label--error::after {
