@@ -5,7 +5,7 @@ author: eric-bailey
 source:
     title: 'Focus management and inert'
     url: 'https://css-tricks.com/focus-management-and-inert/'
-translators:
+translators: mikhail-danyushin
     -
 editors:
     - vadim-makeev
@@ -38,7 +38,7 @@ Tab будет перемещаться по интерактивным элем
 Интерактивный элемент получает состояние фокуса, когда:
 
 - На него переходят с помощью клавиши Tab
-- На него кликают, переходя по ссылке  <!--Может, имеется ввиду кликают по ссылке просто? -->
+- Он является ссылкой и на него кликают
 - Фокус программно задан с помощью `[element.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)` в JavaScript.
 
 Фокус похож на hover, поскольку так мы определяем элемент, с которым хотим провзаимодействовать. Вот почему [визуально очевидные стили для фокуса](https://css-tricks.com/focusing-on-focus-styles/) имеют огромное значение.
@@ -53,11 +53,11 @@ Tab будет перемещаться по интерактивным элем
 ## Управление фокусом
 
 Управлять фокусом значит определять какие элементы могут его получать, а какие нет.
-При разработке веб-интерфейсов это один из самых сложных аспектов, но он важен для доступности сайтов и приложений.
+Это один из самых сложных аспектов при разработке веб-интерфейсов, но он важен для доступности сайтов и приложений.
 
 ### Полезные практики управления фокусом
 
-**Оставьте фокус в покое.** Я не знаю как еще это подчеркнуть. <!-- Предлагаю убрать тут предложение после заголовка-->
+**Оставьте фокус в покое.**
 
 Состояние фокуса будет работать без дополнительных услилий, если вы используете `<button>` для кнопок, `<a>` для ссылок, `<input>` для полей форм и т.д
 
@@ -71,7 +71,7 @@ Tab будет перемещаться по интерактивным элем
 
 Нет необходимости устанавливать  `tabindex` интерактивным элементам, которые могут получать фокус с клавиатуры(такие, как, например, `<button>`)
 
-Кроме того, вам не нужно прописывать `tabindex` неинтерактивным элементам в целях возможности их прочтения вспомогательными устройствами <!--технологиями --> (на самом деле,  отсутствие `role` и доступного имени является ошибкой WCAG). Это может повлечь  [нежелательный для пользователя опыт](https://adrianroselli.com/2019/02/uncanny-a11y.html#Tabindex) использования вспомогательных устройств — у которых попросту есть свои собственные способы чтения контента.
+Кроме того, вам не нужно прописывать `tabindex` неинтерактивным элементам в целях возможности их прочтения вспомогательными устройствами (на самом деле,  отсутствие `role` и доступного имени является ошибкой WCAG). Это может повлечь  [нежелательный пользовательский опыт](https://adrianroselli.com/2019/02/uncanny-a11y.html#Tabindex) использования вспомогательных устройств — у которых попросту есть свои собственные способы чтения контента.
 
 #### ✅ Следует: Устанавливать `tabindex="-1"` для фокуса с помощью JavaScript
 
@@ -86,9 +86,7 @@ Tab будет перемещаться по интерактивным элем
 Сделать так один раз - уже плохо, несколько - полный кошмар. Серьезно, не надо так.
 
 #### ❌ Не следует: создавать собственный порядок фокусировки
-
-Интерактивные элементы можно вкладывать в друг друга только в соответствии с тем порядком, в котором с ними будут взаимодействовать.
-<!-- Вот тут совсем не понял. Оригинал - Interactive elements can be tabbed to just by virtue of being used. -->
+Пройтись по интерактивным элементам можно только в том порядке, в котором они следуют друг за другом.
 
 Не следует создавать множество `tabindex` с инкрименируемым каждым раз значением для каждого последующего элемента, в соответствии с вашим представлением о том, как пользователь должен читать ваш сайт. Позвольте DOM сделать это за вас.
 
@@ -125,7 +123,7 @@ Tab будет перемещаться по интерактивным элем
 4.  Переместить фокус в захваченный контент.
 5.  Слушать события, сигнализирующие об уходе с выделенной области (сохрание, отмена, нажатие Esc и т.д.)
 6.  Уйти с захваченной области
-7.  Восстановить раннее отмененную интерактивность.
+7.  Вернуть раннее отмененную интерактивность.
 8.  Переместить фокус обратно на интерактивный элемент, вызвавший блокировку содержимого.
 
 ### Зачем нам это?
@@ -136,15 +134,16 @@ Tab будет перемещаться по интерактивным элем
 
 Существует небольшой трюк, с помощью которого можно легко ограничить видимость и интерактивность элемента.
 
-[Скринридеры обладают режимом взаимодействия](https://tink.uk/understanding-screen-reader-interaction-modes/), который позволяет им проходить по странице виртуальным курсором. Виртуальный курсор также позволяет пользователю скринридера обнаруживать неинтерактивные части страницы. (заголовки, списки и т.д.). В отличие от использования Tab, виртуальный курсор доступен только пользователям скринридера.
+[Скринридеры обладают режимом взаимодействия](https://tink.uk/understanding-screen-reader-interaction-modes/), который позволяет им проходить по странице виртуальным курсором. А ещё виртуальный курсор позволяет пользователю скринридера обнаруживать неинтерактивные части страницы (заголовки, списки и т.д.). В отличие от использования Tab, виртуальный курсор доступен только пользователям скринридера.
 
 При управлении фокусом может потребоваться ограничить возможность обнаружения содержимого виртуальным курсором. В нашем примере с модальным окном это значит предотвратить пользователя от случайного выхода за рамки окна при чтении контента.
 
-Видимость может быть заблокирована с помощтю правильного применения атрибута [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute). А вот с интерактивностью есть один тонкий нюанс.
+Видимость может быть заблокирована с помощью правильного применения атрибута [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute). А вот с интерактивностью есть один тонкий нюанс.
 
 ## Знакомство с `inert`
 
-[Атрибут `inert`](https://whatpr.org/html/4288/interaction.html#the-inert-attribute) - [глобальный атрибут в HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes), позволяющий легко убирать и восстанавливать видимость интерактивных
+[Атрибут `inert`](https://whatpr.org/html/4288/interaction.html#the-inert-attribute) - [глобальный атрибут в HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes), позволяющий легко убирать и восстанавливать видимость интерактивных элементов, а так же их взможность получать состояние фокуса. Вот пример:
+
 ```html
 <body>
     <div
@@ -166,51 +165,51 @@ Tab будет перемещаться по интерактивным элем
 </body>
 ```
 
-I am deliberately avoiding using the `<dialog>` element for the modal due to [its many assistive technology support issues](https://www.scottohara.me/blog/2019/03/05/open-dialog.html).
+Я намеренно избегаю использования `<dialog>`для модального окна из-за [многочисленных проблем с поддержкой](https://www.scottohara.me/blog/2019/03/05/open-dialog.html).
 
-`inert` has been declared on the `<main>` element following a save confirmation modal. What this means that all content contained within `<main>` cannot receive focus nor be clicked.
+`inert` задан элементу `<main>`, следующему сразу после модального окна сохранения изменений. Теперь все содержимое `<main>` не может попасть в фокус и по нему нельзя кликнуть.
 
-Focus is restricted to inside of the modal. When the modal is dismissed, `inert` can be removed from the `<main>` element. This way of handling focus trapping is far easier compared to existing techniques.
+Фокус ограничен рамками модального окна. Когда мы закрываем его, мы убираем `inert` из `<main>`. Этот способ ограничения фокуса проще, чем другие методы.
 
-**Remember:** A dismissal event can be caused by the two buttons inside our modal example, but also by pressing Esc on your keyboard. Some modals also let you click outside of the modal area to dismiss, as well.
+**Помните:** Событие закрытия модального окна может быть вызванно не только нажатием соотетствующих кнопок, но и нажатием на Esc. А еще некоторые модальные окна могут быть закрыты по клику на оверлей.
 
-### Support for inert
+### Поддержка `inert`
 
-The latest versions of [Edge, Chrome, and Opera all support `inert`](https://caniuse.com/#feat=mdn-api_htmlelement_inert) when [experimental web platform features are enabled](https://css-irl.info/how-to-enable-experimental-web-platform-features/). Firefox support will also be [landing soon](https://bugzilla.mozilla.org/show_bug.cgi?id=1655722)! The one outlier is both desktop and mobile versions of Safari.
+Все последние версии [Edge, Chrome, and Opera поддерживают `inert`](https://caniuse.com/#feat=mdn-api_htmlelement_inert) если [включены экспериментальные функции веб-платформ](https://css-irl.info/how-to-enable-experimental-web-platform-features/). Firefox будет поддерживать [в скором времени](https://bugzilla.mozilla.org/show_bug.cgi?id=1655722)! Единственное исключение - Safari. Как мобильный, так и десктопный.
 
-I’d love to see Apple implement native support for `inert`. While [a polyfill is available](https://github.com/WICG/inert), it has [non-trivial support issues for all the major screen readers](https://www.scottohara.me/blog/2019/03/05/open-dialog.html#does-the-polyfill-help). Not great!
+Мне бы очень хотелось, чтобы Apple реализовала встроенную поддержку `inert`. Хотя и [существует полифилл](https://github.com/WICG/inert), у него [серьёзные проблемы с поддержкой скринридерами](https://www.scottohara.me/blog/2019/03/05/open-dialog.html#does-the-polyfill-help). Нехорошо!
 
-In addition, I’d like to call attention to this note from [the `inert` polyfill project’s README](https://github.com/WICG/inert#performance-and-gotchas):
+Вдобавок, хочется обратить внимание на [запись в README полифилла](https://github.com/WICG/inert#performance-and-gotchas):
 
-> The polyfill will be expensive, performance-wise, compared to a native `inert` implementation, because it requires a fair amount of tree-walking.
+> Полифилл обойдется вам дорого с точки зрения производительности в отличие от нативного `inert`, т.к. он требует изрядное количество перемещений по DOM.
 
-Tree-walking means the JavaScript in the polyfill will potentially require a lot of computational power to work, and therefore slow down the end-user experience.
+Перемещение по DOM подразумевает что JavaSсript в полифилле требует высокой вычислительной мощности и, следовательно, в конечном итоге замедлит пользователя.
 
-For lower power devices, such as [budget Android smartphones, older laptops](https://www.pewresearch.org/fact-tank/2019/05/07/digital-divide-persists-even-as-lower-income-americans-make-gains-in-tech-adoption/ft_17-03-21_low-incometech_smartphone/), and more powerful devices doing computationally-intensive tasks (such as running multiple Electron apps), this might mean freezing or crashing occurs. Native browser support means this sort of behavior is a lot less taxing on the device, as it has access to parts of the browser that JavaScript doesn’t.
+Для устройств с низким энергопотреблением таких как [бюджетные Android смартфоны и устаревшие ноутбуки](https://www.pewresearch.org/fact-tank/2019/05/07/digital-divide-persists-even-as-lower-income-americans-make-gains-in-tech-adoption/ft_17-03-21_low-incometech_smartphone/), а также тех, что выполняют сложные задачи(например, запуск нескольких приложений сразу), это может привести к зависанию или сбоям. Нативная браузерная поддержка делает такие процессы менее затратными в этом плане, так как у браузера есть доступ ко всем частям DOM, в отличии от JS.
 
 #### Safari
 
-Personally, I am disappointed by Apple’s lack of support for `inert`. While I understand that adding new features to a browser is incredibly complicated and difficult work, `inert` seems like a feature Apple would have supported much earlier.
+Лично я разочарован тем, что Apple не поддерживает `inert`. Хотя я понимаю, что добавление новых функций в браузер - невероятно сложная и трудная работа, `inert` кажется функцией, которую Apple могла бы поддерживать гораздо раньше.
 
-macOS and iOS have historically had great support for accessibility, and assistive technology-friendly features are a common part of [their marketing campaigns](https://www.apple.com/accessibility/). Supporting `inert` seems like a natural extension of Apple’s mission, as the feature itself would do a ton for making accessible web experiences easier to develop.
+macOS и iOS всегда имели хорошую поддержку доступности, а поддержка вспомогательных технологий - важная часть [ их маркетинговой кампании](https://www.apple.com/accessibility/). Поддержка `inert` представляется как естественное продолжение миссии Apple, ввиду того, что сама эта функция смогла бы облегчить разработку доступных веб-интерфейсов в разы.
 
-Frustratingly, Apple is also tight-lipped about what it is working on, and when we can generally expect to see it. Because of this, the future of `inert` is an open question.
+К сожалению, Apple держит в тайне, когда воявится поддержка этого атрибута. Поэтому поддержка `inert` - все еще открытый вопрос.
 
 #### Igalia
 
-[Igalia](https://www.igalia.com/) is a company that works on browser features. They currently have an experiment where the public can vote on what features they’d like to see. The reasoning for this initiative is outside the scope of this article, but you can [read more about it on Smashing Magazine](https://www.smashingmagazine.com/2020/07/crowdfunding-web-platform-features-open-prioritization/).
+[Igalia](https://www.igalia.com/) - компания, работающая над функциями браузеров. Сейчас они проводят эксперимент, в котором каждый может проголосовать за те возможности браузеров, которые ему хотелось бы видеть. Конечно, моя статья совсем не про это, но вы можете [узнать больше в Smashing Magazine](https://www.smashingmagazine.com/2020/07/crowdfunding-web-platform-features-open-prioritization/).
 
-One feature Igalia is considering is [adding WebKit support for `inert`](https://www.igalia.com/open-prioritization/#inertwebkit). If you have been looking for a way to help improve accessibility on the web, but have been unsure of how to start, [I encourage you to pledge](https://opencollective.com/html-inert-in-webkit-safari). $5, $10, $25. It doesn’t have to be a huge amount, every little bit adds up.
+Одно из предложений Igalia - это [добавление поддержки `inert` в WebKit](https://www.igalia.com/open-prioritization/#inertwebkit). Если вы искали возможность принять участие в улучшении доступности веба, но не знали с чего начать, я могу вам [ее предоставить](https://opencollective.com/html-inert-in-webkit-safari). $5, $10, $25. Совсем необязательно жертвовать большие суммы, даже маленький вклад ценен.
 
-[Pledge Now](https://opencollective.com/html-inert-in-webkit-safari)
+[Пожертвовать](https://opencollective.com/html-inert-in-webkit-safari)
 
-## Wrapping up
+## Итог
 
-Managing focus requires some skill and care, but is very much worth doing. The `inert` attribute can go a long way to making this easier to do.
+Управление фокусом требует навыка и осторожности. Но это того стоит. `inert` облегчит это.
 
-Technologies like `inert` also represents one of the greatest strengths of the web platform: the ability to [pave the cowpaths](https://www.w3.org/TR/html-design-principles/#pave-the-cowpaths) of emergent behavior and codify it into something easy and effective.
+Такие техники, как `inert` являются примером одной из самых сильных сторон веба: [способность кодифицировать неожиданное поведение](https://www.w3.org/TR/html-design-principles/#pave-the-cowpaths) в нечто простое и эффективное.
 
-### Further reading
+### Что почитать
 
 - [Controlling focus with tabindex](https://youtu.be/Pe0Ce1WtnUM) (A11ycasts, Episode 04)
 - [Using the tabindex attribute](https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/) (The Paciello Group)
@@ -218,4 +217,4 @@ Technologies like `inert` also represents one of the greatest strengths of the w
 
 * * *
 
-Thank you to [Adrian Roselli](https://adrianroselli.com/) and [Sarah Higley](https://sarahmhigley.com/) for their feedback.
+Благодарность [Adrian Roselli](https://adrianroselli.com/) и [Sarah Higley](https://sarahmhigley.com/) за их отзывы.
