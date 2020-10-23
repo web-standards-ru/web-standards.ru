@@ -67,6 +67,16 @@
     font-family: inherit;
 }
 
+.content h2 .tooltip__button,
+.content h3 .tooltip__button {
+    opacity: 0.3;
+}
+
+.content h2:hover .tooltip__button,
+.content h3:hover .tooltip__button {
+    opacity: 1;
+}
+
 /* Paragraphs */
 
 .content p {

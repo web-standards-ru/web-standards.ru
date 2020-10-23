@@ -9,10 +9,11 @@
 .tooltip__button {
     position: relative;
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 0.8em;
+    height: 0.8em;
     margin: 0;
     padding: 0;
+    font-size: inherit;
     vertical-align: inherit;
     background-color: transparent;
     background-image: url('/images/link.svg');
