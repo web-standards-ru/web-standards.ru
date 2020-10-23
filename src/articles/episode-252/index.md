@@ -2,7 +2,6 @@
 title: 'Опрос MDN, Igalia, npm 7, React vs WordPress, уже Webpack 5, Rome — инструмент будущего'
 date: 2020-10-23
 author:
-    - vadim-makeev
     - nikita-dubko
 layout: article.njk
 tags:
