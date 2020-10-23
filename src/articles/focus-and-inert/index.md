@@ -24,12 +24,12 @@ Tab будет перемещаться по интерактивным эле�
 
 Список [интерактивных элементов](https://www.w3.org/TR/html52/dom.html%23interactive-content), по которым можно пройтись клавишей Tab:
 
-- [Ссылки](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), с заполненным атрибутом `href`;
+- [Ссылки](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) с заполненным атрибутом `href`;
 - [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button);
-- [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) и [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), с сопутствующим им [`<label>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label);
+- [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) и [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) с сопутствующим им [`<label>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label);
 - [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select);
 - [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details);
-- [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) и [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)при наличии контролов;
+- [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) и [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) при наличии контролов;
 - [`<object>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object), в зависимости от того, как он используется;
 - любой элемент с `overflow: scroll` в Firefox;
 - любой элемент с атрибутом [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable);
