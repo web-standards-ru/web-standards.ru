@@ -9,6 +9,9 @@ translators:
     - mikhail-danyushin
 editors:
     - vadim-makeev
+    - nikita-dubko
+    - tatiana-fokina
+    - vasiliy-dudin
 layout: article.njk
 tags:
     - article
