@@ -112,11 +112,11 @@ ul {
 
 После добавления `list-style: url(…)` для существующего селектора списка навигации, в верхней части каждого пункта в Internet Explorer 11 и Edge 42 появился отступ:
 
-<img src="images/2.jpg" alt="">
+{% responsiveImage "./src/articles/fixing-lists/images/2.jpg", "" %}
 
 При отключении `list-style` отступ исчезает и навигация отображается так, как нужно.
 
-<img src="images/3.jpg" alt="">
+{% responsiveImage "./src/articles/fixing-lists/images/3.jpg", "" %}
 
 Я предполагаю, что в моём CSS есть что-то другое, что приводит к появлению этих отступов. При [использовании этой техники](https://codepen.io/scottohara/pen/JweKEp) в более простых, но похожих наборах правил, он не появляется.
 

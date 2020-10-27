@@ -48,7 +48,7 @@ hero:
 ## Евросоюз
 
 <figure>
-    <img src="images/europe-flag.jpg" alt="Флаг Евросоюза.">
+    {% responsiveImage "./src/articles/a11y-and-law/images/europe-flag.jpg", "Флаг Евросоюза." %}
     <figcaption>Фото <a href="https://unsplash.com/@markusspiske">Markus Spiske</a>.</figcaption>
 </figure>
 
@@ -154,7 +154,7 @@ hero:
 European Accessibility Act — EAA
 
 <figure>
-    <img src="images/accessibility-for-all.jpg" alt="Женщина с плакатом «Доступность для всех».">
+    {% responsiveImage "./src/articles/a11y-and-law/images/accessibility-for-all.jpg", "Женщина с плакатом «Доступность для всех»." %}
     <figcaption>
         Фото <a href="http://www.edf-feph.org/european-accessibility-act-1">edf-feph.org</a>.
     </figcaption>
@@ -257,7 +257,7 @@ Standard EN 301 549 — EN 301 549
 ## США
 
 <figure>
-    <img src="images/usa-flag.jpg" alt="Флаг Соединённых Штатов Америки.">
+    {% responsiveImage "./src/articles/a11y-and-law/images/usa-flag.jpg", "Флаг Соединённых Штатов Америки." %}
     <figcaption>
         Фото <a href="https://www.pexels.com/@einfoto">Matthis Volquardsen</a>.
     </figcaption>
@@ -320,7 +320,7 @@ Section 508, 508 Compliance
 ### Что, если я его нарушу?
 
 <figure>
-    <img src="images/gavel.jpg" alt="Молоток судьи.">
+    {% responsiveImage "./src/articles/a11y-and-law/images/gavel.jpg", "Молоток судьи." %}
     <figcaption>
         В любой статье о законах должна быть картинка с молотком судьи. Фото <a href="https://www.pexels.com/@pixabay">Pixabay</a>.
     </figcaption>
@@ -437,7 +437,7 @@ ADA — это закон, который защищает права люде�
 ## Россия
 
 <figure>
-    <img src="images/russia-flag.jpg" alt="Флаг Российской Федерации.">
+    {% responsiveImage "./src/articles/a11y-and-law/images/russia-flag.jpg", "Флаг Российской Федерации." %}
     <figcaption>
         Фото <a href="https://www.pexels.com/@ajtandle">Ajinkya Tandle</a>.
     </figcaption>
@@ -551,7 +551,7 @@ ADA — это закон, который защищает права люде�
 На самом деле мы снова встретим требования из [WCAG 2.0](https://www.w3.org/TR/WCAG20/), которые ограничиваются _отдельной_ версией сайта для слепых и слабовидящих.
 
 <figure>
-    <img src="images/special-roscosmos-site.png" alt="Версия для слабовидящих сайта Роскосмоса: цвета инвертированы, часть текстов слилась с фоном.">
+    {% responsiveImage "./src/articles/a11y-and-law/images/special-roscosmos-site.png", "Версия для слабовидящих сайта Роскосмоса: цвета инвертированы, часть текстов слилась с фоном." %}
     <figcaption>
         Версия для слабовидящих <a href="https://www.roscosmos.ru/">сайта Роскосмоса</a>.
     </figcaption>
@@ -610,7 +610,7 @@ ADA — это закон, который защищает права люде�
 ГОСТ Р 52872–2012 Интернет-ресурсы. Требования доступности для инвалидов по зрению
 
 <figure>
-    <img src="images/snellen-chart.jpg" alt="Таблица для проверки остроты зрения.">
+    {% responsiveImage "./src/articles/a11y-and-law/images/snellen-chart.jpg", "Таблица для проверки остроты зрения." %}
     <figcaption>
         Фото <a href="https://unsplash.com/@dtravisphd">David Travis</a>.
     </figcaption>

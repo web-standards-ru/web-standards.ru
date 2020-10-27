@@ -14,7 +14,7 @@ preview: 'С помощью свойства text-transform можно меня
 Что происходит при копировании текста с `text-transform`.
 
 <figure>
-    <img src="images/1.jpg" alt="">
+    {% responsiveImage "./src/articles/text-transform-and-copy/images/1.jpg", "" %}
     <figcaption>
         Alphabet, Le Bistronome (CC BY-NC 2.0)
     </figcaption>
@@ -47,7 +47,7 @@ preview: 'С помощью свойства text-transform можно меня
 В результате обсуждений в рабочей группе, в 2018 году было принято решение: [дополнить стандарт CSS](https://github.com/w3c/csswg-drafts/commit/f736e8e1b9812a9e854d03328a0acca827310801) указанием, что свойство `text-transform` не должно влиять на копируемый текст.
 
 <figure>
-    <img src="images/2.png" alt="">
+    {% responsiveImage "./src/articles/text-transform-and-copy/images/2.png", "" %}
     <figcaption>
         Коммит, который вносит изменения в стандарт.
     </figcaption>

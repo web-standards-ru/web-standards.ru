@@ -142,7 +142,7 @@ primary.load().then(function () {
 Перед тем как браузер сможет показать веб-шрифт, он должен скачать его по сети. Обычно это занимает какое-то время, и каждый браузер по-разному ведёт себя во время скачивания веб-шрифтов: некоторые из них скрывают текст, а другие сразу же показывают его с помощью запасного шрифта. Обычно это называют _мельканием невидимого текста_ (Flash Of Invisible Text, FOIT) и _мельканием текста без стилей_ (Flash Of Unstyled Text, FOUT).
 
 <figure>
-    <img src="images/fout-foit.png" alt="FOUT и FOIT.">
+    {% responsiveImage "./src/articles/web-font-loading-patterns/images/fout-foit.png", "FOUT и FOIT." %}
     <figcaption>FOUT и FOIT.</figcaption>
 </figure>
 

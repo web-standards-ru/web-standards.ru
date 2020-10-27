@@ -182,14 +182,14 @@ preview: 'При разработке обычных сайтов заморач
 Тестируем изначальный вариант лендинга на [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights):
 
 <figure>
-    <img src="images/4.jpg" alt="Результат работы PageSpeed.">
+    {% responsiveImage "./src/articles/critical-and-progressive-css/images/4.jpg", "Результат работы PageSpeed." %}
     <figcaption>PageSpeed: 74 балла из 100.</figcaption>
 </figure>
 
 По результатам тестирования видно, что стили шрифтов и основные стили блокируют рендеринг страницы. Применив прогрессивную загрузку на стили сайта, мы будем иметь те же 74 из 100 баллов, но если сделать загрузку шрифтов асинхронной, то результат уже совсем другой:
 
 <figure>
-    <img src="images/5.jpg" alt="Результат работы PageSpeed.">
+    {% responsiveImage "./src/articles/critical-and-progressive-css/images/5.jpg", "Результат работы PageSpeed." %}
     <figcaption>PageSpeed: 98 баллов из 100.</figcaption>
 </figure>
 
@@ -202,7 +202,7 @@ preview: 'При разработке обычных сайтов заморач
 Можно увидеть, что второй вариант отображает первый кадр раньше, чем первый, при этом третий вариант делает это еще раньше со значительным отрывом.
 
 <figure>
-    <img src="images/6.jpg" alt="График загрузки контента.">
+    {% responsiveImage "./src/articles/critical-and-progressive-css/images/6.jpg", "График загрузки контента." %}
     <figcaption>Сравнение подходов к загрузке на WebPageTest.</figcaption>
 </figure>
 

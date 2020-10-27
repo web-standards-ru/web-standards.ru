@@ -200,6 +200,7 @@
 .content > img,
 .content > video,
 .content figure > img,
+.content picture > img,
 .content figure > video,
 .content a > img {
     display: block;

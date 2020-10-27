@@ -335,8 +335,8 @@ jQuery-плагин для валидации форм был стабильны
 Джейк Арчибальд подготовил отличные слайды, которые показывают проблему — `setInterval` не сделает анимацию плавной, и достаточно скоро начнет пропускать кадры:
 
 <figure>
-    <img src="images/set-timeout.jpg" alt="">
-    <img src="images/request-animation-frame.jpg" alt="">
+    {% responsiveImage "./src/articles/jquery-now-what/images/set-timeout.jpg", "" %}
+    {% responsiveImage "./src/articles/jquery-now-what/images/request-animation-frame.jpg", "" %}
 </figure>
 
 Кроме того, CSS-анимации проходят через тот же таймер, что и `requestAnimationFrame` — его мы и хотим использовать.

@@ -286,86 +286,80 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
 
 Я замерил размеры бандла и скорости загрузки до и после применения дифференциальной загрузки вместе с транспиляцией зависимостей, на примере сайта [DevFest Siberia 2019](https://github.com/TrigenSoftware/DevFest-Siberia):
 
-<div class="content__table-wrapper">
-    <table>
-        <caption>Размеры бандла</caption>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Без сжатия</th>
-                <th>После сжатия</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Без DSL</td>
-                <td>1,08 Мб</td>
-                <td>292 Кб</td>
-            </tr>
-            <tr>
-                <td>С плагином BDSL для Webpack</td>
-                <td>0,80 Мб</td>
-                <td>218 Кб</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table>
+    <caption>Размеры бандла</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Без сжатия</th>
+            <th>После сжатия</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Без DSL</td>
+            <td>1,08 Мб</td>
+            <td>292 Кб</td>
+        </tr>
+        <tr>
+            <td>С плагином BDSL для Webpack</td>
+            <td>0,80 Мб</td>
+            <td>218 Кб</td>
+        </tr>
+    </tbody>
+</table>
 
-<div class="content__table-wrapper">
-    <table>
-        <caption>Среднее время загрузки, мс</caption>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Обычный интернет</th>
-                <th>Обычный 4G</th>
-                <th>Хороший 3G</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Без DSL</td>
-                <td>1,511</td>
-                <td>4,240</td>
-                <td>8,696</td>
-            </tr>
-            <tr>
-                <td>С плагином BDSL для Webpack</td>
-                <td>1,594</td>
-                <td>3,409</td>
-                <td>8,561</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table>
+    <caption>Среднее время загрузки, мс</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Обычный интернет</th>
+            <th>Обычный 4G</th>
+            <th>Хороший 3G</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Без DSL</td>
+            <td>1,511</td>
+            <td>4,240</td>
+            <td>8,696</td>
+        </tr>
+        <tr>
+            <td>С плагином BDSL для Webpack</td>
+            <td>1,594</td>
+            <td>3,409</td>
+            <td>8,561</td>
+        </tr>
+    </tbody>
+</table>
 
-<div class="content__table-wrapper">
-    <table>
-        <caption>Лучшее время загрузки, мс</caption>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Обычный интернет</th>
-                <th>Обычный 4G</th>
-                <th>Хороший 3G</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Без DSL</td>
-                <td>1,266</td>
-                <td>3,366</td>
-                <td>8,349</td>
-            </tr>
-            <tr>
-                <td>С плагином BDSL для Webpack</td>
-                <td>1,143</td>
-                <td>3,142</td>
-                <td>6,673</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table>
+    <caption>Лучшее время загрузки, мс</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Обычный интернет</th>
+            <th>Обычный 4G</th>
+            <th>Хороший 3G</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Без DSL</td>
+            <td>1,266</td>
+            <td>3,366</td>
+            <td>8,349</td>
+        </tr>
+        <tr>
+            <td>С плагином BDSL для Webpack</td>
+            <td>1,143</td>
+            <td>3,142</td>
+            <td>6,673</td>
+        </tr>
+    </tbody>
+</table>
 
 В итоге получился прирост скорости загрузки и размер бандла уменьшился на ≈20%, [читайте более подробный отчёт](https://gist.github.com/dangreen/5427c5f2158c357bf0b15d38270508ac). Также вы можете самостоятельно провести подобные замеры — необходимый скрипт есть [в репозитории bdsl-webpack-plugin](https://github.com/TrigenSoftware/bdsl-webpack-plugin#metrics).
 

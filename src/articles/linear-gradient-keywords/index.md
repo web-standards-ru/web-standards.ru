@@ -37,7 +37,7 @@ linear-gradient(45deg, green 50%, lightblue 50%)
 ```
 
 <figure>
-    <img src="images/pic-1.png" alt="">
+    {% responsiveImage "./src/articles/linear-gradient-keywords/images/pic-1.png", "" %}
     <figcaption>Рисунок 1.</figcaption>
 </figure>
 
@@ -54,7 +54,7 @@ linear-gradient(bottom left, green 50%, lightblue 50%)
 ```
 
 <figure>
-    <img src="images/pic-2.png" alt="">
+    {% responsiveImage "./src/articles/linear-gradient-keywords/images/pic-2.png", "" %}
     <figcaption>Рисунок 2.</figcaption>
 </figure>
 
@@ -71,7 +71,7 @@ linear-gradient(to top right, green 50%, lightblue 50%)
 ```
 
 <figure>
-    <img src="images/pic-3.png" alt="">
+    {% responsiveImage "./src/articles/linear-gradient-keywords/images/pic-3.png", "" %}
     <figcaption>Рисунок 3.</figcaption>
 </figure>
 

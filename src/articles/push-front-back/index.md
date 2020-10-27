@@ -20,7 +20,7 @@ preview: 'В этой статье я рассказываю о технич�
 
 _Если вы хотите углубиться в исходный код, то смотрите в [GitHub-репозиторий](https://github.com/justmarkup/demos/tree/gh-pages/push-notifications) и на [пример](https://push-notifications-vwursywdxa.now.sh), демонстрирующий его работу._
 
-<img src="images/1.jpg" alt="">
+{% responsiveImage "./src/articles/push-front-back/images/1.jpg", "" %}
 
 ## Фронтенд
 

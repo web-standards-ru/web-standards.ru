@@ -32,7 +32,7 @@ hero:
 Первый полуавтоматический тест, который я выполняю — проверяю, есть ли у изображения описание и правильное ли оно. Для этого я использую браузерное расширение [Web Developer](https://addons.mozilla.org/de/firefox/addon/web-developer/). С его помощью можно выделить картинки, у которых нет атрибута `alt`, а также вывести значение `alt` рядом с изображением.
 
 <figure>
-    <img src="images/web-developer-extension.jpg" alt="">
+    {% responsiveImage "./src/articles/six-things-i-check/images/web-developer-extension.jpg", "" %}
     <figcaption>
         Раздел настроек изображений в панели инструментов расширения Web Developer.
     </figcaption>
@@ -48,7 +48,7 @@ hero:
 - Хорошо ли структурирован ваш документ?
 
 <figure>
-    <img src="images/disabled-css-on-page.jpg" alt="">
+    {% responsiveImage "./src/articles/six-things-i-check/images/disabled-css-on-page.jpg", "" %}
     <figcaption>
         Страница расписания на сайте <a href="https://webclerks.at/">webclerks.at</a> с отключённым CSS.
     </figcaption>
@@ -59,7 +59,7 @@ hero:
 Вы можете использовать [W3C Markup Validation Service](https://validator.w3.org/) для проверки разметки. Валидатор не отлавливает все ошибки, но это в любом случае хороший способ обнаружения очевидных багов в вашем HTML, например, дублирующихся `id` или сломанных ARIA-атрибутов.
 
 <figure>
-    <img src="images/w3c-validator-result-page.jpg" alt="">
+    {% responsiveImage "./src/articles/six-things-i-check/images/w3c-validator-result-page.jpg", "" %}
     <figcaption>
         Ошибки на странице результатов W3C-валидатора.
     </figcaption>
@@ -70,7 +70,7 @@ hero:
 [Большое значение имеет хорошо продуманная структура документа](https://webaim.org/projects/screenreadersurvey8/#finding). Она должна начинаться с `<h1>`, за которым в иерархическом порядке следуют `<h2>`, `<h3>`, и т.д. Это отлично подходит для поисковых систем и пользователей скринридеров, ведь так они могут перемещаться по вашему сайту, прыгая по заголовкам.
 
 <figure>
-    <img src="images/headers-list.jpg" alt="">
+    {% responsiveImage "./src/articles/six-things-i-check/images/headers-list.jpg", "" %}
     <figcaption>
         Список заголовоков на сайте <a href="https://webclerks.at/">webclerks.at</a> (скриншот из tota11y).
     </figcaption>
@@ -92,7 +92,7 @@ hero:
 </blockquote>
 
 <figure>
-    <img src="images/smashing-magazine-monochrome.png" alt="">
+    {% responsiveImage "./src/articles/six-things-i-check/images/smashing-magazine-monochrome.png", "" %}
     <figcaption>
         Сайт <a href="https://www.smashingmagazine.com/">The Smashing Magazine</a> в монохромном режиме.
     </figcaption>

@@ -4,7 +4,8 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
+    // config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
+    config.addPassthroughCopy('src/**/*.(html|gif|svg|mp4|webm|zip)');
 
     // Markdown Options
 
@@ -261,6 +262,54 @@ module.exports = function(config) {
         }();
     });
 
+    // TODO Files:
+    // - path-of-tutor -> Images already are responsive
+    // - hero -> src в шапке .md
+
+    // Минусы:
+    //     - {{}} в тексте статьи надо оборачивать {% raw %}...{% endraw %}, иначе njk будет ожидать переменную
+                // Это потому так, что markdownTemplateEngine - njk. Текст статьи переводится из njk в md, потом в html.
+                // В article/*.md будет сразу два языка.
+    //     - для изображений нужно указывать полный путь
+    //     - формат изображений и семантика в статьях встречается разная
+
+    config.addAsyncShortcode("responsiveImage", async (src, alt = "", rest = {}) => {
+        const Image = require("@11ty/eleventy-img");
+
+        const outputDir = "./dist/" + src.match(/articles\/([^\/]*\/){2}/)[0];
+        const widths = [600, 1200, 2000].concat(src.endsWith('.jpg') ? [null] : [])
+
+        const stats = await Image(src, {
+            // widths: [600, 1200],
+            // widths: [600, 1200, 2000],
+            widths,
+            formats: ["webp", "jpg"],
+            urlPath: "images/",
+            outputDir,
+        });
+
+        const props = stats["jpg"][0];
+        const entries = Object.values(stats)[0];
+
+        const sizes = "100vw";
+        const srcset = entries.map((entry) => `${entry.url} ${entry.width}w`).join(", ");
+        const restAttrs = Object.entries(rest).reduce((a, c) => a + ` ${c[0]}="${c[1]}"`, 'loading="lazy"');
+
+        return `
+            <picture>
+                <source
+                    sizes="${sizes}"
+                    srcset="${srcset}"
+                    type="image/${entries[0].format}">
+                <img
+                    src="${props.url}"
+                    ${restAttrs}
+                    alt="${alt}"
+                    sizes="${sizes}"
+                    srcet="${srcset.replace(/\.\w+/g, ".jpg")}">
+            </picture>`;
+    });
+
     return {
         dir: {
             input: 'src',
@@ -270,7 +319,7 @@ module.exports = function(config) {
             data: 'data',
         },
         dataTemplateEngine: 'njk',
-        markdownTemplateEngine: false,
+        markdownTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
         templateFormats: [

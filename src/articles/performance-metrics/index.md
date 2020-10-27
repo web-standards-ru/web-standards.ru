@@ -28,7 +28,7 @@ hero:
 Если взглянуть на [трейс сайта Reddit](https://chromedevtools.github.io/timeline-viewer/?loadTimelineFromURL=drive://0ByCYpYcHF12_YjBGUTlJR2gzcHc) (Chrome DevTools помогает нам, помечая эти точки синей и красной линиями), мы можем увидеть почему эти метрики не так полезны, как хотелось бы.
 
 <figure>
-    <img src="images/2.png" alt="">
+    {% responsiveImage "./src/articles/performance-metrics/images/2.png", "" %}
     <figcaption>
         Трейс сайта Reddit.
     </figcaption>
@@ -44,7 +44,7 @@ hero:
 
 Рассмотрим график: ось X показывает время загрузки, ось Y — количество пользователей, которые ожидали какое-то время. Далеко не для всех пользователей загрузка страницы происходит меньше, чем за 2 секунды.
 
-<img src="images/3.png" alt="">
+{% responsiveImage "./src/articles/performance-metrics/images/3.png", "" %}
 
 Если вернуться к нашему трейсу, то событие load, которое заняло 17 секунд, ничего нам не говорит о том, как пользователь воспринял загрузку страницы. Что он видел все эти 17 секунд: пустую страницу, частично загруженную? Был ли загруженный контент заблокирован, так что пользователь не мог поставить курсор в поле или прокрутить страницу?
 
@@ -69,7 +69,7 @@ hero:
 
 Давайте начнем разбираться с каждой из метрик на примере трейса Reddit, который мы упоминали выше.
 
-<img src="images/4.png" alt="">
+{% responsiveImage "./src/articles/performance-metrics/images/4.png", "" %}
 
 ## Первая отрисовка
 
@@ -78,7 +78,7 @@ First Paint (FP)
 Я немного слукавил, говоря что у нас есть только две метрики. Chrome DevTools также предоставляют ещё одну метрку — первая отрисовка. Это момент когда страница только начала отрисовываться. Говоря другими словами — это время, когда пользователь видит пустую страницу впервые. Подробнее читайте [в спецификации](https://github.com/w3c/paint-timing).
 
 <figure>
-    <img src="images/5.png" alt="">
+    {% responsiveImage "./src/articles/performance-metrics/images/5.png", "" %}
     <figcaption>
         Первая отрисовка сайта <a href="https://www.msn.com/">MSN</a>.
     </figcaption>
@@ -87,7 +87,7 @@ First Paint (FP)
 Чтобы понять, как это работает, можно взглянуть на графический слой (GraphicsLayer) в Chromium.
 
 <figure>
-    <img src="images/6.png" alt="">
+    {% responsiveImage "./src/articles/performance-metrics/images/6.png", "" %}
     <figcaption>
         Упрощённый графический слой.
     </figcaption>
@@ -112,7 +112,7 @@ First Contentful Paint (FCP)
 В результате пользователь может задать вопрос: что происходит? Начала ли страница загружаться после того, как я ввел адрес в строке браузера и нажал <kbd>Enter</kbd>?
 
 <figure>
-    <img src="images/7.png" alt="">
+    {% responsiveImage "./src/articles/performance-metrics/images/7.png", "" %}
     <figcaption>
         Первая отрисовка и первая полезная отрисовка.
     </figcaption>
@@ -136,7 +136,7 @@ First Meaningful Paint (FMP)
 Это время, когда весь главный контент появился на странице. В результате пользователь может оценить: это то, что мне нужно?
 
 <figure>
-    <img src="images/8.png" alt="">
+    {% responsiveImage "./src/articles/performance-metrics/images/8.png", "" %}
     <figcaption>
         Первая отрисовка, первая отрисовка контента, первая значимая отрисовка.
     </figcaption>
@@ -187,7 +187,7 @@ Estimated Input Latency
 
 API для длинных задач реализован в Chrome и используется для расчета занятости главного потока.
 
-<img src="images/9.png" alt="">
+{% responsiveImage "./src/articles/performance-metrics/images/9.png", "" %}
 
 Возвращаясь к задержке ввода: пользователи ожидают, что страница будет реагировать без задержек, но если главный поток занят обработкой каждой длинной задачи, то станет заметно замедление реакции на ввод. Ощущения от работы с приложением довольно важны, и чтобы избавиться от таких проблем, я рекомендую прочитать «[Measure Performance with the RAIL Model](https://developers.google.com/web/fundamentals/performance/rail)».
 
@@ -215,7 +215,7 @@ First Interactive
 
 Time to First Consistently Interactive (TTCI)
 
-<img src="images/10.png" alt="">
+{% responsiveImage "./src/articles/performance-metrics/images/10.png", "" %}
 
 Используя реверсивный анализ, который подразумевает анализ трейса с конца, находится период, когда загрузка ресурсов неактивна на протяжении 5 секунд и в этот период отсутствуют длинные задачи. Такой период называется тихое окно (quiet window). Время после тихого окна и перед первой, с конца, длинной задачей будет временем до первого последовательного взаимодействия.
 
@@ -223,7 +223,7 @@ Time to First Consistently Interactive (TTCI)
 
 Time to First Interactive (TTFI)
 
-<img src="images/11.png" alt="">
+{% responsiveImage "./src/articles/performance-metrics/images/11.png", "" %}
 
 Определение этой метрики отличается от первого последовательного взаимодействия. Трейс анализируется со старта и до конца. После того, как произошла первая значимая отрисовка, находят тихое окно в 3 секунды. Этого достаточно, чтобы сказать, что страница интерактивна. Но в трейсе могут присутствовать одинокие задачи во время или после тихого окна.
 
@@ -236,7 +236,7 @@ Time to First Interactive (TTFI)
 
 Они полезны когда главный поток между метриками визуально готов и первое взаимодействие занимает достаточно долго:
 
-<img src="images/12.png" alt="">
+{% responsiveImage "./src/articles/performance-metrics/images/12.png", "" %}
 
 Это одно из сложных узких мест которые приходится исправлять. Для каждого случая оно индивидуально, потому я рекомендую почитать [руководства Google об этом](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/), чтобы понимать как избежать таких проблем.
 

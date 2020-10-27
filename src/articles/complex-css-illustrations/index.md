@@ -38,7 +38,7 @@ CSS-иллюстрация требует много времени и прак
 Два фантастических CSS-художника — Бен Эванс и Диана Смит. Оба недавно рассказывали о затратах времени на CSS-иллюстрации.
 
 <figure>
-    <img src="images/painting.jpg" alt="Изображение женщины, пристально смотрящей вверх и прижимающей руки к груди, напоминающее классическую картину.">
+    {% responsiveImage "./src/articles/complex-css-illustrations/images/painting.jpg", "Изображение женщины, пристально смотрящей вверх и прижимающей руки к груди, напоминающее классическую картину." %}
     <figcaption>
         Создание PureCSS Gaze заняло у Дианы два долгих уикенда. Она рассказывает о некоторых своих техниках <a href="https://www.vice.com/en_us/article/9kgx7p/painting-made-with-code-html-pure-css-browser-art-diana-smith">здесь</a>. «Если у вас есть время, терпение и запал, то это, безусловно, возможно», — говорит она.
     </figcaption>
@@ -51,7 +51,7 @@ CSS-иллюстрация требует много времени и прак
 Это требует времени!
 
 <figure>
-    <img src="images/tweets/cup.jpg" alt="Фотореалистичное изображение белой чашки на белом столе.">
+    {% responsiveImage "./src/articles/complex-css-illustrations/images/tweets/cup.jpg", "Фотореалистичное изображение белой чашки на белом столе." %}
     <figcaption>
         <a href="https://twitter.com/jh3yy/status/1259487385554911233">CSS-иллюстрация</a>.
     </figcaption>

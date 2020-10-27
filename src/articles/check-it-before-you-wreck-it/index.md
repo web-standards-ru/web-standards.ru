@@ -23,7 +23,7 @@ preview: 'Майк Смит известный как @sideshowbarker из W3C�
 **Во-первых, расскажите нам немного о том, чем вы занимаетесь и над чем работаете**
 
 <figure>
-    <img src="images/mike.jpg" alt="Майк™ Смит.">
+    {% responsiveImage "./src/articles/check-it-before-you-wreck-it/images/mike.jpg", "Майк™ Смит." %}
     <figcaption>Майк™ Смит — заместитель директора @W3C: вариант либерального подхода к работе</figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ preview: 'Майк Смит известный как @sideshowbarker из W3C�
 
 <figure>
     <a href="https://validator.w3.org/nu/">
-        <img src="images/nu-markup.png" alt="">
+        {% responsiveImage "./src/articles/check-it-before-you-wreck-it/images/nu-markup.png", "" %}
     </a>
     <figcaption>Новая проверка разметки.</figcaption>
 </figure>
@@ -42,7 +42,7 @@ DTD-шки высечены на каменных плитах. И поэто�
 
 <figure>
     <a href="https://validator.w3.org/">
-        <img src="images/w3c-validator.png" alt="">
+        {% responsiveImage "./src/articles/check-it-before-you-wreck-it/images/w3c-validator.png", "" %}
     </a>
     <figcaption>Валидатор W3C.</figcaption>
 </figure>

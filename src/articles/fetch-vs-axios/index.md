@@ -37,7 +37,7 @@ fetch(url)
 ```
 
 <figure>
-    <img src="images/2.png" alt="">
+    {% responsiveImage "./src/articles/fetch-vs-axios/images/2.png", "" %}
     <figcaption>Ответ метода <code>fetch()</code> по умолчанию.</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ fetch(url)
 ```
 
 <figure>
-    <img src="images/3.png" alt="">
+    {% responsiveImage "./src/articles/fetch-vs-axios/images/3.png", "" %}
     <figcaption>Результат после передачи в <code>json()</code>.</figcaption>
 </figure>
 
@@ -80,7 +80,7 @@ axios.get(url)
     .then(response => console.log(response));
 ```
 
-<img src="images/4.png" alt="">
+{% responsiveImage "./src/articles/fetch-vs-axios/images/4.png", "" %}
 
 Таким образом, с помощью Axios можно обойтись без передачи результатов HTTP-запроса в метод `json()`. Axios возвращает именно тот объект с данными, который мы ожидаем.
 
@@ -98,11 +98,11 @@ fetch(url)
 
 Для наглядности выведем в консоль `BAD` в случае, если ошибка обрабатывается в блоке `catch()`, в противном случае выведем `GOOD`.
 
-<img src="images/5.png" alt="">
+{% responsiveImage "./src/articles/fetch-vs-axios/images/5.png", "" %}
 
 Получаем код ответа 400, но, как вы можете видеть по строке `GOOD` в консоли, выполнился `then()`. Как же Axios справляется с этим? Так, как мы и ожидали: выполняется блок `сatch()` и мы получаем необходимый нам вид ошибки.
 
-<img src="images/6.png" alt="">
+{% responsiveImage "./src/articles/fetch-vs-axios/images/6.png", "" %}
 
 Строка `BAD` и ошибка выводятся в консоль.
 

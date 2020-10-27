@@ -40,7 +40,7 @@ _В оригинальной статье в заголовке и во вс
 Пример начального значения из MDN:
 
 <figure>
-    <img src="images/line-height.png" alt="Пример указания значения `initial` на MDN.">
+    {% responsiveImage "./src/articles/inherit-initial-unset-revert/images/line-height.png", "Пример указания значения `initial` на MDN." %}
     <figcaption>Начальное значение свойства <code>line-height</code> — это <code>normal</code>.</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ _В оригинальной статье в заголовке и во вс
 Пример браузерных стилей:
 
 <figure>
-    <img src="images/h1.png" alt="Пример браузерных стилей в инспекторе браузера.">
+    {% responsiveImage "./src/articles/inherit-initial-unset-revert/images/h1.png", "Пример браузерных стилей в инспекторе браузера." %}
     <figcaption>Стили браузера Chrome, применяемые к элементу <code>&lt;h1&gt;</code>.</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ div.box {
 [Пример на CodePen значения `initial` для свойства `display` элемента `<div>`](https://codepen.io/elad2412/pen/KKKqMyZ).
 
 <figure>
-    <img src="images/display.png" alt="">
+    {% responsiveImage "./src/articles/inherit-initial-unset-revert/images/display.png", "" %}
     <figcaption>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">Информация об <code>initial</code>-значении свойства <code>display</code> на MDN</a>.
     </figcaption>
@@ -100,7 +100,7 @@ div.box {
 Свойства, которые затрагивают дочерние элементы. **Все свойства, которые влияют на текст, имеют такое естественное поведение.** Например, если мы зададим `font-size` элементу `<html>`, то он будет применяться ко всем дочерним элементам, пока вы не зададите другой `font-size` какому-нибудь из них.
 
 <figure>
-    <img src="images/font-size.png" alt="">
+    {% responsiveImage "./src/articles/inherit-initial-unset-revert/images/font-size.png", "" %}
     <figcaption>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">Информация о наследуемости свойства font-size на MDN</a>.
     </figcaption>
@@ -111,7 +111,7 @@ div.box {
 Все остальные свойства, которые влияют только на элемент, для которого они заданы. **Это все свойства, которые не относятся к оформлению текста**. Например, если вы зададите border на родительском элементе, то он не будет задан на дочернем.
 
 <figure>
-    <img src="images/border.png" alt="">
+    {% responsiveImage "./src/articles/inherit-initial-unset-revert/images/border.png", "" %}
     <figcaption>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">Информация о наследуемости свойства <code>border</code> на MDN</a>.
     </figcaption>
@@ -164,7 +164,7 @@ div.box {
 Но что, если мы хотим сбросить значение свойства до первоначально заданных браузером значений, а не до значений по умолчанию? Например, вернуть значение свойства `display` элемента `<div>` к значению `block` (это стили браузера), а не к значению `inline` (это базовые стили CSS).
 
 <figure>
-    <img src="images/div.png" alt="">
+    {% responsiveImage "./src/articles/inherit-initial-unset-revert/images/div.png", "" %}
     <figcaption>Браузерные стили для тега div</figcaption>
 </figure>
 

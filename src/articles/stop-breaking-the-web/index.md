@@ -24,7 +24,7 @@ preview: 'В этой статье я собираюсь громко заяв
 Скриншот ниже — всего лишь рекламный трюк: попытка захватить технический медиа-мир врасплох. Но тот факт, что _мы не уверены_, трюк это или решение всерьёз, заставляет меня сжиматься от страха за будущее веба.
 
 <figure>
-    <img src="images/tacobell.jpg" alt="Реклама Taco Bell.">
+    {% responsiveImage "./src/articles/stop-breaking-the-web/images/tacobell.jpg", "Реклама Taco Bell." %}
     <figcaption>Taco Bell <em>#onlyintheapp</em> — действительно ли это <strong>ловкий рекламный трюк, чтобы спровоцировать загрузку приложения, или это симптом того, что веб истекает кровью?</strong></figcaption>
 </figure>
 

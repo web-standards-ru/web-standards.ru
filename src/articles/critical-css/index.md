@@ -22,7 +22,7 @@ preview: 'Браузер должен скачать и распарсить CS
 **Ключевой термин**: критический CSS — это метод, который извлекает CSS для контента «над сгибом» _(above the fold — термин из газетного дизайна — прим. редактора),_ чтобы максимально быстро показать его пользователю.
 
 <figure>
-    <img src="images/above-the-fold.png" alt="Над сгибом и под сгибом.">
+    {% responsiveImage "./src/articles/critical-css/images/above-the-fold.png", "Над сгибом и под сгибом." %}
     <figcaption>
         Над сгибом и под сгибом.
     </figcaption>
@@ -32,15 +32,15 @@ preview: 'Браузер должен скачать и распарсить CS
 
 Критический CSS можно заинлайнить внутри `<head>` прямо в HTML-документе. Это позволит избежать дополнительного запроса к серверу для получения этих стилей. Остальной CSS может быть загружен асинхронно.
 
-<img src="images/inline-critical-css.png" alt="">
+{% responsiveImage "./src/articles/critical-css/images/inline-critical-css.png", "" %}
 
 Увеличение времени рендеринга может существенно повлиять на [воспринимаемую производительность](https://developers.google.com/web/fundamentals/performance/rail#ux), особенно при плохом соединении. В мобильных сетях высокая задержка является проблемой независимо от пропускной способности.
 
-<img src="images/mobile-bandwith-delay.png" alt="">
+{% responsiveImage "./src/articles/critical-css/images/mobile-bandwith-delay.png", "" %}
 
 Если у вас плохой [First Contentful Paint](https://web.dev/first-contentful-paint/) (FCP) и вы видите рекомендацию «Устранить ресурсы, блокирующие рендеринг» в отчёте Lighthouse, то стоит попробовать методику критического CSS.
 
-<img src="images/render-blocking-example.png" alt="">
+{% responsiveImage "./src/articles/critical-css/images/render-blocking-example.png", "" %}
 
 ### **Подводные камни!**
 

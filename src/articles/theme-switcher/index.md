@@ -89,14 +89,14 @@ img:not([src*=".svg"]), video {
 Получилось 153 байта без сжатия: об этом позаботилась поддержка тёмных тем. Если вы всё ещё не не уверены, то вот стили, которые используются на популярных новостных сайтах:
 
 <figure>
-    <img src="images/the-boston-globe-and-independent.png" alt="">
+    {% responsiveImage "./src/articles/theme-switcher/images/the-boston-globe-and-independent.png", "" %}
     <figcaption>
         The Boston Globe и The Independent.
     </figcaption>
 </figure>
 
 <figure>
-    <img src="images/the-ny-times-and-private-eye.png" alt="">
+    {% responsiveImage "./src/articles/theme-switcher/images/the-ny-times-and-private-eye.png", "" %}
     <figcaption>
         The New York Times и Private Eye.
     </figcaption>
@@ -235,7 +235,7 @@ return (
 ```
 
 <figure>
-    <img src="images/aria-pressed-state-example.png" alt="">
+    {% responsiveImage "./src/articles/theme-switcher/images/aria-pressed-state-example.png", "" %}
     <figcaption>
         Конечно, когда выбрана тёмная тема, то сама кнопка тоже инвертирована.
     </figcaption>

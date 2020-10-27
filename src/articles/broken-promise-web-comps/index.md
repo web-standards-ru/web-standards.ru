@@ -79,7 +79,7 @@ Reaсt позволяет следующее:
 
 В 2017 спецификация веб-компонентов всё ещё [в разработке](https://caniuse.com/#search=web%20components), и это несмотря на выход двух версий для каждого из двух базовых стандартов. На момент написания статьи (март 2017) ситуация с поддержкой такая:
 
-<img src="images/caniuse.jpg" alt="Таблица поддержки веб-компонентов с «Can I use…».">
+{% responsiveImage "./src/articles/broken-promise-web-comps/images/caniuse.jpg", "Таблица поддержки веб-компонентов с «Can I use…»." %}
 
 ## Так о каких невыполненных обещаниях идёт речь?
 
@@ -98,7 +98,7 @@ Polymer демонстрирует главный минус веб-компон
 Разберём следующий код на React:
 
 ```jsx
-<MyComponent style={{border: '1px solid gray'}}>
+<MyComponent style={% raw %}{{border: '1px solid gray'}}{% endraw %}>
     {
         ['Hello', 'world'].map((text) => <p>{text}</p>)
     }
@@ -177,7 +177,7 @@ Ad infinitum.
 
 Чтобы разобраться, пройдитесь по [data system](https://www.polymer-project.org/2.0/docs/devguide/data-system) из Polymer. Здесь я покажу только несколько примеров:
 
-**Обратите внимание:** `[[]]`, `{{}}`, `$=` и другие — не являются частью спецификации веб-компонентов.
+**Обратите внимание:** `[[]]`, {% raw %}`{{}}`{% endraw %}, `$=` и другие — не являются частью спецификации веб-компонентов.
 
 ```jsx
 <template>
@@ -208,7 +208,7 @@ static get properties() {
 <dom-module id="x-custom">
     <template>
         <span>
-            {{translate('Hello\, nice to meet you', first, last)}}
+            {% raw %}{{translate('Hello\, nice to meet you', first, last)}}{% endraw %}
         </span>
     </template>
 </dom-module>
