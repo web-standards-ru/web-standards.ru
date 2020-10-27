@@ -19,7 +19,7 @@ permalink: articles/feed/index.xml
         {%- endfor -%}
 
         {% set anchors = r/<a class="article__heading-anchor".*a>/g %}
-        
+
         {%- for article in collections.article | reverse  %}
             <item>
                 <title>{{ article.data.title }}</title>
