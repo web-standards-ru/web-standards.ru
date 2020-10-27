@@ -8,11 +8,22 @@ module.exports = function(config) {
 
     // Markdown Options
 
+    const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
+
     const md = require('markdown-it')({
         html: true,
         highlight: function (str, lang) {
             return `<pre><code tabindex="0"${lang ? ` class="language-${lang}"` : ''}>${md.utils.escapeHtml(str)}</code></pre>`;
         },
+    }).use(markdownItAnchor, {
+        permalink: true,
+        permalinkClass: 'article__heading-anchor',
+        permalinkSymbol: '#',
+        permalinkSpace: false,
+        permalinkAttrs: () => ({
+            'aria-label': 'Этот заголовок',
+        }),
+        slugify: () => 'section',
     }).use(require('markdown-it-multimd-table'));
 
     md.renderer.rules = { ...md.renderer.rules,

@@ -18,13 +18,15 @@ permalink: articles/feed/index.xml
             <lastBuildDate>{{ article.date.toUTCString() }}</lastBuildDate>
         {%- endfor -%}
 
-        {%- for article in collections.article | reverse %}
+        {% set anchors = r/<a class="article__heading-anchor".*a>/g %}
+        
+        {%- for article in collections.article | reverse  %}
             <item>
                 <title>{{ article.data.title }}</title>
                 <link href="{{ domain }}{{ article.url }}"/>
                 <description>
                     <![CDATA[
-                        {{ article | fixLinks | safe }}
+                        {{ article | fixLinks | replace(anchors, "") | safe }}
                     ]]>
                 </description>
                 <pubDate>{{ article.date.toUTCString() }}</pubDate>
