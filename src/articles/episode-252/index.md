@@ -11,6 +11,19 @@ tags:
 
 Перед вами расшифровка 252 выпуска подкаста «Веб-стандарты», который вышел 19 октября 2020. Если вы хотите его именно послушать, то вы можете сделать это на [Ютубе](https://youtu.be/v1RzZEYJmBk), [Google Podcasts](https://podcasts.google.com/feed/aHR0cHM6Ly93ZWItc3RhbmRhcmRzLnJ1L3BvZGNhc3QvZmVlZC8/episode/aHR0cHM6Ly93ZWItc3RhbmRhcmRzLnJ1L3BvZGNhc3QvZXBpc29kZXMvMjUyLm1wMw?sa=X\&ved=0CAUQkfYCahcKEwjA59Du-dXsAhUAAAAAHQAAAAAQAQ), [Apple Podcasts](https://podcasts.apple.com/podcast/id1080500016?i=1000495250597), [Яндекс.Музыке](https://music.yandex.ru/album/6245956/track/72546462) или на любой другой платформе, где можно слушать подкасты. Но если вам приятнее будет почитать — пожалуйста! А если вы вдруг найдёте опечатки или неточности, то да — [мы будем рады пулреквесту](https://github.com/web-standards-ru/web-standards.ru/blob/master/src/articles/a-content-slider/index.md).
 
+## Темы
+
+- [События](#section-3)
+- [Опрос MDN](#section-4)
+- [Открытые приоритеты Igalia](#section-5)
+- [Новинки Npm 7](#section-6)
+- [React vs WordPress](#section-7)
+- [Уже Webpack 5](#section-8)
+- [Что такое Rome](#section-9)
+- [Инструмент будущего](#section-10)
+
+## Интро
+
 **Никита Дубко:** Привет. С вами 252-й выпуск подкаста «Веб-стандарты» и его постоянные ведущие Никита Дубко из «Яндекса»…
 
 **Вадим Макеев:** И Вадим Макеев из HTML Academy.
