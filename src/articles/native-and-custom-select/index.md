@@ -1,3 +1,25 @@
+---
+title: 'Ищем баланс между нативным и кастомным селектом'
+date: 2020-10-19
+author: sandrina-pereira
+source:
+    title: 'Striking a Balance Between Native and Custom Select Elements'
+    url: 'https://css-tricks.com/striking-a-balance-between-native-and-custom-select-elements/'
+translators:
+    - mikhail-danyushin
+editors:
+
+layout: article.njk
+tags:
+    - article
+    - html
+
+preview: ''
+hero:
+featured: true
+---
+
+
 Here’s the plan! We’re going to build a styled select element. Not just [the outside](https://css-tricks.com/styling-a-select-like-its-2019/), but the inside too. Total styling control. Plus we’re going to make it accessible. We’re not going to try to _replicate_ everything that the browser does by default with a native `<select>` element. We’re going to literally use a `<select>` element when any assistive tech is used. But when a mouse is being used, we’ll show the styled version and make it function as a select element.
 
 That’s what I mean by “hybrid” selects: they are both a native `<select>` and a styled alternate select in one design pattern.
