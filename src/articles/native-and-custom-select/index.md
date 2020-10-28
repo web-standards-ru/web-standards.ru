@@ -19,26 +19,27 @@ hero:
 featured: true
 ---
 
+Вот наш план! Мы сделаем стилизованный селект. Стилизуем не просто [внешние](https://css-tricks.com/styling-a-select-like-its-2019/), но и внутренние составляющие. Полный контроль над стилизацией. Плюс к этому мы собираемся сделать его доступным. Мы не будем пытаться _повторить_ за браузером все, что он делает по умолчанию при отрисовке нативного `<select>`. Мы буквально собираемся использовать `<select>`, как только задействуется любая вспомогательная технология. Но когда будет использоваться мышь, мы отрисуем стилизованную версию и заставим ее функционировать как `<select>`.
 
-Here’s the plan! We’re going to build a styled select element. Not just [the outside](https://css-tricks.com/styling-a-select-like-its-2019/), but the inside too. Total styling control. Plus we’re going to make it accessible. We’re not going to try to _replicate_ everything that the browser does by default with a native `<select>` element. We’re going to literally use a `<select>` element when any assistive tech is used. But when a mouse is being used, we’ll show the styled version and make it function as a select element.
+Вот что я понимаю под "гибридным" селектом: это одновременно и нативный `<select>` и стилизованная альтернатива селекта в определенном стиле.
 
-That’s what I mean by “hybrid” selects: they are both a native `<select>` and a styled alternate select in one design pattern.
+### Cелект, выпадающий список, навигация, меню... Имя имеет значение
 
-### Select, dropdown, navigation, menu… the name matters
+Во время изучения данной темы я думала о всех тех названиях, которые всплывают и вертятся в голове, когда речь заходит о селектах. Наиболее общие из них - выпадающий список и меню. Есть два типа ошибок при наименовании, которые мы можем допустить: дать _одинаковое_ название разным элементам или дать _разные_ названия одинаковым элементам.
 
-While doing the research for this article, I thought about many names that get tossed around when talking about selects, the most common of which are “dropdown” and “menu.” There are two types of naming mistakes we could make: giving the _same_ name to different things, or giving _different_ names to the same thing. A select can suffer from both mistakes.
+Перед тем как мы двинемся дальше, позвольте мне внести ясность касательно использования словосочетания "выпадающий список". Вот как я его понимаю:
 
-Before we move ahead, let me try to add clarity around using “dropdown” as a term. Here’s how I define the meaning of dropdown:
+> **Выпадающий список:** Интерактивный компонент, состоящий из кнопки, которая показывает и прячет список элементов, в основном по наведению мыши, клику или тапу. Список невидим по умолчанию пока не произойдет взаимодействие. Список обычно отображает блок содержимого поверх другого содержимого.
 
-> **Dropdown:** An interactive component that consists of a button that shows and hides a list of items, typically on mouse hover, click or tap. The list is not visible by default until the interaction starts. The list usually displays a block of content (i.e. options) on top of other content.
+Множество интерфейсов могут выглядеть _похоже_ на выпадающий список. Но назвать элемент "выпадающим списком" - все равно что назвать рыбу описывая животных. Что это за семейство рыб? Рыбка-клоун не то же самое, что и акула. То же касается и выпадающих списков.
 
-A lot of interfaces can look _like_ a dropdown. But simply calling an element a “dropdown” is like using “fish” to describe an animal. What type of fish it is? A clownfish is not the same as a shark. The same goes for dropdowns.
+<!--Тут картиночка-->
 
-Like there are different types of fish in the sea, there are different types of components that we might be talking about when we toss the word “dropdown” around:
+Существует множество элементов, о которых мы можем говорить сталкиваясь со словосочетанием "выпадающий список" подобно тому, как в море существует огромное количество видов рыб.
 
-*   **Menu:** A list of commands or actions that the user can perform within the page content.
-*   **Navigation:** A list of links used for navigating through a website.
-*   **Select:** A form control (`<select>`) that displays a list of options for the user to select within a form.
+*   **Меню:** Список команд или действий, которые пользователь может реализовать на странице.
+*   **Навигация:** Список ссылок, используемых для перемещения по сайту.
+*   **Селект:** Контрол формы (`<select>`) показывающий пользователю набор опций, которые он может выбрать в её пределеах.
 
 Deciding what type of dropdown we’re talking about can be a foggy task. Here are some examples from around the web that match how I would classify those three different types. This is based on my research and sometimes, when I can’t find a proper answer, _intuition_ based on my experience.
 
