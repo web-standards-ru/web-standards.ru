@@ -153,17 +153,14 @@ Finally, we need to tell Assistive Technologies to ignore the custom select, usi
 
     <span class="selectLabel" id="jobLabel">Main job role</span>
     <div class="selectWrapper">
-      <select class="selectNative js-selectNative" aria-labelledby="jobLabel">
-        <!-- options -->
-        <option></option>
-      </select>
-      <div class="selectCustom js-selectCustom" aria-hidden="true">
-         <!-- The beautiful custom select -->
-      </div>
+        <select class="selectNative js-selectNative" aria-labelledby="jobLabel">
+            <!-- options -->
+            <option></option>
+        </select>
+        <div class="selectCustom js-selectCustom" aria-hidden="true">
+            <!-- The beautiful custom select -->
+        </div>
     </div>
-
-
-
 
 
 This takes us to styling, where we not only make things look pretty, but where we handle the switch from one select to the other. We need just a few new declarations to make all the magic happen.
@@ -172,34 +169,34 @@ First, both native and custom selects must have the same width and height. This 
 
     .selectNative,
     .selectCustom {
-      position: relative;
-      width: 22rem;
-      height: 4rem;
+        position: relative;
+        width: 22rem;
+        height: 4rem;
     }
 
 There are two selects, but only one can dictate the space that holds them. The other needs to be absolutely positioned to take it out of the document flow. Let’s do that to the custom select because it’s the “replacement” that’s used only if it can be. We’ll hide it by default so it can’t be reached by anyone just yet.
 
     .selectCustom {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
     }
 
 Here comes the “funny” part. We need to detect if someone is using a device where hover is part of the primary input, like a computer with a mouse. While we typically think of media queries for responsive breakpoints or checking feature support, we can use it to detect hover support too using `@media query (hover :hover)`, which is supported by all major browsers. So, let’s use it to show the custom select only on devices that have hover:
 
     @media (hover: hover) {
-      .selectCustom {
-        display: block;
-      }
+        .selectCustom {
+            display: block;
+        }
     }
 
 Great, but what about people who use a keyboard to navigate even in devices that have hover? What we’ll do is hide the custom select when the native select is in focus. We can reach for an [adjacent Sibling combinatioron](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) (`+`). When the native select is in focus, hide the custom select next to it in the DOM order. (This is why the native select should be placed before the custom one.)
 
     @media (hover: hover) {
-      .selectNative:focus + .selectCustom {
-        display: none;
-      }
+        .selectNative:focus + .selectCustom {
+            display: none;
+        }
     }
 
 That’s it! The trick to switch between both selects is done! There are other CSS ways to do it, of course, but this works nicely.
@@ -252,9 +249,9 @@ Let’s put this in practice. Imagine a sortable list of students. Visually, it 
 To ensure the criterion success, we must warn the user about the action before they interact with the element, or include a `<button>` immediately after the select to confirm the change.
 
     <label for="sortStudents">
-      Sort students
-      <!-- Warn the user about the change when a confirmation button is not present. -->
-      <span class="visually-hidden">(Immediate effect upon selection)</span>
+        Sort students
+        <!-- Warn the user about the change when a confirmation button is not present. -->
+        <span class="visually-hidden">(Immediate effect upon selection)</span>
     </label>
     <select id="sortStudents"> ... </select>
 
