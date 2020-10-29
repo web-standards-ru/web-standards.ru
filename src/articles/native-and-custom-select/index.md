@@ -85,7 +85,7 @@ featured: true
                 <td>Выпадающий список содержит ссылки на другие страницы  (e.g. A “meganav” with websites links) <!--meganav? --></td>
                 <td>[Раскрытие навигации](https://www.w3.org/TR/wai-aria-practices/examples/disclosure/disclosure-navigation.html)</td>
             </tr>
-             <tr>
+            <tr>
                 <td>5</td>
                 <td>Содержимое выпадающего меню - не список. (Например, выбор даты)</td>
                 <td>Кое-что еще, что [не следует путать с выпадающим списком](https://adrianroselli.com/2020/03/stop-using-drop-down.html)/</td>
