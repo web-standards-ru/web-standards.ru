@@ -21,7 +21,12 @@ featured: true
 
 Вот наш план! Мы сделаем стилизованный селект. Стилизуем не просто [внешние](https://css-tricks.com/styling-a-select-like-its-2019/), но и внутренние составляющие. Полный контроль над стилизацией. Плюс к этому мы собираемся сделать его доступным. Мы не будем пытаться _повторить_ за браузером все, что он делает по умолчанию при отрисовке нативного `<select>`. Мы буквально собираемся использовать `<select>`, как только задействуется любая вспомогательная технология. Но когда будет использоваться мышь, мы отрисуем стилизованную версию и заставим ее функционировать как `<select>`.
 
-Вот что я понимаю под "гибридным" селектом: это одновременно и нативный `<select>` и стилизованная альтернатива селекта в определенном стиле.
+Вот что я понимаю под "гибридным" селектом: это одновременно и нативный `<select>` и его стилизованная альтернатива.
+
+<figure>
+    <img src="images/1.png" alt="Сравнение кастомного и нативного селектов">
+    <figcaption>Кастомный селект (слева) часто используется вместо нативного (справа) ради эстетики и последовательности дизайна</figcaption>
+</figure>
 
 ### Cелект, выпадающий список, навигация, меню... Имя имеет значение
 
@@ -33,7 +38,9 @@ featured: true
 
 Множество интерфейсов могут выглядеть _похоже_ на выпадающий список. Но назвать элемент "выпадающим списком" - все равно что назвать рыбу описывая животных. Что это за семейство рыб? Рыбка-клоун не то же самое, что и акула. То же касается и выпадающих списков.
 
-<!--Тут картиночка-->
+<figure>
+    <img src="images/2.jpeg" src="Отличаем рыбу-клоуна от акулы">
+<figure>
 
 Существует множество элементов, о которых мы можем говорить сталкиваясь со словосочетанием "выпадающий список" подобно тому, как в море существует огромное количество видов рыб.
 
@@ -42,6 +49,11 @@ featured: true
 *   **Селект:** Контрол формы (`<select>`) показывающий пользователю набор опций, которые он может выбрать в её пределеах.
 
 Определение типа выпадающего списка о котором мы ведем речь кажется туманным. Вот несколько примеров из веба подходящие под мою классификацию вышеупомянутых элементов. Они основаны на моем исследовании, и иногда, когда я не могу найти подходящий ответ моей _интуицией_ руководит опыт.
+
+<figure>
+    <img src="images/3.png" alt="Мир выпадающих списков">
+    <figcaption>Мир выпадающих списков: 5 сценариев их поведения в Интернете. Более подробное описание ищите в таблице ниже.</figcaption>
+</figure>
 
 Diagram Label
 
@@ -243,6 +255,10 @@ Don’t get me wrong. This technique is not a one-size-fits-all solution. It may
 Let’s take a look back at the third Dropdown-land scenario. If you recall, it’s  a dropdown that always has a checked option (e.g. sorting some content). I classified it in the gray area, as either a menu or a select. 
 
 Here’s my line of thought: Years ago, this type of dropdown was implemented mostly using a native `<select>`. Nowadays, it is common to see it implemented from scratch with custom styles (accessible or not). What we end up with is a select element that looks like a menu. 
+
+<figure>
+    <img src="images/4.png" alt="Примеры селектов, выступающих в качестве меню">
+</figure>
 
 **A `<select>`  is a type of menu.** Both have similar semantics and behavior, especially in a scenario that involves a list of options where one is always checked.  Now, let me mention the [WCAG 3.2.2 On Input (Level A)](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html) criterion:
 
