@@ -144,28 +144,30 @@ CodePen Embed Fallback
 *   Нажатие на `Tab` переносит нас к следующему варианут списка или же к следующему элементу формы?
 *   Что будет, когда вы достигнете последнего варианта в списке с помощью стрелок? Фокус замрет на последнем варианте, вернется к первому или же, что    хуже всего, перейдет к следующему элементу формы?
 *   Возможно ли перейти к последней опции списка с помощью клавиши `Page Down`?
-*   Можно ли прокручивать элементы списка, если их больше, чем в поле видимости в данный момент?
+*   Можно ли скроллить элементы списка, если их больше, чем в поле видимости в данный момент?
 
-This is a small sample of the features included in a native `<select>` element.
+Это был небольшой пример функций нативного селекта.
 
-> Once we decide to create our own custom select, we are forcing people to use it in a certain way that may not be what they expect.
+> Решив создать наш собственный кастомный селект, мы обязываем людей пользоваться им определенным образом, который может отличаться от их ожиданий.
 
-But it gets worse. Even the native `<select>` [behaves differently](https://www.24a11y.com/2019/select-your-poison/) across browsers and screen readers. Once we decide to create our own custom select, we are forcing people to use it in a certain way that may not be what they expect. That’s a dangerous decision and it’s in those details where the devil lives.
+Но всё ещё хуже. Даже нативный `<select>` [ведет себя по-разному](https://www.24a11y.com/2019/select-your-poison/) в разных браузерах и скринридерах.
+Создав наш собственный селект, мы заставим людей пользоваться им не так, как они ожидают. Это опасное решение и это именно те детали, в которых живет дьявол.
 
-### Building a “hybrid” select
+### Создаём “гибридный” селект
 
-When we build a simple custom select, we are making a trade-off without noticing it. Specifically, **we sacrifice functionality to aesthetics.** It should be the other way around.
+При создании простого кастомного селекта мы идем на компромисс, не замечая этого. В частности, **мы жертвуем функциональностью ради эстетики.**
+Всё должно быть наоборот.
 
-What if we instead deliver a native select by default and replace it with a more aesthetically pleasing one if possible? That’s where the “hybrid” select idea comes into action. It’s “hybrid” because it consists of two selects, showing the appropriate one at the right moment:
+Что если вместо этого мы зададим нативный селект по умолчанию и заменим его более эстетичным, если это возможно? Вот тут и вступает в игру идея о "гибридном" селекте. Он "гибридный", потому что состоит из двух селектов, каждый из которых показывается в нужный для него момент:
 
-*   A native select, visible and accessible by default
-*   A custom select, hidden until it’s safe to be interacted with a mouse
+*   Нативный селект, видимый и доступный по умолчанию.
+*   Кастомный селект, скрытый до тех пор, пока не произойдёт взаимодействие посредством мыши.
 
-Let’s start with markup. First, we’ll add a native `<select>` with `<option>` items _before_ the custom selector for this to work. (I’ll explain why in just a bit.)
+Начнём с разметки. Вначале, добавим нативный `<select>` с неколькими `<option>` _до_ кастомного. <!--Возможно, в статье опечатка. Оригинал - First, we’ll add a native `<select>` with `<option>` items _before_ the custom selector for this to work.  --> (Чуть позже я объясню почему.)
 
-Any form control must have a [descriptive label](https://www.w3.org/WAI/tutorials/forms/labels/). We could use `<label>`, but that would focus the native select when the label is clicked. To prevent that behavior, we’ll use a `<span>` and connect it to the select using `aria-labelledby`.
+Любой контрол формы должен содержать [подпись](https://www.w3.org/WAI/tutorials/forms/labels/).Мы можем прибегнуть к `<label>`, но фокус будет попадать на нативный селект, когда мы будем кликать на подпись. В целях предотвращения такого поведения используем `<span>` и свяжем его с селектом с помощью `aria-labelledby`.
 
-Finally, we need to tell Assistive Technologies to ignore the custom select, using `aria-hidden="true"`. That way, only the native select is announced by them, no matter what.
+Наконец, посредством `aria-hidden="true"` нужно сообщить вспомогательным технологиям, чтобы те игнорировали кастомный селект. Таким образом, они видят только нативный селект несмотря ни на что.
 
     <span class="selectLabel" id="jobLabel">Main job role</span>
     <div class="selectWrapper">
@@ -179,9 +181,9 @@ Finally, we need to tell Assistive Technologies to ignore the custom select, usi
     </div>
 
 
-This takes us to styling, where we not only make things look pretty, but where we handle the switch from one select to the other. We need just a few new declarations to make all the magic happen.
+Это приводит нас к стилизации, в ходе которой мы не только заставляем всё выглядеть красивее, но также и управляем переключением между селектами. Нам не хватает лишь пары строк, чтобы начать магию.
 
-First, both native and custom selects must have the same width and height. This ensures people don’t see major differences in the layout when a switch happens.
+Для начала, оба селекта должны обладать одинаковой шириной и высотой. Это позволит пользователям не увидеть серьезного расхождения с макетом при переключении.
 
     .selectNative,
     .selectCustom {
@@ -190,7 +192,8 @@ First, both native and custom selects must have the same width and height. This 
         height: 4rem;
     }
 
-There are two selects, but only one can dictate the space that holds them. The other needs to be absolutely positioned to take it out of the document flow. Let’s do that to the custom select because it’s the “replacement” that’s used only if it can be. We’ll hide it by default so it can’t be reached by anyone just yet.
+
+Вот два селекта. Но лишь один может устанавливать пространство, которое они занимают. Второй должен быть спозиционирован абсолютно, чтобы быть вне потока документа. Давайте провернём это с кастомным селектом, так как "замена" производится только тогда, когда она возможна. Мы спрячем его по уолчанию, чтобы никто пока до него не добрался.
 
     .selectCustom {
         position: absolute;
@@ -199,7 +202,7 @@ There are two selects, but only one can dictate the space that holds them. The o
         display: none;
     }
 
-Here comes the “funny” part. We need to detect if someone is using a device where hover is part of the primary input, like a computer with a mouse. While we typically think of media queries for responsive breakpoints or checking feature support, we can use it to detect hover support too using `@media query (hover :hover)`, which is supported by all major browsers. So, let’s use it to show the custom select only on devices that have hover:
+Вот здесь-то и начинается веселье. Нам нужно определить, использует ли пользователь устройство, в котором наведение - часть основного ввода информации. Например, компьютер с мышью. Хотя мы и думаем о медиа-запросах только как о способах проверки поддержки определённых функций или же инструментах адаптива посредством брейкпоинтов, их можно испоьзовать для обнаружения поддержки ховера с помщью `@media query (hover :hover)`, который поддерживается всеми оснвными браузерами. Итак, давайте используем это для показывания кастомного селекта на устройствах, где возможен ховер.
 
     @media (hover: hover) {
         .selectCustom {
@@ -207,7 +210,7 @@ Here comes the “funny” part. We need to detect if someone is using a device 
         }
     }
 
-Great, but what about people who use a keyboard to navigate even in devices that have hover? What we’ll do is hide the custom select when the native select is in focus. We can reach for an [adjacent Sibling combinatioron](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) (`+`). When the native select is in focus, hide the custom select next to it in the DOM order. (This is why the native select should be placed before the custom one.)
+Отлично, но что насчёт людей, которые используют клавиатуру для навигации даже на устройствах, поддерживающих ховер? Что мы сделаем? Мы будем прятать кастомный селект, когда нативный находится в состоянии фокуса. Мы можем поймать [соседний элемент с помощью комбинатора](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) (`+`). Как только нативный селект в фокусе, прячем кастомный, который следует сразу за ним в DOM. (Вот почему кастомный селект должен следовать за нативным).
 
     @media (hover: hover) {
         .selectNative:focus + .selectCustom {
@@ -215,58 +218,58 @@ Great, but what about people who use a keyboard to navigate even in devices that
         }
     }
 
-That’s it! The trick to switch between both selects is done! There are other CSS ways to do it, of course, but this works nicely.
+Вот и всё! Трюк переключения между двумя селектами готов! Есть другие способы сделать это через CSS, но и этот прекрасно работает.
 
-Last, we need a sprinkle of JavaScript. Let’s add some event listeners:
+Наконец, нам нужно немного JavaScript. Добавим несколько обработчиков событий:
 
-*   One for click events that trigger the custom select to open and reveal the options
-*   One to sync both selects values. When one select value is changed, the other select value updates as well
-*   One for basic keyboard navigation controls, like navigation with `Up` and `Down` keys, selecting options with the `Enter` or `Space` keys, and closing the select with `Esc`
+*   Один для события клика, по которому в игру вступает кастомный селект, раскрываясь и показывая варианты выбора.
+*   Один, чтобы синхронизировать выбранные варианты. При изменении одного варианта выбора, меняется и второй.
+*   И ещё один для установки навигации через клавиатуру с помощью клавиш `Up` и `Down`, выбора варианта с помощью клавиш `Enter` или `Space`, и закрытия списка через `Esc`.
 
 CodePen Embed Fallback
 
-### Usability testing
+### Юзабилити-тест
 
-I conducted a very small usability test where I asked a few people with disabilities to try the hybrid select component. The following devices and tools were tested using the latest versions of Chrome (81), Firefox (76) and Safari (13):
+Я провела небольшое юзабилити-тестирование, в котором я попросила нескольких людей с ограниченными возможностями попользоваться гибридным селектом. Были протестированы следующие устройства и инструменты с использованием последних версий Chrome (81), Firefox (76), Safari (13):
 
-*   Desktop device using mouse only
-*   Desktop device using keyboard only
-*   VoiceOver on MacOS using keyboard
-*   NVDA on Windows using keyboard
-*   VoiceOver on iPhone and iPad using Safari
+*   ПК без переферийых устройств, за исключением одной только мыши.
+*   ПК лишь с одной клавиатурой.
+*   VoiceOver на MacOS с помощью клавиатуры.
+*   NVDA в Windows с помощью клавиатуры.
+*   VoiceOver на iPhone и iPad в Safari
 
-All these tests worked as expected, but I believe **this could have even more usability tests with more diverse people and tools**. If you have access to other devices or tools — such as JAWS, Dragon, etc. — please tell me how the test goes.
+Все эти тесты дали желаемый результат, но я уверена, что **можно было бы провести ещё больше юзабилити-тестов с более разнообразными устройствами и широким диапозоном лиц.** Если у вас есть возможность протестировать на других устройствах или с другими инструментами — такими как JAWS, Dragon и т.д.—  Пожалуйста, расскажите мне, как прошёл тест.
 
-An issue was found during testing. Specifically, the issue was with the VoiceOver setting “Mouse pointers: Moves Voice Over cursor.” If the user opens the select with a mouse, the custom select will be opened (instead of the native) and the user won’t experience the native select.
+Во время теста была обнаружена проблема. В частности, проблема связана с настройкой VoiceOver "Использовать виртуальный курсор VoiceOver". Если пользователь откроет селект с помощью этого курсора, покажется кастомный селект (вместо нативного).
 
-What I most like about this approach is how it uses the best of both worlds without compromising the core functionality:
+Больше всего мне нравится в этом подходе то, как он совмещает всё самое лучшее из обоих миров без нанесения ущерба функциональности.
 
-*   Users on mobile and tablets get the native select, which generally offers a better user experience than a custom select, including performance benefits.
-*   Keyboard users get to interact with the native select the way they would expect.
-*   Assistive Technologies can interact with the native select like normal.
-*   Mouse users get to interact with the enhanced custom select.
+*   Пользователи мобильных устройств и планшетов получают нативный селект, предлагающий лучший пользовательский интерфейс по сравнению с кастомным селектом, включая преимущества производительности.
+*   Те, кто пользуется клавиатурой получают возможность взаимодействия с нативным селектом в соответствии с их ожиданиями.
+*   Вспомогательные технологии спокойно могут взаимодействовать с нативным селектом.
+*   Пользователи с мышью получают возможность взаимодействовать с расширенным кастомным селектом.
 
-This approach **provides essential native functionality for everyone** without the extra huge code effort to implement all the native features.
+Данный подход **обеспечивает необходимую для каждого функциональность** без дополнительного громоздкого кода, реализующего функции нативного селекта.
 
-Don’t get me wrong. This technique is not a one-size-fits-all solution. It may work for simple selects but probably won’t work for cases that involve complex interactions. In those cases, we’d need to use ARIA and JavaScript to complement the gaps and create a [truly accessible custom select](https://24ways.org/2019/making-a-better-custom-select-element/).
+Не поймите меня неправильно. Этот метод не является универсальным решением для всех. Он может являться рабочим для простых селектов, но, вероятно, не будет работать в случаях со сложным взаимодействием. В этих случаях нам нужно использовать ARIA и Java Script для восполнения пробелов и создания [действительно доступного селекта](https://24ways.org/2019/making-a-better-custom-select-element/).
 
-### A note about selects that look like menus
+### Примечание касательно селекта-меню
 
-Let’s take a look back at the third Dropdown-land scenario. If you recall, it’s  a dropdown that always has a checked option (e.g. sorting some content). I classified it in the gray area, as either a menu or a select. 
+Давайте вернёмся к третьему сценарию нашего списка селектов. Если вы помните, это выпадающий список, который всегда имеет отмеченный вариант (например, сортировка). Я отнесла его к серой области как и меню или селект.
 
-Here’s my line of thought: Years ago, this type of dropdown was implemented mostly using a native `<select>`. Nowadays, it is common to see it implemented from scratch with custom styles (accessible or not). What we end up with is a select element that looks like a menu. 
+Вот моя мысль: много лет назад этот тип выпадающего списка реализовывался в основном с помощью нативного `<select>`. В настоящее время часто можно увидеть что он реализован с нуля с помощью вспомогательных стилей (доступных или нет). Nowadays, it is common to see it implemented from scratch with custom styles (accessible or not). Мы получаем селект, стилизованный под меню.
 
 <figure>
     <img src="images/4.png" alt="Примеры селектов, выступающих в качестве меню">
 </figure>
 
-**A `<select>`  is a type of menu.** Both have similar semantics and behavior, especially in a scenario that involves a list of options where one is always checked.  Now, let me mention the [WCAG 3.2.2 On Input (Level A)](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html) criterion:
+**`<select>` - это вид меню.** Оба имеют схожую семантику и поведение, особенно в случае, когда один вариант всегда выбран. Теперь позвольте мне упомянуть критерий из [WCAG 3.2.2 об инпутах (Уровень A)](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html):
 
-> Changing the setting of any user interface component should not automatically cause a change of context unless the user has been advised of the behavior before using the component.
+> Изменение состояния любого пользовательского элемента не должно влечь за собой автоматическое изменение контекста без уведомления об этом пользователя перед самим изменением.
 
-Let’s put this in practice. Imagine a sortable list of students. Visually, it may be obvious that sorting is immediate, but that’s not necessarily true for everyone. So, when using `<select>`, we risk failing the WCAG guideline because the page content changed, and ignificantly re-arranging the content of a page is considered a [change of context](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html%23dfn-changes-of-context).
+Давайте применим это на практике. Представьте себе сортируемый список студентов. Может быть визуально очевидно, что сортировка происходит незамедлительно, но это не обязательно так для каждого. Таким образом, при использовании `<select>`, мы рискуем нарушить рукводство WCAG, ибо контент страницы изменился, а это попадает под понятие ["изменение контекста"](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html%23dfn-changes-of-context).
 
-To ensure the criterion success, we must warn the user about the action before they interact with the element, or include a `<button>` immediately after the select to confirm the change.
+Чтобы соблюсти критерий, мы должны уведомить пользователя о действии до того, как он  провзаимодействует с элементом или же поставить `<button>`  сразу после списка, чтобы подтвердить изменения.
 
     <label for="sortStudents">
         Sort students
