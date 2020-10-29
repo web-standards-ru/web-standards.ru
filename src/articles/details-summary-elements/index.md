@@ -101,7 +101,7 @@ preview: 'Вам часто приходилось использовать Java
 Вы можете использовать `<details>` для сворачивания и разворачивания блока комментариев в блоге, для профиля пользователя, для описания загружаемого файла, для сложных форм или в веб-приложениях, как показано в этом примере из спецификации:
 
 <figure>
-    {% responsiveImage "./src/articles/details-summary-elements/images/details-w3c.png", "Пример использования details из спецификации." %}
+    <img src="images/details-w3c.png" alt="Пример использования details из спецификации.">
     <figcaption>Пример использования <code>&lt;details&gt;</code> из спецификации.</figcaption>
 </figure>
 
@@ -152,7 +152,7 @@ details[open] summary::after {
 Выборка по атрибуту `details[open]` скрывает в себе некоторые интересные возможности. Как хорошие HTML5-доктора, мы создали [доработанный пример](https://jsbin.com/egefop/15#html,live), показанный на этом скриншоте:
 
 <figure>
-    {% responsiveImage "./src/articles/details-summary-elements/images/nice-details.png", "Элемент details в Chrome." %}
+    <img src="images/nice-details.png" alt="Элемент details в Chrome.">
     <figcaption>Оформленный <code>&lt;details&gt;</code> в Chrome.</figcaption>
 </figure>
 

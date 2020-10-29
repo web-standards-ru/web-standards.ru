@@ -46,7 +46,7 @@ preview: 'В обычных печатных изданиях, таких ка�
 Изображение в элементе `<figure>` без подписи:
 
 <figure>
-    {% responsiveImage "./src/articles/figure-figcaption/images/orang-utan.jpg", "Малыш орангутанга свисает с каната." %}
+    <img src="images/orang-utan.jpg" alt="Малыш орангутанга свисает с каната.">
 </figure>
 
 Вот код для этого:
@@ -62,7 +62,7 @@ preview: 'В обычных печатных изданиях, таких ка�
 Изображение внутри элемента `<figure>` с поясняющей подписью:
 
 <figure>
-    {% responsiveImage "./src/articles/figure-figcaption/images/macaque.jpg", "Макака на дереве." %}
+    <img src="images/macaque.jpg" alt="Макака на дереве.">
     <figcaption>Наглая макака из Борнео. Фото <a href="https://www.flickr.com/photos/rclark/102352241/in/set-72057594082373448/">Ричарда Кларка</a></figcaption>
 </figure>
 
@@ -83,9 +83,9 @@ preview: 'В обычных печатных изданиях, таких ка�
 Размещение нескольких изображений внутри одного элемента `<figure>` с общей подписью:
 
 <figure>
-    {% responsiveImage "./src/articles/figure-figcaption/images/kookaburra.jpg", "Кукабара." %}
-    {% responsiveImage "./src/articles/figure-figcaption/images/pelican.jpg", "Пеликан на пляже." %}
-    {% responsiveImage "./src/articles/figure-figcaption/images/lorikeet.jpg", "Наглый многоцветный лорикет." %}
+    <img src="images/kookaburra.jpg" alt="Кукабара.">
+    <img src="images/pelican.jpg" alt="Пеликан на пляже.">
+    <img src="images/lorikeet.jpg" alt="Наглый многоцветный лорикет.">
     <figcaption>
         Слева направо: кукабара, пеликан и многоцветный лорикет.
         Фотографии <a href="https://www.flickr.com/photos/rclark/">Ричарда Кларка</a>

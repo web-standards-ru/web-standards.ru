@@ -1,11 +1,13 @@
+// Мне кажется, что это нужно обрабатывать фильтром на уровне конфига уже после генерации HTML, как сейчас сжатие работает.
+const Image = require("@11ty/eleventy-img");
+
 module.exports = function(config) {
     config.addPassthroughCopy('src/favicon.ico');
     config.addPassthroughCopy('src/manifest.json');
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    // config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
-    config.addPassthroughCopy('src/**/*.(html|gif|svg|mp4|webm|zip)');
+    config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
 
     // Markdown Options
 
@@ -174,29 +176,6 @@ module.exports = function(config) {
 
     // Трансформации
 
-    config.addTransform('htmlmin', (content, outputPath) => {
-        if(outputPath && outputPath.endsWith('.html')) {
-            let htmlmin = require('html-minifier');
-            let result = htmlmin.minify(
-                content, {
-                    removeComments: true,
-                    collapseWhitespace: true
-                }
-            );
-            return result;
-        }
-        return content;
-    });
-
-    config.addTransform('xmlmin', function(content, outputPath) {
-        if(outputPath && outputPath.endsWith('.xml')) {
-            let prettydata = require('pretty-data');
-            let result = prettydata.pd.xmlmin(content);
-            return result;
-        }
-        return content;
-    });
-
     config.addTransform('lazyYouTube', (content, outputPath) => {
         let articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
         let iframes = /\<iframe src\=\"https\:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)\"(.*?)\>\<\/iframe>/ig;
@@ -216,6 +195,85 @@ module.exports = function(config) {
                         </button>
                     </div>`
             });
+        }
+        return content;
+    });
+
+    config.addTransform('responsiveImages', async (content, outputPath) => {
+        const articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
+        const images = /<img src="([^.>]+)\.(jpg|png)"([^>]+)>/g
+
+        const condition = outputPath && outputPath.match(articles)
+
+        if (condition) {
+            const article = condition[1]
+
+            const foundImages = content.matchAll(images)
+            const newImagesProps = {}
+
+            for (const aImage of foundImages) {
+                const [, path, format] = aImage
+
+                const outputDir = `dist/articles/${article}/images/`
+                const source = `src/articles/${article}/${path}.${format}`
+                
+                const stats = await Image(source, {
+                    widths: [600, 1200, 2000],
+                    formats: ["webp", "jpg"],
+                    urlPath: "images/",
+                    outputDir,
+                })
+
+                newImagesProps[path] = {
+                    props: stats["jpg"][0],
+                    entries: Object.values(stats)[0],
+                };
+              }
+
+            content = content.replace(images, (match, p1, p2, p3) => {
+                const { props, entries } = newImagesProps[p1]
+
+                const sizes = "100vw"
+                const webpSrcset = entries.map((entry) => `${entry.url} ${entry.width}w`).join(", ");
+                const jpgSrcset = webpSrcset.replace(/\.\w+/g, ".jpg")
+                
+                return `
+                    <picture>
+                        <source
+                            sizes="${sizes}"
+                            srcset="${webpSrcset}"
+                            type="image/webp">
+                        <img
+                            src="${props.url}"
+                            sizes="${sizes}"
+                            srcet="${jpgSrcset}"
+                            loading="lazy"
+                            ${p3}>
+                    </picture>`;
+            })
+        }
+        return content
+    })
+
+    config.addTransform('htmlmin', (content, outputPath) => {
+        if(outputPath && outputPath.endsWith('.html')) {
+            let htmlmin = require('html-minifier');
+            let result = htmlmin.minify(
+                content, {
+                    removeComments: true,
+                    collapseWhitespace: true
+                }
+            );
+            return result;
+        }
+        return content;
+    });
+
+    config.addTransform('xmlmin', function(content, outputPath) {
+        if(outputPath && outputPath.endsWith('.xml')) {
+            let prettydata = require('pretty-data');
+            let result = prettydata.pd.xmlmin(content);
+            return result;
         }
         return content;
     });
@@ -262,54 +320,6 @@ module.exports = function(config) {
         }();
     });
 
-    // TODO Files:
-    // - path-of-tutor -> Images already are responsive
-    // - hero -> src в шапке .md
-
-    // Минусы:
-    //     - {{}} в тексте статьи надо оборачивать {% raw %}...{% endraw %}, иначе njk будет ожидать переменную
-                // Это потому так, что markdownTemplateEngine - njk. Текст статьи переводится из njk в md, потом в html.
-                // В article/*.md будет сразу два языка.
-    //     - для изображений нужно указывать полный путь
-    //     - формат изображений и семантика в статьях встречается разная
-
-    config.addAsyncShortcode("responsiveImage", async (src, alt = "", rest = {}) => {
-        const Image = require("@11ty/eleventy-img");
-
-        const outputDir = "./dist/" + src.match(/articles\/([^\/]*\/){2}/)[0];
-        const widths = [600, 1200, 2000].concat(src.endsWith('.jpg') ? [null] : [])
-
-        const stats = await Image(src, {
-            // widths: [600, 1200],
-            // widths: [600, 1200, 2000],
-            widths,
-            formats: ["webp", "jpg"],
-            urlPath: "images/",
-            outputDir,
-        });
-
-        const props = stats["jpg"][0];
-        const entries = Object.values(stats)[0];
-
-        const sizes = "100vw";
-        const srcset = entries.map((entry) => `${entry.url} ${entry.width}w`).join(", ");
-        const restAttrs = Object.entries(rest).reduce((a, c) => a + ` ${c[0]}="${c[1]}"`, 'loading="lazy"');
-
-        return `
-            <picture>
-                <source
-                    sizes="${sizes}"
-                    srcset="${srcset}"
-                    type="image/${entries[0].format}">
-                <img
-                    src="${props.url}"
-                    ${restAttrs}
-                    alt="${alt}"
-                    sizes="${sizes}"
-                    srcet="${srcset.replace(/\.\w+/g, ".jpg")}">
-            </picture>`;
-    });
-
     return {
         dir: {
             input: 'src',
@@ -319,7 +329,7 @@ module.exports = function(config) {
             data: 'data',
         },
         dataTemplateEngine: 'njk',
-        markdownTemplateEngine: 'njk',
+        markdownTemplateEngine: false,
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
         templateFormats: [

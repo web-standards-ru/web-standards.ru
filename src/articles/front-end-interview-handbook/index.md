@@ -19,7 +19,7 @@ preview: 'В отличие от типичного собеседования
 ## Часть 1. HTML
 
 <figure>
-    {% responsiveImage "./src/articles/front-end-interview-handbook/images/1.png", "" %}
+    <img src="images/1.png" alt="">
     <figcaption><a href="https://dribbble.com/shots/3831443-Tech-Interview-Handbook">Картинка yangheng</a></figcaption>
 </figure>
 

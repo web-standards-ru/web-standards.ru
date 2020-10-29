@@ -188,7 +188,7 @@ dist/
 
 Если вы загрузите файл bundle-checkout.js на тестовой странице и посмотрите на отладчик Chrome, вы можете убедится, что загружаются только три чанка, как и ожидалось. Вы также можете увидеть, что сообщение из модуля `Checkout` поступает из bundle-checkout.js, что означает, что модуль `Checkout` попал в этот файл.
 
-{% responsiveImage "./src/articles/multiple-routes-webpack/images/1.png", "" %}
+<img src="images/1.png" alt="">
 
 ## Выводы и предостережения
 

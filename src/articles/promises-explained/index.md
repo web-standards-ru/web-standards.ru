@@ -18,7 +18,7 @@ preview: 'Промис — это объект, представляющий о
 ---
 
 <figure>
-    {% responsiveImage "./src/articles/promises-explained/images/1.jpg", "" %}
+    <img src="images/1.jpg" alt="">
     <figcaption>
         Ай промис, фото <a href="https://unsplash.com/photos/tX4-tYibILg">Бена Уайта</a>.
     </figcaption>
@@ -91,7 +91,7 @@ promise.then(function(result) {
 3. Выход ошибкой: `reject`.
 
 <figure>
-    {% responsiveImage "./src/articles/promises-explained/images/2.jpg", "" %}
+    <img src="images/2.jpg" alt="">
     <figcaption>
         Промис успешно выполнился, <a href="https://www.pexels.com/photo/man-couple-love-people-136402/">фото Скотта Вебба</a>.
     </figcaption>

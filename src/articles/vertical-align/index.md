@@ -64,7 +64,7 @@ div {
 
 Вот картинка с пояснительным текстом, которая поможет вам понять, что происходит при вертикальном выравнивании строчных элементов:
 
-{% responsiveImage "./src/articles/vertical-align/images/vertical-align.png", "" %}
+<img src="images/vertical-align.png" alt="">
 
 [А вот пример](https://jsbin.com/isuvob/1/edit#html,live), в котором есть несколько строчных элементов, один из которых прижат к верху.
 

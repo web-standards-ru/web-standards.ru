@@ -74,7 +74,7 @@ preview: 'Согласно как древнему учению фен-шуй, �
 4. Для отображаемого элемента должны быть указаны размеры. Для это нужно задать свойство `display`, не равное `inline` (оно стоит по умолчанию): `display: inline-block` или `display: block` и, конечно же, надо указать сами размеры.
 
 <figure>
-    {% responsiveImage "./src/articles/cross-browser-rounded-corners/images/1-shot.png", "Пример 1. Internet Explorer 6." %}
+    <img src="images/1-shot.png" alt="Пример 1. Internet Explorer 6.">
     <figcaption>Пример 1. Internet Explorer 6.</figcaption>
 </figure>
 
@@ -112,7 +112,7 @@ VML имеет возможность задавать, считать и ис
 ```
 
 <figure>
-    {% responsiveImage "./src/articles/cross-browser-rounded-corners/images/1-shot.png", "Пример 2. Internet Explorer 6." %}
+    <img src="images/1-shot.png" alt="Пример 2. Internet Explorer 6.">
     <figcaption>Пример 2. Internet Explorer 6.</figcaption>
 </figure>
 
@@ -147,10 +147,10 @@ VML имеет возможность задавать, считать и ис
 </v:shape>
 ```
 
-{% responsiveImage "./src/articles/cross-browser-rounded-corners/images/coordinates.png", "Система координат." %}
+<img src="images/coordinates.png" alt="Система координат.">
 
 <figure>
-    {% responsiveImage "./src/articles/cross-browser-rounded-corners/images/3-shot.png", "Пример 3. Internet Explorer 6." %}
+    <img src="images/3-shot.png" alt="Пример 3. Internet Explorer 6.">
     <figcaption>Пример 3. Internet Explorer 6.</figcaption>
 </figure>
 
@@ -230,14 +230,14 @@ VML имеет возможность задавать, считать и ис
 Размеры элемента можно изменять. Радиус закругления от этого не меняется.
 
 <figure>
-    {% responsiveImage "./src/articles/cross-browser-rounded-corners/images/4.1-ie-shot.png", "Пример 4. Узкое окно Internet Explorer 6." %}
+    <img src="images/4.1-ie-shot.png" alt="Пример 4. Узкое окно Internet Explorer 6.">
     <figcaption>Пример 4. Узкое окно Internet Explorer 6.</figcaption>
 </figure>
 
 Оказывается, что фигуры VML удачно встают на место существующих элементов, при этом очень ценно то, что для них можно (и нужно) указать стопроцентную высоту, которая будет работать. Ширину, указывать не стоит — элемент «вылезет» из-за того, что по стандартам задаётся ширина содержимого без отступов, к тому же она и так отрабатывается автоматически. В зависимости от задачи: блочный элемент или ширина по содержимому, следует использовать `display: block` — [пример 4.2](demos/4-2-vml-pos-b.html) или `display: inline-block` — [пример 4.1](demos/4-1-vml-pos-ib.html). Открывающий и закрывающий тэги должны находится в начале и в конце соответственно.
 
 <figure>
-    {% responsiveImage "./src/articles/cross-browser-rounded-corners/images/4.1-modern-shot.png", "Пример 4. Современный браузер." %}
+    <img src="images/4.1-modern-shot.png" alt="Пример 4. Современный браузер.">
     <figcaption>Пример 4. Современный браузер.</figcaption>
 </figure>
 
@@ -289,7 +289,7 @@ VML позволяет создавать заготовки, чтобы ссы�
 Теперь всё выглядит примерно так:
 
 <figure>
-    {% responsiveImage "./src/articles/cross-browser-rounded-corners/images/5-shot.png", "Пример 5. Internet Explorer 6." %}
+    <img src="images/5-shot.png" alt="Пример 5. Internet Explorer 6.">
     <figcaption>Пример 5. Internet Explorer 6.</figcaption>
 </figure>
 

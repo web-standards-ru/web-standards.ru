@@ -17,7 +17,7 @@ preview: 'Декораторы — это функции высшего пор�
 ---
 
 <figure>
-    {% responsiveImage "./src/articles/function-decorators/images/1.jpg", "" %}
+    <img src="images/1.jpg" alt="">
     <figcaption>
         Фото <a href="https://unsplash.com/photos/rkT_TG5NKF8">Calum Lewis</a>.
     </figcaption>

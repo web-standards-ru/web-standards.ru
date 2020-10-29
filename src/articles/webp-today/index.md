@@ -20,7 +20,7 @@ preview: 'WebP — формат графики, разработанный Goog
 [WebP](https://developers.google.com/speed/webp/) — формат графики, разработанный Google в 2010. Он был создан, как альтернатива PNG и JPG, и отличается от них гораздо меньшим размером при том же качестве изображения.
 
 <figure>
-    {% responsiveImage "./src/articles/webp-today/images/1.jpg", "" %}
+    <img src="images/1.jpg" alt="">
     <figcaption>
         Интерфейс оптимизатора <a href="https://squoosh.app/">Squoosh</a>.
     </figcaption>
@@ -31,7 +31,7 @@ preview: 'WebP — формат графики, разработанный Goog
 WebP — крайне полезный формат, ведь он даёт и производительность и возможности. В отличие от других форматов, WebP поддерживает сжатие как с потерями так и без, а также полупрозрачность и анимацию.
 
 <figure>
-    {% responsiveImage "./src/articles/webp-today/images/2.png", "" %}
+    <img src="images/2.png" alt="">
     <figcaption>
         Сравнение возможностей форматов WebP, PNG, JPG, GIF.
     </figcaption>
@@ -85,7 +85,7 @@ node convert-to-webp.js
 В Sketch мы можем экспортировать любой слой в формате WebP.
 
 <figure>
-    {% responsiveImage "./src/articles/webp-today/images/3.png", "" %}
+    <img src="images/3.png" alt="">
     <figcaption>
         Интерфейс экспорта графики в <a href="https://www.sketchapp.com/">Sketch</a>.
     </figcaption>
@@ -96,7 +96,7 @@ node convert-to-webp.js
 На момент написания статьи _(21 ноября 2018 — прим. редактора),_ WebP поддерживается в 72% браузеров.
 
 <figure>
-    {% responsiveImage "./src/articles/webp-today/images/4.png", "" %}
+    <img src="images/4.png" alt="">
     <figcaption>
         <a href="https://caniuse.com/#feat=webp">Поддержка WebP на Can I use</a>.
     </figcaption>

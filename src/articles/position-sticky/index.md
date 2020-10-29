@@ -23,7 +23,7 @@ preview: 'У position: sticky уже очень неплохая браузер�
 
 Во-вторых, многие разработчики до конца не понимают логику, по которой это свойство работает. И тут появляюсь я!
 
-{% responsiveImage "./src/articles/position-sticky/images/1.png", "" %}
+<img src="images/1.png" alt="">
 
 Я полагаю, что вы хорошо знакомы с позиционированием в CSS, но давайте кратко повторим основные моменты:
 
@@ -100,7 +100,7 @@ preview: 'У position: sticky уже очень неплохая браузер�
 
 Наглядный пример:
 
-{% responsiveImage "./src/articles/position-sticky/images/2.png", "" %}
+<img src="images/2.png" alt="">
 
 <figure>
     <iframe src="https://codepen.io/elad2412/embed/preview/MZZVjw"></iframe>
@@ -173,7 +173,7 @@ position: sticky;
 ```
 
 <figure>
-    {% responsiveImage "./src/articles/position-sticky/images/3.png", "" %}
+    <img src="images/3.png" alt="">
     <figcaption>
         Более 86% браузеров поддерживает sticky по данным <a href="https://caniuse.com/#search=sticky">Can I Use</a>.
     </figcaption>
