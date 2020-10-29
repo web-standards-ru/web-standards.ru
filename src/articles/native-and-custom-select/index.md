@@ -41,7 +41,7 @@ featured: true
 *   **Навигация:** Список ссылок, используемых для перемещения по сайту.
 *   **Селект:** Контрол формы (`<select>`) показывающий пользователю набор опций, которые он может выбрать в её пределеах.
 
-Deciding what type of dropdown we’re talking about can be a foggy task. Here are some examples from around the web that match how I would classify those three different types. This is based on my research and sometimes, when I can’t find a proper answer, _intuition_ based on my experience.
+Определение типа выпадающего списка о котором мы ведем речь кажется туманным. Вот несколько примеров из веба подходящие под мою классификацию вышеупомянутых элементов. Они основаны на моем исследовании, и иногда, когда я не могу найти подходящий ответ моей _интуицией_ руководит опыт.
 
 Diagram Label
 
@@ -79,56 +79,60 @@ The dropdown has content that is not a list. (e.g. a date picker)
 
 Something else that [should not be called dropdown](https://adrianroselli.com/2020/03/stop-using-drop-down.html)
 
-Not everyone perceives and interacts with the internet in the same way. Naming user interfaces and defining design patterns is a fundamental process, though one with a lot of room for personal interpretation. All of that variation is what drives the population of dropdown_\-land._
+Не все воспринимают и взаимодействуют с интернетом одинаково. Наделение именами пользовательских интерфейсов и определение дизайн-шаблонов - фундаментальный процесс, хотя и с достаточным пространством для личной интерпретации. Все эти вариации - то что движет населением страны выпадающих списков.
 
-There is a dropdown type that is clearly a **menu.** Its usage is a hot topic in conversations about accessibility. I won’t talk much about it here, but let me just reinforce that the [`<menu>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu) element is deprecated and no longer recommended. And here’s a detailed explanation about [inclusive menus and menus buttons](https://inclusive-components.design/menus-menu-buttons/), including why [ARIA menu role should not be used for site navigation](https://adrianroselli.com/2017/10/dont-use-aria-menu-roles-for-site-nav.html).
+Вот тип выпадающего списка, который определенно можно назвать **меню.** Его использование - горячая тема при обсуждении доступности. Я не буду много говорить об этом здесь, но позвольте мне просто подчеркнуть, что [`<menu>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu) устарел и больше не используется. А вот подробное руководство по [инклюзивным меню и его кнопкам](https://inclusive-components.design/menus-menu-buttons/),
+ And here’s a detailed explanation about [inclusive menus and menus buttons](https://inclusive-components.design/menus-menu-buttons/), включая объяснение почему [роль меню ARIA не следует использовать для навигации по сайту](https://adrianroselli.com/2017/10/dont-use-aria-menu-roles-for-site-nav.html).
 
-We haven’t even touched on other elements that fall into a rather gray area that makes classifying dropdowns even murkier because of a lack of practical uses cases from the WCAG community.
 
-Uff… that was a lot. Let’s forget about this dropdown-land mess and focus exclusively on the dropdown type that is clearly a `<select>` element.
+Мы даже не коснулись других элементов, которые остаются в тени, что делает классификацию выпадающих списков еще более туманной из за недостака практических примеров использования от WCAG.
 
-### Let’s talk about `<select>`
+Уфф..это было объемно. Давайте забудем об этом выпадающем списке и сосредоточимся исключительно на теге `<select>`.
 
-Styling form controls is an interesting journey. As MDN puts it, there’s [_the good, the bad, and the ugly_](https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms#Why_is_styling_form_widgets_challenging). Good is stuff like `<form>` which is just a block-level element to style. Bad is stuff like checkboxes, which [can be done but is somewhat cumbersome](https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/). `<select>` is definitely in ugly terrain.
+### Поговорим о `<select>`
 
-A lot of articles have been written about it and, even in 2020, [it’s still a challenge to create custom selects](https://css-tricks.com/making-a-better-custom-select-element/) and [some users still prefer the simple native ones](https://www.24a11y.com/2019/select-your-poison-part-2/). 
+Стилизация элементом формы - увлекательное путешествие. Согласно MDN, существуют [хорошо стилизуемые, плохо стилизуемые и ужасно стилизуемые элементы формы](https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms#Why_is_styling_form_widgets_challenging). К первым относится тег`<form>`, который попросту является блочным элементом. К плохо стилизуемым относятся чекбоксы, стилизация которых [возможна, но громоздка](https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/). `<select>` определенно из третьей категории.
 
-Among developers, the `<select>` is the [most frustrating form control by far](https://www.gwhitworth.com/blog/2019/07/form-controls-components/), mainly because of [its lack of styling support](https://www.gwhitworth.com/blog/2019/10/can-we-please-style-select/). The UX struggle behind it is so big that we [look for other alternatives](https://medium.com/@kollinz/dropdown-alternatives-for-better-mobile-forms-53e40d641b53). Well, I guess the first rule of `<select>` is [similar to ARIA](https://www.w3.org/TR/using-aria/%23firstrule): **avoid using it if you can.**
+Огромное число статей посвящены этому, даже в 2020 [все еще трудно создать кастомный селект](https://css-tricks.com/making-a-better-custom-select-element/) и [некоторые пользователи все еще предпочитают простые и нативные селекты](https://www.24a11y.com/2019/select-your-poison-part-2/). 
 
-I could finish the article right here with _“Don’t use `<select>`, period.”_ But let’s face reality: a select is still our best solution in a number of circumstances. That might include scenarios where we’re working with a list that contains a lot of options, layouts that are tight on space, or simply a lack of time or budget to design and implement a great custom interactive component from scratch.
+Среди разработчиков `<select>` - [самый разочарующий элемент формы](https://www.gwhitworth.com/blog/2019/07/form-controls-components/), главным образом из за [отстутствия поддержки стилей](https://www.gwhitworth.com/blog/2019/10/can-we-please-style-select/). Борьба UX за это настолько велика, что мы ищем [иные возможности](https://medium.com/@kollinz/dropdown-alternatives-for-better-mobile-forms-53e40d641b53). Ну, я думаю, что первое правило `<select>` - это, [в соответствии с ARIA](https://www.w3.org/TR/using-aria/%23firstrule): **избегайте его использования, если можете.**
 
-### Custom `<select>` requirements
+Я могла бы закончить статью прямо сейчас со словами _"Не используйте `<select>`, точка."_ Но давайте посмотрим правде в глаза: селект для нас - все еще лучшее решение в ряде случаев. Сюда можно отнести моменты, когда мы работаем со списком, содержащим множество опций, <!-- Нужен совет как лучше перевисти layouts здесь. оригинал -  we’re working with a list that contains a lot of options, layouts that are tight on space --> или же просто при нехватки времени или бюджета для разработки и реализации пользовательского интерактивного компонента с нуля.
 
-When we make the decision to create a custom select — even if it’s just a “simple” one — these are the requirements we generally have to work with:
+### Требования к кастомному `<select>`.
 
-*   There is a button that contains the current selected option.
-*   Clicking the box toggles the visibility of the options list (also called listbox).
-*   Clicking an option in the listbox updates the selected value. The button text changes and the listbox is closed.
-*   Clicking outside the component closes the listbox.
-*   The trigger contains a small triangle icon pointing downward to indicate there are options.
+Приняв решение создать кастомный селект — пусть и самый простой — мы сталкиваемся с требованиями, которые мы должны учесть:
 
-Something like this:
+*   Должна быть кнопка, содержащая текущий выбранный вариант.
+*   Клик по блоку переключает флажок видимости списка вариантов.
+*   Клик по опции, расположенной в списке, обновляет выбранное значение. Текст кнопки меняется и список закрывается. <!--пропадает?-->
+*   Клик по области вне компонента закрывает список.
+*   Триггер содержит маленький треугольник, направленный вниз, чтобы указать на то, что есть варианты.
+
+Что-то вроде этого:
 
 CodePen Embed Fallback
 
-Some of you may be thinking this works and is good to go. But wait… does it work for _everyone_?  Not everyone uses a mouse (or touch screen). Plus, a native `<select>` element comes with more features we get for free and aren’t included in those requirements, such as:
+Кто-то из вас подумает - "работает и хорошо". Но, постойте... Разве это работает для _всех_? Не все используют мышку (или тачскрин). К тому же, нативный `<select>`обладает более широким списком возможностей, которые достаются нам просто так и не входят в этот список требований:
 
-*   The checked option is perceivable for all users regardless of their visual abilities.
-*   The component can interact with a keyboard in a predictable way across all browsers (e.g. using arrow keys to navigate, `Enter` to select, `Esc` to cancel, etc.).
-*   Assistive technologies (e.g. screen readers) announce the element clearly to users, including its role, name and state.
-*   The listbox position is adjusted. (i.e. does not get cut off of the screen).
-*   The element respects the user’s operating system preferences (e.g high contrast, color scheme, motion, etc.).
 
-This is where the majority of the custom selects fail in some way. Take a look at some of the major UI components libraries. I won’t mention any because the web is ephemeral, but go give it a try. You’ll likely notice that the select component in one framework behaves differently from another. 
+*   Выбранный вариант доступен для восприятия всеми пользователями вне зависимости от их зрения. <!--визуальных способностей?-->
+*   С компонентом можно взаимодействовать с помощью клавиатуры предсказуемым образом во всех браузерах (например, используя клавиши стрелок для навигации, `Enter` для выбора, `Esc` для отмены и т.д.).
 
-Here are additional characteristics to watch for:
+*   Вспомогательные технологии (например, скринридер) четко сообщают пользователям об элементе, включая его роль, имя и состояние.
+*   Положение списка регулируется (т.е. он не пропадает с экрана).
+*   Элемент чувствителен к предпочтению операционной системы пользователя (например, к высокой контрастности, цветовой схеме, движению и т.д.)
 
-*   Is a listbox option immediately activated on focus when navigating with a keyboard?
-*   Can you use `Enter` and/or `Space` to select an option?
-*   Does the `Tab` key jump go to the next option in the listbox, or jump to the next form control?
-*   What happens when you reach the last option in the listbox using arrow keys? Does it simply stay at the last item, does it go back to the first option, or worst of all, does focus move to the next form control? 
-*   Is it possible to jump directly to the last item in the listbox using the `Page Down` key?
-*   Is it possible to scroll through the listbox items if there are more than what is currently in view?
+Именно на этом этапе большинство кастомных селектов терпят крах. Взгляните на некоторые из основных UI библиотек. Я не буду их упоминать, потому что веб достаточно прозрачен, но идите и попробуйте. Вероятно, вы заметите разное поведение селекта в разных фреймворках.
+
+Вот дополнительные характеристики, за которыми нужно следить:
+
+*   Выбирается ли опция списка сразу же при получения фокуса с клавиатуры?
+*   Можно ли использовать `Enter` и/или `Space` для выбора варианта?
+*   Нажатие на `Tab` переносит нас к следующему варианут списка или же к следующему элементу формы?
+*   Что будет, когда вы достигнете последнего варианта в списке с помощью стрелок? Фокус замрет на последнем варианте, вернется к первому или же, что    хуже всего, перейдет к следующему элементу формы?
+*   Возможно ли перейти к последней опции списка с помощью клавиши `Page Down`?
+*   Можно ли прокручивать элементы списка, если их больше, чем в поле видимости в данный момент?
 
 This is a small sample of the features included in a native `<select>` element.
 
