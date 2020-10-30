@@ -1,6 +1,3 @@
-// Мне кажется, что это нужно обрабатывать фильтром на уровне конфига уже после генерации HTML, как сейчас сжатие работает.
-const Image = require("@11ty/eleventy-img");
-
 module.exports = function(config) {
     config.addPassthroughCopy('src/favicon.ico');
     config.addPassthroughCopy('src/manifest.json');
@@ -200,6 +197,8 @@ module.exports = function(config) {
     });
 
     config.addTransform('responsiveImages', async (content, outputPath) => {
+        const Image = require("@11ty/eleventy-img");
+
         const articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
         const images = /<img src="([^.>]+)\.(jpg|png)"([^>]+)>/g
 
@@ -216,7 +215,7 @@ module.exports = function(config) {
 
                 const outputDir = `dist/articles/${article}/images/`
                 const source = `src/articles/${article}/${path}.${format}`
-                
+
                 const stats = await Image(source, {
                     widths: [600, 1200, 2000],
                     formats: ["webp", "jpg"],
@@ -228,7 +227,7 @@ module.exports = function(config) {
                     props: stats["jpg"][0],
                     entries: Object.values(stats)[0],
                 };
-              }
+            }
 
             content = content.replace(images, (match, p1, p2, p3) => {
                 const { props, entries } = newImagesProps[p1]
@@ -236,7 +235,7 @@ module.exports = function(config) {
                 const sizes = "100vw"
                 const webpSrcset = entries.map((entry) => `${entry.url} ${entry.width}w`).join(", ");
                 const jpgSrcset = webpSrcset.replace(/\.\w+/g, ".jpg")
-                
+
                 return `
                     <picture>
                         <source
