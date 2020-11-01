@@ -13,37 +13,39 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
     "@mavrin/remark-typograf": "^2.1.6",
-    "autoprefixer": "^9.7.6",
-    "del": "^5.1.0",
-    "editorconfig-checker": "^3.0.4",
+    "autoprefixer": "^10.0.1",
+    "del": "^6.0.0",
+    "editorconfig-checker": "^3.2.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-rev": "^9.0.0",
     "gulp-rev-rewrite": "^3.0.3",
-    "gulp-terser": "^1.2.0",
+    "gulp-terser": "^1.4.0",
     "html-minifier": "^4.0.0",
-    "node-w3c-validator": "^1.6.1",
+    "hyphen": "^1.6.2",
+    "markdown-it-multimd-table": "^4.0.3",
+    "node-w3c-validator": "^1.6.4",
+    "postcss": "^8.1.1",
     "postcss-color-hex-alpha": "^6.0.0",
-    "postcss-csso": "^4.0.0",
+    "postcss-csso": "^5.0.0",
     "postcss-import": "^12.0.1",
     "pretty-data": "^0.40.0",
-    "remark-cli": "^8.0.0",
-    "remark-frontmatter": "^2.0.0",
-    "remark-lint": "^7.0.0",
-    "remark-lint-code-block-style": "^2.0.0",
-    "remark-lint-emphasis-marker": "^2.0.0",
-    "remark-lint-ordered-list-marker-value": "^2.0.0",
-    "remark-lint-strong-marker": "^2.0.0",
-    "remark-lint-unordered-list-marker-style": "^2.0.0",
-    "stylelint": "^13.3.3",
-    "typograf": "^6.11.1",
-    "vinyl-paths": "^3.0.1",
-    "hyphen": "^1.6.1",
-    "stylelint-order": "^4.0.0"
+    "remark-cli": "^9.0.0",
+    "remark-frontmatter": "^3.0.0",
+    "remark-lint": "^8.0.0",
+    "remark-lint-code-block-style": "^2.0.1",
+    "remark-lint-emphasis-marker": "^2.0.1",
+    "remark-lint-ordered-list-marker-value": "^2.0.1",
+    "remark-lint-strong-marker": "^2.0.1",
+    "remark-lint-unordered-list-marker-style": "^2.0.1",
+    "stylelint": "^13.7.2",
+    "stylelint-order": "^4.1.0",
+    "typograf": "^6.11.2",
+    "vinyl-paths": "^3.0.1"
   },
   "browserslist": [
     "last 2 version",
@@ -59,7 +61,9 @@
   },
   "stylelint": {
     "extends": "./stylelint.config.rational-order.js",
-    "plugins": "stylelint-order",
+    "plugins": [
+      "stylelint-order"
+    ],
     "rules": {
       "color-no-invalid-hex": true,
       "font-family-no-duplicate-names": true,
@@ -70,7 +74,9 @@
       "property-no-unknown": [
         true,
         {
-          "ignoreProperties": "print-color-adjust"
+          "ignoreProperties": [
+            "print-color-adjust"
+          ]
         }
       ],
       "declaration-block-no-shorthand-property-overrides": true,
@@ -89,7 +95,7 @@
       "number-max-precision": 2,
       "declaration-block-single-line-max-declarations": 1,
       "selector-max-empty-lines": 0,
-      "comment-word-blacklist": [
+      "comment-word-disallowed-list": [
         "todo"
       ],
       "color-hex-case": "lower",
@@ -131,10 +137,10 @@
       "declaration-block-semicolon-space-before": "never",
       "declaration-block-trailing-semicolon": "always",
       "declaration-empty-line-before": "never",
-      "declaration-property-unit-whitelist": {
+      "declaration-property-unit-allowed-list": {
         "line-height": []
       },
-      "declaration-property-value-blacklist": {
+      "declaration-property-value-disallowed-list": {
         "/.*/": [
           "/rgb/",
           "/rgba/"

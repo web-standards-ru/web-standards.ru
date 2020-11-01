@@ -23,7 +23,7 @@ preview: 'Вам часто приходилось использовать Java
     <footer>
         <cite><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element">Спецификация WHATWG HTML5</a>.</cite>
     </footer>
-<blockquote>
+</blockquote>
 
 Мы можем использовать `<details>` для создания «виджетов-аккордеонов», которые пользователь может разворачивать и сворачивать. Внутри этого элемента можно разместить любое содержимое.
 

@@ -198,7 +198,9 @@
 /* Images */
 
 .content > img,
+.content > video,
 .content figure > img,
+.content figure > video,
 .content a > img {
     display: block;
     max-width: 100%;
@@ -207,7 +209,8 @@
 }
 
 @media (min-width: 1240px) {
-    .content > img {
+    .content > img,
+    .content > video {
         margin: 60px 0 60px auto;
     }
 }
@@ -267,6 +270,7 @@
 
 .content code {
     font-family: 'Rostin', monospace;
+    word-wrap: break-word;
 }
 
 .content pre {
@@ -300,9 +304,10 @@
     background-image: linear-gradient(
         to left,
         var(--color-blue-lightest) 0%,
-        var(--color-blue-lightest-transparent) 100%
+        var(--color-blue-lightest-0a) 100%
     );
     content: '';
+    pointer-events: none;
 }
 
 .content pre code {
@@ -310,7 +315,7 @@
     padding: 16px 0;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-green-darker) transparent;
+    scrollbar-color: var(--color-green-darker-50a) transparent;
     user-select: all;
 }
 
@@ -331,12 +336,22 @@
 }
 
 .content pre code::-webkit-scrollbar {
-    height: 3px;
+    height: 8px;
 }
 
 .content pre code::-webkit-scrollbar-thumb {
+    background-color: var(--color-green-darker-50a);
+    border-top: 4px solid var(--color-green-light);
+}
+
+.content pre:hover code::-webkit-scrollbar-thumb {
     background-color: var(--color-green-darker);
-    border-radius: 24px;
+    border-top: none;
+    border-radius: 8px;
+}
+
+.content pre code::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-turquoise);
 }
 
 /* Frame */
@@ -345,8 +360,8 @@
     display: block;
     width: 100%;
     min-height: 400px;
-    margin: 0;
-    margin-top: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     border: 0;
 }
 
@@ -354,22 +369,26 @@
 
 .content > p:first-of-type::first-letter {
     float: left;
-    margin-top: -5px;
+    margin-top: 0.13em;
     margin-left: -5px;
     padding-right: 15px;
     color: var(--color-grey-medium);
     font-weight: normal;
     font-size: 3.5em;
     font-family: 'Dewi Expanded', sans-serif;
-    line-height: 1;
+    line-height: 0.65;
 }
 
 /* Tables */
 
-.content table {
-    width: 100%;
+.content__table-wrapper {
     margin-top: 16px;
     margin-bottom: 24px;
+    overflow-x: auto;
+}
+
+.content table {
+    width: 100%;
     border-collapse: collapse;
 }
 

@@ -4,7 +4,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|zip)');
+    config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
 
     // Markdown Options
 
@@ -24,7 +24,13 @@ module.exports = function(config) {
             'aria-label': 'Этот заголовок',
         }),
         slugify: () => 'section',
-    });
+    }).use(require('markdown-it-multimd-table'));
+
+    md.renderer.rules = { ...md.renderer.rules,
+        table_close: () => "</table></div>",
+        table_open: () => '<div class="content__table-wrapper"><table>',
+    };
+
     config.setLibrary('md', md);
 
     config.addCollection('tagList', (collection) => {
