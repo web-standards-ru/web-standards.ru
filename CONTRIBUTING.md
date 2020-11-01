@@ -47,7 +47,6 @@
 
 В конце описания в `alt` всегда ставится точка, чтобы помочь скринридеру сделать паузу перед следующим дальше контентом.
 
-## Вспомогательные инструменты
+## Инструменты
 
-### [Nunjucks Template](https://marketplace.visualstudio.com/items?itemName=eseom.nunjucks-template)
-Если вы используете Visual Studio Code, для работы с nunjucks файлами лучше установить это расширение.
+- Расширение [Nunjucks Template](https://marketplace.visualstudio.com/items?itemName=eseom.nunjucks-template) для VS Code
