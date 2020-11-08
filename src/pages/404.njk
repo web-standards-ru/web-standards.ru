@@ -1,0 +1,19 @@
+---
+title: Страница не найдена | Веб-стандарты
+layout: page.njk
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+{% include 'header.njk' %}
+
+<main class="main">
+    <div class="notfound">
+        <h1 class="notfound__title">404</h1>
+        <p class="notfound__description">Кажется материал который вы ищите пропал или никогда не существовал.</p>
+        <a href="{{ "/" | url }}" class="notfound__backhome">Вернуться на главную страницу</a>
+    </div>
+</main>
+
+{% include 'aside.njk' %}
+{% include 'footer.njk' %}
