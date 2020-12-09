@@ -101,7 +101,7 @@ Docker version 19.03.13, build 4484c46d9d
 > docker run hello-world
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
-0e03bdcc26d7: Pull complete 
+0e03bdcc26d7: Pull complete
 Digest: sha256:e7c70bb24b462baa86c102610182e3efcb12a04854e8c582838d92970a09f323
 Status: Downloaded newer image for hello-world:latest
 
@@ -109,25 +109,25 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
 To generate this message, Docker took the following steps:
- 1. The Docker client contacted the Docker daemon.
- 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    1. The Docker client contacted the Docker daemon.
+    2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
     (amd64)
- 3. The Docker daemon created a new container from that image which runs the
+    3. The Docker daemon created a new container from that image which runs the
     executable that produces the output you are currently reading.
- 4. The Docker daemon streamed that output to the Docker client, which sent it
+    4. The Docker daemon streamed that output to the Docker client, which sent it
     to your terminal.
 
 To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
+    $ docker run -it ubuntu bash
 
 Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
+    https://hub.docker.com/
 
 For more examples and ideas, visit:
- https://docs.docker.com/get-started/
+    https://docs.docker.com/get-started/
 ```
 
-Сначала Docker CLI попытался найти указанный образ hello-world среди уже скачанных и не нашел его (“Unable to find \<…\> locally”). Затем он обратился к реестру Docker Hub, который установлен по умолчанию, нашел, скачал и установил последнюю версию: “latest: Pulling from…”. В итоге мы получили вывод в терминале сообщения “Hello from Docker!…”. 
+Сначала Docker CLI попытался найти указанный образ hello-world среди уже скачанных и не нашел его (“Unable to find \<…\> locally”). Затем он обратился к реестру Docker Hub, который установлен по умолчанию, нашел, скачал и установил последнюю версию: “latest: Pulling from…”. В итоге мы получили вывод в терминале сообщения “Hello from Docker!…”.
 
 Если сейчас посмотреть список запущенных контейнеров с помощью команды:
 
@@ -157,7 +157,7 @@ CONTAINER ID        IMAGE                    COMMAND                  CREATED   
 > docker pull centos
 Using default tag: latest
 latest: Pulling from library/centos
-3c72a8ed6814: Pull complete 
+3c72a8ed6814: Pull complete
 Digest: sha256:76d24f3ba3317fa945743bb3746fbaf3a0b752f10b10376960de01da70685fbd
 Status: Downloaded newer image for centos:latest
 docker.io/library/centos:latest
@@ -180,7 +180,7 @@ CMD ["/bin/bash"]
 
 Используется базовая ОС для Docker. С помощью команды ADD добавляются файловая система образа интересующей нас ОС, затем устанавливаются именованные константы для контейнера командой LABEL (важный шаг для управления контейнерами), а на последнем шаге запускается терминал командой CMD. Кажется, пора запустить контейнер.
 
-Давайте посмотрим список загруженных образов с помощью команды:  
+Давайте посмотрим список загруженных образов с помощью команды:
 
 ```bash
 > docker image ls
@@ -250,7 +250,7 @@ INSTRUCTION arguments
 FROM centos:latest
 ```
 
-Давайте попробуем сформировать и запустить его? Используем команду [docker build](https://docs.docker.com/engine/reference/commandline/build/). Если запустить ее в каталоге с Dockerfile с точкой после слова build, Docker CLI должен собрать новый образ. Переходим в отдельный каталог, создаем файл Dockerfile, записываем в него строчку и запускаем сборку. Достаточно выполнить следующие две команды в терминале: 
+Давайте попробуем сформировать и запустить его? Используем команду [docker build](https://docs.docker.com/engine/reference/commandline/build/). Если запустить ее в каталоге с Dockerfile с точкой после слова build, Docker CLI должен собрать новый образ. Переходим в отдельный каталог, создаем файл Dockerfile, записываем в него строчку и запускаем сборку. Достаточно выполнить следующие две команды в терминале:
 
 ```bash
 > touch ./Dockerfile && echo "FROM centos:latest" > ./Dockerfile && cat ./Dockerfile
@@ -435,23 +435,23 @@ mysql:5.7
 ```yaml
 version: '3.8'
 services:
-  drupal:
+    drupal:
     image: drupal:latest
     ports:
-      - 8080:80
+        - 8080:80
     volumes:
-      - /var/www/html/modules
-      - /var/www/html/profiles
-      - /var/www/html/themes
-      - /var/www/html/sites
+        - /var/www/html/modules
+        - /var/www/html/profiles
+        - /var/www/html/themes
+        - /var/www/html/sites
     restart: always
-  mysql:
+    mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: drupal
-      MYSQL_USER: user
-      MYSQL_PASSWORD: passwod
-      MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: drupal
+        MYSQL_USER: user
+        MYSQL_PASSWORD: passwod
+        MYSQL_ROOT_PASSWORD: password
     restart: always
 ```
 
@@ -552,7 +552,7 @@ COPY README.md ./
 COPY src/ ./src
 COPY public/ ./public
 
-# Можно заменить одной командой, если Вы добавите еще один файл в репозиторий 
+# Можно заменить одной командой, если Вы добавите еще один файл в репозиторий
 # COPY . .
 ```
 
@@ -642,29 +642,29 @@ docker-compose.yml:
 version: '3.7'
 
 services:
-  webapp-server:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: myapp-server-img
-    container_name: myapp-node-express
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    ports:
-      - "8080:8080"
-    depends_on:
-      - mongo
-    env_file: .env
-    environment:
-      - MONGO_HOSTNAME=$MONGO_HOSTNAME
-      - MONGO_PORT=$MONGO_PORT
-      - MONGO_DB=$MONGO_DB
-  mongo:
-    image: mongo
-    container_name: myapp-mongodb
-    ports:
-      - "27017:27017"
+    webapp-server:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: myapp-server-img
+        container_name: myapp-node-express
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - "8080:8080"
+        depends_on:
+            - mongo
+        env_file: .env
+        environment:
+            - MONGO_HOSTNAME=$MONGO_HOSTNAME
+            - MONGO_PORT=$MONGO_PORT
+            - MONGO_DB=$MONGO_DB
+    mongo:
+        image: mongo
+        container_name: myapp-mongodb
+        ports:
+            - "27017:27017"
 ```
 
 В docker-compose.yml используется несколько другой подход с подключением отдельного файла для описания контейнера и загрузки переменных среды из файла .env. Такое решение, как вы наверняка знаете, довольно распространено. В репозиторий не попадают пароли, ключи и прочие секретные данные.
@@ -677,80 +677,80 @@ services:
 version: '3'
 services:
 
-  flask:
-    build:
-      context: app
-      dockerfile: Dockerfile
-    container_name: flask
-    image: digitalocean.com/flask-python:3.6
-    restart: unless-stopped
-    environment:
-      APP_ENV: "prod"
-      APP_DEBUG: "False"
-      APP_PORT: 5000
-      MONGODB_DATABASE: flaskdb
-      MONGODB_USERNAME: flaskuser
-      MONGODB_PASSWORD: your_mongodb_password
-      MONGODB_HOSTNAME: mongodb
-    volumes:
-      - appdata:/var/www
-    depends_on:
-      - mongodb
-    networks:
-      - frontend
-      - backend
+    flask:
+        build:
+            context: app
+            dockerfile: Dockerfile
+        container_name: flask
+        image: digitalocean.com/flask-python:3.6
+        restart: unless-stopped
+        environment:
+            APP_ENV: "prod"
+            APP_DEBUG: "False"
+            APP_PORT: 5000
+            MONGODB_DATABASE: flaskdb
+            MONGODB_USERNAME: flaskuser
+            MONGODB_PASSWORD: your_mongodb_password
+            MONGODB_HOSTNAME: mongodb
+        volumes:
+            - appdata:/var/www
+        depends_on:
+            - mongodb
+        networks:
+            - frontend
+            - backend
 
-  mongodb:
-    image: mongo:4.0.8
-    container_name: mongodb
-    restart: unless-stopped
-    command: mongod --auth
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: mongodbuser
-      MONGO_INITDB_ROOT_PASSWORD: your_mongodb_root_password
-      MONGO_INITDB_DATABASE: flaskdb
-      MONGODB_DATA_DIR: /data/db
-      MONDODB_LOG_DIR: /dev/null
-    volumes:
-      - mongodbdata:/data/db
-    networks:
-      - backend
+    mongodb:
+        image: mongo:4.0.8
+        container_name: mongodb
+        restart: unless-stopped
+        command: mongod --auth
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: mongodbuser
+            MONGO_INITDB_ROOT_PASSWORD: your_mongodb_root_password
+            MONGO_INITDB_DATABASE: flaskdb
+            MONGODB_DATA_DIR: /data/db
+            MONDODB_LOG_DIR: /dev/null
+        volumes:
+            - mongodbdata:/data/db
+        networks:
+            - backend
 
-  webserver:
-    build:
-      context: nginx
-      dockerfile: Dockerfile
-    image: digitalocean.com/webserver:latest
-    container_name: webserver
-    restart: unless-stopped
-    environment:
-      APP_ENV: "prod"
-      APP_NAME: "webserver"
-      APP_DEBUG: "true"
-      SERVICE_NAME: "webserver"
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - nginxdata:/var/log/nginx
-    depends_on:
-      - flask
-    networks:
-      - frontend
+    webserver:
+        build:
+            context: nginx
+            dockerfile: Dockerfile
+        image: digitalocean.com/webserver:latest
+        container_name: webserver
+        restart: unless-stopped
+        environment:
+            APP_ENV: "prod"
+            APP_NAME: "webserver"
+            APP_DEBUG: "true"
+            SERVICE_NAME: "webserver"
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - nginxdata:/var/log/nginx
+        depends_on:
+            - flask
+        networks:
+            - frontend
 
 networks:
-  frontend:
-    driver: bridge
-  backend:
-    driver: bridge
+    frontend:
+        driver: bridge
+    backend:
+        driver: bridge
 
 volumes:
-  mongodbdata:
-    driver: local
-  appdata:
-    driver: local
-  nginxdata:
-    driver: local 
+    mongodbdata:
+        driver: local
+    appdata:
+        driver: local
+    nginxdata:
+        driver: local 
 ```
 
 Автор предлагает создать три контейнера: для веб-сервера, для СУБД и для Flask. Обратите внимание на создание внутренней сети. Думаю, вы вполне разберетесь с конфигурацией.
@@ -764,10 +764,10 @@ volumes:
 
 ```json
 {
-  "name": "server",
-  "dockerComposeFile": ["../docker-compose.yaml"],
-  "service": "test",
-  "workspaceFolder": "/app"
+    "name": "server",
+    "dockerComposeFile": ["../docker-compose.yaml"],
+    "service": "test",
+    "workspaceFolder": "/app"
 }
 ```
 
@@ -776,7 +776,7 @@ volumes:
 В VSCode можно попытаться открыть папку проекта, и среда сама предложит открыть снова ее, но уже внутри контейнера. А можно сделать это вручную, нажав клавишу F1 или сочетание клавиш Ctrl + P (Cmd + P для macOS) и выбрав команду:
 
 ```bash
-> Remote-Containers: Open Workspace in Container. 
+> Remote-Containers: Open Workspace in Container.
 ```
 
 Вы также можете указать те расширения, которые нужно поставить для данной рабочей сессии VSCode. После работы все эти расширения удаляться из редактора. Это очень удобно. Мне это позволяет держать в VSCode всего десять (!) расширений, которые будут востребованы в любом проекте, и никаких расширений для конкретного языка или фреймворка. Чистота и порядок!
@@ -787,7 +787,7 @@ volumes:
 В Docker можно запускать не только консольные приложения, но и приложения с графическим интерфейсом. Единственное ограничение – они будут работать на сервере системы X Windows для рендеринга графических приложений и взаимодействия с ними. Воспользоваться можно интересным свойством приложений с графическим интерфейсом Linux. Приложения запускаются как клиенты, которые обращаются к серверу X Windows. При этом не важно, где этот сервер расположен. Он вполне может быть на удаленном хосте. А нам это и надо!
 
 Если вы работаете на любом дистрибутиве ОС Linux, такой сервер у вас уже запущен. Чтобы поставить его на macOS, можете воспользоваться [XQuartz](https://www.xquartz.org/ "XQuartz"). На ОС Windows можно попробовать использовать [VcXsrv](https://sourceforge.net/projects/vcxsrv/ "VcXsrv"). В первую очередь вы должны разрешить удаленное подключение к X Windows серверу и добавить переменные среды для контейнера. Универсального решения для всех ОС не существует, но я приведу флаги для команды `docker run`, учитывая ОС:
- 
+
 ```bash
 -e DISPLAY=docker.for.mac.host.internal:0 # macOS
 -e DISPLAY=host.docker.internal:0 # Windows
@@ -854,7 +854,7 @@ USER 1000
 > export DOCKER_CONTENT_TRUST=1
 ```
 
-Прочитать подробнее про эту систему можно [здесь](https://docs.docker.com/engine/security/trust/). 
+Прочитать подробнее про эту систему можно [здесь](https://docs.docker.com/engine/security/trust/).
 
 **Хранение секретной информации**
 Чтобы учетные данные аккаунтов, сертификаты, секретные ключи доступа, имена ресурсов и любая другая конфиденциальная информация оставались в тайне от других, необходимо следовать двум правилам:
@@ -864,7 +864,7 @@ USER 1000
 В документации Docker есть [специальный раздел](https://docs.docker.com/engine/swarm/secrets/), посвящённый сохранности подобной чувствительной информации. Там предлагаются различные варианты. Но Джеф Хэйл (Jeff Hale) [советует](https://towardsdatascience.com/top-20-docker-security-tips-81c41dd06f57) хранить секретные данные в томах (Docker volumes), создание и использование которых были описаны выше.
 
 ## Заключение
-Нам приходится устанавливать на свою любимую технику всякую дребедень, экспериментировать с новыми технологиями, прикручивать на этапе внедрения продукта то, что не должно быть в нем. Фраза “у меня все работает” по понятным причинам совершенно не устраивает заказчика. Эти неприятные моменты приводят к прокрастинации или даже эмоциональному выгоранию разработчика, который часто работает больше положенных восьми часов в день. Ночные посиделки на кануне сдачи этапа проекта скорее обыденность, чем исключение. 
+Нам приходится устанавливать на свою любимую технику всякую дребедень, экспериментировать с новыми технологиями, прикручивать на этапе внедрения продукта то, что не должно быть в нем. Фраза “у меня все работает” по понятным причинам совершенно не устраивает заказчика. Эти неприятные моменты приводят к прокрастинации или даже эмоциональному выгоранию разработчика, который часто работает больше положенных восьми часов в день. Ночные посиделки на кануне сдачи этапа проекта скорее обыденность, чем исключение.
 
 Все вышесказанное является не чем иным, как попыткой помочь узнать основы без чтения документации. Как и всегда, попытка сделать что-либо подобное обречена на провал. Однако надеюсь, что время, проведенное за чтением, не будет бесполезным. Для меня процесс разработки совершенно точно разделился на “До” и “После”. Надеюсь, опыт и умозаключения, изложенные выше, вам пригодятся, позволят попробовать различные технологии самостоятельно, поэкспериментировать, и, может быть, обеспечат преимущества при устройстве на следующую работу!
 
