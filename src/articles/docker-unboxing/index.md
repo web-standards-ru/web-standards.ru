@@ -909,7 +909,7 @@ USER 1000
 1. [Современные операционные системы](https://www.piter.com/collection/A20865/product/sovremennye-operatsionnye-sistemy-4-e-izd)
 2. [Anatomy of Docker](https://medium.com/sysf/getting-started-with-docker-1-b4dc83e64389)
 3. [LXC vs Docker: Why Docker is Better](https://www.upguard.com/blog/docker-vs-lxc)
-4. [A Beginner-Friendly Introduction to Containers, VMs and Docker](https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/](https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/)
+4. [A Beginner-Friendly Introduction to Containers, VMs and Docker](https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/)
 5. [Изучаем Docker, часть 1: основы](https://habr.com/ru/company/ruvds/blog/438796/)
 6. [Изучаем Docker, часть 2: термины и концепции](https://habr.com/ru/company/ruvds/blog/439978/)
 7. [Википедия: Стандартные потоки](https://ru.wikipedia.org/wiki/Стандартные\_потоки)
