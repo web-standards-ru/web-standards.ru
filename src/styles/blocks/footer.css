@@ -5,7 +5,7 @@
     grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding: 16px 8px;
+    padding: 16px 16px 24px;
     color: var(--color-grey-lighter);
     background-color: var(--color-grey-dark);
 }
