@@ -1,9 +1,13 @@
+{% if page.url != '/' %}
+    {% set path = '../' %}
+    {% set mainLinkPath = 'href="/"' %}
+{% endif %}
 <header class="header">
     <div class="header__logo logo">
-        <a class="logo__link"{% if page.url != '/' %} href="/"{% endif %}>
-            <img class="logo__icon"
-                src="/images/logo.svg"
-                width="40" height="40"
+        <a class="logo__link" {{ mainLinkPath | safe }}>
+            <img class="logo__image"
+                src="{{ path }}images/logo.svg"
+                width="40" height="44"
                 alt="Логотип Веб-стандартов">
             <p class="logo__title">
                 {{ site.title }}
@@ -13,59 +17,45 @@
             </p>
         </a>
     </div>
-    {# {% if page.url == '/' %}
-    <ul class="header__informer informer">
-        <li class="informer__item informer__item--wave">
-            {%- for podcast in collections.podcast -%}
-                <a class="informer__link" href={{ podcast.data.url }}>
-                    <strong class="informer__meta informer__meta--wave">
-                        {{ podcast.data.number }}
-                    </strong>
-                    <p class="informer__text">
-                        {{ podcast.data.title }}
-                    </p>
-                    <svg class="informer__icon informer__icon--wave"
-                        viewBox="0 0 38 30" width="32" height="25"
-                        aria-hidden="true" focusable="false">
-                        <ellipse class="informer__icon-wave informer__icon-wave-middle" cx="19" cy="15" rx="19" ry="2.5"/>
-                        <ellipse class="informer__icon-wave informer__icon-wave-left" cx="28" cy="15" rx="2.3" ry="7"/>
-                        <ellipse class="informer__icon-wave informer__icon-wave-center" cx="19" cy="15" rx="2.5" ry="15"/>
-                        <ellipse class="informer__icon-wave informer__icon-wave-right" cx="10" cy="15" rx="2.3" ry="7"/>
-                    </svg>
+    <nav class="header__menu menu">
+        <button class="menu__button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu__list">
+            <svg class="menu__icon" aria-hidden="true" width="32" height="32">
+                <use class="menu__icon-menu"
+                    href="{{ path }}images/sprite.svg#menu">
+                </use>
+                <use class="menu__icon-cross"
+                    href="{{ path }}images/sprite.svg#cross">
+                </use>
+            </svg>
+        </button>
+        {% if page.url == '/articles/' %}
+            {% set articlesClass = 'menu__link--current' %}
+        {% else %}
+            {% set articlesHref = 'href="/articles/"' %}
+        {% endif %}
+        <ul class="menu__list" id="menu__list">
+            <li class="menu__item">
+                <a class="menu__link {{ articlesClass }}" {{ articlesHref | safe }}>Статьи</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link menu__link--inactive">Подкаст</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link menu__link--inactive">Календарь</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link menu__link--inactive">О проекте</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link menu__link--patreon" href="https://www.patreon.com/webstandards_ru">Поддержать
+                    {% if page.url == '/' %}
+                        <span class="menu__link--extension"> проект</span>
+                    {% endif %}
                 </a>
-            {%- endfor -%}
-        </li>
-        <li class="informer__item informer__item--calendar">
-            {%- for conference in collections.conference -%}
-                <a class="informer__link" href={{ conference.data.url }}>
-                    <strong class="informer__meta informer__meta--calendar">
-                        <time datetime="{{ conference.data.date | isoDate }}">
-                            {{ conference.data.date | shortDate }}
-                        </time>
-                    </strong>
-                <p class="informer__text">
-                    {{ conference.data.title }}
-                </p>
-                <svg class="informer__icon informer__icon--calendar"
-                    viewBox="0 0 32 23" width="32" height="23"
-                    aria-hidden="true" focusable="false">
-                    <g class="informer__icon-calendar informer__icon-calendar-top">
-                        <circle cx="20.53" cy="2.42" r="2.42"/>
-                        <circle cx="29.58" cy="2.42" r="2.42"/>
-                    </g>
-                    <circle cx="2.42" cy="11.48" r="2.42"/>
-                    <circle cx="11.47" cy="11.52" r="2.42"/>
-                    <circle cx="20.53" cy="11.48" r="2.42"/>
-                    <circle cx="29.58" cy="11.48" r="2.42"/>
-                    <g class="informer__icon-calendar informer__icon-calendar-bottom">
-                        <circle cx="2.42" cy="20.54" r="2.42"/>
-                        <circle cx="11.47" cy="20.58" r="2.42"/>
-                        <circle cx="20.53" cy="20.54" r="2.42"/>
-                    </g>
-                </svg>
-            </a>
-            {%- endfor -%}
-        </li>
-    </ul>
-    {% endif %} #}
+            </li>
+        </ul>
+    </nav>
 </header>
