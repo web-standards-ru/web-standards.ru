@@ -1,0 +1,133 @@
+/* Menu */
+
+@media (max-width: 736px) {
+    .menu {
+        display: grid;
+    }
+}
+
+/* Button */
+
+@media (max-width: 736px) {
+    .menu__button {
+        z-index: 1;
+        display: block;
+        justify-self: end;
+        margin: 0;
+        margin-top: 24px;
+        margin-right: 16px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+@media (min-width: 737px) {
+    .menu__button {
+        display: none;
+    }
+}
+
+/* Icon */
+
+@media (max-width: 736px) {
+    .menu__icon {
+        display: block;
+        stroke: black;
+    }
+
+    .menu__icon:hover {
+        stroke: var(--color-special-neutral);
+    }
+
+    .menu__icon-menu,
+    .menu__button--open .menu__icon-cross {
+        display: block;
+    }
+
+    .menu__icon-cross,
+    .menu__button--open .menu__icon-menu {
+        display: none;
+    }
+}
+
+/* List */
+
+.menu__list {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    list-style: none;
+}
+
+@media (max-width: 736px) {
+    .menu__list {
+        display: none;
+        row-gap: 8px;
+        margin-top: 12px;
+        padding-bottom: 22px;
+        padding-left: 64px;
+        background-color: white;
+        box-shadow: 0 50vh 0 50vh var(--color-special-dark-10a);
+    }
+
+    .menu__list--open {
+        z-index: 1;
+        display: grid;
+    }
+}
+
+@media (min-width: 737px) {
+    .menu__list {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 8px;
+    }
+}
+
+/* Item */
+
+.menu__item {
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* Link */
+
+.menu__link {
+    color: var(--color-special-dark);
+}
+
+.menu__link[href]:hover {
+    color: var(--color-special-neutral);
+}
+
+.menu__link--current {
+    color: black;
+    font-weight: bold;
+    font-family: 'Dewi Expanded', sans-serif;
+    text-decoration: none;
+}
+
+.menu__link--inactive {
+    color: var(--color-grey-medium);
+}
+
+.menu__link--patreon {
+    padding-left: 18px;
+}
+
+.menu__link--patreon::before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-left: -18px;
+    content: url('../../images/patreon.svg');
+}
+
+@media (max-width: 736px) {
+    .menu__link--patreon {
+        margin-left: -18px;
+    }
+}
