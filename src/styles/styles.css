@@ -53,6 +53,6 @@
     --color-grass: #95d445;
 
     --color-special-neutral: #61afb4;
-    --color-special-dark-10a: rgb(59 132 187 / 0.1);
+    --color-special-dark-10a: rgba(59, 132, 187, 0.1);
     --color-special-dark: #3b84bb;
 }
