@@ -12,8 +12,6 @@
 }
 
 .page__body {
-    display: grid;
-    grid-auto-rows: min-content;
     max-width: 1920px;
     margin: 0 auto;
 }
