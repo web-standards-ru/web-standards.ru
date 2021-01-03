@@ -63,12 +63,12 @@
 @media (max-width: 736px) {
     .menu__list {
         display: none;
-        row-gap: 8px;
-        margin-top: 12px;
-        padding-bottom: 22px;
+        row-gap: 12px;
+        margin-top: 14px;
+        padding-bottom: 26px;
         padding-left: 64px;
         background-color: white;
-        box-shadow: 0 50vh 0 50vh var(--color-special-dark-10a);
+        /* box-shadow: 0 50vh 0 50vh var(--color-special-dark-10a); */
     }
 
     .menu__list--open {
