@@ -1,8 +1,9 @@
 /* Archive */
 
 .archive__title {
-    margin: 0 0 37px;
+    margin: 49px 0 66px;
     font: 400 24px 'Dewi Expanded', sans-serif;
+    letter-spacing: -0.05em;
     text-align: center;
     text-transform: uppercase;
 }
@@ -28,7 +29,9 @@
 .archive__year {
     display: inline-block;
     margin-bottom: 16px;
+    margin-left: 16px;
     font: 700 16px 'Dewi Expanded', sans-serif;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
