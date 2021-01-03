@@ -72,7 +72,7 @@
     }
 
     .menu__list--open {
-        z-index: 1;
+        z-index: 3;
         display: grid;
     }
 }
