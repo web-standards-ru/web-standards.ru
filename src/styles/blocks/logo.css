@@ -27,6 +27,13 @@
     }
 }
 
+@media (min-width: 1008px) {
+    .logo--index .logo__image {
+        width: 56px;
+        height: 62px;
+    }
+}
+
 /* Title */
 
 .logo__title {
@@ -55,6 +62,12 @@
     }
 }
 
+@media (min-width: 1008px) {
+    .logo--index .logo__title {
+        font-size: 36px;
+    }
+}
+
 /* Tagline */
 
 .logo__tagline {
@@ -79,5 +92,11 @@
 
     .logo--index .logo__tagline {
         align-self: flex-start;
+    }
+}
+
+@media (min-width: 1008px) {
+    .logo--index .logo__tagline {
+        font-size: 14px;
     }
 }

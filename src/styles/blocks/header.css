@@ -19,6 +19,13 @@
     }
 }
 
+@media (min-width: 1008px) {
+    .header {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+}
+
 /* Logo */
 
 @media (max-width: 735px) {
