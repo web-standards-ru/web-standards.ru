@@ -20,6 +20,11 @@
     .logo__image {
         grid-row: span 2;
     }
+
+    .logo--index .logo__image {
+        width: 48px;
+        height: 53px;
+    }
 }
 
 /* Title */
@@ -40,6 +45,13 @@
 @media (min-width: 736px) {
     .logo__title {
         align-self: end;
+    }
+
+    .logo--index .logo__title {
+        align-self: flex-end;
+        margin-bottom: 5px;
+        font-size: 24px;
+        letter-spacing: -0.04em;
     }
 }
 
@@ -62,5 +74,10 @@
 @media (min-width: 736px) {
     .logo__tagline {
         align-self: center;
+    }
+
+    .logo--index .logo__tagline {
+        align-self: flex-start;
+        letter-spacing: 0.04em;
     }
 }

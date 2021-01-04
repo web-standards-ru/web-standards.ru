@@ -83,6 +83,11 @@
         grid-auto-flow: column;
         column-gap: 8px;
     }
+
+    .menu--index .menu__list {
+        display: flex;
+        line-height: 1.5;
+    }
 }
 
 /* Item */
@@ -90,6 +95,12 @@
 .menu__item {
     letter-spacing: 0.02em;
     text-transform: uppercase;
+}
+
+@media (min-width: 736px) {
+    .menu--index .menu__item:last-of-type {
+        margin-left: auto;
+    }
 }
 
 /* Link */
