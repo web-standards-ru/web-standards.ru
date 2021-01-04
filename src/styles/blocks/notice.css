@@ -11,9 +11,9 @@
     }
 }
 
-@media (min-width: 630px) {
+@media (min-width: 1008px) {
     .notice {
-        margin: 70px 0 33px;
+        margin: 56px 0;
     }
 }
 
