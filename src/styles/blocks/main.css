@@ -13,12 +13,6 @@
     margin-top: 40px;
 }
 
-@media (min-width: 769px) {
-    .main {
-        padding-top: 64px;
-    }
-}
-
 @media (min-width: 1024px) {
     .main {
         padding: 100px 64px;
