@@ -16,7 +16,7 @@
     height: 44px;
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .logo__image {
         grid-row: span 2;
     }
@@ -31,13 +31,13 @@
     letter-spacing: -0.03em;
 }
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .logo__title {
         align-self: center;
     }
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .logo__title {
         align-self: end;
     }
@@ -53,13 +53,13 @@
     text-transform: uppercase;
 }
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .logo__tagline {
         display: none;
     }
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .logo__tagline {
         align-self: center;
     }

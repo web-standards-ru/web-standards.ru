@@ -5,7 +5,7 @@
     padding: 16px;
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .header {
         grid-template-columns: max-content max-content;
         justify-content: space-between;
@@ -16,13 +16,13 @@
 
 /* Logo */
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .header__logo {
         z-index: 1;
     }
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .header__logo {
         align-self: start;
     }
@@ -30,7 +30,7 @@
 
 /* Menu */
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .header__menu {
         position: absolute;
         top: 0;
@@ -39,7 +39,7 @@
     }
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .header__menu {
         align-self: center;
     }

@@ -1,6 +1,6 @@
 /* Menu */
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .menu {
         display: grid;
     }
@@ -8,7 +8,7 @@
 
 /* Button */
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .menu__button {
         z-index: 1;
         display: block;
@@ -22,7 +22,7 @@
     }
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .menu__button {
         display: none;
     }
@@ -30,7 +30,7 @@
 
 /* Icon */
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .menu__icon {
         display: block;
         stroke: black;
@@ -60,7 +60,7 @@
     list-style: none;
 }
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .menu__list {
         display: none;
         row-gap: 12px;
@@ -77,7 +77,7 @@
     }
 }
 
-@media (min-width: 737px) {
+@media (min-width: 736px) {
     .menu__list {
         display: grid;
         grid-auto-flow: column;
@@ -126,7 +126,7 @@
     content: url('../../images/patreon.svg');
 }
 
-@media (max-width: 736px) {
+@media (max-width: 735px) {
     .menu__link--patreon {
         margin-left: -18px;
     }
