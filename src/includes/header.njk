@@ -2,8 +2,13 @@
     {% set path = '/../../' %}
     {% set mainLinkPath = 'href="/"' %}
 {% endif %}
-<header class="header">
-    <div class="header__logo logo">
+{% if page.url == '/' %}
+    {% set headerMod = 'header--index' %}
+    {% set menuMod = 'menu--index' %}
+    {% set logoMod = 'logo--index' %}
+{% endif %}
+<header class="header {{ headerMod }}">
+    <div class="header__logo logo {{ logoMod }}">
         <a class="logo__link"{{ mainLinkPath | safe }}>
             <img class="logo__image"
                 src="{{ path }}images/logo.svg"
@@ -17,7 +22,7 @@
             </p>
         </a>
     </div>
-    <nav class="header__menu menu">
+    <nav class="header__menu menu {{ menuMod }}">
         <button class="menu__button"
             type="button"
             aria-expanded="false"
