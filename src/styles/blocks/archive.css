@@ -49,7 +49,7 @@
     }
 }
 
-.archive__articles {
+.archive__articles:not(:last-of-type) {
     margin-bottom: 80px;
 }
 

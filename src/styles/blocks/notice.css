@@ -1,7 +1,7 @@
 /* Notice */
 
 .notice {
-    margin: 40px 0 19px;
+    margin: 48px 0;
     text-align: center;
 }
 
@@ -25,7 +25,6 @@
 
 .notice__link {
     display: inline-block;
-    padding-top: 39px;
     color: black;
     font-size: 24px;
     letter-spacing: -0.02em;
