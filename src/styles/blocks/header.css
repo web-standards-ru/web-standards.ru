@@ -10,6 +10,7 @@
         grid-template-columns: max-content max-content;
         justify-content: space-between;
         padding-right: 24px;
+        padding-bottom: 46px;
         padding-left: 24px;
     }
 

@@ -45,13 +45,13 @@
 @media (min-width: 736px) {
     .logo__title {
         align-self: end;
+        letter-spacing: -0.04em;
     }
 
     .logo--index .logo__title {
         align-self: flex-end;
         margin-bottom: 5px;
         font-size: 24px;
-        letter-spacing: -0.04em;
     }
 }
 
@@ -74,10 +74,10 @@
 @media (min-width: 736px) {
     .logo__tagline {
         align-self: center;
+        letter-spacing: 0.04em;
     }
 
     .logo--index .logo__tagline {
         align-self: flex-start;
-        letter-spacing: 0.04em;
     }
 }
