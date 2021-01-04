@@ -12,6 +12,12 @@
     }
 }
 
+@media (min-width: 630px) {
+    .links {
+        padding: 24px;
+    }
+}
+
 @media (min-width: 1024px) {
     .links {
         padding: 30px 48px;

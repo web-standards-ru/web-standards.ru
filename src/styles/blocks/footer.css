@@ -10,6 +10,12 @@
     background-color: var(--color-grey-dark);
 }
 
+@media (min-width: 630px) {
+    .footer {
+        padding: 24px 24px 32px;
+    }
+}
+
 @media (min-width: 1024px) {
     .footer {
         padding: 22px 48px 34px;

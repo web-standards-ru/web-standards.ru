@@ -1,5 +1,11 @@
 /* Archive */
 
+@media (min-width: 630px) {
+    .archive {
+        padding: 0 24px;
+    }
+}
+
 .archive__title {
     margin: 49px 0 66px;
     font: 400 24px 'Dewi Expanded', sans-serif;
@@ -14,7 +20,7 @@
 
 @media (min-width: 630px) {
     .archive__title {
-        margin: 20px 0 50px;
+        margin: 20px 0 67px;
         font-size: 32px;
     }
 }
@@ -37,8 +43,9 @@
 
 @media (min-width: 630px) {
     .archive__year {
-        margin-bottom: 20px;
-        font-size: 20px;
+        margin-bottom: 16px;
+        margin-left: 0;
+        font-size: 16px;
     }
 }
 
