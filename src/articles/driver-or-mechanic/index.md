@@ -22,7 +22,7 @@ The tools vs knowledge argument goes something like this:
 **Случайный разработчик:** Не нужно знать CSS. Или даже базовый JavaScript. Ну то есть, наши классные инструменты обо всём позаботятся, так ведь?
 
 **Me:** If you’re a web developer you should know something about CSS and JavaScript. What if your tool doesn’t support your use case? Or what if they are terrible for performance?
-**Я:** Если ты разработчик, ты должен знать что-нибудь про CSS и JavaScript. Что если твой инструмент не решает твою задачу? Что если он ужасен для перфоманса?
+**Я:** Если ты разработчик, ты должен знать что-нибудь про CSS и JavaScript. Что, если твой инструмент не решает твою задачу? Что, если он ужасен с точки зрения производительности?
 
 **Random web dev:** Nonsense. I’m much more productive with my trusty tools.
 **Случайный разработчик:** Глупости. Я гораздо более продуктивен с моими надёжными инструментами.
