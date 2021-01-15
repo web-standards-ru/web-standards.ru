@@ -1,11 +1,12 @@
-const gulp = require('gulp');
-const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
-const terser = require('gulp-terser');
 const del = require('del');
+const fs = require('fs');
+const gulp = require('gulp');
+const paths = require('vinyl-paths');
+const postcss = require('gulp-postcss');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
-const paths = require('vinyl-paths');
+const terser = require('gulp-terser');
 
 // Styles
 
@@ -62,13 +63,14 @@ gulp.task('cache:hash', () => {
 });
 
 gulp.task('cache:replace', () => {
+    const manifest = fs.readFileSync('dist/rev.json');
+
     return gulp.src([
         'dist/**/*.{html,css}',
         'dist/manifest-*.json',
     ])
         .pipe(revRewrite({
-            manifest:
-                gulp.src('dist/rev.json').pipe(paths(del))
+            manifest
         }))
         .pipe(gulp.dest('dist'));
 });
@@ -78,12 +80,11 @@ gulp.task('cache', gulp.series(
     'cache:replace',
 ));
 
-
 // Build
 
 gulp.task('build', gulp.series(
     'styles',
     'scripts',
     'clean',
-    'cache'
+    'cache',
 ));
