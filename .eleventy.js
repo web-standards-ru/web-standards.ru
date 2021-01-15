@@ -24,7 +24,13 @@ module.exports = function(config) {
             'aria-label': 'Этот заголовок',
         }),
         slugify: () => 'section',
-    });
+    }).use(require('markdown-it-multimd-table'));
+
+    md.renderer.rules = { ...md.renderer.rules,
+        table_close: () => "</table></div>",
+        table_open: () => '<div class="content__table-wrapper"><table>',
+    };
+
     config.setLibrary('md', md);
 
     config.addCollection('tagList', (collection) => {

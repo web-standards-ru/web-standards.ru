@@ -270,6 +270,7 @@
 
 .content code {
     font-family: 'Rostin', monospace;
+    word-wrap: break-word;
 }
 
 .content pre {
@@ -380,10 +381,14 @@
 
 /* Tables */
 
-.content table {
-    width: 100%;
+.content__table-wrapper {
     margin-top: 16px;
     margin-bottom: 24px;
+    overflow-x: auto;
+}
+
+.content table {
+    width: 100%;
     border-collapse: collapse;
 }
 
