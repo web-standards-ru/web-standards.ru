@@ -1,6 +1,6 @@
 // Navigation
 
-(function () {
+(function() {
     const navigationButton = document.querySelector('.navigation__button');
     const pageBody = document.querySelector('.page__body');
     const pageContent = document.querySelector('.page__content');

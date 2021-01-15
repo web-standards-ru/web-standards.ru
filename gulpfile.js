@@ -47,14 +47,14 @@ gulp.task('clean', () => {
 
 gulp.task('cache:hash', () => {
     return gulp.src([
-            'dist/fonts/*.woff2',
-            'dist/images/**/*.{svg,png,jpg}',
-            'dist/scripts/*.js',
-            'dist/styles/*.css',
-            'dist/manifest.json'
-        ], {
-            base: 'dist'
-        })
+        'dist/fonts/*.woff2',
+        'dist/images/**/*.{svg,png,jpg}',
+        'dist/scripts/*.js',
+        'dist/styles/*.css',
+        'dist/manifest.json'
+    ], {
+        base: 'dist'
+    })
         .pipe(paths(del))
         .pipe(rev())
         .pipe(gulp.dest('dist'))
@@ -66,9 +66,9 @@ gulp.task('cache:replace', () => {
     const manifest = fs.readFileSync('dist/rev.json');
 
     return gulp.src([
-            'dist/**/*.{html,css}',
-            'dist/manifest-*.json',
-        ])
+        'dist/**/*.{html,css}',
+        'dist/manifest-*.json',
+    ])
         .pipe(revRewrite({
             manifest
         }))
