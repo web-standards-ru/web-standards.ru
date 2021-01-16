@@ -3,6 +3,7 @@
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/Markdown/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AMarkdown)
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/HTML/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AHTML)
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/CSS/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3ACSS)
+[![](https://github.com/web-standards-ru/web-standards.ru/workflows/YAML/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AYAML)
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/Deploy/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3ADeploy)
 
 Новый сайт сообщества: статьи, конференция, календарь, подкаст и всё остальное.
