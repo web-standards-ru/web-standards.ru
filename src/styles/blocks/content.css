@@ -205,13 +205,6 @@
     margin: 16px 0 8px;
 }
 
-@media (min-width: 1240px) {
-    .content img,
-    .content video {
-        margin: 60px 0;
-    }
-}
-
 /* Quotes */
 
 .content blockquote {
