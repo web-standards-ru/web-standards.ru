@@ -4,7 +4,7 @@ date: 2016-03-22
 author: heydon-pickering
 source:
     title: 'Progressive enhancement makes me sad'
-    url: 'https://www.heydonworks.com/article/progressive-enhancement-makes-me-sad'
+    url: 'https://web.archive.org/web/20191023105142/https://heydonworks.com/article/progressive-enhancement-makes-me-sad/'
 translators:
     - vadim-makeev
 layout: article.njk
