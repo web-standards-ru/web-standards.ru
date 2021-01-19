@@ -156,20 +156,20 @@
 }
 
 .navigation__button--active .navigation__inner {
-    transition: transform 0.1s 0.2s linear;
     transform: rotate(45deg);
+    transition: transform 0.1s 0.2s linear;
 }
 
 .navigation__button--active .navigation__inner::before {
     top: 0;
-    transition: top 0.1s linear, opacity 0.1s 0.2s linear;
     opacity: 0;
+    transition: top 0.1s linear, opacity 0.1s 0.2s linear;
 }
 
 .navigation__button--active .navigation__inner::after {
     bottom: 0;
-    transition: bottom 0.1s linear, transform 0.1s 0.2s linear;
     transform: rotate(-90deg);
+    transition: bottom 0.1s linear, transform 0.1s 0.2s linear;
 }
 
 /* Menu */
