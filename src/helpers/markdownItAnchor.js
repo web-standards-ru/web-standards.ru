@@ -3,12 +3,12 @@ const slugify = (s) => encodeURIComponent(String(s).trim().toLowerCase().replace
 const position = {
     false: 'push',
     true: 'unshift',
-}
+};
 
 const hasProp = Object.prototype.hasOwnProperty;
 
 const permalinkHref = slug => `#${slug}`;
-const permalinkAttrs = slug => ({});
+const permalinkAttrs = () => ({});
 
 const renderPermalink = (slug, opts, state, idx) => {
     const space = () => Object.assign(new state.Token('text', '', 0), { content: ' ' });
@@ -41,7 +41,7 @@ const renderPermalink = (slug, opts, state, idx) => {
         linkTokens[position[!opts.permalinkBefore]](space());
     }
     state.tokens[idx + 1].children[position[opts.permalinkBefore]](...linkTokens);
-}
+};
 
 const uniqueSlug = (slug, slugs) => {
     let uniq = `${slug}-1`;
@@ -49,7 +49,7 @@ const uniqueSlug = (slug, slugs) => {
     while (hasProp.call(slugs, uniq)) uniq = `${slug}-${i++}`;
     slugs[uniq] = true;
     return uniq;
-}
+};
 
 const isLevelSelectedNumber = selection => level => level >= selection;
 const isLevelSelectedArray = selection => level => selection.includes(level);
@@ -104,6 +104,6 @@ anchor.defaults = {
     permalinkBefore: false,
     permalinkHref,
     permalinkAttrs,
-}
+};
 
 module.exports = anchor;

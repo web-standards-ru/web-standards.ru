@@ -225,7 +225,7 @@ static get properties() {
 - кастомные элементы [работают на JS](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements);
 - HTML-шаблоны существует только для [обработки скриптом](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element);
 - я вообще не уверен, может ли [Shadow DOM](https://www.w3.org/TR/shadow-dom/) работать без JavaScript;
-- и только [HTML-импорты](https://w3c.github.io/webcomponents/spec/imports/) не нуждаются в JS.
+- и только [HTML-импорты](https://web.archive.org/web/20191203103432/http://w3c.github.io/webcomponents/spec/imports/) не нуждаются в JS.
 
 Веб-компоненты — это DOM, поэтому:
 
@@ -245,7 +245,7 @@ static get properties() {
 
 Всё это — только часть проблем. Те из них, которые в первую очередь приходят мне в голову. И я не встречал их серьезного обсуждения сообществом.
 
-Команда React и вовсе [заявила](https://docs.google.com/document/d/1QZxArgMwidgCrAbuSikcB2iBxkffH6w0YB0C1qCsuH0/edit):
+Команда React и вовсе заявила:
 
 > Мы не собираемся использовать веб-компоненты на Facebook. У нас нет планов интегрировать их с React, так как существует большая разница на уровне самих моделей — императивной в веб-компонентах и декларативной в React. В веб-компонентах нет нормального способа идиоматически описать вещи, вроде того, куда идут события. Как вы передадите данные, если все описано строками? Мы рассматриваем их больше как слой, помогающий различным фреймворкам взаимодействовать друг с другом.
 
