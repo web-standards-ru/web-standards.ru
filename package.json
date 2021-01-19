@@ -32,7 +32,7 @@
     "markdown-it-multimd-table": "^4.0.3",
     "node-w3c-validator": "^2.0.1",
     "postcss": "^8.2.3",
-    "postcss-color-hex-alpha": "^6.0.0",
+    "postcss-color-hex-alpha": "^7.0.0",
     "postcss-csso": "^5.0.0",
     "postcss-import": "^14.0.0",
     "pretty-data": "^0.40.0",
