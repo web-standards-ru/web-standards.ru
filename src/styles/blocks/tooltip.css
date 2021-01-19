@@ -1,0 +1,74 @@
+/* Tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.3em;
+}
+
+.tooltip__button {
+    position: relative;
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    vertical-align: middle;
+    background-color: transparent;
+    background-image: url('/images/link.svg');
+    border: none;
+    cursor: pointer;
+    appearance: none;
+}
+
+.content .tooltip__button:visited {
+    color: var(--color-blue-darker);
+}
+
+.tooltip__button:focus {
+    opacity: 1;
+}
+
+.tooltip__label {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    padding: 8px 10px;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Dewi', sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    text-transform: none;
+    background-color: var(--color-grey-dark);
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.tooltip__label::after {
+    --tooltip-tail-width: 24px;
+    --tooltip-tail-height: 10px;
+    position: absolute;
+    top: 100%;
+    left: calc(50% - var(--tooltip-tail-width) / 2);
+    content: '';
+    width: var(--tooltip-tail-width);
+    height: var(--tooltip-tail-height);
+    background-color: inherit;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.tooltip__label {
+    display: none;
+}
+
+.tooltip__button:hover + .tooltip__label,
+.tooltip__button:focus + .tooltip__label {
+    display: block;
+}
+
+.tooltip__label--success {
+    background-color: var(--color-moss);
+}

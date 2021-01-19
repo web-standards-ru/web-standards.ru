@@ -14,15 +14,25 @@ const renderPermalink = (slug, opts, state, idx) => {
     const space = () => Object.assign(new state.Token('text', '', 0), { content: ' ' });
 
     const linkTokens = [
-        Object.assign(new state.Token('link_open', 'a', 1), {
+        Object.assign(new state.Token('html_span', 'span', 1), {
+            attrs: [
+                ['class', 'tooltip'],
+            ],
+        }),
+        Object.assign(new state.Token('html_button', 'button', 1), {
             attrs: [
                 ['class', opts.permalinkClass],
-                ['href', opts.permalinkHref(slug, state)],
+                ['data-href', opts.permalinkHref(slug, state)],
+                ['aria-labelledby', `copy-${slug}`],
+                ['aria-label', 'Копировать ссылку на заголовок'],
                 ...Object.entries(opts.permalinkAttrs(slug, state))
             ],
         }),
-        Object.assign(new state.Token('html_block', '', 0), { content: opts.permalinkSymbol }),
-        new state.Token('link_close', 'a', -1),
+        new state.Token('html_button', 'button', -1),
+        Object.assign(new state.Token('html_block', 'span', 1), {
+            content: `<span class="tooltip__label" role="tooltip" id="copy-${slug}">Скопировать ссылку</span>`
+        }),
+        new state.Token('html_span', 'span', -1),
     ];
 
     // `push` or `unshift` according to position option.
