@@ -1,4 +1,5 @@
 const babel = require('gulp-babel');
+const buffer = require('vinyl-buffer');
 const del = require('del');
 const fs = require('fs');
 const gulp = require('gulp');
@@ -6,10 +7,8 @@ const paths = require('vinyl-paths');
 const postcss = require('gulp-postcss');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
-const paths = require('vinyl-paths');
-const buffer = require('vinyl-buffer');
-const source = require('vinyl-source-stream');
 const rollup = require('rollup-stream');
+const source = require('vinyl-source-stream');
 const terser = require('gulp-terser');
 
 // Styles
@@ -20,7 +19,7 @@ gulp.task('styles', () => {
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
             require('autoprefixer'),
-            require('postcss-csso'),
+            require('postcss-csso')
         ]))
         .pipe(gulp.dest('dist/styles'));
 });
@@ -30,15 +29,15 @@ gulp.task('styles', () => {
 gulp.task('scripts', function() {
     return rollup({
         input: 'dist/scripts/scripts.js',
-        format: 'iife',
+        format: 'iife'
     })
-    .pipe(source('scripts.js'))
-    .pipe(buffer())
-    .pipe(babel({
-        presets: ['@babel/preset-env']
-    }))
-    .pipe(terser())
-    .pipe(gulp.dest('dist'));
+        .pipe(source('scripts.js'))
+        .pipe(buffer())
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
+        .pipe(terser())
+        .pipe(gulp.dest('dist'));
 });
 
 
@@ -49,7 +48,7 @@ gulp.task('clean', () => {
         'dist/styles/**/*',
         '!dist/styles/{styles,print}.css',
         'dist/scripts/**/*',
-        '!dist/scripts/scripts.js',
+        '!dist/scripts/scripts.js'
     ]);
 });
 
@@ -77,7 +76,7 @@ gulp.task('cache:replace', () => {
 
     return gulp.src([
         'dist/**/*.{html,css}',
-        'dist/manifest-*.json',
+        'dist/manifest-*.json'
     ])
         .pipe(revRewrite({
             manifest
@@ -87,7 +86,7 @@ gulp.task('cache:replace', () => {
 
 gulp.task('cache', gulp.series(
     'cache:hash',
-    'cache:replace',
+    'cache:replace'
 ));
 
 // Build
@@ -96,5 +95,5 @@ gulp.task('build', gulp.series(
     'styles',
     'scripts',
     'clean',
-    'cache',
+    'cache'
 ));
