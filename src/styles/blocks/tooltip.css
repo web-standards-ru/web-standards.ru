@@ -34,7 +34,7 @@
     position: absolute;
     bottom: calc(100% + 10px);
     left: 50%;
-    padding: 8px;
+    padding: 8px 10px;
     color: #ffffff;
     font-weight: normal;
     font-size: 14px;
@@ -48,14 +48,16 @@
 }
 
 .tooltip__label::after {
+    --tooltip-tail-width: 24px;
+    --tooltip-tail-height: 10px;
     position: absolute;
     top: 100%;
-    left: calc(50% - 8px);
-    display: block;
+    left: calc(50% - var(--tooltip-tail-width) / 2);
     content: '';
-    border: solid transparent;
-    border-width: 8px 8px 0 8px;
-    border-top-color: var(--color-grey-dark);
+    width: var(--tooltip-tail-width);
+    height: var(--tooltip-tail-height);
+    background-color: inherit;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
 .tooltip__label {
@@ -68,17 +70,5 @@
 }
 
 .tooltip__label--success {
-    background-color: green;
-}
-
-.tooltip__label--success::after {
-    border-top-color: green;
-}
-
-.tooltip__label--error {
-    background-color: red;
-}
-
-.tooltip__label--error::after {
-    border-top-color: red;
+    background-color: var(--color-moss);
 }
