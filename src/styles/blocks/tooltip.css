@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     font-size: inherit;
-    vertical-align: inherit;
+    vertical-align: middle;
     background-color: transparent;
     background-image: url('/images/link.svg');
     border: none;
