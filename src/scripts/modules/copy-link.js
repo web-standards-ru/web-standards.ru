@@ -21,8 +21,9 @@ function setErrorState(tooltip) {
 function handleCopy() {
     const tooltip = this.nextSibling;
     const hash = this.getAttribute('data-href');
+    const url = window.location.href.replace(window.location.hash, '');
 
-    navigator.clipboard.writeText(`${window.location.href}${hash}`)
+    navigator.clipboard.writeText(`${url}${hash}`)
         .then(() => {
             setSuccessState(tooltip);
         })
