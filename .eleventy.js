@@ -9,8 +9,8 @@ module.exports = function(config) {
     // CSS Options
 
     config.on('afterBuild', () => {
-        const fs = require('fs')
-        const glob = require('glob')
+        const fs = require('fs');
+        const glob = require('glob');
         const postcss = require('postcss');
         const minmax = require('postcss-media-minmax');
 
@@ -25,11 +25,11 @@ module.exports = function(config) {
                         .process(css, { from: file })
                         .then(result => {
                             fs.writeFile(file, result.css, () => true)
-                        })
-                })
-            })
-        })
-    })
+                        });
+                });
+            });
+        });
+    });
 
     // Markdown Options
 
