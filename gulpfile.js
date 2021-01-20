@@ -17,6 +17,7 @@ gulp.task('styles', () => {
     return gulp.src('dist/styles/{styles,print}.css')
         .pipe(postcss([
             require('postcss-import'),
+            require('postcss-media-minmax'),
             require('postcss-color-hex-alpha'),
             require('autoprefixer'),
             require('postcss-csso')

@@ -6,6 +6,31 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/scripts');
     config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
 
+    // CSS Options
+
+    config.on('afterBuild', () => {
+        const fs = require('fs')
+        const glob = require('glob')
+        const postcss = require('postcss');
+        const minmax = require('postcss-media-minmax');
+
+        const getFiles = function (src, callback) {
+            glob(src + '/**/*.css', callback);
+        };
+
+        getFiles('dist/styles', function (error, files) {
+            files.forEach(file => {
+                fs.readFile(file, (error, css) => {
+                    postcss([minmax])
+                        .process(css, { from: file })
+                        .then(result => {
+                            fs.writeFile(file, result.css, () => true)
+                        })
+                })
+            })
+        })
+    })
+
     // Markdown Options
 
     const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
