@@ -41,15 +41,14 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist'));
 });
 
-// Clean
+// Paths
 
-gulp.task('clean', () => {
-    return del([
-        'dist/styles/**/*',
-        '!dist/styles/{styles,print}.css',
-        'dist/scripts/**/*',
-        'dist/rev.json',
-    ]);
+gulp.task('paths', () => {
+    return gulp.src('dist/**/*.html')
+        .pipe(replace(
+            /(<script) type="module"( src="\/scripts)\/index(.js">)/, '$1$2$3'
+        ))
+        .pipe(gulp.dest('dist'));
 });
 
 // Cache
@@ -89,14 +88,15 @@ gulp.task('cache', gulp.series(
     'cache:replace'
 ));
 
-// Paths
+// Clean
 
-gulp.task('paths', () => {
-    return gulp.src('dist/**/*.html')
-        .pipe(replace(
-            /(<script) type="module"( src="\/scripts)\/index(.js">)/, '$1$2$3'
-        ))
-        .pipe(gulp.dest('dist'));
+gulp.task('clean', () => {
+    return del([
+        'dist/styles/**/*',
+        '!dist/styles/{styles,print}-*.css',
+        'dist/scripts/**/*',
+        'dist/rev.json',
+    ]);
 });
 
 // Build
