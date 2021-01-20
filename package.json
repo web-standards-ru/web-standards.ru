@@ -24,6 +24,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.0",
+    "gulp-replace": "^1.0.0",
     "gulp-rev": "^9.0.0",
     "gulp-rev-rewrite": "^4.0.0",
     "gulp-terser": "^2.0.1",
