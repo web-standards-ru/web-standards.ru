@@ -5,7 +5,7 @@
     margin-left: 0;
 }
 
-@media (min-width: 1240px) {
+@media (width >= 1240px) {
     .media {
         margin-top: 60px;
         margin-bottom: 60px;
@@ -27,13 +27,13 @@
     line-height: 1.7;
 }
 
-@media (min-width: 1240px) {
+@media (width >= 1240px) {
     .media figcaption {
         font-size: 16px;
     }
 }
 
-@media (min-width: 1240px) {
+@media (width >= 1240px) {
     /* Подпись в левой колонке */
 
     .media--floated-caption {

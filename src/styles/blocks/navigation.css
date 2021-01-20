@@ -16,19 +16,19 @@
     background-color: #f2f7fa;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__logo {
         display: none;
     }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .page__navigation--inner .navigation__logo {
         display: grid;
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .page__navigation--inner .navigation__logo {
         display: none;
     }
@@ -43,7 +43,7 @@
     display: flex;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__bar {
         position: static;
         display: block;
@@ -52,13 +52,13 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .navigation__bar {
         padding: 0 64px;
     }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .page__navigation--inner .navigation__bar {
         position: absolute;
         display: flex;
@@ -67,7 +67,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .page__navigation--inner .navigation__bar {
         position: static;
         justify-content: flex-end;
@@ -75,13 +75,13 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
     .page__navigation--inner .navigation__bar {
         padding: 35px 64px 0 0;
     }
 }
 
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
     .page__navigation--inner .navigation__bar {
         padding: 45px 64px 0 0;
     }
@@ -101,19 +101,19 @@
     border: none;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__button {
         display: none;
     }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .page__navigation--inner .navigation__button {
         display: inline-block;
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .page__navigation--inner .navigation__button {
         display: none;
     }
@@ -190,7 +190,7 @@
     background-color: #f2f7fa;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__menu {
         position: static;
         z-index: 0;
@@ -204,7 +204,7 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .page__navigation--inner .navigation__menu {
         position: fixed;
         z-index: -1;
@@ -218,7 +218,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .page__navigation--inner .navigation__menu {
         position: static;
         z-index: 0;
@@ -246,7 +246,7 @@
     content: '';
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__menu::before {
         display: none;
     }
@@ -258,7 +258,7 @@
     margin-bottom: 50px;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__item {
         margin-right: 20px;
         margin-bottom: 0;
@@ -269,38 +269,38 @@
     margin: auto 0 0;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__item--patreon {
         margin: 0 0 0 auto;
     }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .page__navigation--inner .navigation__item {
         margin-bottom: 50px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .page__navigation--inner .navigation__item {
         margin-right: 15px;
         margin-bottom: 0;
     }
 }
 
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
     .page__navigation--inner .navigation__item {
         margin-right: 20px;
     }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .page__navigation--inner .navigation__item--patreon {
         margin: auto 0 0;
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .page__navigation--inner .navigation__item--patreon {
         margin: 0;
     }
@@ -318,7 +318,7 @@
     transition: color 0.2s linear;
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .navigation__link {
         font-size: 16px;
     }
@@ -333,7 +333,7 @@
     background-size: 27px 27px;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .navigation__link--patreon {
         letter-spacing: 0.05em;
     }

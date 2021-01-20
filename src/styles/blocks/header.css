@@ -7,27 +7,27 @@
     background-color: white;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .header {
         grid-template-columns: 2fr 1fr 1fr;
         padding: 0 8px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .header {
         grid-template-columns: 3fr 1.1fr 1.1fr;
         padding: 0 64px;
     }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .page__content--inner .header {
         padding: 16px 8px 0;
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .page__content--inner .header {
         padding: 16px 64px 0;
     }
@@ -35,7 +35,7 @@
 
 /* Logo */
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .header__logo {
         grid-column: 1 / 2;
     }
@@ -43,7 +43,7 @@
 
 /* Informer */
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .header__informer {
         grid-column: 2 / 4;
     }
