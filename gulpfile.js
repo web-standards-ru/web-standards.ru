@@ -5,8 +5,9 @@ const fs = require('fs');
 const gulp = require('gulp');
 const paths = require('vinyl-paths');
 const postcss = require('gulp-postcss');
+const replace = require('gulp-replace');
 const rev = require('gulp-rev');
-const revRewrite = require('gulp-rev-rewrite');
+const rewrite = require('gulp-rev-rewrite');
 const rollup = require('rollup-stream');
 const source = require('vinyl-source-stream');
 const terser = require('gulp-terser');
@@ -19,7 +20,7 @@ gulp.task('styles', () => {
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
             require('autoprefixer'),
-            require('postcss-csso')
+            require('postcss-csso'),
         ]))
         .pipe(gulp.dest('dist/styles'));
 });
@@ -28,18 +29,17 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', function() {
     return rollup({
-        input: 'dist/scripts/scripts.js',
-        format: 'iife'
+        input: 'dist/scripts/index.js',
+        format: 'iife',
     })
         .pipe(source('scripts.js'))
         .pipe(buffer())
         .pipe(babel({
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
         }))
         .pipe(terser())
         .pipe(gulp.dest('dist'));
 });
-
 
 // Clean
 
@@ -48,7 +48,7 @@ gulp.task('clean', () => {
         'dist/styles/**/*',
         '!dist/styles/{styles,print}.css',
         'dist/scripts/**/*',
-        '!dist/scripts/scripts.js'
+        'dist/rev.json',
     ]);
 });
 
@@ -58,11 +58,11 @@ gulp.task('cache:hash', () => {
     return gulp.src([
         'dist/fonts/*.woff2',
         'dist/images/**/*.{svg,png,jpg}',
-        'dist/scripts/*.js',
+        'dist/scripts.js',
         'dist/styles/*.css',
-        'dist/manifest.json'
+        'dist/manifest.json',
     ], {
-        base: 'dist'
+        base: 'dist',
     })
         .pipe(paths(del))
         .pipe(rev())
@@ -76,10 +76,10 @@ gulp.task('cache:replace', () => {
 
     return gulp.src([
         'dist/**/*.{html,css}',
-        'dist/manifest-*.json'
+        'dist/manifest-*.json',
     ])
-        .pipe(revRewrite({
-            manifest
+        .pipe(rewrite({
+            manifest,
         }))
         .pipe(gulp.dest('dist'));
 });
@@ -89,11 +89,22 @@ gulp.task('cache', gulp.series(
     'cache:replace'
 ));
 
+// Paths
+
+gulp.task('paths', () => {
+    return gulp.src('dist/**/*.html')
+        .pipe(replace(
+            /(<script) type="module"( src="\/scripts)\/index(.js">)/, '$1$2$3'
+        ))
+        .pipe(gulp.dest('dist'));
+});
+
 // Build
 
 gulp.task('build', gulp.series(
     'styles',
     'scripts',
-    'clean',
-    'cache'
+    'paths',
+    'cache',
+    'clean'
 ));
