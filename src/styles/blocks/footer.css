@@ -10,6 +10,11 @@
     background-color: var(--color-grey-dark);
 }
 
+.page--dark-mode .footer {
+    color: var(--color-dark-text-secondary);
+    background-color: var(--color-dark-background-footer);
+}
+
 @media (min-width: 1024px) {
     .footer {
         padding: 22px 48px 34px;
@@ -27,6 +32,10 @@
     color: var(--color-grey-lightest);
 }
 
+.page--dark-mode .footer__link[href]:link {
+    color: var(--color-dark-text-primary);
+}
+
 .footer__link[href]:visited {
     color: white;
 }
@@ -37,7 +46,8 @@
     }
 }
 
-.footer__link[href]:active {
+.footer__link[href]:hover,
+.page--dark-mode .footer__link[href]:hover {
     color: var(--color-turquoise);
 }
 

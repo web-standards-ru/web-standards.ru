@@ -151,6 +151,10 @@
     text-decoration: none;
 }
 
+.page--dark-mode .logo__link {
+    color: var(--color-dark-text-header);
+}
+
 @media (min-width: 769px) {
     .logo__link {
         display: grid;

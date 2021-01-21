@@ -52,4 +52,17 @@
     --color-turquoise: #00abbd;
     --color-moss: #69bb72;
     --color-grass: #95d445;
+
+    --color-dark-background: #1b2028;
+    --color-dark-background-social: #151618;
+    --color-dark-background-footer: #0f0f0f;
+    --color-dark-background-featured-article: #151a22;
+    --color-dark-background-code: #151618;
+    --color-dark-background-code-0a: #15161800;
+    --color-dark-background-code-scrollbar: #1b2028;
+    --color-dark-divider: #2d323d;
+    --color-dark-text-primary: #dae3eb;
+    --color-dark-text-secondary: #91a1b0;
+    --color-dark-text-header: #f1f6fb;
+    --color-dark-text-link: #4eadf5;
 }

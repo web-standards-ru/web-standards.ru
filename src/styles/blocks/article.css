@@ -50,6 +50,10 @@
         color: black;
         background-color: transparent;
     }
+
+    .page--dark-mode .article__heading-wrapper {
+        color: var(--color-dark-text-primary);
+    }
 }
 
 @media (min-width: 1240px) {
@@ -123,6 +127,10 @@
         border-top: 1px solid var(--color-grey-medium);
         border-bottom: 1px solid var(--color-grey-medium);
     }
+
+    .page--dark-mode .article__heading {
+        border-color: var(--color-dark-divider);
+    }
 }
 
 .article__title {
@@ -194,6 +202,10 @@
     .article__link {
         color: black;
     }
+
+    .page--dark-mode .article__link {
+        color: var(--color-darl-text-primary);
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -250,6 +262,10 @@
 .article__date {
     margin-right: 21px;
     color: var(--color-grey-lighter);
+}
+
+.page--dark-mode .article__date {
+    color: var(--color-dark-text-secondary);
 }
 
 .article__tags {

@@ -60,6 +60,10 @@
     text-decoration: none;
 }
 
+.page--dark-mode .article-card__link {
+    color: var(--color-dark-text-primary);
+}
+
 .article-card__link::before {
     position: absolute;
     top: 0;
@@ -92,10 +96,18 @@
     color: var(--color-grey-medium);
 }
 
+.page--dark-mode .article-card__date {
+    color: var(--color-dark-text-secondary);
+}
+
 .article-card__author {
     grid-area: author;
     color: var(--color-grey-darker);
     text-transform: uppercase;
+}
+
+.page--dark-mode .article-card__author {
+    color: var(--color-dark-text-primary);
 }
 
 @media (hover: hover) and (pointer: fine) {

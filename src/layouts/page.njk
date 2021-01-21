@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/styles/print.css" media="print">
 </head>
 <body class="page__body{% if isIndex %} page__body--inner{% endif %}">
+    {% include 'dark-mode.njk' %}
     <div class="page__navigation{% if isIndex %} page__navigation--inner{% endif %} navigation">
         <div class="navigation__logo logo">
             {% if isIndex %}<a class="logo__link" href="/">{% endif %}

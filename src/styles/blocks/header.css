@@ -7,6 +7,10 @@
     background-color: white;
 }
 
+.page--dark-mode .header {
+    background-color: var(--color-dark-background);
+}
+
 @media (min-width: 769px) {
     .header {
         grid-template-columns: 2fr 1fr 1fr;

@@ -11,6 +11,11 @@
     background-color: white;
 }
 
+.page--dark-mode.page {
+    color: var(--color-dark-text-primary);
+    background-color: var(--color-dark-background);
+}
+
 .page__body {
     display: grid;
     grid-template-rows:
