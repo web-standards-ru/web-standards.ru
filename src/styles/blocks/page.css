@@ -77,6 +77,10 @@
         transform: translate(213px, 80px);
         pointer-events: none;
     }
+
+    .page--dark-mode .page__content--active {
+        box-shadow: 0 -10px var(--color-dark-background-mobile-sidebar);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -86,5 +90,9 @@
         box-shadow: 0 -10px #f2f7fa;
         transform: translate(213px, 80px);
         pointer-events: none;
+    }
+
+    .page--dark-mode .page__content--inner.page__content--active {
+        box-shadow: 0 -10px var(--color-dark-background-mobile-sidebar);
     }
 }

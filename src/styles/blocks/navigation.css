@@ -16,6 +16,10 @@
     background-color: #f2f7fa;
 }
 
+.page--dark-mode .navigation__logo {
+    background-color: var(--color-dark-background-mobile-sidebar);
+}
+
 @media (min-width: 769px) {
     .navigation__logo {
         display: none;
@@ -194,6 +198,10 @@
     overflow-y: auto;
     list-style: none;
     background-color: #f2f7fa;
+}
+
+.page--dark-mode .navigation__menu {
+    background-color: var(--color-dark-background-mobile-sidebar);
 }
 
 @media (min-width: 769px) {
