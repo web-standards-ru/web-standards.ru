@@ -31,6 +31,10 @@
     text-decoration: none;
 }
 
+.page--dark-mode .notice__link {
+    color: var(--color-dark-text-primary);
+}
+
 @media (min-width: 630px) {
     .notice__link {
         padding-top: 0;

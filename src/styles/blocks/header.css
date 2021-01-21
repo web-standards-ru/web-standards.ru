@@ -5,6 +5,10 @@
     padding: 16px;
 }
 
+.page--dark-mode .header {
+    background-color: var(--color-dark-background);
+}
+
 @media (min-width: 736px) {
     .header {
         grid-template-columns: max-content max-content;

@@ -5,6 +5,10 @@
     background-color: white;
 }
 
+.page--dark-mode .main {
+    background-color: var(--color-dark-background);
+}
+
 .main__content {
     margin-bottom: 30px;
 }

@@ -6,6 +6,10 @@
     background-color: var(--color-grey-lightest);
 }
 
+.page--dark-mode .links {
+    background-color: var(--color-dark-background-social);
+}
+
 @media (min-width: 568px) {
     .links {
         display: flex;
@@ -136,23 +140,35 @@
 /* Links Icons */
 
 .links__link--vk::before {
+    background-color: white;
     background-image: url('/images/social/vk.svg');
+    border-radius: 100%;
 }
 
 .links__link--facebook::before {
+    background-color: white;
     background-image: url('/images/social/facebook.svg');
+    border-radius: 100%;
 }
 
 .links__link--twitter::before {
+    background-color: white;
     background-image: url('/images/social/twitter.svg');
+    border-radius: 100%;
 }
 
 .links__link--telegram::before {
+    background-color: white;
     background-image: url('/images/social/telegram.svg');
+    border-radius: 100%;
 }
 
 .links__link--github::before {
     background-image: url('/images/social/github.svg');
+}
+
+.page--dark-mode .links__link--github::before {
+    background-image: url('/images/social/github-dark.svg');
 }
 
 .links__link--slack::before {
@@ -160,5 +176,7 @@
 }
 
 .links__link--youtube::before {
+    background-color: white;
     background-image: url('/images/social/youtube.svg');
+    border-radius: 100%;
 }

@@ -27,6 +27,10 @@
     text-transform: uppercase;
 }
 
+.page--dark-mode .creators__author {
+    color: var(--color-dark-text-secondary);
+}
+
 .creators__author:link {
     transition: color 0.2s linear;
 }
@@ -93,7 +97,12 @@
     transition: color 0.2s linear;
 }
 
-.creators__collaborators-link:visited {
+.page--dark-mode .creators__collaborators-link:link  {
+    color: var(--color-dark-text-secondary);
+}
+
+.creators__collaborators-link:visited,
+.page--dark-mode .creators__collaborators-link:visited {
     color: var(--color-grey-medium);
 }
 
@@ -102,11 +111,13 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .creators__collaborators-link:hover {
+    .creators__collaborators-link:hover,
+    .page--dark-mode .creators__collaborators-link:hover {
         color: var(--color-turquoise);
     }
 }
 
-.creators__collaborators-link:active {
+.creators__collaborators-link:active,
+.page--dark-mode .creators__collaborators-link:active {
     color: var(--color-turquoise);
 }

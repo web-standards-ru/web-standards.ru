@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/styles/print.css" media="print">
 </head>
 <body class="page__body">
+    {% include 'dark-mode.njk' %}
     {% include 'header.njk' %}
 
     {{ content | safe }}

@@ -8,6 +8,10 @@
     line-height: 1.7;
 }
 
+.page--dark-mode .content {
+    color: var(--color-dark-text-primary);
+}
+
 @media (min-width: 1240px) {
     .content {
         max-width: none;
@@ -101,17 +105,23 @@
     transition: color 0.2s linear;
 }
 
+.page--dark-mode .content a:link {
+    color: var(--color-dark-text-link);
+}
+
 .content a:visited {
     color: var(--color-grey-medium);
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .content a:hover {
+    .content a:hover,
+    .page--dark-mode .content a:hover {
         color: var(--color-turquoise);
     }
 }
 
-.content a:active {
+.content a:active,
+.page--dark-mode .content a:active  {
     color: var(--color-turquoise);
 }
 
@@ -301,6 +311,10 @@
     );
 }
 
+.page--dark-mode .content pre {
+    background: var(--color-dark-background-code);
+}
+
 @media (min-width: 1240px) {
     .content pre {
         margin-top: 60px;
@@ -324,6 +338,14 @@
     pointer-events: none;
 }
 
+.page--dark-mode .content pre::after {
+    background-image: linear-gradient(
+        to left,
+        var(--color-dark-background-code) 0%,
+        var(--color-dark-background-code-0a) 100%
+    );
+}
+
 .content pre code {
     display: block;
     padding: 16px 0;
@@ -331,6 +353,10 @@
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker-50a) transparent;
     user-select: all;
+}
+
+.page--dark-mode .content pre code {
+    scrollbar-color: var(--color-dark-background-code-scrollbar) transparent;
 }
 
 .content pre code:focus {
