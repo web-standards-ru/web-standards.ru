@@ -13,6 +13,7 @@ layout: article.njk
 tags:
     - article
     - html
+preview: 'Мы уже давно используем различные технологии для редактирования и хранения текста в браузере. С атрибутом contenteditable это становится намного проще. В этой статье я расскажу для чего этот атрибут, как он работает и куда нам двигаться дальше.'
 ---
 
 Мы уже давно используем различные технологии для редактирования и хранения текста в браузере. С атрибутом `contenteditable` это становится намного проще. В этой статье я расскажу для чего этот атрибут, как он работает и куда нам двигаться дальше.
@@ -26,7 +27,7 @@ tags:
     <footer>
         <cite><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable">WHATWG</a>.</cite>
     </footer>
-<blockquote>
+</blockquote>
 
 В основном, атрибут `contenteditable` должен был обеспечивать работу WYSIWYG-редакторов. Скорее всего, вы встречали его в инструментах подобных Symphony или на сайтах вроде Flickr, где вы начинаете редактировать материалы, просто кликнув в определенную область.
 
@@ -74,6 +75,7 @@ tags:
 
     #example-one[contenteditable="true"] {
         padding: 10px;
+        overflow-x: auto;
         outline: 3px dashed #cccccc;
     }
 
@@ -112,6 +114,7 @@ tags:
 
     #example-two[contenteditable="true"] {
         padding: 10px;
+        overflow-x: auto;
         outline: 3px dashed #cccccc;
     }
 
@@ -129,16 +132,50 @@ tags:
 
 Поддержка атрибута `contenteditable` браузерами на удивление хороша:
 
-| Браузер           | Версия |
-| ----------------- | ------ |
-| Chrome            | 4.0+   |
-| Safari            | 3.1+   |
-| Mobile Safari     | 5.0+   |
-| Firefox           | 3.5+   |
-| Opera             | 9.0+   |
-| Opera Mini/Mobile | Нет    |
-| Internet Explorer | 5.5+   |
-| Android           | 3.0+   |
+<div class="content__table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Браузер</th>
+                <th>Версия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chrome</td>
+                <td>4.0+</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>3.1+</td>
+            </tr>
+            <tr>
+                <td>Mobile Safari</td>
+                <td>5.0+</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>3.5+</td>
+            </tr>
+            <tr>
+                <td>Opera</td>
+                <td>9.0+</td>
+            </tr>
+            <tr>
+                <td>Opera Mini/Mobile</td>
+                <td>Нет</td>
+            </tr>
+            <tr>
+                <td>Internet Explorer</td>
+                <td>5.5+</td>
+            </tr>
+            <tr>
+                <td>Android</td>
+                <td>3.0+</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 Поддержка браузерами свойства `contenteditable`.
 
@@ -157,7 +194,7 @@ tags:
     <footer>
         <cite><a href="https://remysharp.com/">Реми Шарп</a>.</cite>
     </footer>
-<blockquote>
+</blockquote>
 
 ## Заключение
 

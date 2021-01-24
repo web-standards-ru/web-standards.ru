@@ -3,22 +3,9 @@
 .content {
     max-width: 700px;
     margin: 0 auto;
-    font-size: 12px;
-    line-height: 1.7;
     color: black;
-    box-sizing: border-box;
-}
-
-@media (min-width: 600px) {
-    .content {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content {
-        font-size: 16px;
-    }
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 @media (min-width: 1240px) {
@@ -29,15 +16,17 @@
     }
 }
 
+/* Headings */
+
 .content h2,
 .content h3 {
     margin-top: 32px;
     margin-bottom: 16px;
     font-size: 16px;
-    line-height: 1.2;
     font-family: 'Dewi Expanded', sans-serif;
-    text-transform: uppercase;
+    line-height: 1.2;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 @media (min-width: 600px) {
@@ -75,9 +64,20 @@
 
 .content h2 code,
 .content h3 code {
-    /* fixes default monospace font */
     font-family: inherit;
 }
+
+.content h2 .tooltip__button,
+.content h3 .tooltip__button {
+    opacity: 0.3;
+}
+
+.content h2:hover .tooltip__button,
+.content h3:hover .tooltip__button {
+    opacity: 1;
+}
+
+/* Paragraphs */
 
 .content p {
     margin-top: 1em;
@@ -94,15 +94,7 @@
     margin-top: 0;
 }
 
-.content a {
-    text-decoration: none;
-}
-
-@media (min-width: 1240px) {
-    .content a {
-        text-decoration: underline;
-    }
-}
+/* Links */
 
 .content a:link {
     color: var(--color-blue-darker);
@@ -110,7 +102,7 @@
 }
 
 .content a:visited {
-    color: var(--color-grey-lighter);
+    color: var(--color-grey-medium);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -127,10 +119,10 @@
 
 .content ol,
 .content ul {
-    list-style: none;
     margin-top: 10px;
     margin-bottom: 29px;
     padding-left: 0;
+    list-style: none;
 }
 
 @media (min-width: 1240px) {
@@ -161,32 +153,20 @@
 }
 
 .content ul > li::before {
-    content: '—';
     position: absolute;
     top: -1px;
-    left: 0;
     bottom: 0;
-    font-family: 'Dewi Expanded', sans-serif;
-    font-size: 12px;
+    left: 0;
     color: var(--color-grey-lighter);
-}
-
-@media (min-width: 600px) {
-    .content ul > li::before {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content ul > li::before {
-        font-size: 16px;
-    }
+    font-size: 16px;
+    font-family: 'Dewi Expanded', sans-serif;
+    content: '—';
 }
 
 @media (min-width: 1240px) {
     .content ul > li::before {
-        font-size: 21px;
         top: -2px;
+        font-size: 21px;
     }
 }
 
@@ -197,26 +177,14 @@
 }
 
 .content ol > li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--color-grey-lighter);
+    font-size: 16px;
+    font-family: 'Dewi Expanded', sans-serif;
     counter-increment: list;
     content: counter(list);
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-family: 'Dewi Expanded', sans-serif;
-    font-size: 12px;
-    color: var(--color-grey-lighter);
-}
-
-@media (min-width: 600px) {
-    .content ol > li::before {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content ol > li::before {
-        font-size: 16px;
-    }
 }
 
 @media (min-width: 1240px) {
@@ -225,13 +193,22 @@
     }
 }
 
-/*
-    Картинки
+/* Figures */
 
-    Основные стили задаются через блок media
-*/
+.content figure {
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
 
-.content img {
+.content figcaption {
+    font-size: 0.8em;
+}
+
+/* Images */
+
+.content img,
+.content video {
     display: block;
     max-width: 100%;
     height: auto;
@@ -239,12 +216,13 @@
 }
 
 @media (min-width: 1240px) {
-    .content img {
-        margin: 60px 0 60px auto;
+    .content img,
+    .content video {
+        margin: 60px 0;
     }
 }
 
-/* Цитаты */
+/* Quotes */
 
 .content blockquote {
     position: relative;
@@ -252,8 +230,8 @@
     margin-bottom: 16px;
     padding: 5px 0;
     padding-left: 14px;
-    font-size: 18px;
     color: black;
+    font-size: 18px;
 }
 
 @media (min-width: 600px) {
@@ -278,24 +256,29 @@
 }
 
 .content blockquote::before {
-    content: '';
     position: absolute;
-    left: 0;
     top: 0;
     bottom: 0;
+    left: 0;
     width: 1px;
     background-color: var(--color-grey-lighter);
+    content: '';
 }
 
 @media (min-width: 1240px) {
     .content blockquote::before {
-        width: 4px;
         top: 0.5em;
         bottom: 0.5em;
+        width: 4px;
     }
 }
 
-/* Код */
+/* Code */
+
+.content code {
+    font-family: 'Rostin', monospace;
+    word-wrap: break-word;
+}
 
 .content pre {
     position: relative;
@@ -320,17 +303,18 @@
 }
 
 .content pre::after {
-    content: '';
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
     width: 76px;
     background-image: linear-gradient(
         to left,
         var(--color-blue-lightest) 0%,
-        var(--color-blue-lightest-transparent) 100%
+        var(--color-blue-lightest-0a) 100%
     );
+    content: '';
+    pointer-events: none;
 }
 
 .content pre code {
@@ -338,7 +322,18 @@
     padding: 16px 0;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-green-darker) transparent;
+    scrollbar-color: var(--color-green-darker-50a) transparent;
+    user-select: all;
+}
+
+.content pre code:focus {
+    animation: code-select 100ms step-end forwards;
+}
+
+@keyframes code-select {
+    to {
+        user-select: text;
+    }
 }
 
 @media (min-width: 1240px) {
@@ -347,51 +342,67 @@
     }
 }
 
-.content code::-webkit-scrollbar {
-    height: 3px;
+.content pre code::-webkit-scrollbar {
+    height: 8px;
 }
 
-.content code::-webkit-scrollbar-thumb {
+.content pre code::-webkit-scrollbar-thumb {
+    background-color: var(--color-green-darker-50a);
+    border-top: 4px solid var(--color-green-light);
+}
+
+.content pre:hover code::-webkit-scrollbar-thumb {
     background-color: var(--color-green-darker);
-    border-radius: 24px;
+    border-top: none;
+    border-radius: 8px;
 }
 
-.content iframe {
+.content pre code::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-turquoise);
+}
+
+/* Frame */
+
+.content > iframe {
     display: block;
     width: 100%;
     min-height: 400px;
-    margin: 0;
-    margin-top: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     border: 0;
 }
 
-/* Буквица */
+/* Letter */
 
 .content > p:first-of-type::first-letter {
-    margin-top: -5px;
+    float: left;
+    margin-top: 0.13em;
     margin-left: -5px;
     padding-right: 15px;
     color: var(--color-grey-medium);
-    font-family: 'Dewi Expanded', sans-serif;
     font-weight: normal;
     font-size: 3.5em;
-    line-height: 1;
-    float: left;
+    font-family: 'Dewi Expanded', sans-serif;
+    line-height: 0.65;
 }
 
-/* Таблицы */
+/* Tables */
 
-.content table {
+.content__table-wrapper {
     margin-top: 16px;
     margin-bottom: 24px;
+    overflow-x: auto;
+}
+
+.content table {
     width: 100%;
     border-collapse: collapse;
 }
 
 .content table caption {
     margin-bottom: 8px;
-    text-align: left;
     font-weight: bold;
+    text-align: left;
 }
 
 .content thead {
@@ -410,9 +421,9 @@
 .content th,
 .content td {
     padding: 16px 0;
-    vertical-align: top;
-    text-align: left;
     line-height: 1.2;
+    text-align: left;
+    vertical-align: top;
 }
 
 .content tr > * + * {

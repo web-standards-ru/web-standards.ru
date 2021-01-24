@@ -3,7 +3,7 @@
     {% set featuredClass %}{{ '--featured' }}{% endset %}
 {% endif %}
 
-<article class="
+<article itemscope class="
     article-card
     article-card{{ articleType }}
     article-card{{ featuredClass }}">
@@ -16,11 +16,11 @@
             article-card__link{{ articleType }}
             article-card__link{{ featuredClass }}"
             href="{{ article.url }}">
-            {{ article.data.title }}
+            {{ article.data.title | addHyphens(10) }}
         </a>
     </h3>
 
-    {% if featured %}
+    {% if featured and articleCardVariant !== 'related' %}
         <p class="article-card__preview">
             {{ article.data.preview }}
         </p>
@@ -48,7 +48,7 @@
             {{ person.name }}
         </span>
 
-        {% if not featured %}
+        {% if not featured or articleCardVariant == 'related' %}
             <div class="
                 article-card__avatar
                 article-card__avatar{{ articleType }}
@@ -63,4 +63,20 @@
             </div>
         {% endif %}
     {% endfor %}
+
+    {% if featured and articleCardVariant !== 'related' %}
+        {% if article.data.hero.src %}
+            {% set featuredImg = [article.url, article.data.hero.src] | join %}
+        {% else %}
+            {% set featuredImg = '/images/patterns/dots.svg' %}
+        {% endif %}
+        {% if article.data.hero.alt %}
+            {% set featuredAlt = article.data.hero.alt %}
+        {% endif %}
+        <img class="article-card__hero-image--featured"
+            src="{{ featuredImg }}"
+            alt="{{ featuredAlt }}"
+            itemprop="image">
+    {% endif %}
+
 </article>

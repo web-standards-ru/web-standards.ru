@@ -1,0 +1,120 @@
+.creators {
+    display: flex;
+}
+
+@media (min-width: 1024px) {
+    .creators {
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 1240px) {
+    .creators {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.creators__author {
+    margin-right: 32px;
+    color: var(--color-grey-darker);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1240px) {
+    .creators__author {
+        margin-right: 0;
+        margin-bottom: 19px;
+    }
+}
+
+.creators__author:link {
+    transition: color 0.2s linear;
+}
+
+.creators__author:link:visited {
+    color: var(--color-grey-medium);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .creators__author:link:hover {
+        color: var(--color-turquoise);
+    }
+}
+
+.creators__author:link:active {
+    color: var(--color-turquoise);
+}
+
+.creators__author-avatar {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 26px;
+    object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+    .creators__author-avatar {
+        width: 113px;
+        height: 113px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .creators__author-avatar {
+        width: 128px;
+        height: 128px;
+    }
+}
+
+.creators__author-name {
+    color: inherit;
+}
+
+.creators__collaborators {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.creators__collaborators:not(:last-child) {
+    margin-right: 32px;
+}
+
+@media (min-width: 1240px) {
+    .creators__collaborators:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 17px;
+    }
+}
+
+.creators__collaborators-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.creators__collaborators-link:link {
+    color: var(--color-grey-darker);
+    letter-spacing: -0.03em;
+    transition: color 0.2s linear;
+}
+
+.creators__collaborators-link:visited {
+    color: var(--color-grey-medium);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .creators__collaborators-link:hover {
+        color: var(--color-turquoise);
+    }
+}
+
+.creators__collaborators-link:active {
+    color: var(--color-turquoise);
+}

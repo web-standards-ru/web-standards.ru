@@ -2,7 +2,6 @@
 
 .links {
     padding: 16px 9px;
-    box-sizing: border-box;
     background-color: var(--color-grey-lightest);
 }
 
@@ -36,9 +35,9 @@
 
 .links__title {
     margin: 0 0 15px 0;
-    font-family: 'Dewi Expanded', sans-serif;
-    font-size: 16px;
     font-weight: bold;
+    font-size: 18px;
+    font-family: 'Dewi Expanded', sans-serif;
     text-transform: uppercase;
 }
 
@@ -55,18 +54,17 @@
 }
 
 .links__section {
-    padding: 9px 0;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    padding: 9px 0;
+    font-size: 16px;
     font-family: 'Dewi';
-    font-size: 12px;
 }
 
 @media (min-width: 1024px) {
     .links__section {
         padding: 20px 0;
-        font-size: 16px;
     }
 }
 
@@ -91,16 +89,16 @@
 }
 
 .links__description {
-    margin: 0 5px 0 0;
     display: flex;
     flex: 0 0 172px;
+    margin: 0 5px 0 0;
     text-align: left;
 }
 
 @media (min-width: 1024px) {
     .links__description {
-        margin-right: 15px;
         flex: 0 0 252px;
+        margin-right: 15px;
     }
 }
 

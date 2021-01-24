@@ -1,4 +1,4 @@
-name: CSS
+name: Stylelint
 
 on:
   pull_request:
@@ -13,9 +13,9 @@ jobs:
       matrix:
         node-version: [13.x]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run css
+      - run: npm run stylelint

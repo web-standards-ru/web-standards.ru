@@ -10,6 +10,7 @@ tags:
     - article
     - js
     - performance
+preview: 'На сегодняшний день имеется большое количество разных браузеров и ещё большее количество версий каждого из них. Если раньше новые фичи добавлялись в браузеры редко, то сейчас их можно обнаружить практически с каждым новым релизом. Как итог, у разных версий браузера — разная поддержка фич, не говоря уже о разном уровне поддержки среди разных вендоров. На самом деле нам незачем транспилировать и полифилить абсолютно все фичи — достаточно это делать только с теми, которые не поддерживаются актуальными браузерами.'
 ---
 
 На сегодняшний день имеется большое количество разных браузеров и ещё большее количество версий каждого из них. Если раньше новые фичи добавлялись в браузеры редко, то сейчас их можно обнаружить практически с каждым новым релизом. Как итог, у разных версий браузера — разная поддержка фич, не говоря уже о разном уровне поддержки среди разных вендоров.
@@ -28,7 +29,7 @@ last 2 years
 not dead
 ```
 
-Этот пример файла `.browserslistrc` означает, что вам нужны живые браузеры за последние два года, у которых больше 1% пользователей. Посмотреть в какие конкретные браузеры это разрезолвится можно на сайте [browserl.ist](https://browserl.ist/), а более подробно узнать про синтаксис выражений можно [на странице проекта](https://github.com/browserslist/browserslist).
+Этот пример файла `.browserslistrc` означает, что вам нужны: браузеры за последние два года, плюс браузеры у которых больше 1% пользователей, и все эти браузеры должны быть «живыми». Посмотреть в какие конкретные браузеры это разрезолвится можно на сайте [browserl.ist](https://browserl.ist/), а более подробно узнать про синтаксис выражений можно [на странице проекта](https://github.com/browserslist/browserslist).
 
 Уже упомянутые [Autoprefixer](https://github.com/postcss/autoprefixer), [postcss-preset-env](https://preset-env.cssdb.org) и [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env) под капотом используют Browserslist, и если в вашем проекте есть конфиг Browserslist, то код проекта будет собран под эти браузеры.
 
@@ -285,80 +286,86 @@ else dsl(dsla[0],"/index.legacy.js");dsld.all[1].appendChild(dslf)</script>
 
 Я замерил размеры бандла и скорости загрузки до и после применения дифференциальной загрузки вместе с транспиляцией зависимостей, на примере сайта [DevFest Siberia 2019](https://github.com/TrigenSoftware/DevFest-Siberia):
 
-<table>
-    <caption>Размеры бандла</caption>
-    <thead>
-        <tr>
-            <th></th>
-            <th>Без сжатия</th>
-            <th>После сжатия</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Без DSL</td>
-            <td>1,08 Мб</td>
-            <td>292 Кб</td>
-        </tr>
-        <tr>
-            <td>С плагином BDSL для Webpack</td>
-            <td>0,80 Мб</td>
-            <td>218 Кб</td>
-        </tr>
-    </tbody>
-</table>
+<div class="content__table-wrapper">
+    <table>
+        <caption>Размеры бандла</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Без сжатия</th>
+                <th>После сжатия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Без DSL</td>
+                <td>1,08 Мб</td>
+                <td>292 Кб</td>
+            </tr>
+            <tr>
+                <td>С плагином BDSL для Webpack</td>
+                <td>0,80 Мб</td>
+                <td>218 Кб</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table>
-    <caption>Среднее время загрузки, мс</caption>
-    <thead>
-        <tr>
-            <th></th>
-            <th>Обычный интернет</th>
-            <th>Обычный 4G</th>
-            <th>Хороший 3G</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Без DSL</td>
-            <td>1,511</td>
-            <td>4,240</td>
-            <td>8,696</td>
-        </tr>
-        <tr>
-            <td>С плагином BDSL для Webpack</td>
-            <td>1,594</td>
-            <td>3,409</td>
-            <td>8,561</td>
-        </tr>
-    </tbody>
-</table>
+<div class="content__table-wrapper">
+    <table>
+        <caption>Среднее время загрузки, мс</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Обычный интернет</th>
+                <th>Обычный 4G</th>
+                <th>Хороший 3G</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Без DSL</td>
+                <td>1,511</td>
+                <td>4,240</td>
+                <td>8,696</td>
+            </tr>
+            <tr>
+                <td>С плагином BDSL для Webpack</td>
+                <td>1,594</td>
+                <td>3,409</td>
+                <td>8,561</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table>
-    <caption>Лучшее время загрузки, мс</caption>
-    <thead>
-        <tr>
-            <th></th>
-            <th>Обычный интернет</th>
-            <th>Обычный 4G</th>
-            <th>Хороший 3G</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Без DSL</td>
-            <td>1,266</td>
-            <td>3,366</td>
-            <td>8,349</td>
-        </tr>
-        <tr>
-            <td>С плагином BDSL для Webpack</td>
-            <td>1,143</td>
-            <td>3,142</td>
-            <td>6,673</td>
-        </tr>
-    </tbody>
-</table>
+<div class="content__table-wrapper">
+    <table>
+        <caption>Лучшее время загрузки, мс</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Обычный интернет</th>
+                <th>Обычный 4G</th>
+                <th>Хороший 3G</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Без DSL</td>
+                <td>1,266</td>
+                <td>3,366</td>
+                <td>8,349</td>
+            </tr>
+            <tr>
+                <td>С плагином BDSL для Webpack</td>
+                <td>1,143</td>
+                <td>3,142</td>
+                <td>6,673</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 В итоге получился прирост скорости загрузки и размер бандла уменьшился на ≈20%, [читайте более подробный отчёт](https://gist.github.com/dangreen/5427c5f2158c357bf0b15d38270508ac). Также вы можете самостоятельно провести подобные замеры — необходимый скрипт есть [в репозитории bdsl-webpack-plugin](https://github.com/TrigenSoftware/bdsl-webpack-plugin#metrics).
 

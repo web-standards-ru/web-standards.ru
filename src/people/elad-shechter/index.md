@@ -1,6 +1,6 @@
 ---
 name: Элад Шехтер
-url: https://medium.com/@elad
+url: https://twitter.com/eladsc
 tags: people
 photo: true
 permalink: false
