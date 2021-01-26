@@ -126,6 +126,10 @@ module.exports = function(config) {
         });
     });
 
+    config.addFilter('fixImgLazyLoading', content =>
+        content.replace(/<img(?!.*loading)/g, `<img loading="lazy"`)
+    )
+
     config.addFilter('mapToYears', (articlesList) => {
         const articlesByYear = {};
         articlesList.forEach((article) => {
@@ -216,14 +220,6 @@ module.exports = function(config) {
                     </div>`
             });
         }
-        return content;
-    });
-
-    config.addTransform("imgLazyLoading", (content, outputPath) => {
-        if (outputPath && outputPath.endsWith('.html')) {
-            content = content.replace(/<img/g, `<img loading="lazy"`);
-        }
-
         return content;
     });
 
