@@ -2,8 +2,6 @@
 layout: page.njk
 ---
 
-{% include 'header.njk' %}
-
 <main class="main">
     <div class="main__content article" itemscope itemtype="http://schema.org/Article">
         <div class="article__heading-wrapper{% if not hero %} article__heading-wrapper--no-hero{% endif %}">
@@ -141,6 +139,3 @@ layout: page.njk
         {% include 'conference-link.njk' %}
     </div> #}
 </main>
-
-{% include 'aside.njk' %}
-{% include 'footer.njk' %}
