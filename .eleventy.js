@@ -219,6 +219,14 @@ module.exports = function(config) {
         return content;
     });
 
+    config.addTransform("imgLazyLoading", (content, outputPath) => {
+        if (outputPath && outputPath.endsWith('.html')) {
+            content = content.replace(/<img/g, `<img loading="lazy"`);
+        }
+
+        return content;
+    });
+
     // Теги
 
     config.addNunjucksTag('blob', (nunjucksEngine) => {
