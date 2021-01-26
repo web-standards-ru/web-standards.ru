@@ -71,8 +71,22 @@
     }
 
     .menu__list--open {
+        position: relative;
         z-index: 3;
         display: grid;
+    }
+
+    .menu__list--open::after {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(
+            to bottom,
+            var(--color-special-dark-10a),
+            transparent
+        );
+        content: '';
     }
 }
 
