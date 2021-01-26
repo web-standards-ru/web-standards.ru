@@ -9,7 +9,7 @@
 @import 'blocks/page.css';
 @import 'blocks/header.css';
 @import 'blocks/logo.css';
-@import 'blocks/navigation.css';
+@import 'blocks/menu.css';
 @import 'blocks/articles.css';
 @import 'blocks/archive.css';
 @import 'blocks/notice.css';
@@ -52,4 +52,8 @@
     --color-turquoise: #00abbd;
     --color-moss: #69bb72;
     --color-grass: #95d445;
+
+    --color-special-neutral: #61afb4;
+    --color-special-dark-10a: #3b83ba1a;
+    --color-special-dark: #3b84bb;
 }
