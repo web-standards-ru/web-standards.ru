@@ -126,7 +126,7 @@ module.exports = function(config) {
         });
     });
 
-    config.addFilter('fixImgLazyLoading', (content) => {
+    config.addFilter('addLoadingLazy', (content) => {
         content.replace(/<img(?!.*loading)/g, '<img loading="lazy"');
     });
 
