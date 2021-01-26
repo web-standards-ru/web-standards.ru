@@ -126,9 +126,9 @@ module.exports = function(config) {
         });
     });
 
-    config.addFilter('fixImgLazyLoading', content =>
-        content.replace(/<img(?!.*loading)/g, `<img loading="lazy"`)
-    )
+    config.addFilter('fixImgLazyLoading', (content) => {
+        content.replace(/<img(?!.*loading)/g, '<img loading="lazy"');
+    });
 
     config.addFilter('mapToYears', (articlesList) => {
         const articlesByYear = {};
