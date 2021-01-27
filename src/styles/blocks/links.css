@@ -1,13 +1,20 @@
 /* Links */
 
 .links {
-    padding: 16px 9px;
+    margin-top: -1px;
+    padding: 16px 16px 24px;
     background-color: var(--color-grey-lightest);
 }
 
 @media (min-width: 568px) {
     .links {
         display: flex;
+    }
+}
+
+@media (min-width: 630px) {
+    .links {
+        padding: 24px;
     }
 }
 
@@ -75,7 +82,7 @@
 }
 
 .links__section:not(:last-child) {
-    border-bottom: 1px solid var(--color-grey-medium);
+    border-bottom: 1px solid var(--color-grey-lighter);
 }
 
 .links__definition {

@@ -14,8 +14,6 @@ layout: page.njk
 permalink: /articles/tags/{{ tag | slug }}/
 ---
 
-{% include 'header.njk' %}
-
 <main class="main">
     <div class="archive">
         <h1 class="archive__title">
@@ -45,6 +43,3 @@ permalink: /articles/tags/{{ tag | slug }}/
         {%- endfor -%}
     </ul>
 </main>
-
-{% include 'aside.njk' %}
-{% include 'footer.njk' %}
