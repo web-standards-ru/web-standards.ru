@@ -25,9 +25,8 @@
 @import 'blocks/article-card.css';
 @import 'blocks/conference-link.css';
 @import 'blocks/video.css';
-@import 'blocks/notfound.css';
 @import 'blocks/tooltip.css';
-@import 'blocks/notfound.css';
+@import 'blocks/not-found.css';
 
 /* Globals */
 

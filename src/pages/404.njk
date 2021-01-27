@@ -1,14 +1,21 @@
 ---
 title: Страница не найдена
 layout: page.njk
-permalink: 404.html
+permalink: 404/index.html
 eleventyExcludeFromCollections: true
 ---
 
 <main class="main">
-    <div class="notfound">
-        <h1 class="notfound__title">404</h1>
-        <p class="notfound__description">Кажется материал который вы ищите пропал или никогда не существовал.</p>
-        <a href="{{ "/" | url }}" class="notfound__backhome">Вернуться на главную страницу</a>
+    <div class="not-found">
+        <h1 class="not-found__title">Страница не найдена</h1>
+        <div class="not-found__content">
+            <p>
+                Помогите нам её найти:
+                создайте <a href="https://github.com/web-standards-ru/web-standards.ru/issues">ишью на Гитхабе</a>
+                или напишите на <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.
+                Спасибо!
+            </p>
+            <p><a href="/">Вернуться на главную страницу</a></p>
+        </div>
     </div>
 </main>

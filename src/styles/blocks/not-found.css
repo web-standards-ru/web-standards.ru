@@ -1,0 +1,40 @@
+/* Not Found */
+
+@media (max-width: 1024px) {
+    .not-found {
+        padding-top: 24px;
+        padding-bottom: 50px;
+        padding-left: 24px;
+    }
+}
+
+/* Title */
+
+.not-found__title {
+    margin: 49px 0 66px;
+    font: 400 24px 'Dewi Expanded', sans-serif;
+    letter-spacing: -0.05em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (min-width: 630px) {
+    .archive__title {
+        margin: 20px 0 67px;
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .archive__title {
+        margin: 53px 0 113px;
+        font-size: 48px;
+    }
+}
+
+/* Content */
+
+.not-found__content a {
+    color: var(--color-blue-darker);
+    transition: color 0.2s linear;
+}
