@@ -17,8 +17,8 @@ module.exports = function(config) {
         },
     }).use(markdownItAnchor, {
         permalink: true,
-        permalinkClass: 'article__heading-anchor',
-        permalinkSymbol: '#',
+        permalinkClass: 'tooltip__button',
+        permalinkSymbol: '',
         permalinkSpace: false,
         permalinkAttrs: () => ({
             'aria-label': 'Этот заголовок',
@@ -124,6 +124,10 @@ module.exports = function(config) {
                 return match.slice(0, -1) + prefix + match.slice(-1);
             }
         });
+    });
+
+    config.addFilter('addLoadingLazy', (content) => {
+        content.replace(/<img(?!.*loading)/g, '<img loading="lazy"');
     });
 
     config.addFilter('mapToYears', (articlesList) => {
