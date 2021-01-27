@@ -265,21 +265,6 @@ module.exports = function(config) {
         }();
     });
 
-    config.setBrowserSyncConfig({
-        callbacks: {
-            ready(_, bs) {
-                bs.addMiddleware("*", (_, res) => {
-                    const fs = require("fs");
-                    const html = fs.readFileSync("dist/404.html");
-
-                    res.write(html);
-                    res.writeHead(404);
-                    res.end();
-                });
-            },
-        },
-    });
-
     return {
         dir: {
             input: 'src',
