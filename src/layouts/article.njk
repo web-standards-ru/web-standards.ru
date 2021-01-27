@@ -118,7 +118,7 @@ layout: page.njk
             {% endif %}
         </div>
         <div class="article__content content" itemprop="articleBody">
-            {{ content | safe }}
+            {{ content | addLoadingLazy | safe }}
         </div>
     </div>
     <div class="main__related-articles related-articles">
