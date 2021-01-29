@@ -18,7 +18,7 @@ permalink: articles/feed/index.xml
             <lastBuildDate>{{ article.date.toUTCString() }}</lastBuildDate>
         {%- endfor -%}
 
-        {% set anchors = r/<a class="article__heading-anchor".*a>/g %}
+        {% set anchors = r/<span class="tooltip">.*span>/g %}
 
         {%- for article in collections.article | reverse  %}
             <item>
