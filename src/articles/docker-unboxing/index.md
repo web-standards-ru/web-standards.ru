@@ -10,15 +10,36 @@ tags:
     - js
 ---
 
+- Технология виртуализации
+- Основные понятия Docker
+    - Docker container (контейнер)
+    - Docker image (образ)
+    - Union File Systems
+- Использование Docker
+    - Исследование системы команд конкретной ОС Linux
+    - Работа с базами данных
+    - Движок сайта на PHP
+    - Фронтенд-приложение
+    - Фулстек-приложение
+    - Работа с кодом внутри контейнера
+    - Тестирование приложений в графическом интерфейсе
+- Безопасность Docker
+    - Безопасность вашей ОС
+    - Доступ при запуске приложения
+    - Безопасные образы
+    - Хранение секретной информации
+- Заключение
+- Материалы по теме
+
 Труд наш в основном творческий, интеллектуальный, и мы посвящаем довольно много времени размышлениям о том, что и как делаем. В условиях быстро развивающейся платформы веб-разработчикам приходится принимать сложные, часто компромиссные, решения. Хороший программист всегда стремится к совершенству, и такое положение вещей раздражает. Однако мы можем существенно облегчить свою участь с помощью Docker, который в худшем случае сократит время работы перед релизом, а в лучшем — добавит оснований нам быть счастливыми.
 
 Есть и другая сторона. Какое впечатление создает ваш продукт у заказчика и его клиентов? В Docker вы создаете упаковку, создаете, если хотите, свой «дизайнерский язык», уникальный первичный пользовательский опыт. Отношение к вам часто формируется через него. Представьте продукт в физическом, а не в виртуальном мире. Пользователь снимает пленку, открывает крышку коробки, внимательно изучает макулатуру, достает провода и зарядку, вдыхает неповторимый аромат новой техники… Скачивая программу, пользователь ожидает нечто подобное. Восхищается ли он простотой, удобством и лаконичностью?
 
 ## Технология виртуализации
 
-В главе 7 [знаменитой книги Эндрю Таненбаума](https://www.piter.com/collection/A20865/product/sovremennye-operatsionnye-sistemy-4-e-izd), ставшей хрестоматией для современного поколения инженеров в области Computer Science, понятие виртуализации рассматривается достаточно подробно. Вся концепция сводится к существованию менеджера виртуальных машин (Virtual Machine Manager), или, по-другому, гипервизора (hypervisor), который позволяет запускать ОС так, как-будто она существует сама по себе и запущена на отдельном компьютере. Гипервизоры бывают двух типов: функционирующие на уровне «железа» и программные, работающие уже как слой в базовой ОС (host OS).
+В 7 главе [знаменитой книги Эндрю Таненбаума](https://www.piter.com/collection/A20865/product/sovremennye-operatsionnye-sistemy-4-e-izd), ставшей хрестоматией для современного поколения инженеров в области Computer Science, понятие виртуализации рассматривается достаточно подробно. Вся концепция сводится к существованию менеджера виртуальных машин (Virtual Machine Manager), или, по-другому, гипервизора (hypervisor), который позволяет запускать ОС так, как-будто она существует сама по себе и запущена на отдельном компьютере. Гипервизоры бывают двух типов: функционирующие на уровне «железа» и программные, работающие уже как слой в базовой ОС (host OS).
 
-Применение виртуализации связано как с развитием самой вычислительной техники и программ, так и с построением сложных инфраструктурных решений для обеспечения работы компаний разного уровня. Выделенный сервер у хостинг-провайдера, к примеру, будет запускаться на «железном» гипервизоре, а у вас, скорее всего, — на программном типа VMWare или VirtualBox.
+Применение виртуализации связано как с развитием самой вычислительной техники и программ, так и с построением сложных инфраструктурных решений для обеспечения работы компаний разного уровня. Выделенный сервер у хостинг-провайдера, к примеру, будет запускаться на «железном» гипервизоре, а у вас, скорее всего — на программном типа VMWare или VirtualBox.
 
 Эти технологии не новые и существуют уже более 50 лет. Однако после небольшого периода забвения они получили в последнее десятилетие новую жизнь. Почему мы говорим про виртуализацию в случае Docker?
 
@@ -94,7 +115,7 @@ Docker daemon осуществляет управление объектами (
     - Движок сайта на PHP (на примере CMS Drupal).
 2. Разработка приложений:
     - Фронтенд приложение (на примере настройки базового репозитория для разработки на Node.js);
-    - Фул-стэк приложение (на примере MERN и связки Flask с MongoDB);
+    - Фулстек-приложение (на примере MERN и связки Flask с MongoDB);
     - Работа с кодом внутри контейнера;
     - Тестирование приложений в графическом интерфейсе.
 3. Упаковка приложений:
@@ -113,8 +134,9 @@ Docker daemon осуществляет управление объектами (
 Сначала проверим, что после установки и запуска все работает корректно:
 
 ```bash
-> docker --version
-Docker version 19.03.13, build 4484c46d9d
+docker --version
+
+> Docker version 19.03.13, build 4484c46d9d
 ```
 
 Командой выше можно протестировать, что Docker готов, может скачивать, устанавливать и запускать образы (Docker image). Образы должны где-то храниться, и Docker предлагает хранить их с помощью удаленной платформы [Docker Registry](https://docs.docker.com/registry/) или в общедоступном хранилище [Docker Hub](https://hub.docker.com/) (бесплатный общедоступный реестр образов).
@@ -124,50 +146,35 @@ Docker version 19.03.13, build 4484c46d9d
 Попробуем запустить образ. Для этого у команды Docker есть специальный тестовый образ, который можно скачать, установить и запустить следующим образом:
 
 ```bash
-> docker run hello-world
-Unable to find image 'hello-world:latest' locally
-latest: Pulling from library/hello-world
-0e03bdcc26d7: Pull complete
-Digest: sha256:e7c70bb24b462baa86c102610182e3efcb12a04854e8c582838d92970a09f323
-Status: Downloaded newer image for hello-world:latest
+docker run hello-world
 
-Hello from Docker!
-This message shows that your installation appears to be working correctly.
-
-To generate this message, Docker took the following steps:
-    1. The Docker client contacted the Docker daemon.
-    2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
-    (amd64)
-    3. The Docker daemon created a new container from that image which runs the
-    executable that produces the output you are currently reading.
-    4. The Docker daemon streamed that output to the Docker client, which sent it
-    to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
-    $ docker run -it ubuntu bash
-
-Share images, automate workflows, and more with a free Docker ID:
-    https://hub.docker.com/
-
-For more examples and ideas, visit:
-    https://docs.docker.com/get-started/
+> Unable to find image 'hello-world:latest' locally
+> latest: Pulling from library/hello-world
+> 0e03bdcc26d7: Pull complete
+> Digest: sha256:e7c70bb24b462baa86c102610182e3efcb12a04854e8c582838d92970a09f323
+> Status: Downloaded newer image for hello-world:latest
+>
+> Hello from Docker!
+> …
 ```
 
-Сначала Docker CLI попытался найти указанный образ hello-world среди уже скачанных и не нашел его («Unable to find \<…\> locally»). Затем он обратился к реестру Docker Hub, который установлен по умолчанию, нашел, скачал и установил последнюю версию: «latest: Pulling from…». В итоге мы получили вывод в терминале сообщения «Hello from Docker!…».
+Сначала Docker CLI попытался найти указанный образ hello-world среди уже скачанных и не нашел его («Unable to find … locally»). Затем он обратился к реестру Docker Hub, который установлен по умолчанию, нашел, скачал и установил последнюю версию: «latest: Pulling from…». В итоге мы получили вывод в терминале сообщения «Hello from Docker!…».
 
 Если сейчас посмотреть список запущенных контейнеров с помощью команды:
 
 ```bash
-> docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+docker ps
+
+> CONTAINER ID  IMAGE  COMMAND  CREATED  STATUS  PORTS  NAMES
 ```
 
 Вы увидите, что список пуст (присутствуют только заголовки таблицы). Если запустить эту команду с определенным ключом `--all`, то мы получим список всех запущенных контейнеров и контейнеров, которые уже отработали, но не были удалены из списка (операция удаления производится вручную или при остановки службы Docker daemon):
 
 ```
-> docker ps --all
-CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS                      PORTS               NAMES
-93cb27f68163        hello-world         "/hello"            3 minutes ago       Exited (0) 3 minutes ago                       happy_goldberg
+docker ps --all
+
+> CONTAINER ID  IMAGE        COMMAND   CREATED        STATUS                   PORTS  NAMES
+> 93cb27f68163  hello-world  "/hello"  3 minutes ago  Exited (0) 3 minutes ago        happy_goldberg
 ```
 
 Приведу список основных команд со ссылками на оригинальную документацию, которыми вы будете пользоваться большую часть времени при использовании Docker:
@@ -180,13 +187,14 @@ CONTAINER ID        IMAGE                    COMMAND                  CREATED   
 Вернемся к нашей задаче. Самый простой способ воплотить ее в жизнь, найти готовый образ желаемой ОС в реестре и запустить. Для этого переходим на страницу [Docker Hub](https://hub.docker.com) и ищем необходимый нам образ (пусть это будет [образ с CentOS 8](https://hub.docker.com/_/centos)). Вы наверняка увидите подсказку с командой для установки данного образа, после выполнения которой вам будет выведена следующая информация:
 
 ```bash
-> docker pull centos
-Using default tag: latest
-latest: Pulling from library/centos
-3c72a8ed6814: Pull complete
-Digest: sha256:76d24f3ba3317fa945743bb3746fbaf3a0b752f10b10376960de01da70685fbd
-Status: Downloaded newer image for centos:latest
-docker.io/library/centos:latest
+docker pull centos
+
+> Using default tag: latest
+> latest: Pulling from library/centos
+> 3c72a8ed6814: Pull complete
+> Digest: sha256:76d24f3ba3317fa945743bb3746fbaf3a0b752f10b10376960de01da70685fbd
+> Status: Downloaded newer image for centos:latest
+> docker.io/library/centos:latest
 ```
 
 Любопытно, что образ чистой ОС занимает всего около 70 Мб, гораздо меньше, чем полноценная ОС Linux. Удивляться не надо, ведь в образе нет, например, ядра ОС.
@@ -197,28 +205,29 @@ docker.io/library/centos:latest
 
 Информация о том, какие слои должны присутствовать в образе (другими словами — «какое окружение»), хранится в специальном файле Dockerfile. На главной странице репозитория ссылка [latest, centos8, 8](https://github.com/CentOS/sig-cloud-instance-images/blob/12a4f1c0d78e257ce3d33fe89092eee07e6574da/docker/Dockerfile) в списке тегов (Supported tags and respective Dockerfile links) ведет на содержимое файла Dockerfile с указанием четырех слоев контейнера, чуть позже мы рассмотрим эти конфигурационные файлы подробнее. Для используемого нами образа это всего три слоя (базовый слой, слой операционный системы, запуск терминала), которые устанавливаются командами:
 
-```Docker
+```docker
 FROM scratch
 ADD centos-8-x86_64.tar.xz /
-LABEL org.label-schema.schema-version="1.0"     org.label-schema.name="CentOS Base Image"     org.label-schema.vendor="CentOS"     org.label-schema.license="GPLv2"     org.label-schema.build-date="20200809"
+LABEL org.label-schema.schema-version="1.0" org.label-schema.name="CentOS Base Image" org.label-schema.vendor="CentOS" org.label-schema.license="GPLv2" org.label-schema.build-date="20200809"
 CMD ["/bin/bash"]
 ```
 
-Используется базовая ОС для Docker. С помощью команды ADD добавляются файловая система образа интересующей нас ОС, затем устанавливаются именованные константы для контейнера командой LABEL (важный шаг для управления контейнерами), а на последнем шаге запускается терминал командой CMD. Кажется, пора запустить контейнер.
+Используется базовая ОС для Docker. С помощью команды `ADD` добавляются файловая система образа интересующей нас ОС, затем устанавливаются именованные константы для контейнера командой `LABEL` (важный шаг для управления контейнерами), а на последнем шаге запускается терминал командой `CMD`. Кажется, пора запустить контейнер.
 
 Давайте посмотрим список загруженных образов с помощью команды:
 
 ```bash
-> docker image ls
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-centos              latest              0d120b6ccaa8        3 months ago        215MB
-hello-world         latest              bf756fb1ae65        11 months ago       13.3kB
+docker image ls
+
+> REPOSITORY   TAG     IMAGE ID      CREATED       SIZE
+> centos       latest  0d120b6ccaa8  3 months ago  215MB
+> hello-world  latest  bf756fb1ae65  11 months ago 13.3kB
 ```
 
 Обратите внимание на то, что при распаковке размер образа увеличился почти в три раза (215MB против ~ 70MB). Запуск контейнера осуществляется командой:
 
 ```bash
-> docker run centos
+docker run centos
 ```
 
 Если вы выполните эту команду, то увидите, что на консоль ничего не вывелось. Почему? Вроде бы вы скачали правильный образ, вроде бы запустили… Помните, что вы запускаете какое-то приложение. После окончания работы этого приложения контейнер автоматически останавливается и выгружается из памяти. Так и получилось.
@@ -226,34 +235,32 @@ hello-world         latest              bf756fb1ae65        11 months ago       
 Как же быть, если нам нужно запустить терминал для работы с консолью контейнера? Необходимо выполнить команду со специальными ключами:
 
 ```bash
-> docker run -it --entrypoint bash centos
+docker run -it --entrypoint bash centos
 ```
 
 Ключ `--entrypoint` перезаписывает значение точки вхождения по умолчанию. Это приложение, которое запускается внутри контейнера после его сборки. Два ключа `-i` и `-t` служат для открытия стандартного потока ввода и использования одного терминала соответственно. С подробностями вы можете ознакомиться в [разделе документации](https://docs.docker.com/engine/reference/commandline/run/), относящейся к команде, [в статье на Хабре](https://habr.com/p/439978/), в Википедии: [Стандартные потоки](https://ru.wikipedia.org/wiki/Стандартные_потоки) и [TTY-абстракция](https://ru.wikipedia.org/wiki/TTY-абстракция).
 
 Чтобы выйти из терминала bash, как обычно, необходимо выполнить команду `exit`. Это приведет к остановке контейнера, поскольку программа терминала будет завершена.
 
-Взаимодействие с внешними хранилищами — папками базовой ОС, на которой запущен Docker, или с содержимым других контейнерами, — обеспечивается путем использование томов [Docker volumes](https://docs.docker.com/storage/volumes/). Тома монтируются в папки контейнера, которые можно задавать с помощью конфигурационных файлов или напрямую в терминале установкой определенных флагов.
+Взаимодействие с внешними хранилищами — папками базовой ОС, на которой запущен Docker, или с содержимым других контейнерами — обеспечивается путем использование томов [Docker volumes](https://docs.docker.com/storage/volumes/). Тома монтируются в папки контейнера, которые можно задавать с помощью конфигурационных файлов или напрямую в терминале установкой определенных флагов.
 
 Тома могут быть как самостоятельными ресурсами, недоступными для базовой ОС (обычный тип), так и связанными с папками базовой ОС (тип bind). Если используется независимый том, его необходимо предварительно создать и подключить к контейнеру. Для работы с томами используются следующие команды:
 
-```bash
-> docker volume create my_volume # Создание тома
-> docker volume ls # Просмотреть список всех томов
-> docker volume inspect my_volume # Информация о конкретном томе
-> docker volume rm my_volume # Удаление тома
-```
+- Создание тома: `docker volume create my_volume`
+- Cписок всех томов: `docker volume ls`
+- Информация о конкретном томе: `docker volume inspect my_volume`
+- Удаление тома: `docker volume rm my_volume`
 
 Когда вы создадите обычный том и просмотрите информацию о нем, вы увидите, в какой именно папке будет содержаться файл с содержимым тома в базовой ОС. Чтобы подключить том при запуске контейнера и иметь доступ к содержимому этого тома в определенной папке контейнера (например, /tmp/volume), достаточно выполнить команду `run` с параметром `--mount`:
 
 ```bash
-> docker run --mount 'source=my_volume,target=/tmp/volume' -it --entrypoint bash centos
+docker run --mount 'source=my_volume,target=/tmp/volume' -it --entrypoint bash centos
 ```
 
 Если к контейнеру необходимо подключить папку из базовой ОС, необходимо выполнить команду со следующими ключами:
 
 ```bash
-> docker run --mount 'type=bind,source=/tmp,target=/tmp/volume' -it --entrypoint bash centos
+docker run --mount 'type=bind,source=/tmp,target=/tmp/volume' -it --entrypoint bash centos
 ```
 
 Связывать подобным образом папки базовой ОС оказывается довольно удобно для работы приложений внутри контейнера. Вы можете разобраться с использованием томов подробнее [в документации](https://docs.docker.com/storage/) или кратко [в руководстве по работе с данными](https://habr.com/p/441574/).
@@ -266,38 +273,39 @@ hello-world         latest              bf756fb1ae65        11 months ago       
 
 Нам необходимо приготовить свой «слоеный пирог», как иногда метафорически называют образ в официальной документации. Мы уже знаем, что существует конфигурационный файл Dockerfile, в котором описываются все нужные нам слои с помощью специальных команд (инструкций). [В официальной документации](https://docs.docker.com/engine/reference/builder/) подробно описаны все инструкции. Можно также обратиться [к руководству по Dockerfile](https://habr.com/p/439980/). Инструкция в Dockerfile формируется по следующему принципу:
 
-```Docker
+```docker
 # Comment
 INSTRUCTION arguments
 ```
 
 Строка начинается с имени инструкции, а дальше указываются значения ее аргументов. [Посмотрите на Dockerfile](https://github.com/docker-library/postgres/blob/master/12/Dockerfile) из официального образа с установленной СУБД PostgreSQL от команды Docker. Вы увидите достаточно большой файл конфигурации (больше двух сотен строк!). Можно ли проще? Можно, если вы не претендуете на универсальность вашего решения. Давайте постепенно будем формировать файл конфигурации. В первую очередь нам необходимо определить базовый образ. Нам, например, понадобился образ CentOS 8, последней стабильной версии. В Dockerfile достаточно написать для этого всего лишь строчку:
 
-```Docker
+```docker
 FROM centos:latest
 ```
 
 Давайте попробуем сформировать и запустить его? Используем команду [docker build](https://docs.docker.com/engine/reference/commandline/build/). Если запустить ее в каталоге с Dockerfile с точкой после слова build, Docker CLI должен собрать новый образ. Переходим в отдельный каталог, создаем файл Dockerfile, записываем в него строчку и запускаем сборку. Достаточно выполнить следующие две команды в терминале:
 
 ```bash
-> touch ./Dockerfile && echo "FROM centos:latest" > ./Dockerfile && cat ./Dockerfile
-> docker build .
+touch ./Dockerfile && echo "FROM centos:latest" > ./Dockerfile && cat ./Dockerfile
+docker build .
 ```
 
 Если посмотрим список доступных образов, то увидим новую строчку списка:
 
 ```bash
-> docker image ls
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-<none>              <none>              183420543a45        3 months ago        215MB
-centos              latest              0d120b6ccaa8        3 months ago        215MB
-hello-world         latest              bf756fb1ae65        11 months ago       13.3kB
+docker image ls
+
+> REPOSITORY   TAG     IMAGE ID      CREATED        SIZE
+> <none>       <none>  183420543a45  3 months ago   215MB
+> centos       latest  0d120b6ccaa8  3 months ago   215MB
+> hello-world  latest  bf756fb1ae65  11 months ago  13.3kB
 ```
 
 Давайте двигаться дальше. Сначала запустим контейнер в режиме доступа к консоли, указав в качестве имени контейнера Image ID:
 
 ```bash
-> docker run -it --entrypoint bash 183420543a45
+docker run -it --entrypoint bash 183420543a45
 ```
 
 Имя контейнера можно было указать при его создании, и мы это обязательно сделаем, но чуть позже.
@@ -305,13 +313,13 @@ hello-world         latest              bf756fb1ae65        11 months ago       
 Разумеется, для сборки все команды нужно попробовать сначала а терминале ОС, а только потом в Docker. Надо помнить также, что настройки ОС и установленные приложения не сохранятся и будут утеряны после завершения работы контейнера. Нам необходимо установить PostgreSQL в ОС, что мы и сделаем [в соответствии с официальной документацией](https://www.postgresql.org/download/linux/redhat/). Используем команды для CentOS 8, поскольку в последней версии образа устанавливается именно эта версия ОС:
 
 ```bash
-$ rpm -Uvh https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-$ dnf install -y postgresql12-server --disablerepo=AppStream
+rpm -Uvh https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+dnf install -y postgresql12-server --disablerepo=AppStream
 ```
 
 Кажется, все успешно. Эти команды можно превратить в инструкции для Dockerfile следующим образом:
 
-```Docker
+```docker
 RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm; dnf install -y postgresql12-server --disablerepo=AppStream
 ```
 
@@ -320,9 +328,10 @@ RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/
 Теперь надо запустить установленную СУБД при старте уже собранного контейнера. Попробуем сделать через консоль контейнера. Для этого можно снова [воспользоваться инструкцией](https://www.postgresql.org/download/linux/redhat/):
 
 ```bash
-$ systemctl start postgresql-12.service
-System has not been booted with systemd as init system (PID 1). Can't operate.
-Failed to connect to bus: Host is down
+systemctl start postgresql-12.service
+
+> System has not been booted with systemd as init system (PID 1). Can’t operate.
+> Failed to connect to bus: Host is down
 ```
 
 Ошибка! Но почему? Мы имеем дело не с полноценной ОС, а с контейнером, который существует только как абстракция. В нашем случае проблема связана с двумя вещами: доступом к системным службам и журналу поведения этих служб базовой ОС.
@@ -334,82 +343,86 @@ Failed to connect to bus: Host is down
 Давайте отвлечемся на минуту, и еще добавим красивые имена для образа и контейнера. Чтобы каждый раз не смотреть значение Image ID (оно будет меняться при каждой сборке) установим имя образа и тег:
 
 ```bash
-> docker image rm -f 183420543a45
-> docker build -t psql:centos .
+docker image rm -f 183420543a45
+docker build -t psql:centos .
 ```
 
 Первая команда используется для того, чтобы удалить собранный на предыдущем шаге образ. Ключ `-f` мы используем, поскольку Docker без него не будет удалять образы, которые были запущены раньше. Попробуем запустить:
 
 ```bash
-> docker run -it psql:centos bash
+docker run -it psql:centos bash
 ```
 
 Все работает. Вы можете посмотреть на список всех запущенных контейнеров в другом окне терминала, если выполните следующую команду:
 
 ```bash
-> docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-f53b4f7223c2        psql:centos         "bash"              9 seconds ago       Up 8 seconds                            cool_curie
+docker ps
+
+> CONTAINER ID  IMAGE        COMMAND  CREATED        STATUS        PORTS  NAMES
+> f53b4f7223c2  psql:centos  "bash"   9 seconds ago  Up 8 seconds         cool_curie
 ```
 
 Значение `CONTAINER ID` не очень говорящее. Каждый раз смотреть его не удобно. Давайте добавим ключ с указанием имени контейнера, чтобы можно было легче им управлять. Для этого остановим наш контейнер и запустим его снова с именем:
 
 ```bash
-> docker stop f53b4f7223c2
-> docker run -it --name psql-centos-1 psql:centos bash
+docker stop f53b4f7223c2
+docker run -it --name psql-centos-1 psql:centos bash
 ```
 
 Теперь намного лучше:
 
 ```bash
-> docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-39954a216f6b        psql:centos         "bash"              8 seconds ago       Up 8 seconds                            psql-centos-1
+docker ps
+
+> CONTAINER ID  IMAGE        COMMAND  CREATED        STATUS        PORTS  NAMES
+> 39954a216f6b  psql:centos  "bash"   8 seconds ago  Up 8 seconds         psql-centos-1
 ```
 
 Если вы уже запускали контейнер с определенным именем, то в будущем Docker CLI под тем же именем вам не даст его запустить, даже если он уже был остановлен. Предварительно имя нужно удалить из списка с помощью команды:
 
 ```bash
-> docker rm psql-centos-1
-psql-centos-1
+docker rm psql-centos-1
+
+> psql-centos-1
 ```
 
 Посмотреть весь список, в котором будут отображены запущенные и остановленные контейнеры, можно с помощью команды:
 
 ```bash
-> docker ps -a
+docker ps -a
 ```
 
 Теперь вернемся к нашей задаче. Для запуска менеджера служб systemd необходимо запустить сначала специальную службу:
 
 ```bash
-> docker run -it --privileged --name psql-centos-1 psql:centos /sbin/init
+docker run -it --privileged --name psql-centos-1 psql:centos /sbin/init
 ```
 
 В другом окне терминала вы можете обратится к уже запущенному контейнеру и попасть в него с помощью команды:
 
 ```bash
-> docker exec -it psql-centos-1 /bin/bash
+docker exec -it psql-centos-1 /bin/bash
 ```
 
 Теперь можно управлять запуском служб. Выполнения команды `exit` для остановки контейнера вам теперь будет не достаточно. Чтобы остановить контейнер, вам нужно выполнить команду:
 
 ```bash
-> docker stop psql-centos-1
+docker stop psql-centos-1
 ```
 
 Попробуем запустить нашу службу сейчас:
 
 ```bash
-$ systemctl enable postgresql-12.service # Успешно
-$ systemctl start postgresql-12.service
-Job for postgresql-12.service failed because the control process exited with error code.
-See "systemctl status postgresql-12.service" and "journalctl -xe" for details.
+systemctl enable postgresql-12.service # Успешно
+systemctl start postgresql-12.service
+
+> Job for postgresql-12.service failed because the control process exited with error code.
+> See "systemctl status postgresql-12.service" and "journalctl -xe" for details.
 ```
 
 Снова неудача. В этот раз нет принципиальных ошибок, чтобы запустить нашу СУБД, осталось только настроить язык (local). Для этого нужно подправить Dockerfile следующим образом:
 
-```Docker
+```docker
 FROM centos:latest
 RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm && dnf install -y postgresql12-server --disablerepo=AppStream; dnf install -y glibc-locale-source glibc-langpack-en; dnf clean all
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8
@@ -418,22 +431,22 @@ RUN localedef -i en_US -f UTF-8 en_US.UTF-8
 Теперь нам нужно инициализировать СУБД и запустить ее как службу. Хотя с помощью Dockerfile сделать это можно, мы для простоты будем делать это вручную в терминале. Если выполнить команду внутри контейнера, то все получится:
 
 ```bash
-$ /usr/pgsql-12/bin/postgresql-12-setup initdb && systemctl start postgresql-12 && su postgres
+/usr/pgsql-12/bin/postgresql-12-setup initdb && systemctl start postgresql-12 && su postgres
 ```
 
 Вы сможете теперь работать с СУБД, если наберете команду:
 
 ```bash
-$ psql
+psql
 ```
 
 Если добавить команду запуска сервера СУБД в качестве инструкции типа RUN в Dockerfile, то вы получите ошибку при сборке образа на этапе инициализации СУБД. Есть пути решения этой проблемы, но говорить о них в рамках данной статьи будет несколько преждевременно.
 
-Не забывайте, что в рабочих задачах установка привилегированного доступа к службе systemd базовой ОС очень опасна! Если ваша задача является широко распространенной, то вы должны озаботиться поиском готового решения.
+Не забывайте, что в рабочих задачах установка привилегированного доступа к службе `systemd` базовой ОС очень опасна! Если ваша задача является широко распространенной, то вы должны озаботиться поиском готового решения.
 
 ### Движок сайта на PHP
 
-Мы уже научились создавать базовые конфигурации для контейнеров и использовать контейнеры в двух режимах. Давайте теперь поработаем со стандартной задачей для веб-программиста или контент-менеджера, — создание сайта на популярном PHP-движке. [Тройка наиболее популярных движков в мире на лето 2020 года](https://www.cloudways.com/blog/best-php-cms/): Wordpress, Magento, Drupal. Наиболее универсальным, мощным и относительно безопасным движком с хорошим тулингом (системой инструментов для разработчиков) является Drupal, он близок моему сердцу. Остановимся на нем, хотя чаще всего задача стоит в том, чтобы поставить и использовать Wordpress (Вы легко это сможете сделать в качестве упражнения по аналогии).
+Мы уже научились создавать базовые конфигурации для контейнеров и использовать контейнеры в двух режимах. Давайте теперь поработаем со стандартной задачей для веб-программиста или контент-менеджера — создание сайта на популярном PHP-движке. [Тройка наиболее популярных движков в мире на лето 2020 года](https://www.cloudways.com/blog/best-php-cms/): Wordpress, Magento, Drupal. Наиболее универсальным, мощным и относительно безопасным движком с хорошим тулингом (системой инструментов для разработчиков) является Drupal, он близок моему сердцу. Остановимся на нем, хотя чаще всего задача стоит в том, чтобы поставить и использовать Wordpress (Вы легко это сможете сделать в качестве упражнения по аналогии).
 
 Попробуем найти подходящий образ на Docker Hub. Вы, скорее всего, наткнетесь [на официальный репозиторий](https://hub.docker.com/_/drupal). Отмечу только, что достаточно хорошими образами для Wordpress и Magento, на мой взгляд, являются соответственно [wordpress](https://hub.docker.com/_/wordpress) и [magento-cloud-docker-php](https://hub.docker.com/r/magento/magento-cloud-docker-php).
 
@@ -446,7 +459,7 @@ $ psql
 Нам необходимо определенным образом сконфигурировать и запустить два образа Docker совместно: в одном будет находиться CMS Drupal, а в другом — СУБД MySQL. Если перейти на страницу образа drupal, то вы сможете в описании увидеть, какой именно репозиторий рекомендуется использовать для работы Drupal с СУБД MySQL:
 
 ```bash
-> docker run -d --name some-mysql --network some-network \
+docker run -d --name some-mysql --network some-network \
     -e MYSQL_DATABASE=drupal \
     -e MYSQL_USER=user \
     -e MYSQL_PASSWORD=password \
@@ -486,19 +499,17 @@ services:
 Если файл docker-compose.yml уже создан и вы находитесь в этой же папке, для запуска контейнеров достаточно выполнить команду:
 
 ```bash
-> docker-compose up -d
+docker-compose up -d
 ```
 
 Ключ -d нужен для установки режима работы контейнеров в фоновом режиме. Если вы теперь перейдете на ссылке `http://localhost:8080` в браузере базовой ОС, вы сможете работать с сайтом. При настройке Drupal не забудьте, что СУБД работает на хосте mysql (имя сервиса в docker-compose.yaml). После остановки контейнеров все данные сайта потеряются, если предварительно не создать тома для хранения данных. Приведу также две важные команды для работы с Docker Compose:
 
-```bash
-> docker-compose ps # Просмотр списка запущенных контейнеров
-> docker-compose down # Остановка всех контейнеров, которые были "подняты"
-```
+- Просмотр списка запущенных контейнеров: `docker-compose ps`
+- Остановка всех контейнеров, которые были подняты: `docker-compose down`
 
 Вы только что запустили рабочий сайт на последней версии Drupal. Перейдем теперь к следующей группе задач.
 
-### Фронтенд приложение
+### Фронтенд-приложение
 
 Как мы можем использовать Docker для работы с фреймворками Angular, React, Vue и подобными? Чтобы ответить на этот вопрос, нужно разделить этапы разработки и внедрения. На первом этапе с помощью Docker вы сможете обеспечить комфорт для себя (DX, developer experience), на втором — для администраторов или специалистов в области CI/CD.
 
@@ -520,29 +531,29 @@ services:
 
 Платформа Docker Hub позволяет использовать триггеры двух типов, которые служат основанием для начала сборки новой версии образа: коммиты с заданными тегами и коммиты в заранее определенных ветках. Я выбрал для простоты понимания второй вариант — на основе веток. Отправка коммита в определенной ветке означает автоматическую сборку образа в репозитории. Настраиваются связи между GitHub и Docker Hub на вкладке Builds репозитория на Docker Hub.
 
-Чтобы загрузка и установка образов не занимали много времени, а сами образы не занимали много места на диске, в качестве базовой ОС на этот раз мы будем использовать Linux Alpine, — довольно популярное решение. Опишу процесс создания четырех образов. В дальнейшем я буду развивать репозиторий, поэтому вы можете увидеть уже больше образов в нем.
+Чтобы загрузка и установка образов не занимали много времени, а сами образы не занимали много места на диске, в качестве базовой ОС на этот раз мы будем использовать Linux Alpine — довольно популярное решение. Опишу процесс создания четырех образов. В дальнейшем я буду развивать репозиторий, поэтому вы можете увидеть уже больше образов в нем.
 
 Первый образ будет базовым, в нем будет только Node.js и пакетный менеджер npm. Второй образ будет являться базовым проектом с системой сборки Webpack, третий будет содержать vue-cli для разработки сайтов на VueJS, а четвертый позволит собирать любые проекты на Node.js и запускать их в изолированном окружении на веб-сервере nginx. В этот раз я не буду проводить вас по всей процедуре. Думаю, что достаточно будет только привести соответствующий образу Dockerfile.
 
 Первый образ будет содержать только [базовый образ Node.js](https://hub.docker.com/_/node). В дальнейшем вы сможете его приспособить под свои задачи, например, добавить утилиты для тестирования веб-приложений, системы мониторинга и тому подобные инструменты. Итак, вот самый базовый Dockerfile:
 
-```Docker
+```docker
 FROM node:lts-alpine
 ```
 
 Одной инструкции вполне достаточно для поставленной задачи. Теперь попробуем решить более сложную задачу — установить базовый проект Node.js. Создаем новую ветку в репозитории, создаем новый проект Node.js и собираем его:
 
 ```bash
-> git branch webpack
-> git checkout webpack
-> npm init
-> npm install
-> vi Dockerfile
+git branch webpack
+git checkout webpack
+npm init
+npm install
+vi Dockerfile
 ```
 
 После того, как мы добавили webpack, Dockerfile будет содержать дополнительные инструкции:
 
-```Docker
+```docker
 FROM node:lts-alpine
 WORKDIR /app
 COPY package*.json ./
@@ -552,33 +563,33 @@ RUN npm install; npm install webpack webpack-cli --save-dev
 Пробуем собрать образ. Если все успешно, то добавляем нужные файлы, делаем коммит и отправляем на GitHub (новый образ соберется в репозитории на Docker Hub автоматически, если вы все предварительно настроили):
 
 ```bash
-> docker build .
-> git add .
-> git commit -m 'Add basic image for webpack project'
-> git push origin webpack
+docker build .
+git add .
+git commit -m 'Add basic image for webpack project'
+git push origin webpack
 ```
 
 Перейдем к следующей задаче:
 
 ```bash
-> git branch vue
-> git checkout vue
+git branch vue
+git checkout vue
 ```
 
 Чтобы создать проект на Vue, можно было бы просто добавить его в package.json. Но мы пойдем другим путем, уберем webpack и заменим его утилитой vue-cli, удалив предварительно все лишние файлы:
 
 ```bash
-> rm *.json
-> vue create .
-> rm -r node_modules
-> git add .
-> git commit -m 'Install Vue 3'
-> git push origin vue
+rm *.json
+vue create .
+rm -r node_modules
+git add .
+git commit -m 'Install Vue 3'
+git push origin vue
 ```
 
 Необходимо также поправить Dockerfile:
 
-```Docker
+```docker
 FROM node:lts-alpine
 WORKDIR /app
 COPY package*.json ./
@@ -586,9 +597,6 @@ COPY babel.config.js ./
 COPY README.md ./
 COPY src/ ./src
 COPY public/ ./public
-
-# Можно заменить одной командой, если Вы добавите еще один файл в репозиторий
-# COPY . .
 ```
 
 Мы сделали не оптимальный Dockerfile, но зато очень понятный. Для повышения оптимальности можно скопировать все содержимое папки в папку проекта внутри контейнера одной строчкой `COPY . .`, но тогда вам нужно будет создать файл .dockerignore с единственной строкой `node_modules` (по аналогии с .gitignore). Если у вас уже настроено правило на Docker Hub, то после коммита и отправки на GitHub все опять автоматически соберется.
@@ -596,14 +604,14 @@ COPY public/ ./public
 Перейдем к последнему образу, который будет отвечать за сборку готового сайта на Vue и запуск на веб-сервере nginx. Предлагаю использовать веб-сервер nginx для статических файлов готовой сборки. Снова создаем соответствующую ветку в репозитории и, перейдя к ней, редактируем Dockerfile:
 
 ```bash
-> git branch vue-prod
-> git checkout vue-prod
-> vi Dockerfile
+git branch vue-prod
+git checkout vue-prod
+vi Dockerfile
 ```
 
 Я возьму [готовый Dockerfile из руководства Vue](https://ru.vuejs.org/v2/cookbook/dockerize-vuejs-app.html), в нем все более или менее удачно с точки зрения универсального решения:
 
-```Docker
+```docker
 # build stage
 FROM node:lts-alpine as build-stage
 WORKDIR /app
@@ -626,14 +634,14 @@ CMD ["nginx", "-g", "daemon off;"]
 Пробуем собрать образ, и, если все успешно, заливаем его на GitHub:
 
 ```bash
-> git add .
-> git commit -m 'Add production building for VueJS app'
-> git push origin vue-prod
+git add .
+git commit -m 'Add production building for VueJS app'
+git push origin vue-prod
 ```
 
-### Фул-стэк приложение
+### Фулстек-приложение
 
-Приведу пару полезных примеров для фул-стэк приложений, в которых используется несколько контейнеров, работающих совместно. Сначала посмотрим работу с MERN-приложением (MongoDB, Express, React, Node), которое у вас, предположим, уже написано — [подробнее об этом](https://dev.to/sujaykundu777/utilizing-the-power-of-docker-while-building-mern-apps-using-mern-docker-4olb).
+Приведу пару полезных примеров для фулстек-приложений, в которых используется несколько контейнеров, работающих совместно. Сначала посмотрим работу с MERN-приложением (MongoDB, Express, React, Node), которое у вас, предположим, уже написано — [подробнее об этом](https://dev.to/sujaykundu777/utilizing-the-power-of-docker-while-building-mern-apps-using-mern-docker-4olb).
 
 Схема работы приложения описана и проиллюстрирована в том же репозитории. Предлагаю пройтись по стандартным конфигурационным файлам .env, Dockerfile, docker-compose.yml, которые нужно будет добавить в проект:
 
@@ -647,7 +655,7 @@ MONGO_PORT=27017
 
 Dockerfile:
 
-```Docker
+```docker
 # Dockerfile for Node Express Backend api (development)
 
 FROM node:lts-alpine
@@ -793,7 +801,7 @@ volumes:
 
 ### Работа с кодом внутри контейнера
 
-До сих пор, мы не говорили о написании кода внутри контейнера. Вы можете использовать классическую связку vim с плагинами + tmux. Вы можете подключится к контейнеру по SSH почти из любой популярной среды разработки. Но не использовать или хотя бы не попробовать использовать возможности Visual Studio Code (VSCode) будет преступлением.
+До сих пор, мы не говорили о написании кода внутри контейнера. Вы можете использовать классическую связку vim с плагинами + tmux. Вы можете подключится к контейнеру по SSH почти из любой популярной среды разработки. Но не использовать или хотя бы не попробовать использовать возможности Visual Studio Code (VS Code) будет преступлением.
 
 Для того, чтобы работать с кодом красиво, можно и даже нужно использовать Visual Studio Code Remote, что позволяет подключиться к созданному контейнеру и работать с ним в терминальном режиме.
 
@@ -808,15 +816,15 @@ volumes:
 }
 ```
 
-Это заставит VSCode собрать все контейнеры, указанные в файле для Docker Compose и открыть папку /app, которая находится внутри контейнера server.
+Это заставит VS Code собрать все контейнеры, указанные в файле для Docker Compose и открыть папку /app, которая находится внутри контейнера server.
 
-В VSCode можно попытаться открыть папку проекта, и среда сама предложит открыть снова ее, но уже внутри контейнера. А можно сделать это вручную, нажав клавишу F1 или сочетание клавиш Ctrl + P (Cmd + P для macOS) и выбрав команду:
+В VS Code можно попытаться открыть папку проекта, и среда сама предложит открыть снова ее, но уже внутри контейнера. А можно сделать это вручную, нажав клавишу F1 или сочетание клавиш Ctrl + P (Cmd + P для macOS) и выбрав команду:
 
 ```bash
 > Remote-Containers: Open Workspace in Container.
 ```
 
-Вы также можете указать те расширения, которые нужно поставить для данной рабочей сессии VSCode. После работы все эти расширения удаляться из редактора. Это очень удобно. Мне это позволяет держать в VSCode всего десять (!) расширений, которые будут востребованы в любом проекте, и никаких расширений для конкретного языка или фреймворка. Чистота и порядок!
+Вы также можете указать те расширения, которые нужно поставить для данной рабочей сессии VS Code. После работы все эти расширения удаляться из редактора. Это очень удобно. Мне это позволяет держать в VS Code всего десять (!) расширений, которые будут востребованы в любом проекте, и никаких расширений для конкретного языка или фреймворка. Чистота и порядок!
 
 В списке литературы вы сможете познакомится с [репозиторием](https://github.com/igsekor/docker-seeds) конфигурационных файлов для разных языков и фреймворков, на которых я в основном и работаю. Этот репозиторий обновляется по мере необходимости.
 
@@ -835,20 +843,18 @@ volumes:
 Цифра в конце строки обозначает номер монитора, на который будет выведен графический интерфейс приложения (0 используется для обозначения главного монитора). Для macOS и Windows вы можете воспользоваться графическим интерфейсом вашего сервера. Удаленное подключение для LInux можно разрешить с помощью команды:
 
 ```bash
-> xhosts +
+xhosts +
 ```
 
 Например, вы так можете запустить Gimp одной командой:
 
-```bash
-> docker run --rm -ti -e DISPLAY=docker.for.mac.host.internal:0 jamesnetherton/gimp # macOS
-> docker run --rm -ti -e DISPLAY=host.docker.internal:0 jamesnetherton/gimp # Windows
-> docker run --rm -ti --net=host -e DISPLAY=:0 jamesnetherton/gimp # Linux
-```
+- macOS: `docker run --rm -ti -e DISPLAY=docker.for.mac.host.internal:0 jamesnetherton/gimp`
+- Windows: `docker run --rm -ti -e DISPLAY=host.docker.internal:0 jamesnetherton/gimp`
+- Linux: `docker run --rm -ti --net=host -e DISPLAY=:0 jamesnetherton/gimp`
 
 Для запуска Eclipse нужно в конце дописать `psharkey/eclipse` вместо `jamesnetherton/gimp`, а чтобы запустить Firefox — `jess/firefox`. В конце строки вы указываете имя нужного образа, который будет скачан с Docker Hub? Посмотрите, как был собран один из них, и вы будете точно знать, как запустить необходимое вам приложение с графическим интерфейсом.
 
-### Безопасность Docker
+## Безопасность Docker
 
 Предлагаю обсудить еще одну важную тему — безопасность. Рассмотрим четыре аспекта:
 
@@ -857,23 +863,23 @@ volumes:
 3. Безопасные образы;
 4. Хранение секретной информации.
 
-#### Безопасность вашей ОС
+### Безопасность вашей ОС
 
 Что мешает ОС быть в безопасности? Конечно то, что вы вынуждены устанавливать кучу разнообразного софта, в том числе и экспериментального. Это могут быть приложения с графическим интерфейсом или сугубо консольные приложения. Часто вам нужно устанавливать JVM или что-то подобное. Каждая новая программа несет в себе дырки, через которые можно что-нибудь, да сделать. Docker позволяет практически избавить вас от необходимости установки этого груза. Да и работать с коллегами будет намного проще.
 
-#### Управление доступом на этапе запуска приложения в контейнере
+### Доступ при запуске приложения
 
 Запуск контейнера происходит в отельном окружении, изолированном от ОС и других контейнеров. Но есть определенные трюки, которые позволят обеспечить вам еще большую изоляцию. В документации к Docker есть замечательное [руководство](https://docs.docker.com/engine/security/userns-remap/), которое точно стоит почитать. Перечислю самые важные советы, с моей точки зрения.
 
 Во-первых, необходимо запуск приложений внутри контейнера осуществлять от имени какого-то пользователя. По умолчанию, приложение запускается от имени root. Осуществить это довольно просто, достаточно добавить параметр -u:
 
 ```bash
-> docker run -u user image
+docker run -u user image
 ```
 
 Вы также можете добавить эту настройку в Dockerfile:
 
-```Docker
+```docker
 FROM alpine:latest
 RUN apk update && apk add --no-cache git
 USER 1000
@@ -884,22 +890,22 @@ USER 1000
 В-третьих, необходимо управлять ресурсами вашей ОС, которые будут доступны для запуска контейнеров. Если вы не будете ограничивать эти ресурсы, Docker просто забьет всю оперативную память, что очень смахивает на DDOS атаку прямо у вас на компьютере. Необходимо также ограничивать и использование процессора. В Windows и macOS вы можете посмотреть потребление ресурсов системы с помощью Docker Desktop. Это можно сделать и через консоль командой, доступной уже на всех ОС:
 
 ```bash
-> docker stats
+docker stats
 ```
 
 Об оптимальных настройках вы можете подробнее почитать в официальной [документации](https://docs.docker.com/config/containers/resource_constraints/).
 
-#### Безопасные образы
+### Безопасные образы
 
 Во время работы вы часто будете использовать образы из разных реестров. Будьте бдительны! Использовать образы необходимо с большим количеством скачиваний, высоким рейтингом при большом количестве отзывов, рекомендованные компанией (официальные образы) или группой, которой вы доверяете. Загружая неизвестный образ, вы получаете кота в мешке. В любом случае внимательно смотрите на конфигурационные файлы и базовые образы. Желательно также использовать подписанные образы. Для того чтобы уберечь себя от загрузки «неправильных» образов, необходимо выполнить команду в терминале:
 
 ```bash
-> export DOCKER_CONTENT_TRUST=1
+export DOCKER_CONTENT_TRUST=1
 ```
 
 Прочитать подробнее про эту систему можно [в документации](https://docs.docker.com/engine/security/trust/).
 
-#### Хранение секретной информации
+### Хранение секретной информации
 
 Чтобы учетные данные аккаунтов, сертификаты, секретные ключи доступа, имена ресурсов и любая другая конфиденциальная информация оставались в тайне от других, необходимо следовать двум правилам:
 
