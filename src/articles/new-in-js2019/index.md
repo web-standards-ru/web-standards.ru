@@ -206,7 +206,7 @@ Babel поддерживает экспериментальные возможн
 
 Хотите знать больше о JavaScript? Посетите некоторые из этих полезных ресурсов.
 
-- [Learn JavaScript in 2019!](https://developer.okta.com/blog/2018/12/19/learn-javascript-in-2019)-
+- [Learn JavaScript in 2019!](https://developer.okta.com/blog/2018/12/19/learn-javascript-in-2019)
 - [The History (and Future) of Asynchronous JavaScript](https://developer.okta.com/blog/2019/01/16/history-and-future-of-async-javascript)
 - [Build a Secure Node.js Application with JavaScript Async Await Using Hapi](https://scotch.io/tutorials/build-a-secure-nodejs-application-with-javascript-async-await-using-hapi)
 - [Use TypeScript to Build a Node API with Express](https://developer.okta.com/blog/2018/11/15/node-express-typescript)

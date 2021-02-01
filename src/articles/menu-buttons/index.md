@@ -229,7 +229,7 @@ var navButton = document.querySelector('nav button'); navButton.addEventListener
 
 ## ARIA-controls
 
-Как я уже писал в [«Aria-controls Is Poop»](https://www.heydonworks.com/article/aria-controls-is-poop), атрибут `aria-controls`, который помогает пользователям скринридеров при переходе от контролирующего элемента к контролируемому, поддерживается только в JAWS. Так что на него нельзя положиться.
+Как я уже писал в [«Aria-controls Is Poop»](https://web.archive.org/web/20200924080848/https://heydonworks.com/article/aria-controls-is-poop/), атрибут `aria-controls`, который помогает пользователям скринридеров при переходе от контролирующего элемента к контролируемому, поддерживается только в JAWS. Так что на него нельзя положиться.
 
 Без хорошего метода перемещения между элементами, вам нужно убедиться в том, что одно из следующего верно:
 

@@ -7,6 +7,7 @@
         'picture title title'
         'picture date author';
     grid-gap: 14px 16px;
+    padding: 0 16px;
 }
 
 @media (min-width: 800px) {
@@ -45,7 +46,7 @@
     margin: 0;
     font-weight: normal;
     font-size: 21px;
-    font-family: 'RF Dewi', sans-serif;
+    font-family: 'Dewi', sans-serif;
     line-height: 1.2;
 }
 
@@ -152,7 +153,6 @@
 .article-card--featured {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 16px;
 }
 
 .article-card__hero-image--featured {
