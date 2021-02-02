@@ -125,6 +125,11 @@
     list-style: none;
 }
 
+.content li ul,
+.content li ol {
+    margin-bottom: 0;
+}
+
 @media (min-width: 1240px) {
     .content ol,
     .content ul {
