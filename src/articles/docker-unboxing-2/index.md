@@ -10,15 +10,15 @@ tags:
     - js
 ---
 
-В [предыдущей части](https://web-standards.ru/articles/docker-unboxing-1) были описаны технологии виртуализации, основная терминология Docker и базовый пример использования. Во второй части описываются примеры использования Docker на практике.
+[В первой части](/articles/docker-unboxing-1) были описаны технологии виртуализации, основная терминология Docker и базовый пример использования. В этой части мы рассмотрим примеры использования Docker на практике.
 
-Навигация по второй части:
+## Навигация
 
-- Использование Docker
-    - Работа с базами данных
-    - Движок сайта на PHP
-    - Фронтенд-приложение
-    - Фулстек-приложение
+- [Использование Docker](#section-2)
+    - [Работа с базами данных](#section-3)
+    - [Движок сайта на PHP](#section-4)
+    - [Фронтенд-приложение](#section-5)
+    - [Фулстек-приложение](#section-6)
 
 ## Использование Docker
 
@@ -290,11 +290,11 @@ docker-compose up -d
 
 Репозиторий может быть либо публичным, либо частным (в базовом бесплатном пакете услуг допускается только один частный репозиторий). Кстати, вы также можете найти и другие реестры от крупных компаний:
 
-- [Google Container Registry](https://cloud.google.com/container-registry/?utm_source=google&utm_medium=cpc&utm_campaign=emea-ru-all-ru-dr-bkws-all-all-trial-e-gcp-1009139&utm_content=text-ad-none-any-DEV_c-CRE_253514160436-ADGP_Hybrid%20%7C%20AW%20SEM%20%7C%20BKWS%20~%20EXA_1%3A1_RU_RU_Compute_Container%20Registry_google%20cloud%20docker-KWID_43700053282389317-aud-606988878374%3Akwd-218322699127-userloc_1012077&utm_term=KW_google%20cloud%20docker-NET_g-PLAC_&&gclid=CjwKCAiAn7L-BRBbEiwAl9UtkIHHDlVZaoeHHBqxFovaJcgbZZxTmf_A-yEe4j2RljuInIAOHAdwPhoCHrQQAvD_BwE)
+- [Google Container Registry](https://cloud.google.com/container-registry/)
 - [Amazon Elastic Container Registry](https://aws.amazon.com/ru/ecr/)
 - [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry)
-- [DigitalOcean Container Registry](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwivmIXPpLntAhVsl4sKHT2CB_sQFjAAegQIAhAC&url=https%3A%2F%2Fwww.digitalocean.com%2Fproducts%2Fcontainer-registry%2F&usg=AOvVaw2UZxBK_bGoFT0Q3guyzasQ)
-- [IBM Cloud Container Registry](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiO8Lv1pLntAhWL3hgKHYpFCgIYABAAGgJsZQ&ohost=www.google.com&cid=CAESQeD2rpwEp1fMwFsAdxl2bBHdpi1ixzVFB9Ztyj5LArCkvMIz3ei__d8ZiY7pyWM_W7C1jPKND3bLUeQVCaqyLZz4&sig=AOD64_28zcNSrYI29DPMcH_8UqoVd_5Saw&q&adurl&ved=2ahUKEwi8xbH1pLntAhWJw4sKHQEMAGEQ0Qx6BAgPEAE)
+- [DigitalOcean Container Registry](https://www.digitalocean.com/products/container-registry/)
+- [IBM Cloud Container Registry](https://www.ibm.com/cloud/container-registry)
 
 Я подготовил [простой репозиторий в реестре](https://hub.docker.com/repository/docker/igsekor/node) для разработки на Node.js. Я также связал этот репозиторий [с репозиторием на GitHub](https://github.com/igsekor/docker-node), чтобы процесс сборки новых образов происходил в автоматическом режиме после отправки очередного коммита.
 
@@ -568,4 +568,6 @@ volumes:
 
 Автор предлагает создать три контейнера: для веб-сервера, для СУБД и для Flask. Обратите внимание на создание внутренней сети. Думаю, вы вполне разберетесь с конфигурацией.
 
-Мы можем использовать Docker и для организации собственных рабочих процессов, об этом написано в [третьей части](https://web-standards.ru/articles/docker-unboxing-3).
+* * *
+
+Мы можем использовать Docker и для организации собственных рабочих процессов, поговорим об этом [в третьей части](/articles/docker-unboxing-3).
