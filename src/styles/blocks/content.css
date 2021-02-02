@@ -436,3 +436,25 @@
 .content tr > * + * {
     padding-left: 16px;
 }
+
+/* Rule */
+
+.content hr {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: var(--color-grey-medium);
+    font-size: 30px;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 1240px) {
+    .content hr {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}
+
+.content hr::before {
+    content: '* * *';
+}
