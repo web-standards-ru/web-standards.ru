@@ -89,6 +89,10 @@
     border-bottom: 1px solid var(--color-grey-lighter);
 }
 
+.page--dark-mode .links__section:not(:last-child) {
+    border-color: var(--color-dark-divider);
+}
+
 .links__definition {
     flex: 1 1 auto;
 }
