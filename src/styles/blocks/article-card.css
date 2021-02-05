@@ -7,6 +7,7 @@
         'picture title title'
         'picture date author';
     grid-gap: 14px 16px;
+    padding: 0 16px;
 }
 
 @media (min-width: 800px) {
@@ -164,7 +165,6 @@
 .article-card--featured {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 16px;
 }
 
 .article-card__hero-image--featured {

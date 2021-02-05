@@ -1,7 +1,7 @@
 /* Main */
 
 .main {
-    padding: 16px 8px 37px;
+    /* padding: 16px 8px 37px; */
     background-color: white;
 }
 
@@ -15,12 +15,6 @@
 
 .main__conference-link {
     margin-top: 40px;
-}
-
-@media (min-width: 769px) {
-    .main {
-        padding-top: 64px;
-    }
 }
 
 @media (min-width: 1024px) {

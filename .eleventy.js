@@ -126,6 +126,10 @@ module.exports = function(config) {
         });
     });
 
+    config.addFilter('addLoadingLazy', (content) => {
+        content.replace(/<img(?!.*loading)/g, '<img loading="lazy"');
+    });
+
     config.addFilter('mapToYears', (articlesList) => {
         const articlesByYear = {};
         articlesList.forEach((article) => {

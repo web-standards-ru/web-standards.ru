@@ -292,6 +292,7 @@
 .article__creators {
     max-width: 700px;
     margin: 0 auto 48px;
+    padding: 0 16px;
 }
 
 @media (min-width: 1240px) {
@@ -305,6 +306,10 @@
 
 .article__collaborators {
     margin: 0;
+}
+
+.article__content {
+    padding: 0 16px;
 }
 
 @media (min-width: 1240px) {

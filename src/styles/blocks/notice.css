@@ -1,7 +1,7 @@
 /* Notice */
 
 .notice {
-    margin: 40px 0 19px;
+    margin: 48px 0;
     text-align: center;
 }
 
@@ -11,9 +11,9 @@
     }
 }
 
-@media (min-width: 630px) {
+@media (min-width: 1008px) {
     .notice {
-        margin: 70px 0 33px;
+        margin: 56px 0;
     }
 }
 
@@ -25,7 +25,6 @@
 
 .notice__link {
     display: inline-block;
-    padding-top: 39px;
     color: black;
     font-size: 24px;
     letter-spacing: -0.02em;
