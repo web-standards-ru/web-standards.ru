@@ -36,6 +36,10 @@
         stroke: black;
     }
 
+    .page--dark-mode .menu__icon {
+        stroke: var(--color-dark-text-header);
+    }
+
     .menu__icon:hover {
         stroke: var(--color-special-neutral);
     }
@@ -68,6 +72,10 @@
         padding-bottom: 26px;
         padding-left: 64px;
         background-color: white;
+    }
+
+    .page--dark-mode .menu__list {
+        background-color: var(--color-dark-background);
     }
 
     .menu__list--open {
@@ -133,8 +141,16 @@
     text-decoration: none;
 }
 
+.page--dark-mode .menu__link--current {
+    color: var(--color-dark-text-header);
+}
+
 .menu__link--inactive {
     color: var(--color-grey-medium);
+}
+
+.page--dark-mode .menu__link--inactive {
+    color: var(--color-dark-text-secondary);
 }
 
 .menu__link--patreon {

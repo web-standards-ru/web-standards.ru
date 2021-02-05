@@ -9,7 +9,7 @@
 }
 
 .page--dark-mode .content {
-    color: var(--color-dark-text-primary);
+    color: var(--color-dark-text-content);
 }
 
 @media (min-width: 1240px) {
@@ -31,6 +31,15 @@
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+.page--dark-mode .content h2,
+.page--dark-mode .content h3 {
+    color: var(--color-dark-text-primary);
+}
+
+.page--dark-mode .content strong {
+    color: var(--color-dark-text-primary);
 }
 
 @media (min-width: 600px) {
@@ -242,6 +251,10 @@
     padding-left: 14px;
     color: black;
     font-size: 18px;
+}
+
+.page--dark-mode .content blockquote {
+    color: var(--color-dark-text-content);
 }
 
 @media (min-width: 600px) {
