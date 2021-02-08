@@ -100,6 +100,7 @@
     .menu--index .menu__list {
         display: flex;
         line-height: 1.5;
+        column-gap: normal;
     }
 }
 
@@ -111,6 +112,10 @@
 }
 
 @media (min-width: 736px) {
+    .menu--index .menu__item:not(:last-of-type) {
+        margin-right: 8px;
+    }
+
     .menu--index .menu__item:last-of-type {
         margin-left: auto;
     }
