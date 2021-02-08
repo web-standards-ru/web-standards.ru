@@ -8,8 +8,6 @@ layout: article.njk
 tags:
     - article
     - js
-permalink: false
-eleventyExcludeFromCollections: true
 ---
 
 [В первой части](https://web-standards.ru/articles/docker-unboxing-1/) мы обсудили технологии виртуализации, основную терминологию Docker и рассмотрели базовые примеры использования. В этой части мы рассмотрим примеры использования Docker на практике.
