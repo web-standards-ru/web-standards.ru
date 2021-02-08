@@ -125,6 +125,11 @@
     list-style: none;
 }
 
+.content li ul,
+.content li ol {
+    margin-bottom: 0;
+}
+
 @media (min-width: 1240px) {
     .content ol,
     .content ul {
@@ -276,6 +281,8 @@
 /* Code */
 
 .content code {
+    padding-right: 0.3em;
+    padding-left: 0.3em;
     font-family: 'Rostin', monospace;
     word-wrap: break-word;
 }
@@ -428,4 +435,26 @@
 
 .content tr > * + * {
     padding-left: 16px;
+}
+
+/* Rule */
+
+.content hr {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: var(--color-grey-medium);
+    font-size: 30px;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 1240px) {
+    .content hr {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}
+
+.content hr::before {
+    content: '* * *';
 }
