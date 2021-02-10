@@ -8,8 +8,6 @@ layout: article.njk
 tags:
     - article
     - js
-permalink: false
-eleventyExcludeFromCollections: true
 ---
 
 [Во второй части](https://web-standards.ru/articles/docker-unboxing-2/) мы рассмотрели практические примеры упаковки приложений. В этой заключительной части мы рассмотрим способы использования Docker в процессе самой разработки.
