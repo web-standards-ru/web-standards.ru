@@ -16,10 +16,16 @@
 }
 
 .creators__author {
-    margin-right: 32px;
+    margin-right: 20px;
     color: var(--color-grey-darker);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+@media (min-width: 375px) {
+    .creators__autor {
+        margin-right: 32px;
+    }
 }
 
 @media (min-width: 1240px) {
@@ -83,7 +89,13 @@
 }
 
 .creators__collaborators:not(:last-child) {
-    margin-right: 32px;
+    margin-right: 20px;
+}
+
+@media (min-width: 375px) {
+    .creators__collaborators:not(:last-child) {
+        margin-right: 32px;
+    }
 }
 
 @media (min-width: 1240px) {
