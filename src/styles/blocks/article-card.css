@@ -5,9 +5,18 @@
     grid-template-columns: min-content max-content 1fr;
     grid-template-areas:
         'picture title title'
-        'picture date author';
+        'picture date date'
+        'picture author author';
     grid-gap: 14px 16px;
     padding: 0 16px;
+}
+
+@media (min-width: 320px) {
+    .article-card {
+        grid-template-areas:
+            'picture title title'
+            'picture date author';
+    }
 }
 
 @media (min-width: 800px) {
