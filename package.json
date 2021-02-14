@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-img": "^0.7.8",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@mavrin/remark-typograf": "^2.1.6",

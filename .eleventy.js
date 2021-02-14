@@ -223,6 +223,66 @@ module.exports = function(config) {
         return content;
     });
 
+    config.addTransform('responsiveImages', async (content, outputPath) => {
+        const Image = require("@11ty/eleventy-img");
+        const path = require("path");
+
+        const articlesRegex = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
+        const imagesRegex = /<img src="([^>]+)\.(jpg|png)" alt="([^>]+)">/g;
+
+        const article = outputPath && outputPath.match(articlesRegex);
+
+        if (article) {
+            const images = content.matchAll(imagesRegex);
+            const newImages = {};
+
+            for (const image of images) {
+                const [, name, ext] = image;
+                const source = `src/articles/${article[1]}/${name}.${ext}`;
+
+                const stats = await Image(source, {
+                    widths: [600, 1200, 1800],
+                    formats: ["webp", "jpg"],
+                    urlPath: "images/",
+                    outputDir: `dist/articles/${article[1]}/images/`,
+                    filenameFormat: function (id, src, width, format) {
+                        const extension = path.extname(src);
+                        const basename = path.basename(src, extension);
+                        return `${basename}-${width}w.${format}`;
+                    },
+                });
+
+                const values = Object.values(stats);
+                const createCommonSrcset = arr => arr.map(x => x.srcset).join(", ");
+
+                newImages[name] = {
+                    url: stats["webp"][0].url,
+                    webpSrcset: createCommonSrcset(values[0]),
+                    jpgSrcset: createCommonSrcset(values[1]),
+                };
+            }
+
+            content = content.replace(imagesRegex, (_, name, ext, alt) => {
+                const { url, webpSrcset, jpgSrcset } = newImages[name];
+                const sizes = "100vw";
+                return `
+                    <picture>
+                        <source
+                            sizes="${sizes}"
+                            srcset="${webpSrcset}"
+                            type="image/webp">
+                        <img
+                            src="${url}"
+                            sizes="${sizes}"
+                            srcet="${jpgSrcset}"
+                            loading="lazy"
+                            alt="${alt}">
+                    </picture>`;
+            });
+        }
+        return content;
+    })
+
     // Теги
 
     config.addNunjucksTag('blob', (nunjucksEngine) => {
