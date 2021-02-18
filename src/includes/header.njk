@@ -55,12 +55,24 @@
             <li class="menu__item">
                 <a class="menu__link menu__link--inactive">О проекте</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--patreon">
                 <a class="menu__link menu__link--patreon" href="https://www.patreon.com/webstandards_ru">Поддержать
                     {% if page.url == '/' %}
                         <span class="menu__link--extension"> проект</span>
                     {% endif %}
                 </a>
+            </li>
+            <li class="menu__item">
+                <button class="scheme-switcher__button" aria-label="Переключить тёмную тему">
+                    <svg class="scheme-switcher__icon" aria-hidden="true" width="20" height="20">
+                        <use class="scheme-switcher__icon-moon"
+                            href="{{ path }}images/sprite.svg#moon">
+                        </use>
+                        <use class="scheme-switcher__icon-sun"
+                            href="{{ path }}images/sprite.svg#sun">
+                        </use>
+                    </svg>
+                </button>
             </li>
         </ul>
     </nav>
