@@ -102,6 +102,7 @@
     .menu__list {
         display: grid;
         grid-auto-flow: column;
+        align-items: center;
         column-gap: 8px;
     }
 
@@ -120,13 +121,52 @@
 }
 
 @media (min-width: 736px) {
-    .menu--index .menu__item:not(:last-of-type) {
+    .menu--index .menu__item:not(.menu__item--patreon) {
         margin-right: 8px;
     }
 
-    .menu--index .menu__item:last-of-type {
+    .menu--index .menu__item--patreon {
         margin-left: auto;
     }
+}
+
+/* Color Scheme Switcher */
+
+.scheme-switcher__button {
+    margin-top: 2px;
+    padding: 4px;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.scheme-switcher__button:hover {
+    background-color: var(--color-grey-lightest);
+}
+
+.page--dark-mode .scheme-switcher__button:hover {
+    background-color: var(--color-dark-divider);
+}
+
+.scheme-switcher__button svg {
+    display: block;
+}
+
+.scheme-switcher__icon {
+    fill: var(--color-dark-text-secondary);
+}
+
+.scheme-switcher__icon-moon {
+    display: none;
+}
+
+.page--dark-mode .scheme-switcher__icon-moon {
+    display: block;
+}
+
+.page--dark-mode .scheme-switcher__icon-sun {
+    display: none;
 }
 
 /* Link */
@@ -166,7 +206,6 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    margin-top: 2px;
     margin-left: -18px;
     content: url('../../images/patreon.svg');
 }
