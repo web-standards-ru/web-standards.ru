@@ -573,4 +573,4 @@ volumes:
 
 ***
 
-Мы можем использовать Docker и для организации собственных рабочих процессов, [поговорим об этом в третьей части](https://web-standards.ru/articles/docker-unboxing-2/).
+Мы можем использовать Docker и для организации собственных рабочих процессов, [поговорим об этом в третьей части](https://web-standards.ru/articles/docker-unboxing-3/).
