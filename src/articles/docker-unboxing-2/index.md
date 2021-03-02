@@ -1,5 +1,5 @@
 ---
-title: 'Распаковка Docker, часть 2'
+title: 'Распаковка Docker, часть 2'
 date: 2021-02-09
 author: igor-korovchenko
 editors:
