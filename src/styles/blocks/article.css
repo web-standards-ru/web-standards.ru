@@ -203,7 +203,6 @@
 }
 
 @media (min-width: 1024px) {
-
     @media (hover: hover) and (pointer: fine) {
         .article__link:hover {
             color: var(--color-turquoise);
