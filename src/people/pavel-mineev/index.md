@@ -2,6 +2,6 @@
 name: Павел Минеев
 url: https://pavel.mineev.me/
 tags: people
-photo: false
+photo: true
 permalink: false
 ---
