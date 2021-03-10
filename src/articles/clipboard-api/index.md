@@ -25,22 +25,22 @@ const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
 const button = document.querySelector(".button");
 
 button.addEventListener("click", (evt) => {
-  const input = document.createElement("input");
-  const text = "https://web-standards.ru/articles/clipboard-api/";
-  const yPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const input = document.createElement("input");
+    const text = "https://web-standards.ru/articles/clipboard-api/";
+    const yPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-  input.style.position = 'absolute';
-  input.style[isRTL ? 'right' : 'left'] = '-9999px'; // скрываем поле за краями экрана в завивимости от направления текста в текущей локали
-  input.style.fontSize = '16px'; // предотвращаем срабатывание зума на iOS
-  input.style.top = `${yPosition}px`; // предотвращаем скролл к элементу
-  input.setAttribute('readonly', ''); // не допускаем появления клавиатуры на мобильных девайсвх
+    input.style.position = 'absolute';
+    input.style[isRTL ? 'right' : 'left'] = '-9999px'; // скрываем поле за краями экрана в завивимости от направления текста в текущей локали
+    input.style.fontSize = '16px'; // предотвращаем срабатывание зума на iOS
+    input.style.top = `${yPosition}px`; // предотвращаем скролл к элементу
+    input.setAttribute('readonly', ''); // не допускаем появления клавиатуры на мобильных девайсвх
 
-  document.body.appendChild(input); // вставляем элемент в DOM
-  input.value = text;
-  input.focus(); // помещаем поле в фокус
-  input.select(); // выделяем текст в поле
-  document.execCommand("copy"); // копируем текст в поле обмена
-  document.body.removeChild(input); // удаляем фейковый элемент
+    document.body.appendChild(input); // вставляем элемент в DOM
+    input.value = text;
+    input.focus(); // помещаем поле в фокус
+    input.select(); // выделяем текст в поле
+    document.execCommand("copy"); // копируем текст в поле обмена
+    document.body.removeChild(input); // удаляем фейковый элемент
 });
 ```
 
