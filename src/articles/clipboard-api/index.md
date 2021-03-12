@@ -107,8 +107,7 @@ document.querySelector('.tooltip').addEventListener('click', () => {
 
 [Полный пример кода на GitHub](https://github.com/web-standards-ru/web-standards.ru/blob/master/src/scripts/modules/copy-link.js)
 
-Так как `window.navigator.clipboard.writeText` возвращает `Promise`, мы должны обработать исключение, и в случае возникновения ошибки предупредить пользователя об этом.
-
+`window.navigator.clipboard.writeText` возвращает `Promise`, что позволяет обрабатывать исключения в случае их возникновения. Одним из таких случаев может быть запрет на запись в буфер, ниже будет рассмотрено как запросить необходимые права для чтения и записи в буфер.
 Если мы используем функцию `window.navigator.clipboard.write`, то к копируемым данным можно добавить, например, картинку. Как показано в примере:
 
 ```js
