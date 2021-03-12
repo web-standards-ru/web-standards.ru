@@ -168,6 +168,17 @@ window.navigator.clipboard
 
 Также можно запросить разрешение на чтение буфера заранее с помощью [Permissions API](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API) — хотя стоит заметить, что не все браузеры его поддерживают.
 
+```js
+window.navigator.permissions.query({ name: 'clipboard-read' })
+    .then((result) => {
+        if (result.state == "granted" || result.state == "prompt") {
+            // Можно записывать данные в буфер
+        }
+    });
+```
+
+<small>Для запроса на запись в буфер используется аналогичная конструкция только с аргументом `{ name: 'clipboard-write'  }`<small>
+
 Другой вариант чтения данных из буфера — реагировать на вставку данных на сайте. Такое событие можно слушать как на всём `document`, так и, например, в поле ввода `<textarea>`. С помощью этого метода можно перехватить и обработать событие.
 
 ```js
