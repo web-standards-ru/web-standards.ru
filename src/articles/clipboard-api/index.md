@@ -74,21 +74,21 @@ button.addEventListener('click', (evt) => {
 Если вы точно знаете, что пользователю нужно будет скопировать какие-то данные, путь к этому можно сократить с помощью простой кнопки.
 
 <figure>
-    <img src="images/copy-link.png" alt="Текст с заголовком, рядом с которым стоит кнопка с иконкой ссылки: два кольца цепи (links).">
+    <img src="images/link.png" alt="Текст с заголовком, рядом с которым стоит кнопка с иконкой ссылки: два кольца цепи (links).">
     <figcaption>
         Применение Clipboard API для копирования ссылок.
     </figcaption>
 </figure>
 
 <figure>
-    <img src="images/copy-code.png" alt="Фрагмент кода в несколько строк, рядом с которым стоит кнопка с иконкой буфера обмена.">
+    <img src="images/code.png" alt="Фрагмент кода в несколько строк, рядом с которым стоит кнопка с иконкой буфера обмена.">
     <figcaption>
         Удобное копирование сниппетов кода.
     </figcaption>
 </figure>
 
 <figure>
-    <img src="images/copy-token.png" alt="Длинный непрерывный фрагмент текста из случайных символов, рядом с которым стоит кнопка с иконкой буфера обмена.">
+    <img src="images/token.png" alt="Длинный непрерывный фрагмент текста из случайных символов, рядом с которым стоит кнопка с иконкой буфера обмена.">
     <figcaption>
         Копирование важной информации, которая нужна пользователю.
     </figcaption>
@@ -131,7 +131,7 @@ document.querySelector('.tooltip').addEventListener('click', () => {
 });
 ```
 
-[Полный пример кода на GitHub.](https://github.com/web-standards-ru/web-standards.ru/blob/master/src/scripts/modules/copy-link.js)
+[Полный пример кода на GitHub](https://github.com/web-standards-ru/web-standards.ru/blob/master/src/scripts/modules/copy-link.js).
 
 Метод `window.navigator.clipboard.writeText` возвращает `Promise`, что позволяет обрабатывать исключения, если они возникнут. Одним из таких случаев может быть запрет на запись в буфер. Ниже мы рассмотрим, как запросить необходимые права для чтения и записи в буфер.
 
@@ -182,14 +182,14 @@ window.navigator.clipboard
 Важная особенность чтения из буфера в том, что оно работает не напрямую. Например, в Google Chrome во время попытки прочитать данные из буфера пользователя уведомят о попытке чтения и предложат разрешить или запретить действие. А Safari, например, покажет контекстное меню с пунктом «Paste».
 
 <figure>
-    <img src="images/chrome-permissions.png" alt="Попап под адресной строкой Google Chrome, который запрашивает доступ к копированию и предлагает: заблокировать или разрешить.">
+    <img src="images/chrome.png" alt="Попап под адресной строкой Google Chrome, который запрашивает доступ к копированию и предлагает: заблокировать или разрешить.">
     <figcaption>
         Попап запрашивает разрешение на чтение буфера обмена в Google Chrome при попытке вставки.
     </figcaption>
 </figure>
 
 <figure>
-    <img src="images/safari-context-menu.png" alt="Контекстное меню «Вставить» поверх кнопки «Вставить из буфера обмена» в Safari.">
+    <img src="images/safari.png" alt="Контекстное меню «Вставить» поверх кнопки «Вставить из буфера обмена» в Safari.">
     <figcaption>
         Контекстное меню в Safari при попытке вставки из буфера обмена.
     </figcaption>
