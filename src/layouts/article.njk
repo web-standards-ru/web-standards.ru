@@ -47,7 +47,7 @@ layout: page.njk
             {% endif %}
         </div>
         <div class="article__creators creators">
-            {% for person in collections.people | filterPeople(author) %}
+            {% for person in authorData %}
                 {% if person.photo %}
                     {% set personPhoto = [author, '/photo.jpg'] | join %}
                 {% else %}
@@ -82,7 +82,7 @@ layout: page.njk
             {% if translators %}
                 <p class="creators__collaborators">
                     <span class="creators__collaborators-heading">Перевод</span>
-                    {%- for translator in collections.people | filterPeople(translators) -%}
+                    {%- for translator in translatorsData -%}
                         {% if translator.url %}
                             <a class="creators__collaborators-link"
                                 href="{{ translator.url }}"
@@ -101,7 +101,7 @@ layout: page.njk
             {% if editors %}
                 <p class="creators__collaborators">
                     <span class="creators__collaborators-heading">Редактура</span>
-                    {%- for editor in collections.people | filterPeople(editors) -%}
+                    {%- for editor in editorsData -%}
                         {% if editor.url %}
                             <a class="creators__collaborators-link"
                                 href="{{ editor.url }}"

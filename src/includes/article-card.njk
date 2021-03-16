@@ -34,7 +34,7 @@
         {{ article.date | ruDate }}
     </time>
 
-    {% for person in collections.people | filterPeople(article.data.author) %}
+    {% for person in article.data.authorData %}
         {% if person.photo %}
             {% set personPhoto = [article.data.author, '/photo.jpg'] | join %}
         {% else %}
