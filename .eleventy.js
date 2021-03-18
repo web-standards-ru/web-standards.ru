@@ -91,19 +91,6 @@ module.exports = function(config) {
         );
     });
 
-    config.addFilter('filterPeople', (peopleList, filterList) => {
-        return peopleList
-            .filter((person) => {
-                // Иногда filterList это строка, а не массив, поэтому всегда делаем массив
-                const filterListNormalized = [].concat(filterList);
-
-                return filterListNormalized.includes(person.fileSlug);
-            })
-            .map((person) => {
-                return person.data;
-            });
-    });
-
     config.addFilter('addHyphens', (content, maxLength = 0) => {
         if (!content || content.length <= maxLength) {
             return content;
