@@ -48,10 +48,10 @@
 }
 
 .tooltip__label::after {
-    --tooltip-tail-width: 24px;
-    --tooltip-tail-height: 10px;
+    --tooltip-tail-width: 26px;
+    --tooltip-tail-height: 11px;
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1px);
     left: calc(50% - var(--tooltip-tail-width) / 2);
     content: '';
     width: var(--tooltip-tail-width);
