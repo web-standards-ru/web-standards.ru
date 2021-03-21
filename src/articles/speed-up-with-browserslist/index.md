@@ -5,7 +5,6 @@ author: daniil-onoshko
 editors:
     - irina-pitaeva
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - js

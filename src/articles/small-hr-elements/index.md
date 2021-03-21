@@ -7,7 +7,6 @@ source:
     url: 'https://html5doctor.com/small-hr-element/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - html

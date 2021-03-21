@@ -9,7 +9,6 @@ translators:
     - vladislav-ermolin
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - js

@@ -12,6 +12,8 @@ function filterPeople(peopleList, filterList) {
 }
 
 module.exports = {
+    layout: 'article.njk',
+
     eleventyComputed: {
         authorData: function(data) {
             return filterPeople(data.collections.people, data.author)

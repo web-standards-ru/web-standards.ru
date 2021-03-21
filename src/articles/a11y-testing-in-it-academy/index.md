@@ -9,7 +9,6 @@ translators:
     - hanna-ostroverkha
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - a11y

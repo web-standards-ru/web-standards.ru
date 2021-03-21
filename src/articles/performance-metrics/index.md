@@ -4,7 +4,6 @@ date: 2017-11-15
 author: artem-denysov
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - js

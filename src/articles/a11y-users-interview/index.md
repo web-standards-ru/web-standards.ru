@@ -4,7 +4,6 @@ date: 2018-02-19
 author: evgeniy-karavaev
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - a11y

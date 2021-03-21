@@ -10,7 +10,6 @@ translators:
 editors:
     - natalya-ryzhova
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - html

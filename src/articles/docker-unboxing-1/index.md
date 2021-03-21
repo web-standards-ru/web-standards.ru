@@ -4,7 +4,6 @@ date: 2021-02-08
 author: igor-korovchenko
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - js

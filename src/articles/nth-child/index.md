@@ -7,7 +7,6 @@ source:
     url: 'http://css-tricks.com/5452-how-nth-child-works/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

@@ -6,7 +6,6 @@ editors:
     - vadim-makeev
     - vasiliy-dudin
     - olga-aleksashenko
-layout: article.njk
 tags:
     - article
     - a11y

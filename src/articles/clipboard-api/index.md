@@ -5,7 +5,6 @@ author: pavel-mineev
 editors:
     - vadim-makeev
     - nikita-dubko
-layout: article.njk
 tags:
     - article
     - js
