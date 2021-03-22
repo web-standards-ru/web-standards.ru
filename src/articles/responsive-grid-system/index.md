@@ -9,7 +9,6 @@ translators:
     - igor-lesnevskii
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

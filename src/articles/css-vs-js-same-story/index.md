@@ -7,7 +7,6 @@ source:
     url: 'https://twitter.com/tobie/status/1083316137826365442'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

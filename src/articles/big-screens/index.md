@@ -11,7 +11,6 @@ editors:
     - yuliya-bukhvalova
     - vadim-makeev
     - olga-aleksashenko
-layout: article.njk
 tags:
     - article
     - design

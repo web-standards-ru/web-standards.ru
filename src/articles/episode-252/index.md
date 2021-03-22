@@ -3,7 +3,6 @@ title: 'Опрос MDN, Igalia, npm 7, React vs WordPress, уже Webpack 5, 
 date: 2020-10-28
 author:
     - nikita-dubko
-layout: article.njk
 tags:
     - article
     - podcast

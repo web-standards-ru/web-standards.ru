@@ -5,7 +5,6 @@ author: ilya-zayats
 editors:
     - vadim-makeev
     - olga-aleksashenko
-layout: article.njk
 tags:
     - article
     - js

@@ -9,7 +9,6 @@ translators:
     - andrey-alexeev
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - fonts

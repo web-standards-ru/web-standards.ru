@@ -9,7 +9,6 @@ translators:
     - vladislav-pocheptsov
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - js

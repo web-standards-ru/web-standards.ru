@@ -10,7 +10,6 @@ translators:
 editors:
     - vadim-makeev
     - nikita-dubko
-layout: article.njk
 tags:
     - article
     - performance

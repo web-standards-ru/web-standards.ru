@@ -12,7 +12,6 @@ editors:
     - nikita-dubko
     - tatiana-fokina
     - vasiliy-dudin
-layout: article.njk
 tags:
     - article
     - html

@@ -4,7 +4,6 @@ date: 2019-01-24
 author: igor-shevchenko
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

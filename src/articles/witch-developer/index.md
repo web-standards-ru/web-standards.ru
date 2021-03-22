@@ -9,7 +9,6 @@ translators:
     - vadim-makeev
 editors:
     - olga-aleksashenko
-layout: article.njk
 tags:
     - article
     - satire

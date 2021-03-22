@@ -7,7 +7,6 @@ source:
     url: 'http://www.alistapart.com/articles/prefix-or-posthack/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

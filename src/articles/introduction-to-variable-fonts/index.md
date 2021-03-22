@@ -9,7 +9,6 @@ translators:
     - roma-zvarich
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - typography
