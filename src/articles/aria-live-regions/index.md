@@ -4,7 +4,6 @@ date: 2019-03-12
 author: tatiana-fokina
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - html

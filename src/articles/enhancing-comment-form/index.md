@@ -11,7 +11,6 @@ editors:
     - vadim-makeev
     - yuliya-bukhvalova
     - alexey-simonenko
-layout: article.njk
 tags:
     - article
     - html

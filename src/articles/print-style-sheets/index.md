@@ -9,7 +9,6 @@ translators:
     - nikita-dubko
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

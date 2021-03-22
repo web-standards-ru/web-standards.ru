@@ -4,7 +4,6 @@ date: 2010-06-28
 author: lev-solntsev
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - html

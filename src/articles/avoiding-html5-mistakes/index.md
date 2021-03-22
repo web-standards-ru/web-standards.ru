@@ -7,7 +7,6 @@ source:
     url: 'https://html5doctor.com/avoiding-common-html5-mistakes/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - html

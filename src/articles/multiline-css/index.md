@@ -4,7 +4,6 @@ date: 2010-12-13
 author: vyacheslav-olianchuk
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

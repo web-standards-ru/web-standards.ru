@@ -9,7 +9,6 @@ translators:
     - anton-nemtsev
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - html

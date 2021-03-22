@@ -7,7 +7,6 @@ source:
     url: 'http://remy.tumblr.com/post/8334086394/what-do-you-mean-you-dont-like-ie6-really'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
 preview: 'Если поддержка IE6 является частью вашей работы или включена в договор — значит так оно и есть, такова профессия, и в этих сложностях её смысл.'

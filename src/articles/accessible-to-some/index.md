@@ -10,7 +10,6 @@ translators:
 editors:
     - olga-aleksashenko
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - a11y

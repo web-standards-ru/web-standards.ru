@@ -7,7 +7,6 @@ source:
     url: 'http://snook.ca/archives/html_and_css/css-parent-selectors/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css

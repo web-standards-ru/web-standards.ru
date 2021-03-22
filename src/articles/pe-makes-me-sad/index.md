@@ -7,7 +7,6 @@ source:
     url: 'https://web.archive.org/web/20191023105142/https://heydonworks.com/article/progressive-enhancement-makes-me-sad/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - satire

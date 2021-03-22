@@ -7,7 +7,6 @@ source:
     url: 'https://html5doctor.com/the-details-and-summary-elements/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - html

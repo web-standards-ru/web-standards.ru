@@ -9,7 +9,6 @@ translators:
     - andrey-motoshin
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
     - article
     - css
