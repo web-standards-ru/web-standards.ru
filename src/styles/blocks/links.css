@@ -44,7 +44,7 @@
     margin: 0 0 15px 0;
     font-weight: bold;
     font-size: 18px;
-    font-family: 'Dewi Expanded', sans-serif;
+    font-stretch: expanded;
     text-transform: uppercase;
 }
 

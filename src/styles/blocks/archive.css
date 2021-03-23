@@ -8,7 +8,9 @@
 
 .archive__title {
     margin: 49px 0 66px;
-    font: 400 24px 'Dewi Expanded', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    font-stretch: expanded;
     letter-spacing: -0.05em;
     text-align: center;
     text-transform: uppercase;
@@ -36,7 +38,9 @@
     display: inline-block;
     margin-bottom: 16px;
     margin-left: 16px;
-    font: 700 16px 'Dewi Expanded', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    font-stretch: expanded;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -87,5 +91,5 @@
 .archive__tags-link:not([href]) {
     color: black;
     font-weight: 900;
-    font-family: 'Dewi Expanded';
+    font-stretch: expanded;
 }

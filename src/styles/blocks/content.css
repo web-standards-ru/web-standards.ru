@@ -23,7 +23,7 @@
     margin-top: 32px;
     margin-bottom: 16px;
     font-size: 16px;
-    font-family: 'Dewi Expanded', sans-serif;
+    font-stretch: expanded;
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -164,7 +164,7 @@
     left: 0;
     color: var(--color-grey-lighter);
     font-size: 16px;
-    font-family: 'Dewi Expanded', sans-serif;
+    font-stretch: expanded;
     content: '—';
 }
 
@@ -187,7 +187,7 @@
     left: 0;
     color: var(--color-grey-lighter);
     font-size: 16px;
-    font-family: 'Dewi Expanded', sans-serif;
+    font-stretch: expanded;
     counter-increment: list;
     content: counter(list);
 }
@@ -389,7 +389,7 @@
     color: var(--color-grey-medium);
     font-weight: normal;
     font-size: 3.5em;
-    font-family: 'Dewi Expanded', sans-serif;
+    font-stretch: expanded;
     line-height: 0.65;
 }
 

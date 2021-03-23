@@ -14,7 +14,7 @@
     margin: 0 0 16px;
     padding: 0 16px;
     font-size: 16px;
-    font-family: 'Dewi Expanded', sans-serif;
+    font-stretch: expanded;
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-transform: uppercase;
