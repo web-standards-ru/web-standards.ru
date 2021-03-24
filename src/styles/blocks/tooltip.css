@@ -48,14 +48,14 @@
 }
 
 .tooltip__label::after {
-    --tooltip-tail-width: 26px;
-    --tooltip-tail-height: 11px;
-    position: absolute;
-    top: calc(100% - 1px);
-    left: calc(50% - var(--tooltip-tail-width) / 2);
     content: '';
-    width: var(--tooltip-tail-width);
-    height: var(--tooltip-tail-height);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 26px;
+    height: 11px;
+    margin: -1px auto 0;
     background-color: inherit;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
