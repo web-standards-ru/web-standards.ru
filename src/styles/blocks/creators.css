@@ -14,6 +14,9 @@
         - https://heydonworks.com/article/the-flexbox-holy-albatross/
     */
     flex-basis: calc((var(--creators-breakpoint) - 100%) * 9999);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0 16px;
 }
 
