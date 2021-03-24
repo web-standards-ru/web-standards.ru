@@ -74,6 +74,7 @@
 .creators__collaborators {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 17px;
 }
 
@@ -94,7 +95,7 @@
 }
 
 .creators__collaborators-link:not(:last-child) {
-    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 @media (hover: hover) and (pointer: fine) {
