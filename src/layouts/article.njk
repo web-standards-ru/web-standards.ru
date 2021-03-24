@@ -54,7 +54,7 @@ layout: page.njk
                     {% set personPhoto = 'person.png' %}
                 {% endif %}
                 {% if person.url %}
-                    <a class="creators__author"
+                    <a class="creators__cell creators__author"
                         href="{{ person.url }}">
                         <span class="creators__author-avatar blob {% blob person.name %}">
                             <img class="blob__photo"
@@ -66,7 +66,7 @@ layout: page.njk
                         </span>
                     </a>
                 {% else %}
-                    <span class="creators__author">
+                    <span class="creators__cell creators__author">
                         <span class="creators__author-avatar blob {% blob person.name %}">
                             <img class="blob__photo"
                                 src="/people/{{ personPhoto }}"
@@ -80,7 +80,7 @@ layout: page.njk
             {% endfor %}
 
             {% if translators %}
-                <p class="creators__collaborators">
+                <p class="creators__cell creators__collaborators">
                     <span class="creators__collaborators-heading">Перевод</span>
                     {%- for translator in translatorsData -%}
                         {% if translator.url %}
@@ -99,7 +99,7 @@ layout: page.njk
             {% endif %}
 
             {% if editors %}
-                <p class="creators__collaborators">
+                <p class="creators__cell creators__collaborators">
                     <span class="creators__collaborators-heading">Редактура</span>
                     {%- for editor in editorsData -%}
                         {% if editor.url %}
