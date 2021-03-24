@@ -6,14 +6,15 @@
 
 .creators__cell {
     --creators-breakpoint: 460px;
-    margin: 0 16px;
     flex-grow: 1;
     flex-shrink: 1;
+
     /* Описание техники:
-        * https://www.freecodecamp.org/news/the-fab-four-technique-to-create-responsive-emails-without-media-queries-baf11fdfa848/
-        * https://heydonworks.com/article/the-flexbox-holy-albatross/
+        - https://www.freecodecamp.org/news/the-fab-four-technique-to-create-responsive-emails-without-media-queries-baf11fdfa848/
+        - https://heydonworks.com/article/the-flexbox-holy-albatross/
     */
     flex-basis: calc((var(--creators-breakpoint) - 100%) * 9999);
+    margin: 0 16px;
 }
 
 .creators__author {
@@ -71,9 +72,9 @@
 }
 
 .creators__collaborators {
-    margin-bottom: 17px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 17px;
 }
 
 .creators__collaborators-heading {
