@@ -4,7 +4,7 @@
     align-content: flex-start;
 }
 
-.creators__cell {
+.creators__block {
     --creators-breakpoint: 460px;
     display: flex;
     flex-grow: 1;

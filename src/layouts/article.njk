@@ -47,7 +47,7 @@ layout: page.njk
             {% endif %}
         </div>
         <div class="article__creators creators">
-            <div class="creators__cell">
+            <div class="creators__block">
                 {% for person in authorData %}
                     {% if person.photo %}
                         {% set personPhoto = [author, '/photo.jpg'] | join %}
@@ -82,7 +82,7 @@ layout: page.njk
             </div>
 
             {% if translators %}
-                <p class="creators__cell creators__collaborators">
+                <p class="creators__block creators__collaborators">
                     <span class="creators__collaborators-heading">Перевод</span>
                     {%- for translator in translatorsData -%}
                         {% if translator.url %}
@@ -101,7 +101,7 @@ layout: page.njk
             {% endif %}
 
             {% if editors %}
-                <p class="creators__cell creators__collaborators">
+                <p class="creators__block creators__collaborators">
                     <span class="creators__collaborators-heading">Редактура</span>
                     {%- for editor in editorsData -%}
                         {% if editor.url %}
