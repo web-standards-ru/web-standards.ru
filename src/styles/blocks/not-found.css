@@ -12,7 +12,9 @@
 
 .not-found__title {
     margin: 49px 0 66px;
-    font: 400 24px 'Dewi Expanded', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    font-stretch: expanded;
     letter-spacing: -0.05em;
     text-align: center;
     text-transform: uppercase;

@@ -134,7 +134,7 @@
 .menu__link--current {
     color: black;
     font-weight: bold;
-    font-family: 'Dewi Expanded', sans-serif;
+    font-stretch: expanded;
     text-decoration: none;
 }
 
