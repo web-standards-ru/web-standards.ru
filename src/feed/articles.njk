@@ -32,7 +32,7 @@ permalink: articles/feed/index.xml
                     ]]>
                 </description>
                 <pubDate>{{ article.date.toUTCString() }}</pubDate>
-                <guid isPermaLink="false">{{ article.url | url }}</guid>
+                <guid>{{ domain }}{{ article.url }}</guid>
             </item>
         {%- endfor %}
 
