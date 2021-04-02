@@ -6,7 +6,7 @@ const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,
 });
 
-const API_ENDPORINT = '/repos/{owner}/{repo}/contents/{path}';
+const API_ENDPOINT = '/repos/{owner}/{repo}/contents/{path}';
 const BASE_PARAMS = {
     owner: 'web-standards-ru',
     repo: 'podcast',
@@ -15,7 +15,7 @@ const BASE_PARAMS = {
 async function getEpisodesCount() {
     const response = await octokit.request({
         method: 'GET',
-        url: API_ENDPORINT,
+        url: API_ENDPOINT,
         ...BASE_PARAMS,
         path: 'src/episodes',
     });
@@ -26,7 +26,7 @@ async function getEpisodesCount() {
 async function getEpisodeData(id) {
     const response = await octokit.request({
         method: 'GET',
-        url: API_ENDPORINT,
+        url: API_ENDPOINT,
         headers: {
             accept: 'application/vnd.github.v3.raw',
         },
