@@ -6,6 +6,8 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/scripts');
     config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
 
+    config.setUseGitIgnore(false);
+
     // Markdown Options
 
     const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');

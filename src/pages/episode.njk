@@ -1,0 +1,24 @@
+---
+title: Выпуски подкаста
+layout: page.njk
+pagination:
+    data: collections.episode
+    size: 1
+    alias: episode
+permalink: 'podcast/episodes/{{ episode.fileSlug }}/index.html'
+---
+
+<main class="main">
+    <h1>{{ episode.data.title }}</h1>
+
+    <audio
+        src="https://media.githubusercontent.com/media/web-standards-ru/podcast/master/src/mp3/{{episode.fileSlug}}.mp3"
+        controls
+        preload="meta"
+        style="width: 100%; max-width: 40rem;"
+    ></audio>
+
+    {# TODO: вынести в layout и там генерировать как {{ content | safe }} #}
+    {{ episode.templateContent | safe }}
+</main>
+

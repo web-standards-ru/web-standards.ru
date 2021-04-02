@@ -1,0 +1,20 @@
+---
+title: Выпуски подкаста
+layout: page.njk
+permalink: podcast/episodes/index.html
+---
+
+<main class="main">
+    <h1>{{ title }}</h1>
+
+    <ul>
+        {% for episode in collections.episode %}
+            <li>
+                <a href="/podcast/episodes/{{episode.fileSlug}}/">
+                    {{ episode.data.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</main>
+

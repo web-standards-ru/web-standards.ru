@@ -10,13 +10,15 @@
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
     "test": "npm run editorconfig && npm run stylelint && npm run markdown && npm run eslint",
     "build": "eleventy && gulp build",
-    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
+    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/",
+    "podcast": "node download-episodes-data.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
     "@mavrin/remark-typograf": "^2.1.6",
+    "@octokit/core": "^3.3.2",
     "autoprefixer": "^10.2.5",
     "del": "^6.0.0",
     "editorconfig-checker": "^3.3.0",
