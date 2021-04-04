@@ -5,8 +5,46 @@ permalink: podcast/index.html
 ---
 
 <main class="main">
-    <h1>{{ title }}</h1>
+    <div class="podcast-page archive">
+        <h1 class="podcast-page__title archive__title">
+            {{ title }}
+        </h1>
 
-    <a href="/podcast/episodes/">Список выпусков</a>
+        <div class="podcast-page__content content">
+            <p>
+                Слушайте свежие эпизоды в
+                <a href="{{ links.listen.google }}">Google Podcasts</a>,
+                <a href="{{ links.listen.apple }}">Apple Podcasts</a>,
+                <a href="{{ links.listen.castbox }}">CastBox</a>,
+                <a href="{{ links.listen.pocket }}">Pocket Casts</a>,
+                <a href="{{ links.listen.overcast }}">Overcast</a>,
+                <a href="{{ links.listen.vk }}">ВКонтакте</a>,
+                <a href="{{ links.listen.yandex }}">Яндекс.Музыке</a>,
+                <a href="{{ links.listen.spotify }}">Spotify</a>,
+                <a href="{{ links.listen.youtube }}">YouTube</a>,
+                <a href="{{ links.listen.soundcloud }}">SoundCloud</a>
+                или подписывайтесь на <a href="{{ links.listen.rss }}">RSS</a>.
+            </p>
+            <p>
+                Читайте новости в
+                <a href="{{ links.read.twitter }}">Твиттере</a>,
+                <a href="{{ links.read.vk }}">ВКонтакте</a>,
+                <a href="{{ links.read.facebook }}">Фейсбуке</a>,
+                <a href="{{ links.read.telegram }}">Телеграме</a>.
+            </p>
+            <p>
+                Поддержите нас
+                на <a href="{{ links.support.patreon }}">Патреоне</a>
+                или переводом на <a href="{{ links.support.paypal }}">PayPal</a>.
+            </p>
+            <p>
+                <a href="{{ links.discuss.telegram }}">Обсуждайте в чате</a>.
+            </p>
+        </div>
+
+        <div class="podcast-page__notice notice">
+            <a class="notice__link" href="/podcast/episodes/">Список выпусков</a>
+        </div>
+    </div>
 </main>
 

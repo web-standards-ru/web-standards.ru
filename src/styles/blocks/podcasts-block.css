@@ -23,23 +23,3 @@
         margin-left: -64px;
     }
 }
-
-.podcasts-block__title {
-    margin: 16px 0;
-    font-size: 21px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-}
-
-@media (min-width: 580px) {
-    .podcasts-block__title {
-        margin: 24px 0;
-        font-size: 26px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .podcasts-block__title {
-        font-size: 32px;
-    }
-}

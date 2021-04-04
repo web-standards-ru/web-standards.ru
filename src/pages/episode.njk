@@ -2,26 +2,28 @@
 title: Выпуски подкаста
 layout: page.njk
 pagination:
-    data: collections.episode
+    data: collections.episodes
     size: 1
     alias: episode
-permalink: 'podcast/episodes/{{ episode.fileSlug }}/index.html'
+permalink: 'podcast/episodes/{{ episode.episode }}/index.html'
 ---
 
+{% set hasChapters = episode.chapters and episode.chapters.length > 0 %}
+
 <main class="main">
-    <article class="podcast">
+    <article class="podcast {% if not hasChapters %}podcast--no-chapters{% endif %}">
         <header class="podcast__header">
-            <span class="podcast__number">Выпуск {{ episode.fileSlug }}</span>
-            <time class="podcast__date" datetime="{{ episode.data.date | isoDate }}">
-                {{ episode.data.date | ruDate }}
+            <span class="podcast__number">Выпуск {{ episode.episode }}</span>
+            <time class="podcast__date" datetime="{{ episode.date | isoDate }}">
+                {{ episode.date | ruDate }}
             </time>
             <h1 class="article__title podcast__title">
-                {{ episode.data.title }}
+                {{ episode.title }}
             </h1>
             <section class="podcast__hosts">
                 <h2 class="podcast__hosts-heading">Ведущие:</h2>
                 <ul class="podcast__hosts-list">
-                    {% for host in episode.data.hosts %}
+                    {% for host in episode.hosts %}
                         <li class="podcast__host">{{ host }}</li>
                     {% endfor %}
                 </ul>
@@ -30,25 +32,34 @@ permalink: 'podcast/episodes/{{ episode.fileSlug }}/index.html'
 
         <audio
             class="podcast__player"
-            src="https://web-standards.ru/podcast/episodes/{{episode.fileSlug}}.mp3"
+            src="{{episode.audio}}"
             controls
             preload="metadata"
         ></audio>
 
-        <section class="podcast__timeline">
-            <h2 class="podcast__timeline-heading">Таймкоды подкаста:</h2>
-            <ul class="podcast__timeline-chapters">
-                {% for chapter in episode.data.chapters %}
-                    <li class="podcast__timeline-chapter">
-                        <button class="podcast__timeline-button" type="button" name="timecode" value="{{chapter.time | timecode}}">{{chapter.time}}</button>
-                        <span>{{ chapter.title}}</span>
-                    </li>
-                {% endfor %}
-            </ul>
-        </section>
+        {% if hasChapters %}
+            <section class="podcast__timeline">
+                <h2 class="podcast__timeline-heading">Темы:</h2>
+                <ul class="podcast__timeline-chapters">
+                    {% for chapter in episode.chapters %}
+                        <li class="podcast__timeline-chapter">
+                            <button
+                                class="podcast__timeline-button"
+                                type="button"
+                                name="timecode"
+                                value="{{chapter.time | timecode}}"
+                            >
+                                {{chapter.time}}
+                            </button>
+                            <span>{{chapter.title}}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
 
         <div class="podcast__content content">
-            {{ episode.templateContent | safe }}
+            {{ episode.content | safe }}
         </div>
     </article>
 </main>

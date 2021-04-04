@@ -1,0 +1,11 @@
+.podcast-page {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 700px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.podcast-page__notice {
+    margin-top: 10%;
+}

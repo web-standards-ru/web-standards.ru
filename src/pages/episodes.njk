@@ -5,24 +5,24 @@ permalink: podcast/episodes/index.html
 ---
 
 <main class="main">
-    <div class="podcasts-block">
-        <h1 class="podcasts-block__title">{{ title }}</h1>
+    <div class="podcasts-block archive">
+        <h1 class="podcasts-block__title archive__title">{{ title }}</h1>
 
         <ul class="podcast-preview-grid">
-            {% for episode in collections.episode | reverse %}
+            {% for episode in collections.episodes %}
                 <li class="podcast-preview-grid__item">
                     <article class="podcast-preview">
                         <h2 class="podcast-preview__title">
                             <span class="podcast-preview__number">
-                                {{ episode.fileSlug }}
+                                {{ episode.episode }}
                             </span>
-                            <a class="podcast-preview__link" href="/podcast/episodes/{{episode.fileSlug}}/">
-                                {{ episode.data.title }}
+                            <a class="podcast-preview__link" href="/podcast/episodes/{{episode.episode}}/">
+                                {{ episode.title }}
                             </a>
                         </h2>
                         <div class="podcast-preview__meta">
-                            <time class="podcast-preview__date" datetime="{{ episode.data.date | isoDate }}">
-                                {{ episode.data.date | ruDate }}
+                            <time class="podcast-preview__date" datetime="{{ episode.date | isoDate }}">
+                                {{ episode.date | ruDate }}
                             </time>
                         </div>
                     </article>

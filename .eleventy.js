@@ -51,6 +51,11 @@ module.exports = function(config) {
         return [...set].sort();
     });
 
+    config.addCollection('episodes', () => {
+        const { getEpisodesData } = require('./src/helpers/podcasts-service');
+        return getEpisodesData();
+    })
+
     config.addFilter('limit', (array, limit) => {
         return array.slice(0, limit);
     });
@@ -74,7 +79,7 @@ module.exports = function(config) {
 
     config.addFilter('filterArticles', (array) => {
         return array.filter(post =>
-            post.inputPath.startsWith('./src/articles/')
+            post?.inputPath?.startsWith('./src/articles/')
         );
     });
 
