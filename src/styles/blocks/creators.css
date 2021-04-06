@@ -1,32 +1,30 @@
 .creators {
     display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
-@media (min-width: 1024px) {
-    .creators {
-        line-height: 1.6;
-    }
-}
+.creators__block {
+    --creators-breakpoint: 460px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
 
-@media (min-width: 1240px) {
-    .creators {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    /* Описание техники:
+        - https://www.freecodecamp.org/news/the-fab-four-technique-to-create-responsive-emails-without-media-queries-baf11fdfa848/
+        - https://heydonworks.com/article/the-flexbox-holy-albatross/
+    */
+    flex-basis: calc((var(--creators-breakpoint) - 100%) * 9999);
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 16px;
 }
 
 .creators__author {
-    margin-right: 32px;
+    margin-bottom: 19px;
     color: var(--color-grey-darker);
     letter-spacing: 0.05em;
     text-transform: uppercase;
-}
-
-@media (min-width: 1240px) {
-    .creators__author {
-        margin-right: 0;
-        margin-bottom: 19px;
-    }
 }
 
 .creators__author:link {
@@ -79,18 +77,8 @@
 .creators__collaborators {
     display: flex;
     flex-direction: column;
-    margin: 0;
-}
-
-.creators__collaborators:not(:last-child) {
-    margin-right: 32px;
-}
-
-@media (min-width: 1240px) {
-    .creators__collaborators:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 17px;
-    }
+    align-items: flex-start;
+    margin-bottom: 17px;
 }
 
 .creators__collaborators-heading {
@@ -107,6 +95,10 @@
 
 .creators__collaborators-link:visited {
     color: var(--color-grey-medium);
+}
+
+.creators__collaborators-link:not(:last-child) {
+    margin-bottom: 4px;
 }
 
 @media (hover: hover) and (pointer: fine) {
