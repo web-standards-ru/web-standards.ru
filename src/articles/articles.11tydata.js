@@ -33,13 +33,13 @@ module.exports = {
             const articles = data.collections.article;
 
             if (!articles) {
-                return null
+                return null;
             }
 
             const length = articles.length;
 
             return articles
-                .slice(length - 1 - data.numberOfRelatedArticles , length)
+                .slice(length - 1 - data.numberOfRelatedArticles, length)
                 .reverse()
                 .filter(post => post.url !== data.page.url)
                 .slice(0, data.numberOfRelatedArticles);
