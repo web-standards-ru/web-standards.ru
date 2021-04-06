@@ -16,15 +16,15 @@ module.exports = {
 
     eleventyComputed: {
         authorData: function(data) {
-            return filterPeople(data.collections.people, data.author)
+            return filterPeople(data.collections.people, data.author);
         },
 
         translatorsData: function(data) {
-            return filterPeople(data.collections.people, data.translators)
+            return filterPeople(data.collections.people, data.translators);
         },
 
         editorsData: function(data) {
-            return filterPeople(data.collections.people, data.editors)
-        }
-    }
-}
+            return filterPeople(data.collections.people, data.editors);
+        },
+    },
+};
