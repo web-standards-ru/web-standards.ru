@@ -1,4 +1,4 @@
-name: EditorConfig
+name: CheckLinks
 
 on:
   pull_request:
@@ -17,4 +17,4 @@ jobs:
       - name: Step test links
         uses: modernweb-dev/check-html-links-action@v1
         with:
-          doc-folder: 'dist'
+          doc-folder: 'dist' --ignore-link-pattern "/../../images/*" "/articles/**/*" "/events/**/*"
