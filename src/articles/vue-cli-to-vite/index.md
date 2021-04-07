@@ -267,8 +267,8 @@ module.exports = {
 ### Ошибка “regeneratorRuntime”
 
 ```bash
-  49 | export const actions = {
-> 50 |   init: async ({ commit }, routeContext) => {
+    49 | export const actions = {
+>   50 |   init: async ({ commit }, routeContext) => {
 ReferenceError: **regeneratorRuntime** is not defined
 ```
 
