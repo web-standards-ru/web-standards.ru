@@ -15,6 +15,4 @@ jobs:
       - name: Build
         run: npm run build
       - name: Step test links
-        uses: modernweb-dev/check-html-links-action@v1
-        with:
-          doc-folder: 'dist' --ignore-link-pattern "/../../images/*" "/articles/**/*" "/events/**/*"
+        run: npm run links
