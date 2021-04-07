@@ -15,37 +15,59 @@ permalink: podcast/index.html
         <div class="podcast-page__content content">
             <p>
                 Слушайте свежие эпизоды в
-                <a href="{{ links.listen.google }}">Google Podcasts</a>,
-                <a href="{{ links.listen.apple }}">Apple Podcasts</a>,
-                <a href="{{ links.listen.castbox }}">CastBox</a>,
-                <a href="{{ links.listen.pocket }}">Pocket Casts</a>,
-                <a href="{{ links.listen.overcast }}">Overcast</a>,
-                <a href="{{ links.listen.vk }}">ВКонтакте</a>,
-                <a href="{{ links.listen.yandex }}">Яндекс.Музыке</a>,
-                <a href="{{ links.listen.spotify }}">Spotify</a>,
-                <a href="{{ links.listen.youtube }}">YouTube</a>,
-                <a href="{{ links.listen.soundcloud }}">SoundCloud</a>
+                <a href="{{ links.listen.google }}" rel="noopener">Google Podcasts</a>,
+                <a href="{{ links.listen.apple }}" rel="noopener">Apple Podcasts</a>,
+                <a href="{{ links.listen.castbox }}" rel="noopener">CastBox</a>,
+                <a href="{{ links.listen.pocket }}" rel="noopener">Pocket Casts</a>,
+                <a href="{{ links.listen.overcast }}" rel="noopener">Overcast</a>,
+                <a href="{{ links.listen.vk }}" rel="noopener">ВКонтакте</a>,
+                <a href="{{ links.listen.yandex }}" rel="noopener">Яндекс.Музыке</a>,
+                <a href="{{ links.listen.spotify }}" rel="noopener">Spotify</a>,
+                <a href="{{ links.listen.youtube }}" rel="noopener">YouTube</a>,
+                <a href="{{ links.listen.soundcloud }}" rel="noopener">SoundCloud</a>
                 или подписывайтесь на <a href="{{ links.listen.rss }}">RSS</a>.
             </p>
             <p>
                 Читайте новости в
-                <a href="{{ links.read.twitter }}">Твиттере</a>,
-                <a href="{{ links.read.vk }}">ВКонтакте</a>,
-                <a href="{{ links.read.facebook }}">Фейсбуке</a>,
-                <a href="{{ links.read.telegram }}">Телеграме</a>.
+                <a href="{{ links.read.twitter }}" rel="noopener">Твиттере</a>,
+                <a href="{{ links.read.vk }}" rel="noopener">ВКонтакте</a>,
+                <a href="{{ links.read.facebook }}" rel="noopener">Фейсбуке</a>,
+                <a href="{{ links.read.telegram }}" rel="noopener">Телеграме</a>.
             </p>
             <p>
                 Поддержите нас
-                на <a href="{{ links.support.patreon }}">Патреоне</a>
-                или переводом на <a href="{{ links.support.paypal }}">PayPal</a>.
+                на <a href="{{ links.support.patreon }}" rel="noopener">Патреоне</a>
+                или переводом на <a href="{{ links.support.paypal }}" rel="noopener">PayPal</a>.
             </p>
             <p>
-                <a href="{{ links.discuss.telegram }}">Обсуждайте в чате</a>.
+                <a href="{{ links.discuss.telegram }}" rel="noopener">Обсуждайте в чате</a>.
             </p>
         </div>
 
+        <ul class="podcast-preview-grid">
+            {% for episode in collections.episodes | limit(6) %}
+                <li class="podcast-preview-grid__item">
+                    <article class="podcast-preview">
+                        <h2 class="podcast-preview__title">
+                            <span class="podcast-preview__number">
+                                {{ episode.episode }}
+                            </span>
+                            <a class="podcast-preview__link" href="/podcast/episodes/{{episode.episode}}/">
+                                {{ episode.title }}
+                            </a>
+                        </h2>
+                        <div class="podcast-preview__meta">
+                            <time class="podcast-preview__date" datetime="{{ episode.date | isoDate }}">
+                                {{ episode.date | ruDate }}
+                            </time>
+                        </div>
+                    </article>
+                </li>
+            {% endfor %}
+        </ul>
+
         <div class="podcast-page__notice notice">
-            <a class="notice__link" href="/podcast/episodes/">Список выпусков</a>
+            <a class="notice__link" href="/podcast/episodes/">Все выпуски</a>
         </div>
     </div>
 </main>

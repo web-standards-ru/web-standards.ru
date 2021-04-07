@@ -32,4 +32,32 @@ permalink: index.html
     <p class="notice">
         <a class="notice__link" href="/articles/">Все статьи</a>
     </p>
+
+    <h2 class="visually-hidden">Подкаст</h2>
+
+    <ul class="podcast-preview-grid">
+        {% for episode in collections.episodes | limit(6) %}
+            <li class="podcast-preview-grid__item">
+                <article class="podcast-preview">
+                    <h3 class="podcast-preview__title">
+                        <span class="podcast-preview__number">
+                            {{ episode.episode }}
+                        </span>
+                        <a class="podcast-preview__link" href="/podcast/episodes/{{episode.episode}}/">
+                            {{ episode.title }}
+                        </a>
+                    </h3>
+                    <div class="podcast-preview__meta">
+                        <time class="podcast-preview__date" datetime="{{ episode.date | isoDate }}">
+                            {{ episode.date | ruDate }}
+                        </time>
+                    </div>
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="notice">
+        <a class="notice__link" href="/podcast/episodes/">Все выпуски</a>
+    </div>
 </main>
