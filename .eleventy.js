@@ -94,12 +94,6 @@ module.exports = function(config) {
         );
     });
 
-    config.addFilter('filterCurrentPage', (array, page) => {
-        return array.filter(post =>
-            post.url != page.url
-        );
-    });
-
     config.addFilter('filterArticleTag', (tagsCollection) => {
         return tagsCollection.filter(
             tag => (

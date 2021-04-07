@@ -130,7 +130,7 @@ layout: page.njk
         {% set articleCardVariant = 'related' %}
 
         <ul class="articles articles{{ articleType }}">
-            {%- for article in collections.article | reverse | filterCurrentPage(page) | limit(3) -%}
+            {%- for article in relatedArticles -%}
                 <li class="articles__item articles__item{{ articleType }}">
                     {% include 'article-card.njk' %}
                 </li>
