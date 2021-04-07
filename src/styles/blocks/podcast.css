@@ -27,14 +27,16 @@
 .podcast__header {
     grid-column: 1 / -1;
     padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-grey-medium);
+    border-bottom: 1px solid var(--color-grey-lightest);
 }
 
 .podcast__number {
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
-.podcast__date {
+.podcast__date::before {
+    content: '· ';
+    margin-right: 8px;
     color: var(--color-grey-lighter);
 }
 
@@ -131,10 +133,13 @@
     padding: 0;
     color: var(--color-blue-darker);
     font-weight: 700;
+    font-family: inherit;
     background: none;
     border: none;
     cursor: pointer;
     appearance: none;
+    font-feature-settings: 'tnum' 1;
+    font-variant-numeric: tabular-nums;
 }
 
 .podcast__timeline-button:hover {

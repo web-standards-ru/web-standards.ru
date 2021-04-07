@@ -17,10 +17,18 @@
     text-align: center;
 }
 
+.podcast-page__content {
+    margin-bottom: 24px;
+}
+
 @media (min-width: 1024px) {
     .podcast-page__desc {
         margin-bottom: 48px;
         font-size: 21px;
+    }
+
+    .podcast-page__content {
+        margin-bottom: 48px;
     }
 }
 

@@ -19,7 +19,11 @@
 
 @media (min-width: 1024px) {
     .notice {
-        margin: 160px 0 60px;
+        margin: 160px 0;
+    }
+
+    .notice:last-child {
+        margin-bottom: 60px;
     }
 }
 
