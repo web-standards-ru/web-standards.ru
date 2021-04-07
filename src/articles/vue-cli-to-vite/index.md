@@ -85,9 +85,9 @@ npm i yorkie -D
 import { defineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
 export default defineConfig({
-  plugins: [
-    createVuePlugin(),
-  ],
+    plugins: [
+        createVuePlugin(),
+    ],
 })
 ```
 
@@ -97,10 +97,10 @@ export default defineConfig({
 import { defineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
 export default defineConfig({
-  [...],
-  server: {
-    port: 8080,
-  }
+    [...],
+    server: {
+        port: 8080,
+    }
 })
 ```
 
@@ -116,15 +116,15 @@ export default defineConfig({
 import { defineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
 export default defineConfig({
-  [...],
-  resolve: {
-    alias: [
-      {
-        find: '@',
-        replacement: path.resolve(__dirname, 'src')
-      }
-    ]
-  },
+    [...],
+    resolve: {
+        alias: [
+            {
+                find: '@',
+                replacement: path.resolve(__dirname, 'src')
+            }
+        ]
+    },
 })
 ```
 
@@ -136,9 +136,9 @@ export default defineConfig({
 
 ```js
 System.config({
-  paths: {
-    '@/*': './src/*',
-  },
+    paths: {
+        '@/*': './src/*',
+    },
 })
 ```
 
@@ -168,9 +168,9 @@ import DotsLoader from '@/components/DotsLoader.vue'
 
 ```js
 {
-  path: '/links',
-  name: 'linksPage',
-  component: () => import(/* webpackChunkName: "links" */ './views/LinksPage.vue'),
+    path: '/links',
+    name: 'linksPage',
+    component: () => import(/* webpackChunkName: "links" */ './views/LinksPage.vue'),
 },
 ```
 
@@ -178,9 +178,9 @@ import DotsLoader from '@/components/DotsLoader.vue'
 
 ```js
 {
-  path: '/links',
-  name: 'linksPage',
-  component: () => import'./views/LinksPage.vue'),
+    path: '/links',
+    name: 'linksPage',
+    component: () => import'./views/LinksPage.vue'),
 },
 ```
 
@@ -244,19 +244,19 @@ presets: ['**@babel/preset-env**']
 
 ```js
 module.exports = {
-  presets: ['@babel/preset-env'],
-  // For Jest not to be annoyed by 'import.meta.xxx'
-  plugins: [
-    function () {
-      return {
-        visitor: {
-          MetaProperty(path) {
-            path.replaceWithSourceString('process')
-          },
+    presets: ['@babel/preset-env'],
+    // For Jest not to be annoyed by 'import.meta.xxx'
+    plugins: [
+        function () {
+            return {
+                visitor: {
+                    MetaProperty(path) {
+                        path.replaceWithSourceString('process')
+                    },
+                },
+            }
         },
-      }
-    },
-  ],
+    ],
 }
 ```
 
@@ -282,23 +282,23 @@ npm i regenerator-runtime -D
 
 ```js
 module.exports = {
-  moduleFileExtensions: [
-    'js',
-    'json',
-    // tells Jest to handle `*.vue` files
-    'vue',
-  ],
-  transform: {
-    // process `*.vue` files with `vue-jest`
-    '.*\\.(vue)$': 'vue-jest',
-    // process `*.js` files with `babel-jest`
-    '.*\\.(js)$': 'babel-jest',
-  },
-  setupFiles: ['./setupTests'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  collectCoverage: false,
+    moduleFileExtensions: [
+        'js',
+        'json',
+        // tells Jest to handle `*.vue` files
+        'vue',
+    ],
+    transform: {
+        // process `*.vue` files with `vue-jest`
+        '.*\\.(vue)$': 'vue-jest',
+        // process `*.js` files with `babel-jest`
+        '.*\\.(js)$': 'babel-jest',
+    },
+    setupFiles: ['./setupTests'],
+    moduleNameMapper: {
+        '^@/(.*)$': '<rootDir>/src/$1',
+    },
+    collectCoverage: false,
 };
 ```
 
@@ -337,10 +337,10 @@ import 'regenerator-runtime/runtime';
 import { defineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
 export default defineConfig({
-  [...],
-  build: {
-    chunkSizeWarningLimit: 700, // Default is 500
-  },
+    [...],
+    build: {
+        chunkSizeWarningLimit: 700, // Default is 500
+    },
 })
 ```
 
@@ -363,11 +363,11 @@ import { defineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
 import visualizer from 'rollup-plugin-visualizer'
 export default defineConfig({
-  plugins: [
-    createVuePlugin(),
-    visualizer(),
-  ],
-  [...],
+    plugins: [
+        createVuePlugin(),
+        visualizer(),
+    ],
+    [...],
 })
 ```
 
@@ -392,8 +392,8 @@ export default defineConfig({
 
 **vue-cli / webpack**:
 
-- _ Простые изменения_: ~ 4 секунды 😕
-- _ Серьезные изменения_: я никогда не жду,  сам перезагружаю страницу.
+- _Простые изменения_: ~ 4 секунды 😕
+- _Серьезные изменения_: я никогда не жду,  сам перезагружаю страницу.
 
 ### Первая загрузка страницы
 
