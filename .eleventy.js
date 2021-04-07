@@ -49,6 +49,19 @@ module.exports = function(config) {
         return [...set].sort();
     });
 
+    /*
+        Коллекция для выпусков подкаста.
+        Формат данных одного выпуска:
+        - episode
+        - title
+        - date
+        - chapters
+            - time
+            - title
+        - content
+        - hosts
+        - audio
+    */
     config.addCollection('episodes', () => {
         const { getEpisodesData } = require('./src/helpers/podcasts-service');
         return getEpisodesData();
