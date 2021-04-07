@@ -25,12 +25,12 @@ const renderPermalink = (slug, opts, state, idx) => {
                 ['data-href', opts.permalinkHref(slug, state)],
                 ['aria-labelledby', `copy-${slug}`],
                 ['aria-label', 'Копировать ссылку на заголовок'],
-                ...Object.entries(opts.permalinkAttrs(slug, state))
+                ...Object.entries(opts.permalinkAttrs(slug, state)),
             ],
         }),
         new state.Token('html_button', 'button', -1),
         Object.assign(new state.Token('html_block', 'span', 1), {
-            content: `<span class="tooltip__label" role="tooltip" id="copy-${slug}">Скопировать ссылку</span>`
+            content: `<span class="tooltip__label" role="tooltip" id="copy-${slug}">Скопировать ссылку</span>`,
         }),
         new state.Token('html_span', 'span', -1),
     ];
@@ -77,7 +77,7 @@ const anchor = (md, opts) => {
 
                 let slug = token.attrGet('id');
 
-                if (slug == null) {
+                if (slug === null) {
                     slug = uniqueSlug(opts.slugify(title), slugs);
                     token.attrPush(['id', slug]);
                 }

@@ -4,7 +4,7 @@
     "start": "eleventy --serve --quiet",
     "editorconfig": "editorconfig-checker",
     "stylelint": "stylelint \"src/styles/**/*.css\"",
-    "eslint": "eslint src/scripts/**/*.js",
+    "eslint": "eslint src/**/*.js",
     "markdown": "remark 'src/articles/**/*.md' --quiet",
     "typograph": "remark",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
