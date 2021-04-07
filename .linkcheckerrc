@@ -1,14 +1,14 @@
 {
-    "allow-hash-href": true,
-    "http-always-get": true,
-    "external-only": true,
-    "http-status-ignore": [
-      301,
-      302,
-      308
-    ],
-    "url-ignore": [
-      "../../images/*",
-      "articles/*"
-    ]
+  "allow-hash-href": true,
+  "http-always-get": true,
+  "external-only": true,
+  "http-status-ignore": [
+    301,
+    302,
+    308
+  ],
+  "url-ignore": [
+    "../../images/*",
+    "articles/*"
+  ]
 }
