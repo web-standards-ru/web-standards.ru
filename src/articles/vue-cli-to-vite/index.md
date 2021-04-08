@@ -27,9 +27,9 @@ preview: 'В статье описан процесс миграции Vue CLI �
 Давайте удалим зависимость `@vue/cli-service` и заменим ее на `vite` 🚀
 
 ```diff
-"devDependencies": {
--  "@vue/cli-service": "4.3.1",
-+  "vite": "2.1.3",
+  "devDependencies": {
+-   "@vue/cli-service": "4.3.1",
++   "vite": "2.1.3",
 ```
 
 ```bash
@@ -40,10 +40,10 @@ npm i vite -D
 Вы можете также удалить все остальные зависимости, которые начинаются с `@vue/cli-plugin-xxx`, поскольку они все равно больше не будут работать, например:
 
 ```diff
-"devDependencies": {
--  "@vue/cli-plugin-babel": "4.3.1",
--  "@vue/cli-plugin-eslint": "4.3.1",
--  "@vue/cli-plugin-unit-jest": "4.3.1",
+  "devDependencies": {
+-   "@vue/cli-plugin-babel": "4.3.1",
+-   "@vue/cli-plugin-eslint": "4.3.1",
+-   "@vue/cli-plugin-unit-jest": "4.3.1",
 ```
 
 ```bash
@@ -53,8 +53,8 @@ npm un vue/cli-plugin-babel vue/cli-plugin-eslint vue/cli-plugin-unit-jest
 Если вы используете Vue2, нужно будет добавить плагин `vite-plugin-vue2` , который мы будем использовать в нашем `vite.config.js`:
 
 ```diff
-"devDependencies": {
-+  "vite-plugin-vue2": "1.4.2",
+  "devDependencies": {
++   "vite-plugin-vue2": "1.4.2",
 ```
 
 ```bash
@@ -72,9 +72,9 @@ npm i yorkie -D
 Мы заменим скрипт `serve` для Vue CLI на соответствующий скрипт для Vite:
 
 ```diff
-"scripts": {
--  "serve": "vue-cli-service serve",
-+  "dev": "vite",
+  "scripts": {
+-   "serve": "vue-cli-service serve",
++   "dev": "vite",
 ```
 
 Если вам ближе использование слова `serve` вместо `dev`, можете использовать и его.
