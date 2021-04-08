@@ -27,9 +27,9 @@ preview: 'В статье описан процесс миграции Vue CLI �
 Давайте удалим зависимость `@vue/cli-service` и заменим ее на `vite` 🚀
 
 ```diff
-  "devDependencies": {
--   "@vue/cli-service": "4.3.1",
-+   "vite": "2.1.3",
+    "devDependencies": {
+-       "@vue/cli-service": "4.3.1",
++       "vite": "2.1.3",
 ```
 
 ```bash
@@ -40,10 +40,10 @@ npm i vite -D
 Вы можете также удалить все остальные зависимости, которые начинаются с `@vue/cli-plugin-xxx`, поскольку они все равно больше не будут работать, например:
 
 ```diff
-  "devDependencies": {
--   "@vue/cli-plugin-babel": "4.3.1",
--   "@vue/cli-plugin-eslint": "4.3.1",
--   "@vue/cli-plugin-unit-jest": "4.3.1",
+    "devDependencies": {
+-       "@vue/cli-plugin-babel": "4.3.1",
+-       "@vue/cli-plugin-eslint": "4.3.1",
+-       "@vue/cli-plugin-unit-jest": "4.3.1",
 ```
 
 ```bash
@@ -53,8 +53,8 @@ npm un vue/cli-plugin-babel vue/cli-plugin-eslint vue/cli-plugin-unit-jest
 Если вы используете Vue2, нужно будет добавить плагин `vite-plugin-vue2` , который мы будем использовать в нашем `vite.config.js`:
 
 ```diff
-  "devDependencies": {
-+   "vite-plugin-vue2": "1.4.2",
+    "devDependencies": {
++       "vite-plugin-vue2": "1.4.2",
 ```
 
 ```bash
@@ -72,9 +72,9 @@ npm i yorkie -D
 Мы заменим скрипт `serve` для Vue CLI на соответствующий скрипт для Vite:
 
 ```diff
-  "scripts": {
--   "serve": "vue-cli-service serve",
-+   "dev": "vite",
+    "scripts": {
+-       "serve": "vue-cli-service serve",
++       "dev": "vite",
 ```
 
 Если вам ближе использование слова `serve` вместо `dev`, можете использовать и его.
@@ -90,16 +90,14 @@ npm i yorkie -D
 И наконец, мы должны заменить путь до фавиконки `<%= BASE_URL %>favicon.ico` на более простой `/favicon.ico` (Vite сможет отыскать его сам в папке `public`).
 
 ```diff
-     <meta charset="utf-8">
-     <meta charset="x-ua-compatible" content="ie=edge">
-     <meta charset="viewport" content="width=device-width, initial-scale=1">
--    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-+    <link rel="icon" href="/favicon.ico">
-     …
-     <div id="app"></div>
-+    <script type="module" src="/src/main.js"></script>
-   </body>
- </html>
+    <meta charset="utf-8">
+    <meta charset="x-ua-compatible" content="ie=edge">
+    <meta charset="viewport" content="width=device-width, initial-scale=1">
+-   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
++   <link rel="icon" href="/favicon.ico">
+    …
+    <div id="app"></div>
++   <script type="module" src="/src/main.js"></script>
 ```
 
 ## vite.config.js
@@ -222,12 +220,12 @@ import DotsLoader from '@/components/DotsLoader.vue'
 Если ваш роутер использует встроенную переменную окружения `BASE_URL`, то ее имя надо будет заменить на `import.meta.env.BASE_URL`:
 
 ```diff
-  const router = new Router({
-    mode: 'history',
--   base: process.env.BASE_URL,
-+   base: process.env.BASE_URL,
-    routes: [...firstLevelRoutes, ...backOfficeRoutes]
-  })
+    const router = new Router({
+        mode: 'history',
+-       base: process.env.BASE_URL,
++       base: process.env.BASE_URL,
+        routes: [...firstLevelRoutes, ...backOfficeRoutes]
+    })
 ```
 
 Другой встроенной переменной окружения является `import.meta.env.PROD`. Давайте будем использовать ее везде, где можем:
@@ -244,11 +242,11 @@ import DotsLoader from '@/components/DotsLoader.vue'
 Вот пример для моей переменной окружения `BACKEND_URL`:
 
 ```diff
-  export const backendInstance = axios.create({
--   baseURL: `${process.env.VUE_APP_BACKEND_URL}/api`,
-+   baseURL: `${import.meta.env.VITE_APP_BACKEND_URL}/api`,
-    timeout: 10000,
-  })
+    export const backendInstance = axios.create({
+-       baseURL: `${process.env.VUE_APP_BACKEND_URL}/api`,
++       baseURL: `${import.meta.env.VITE_APP_BACKEND_URL}/api`,
+        timeout: 10000,
+    })
 ```
 
 Файл `.env.local`:
