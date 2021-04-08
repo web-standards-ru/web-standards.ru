@@ -9,6 +9,17 @@
     margin-bottom: 30px;
 }
 
+.main__section {
+    padding-bottom: 10%;
+}
+
+@media (min-width: 800px) {
+    .main__section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
 .main__conference-link {
     margin-top: 40px;
 }

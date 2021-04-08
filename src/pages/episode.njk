@@ -5,7 +5,7 @@ pagination:
     data: collections.episodes
     size: 1
     alias: episode
-permalink: 'podcast/episodes/{{ episode.episode }}/index.html'
+permalink: 'podcast/{{ episode.episode }}/index.html'
 ---
 
 {% set hasChapters = episode.chapters and episode.chapters.length > 0 %}
