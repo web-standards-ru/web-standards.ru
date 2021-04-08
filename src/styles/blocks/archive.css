@@ -93,3 +93,7 @@
     font-weight: 900;
     font-stretch: expanded;
 }
+
+.page--dark-mode .archive__tags-link:not([href]) {
+    color: #ffffff;
+}
