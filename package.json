@@ -8,7 +8,7 @@
     "markdown": "remark 'src/articles/**/*.md' --quiet",
     "typograph": "remark",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
-    "links": "npx link-checker 'dist'",
+    "links": "link-checker 'dist'",
     "test": "npm run editorconfig && npm run stylelint && npm run markdown && npm run eslint && npm run links",
     "build": "eleventy && gulp build",
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
