@@ -1,8 +1,6 @@
 .podcast-feature-grid__item:first-child {
     flex-basis: 100%;
 }
-@media not all and (min-width: 1280px) {
-}
 
 @media (min-width: 1280px) {
     .podcast-feature-grid__item {
