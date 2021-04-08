@@ -11,7 +11,7 @@
     padding: 0 16px;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 460px) {
     .article-card {
         grid-template-areas:
             'picture title title'
