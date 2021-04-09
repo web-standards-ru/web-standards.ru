@@ -170,18 +170,11 @@ System.config({
 
 ## Расширение `.vue` и импорты
 
-Для Webpack было совершенно не обязательно указывать расширение `.vue` для файлов компонентов, но не для Vite.
+Для Webpack было совершенно не обязательно указывать расширение `.vue` для файлов компонентов, но не для Vite. Нужно заменить:
 
-Вы должны заменить:
-
-```js
-import DotsLoader from '@/components/DotsLoader'
-```
-
-на:
-
-```js
-import DotsLoader from '@/components/DotsLoader.vue'
+```diff
+- import DotsLoader from '@/components/DotsLoader'
++ import DotsLoader from '@/components/DotsLoader.vue'
 ```
 
 Не по теме, но из моего опыта: использовать импорты с полными путями — лучшая практика.
