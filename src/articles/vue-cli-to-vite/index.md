@@ -215,7 +215,7 @@ System.config({
     const router = new Router({
         mode: 'history',
 -       base: process.env.BASE_URL,
-+       base: process.env.BASE_URL,
++       base: import.meta.env.BASE_URL,
         routes: [...firstLevelRoutes, ...backOfficeRoutes]
     })
 ```
