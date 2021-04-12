@@ -1,5 +1,4 @@
 ---
-title: Выпуски подкаста
 layout: page.njk
 pagination:
     data: collections.episode
@@ -21,4 +20,3 @@ permalink: 'podcast/episodes/{{ episode.fileSlug }}/index.html'
     {# TODO: вынести в layout и там генерировать как {{ content | safe }} #}
     {{ episode.templateContent | safe }}
 </main>
-
