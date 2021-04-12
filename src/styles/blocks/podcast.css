@@ -131,16 +131,17 @@
 
 .podcast__timeline-button {
     margin: 0;
+    margin-right: 5px;
     padding: 0;
     color: var(--color-blue-darker);
     font-weight: 700;
+    font-size: 15px;
     font-family: inherit;
+    font-family: 'Rostin', monospace;
     background: none;
     border: none;
     cursor: pointer;
     appearance: none;
-    font-feature-settings: 'tnum' 1;
-    font-variant-numeric: tabular-nums;
 }
 
 .podcast__timeline-button:hover {
