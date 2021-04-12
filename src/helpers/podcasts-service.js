@@ -107,7 +107,7 @@ async function getEpisodesData() {
         });
 
         XMLParser.on('error', err => {
-            console.error(err);
+            // console.error(err);
             reject(err);
         });
 
