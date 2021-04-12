@@ -7,8 +7,8 @@
     margin-left: auto;
     padding-right: 16px;
     padding-bottom: 48px;
-    padding-left: 16px;
     padding-bottom: 48px;
+    padding-left: 16px;
 }
 
 @media (min-width: 736px) {
@@ -122,7 +122,10 @@
 }
 
 .podcast__timeline-chapters {
+    margin: 0;
+    padding: 0;
     line-height: 1.4;
+    list-style: none;
 }
 
 .podcast__timeline-chapter:not(:last-child) {
