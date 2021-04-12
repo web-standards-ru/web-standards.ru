@@ -21,8 +21,11 @@
     "@mavrin/remark-typograf": "^2.2.0",
 =======
     "@mavrin/remark-typograf": "^2.1.6",
+<<<<<<< HEAD
     "@octokit/core": "^3.3.2",
 >>>>>>> 5a5aa58 (Начало работы над страницами подкаста)
+=======
+>>>>>>> 9378c6d (Рефактор)
     "autoprefixer": "^10.2.5",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.2",
