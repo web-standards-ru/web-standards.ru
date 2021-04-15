@@ -1,6 +1,5 @@
 .podcast {
     display: grid;
-    grid-template-columns: 320px 1fr;
     grid-gap: 48px;
     max-width: 960px;
     margin-right: auto;
@@ -22,6 +21,12 @@
     .podcast {
         padding-right: 32px;
         padding-left: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .podcast {
+        grid-template-columns: 320px 1fr;
     }
 }
 
