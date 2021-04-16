@@ -13,7 +13,7 @@ layout: article.njk
 tags:
     - article
     - soft-skills
-preview: ''
+preview: 'Если бы в вашем распоряжении было 15 минут времени ваших разработчиков, и вашей целью было помочь им стать более эффективными/продуктивными в своей работе, обучив их чему-то, что вы сами знаете, что бы вы выбрали? Данный пост — мой ответ на этот вопрос. Его чтение займёт приблизительно 15 минут, и я верю, что он (помимо других преимуществ) вероятно может сберечь вам сотни часов работы по разработке приложений в течение вашей карьеры. Я считаю, что это самый полезный совет, который я могу дать, и я воодушевлён возможностью поговорить о нём 🙂'
 ---
 
 # Effective Collaboration with Product and Design
@@ -236,10 +236,7 @@ Also, I submit Exhibit B: *creative coding*:
     <p>
         Lines grow outward, and upon colliding with another line, it produces a new line at a different angle.
     </p>
-    <p>
-        <a href="https://twitter.com/hashtag/javascript">#javascript</a> <a href="https://twitter.com/hashtag/generative">#generative</a> <a href="https://twitter.com/hashtag/canvas">#canvas</a>
-    </p>
-    <video preload="none" poster="https://pbs.twimg.com/tweet_video_thumb/EM0vLUgXsAETAj1.jpg" src="https://video.twimg.com/tweet_video/EM0vLUgXsAETAj1.mp4" width="640" height="640" type="video/mp4" controls loop></video>
+    <video src="video/1.mp4" poster="video/1.png" width="800" height="800" type="video/mp4" preload="none" mute controls loop></video>
     <footer>
         <cite>
             <a href="https://twitter.com/mattdesl/status/1210675775747301381">@mattdesl</a>
@@ -251,7 +248,7 @@ Also, I submit Exhibit B: *creative coding*:
     <p>
         :)
     </p>
-    <video preload="none" poster="https://pbs.twimg.com/tweet_video_thumb/EJzili8UcAAD663.jpg" src="https://video.twimg.com/tweet_video/EJzili8UcAAD663.mp4" width="720" height="800" type="video/mp4" controls loop></video>
+    <video src="video/2.mp4" poster="video/2.png" width="800" height="720" type="video/mp4" preload="none" mute controls loop></video>
     <footer>
         <cite>
             <a href="https://twitter.com/beesandbombs/status/1197081207894183936">@beesandbombs</a>
@@ -263,10 +260,7 @@ Also, I submit Exhibit B: *creative coding*:
     <p>
         Perlin noise overprints
     </p>
-    <p>
-        <a href="https://twitter.com/hashtag/moiré">#moiré</a> <a href="https://twitter.com/hashtag/plottertwitter">#plottertwitter</a>
-    </p>
-    <img alt="" src="https://pbs.twimg.com/media/ENMmZYVU4AEXlsD?format=jpg" width="900" height="1200">
+    <img src="images/1.jpg" width="800" height="800" alt="">
     <footer>
         <cite>
             <a href="https://twitter.com/netpraxis/status/1212354990963970048">@netpraxis</a>
