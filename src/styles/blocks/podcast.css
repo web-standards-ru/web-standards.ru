@@ -120,11 +120,30 @@
 }
 
 .podcast__timecode-heading {
-    margin: 7px 0 16px;
-    font-size: inherit;
+    margin: 0 0 16px 0;
+    font-size: 16px;
     font-stretch: expanded;
     line-height: 1.2;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+    .podcast__timecode-heading {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .podcast__timecode-heading {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .podcast__timecode-heading {
+        font-size: 24px;
+    }
 }
 
 .podcast__timecode-chapters {
