@@ -6,6 +6,8 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/scripts');
     config.addPassthroughCopy('src/**/*.(html|gif|jpg|png|svg|mp4|webm|zip)');
 
+    config.setUseGitIgnore(false);
+
     // Markdown Options
 
     const markdownItAnchor = require('./src/helpers/markdownItAnchor.js');
@@ -49,6 +51,24 @@ module.exports = function(config) {
         return [...set].sort();
     });
 
+    /*
+        Коллекция для выпусков подкаста.
+        Формат данных одного выпуска:
+        - episode
+        - title
+        - date
+        - chapters
+            - time
+            - title
+        - content
+        - hosts
+        - audio
+    */
+    config.addCollection('episodes', () => {
+        const { getEpisodesData } = require('./src/helpers/podcasts-service');
+        return getEpisodesData();
+    })
+
     config.addFilter('limit', (array, limit) => {
         return array.slice(0, limit);
     });
@@ -72,7 +92,7 @@ module.exports = function(config) {
 
     config.addFilter('filterArticles', (array) => {
         return array.filter(post =>
-            post.inputPath.startsWith('./src/articles/')
+            post?.inputPath?.startsWith('./src/articles/')
         );
     });
 
@@ -155,6 +175,13 @@ module.exports = function(config) {
         });
         return markdown.render(value);
     });
+
+    // преобразует временные метки вида `00:14:30` в количество секунд
+    config.addFilter('timecode', (value) => {
+        return value.split(':').reduceRight((acc, item, index, items) => {
+            return acc += parseFloat(item) * Math.pow(60, items.length - 1 - index);
+        }, 0)
+    })
 
     // Трансформации
 

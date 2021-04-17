@@ -1,0 +1,66 @@
+---
+title: Подкаст
+layout: page.njk
+pagination:
+    data: collections.episodes
+    size: 1
+    alias: episode
+permalink: 'podcast/{{ episode.episode }}/index.html'
+---
+
+{% set hasChapters = episode.chapters and episode.chapters.length > 0 %}
+
+<main class="main">
+    <article class="podcast {% if not hasChapters %}podcast--no-chapters{% endif %}">
+        <header class="podcast__header">
+            <span class="podcast__number">Выпуск {{ episode.episode }}</span>
+            <time class="podcast__date" datetime="{{ episode.date | isoDate }}">
+                {{ episode.date | ruDate }}
+            </time>
+            <h1 class="article__title podcast__title">
+                {{ episode.title }}
+            </h1>
+            <section class="podcast__hosts">
+                <h2 class="podcast__hosts-heading">Ведущие:</h2>
+                <ul class="podcast__hosts-list">
+                    {% for host in episode.hosts %}
+                        <li class="podcast__host">{{ host }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </header>
+
+        <audio
+            class="podcast__player"
+            src="{{ episode.audio }}"
+            controls
+            preload="metadata">
+        </audio>
+
+        {% if hasChapters %}
+            <section class="podcast__timecode">
+                <h2 class="podcast__timecode-heading">Темы</h2>
+                <dl class="podcast__timecode-chapters">
+                    {% for chapter in episode.chapters %}
+                        <div class="podcast__timecode-chapter">
+                            <dt class="podcast__timecode-time">
+                                <button
+                                    class="podcast__timecode-button"
+                                    type="button"
+                                    name="timecode"
+                                    value="{{ chapter.time | timecode }}">
+                                    {{ chapter.time }}
+                                </button>
+                            </dt>
+                            <dd class="podcast__timecode-title">{{ chapter.title }}</dd>
+                        </div>
+                    {% endfor %}
+                </dl>
+            </section>
+        {% endif %}
+
+        <div class="podcast__content content">
+            {{ episode.content | safe }}
+        </div>
+    </article>
+</main>
