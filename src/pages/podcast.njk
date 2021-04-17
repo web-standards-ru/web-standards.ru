@@ -1,0 +1,32 @@
+---
+title: Подкаст
+layout: page.njk
+permalink: podcast/index.html
+---
+
+{% from "podcast-preview.njk" import PodcastPreview %}
+
+<main class="main">
+    <div class="podcasts-block archive">
+        <h1 class="podcasts-block__title archive__title">{{ title }}</h1>
+
+        <div class="podcasts-block__section">
+            {% include "podcast-feature-grid.njk" %}
+        </div>
+
+        <div class="podcasts-block__section">
+            <ul class="podcast-preview-grid">
+                {% for episode in filteredPodcasts.restEpisodes %}
+                    <li class="podcast-preview-grid__item">
+                        {{ PodcastPreview({
+                            episode: episode.episode,
+                            title:  episode.title,
+                            link: '/podcast/' + episode.episode + '/',
+                            date: episode.date
+                        }) }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,33 @@
+{% set menu = [{
+    title: 'Статьи',
+    url: '/articles/'
+},{
+    title: 'Подкаст',
+    url: '/podcast/'
+},{
+    title: 'Календарь'
+},{
+    title: 'О проекте'
+}] %}
+
+<ul class="menu__list" id="menu__list">
+    {% for item in menu %}
+        {% if item.url and item.url == page.url %}
+            {% set currentPage = true %}
+        {% else %}
+            {% set currentPage = false %}
+        {% endif %}
+        <li class="menu__item">
+            <a class="menu__link{% if not item.url %} menu__link--inactive{% endif %}{% if currentPage %} menu__link--current{% endif %}"{% if item.url and not currentPage %} href="{{ item.url }}"{% endif %}>
+                {{ item.title }}
+            </a>
+        </li>
+    {% endfor %}
+    <li class="menu__item">
+        <a class="menu__link menu__link--patreon" href="https://www.patreon.com/webstandards_ru">Поддержать
+            {% if page.url == '/' %}
+                <span class="menu__link--extension"> проект</span>
+            {% endif %}
+        </a>
+    </li>
+</ul>

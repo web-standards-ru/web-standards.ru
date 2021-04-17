@@ -1,0 +1,12 @@
+.podcast-preview-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 1px 0 0 1px;
+}
+
+.podcast-preview-grid__item {
+    display: grid;
+    flex: 1 1 420px;
+    margin: -1px 0 0 -1px;
+}

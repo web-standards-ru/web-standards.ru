@@ -381,7 +381,7 @@
 
 /* Letter */
 
-.content > p:first-of-type::first-letter {
+.content > p:first-child::first-letter {
     float: left;
     margin-top: 0.13em;
     margin-left: -5px;
