@@ -32,29 +32,30 @@ permalink: 'podcast/{{ episode.episode }}/index.html'
 
         <audio
             class="podcast__player"
-            src="{{episode.audio}}"
+            src="{{ episode.audio }}"
             controls
-            preload="metadata"
-        ></audio>
+            preload="metadata">
+        </audio>
 
         {% if hasChapters %}
-            <section class="podcast__timeline">
-                <h2 class="podcast__timeline-heading">Темы:</h2>
-                <ul class="podcast__timeline-chapters">
+            <section class="podcast__timecode">
+                <h2 class="podcast__timecode-heading">Темы выпуска</h2>
+                <dl class="podcast__timecode-chapters">
                     {% for chapter in episode.chapters %}
-                        <li class="podcast__timeline-chapter">
-                            <button
-                                class="podcast__timeline-button"
-                                type="button"
-                                name="timecode"
-                                value="{{chapter.time | timecode}}"
-                            >
-                                {{chapter.time}}
-                            </button>
-                            <span>{{chapter.title}}</span>
-                        </li>
+                        <div class="podcast__timecode-chapter">
+                            <dt class="podcast__timecode-time">
+                                <button
+                                    class="podcast__timecode-button"
+                                    type="button"
+                                    name="timecode"
+                                    value="{{ chapter.time | timecode }}">
+                                    {{ chapter.time }}
+                                </button>
+                            </dt>
+                            <dd class="podcast__timecode-title">{{ chapter.title }}</dd>
+                        </div>
                     {% endfor %}
-                </ul>
+                </dl>
             </section>
         {% endif %}
 
@@ -63,4 +64,3 @@ permalink: 'podcast/{{ episode.episode }}/index.html'
         </div>
     </article>
 </main>
-
