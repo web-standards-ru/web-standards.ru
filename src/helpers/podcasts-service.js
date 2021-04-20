@@ -48,7 +48,7 @@ async function getEpisodesData() {
             if (name === 'item') {
                 const DOM = parseHTML(currentItem.description);
 
-                const titles = Array.from(DOM.window.document.querySelectorAll('h2'));
+                const titles = Array.from(DOM.document.querySelectorAll('h2'));
 
                 // удаляем раздел с ведущими из контента
                 const hostsTitle = titles.filter(title => title.textContent === 'Ведущие' || title.textContent === 'Hosts')[0];
@@ -82,7 +82,7 @@ async function getEpisodesData() {
                     title: currentItem.title.replace(currentItem['itunes:episode'] + '. ', ''),
                     date: new Date(currentItem.pubDate),
                     chapters,
-                    content: DOM.window.document.body.innerHTML,
+                    content: DOM.document.toString(),
                     hosts: currentItem['itunes:author'].split(',').map(v => v.trim()),
                     audio: currentItem.guid,
                 });
