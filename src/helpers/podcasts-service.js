@@ -2,7 +2,7 @@ const https = require('https');
 const { once } = require('events');
 
 const NodeXMLStream = require('node-xml-stream');
-const { JSDOM } = require('jsdom');
+const { parseHTML } = require('linkedom');
 
 const RSS_URL = 'https://web-standards.ru/podcast/feed/';
 
@@ -46,7 +46,7 @@ async function getEpisodesData() {
 
         XMLParser.on('closetag', (name) => {
             if (name === 'item') {
-                const DOM = new JSDOM(currentItem.description);
+                const DOM = parseHTML(currentItem.description);
 
                 const titles = Array.from(DOM.window.document.querySelectorAll('h2'));
 
@@ -107,7 +107,6 @@ async function getEpisodesData() {
         });
 
         XMLParser.on('error', err => {
-            // console.error(err);
             reject(err);
         });
 
