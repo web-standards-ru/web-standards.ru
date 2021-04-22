@@ -79,17 +79,6 @@ module.exports = function(config) {
         return array.slice(0, limit);
     });
 
-    config.addFilter('filterIndexArticles', (array) => {
-        const featured = array.find((item) => item.data.featured);
-        let notFeatured = [];
-        for (let i = 0; notFeatured.length < 4; i++) {
-            if (!array[i].data.featured) {
-                notFeatured.push(array[i]);
-            }
-        }
-        return [featured, ...notFeatured];
-    });
-
     config.addFilter('addHyphens', (content, maxLength = 0) => {
         if (!content || content.length <= maxLength) {
             return content;
