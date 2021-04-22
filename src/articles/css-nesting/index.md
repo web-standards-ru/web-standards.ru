@@ -1,6 +1,6 @@
 ---
 title: 'CSS-нестинг — не всё так просто'
-date: 2021-04-21
+date: 2021-04-23
 author: roman-dvornov
 editors:
     - vadim-makeev
