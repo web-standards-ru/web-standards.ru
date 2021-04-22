@@ -5,7 +5,6 @@ author: igor-korovchenko
 editors:
     - vadim-makeev
 tags:
-    - article
     - js
 hero:
     src: images/cover.png

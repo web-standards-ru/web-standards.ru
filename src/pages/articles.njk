@@ -10,7 +10,7 @@ permalink: articles/index.html
 
         {% set articleType %}{{ '--articles' }}{% endset %}
 
-        {%- for year in collections.article | mapToYears | reverse -%}
+        {%- for year in collections.articles | mapToYears | reverse -%}
             <time class="archive__year" datetime="{{year.year}}-01-01">{{ year.year }}</time>
             <ul class="archive__articles articles articles{{ articleType }}">
                 {%- for article in year.articles | reverse -%}

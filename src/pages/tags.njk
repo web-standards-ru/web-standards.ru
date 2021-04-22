@@ -10,7 +10,7 @@ permalink: /articles/tags/
     </div>
 
     <p class="archive__tags">
-        {% for tag in collections.tagList | filterArticleTag %}
+        {% for tag in collections.tagList %}
             <a class="archive__tags-link" href="/articles/tags/{{ tag | slug }}">
                 {{- tag -}}
             </a>{% if not loop.last %}, {% endif %}

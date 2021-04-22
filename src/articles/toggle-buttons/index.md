@@ -10,7 +10,6 @@ translators:
 editors:
     - vadim-makeev
 tags:
-    - article
     - html
     - css
     - a11y

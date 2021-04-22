@@ -14,15 +14,14 @@ permalink: articles/feed/index.xml
         <language>{{ language }}</language>
         <link>{{ url }}/</link>
 
-        {%- for article in collections.article | filterLastArticles -%}
-            <lastBuildDate>{{ article.date.toUTCString() }}</lastBuildDate>
-        {%- endfor -%}
+        {% set lastArticle = collections.articles | last %}
+        <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastBuildDate>
 
         <atom:link href="{{ url }}/feed/" rel="self" type="application/rss+xml"/>
 
         {% set anchors = r/<span class="tooltip">.*span>/g %}
 
-        {%- for article in collections.article | reverse  %}
+        {%- for article in collections.articles | reverse  %}
             <item>
                 <title>{{ article.data.title }}</title>
                 <link>{{ domain }}{{ article.url }}</link>

@@ -17,8 +17,8 @@ layout: page.njk
                     <time class="article__date" datetime="{{ date | isoDate }}" itemprop="datePublished">
                         {{ date | ruDate }}
                     </time>
-                    <ul class="article__tags" itemprop="keywords" content="{{ tags | filterArticleTag | join(', ') }}">
-                        {%- for tag in tags | filterArticleTag -%}
+                    <ul class="article__tags" itemprop="keywords" content="{{ tags | join(', ') }}">
+                        {%- for tag in tags -%}
                             <li class="article__tags-item">
                                 <a class="article__link" href="/articles/tags/{{ tag }}">
                                     {{ tag }}

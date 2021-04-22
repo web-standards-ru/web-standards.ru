@@ -18,7 +18,7 @@ permalink: index.html
         <h2 class="visually-hidden">Статьи</h2>
 
         <ul class="articles articles{{ articleType }}">
-            {%- for article in collections.article | reverse | filterIndexArticles -%}
+            {%- for article in collections.articles | reverse | filterIndexArticles -%}
                 <li class="
                     articles__item
                     articles__item{{ articleType }}

@@ -65,11 +65,15 @@ module.exports = function(config) {
     config.addCollection('episodes', () => {
         const { getEpisodesData } = require('./src/helpers/podcasts-service');
         return getEpisodesData();
-    })
+    });
 
     config.addCollection('people', (collectionAPI) => {
         return collectionAPI.getFilteredByGlob('src/people/*/*.md');
-    })
+    });
+
+    config.addCollection('articles', (collectionAPI) => {
+        return collectionAPI.getFilteredByGlob('src/articles/*/*.md');
+    });
 
     config.addFilter('limit', (array, limit) => {
         return array.slice(0, limit);
@@ -84,27 +88,6 @@ module.exports = function(config) {
             }
         }
         return [featured, ...notFeatured];
-    });
-
-    config.addFilter('filterLastArticles', (array) => {
-        let lastElement = [];
-        lastElement.push(array[array.length - 1]);
-        return lastElement;
-    });
-
-    config.addFilter('filterArticles', (array) => {
-        return array.filter(post =>
-            post?.inputPath?.startsWith('./src/articles/')
-        );
-    });
-
-    config.addFilter('filterArticleTag', (tagsCollection) => {
-        return tagsCollection.filter(
-            tag => (
-                tag !== 'article' &&
-                tag !== 'people'
-            )
-        );
     });
 
     config.addFilter('addHyphens', (content, maxLength = 0) => {
