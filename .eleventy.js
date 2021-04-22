@@ -67,6 +67,10 @@ module.exports = function(config) {
         return getEpisodesData();
     })
 
+    config.addCollection('people', (collectionAPI) => {
+        return collectionAPI.getFilteredByGlob('src/people/*/*.md');
+    })
+
     config.addFilter('limit', (array, limit) => {
         return array.slice(0, limit);
     });
