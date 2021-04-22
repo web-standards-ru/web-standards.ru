@@ -30,5 +30,24 @@ module.exports = {
             }
             return [featured, ...notFeatured];
         },
+
+        articlesGroupsByYears: function(data) {
+            const { articles } = data.collections;
+
+            const articlesByYear = {};
+            articles.forEach((article) => {
+                const year = new Date(article.date).getFullYear();
+                if (!articlesByYear[year]) {
+                    articlesByYear[year] = [];
+                }
+                articlesByYear[year].push(article);
+            });
+            return Object.getOwnPropertyNames(articlesByYear).map((year) => {
+                return {
+                    year,
+                    articles: articlesByYear[year].reverse(),
+                };
+            }).reverse();
+        },
     },
 };
