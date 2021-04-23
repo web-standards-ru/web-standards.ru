@@ -1,5 +1,5 @@
 ---
-title: 'CSS-нестинг — не всё так просто'
+title: 'CSS-нестинг — больше, чем сахар'
 date: 2021-04-23
 author: roman-dvornov
 editors:
