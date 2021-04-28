@@ -197,7 +197,7 @@ System.config({
 {
     path: '/links',
     name: 'linksPage',
-    component: () => import'./views/LinksPage.vue'),
+    component: () => import('./views/LinksPage.vue'),
 },
 ```
 
