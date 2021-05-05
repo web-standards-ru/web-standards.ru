@@ -11,7 +11,6 @@ editors:
     - vadim-makeev
 layout: article.njk
 tags:
-    - article
     - performance
 preview: 'Я недавно переносил свои проекты на Vue 2 со стэка Vue CLI и Webpack на Vite. После того, как я сделал это в третий раз, у меня сложилось представление об этом процессе, которое я излагаю в этой статье.'
 ---

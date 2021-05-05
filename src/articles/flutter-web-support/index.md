@@ -11,7 +11,6 @@ editors:
     - vadim-makeev
 layout: article.njk
 tags:
-    - article
     - performance
 preview: 'Продакт-менеджер Google Марьям Хаснани рассказывает о возможностях Flutter для веба, который теперь можно использовать как цель для сборки в стабильной ветке фреймворка.'
 ---

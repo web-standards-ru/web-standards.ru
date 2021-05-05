@@ -7,7 +7,6 @@ editors:
     - vasiliy-dudin
     - olga-aleksashenko
 tags:
-    - article
     - a11y
 preview: 'Краткий обзор первой рабочей версии черновика WCAG 3.0.'
 hero:

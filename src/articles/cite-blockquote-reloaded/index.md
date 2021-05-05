@@ -12,7 +12,6 @@ editors:
     - vadim-makeev
     - olga-aleksashenko
 tags:
-    - article
     - html
 preview: 'Недавно в спецификации HTML было изменено определение элементов <blockquote> и <cite>. В статье рассказывается, что это значит для разработчиков.'
 ---
