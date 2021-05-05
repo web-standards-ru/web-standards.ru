@@ -1,6 +1,6 @@
 ---
 title: 'Ищем баланс между нативным и кастомным селектом'
-date: 2020-11-10
+date: 2021-05-06
 author: sandrina-pereira
 source:
     title: 'Striking a Balance Between Native and Custom Select Elements'
