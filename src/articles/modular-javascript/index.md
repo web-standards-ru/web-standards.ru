@@ -5,7 +5,6 @@ author: alfreds-genkins
 editors:
     - vadim-makeev
 tags:
-    - article
     - javascript
 ---
 
