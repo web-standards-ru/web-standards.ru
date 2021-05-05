@@ -30,7 +30,7 @@ module.exports = {
         },
 
         relatedArticles: function(data) {
-            const articles = data.collections.article;
+            const articles = data.collections.articles;
 
             if (!articles) {
                 return null;

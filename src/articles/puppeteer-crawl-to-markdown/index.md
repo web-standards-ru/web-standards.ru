@@ -10,7 +10,6 @@ translators:
 editors:
     - vadim-makeev
 tags:
-    - article
     - js
 preview: 'В этой статье я опишу, как с помощью Puppeteer найти все статьи на странице, открыть их одну за другой, извлечь контент, сконвертировать в Markdown и сохранить в отдельных файлах.'
 hero:
