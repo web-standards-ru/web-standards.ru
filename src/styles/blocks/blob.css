@@ -2,15 +2,8 @@
 
 .blob {
     contain: strict;
-}
-
-.blob::before {
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    left: -1px;
-    z-index: 1;
+    -webkit-mask-size: cover;
+            mask-size: cover;
 }
 
 /* Colors */
@@ -33,32 +26,39 @@
 
 /* Crop */
 
-.blob--shape-1::before {
-    content: url('/images/shape/1.svg');
+.blob--shape-1 {
+    -webkit-mask-image: url('/images/shape/1.svg');
+            mask-image: url('/images/shape/1.svg');
 }
 
-.blob--shape-2::before {
-    content: url('/images/shape/2.svg');
+.blob--shape-2 {
+    -webkit-mask-image: url('/images/shape/2.svg');
+            mask-image: url('/images/shape/2.svg');
 }
 
-.blob--shape-3::before {
-    content: url('/images/shape/3.svg');
+.blob--shape-3 {
+    -webkit-mask-image: url('/images/shape/3.svg');
+            mask-image: url('/images/shape/3.svg');
 }
 
-.blob--shape-4::before {
-    content: url('/images/shape/4.svg');
+.blob--shape-4 {
+    -webkit-mask-image: url('/images/shape/4.svg');
+            mask-image: url('/images/shape/4.svg');
 }
 
-.blob--shape-5::before {
-    content: url('/images/shape/5.svg');
+.blob--shape-5 {
+    -webkit-mask-image: url('/images/shape/5.svg');
+            mask-image: url('/images/shape/5.svg');
 }
 
-.blob--shape-6::before {
-    content: url('/images/shape/6.svg');
+.blob--shape-6 {
+    -webkit-mask-image: url('/images/shape/6.svg');
+            mask-image: url('/images/shape/6.svg');
 }
 
-.blob--shape-7::before {
-    content: url('/images/shape/7.svg');
+.blob--shape-7 {
+    -webkit-mask-image: url('/images/shape/7.svg');
+            mask-image: url('/images/shape/7.svg');
 }
 
 /* Photo */
