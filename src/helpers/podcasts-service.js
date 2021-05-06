@@ -2,7 +2,7 @@ const https = require('https');
 const { once } = require('events');
 
 const NodeXMLStream = require('node-xml-stream');
-const { JSDOM } = require('jsdom');
+const { parseHTML } = require('linkedom');
 
 const RSS_URL = 'https://web-standards.ru/podcast/feed/';
 
@@ -46,9 +46,9 @@ async function getEpisodesData() {
 
         XMLParser.on('closetag', (name) => {
             if (name === 'item') {
-                const DOM = new JSDOM(currentItem.description);
+                const DOM = parseHTML(currentItem.description);
 
-                const titles = Array.from(DOM.window.document.querySelectorAll('h2'));
+                const titles = Array.from(DOM.document.querySelectorAll('h2'));
 
                 // удаляем раздел с ведущими из контента
                 const hostsTitle = titles.filter(title => title.textContent === 'Ведущие' || title.textContent === 'Hosts')[0];
@@ -82,7 +82,7 @@ async function getEpisodesData() {
                     title: currentItem.title.replace(currentItem['itunes:episode'] + '. ', ''),
                     date: new Date(currentItem.pubDate),
                     chapters,
-                    content: DOM.window.document.body.innerHTML,
+                    content: DOM.document.toString(),
                     hosts: currentItem['itunes:author'].split(',').map(v => v.trim()),
                     audio: currentItem.guid,
                 });
@@ -107,7 +107,6 @@ async function getEpisodesData() {
         });
 
         XMLParser.on('error', err => {
-            // console.error(err);
             reject(err);
         });
 
