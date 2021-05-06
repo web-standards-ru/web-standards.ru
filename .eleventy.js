@@ -65,42 +65,18 @@ module.exports = function(config) {
     config.addCollection('episodes', () => {
         const { getEpisodesData } = require('./src/helpers/podcasts-service');
         return getEpisodesData();
-    })
+    });
+
+    config.addCollection('people', (collectionAPI) => {
+        return collectionAPI.getFilteredByGlob('src/people/*/*.md');
+    });
+
+    config.addCollection('articles', (collectionAPI) => {
+        return collectionAPI.getFilteredByGlob('src/articles/*/*.md');
+    });
 
     config.addFilter('limit', (array, limit) => {
         return array.slice(0, limit);
-    });
-
-    config.addFilter('filterIndexArticles', (array) => {
-        const featured = array.find((item) => item.data.featured);
-        let notFeatured = [];
-        for (let i = 0; notFeatured.length < 4; i++) {
-            if (!array[i].data.featured) {
-                notFeatured.push(array[i]);
-            }
-        }
-        return [featured, ...notFeatured];
-    });
-
-    config.addFilter('filterLastArticles', (array) => {
-        let lastElement = [];
-        lastElement.push(array[array.length - 1]);
-        return lastElement;
-    });
-
-    config.addFilter('filterArticles', (array) => {
-        return array.filter(post =>
-            post?.inputPath?.startsWith('./src/articles/')
-        );
-    });
-
-    config.addFilter('filterArticleTag', (tagsCollection) => {
-        return tagsCollection.filter(
-            tag => (
-                tag !== 'article' &&
-                tag !== 'people'
-            )
-        );
     });
 
     config.addFilter('addHyphens', (content, maxLength = 0) => {
@@ -127,23 +103,6 @@ module.exports = function(config) {
 
     config.addFilter('addLoadingLazy', (content) => {
         content.replace(/<img(?!.*loading)/g, '<img loading="lazy"');
-    });
-
-    config.addFilter('mapToYears', (articlesList) => {
-        const articlesByYear = {};
-        articlesList.forEach((article) => {
-            const year = new Date(article.date).getFullYear();
-            if (!articlesByYear[year]) {
-                articlesByYear[year] = [];
-            }
-            articlesByYear[year].push(article);
-        });
-        return Object.getOwnPropertyNames(articlesByYear).map((year) => {
-            return {
-                year,
-                articles: articlesByYear[year],
-            };
-        });
     });
 
     // Даты

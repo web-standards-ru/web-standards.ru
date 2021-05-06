@@ -4,7 +4,6 @@ date: 2020-10-28
 author:
     - nikita-dubko
 tags:
-    - article
     - podcast
 ---
 

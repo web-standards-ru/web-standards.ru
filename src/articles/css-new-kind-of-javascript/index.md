@@ -11,7 +11,6 @@ editors:
     - olga-aleksashenko
     - andrey-melikhov
 tags:
-    - article
     - satire
     - css
     - js

@@ -10,7 +10,6 @@ translators:
 editors:
     - vadim-makeev
 tags:
-    - article
     - css
 preview: 'Небольшая коллекция полезных CSS-техник и короткое напоминание, что стили для печати всё ещё актуальны.'
 ---

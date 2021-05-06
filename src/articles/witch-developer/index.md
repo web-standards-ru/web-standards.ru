@@ -10,7 +10,6 @@ translators:
 editors:
     - olga-aleksashenko
 tags:
-    - article
     - satire
     - html
     - css
