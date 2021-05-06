@@ -210,6 +210,12 @@
     font-size: 0.8em;
 }
 
+@media (min-width: 1240px) {
+    .content figure {
+        margin: 60px 0;
+    }
+}
+
 /* Images */
 
 .content img,
@@ -218,6 +224,17 @@
     max-width: 100%;
     height: auto;
     margin: 16px 0 8px;
+}
+
+@media (min-width: 1240px) {
+    .content img,
+    .content video {
+        margin: 60px 0;
+    }
+
+    .content figure img {
+        margin: 0 0 16px;
+    }
 }
 
 /* Quotes */
