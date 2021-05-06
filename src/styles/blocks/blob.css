@@ -3,7 +3,7 @@
 .blob {
     contain: strict;
     -webkit-mask-size: cover;
-            mask-size: cover;
+    mask-size: cover;
 }
 
 /* Colors */
@@ -28,37 +28,37 @@
 
 .blob--shape-1 {
     -webkit-mask-image: url('/images/shape/1.svg');
-            mask-image: url('/images/shape/1.svg');
+    mask-image: url('/images/shape/1.svg');
 }
 
 .blob--shape-2 {
     -webkit-mask-image: url('/images/shape/2.svg');
-            mask-image: url('/images/shape/2.svg');
+    mask-image: url('/images/shape/2.svg');
 }
 
 .blob--shape-3 {
     -webkit-mask-image: url('/images/shape/3.svg');
-            mask-image: url('/images/shape/3.svg');
+    mask-image: url('/images/shape/3.svg');
 }
 
 .blob--shape-4 {
     -webkit-mask-image: url('/images/shape/4.svg');
-            mask-image: url('/images/shape/4.svg');
+    mask-image: url('/images/shape/4.svg');
 }
 
 .blob--shape-5 {
     -webkit-mask-image: url('/images/shape/5.svg');
-            mask-image: url('/images/shape/5.svg');
+    mask-image: url('/images/shape/5.svg');
 }
 
 .blob--shape-6 {
     -webkit-mask-image: url('/images/shape/6.svg');
-            mask-image: url('/images/shape/6.svg');
+    mask-image: url('/images/shape/6.svg');
 }
 
 .blob--shape-7 {
     -webkit-mask-image: url('/images/shape/7.svg');
-            mask-image: url('/images/shape/7.svg');
+    mask-image: url('/images/shape/7.svg');
 }
 
 /* Photo */
