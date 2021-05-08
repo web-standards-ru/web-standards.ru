@@ -61,34 +61,6 @@
     mask-image: url('/images/shape/7.svg');
 }
 
-.page--dark-mode .blob--shape-1::before {
-    content: url('/images/shape/1-dark.svg');
-}
-
-.page--dark-mode .blob--shape-2::before {
-    content: url('/images/shape/2-dark.svg');
-}
-
-.page--dark-mode .blob--shape-3::before {
-    content: url('/images/shape/3-dark.svg');
-}
-
-.page--dark-mode .blob--shape-4::before {
-    content: url('/images/shape/4-dark.svg');
-}
-
-.page--dark-mode .blob--shape-5::before {
-    content: url('/images/shape/5-dark.svg');
-}
-
-.page--dark-mode .blob--shape-6::before {
-    content: url('/images/shape/6-dark.svg');
-}
-
-.page--dark-mode .blob--shape-7::before {
-    content: url('/images/shape/7-dark.svg');
-}
-
 /* Photo */
 
 .blob__photo {
