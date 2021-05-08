@@ -1,5 +1,5 @@
 function toggleDarkMode() {
-    window.setClassOnDocumentBody(
+    window.applyColorScheme(
         !document.querySelector('html').classList.contains(window.classNameDark),
         true
     );

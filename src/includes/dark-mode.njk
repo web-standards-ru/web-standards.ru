@@ -1,51 +1,42 @@
 <script>
     // Этот код нужен для предотвращения мерцания светлой/темной темы до загрузки и парсинга CSS
-    var storageKey = 'color-scheme';
-    var classNameDark = 'page--dark-mode';
+    const storageKey = 'color-scheme';
+    window.classNameDark = 'page--dark-mode';
+    const preferDarkQuery = '(prefers-color-scheme: dark)';
+    const colorSchemeMediaQuery = window.matchMedia(preferDarkQuery);
+    const isSupportsColorSchemeQuery = colorSchemeMediaQuery.media === preferDarkQuery;
+    const isPrefersDarkColorScheme = colorSchemeMediaQuery.matches;
 
-    var preferDarkQuery = '(prefers-color-scheme: dark)';
-    var colorSchemeMediaQuery = window.matchMedia(preferDarkQuery);
-    var supportsColorSchemeQuery = colorSchemeMediaQuery.media === preferDarkQuery;
-    var currentMediaQueryColorScheme = colorSchemeMediaQuery.matches;
+    function applyColorScheme(isDarkMode, shouldPersist = false) {
+        document.querySelector('html').classList.toggle(window.classNameDark, isDarkMode);
 
-    function setClassOnDocumentBody(darkMode, persist = false) {
-        if (darkMode) {
-            document.querySelector('html').classList.add(classNameDark);
-        } else {
-            document.querySelector('html').classList.remove(classNameDark);
-        }
-
-        if (persist) {
+        if (shouldPersist) {
             try {
-                if (supportsColorSchemeQuery && currentMediaQueryColorScheme === darkMode) {
+                if (isPrefersDarkColorScheme === isDarkMode) {
                     localStorage.removeItem(storageKey);
                 } else {
-                    localStorage.setItem(storageKey, darkMode ? 'dark' : 'light');
+                    localStorage.setItem(storageKey, isDarkMode ? 'dark' : 'light');
                 }
             } catch (e) {}
         }
     }
 
     colorSchemeMediaQuery.addEventListener('change', (mediaQuery) => {
-        setClassOnDocumentBody(mediaQuery.matches);
-        currentMediaQueryColorScheme = mediaQuery.matches;
+        applyColorScheme(mediaQuery.matches);
     });
 
-    var localStorageTheme = null;
+    let localStorageTheme = null;
     try {
         localStorageTheme = localStorage.getItem(storageKey);
     } catch (err) {}
-    var localStorageExists = localStorageTheme !== null && ['dark', 'light'].indexOf(localStorageTheme) >= 0;
-    if (localStorageExists) {
-        localStorageTheme = localStorageTheme === 'dark';
-    }
+    const hasLocalStorageValue = localStorageTheme !== null && ['dark', 'light'].indexOf(localStorageTheme) >= 0;
 
     // Определяем источник правды
-    if (localStorageExists) {
+    if (hasLocalStorageValue) {
         // Источник правды - localStorage
-        setClassOnDocumentBody(localStorageTheme);
-    } else if (supportsColorSchemeQuery) {
-        // source of truth from system
-        setClassOnDocumentBody(colorSchemeMediaQuery.matches);
+        applyColorScheme(localStorageTheme === 'dark');
+    } else if (isSupportsColorSchemeQuery) {
+        // В противном случае берём системное значение
+        applyColorScheme(isPrefersDarkColorScheme);
     }
 </script>
