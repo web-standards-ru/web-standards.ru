@@ -11,7 +11,6 @@ editors:
     - vadim-makeev
     - olga-aleksashenko
 tags:
-    - article
     - js
     - svg
     - design
