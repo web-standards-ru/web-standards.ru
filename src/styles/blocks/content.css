@@ -446,6 +446,10 @@
     line-height: 0.65;
 }
 
+.page--dark-mode .content > p:first-child::first-letter {
+    color: var(--color-dark-text-primary);
+}
+
 /* Tables */
 
 .content__table-wrapper {
