@@ -175,6 +175,10 @@
     color: var(--color-special-dark);
 }
 
+.page--dark-mode .menu__link {
+    color: var(--color-dark-text-link);
+}
+
 .menu__link[href]:hover {
     color: var(--color-special-neutral);
 }

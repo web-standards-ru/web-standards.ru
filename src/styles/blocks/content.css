@@ -122,6 +122,10 @@
     color: var(--color-grey-medium);
 }
 
+.page--dark-mode .content a:visited {
+    color: var(--color-dark-text-link-visited);
+}
+
 @media (hover: hover) and (pointer: fine) {
     .content a:hover,
     .page--dark-mode .content a:hover {
