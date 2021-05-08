@@ -307,6 +307,10 @@
     content: '';
 }
 
+.page--dark-mode .content blockquote::before {
+    background-color: #4d5466;
+}
+
 @media (min-width: 1240px) {
     .content blockquote::before {
         top: 0.5em;
@@ -478,8 +482,16 @@
     );
 }
 
+.page--dark-mode .content thead {
+    background: #2a3443;
+}
+
 .content tr {
     border-bottom: 1px solid var(--color-grey-lighter);
+}
+
+.page--dark-mode .content tr {
+    border-color: #4d5466;
 }
 
 .content th,
