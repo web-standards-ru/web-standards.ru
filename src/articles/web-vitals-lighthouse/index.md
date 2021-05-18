@@ -1,6 +1,6 @@
 ---
 title: 'Оптимизация метрик Web Vitals с помощью Lighthouse'
-date: 2021-05-14
+date: 2021-05-18
 author: addy-osmani
 source:
     title: 'Optimizing Web Vitals using Lighthouse'
