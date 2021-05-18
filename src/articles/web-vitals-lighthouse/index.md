@@ -9,6 +9,7 @@ translators:
     - igor-korovchenko
 editors:
     - vadim-makeev
+    - nikita-dubko
 layout: article.njk
 tags:
     - performance
