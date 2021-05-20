@@ -1,13 +1,8 @@
 ---
 pagination:
-    data: collections
+    data: collections.tagList
     size: 1
     alias: tag
-    filter:
-        - all
-        - articles
-        - tagList
-    addAllPagesToCollections: true
 renderData:
     title: Статьи с тегом «{{ tag }}»
 layout: page.njk
