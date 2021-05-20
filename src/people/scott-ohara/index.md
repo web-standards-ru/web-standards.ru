@@ -1,5 +1,5 @@
 ---
-name: Скотт О’Хара
+name: Скотт Охара
 url: https://www.scottohara.me/
 photo: true
 ---

@@ -577,13 +577,13 @@ exampleMenuButton.addEventListener('choose', function (e) {
 
 ## Инклюзивная кнопка меню на Github
 
-Я и [Хьюго Жирадель](https://twitter.com/HugoGiraudel) вместе работали над созданием компонента кнопки меню с фичами API, которые я описал, и ещё многим другим. Вы должны поблагодарить Хьюго за многие из этих фич, так как они основывались на работе над a11y-dialog — доступным модальным окном. Он есть на [Гитхабе](https://github.com/Heydon/inclusive-menu-button) и в npm.
+Я и [Китти Жирадель](https://twitter.com/HugoGiraudel) вместе работали над созданием компонента кнопки меню с фичами API, которые я описал, и ещё многим другим. Вы должны поблагодарить Китти за многие из этих фич, так как они основывались на работе над a11y-dialog — доступным модальным окном. Он есть на [Гитхабе](https://github.com/Heydon/inclusive-menu-button) и в npm.
 
 ```sh
 npm i inclusive-menu-button --save
 ```
 
-Кроме того, Хьюго сделал специально для вас [версию кнопки на React](https://github.com/HugoGiraudel/react-menu-button).
+Кроме того, Китти сделал специально для вас [версию кнопки на React](https://github.com/HugoGiraudel/react-menu-button).
 
 ## Чеклист
 

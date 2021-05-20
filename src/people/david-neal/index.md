@@ -1,5 +1,5 @@
 ---
-name: Девид Нил
+name: Дэвид Нил
 url: https://reverentgeek.com/
 photo: true
 ---
