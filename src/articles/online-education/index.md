@@ -3,7 +3,7 @@ title: 'Про онлайн-образование. Теория'
 date: 2021-05-23
 author: alena-batitskaia
 tags:
-    - article
+    - education
 hero:
     src: images/cover.png
     cover: true
