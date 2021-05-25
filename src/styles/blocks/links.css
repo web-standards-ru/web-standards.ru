@@ -155,10 +155,6 @@
     background-image: url('/images/social/github.svg');
 }
 
-.links__link--slack::before {
-    background-image: url('/images/social/slack.svg');
-}
-
 .links__link--youtube::before {
     background-image: url('/images/social/youtube.svg');
 }
