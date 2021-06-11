@@ -9,6 +9,8 @@ const RSS_URL = 'https://web-standards.ru/podcast/feed/';
 async function getEpisodesData() {
     const [response] = await once(https.get(RSS_URL), 'response');
 
+    response.setEncoding('utf8');
+
     return new Promise((resolve, reject) => {
         const XMLParser = new NodeXMLStream();
 
