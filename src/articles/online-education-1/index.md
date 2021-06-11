@@ -1,5 +1,5 @@
 ---
-title: 'Про онлайн-образование. Теория'
+title: 'Онлайн-обучение: взгляд очевидца'
 date: 2021-05-23
 author: alena-batitskaia
 editors:
