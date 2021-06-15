@@ -88,7 +88,7 @@ ECMAScript") и имеет [ряд специальных методов и св
 - [`js_import`](http://nginx.org/ru/docs/http/ngx_http_js_module.html#js_import "js_import") — импортирует модуль с функциями;
 - [`js_path`](http://nginx.org/ru/docs/http/ngx_http_js_module.html#js_path "js_path") — устанавливает дополнительный путь до модулей;
 - [`js_set`](http://nginx.org/ru/docs/http/ngx_http_js_module.html#js_set "js_set") — устанавливает функцию из модуля, которая вызывается в момент первого обращения к переменной для данного запроса;
- - [`js_var`](http://nginx.org/ru/docs/http/ngx_http_js_module.html#js_var "js_var") — объявляет перезаписываемую переменную.
+- [`js_var`](http://nginx.org/ru/docs/http/ngx_http_js_module.html#js_var "js_var") — объявляет перезаписываемую переменную.
 
 ## Вингардиум Левиоса: полетели
 
