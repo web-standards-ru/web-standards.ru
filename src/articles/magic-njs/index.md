@@ -49,15 +49,15 @@ load_module modules/ngx_stream_js_module.so;
 
 ```
 http {
-  js_import script.js;
+    js_import script.js;
 
-  server {
-     listen 8080;
+    server {
+        listen 8080;
 
-     location / {
-       js_content script.hello;
-     }
-  }
+        location / {
+            js_content script.hello;
+        }
+    }
 }
 ```
 
@@ -65,11 +65,11 @@ http {
 
 ```js
 function hello(r) {
-  r.return(200, "Hello world!");
+    r.return(200, "Hello world!");
 }
 
 export default {
-  hello
+    hello
 };
 ```
 
@@ -107,53 +107,53 @@ var CAESAR_SHIFT = 5;
 
 // Преобразовать сообщение (шифр Цезаря)
 function processMessage(inputString, shift) {
-  var outputString = '';
-  // Пробежать по всем символам строки
-  for (var i = 0; i < inputString.length; i++) {
-    // Получить символ строки
-    var c = inputString[i];
-    if (c.match(/[a-z]/i)) {
-      // Получить код символа
-      var code = inputString.charCodeAt(i);
-      // Обработать буквы верхнего регистра
-      if (code >= 65 && code <= 90) {
-        c = String.fromCharCode(((code - 65 + shift) % 26) + 65);
-      }
-      // Обработать буквы нижнего регистра
-      else if (code >= 97 && code <= 122) {
-        c = String.fromCharCode(((code - 97 + shift) % 26) + 97);
-      }
+    var outputString = '';
+    // Пробежать по всем символам строки
+    for (var i = 0; i < inputString.length; i++) {
+        // Получить символ строки
+        var c = inputString[i];
+        if (c.match(/[a-z]/i)) {
+            // Получить код символа
+            var code = inputString.charCodeAt(i);
+            // Обработать буквы верхнего регистра
+            if (code >= 65 && code <= 90) {
+                c = String.fromCharCode(((code - 65 + shift) % 26) + 65);
+            }
+            // Обработать буквы нижнего регистра
+            else if (code >= 97 && code <= 122) {
+                c = String.fromCharCode(((code - 97 + shift) % 26) + 97);
+            }
+        }
+        // Добавить символ в конец строки
+        outputString += c;
     }
-    // Добавить символ в конец строки
-    outputString += c;
-  }
-  return outputString;
+    return outputString;
 }
 
 // Получить данные из переменной
 function getMessage(r) {
-  return r.args.msg;
+    return r.args.msg;
 }
 
 // Шифрование
 function encode(r) {
-  r.return(200, processMessage(getMessage(r), CAESAR_SHIFT));
+    r.return(200, processMessage(getMessage(r), CAESAR_SHIFT));
 }
 
 // Расшифровка
 function decode(r) {
-  r.return(200, processMessage(getMessage(r), -CAESAR_SHIFT));
+    r.return(200, processMessage(getMessage(r), -CAESAR_SHIFT));
 }
 
 // Вернуть сдвиг
 function shift(r) {
-  r.return(200, CAESAR_SHIFT);
+    r.return(200, CAESAR_SHIFT);
 }
 
 export default {
-  encode,
-  decode,
-  shift
+    encode,
+    decode,
+    shift
 };
 ```
 
@@ -191,32 +191,32 @@ __EOF__
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NJS Test</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NJS Test</title>
 </head>
 <body>
-  <form action="/encode/">
-    <fieldset>
-      <legend>Зашифровать сообщение</legend>
-      <textarea name="msg" cols="30" rows="10"></textarea>
-      <div><input type="submit" value="Отправить сообщение"></div>
-    </fieldset>
-  </form>
-  <form action="/decode/">
-    <fieldset>
-      <legend>Расшифровать сообщение</legend>
-      <textarea name="msg" cols="30" rows="10"></textarea>
-      <div><input type="submit" value="Отправить сообщение"></div>
-    </fieldset>
-  </form>
-  <form action="/shift/">
-    <fieldset>
-      <legend>Получить сдвиг</legend>
-      <div><input type="submit" value="Отправить запрос"></div>
-    </fieldset>
-  </form>
+    <form action="/encode/">
+        <fieldset>
+        <legend>Зашифровать сообщение</legend>
+        <textarea name="msg" cols="30" rows="10"></textarea>
+        <div><input type="submit" value="Отправить сообщение"></div>
+        </fieldset>
+    </form>
+    <form action="/decode/">
+        <fieldset>
+        <legend>Расшифровать сообщение</legend>
+        <textarea name="msg" cols="30" rows="10"></textarea>
+        <div><input type="submit" value="Отправить сообщение"></div>
+        </fieldset>
+    </form>
+    <form action="/shift/">
+        <fieldset>
+        <legend>Получить сдвиг</legend>
+        <div><input type="submit" value="Отправить запрос"></div>
+        </fieldset>
+    </form>
 </body>
 </html>
 ```
@@ -242,28 +242,28 @@ load_module modules/ngx_http_js_module.so;
 events {}
 
 http {
-  js_path "/etc/nginx/njs/";
-  js_import script.js;
+    js_path "/etc/nginx/njs/";
+    js_import script.js;
 
-  server {
-    listen 8080;
+    server {
+        listen 8080;
 
-    location / {
-      root /var/www;
+        location / {
+            root /var/www;
+        }
+
+        location /encode {
+            js_content script.encode;
+        }
+
+        location /decode {
+            js_content script.decode;
+        }
+
+        location /shift {
+            js_content script.shift;
+        }
     }
-
-    location /encode {
-      js_content script.encode;
-    }
-
-    location /decode {
-      js_content script.decode;
-    }
-
-    location /shift {
-      js_content script.shift;
-    }
-  }
 }
 ```
 
@@ -278,18 +278,18 @@ touch docker-compose.yml
 ```yaml
 version: "3.9"
 services:
-  web:
-    build:
-      context: ./nginx/
-      args:
-        ENABLED_MODULES: njs
-    image: nginx-with-njs:v1
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./src/:/etc/nginx/njs/
-      - ./index.html:/var/www/index.html
-    ports:
-      - "80:8080"
+    web:
+        build:
+            context: ./nginx/
+            args:
+                ENABLED_MODULES: njs
+        image: nginx-with-njs:v1
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./src/:/etc/nginx/njs/
+            - ./index.html:/var/www/index.html
+        ports:
+            - "80:8080"
 ```
 
 Обратите внимание на пути томов (`volumes`). В конфигурации используются связанные тома (`binded volumes`), то есть прямая ссылка на файловую систему компьютера, на котором запущен Docker. Однако ссылки внутри контейнера очень важны. Конфигурацию и скрипт нужно поместить в `/etc/nginx/` и `/etc/nginx/njs/` соотвественно.  В конфигурации дополнительно используется директива `js_path`, чтобы точно ничего не потерялось.
