@@ -1,6 +1,6 @@
 ---
 title: 'Магия вне Хогвартса: NJS'
-date: 2021-06-20
+date: 2021-06-17
 author: igor-korovchenko
 editors:
     - vadim-makeev
