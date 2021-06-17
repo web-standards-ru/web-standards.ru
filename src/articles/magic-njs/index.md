@@ -5,6 +5,7 @@ author: igor-korovchenko
 editors:
     - vadim-makeev
     - nikita-dubko
+    - andrey-melikhov
 tags:
     - js
 ---
