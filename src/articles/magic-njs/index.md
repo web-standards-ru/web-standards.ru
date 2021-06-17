@@ -97,18 +97,18 @@ NJS — это подмножество JavaScript. Что можно, а чт
 Основной модуль `script.js` будет выглядеть так:
 
 ```js
-var CAESAR_SHIFT = 5;
+const CAESAR_SHIFT = 5;
 
 // Преобразуем сообщение (шифр Цезаря)
 function processMessage(inputString, shift) {
-    var outputString = '';
+    let outputString = '';
     // Бежим по всем символам строки
-    for (var i = 0; i < inputString.length; i++) {
+    for (let i = 0; i < inputString.length; i++) {
         // Получаем символ строки
-        var c = inputString[i];
+        let c = inputString[i];
         if (c.match(/[a-z]/i)) {
             // Получаем код символа
-            var code = inputString.charCodeAt(i);
+            const code = inputString.charCodeAt(i);
             // Обрабатываем прописные буквы
             if (code >= 65 && code <= 90) {
                 c = String.fromCharCode(((code - 65 + shift) % 26) + 65);
@@ -151,7 +151,7 @@ export default {
 };
 ```
 
-Обратите внимание, необходимо использовать ключевое слово `var`, пока поддержки `let` и `const` нет. Полный список доступных в NJS конструкций языка JavaScript описан на странице «[Совместимость](https://nginx.org/ru/docs/njs/compatibility.html)».
+Полный список доступных в NJS конструкций языка JavaScript описан на странице «[Совместимость](https://nginx.org/ru/docs/njs/compatibility.html)».
 
 Команда `r.return()` — отправляет тело HTTP-сообщения клиенту и статус ответа веб-сервера. `r.variables` хранит переменные, переданные в запросе клиента. Перед использованием нужно экспортировать необходимые функции в интерфейс, как это делается при работе с модулями в JavaScript.
 
