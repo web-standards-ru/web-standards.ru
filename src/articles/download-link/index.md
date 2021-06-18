@@ -7,6 +7,8 @@ source:
     url: https://mefody.dev/chunks/download-link/
 translators:
     - nikita-dubko
+editors:
+    - vadim-makeev
 tags:
     - html
     - js
