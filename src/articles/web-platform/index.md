@@ -1,6 +1,6 @@
 ---
 title: Как организована веб-платформа
-date: 2021-06-18
+date: 2021-06-22
 author: vitaly-zyuzin
 editors:
     - vadim-makeev
