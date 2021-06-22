@@ -3,6 +3,7 @@ title: Как организована веб-платформа
 date: 2021-06-22
 author: vitaly-zyuzin
 editors:
+    - nikita-dubko
     - vadim-makeev
 tags:
     - html
