@@ -67,6 +67,7 @@ thead tr:first-child th {
 <iframe src="https://codepen.io/XAHTEP26/embed/preview/jOBgYGw"></iframe>
 
 ### Рамки как box-shadow
+
 ```css
 table {
     border-collapse: separate;
