@@ -1,6 +1,6 @@
 ---
 title: Липкая шапка таблицы на CSS
-date: 2021-06-25
+date: 2021-07-02
 author: grigoriy-kovalenko
 tags:
     - html
