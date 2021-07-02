@@ -41,9 +41,9 @@ thead {
 
 ```css
 :root {
-  --border-width: 2px;
-  --border-color: #CED4DA;
-  --border: var(--border-width) solid var(--border-color);
+    --border-width: 2px;
+    --border-color: #CED4DA;
+    --border: var(--border-width) solid var(--border-color);
 }
 
 table {
