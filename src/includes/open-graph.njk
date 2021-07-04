@@ -1,6 +1,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ renderData.title or title }}{{ titleSuffix }}">
-<meta property="og:site_name" content="{{ preview or site.description }}">
+<meta property="og:site_name" content="{{ podcastDescription or site.description }}">
+<meta property="og:description" content="{{ preview }}">
 <meta property="og:url" content="{{ site.paths.site }}{{ page.url }}">
 <meta property="og:image" content="{{ site.paths.social }}">
 

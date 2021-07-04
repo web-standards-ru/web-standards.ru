@@ -1,11 +1,14 @@
 ---
-title: Подкаст
 layout: page.njk
 pagination:
     data: collections.episodes
     size: 1
     alias: episode
 permalink: 'podcast/{{ episode.episode }}/index.html'
+podcastDescription: 'Подкаст «Веб-стандарты»'
+eleventyComputed:
+    title: "Выпуск {{ episode.episode }}"
+    preview: ' {{ episode.title }}'
 ---
 
 {% set hasChapters = episode.chapters and episode.chapters.length > 0 %}
