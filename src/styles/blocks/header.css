@@ -28,9 +28,13 @@
 
 /* Logo */
 
-@media (max-width: 735px) {
+.header__logo {
+    z-index: 1;
+}
+
+@media (min-width: 736px) {
     .header__logo {
-        z-index: 1;
+        z-index: 0;
     }
 }
 
@@ -47,12 +51,16 @@
 
 /* Menu */
 
-@media (max-width: 735px) {
+.header__menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+@media (min-width: 736px) {
     .header__menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
+        position: relative;
     }
 }
 
