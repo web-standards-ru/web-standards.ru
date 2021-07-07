@@ -78,6 +78,10 @@
     text-transform: uppercase;
 }
 
+.page--dark-mode .logo__tagline {
+    color: var(--color-dark-text-primary);
+}
+
 @media (max-width: 735px) {
     .logo__tagline {
         display: none;

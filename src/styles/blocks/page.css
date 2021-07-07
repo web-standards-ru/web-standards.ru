@@ -11,6 +11,11 @@
     background-color: white;
 }
 
+.page--dark-mode.page {
+    color: var(--color-dark-text-primary);
+    background-color: var(--color-dark-background);
+}
+
 .page__body {
     max-width: 1920px;
     margin: 0 auto;
