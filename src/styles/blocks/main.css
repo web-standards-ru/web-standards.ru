@@ -20,6 +20,12 @@
     }
 }
 
+@media (min-width: 800px) and (max-width: 1023px) {
+    .main__related-articles {
+        margin-bottom: 37px;
+    }
+}
+
 .main__conference-link {
     margin-top: 40px;
 }

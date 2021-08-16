@@ -1,6 +1,7 @@
 .related-articles {
     max-width: 700px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (min-width: 1240px) {
