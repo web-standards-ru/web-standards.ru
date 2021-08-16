@@ -61,8 +61,8 @@
 
 @media (min-width: 800px) {
     .articles--related {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .articles__item--related {
@@ -71,6 +71,7 @@
         padding: 16px 32px 32px 24px;
         border: none;
         box-shadow: 0 0 0 1px var(--color-grey-lighter);
+        flex: 1 1 200px;
     }
 
     .articles__item--related:last-of-type {
