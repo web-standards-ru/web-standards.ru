@@ -66,12 +66,12 @@
     }
 
     .articles__item--related {
+        flex: 1 1 200px;
         margin-top: 1px;
         margin-left: 1px;
         padding: 16px 32px 32px 24px;
         border: none;
         box-shadow: 0 0 0 1px var(--color-grey-lighter);
-        flex: 1 1 200px;
     }
 
     .articles__item--related:last-of-type {
