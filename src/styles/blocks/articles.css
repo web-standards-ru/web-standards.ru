@@ -61,12 +61,11 @@
 
 @media (min-width: 800px) {
     .articles--related {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
     }
 
     .articles__item--related {
-        flex: 1 1 200px;
         margin-top: 1px;
         margin-left: 1px;
         padding: 16px 32px 32px 24px;
