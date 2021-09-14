@@ -19,7 +19,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
     "@mavrin/remark-typograf": "^2.2.0",
     "autoprefixer": "^10.3.4",
     "del": "^6.0.0",
