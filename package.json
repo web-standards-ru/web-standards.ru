@@ -36,7 +36,7 @@
     "html-minifier": "^4.0.0",
     "hyphen": "^1.6.2",
     "linkedom": "^0.9.7",
-    "markdown-it-multimd-table": "^4.0.3",
+    "markdown-it-multimd-table": "^4.1.1",
     "node-w3c-validator": "^2.0.1",
     "node-xml-stream": "^1.0.2",
     "postcss": "^8.3.6",
