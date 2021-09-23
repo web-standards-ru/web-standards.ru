@@ -110,7 +110,7 @@ WCAG (Web Content Accessibility Guidelines) — Руководства по об
 
 Ещё пара полезных ресурсов:
 
-- [Раздел «How to Meet WCAG» WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). Поможет разобраться, что конкретно от вас хочет WCAG.
+- [How to Meet WCAG](https://www.w3.org/WAI/WCAG21/quickref/). Справочник по критериям успешности и техникам WCAG. Поможет разобраться, что конкретно от вас хотят в руководствах.
 - [WCAG Guide](https://guia-wcag.com/en/). Наглядные карточки с критериями успешности.
 - [Тьюториал «Understanding the Web Content Accessibility Guidelines»](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG) на MDN.
 
