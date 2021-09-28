@@ -122,7 +122,7 @@ WAI-ARIA (WAI Accessible Rich Internet Applications Suite) — рекоменд�
 - [Обзор WAI-ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) на MDN.
 - [Тьюториал про основы ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) с MDN.
 - [Периодическая таблица ролей ARIA 1.1](https://dylanb.github.io/periodic-aria11-roles.html).
-- Серия из трёх статей «ARIA Spec for the Uninitiated» в блоге Deque. В [первой части](https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-1/) объясняется, что такое ARIA, как устроен стандарт и какие правила в нём есть.
+- Серия из трёх статей «ARIA Spec for the Uninitiated» в блоге Deque. В [первой части](https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-1/) объясняется, что такое ARIA, как устроен стандарт и какие правила в нём есть ([перевод на русский](https://web-standards.ru/articles/five-rules-of-aria/)).
 
 Небольшая справка: Deque — американская компания, которая проводит аудиты, разрабатывает инструменты для тестирования доступности и занимается обучением.
 
