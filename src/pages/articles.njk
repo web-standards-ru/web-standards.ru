@@ -11,7 +11,7 @@ permalink: articles/index.html
         {% set articleType %}{{ '--articles' }}{% endset %}
 
         {%- for group in articlesGroupsByYears -%}
-            <time class="archive__year" datetime="{{year.year}}-01-01">{{ group.year }}</time>
+            <time class="archive__year" datetime="{{ group.year }}-01-01">{{ group.year }}</time>
             <ul class="archive__articles articles articles{{ articleType }}">
                 {%- for article in group.articles -%}
                     <li class="articles__item articles__item{{ articleType }}">
