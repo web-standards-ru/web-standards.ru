@@ -1,6 +1,6 @@
 ---
 title: 'Как не дать текстовым глифам превратиться в эмоджи'
-date: 2021-09-20
+date: 2021-09-29
 author: nikita-dubko
 source:
     title: 'Prevent text glyphs from turning into emojis'
