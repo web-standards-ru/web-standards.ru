@@ -78,12 +78,6 @@
     "declaration-property-unit-allowed-list": {
       "line-height": []
     },
-    "declaration-property-value-disallowed-list": {
-      "/.*/": [
-        "/rgb/",
-        "/rgba/"
-      ]
-    },
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-after": "always-multi-line",
     "block-closing-brace-newline-before": "always-multi-line",
