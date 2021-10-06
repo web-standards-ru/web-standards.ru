@@ -118,46 +118,51 @@ background-image:
 
 Проверить работу путей с кастомными свойствами в вашем браузере можно на [странице теста](https://firefoxic.github.io/test-custom-properties-working-with-url/).
 
-<!-- <link rel="stylesheet" href="https://firefoxic.github.io/test-custom-properties-working-with-url/a/style.css">
-<link rel="stylesheet" href="https://firefoxic.github.io/test-custom-properties-working-with-url/b/style.css"> -->
+<link rel="stylesheet" href="https://firefoxic.github.io/test-custom-properties-working-with-url/a/style.css">
+<link rel="stylesheet" href="https://firefoxic.github.io/test-custom-properties-working-with-url/b/style.css">
 
 
-<!-- Или прямо тут:
+Или прямо тут:
 
-<table>
-    <thead>
-        <tr>
-            <td></td>
-            <th scope="col">Inside</th>
-            <th scope="col">Beside</th>
-            <th scope="col">Outside</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">Shorthand</th>
-            <td>
-                <div class="test test--bg_shorthand test--url_inside"></div>
-            </td>
-            <td>
-                <div class="test test--bg_shorthand test--url_beside"></div>
-            </td>
-            <td>
-                <div class="test test--bg_shorthand test--url_outside"></div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">Longhand</th>
-            <td>
-                <div class="test test--bg_longhand test--url_inside"></div>
-            </td>
-            <td></td>
-            <td>
-                <div class="test test--bg_longhand test--url_outside"></div>
-            </td>
-        </tr>
-    </tbody>
-</table> -->
+<figure>
+    <div style="overflow: auto;">
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th scope="col">Inside</th>
+                    <th scope="col">Beside</th>
+                    <th scope="col">Outside</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Shorthand</th>
+                    <td>
+                        <div class="test test--bg_shorthand test--url_inside"></div>
+                    </td>
+                    <td>
+                        <div class="test test--bg_shorthand test--url_beside"></div>
+                    </td>
+                    <td>
+                        <div class="test test--bg_shorthand test--url_outside"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Longhand</th>
+                    <td>
+                        <div class="test test--bg_longhand test--url_inside"></div>
+                    </td>
+                    <td></td>
+                    <td>
+                        <div class="test test--bg_longhand test--url_outside"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <figcapture>Действующая таблица тестирования взаимодействия путей с кастомными свойствами. Содержание не доступно для ассистивных технологий, так как в тесте участвуют только фоновые изображения.</figcapture>
+</figure>
 
 До 14й версии в Safari все пять возможных тестов фэйлились. Начиная с 14.1 — все тесты с Shorthand стали проходить успешно (видимо это и был фикс [бага 198512](https://bugs.webkit.org/show_bug.cgi?id=198512)), но оба Longhand фэйлятся.
 
