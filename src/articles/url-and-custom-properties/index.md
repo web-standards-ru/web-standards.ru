@@ -118,9 +118,6 @@ background-image:
 
 Проверить работу путей с кастомными свойствами в вашем браузере можно на [странице теста](https://firefoxic.github.io/test-custom-properties-working-with-url/).
 
-<!-- <link rel="stylesheet" href="./a/style.css">
-<link rel="stylesheet" href="./b/style.css"> -->
-
 <!-- <link rel="stylesheet" href="https://firefoxic.github.io/test-custom-properties-working-with-url/a/style.css">
 <link rel="stylesheet" href="https://firefoxic.github.io/test-custom-properties-working-with-url/b/style.css"> -->
 
