@@ -1,7 +1,7 @@
 ---
 title: 'Веб и железки'
 date: 2021-04-15
-author: harry-roberts
+author: 'Niels Leenheer'
 source:
     title: 'Hardware and the web: the balance between usefulness, security and privacy'
     url: 'https://nielsleenheer.com/articles/2021/hardware-and-the-web-the-balance-between-usefulness-security-and-privacy/'
@@ -16,7 +16,7 @@ preview: 'Веб и железки: баланс между удобством, 
 ---
 Около года назад, Apple выпустила список Веб API, которые не они не собирались внедрять в Safari из соображений приватности и проблем с безопасностью. Они беспокоились, что эти API позволят создавать цифровой след пользователя, что позволит их отслеживать. И это, конечно же, табу, говоря в терминах приватности. Звучит разумно, верно?
 
-#### Но что за API были в том спсике?
+#### Но что за API были в том списке?
  Ну, среди прочих, API для управления железками, которые поставлялись в браузерах Chrome и Edge за последние пару лет:
  - WebBluetooth;
  - WebHID;
