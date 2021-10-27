@@ -39,7 +39,7 @@ article h2 {
 
 Вот очень простая страница, [созданная с помощью этой техники](https://codepen.io/leaverou/pen/QWdjpEL):
 
-<iframe src="https://codepen.io/leaverou/embed/preview/QWdjpEL"></iframe>
+<iframe src="demos/custom-props/"></iframe>
 
 В отличие от переменных препроцессора, переменную вы можете даже локально переопределить, чтобы получить блоки с другим акцентным цветом:
 
@@ -58,7 +58,7 @@ article.alt {
 }
 ```
 
-<iframe src="https://codepen.io/leaverou/embed/preview/rNjOypm"></iframe>
+<iframe src="demos/local-override/"></iframe>
 
 Это все прекрасно, пока не вступит в игру тёмная тема. Идея использования css-переменных для ее создания не нова. Однако в каждой статье, которую я видела, предлагается стратегия создания набора переменных, по одной для каждого цвета, и переопределения их внутри медиавыражения.
 
@@ -115,7 +115,7 @@ footer {
 }
 ```
 
-<iframe src="https://codepen.io/leaverou/embed/preview/eYgJyav"></iframe>
+<iframe src="demos/lightness-variables/"></iframe>
 
 Результат выглядит так в светлой и темной теме:
 
@@ -160,7 +160,7 @@ LCH - гораздо лучшее цветовое пространство дл
 
 Я использовала [этот инструмент](https://css.land/lch/) для преобразования своих цветов HSL в LCH, а затем немного изменила значения вручную, поскольку изначально преобразованные цвета не при всех уровнях светлоты LCH выглядели хорошо (обратите внимание, что цвета HSL с одинаковым оттенком и насыщенностью могут иметь разные оттенки и цветности в LCH). Вот как этот метод выглядит с цветами LCH (для просмотра вам потребуется Safari TP 120 или более поздняя версия):
 
-<iframe src="https://codepen.io/leaverou/embed/preview/MWJKqBK"></iframe>
+<iframe src="demos/lch-version/"></iframe>
 
 И вот скриншоты:
 

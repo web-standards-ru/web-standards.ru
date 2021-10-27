@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom property for theme hue & saturation, local override</title>
+    <style>
+        :root {
+            --primary-hs: 250 30%;
+            --secondary-hs: 190 40%;
+        }
+
+        body {
+            background: white;
+            color: black;
+            font: 100%/1.5 Helvetica Neue, Segoe UI, sans-serif;
+        }
+
+        h1 {
+            color: hsl(var(--primary-hs) 30%);
+        }
+
+        article {
+            background: hsl(var(--primary-hs) 90%);
+            border-radius: .3rem;
+            overflow: hidden;
+            margin: 1em 0;
+        }
+
+        article h2 {
+            padding: .3rem .5rem;
+            margin: 0;
+            background: hsl(var(--primary-hs) 40%);
+            color: white;
+        }
+
+        article .content {
+            padding: 0 .5rem;
+        }
+
+        article.alt {
+            --primary-hs: var(--secondary-hs);
+        }
+
+        footer {
+            margin-top: 1rem;
+            border-top: 1px solid;
+            color: hsl(0 0% 40%);
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lea Verou's blog</h1>
+
+    <p>Welcome to my blog, where I write about web standards, usability, and open source.</p>
+
+    <article>
+        <h2>Blog Post 1</h2>
+        <div class="content">
+            <p>Blog post 1 content</p>
+        </div>
+    </article>
+
+    <article class="alt">
+        <h2>Blog Post 2</h2>
+        <div class="content">
+            <p>Blog post 2 content</p>
+        </div>
+    </article>
+
+    <footer>
+        <p>Made with &hearts; by Lea Verou</p>
+    </footer>
+</body>
+</html>
