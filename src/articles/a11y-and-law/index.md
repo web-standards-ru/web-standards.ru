@@ -338,8 +338,8 @@ Section 508, 508 Compliance
 - [Закон о реабилитации 1973 года](https://en.wikipedia.org/wiki/Rehabilitation_Act_of_1973).
 - [Текст Раздела 508](https://web.archive.org/web/20201112021536/https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards).
 - [Соответствие требованиям 508: что такое Раздел 508?](https://siteimprove.com/en-us/accessibility/section-508-compliance/).
-- [Чеклист доступности соответствия Разделу 508 Министерства здравоохранения и социальных служб США](https://web.archive.org/web/20200715142027/https://www.hhs.gov/web/section-508/making-files-accessible/checklist/index.html).
-- [Полный чеклист обновлённого Раздела 508](https://www.3playmedia.com/2017/12/21/the-ultimate-section-508-refresh-checklist/).
+- [Чек-лист доступности соответствия Разделу 508 Министерства здравоохранения и социальных служб США](https://web.archive.org/web/20200715142027/https://www.hhs.gov/web/section-508/making-files-accessible/checklist/index.html).
+- [Полный чек-лист обновлённого Раздела 508](https://www.3playmedia.com/2017/12/21/the-ultimate-section-508-refresh-checklist/).
 - [Судебные процессы](https://508compliantdocumentconversion.com/section-508-lawsuits/).
 
 ## Закон об американцах-инвалидах
@@ -429,7 +429,7 @@ ADA — это закон, который защищает права люде�
 - [Статья о законе в Википедии](https://en.wikipedia.org/wiki/Americans_with_Disabilities_Act_of_1990).
 - [Текст Закона об американцах-инвалидах](https://www.ada.gov/2010_regs.htm).
 - [Что такое Закон об американцах-инвалидах (ADA)?](https://adata.org/learn-about-ada)
-- [«Чеклист ADA: правила соответствия сайтов стандарту в 2019 году простым языком»](https://medium.com/@krisrivenburgh/the-ada-checklist-website-compliance-guidelines-for-2019-in-plain-english-123c1d58fad9) Криса Ривенбурга.
+- [«Чек-лист ADA: правила соответствия сайтов стандарту в 2019 году простым языком»](https://medium.com/@krisrivenburgh/the-ada-checklist-website-compliance-guidelines-for-2019-in-plain-english-123c1d58fad9) Криса Ривенбурга.
 - [Сайт с новостями о судах из-за нарушений ADA](https://www.adatitleiii.com/).
 
 ## Россия
@@ -694,7 +694,7 @@ ADA — это закон, который защищает права люде�
 - [WCAG 2.0 на русском языке](https://www.w3.org/Translations/WCAG20-ru/WCAG20-ru-20130220/).
 - [WCAG 2.1](https://www.w3.org/TR/WCAG21/).
 - [WCAG 2.1: руководства с поясняющими примерами](https://medium.com/c2-group/wcag-2-1-guidelines-explained-with-examples-5c7c5d8b69eb#7312).
-- [Чеклист WCAG 2 WebAIM](https://webaim.org/standards/wcag/checklist).
+- [Чек-лист WCAG 2 WebAIM](https://webaim.org/standards/wcag/checklist).
 
 ## Выводы
 

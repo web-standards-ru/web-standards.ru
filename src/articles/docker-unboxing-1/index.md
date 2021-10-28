@@ -28,7 +28,7 @@ hero:
     - [Docker container (контейнер)](#section-4)
     - [Docker image (образ)](#section-5)
     - [Union File Systems](#section-6)
-- [Cистема команд Linux](#section-7)
+- [Система команд Linux](#section-7)
 
 ## Технология виртуализации
 
