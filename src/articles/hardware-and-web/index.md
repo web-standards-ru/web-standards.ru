@@ -1,7 +1,5 @@
 ---
-title: 'Веб и железки'
-date: 2021-10-11
-author: 'Niels Leenheer'
+author: niels-leenheer
 source:
     title: 'Hardware and the web: the balance between usefulness, security and privacy'
     url: 'https://nielsleenheer.com/articles/2021/hardware-and-the-web-the-balance-between-usefulness-security-and-privacy/'
