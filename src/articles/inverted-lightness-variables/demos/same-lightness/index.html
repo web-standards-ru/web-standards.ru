@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom property for theme hue & saturation</title>
+    <style>
+        :root {
+            --primary-hs: 250 30%;
+        }
+
+        body {
+            background: white;
+            color: black;
+            font: 100%/1.5 Helvetica Neue, Segoe UI, sans-serif;
+        }
+
+        h1 {
+            color: hsl(var(--primary-hs) 30%);
+        }
+
+        article {
+            background: hsl(var(--primary-hs) 90%);
+            border-radius: .3rem;
+            overflow: hidden;
+            margin: 1em 0;
+        }
+
+        article h2 {
+            padding: .3rem .5rem;
+            margin: 0;
+            background: hsl(var(--primary-hs) 40%);
+            color: white;
+        }
+
+        article .content {
+            padding: 0 .5rem;
+        }
+
+        footer {
+            margin-top: 1rem;
+            border-top: 1px solid;
+            color: hsl(0 0% 40%);
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <!-- Only works in Safari TP >= 120 -->
+    <main mv-app="appName" style="--l:[lightness]%;">
+        <header>
+            <label>
+                Lightness:
+                <input type="range" property="lightness">
+        [lightness]%
+            </label>
+        </header>
+        <div class="hsl"></div>
+        <div class="lch"></div>
+    </main>
+    <!-- TODO: https://dev.mavo.io/dist/mavo.es5.js -->
+</body>
+</html>
