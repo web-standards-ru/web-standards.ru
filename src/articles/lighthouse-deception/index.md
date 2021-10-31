@@ -1,6 +1,6 @@
 ---
-title: "Искусство заблуждений Lighthouse"
-date: 2013-10-14
+title: "Искусство обмана от Lighthouse"
+date: 2021-10-14
 author: zach-leatherman
 source:
     title: "THE ART OF DECEPTION, LIGHTHOUSE SCORE EDITION"
@@ -12,7 +12,7 @@ editors:
 tags:
     - performance
     - lighthouse
-preview: "Несколько интересных обсуждений в твиттере привели меня к понимаю, что некоторые люди говорят об оценках в Lighthouse так: не такие уж они и честные какими могли бы быть (специально или нет). Давайте разбираться."
+preview: "Разбираемся почему метрики Lighthouse могут быть непоказательны и даже иногда неправдивы."
 ---
 
 <style>
