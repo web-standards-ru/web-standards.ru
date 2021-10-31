@@ -1,9 +1,9 @@
 ---
 title: "Искусство обмана от Lighthouse"
-date: 2021-10-14
+date: 2021-11-01
 author: zach-leatherman
 source:
-    title: "THE ART OF DECEPTION, LIGHTHOUSE SCORE EDITION"
+    title: "The Art of Deception, Lighthouse Score Edition"
     url: "https://www.zachleat.com/web/lighthouse-deception/"
 translators:
     - vlad-sorokin
@@ -16,19 +16,6 @@ preview: "Разбираемся почему метрики Lighthouse могу
 ---
 
 <style>
-    :root {
-        --evil-color: #7f338e;
-    }
-
-    .evil-tip {
-        color: #fff;
-        border-radius: 10px;
-        position: relative;
-        background-color: var(--evil-color);
-        padding: 10px;
-        margin: 20px;
-    }
-
     .small-images-grid {
         display: grid;
         place-items: center;
@@ -39,7 +26,17 @@ preview: "Разбираемся почему метрики Lighthouse могу
         grid-template-columns: 1fr 1fr;
     }
 
-    .evil-tip:before, .evil-tip:after {
+    .evil-tip {
+        color: #fff;
+        border-radius: 10px;
+        position: relative;
+        background-color: #7f338e;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    .evil-tip::before,
+    .evil-tip::after {
         content: '😈 😈 😈';
         position: absolute;
         display: flex;
@@ -48,11 +45,11 @@ preview: "Разбираемся почему метрики Lighthouse могу
         left: 0;
     }
 
-    .evil-tip:before {
+    .evil-tip::before {
         top: -15px;
     }
 
-    .evil-tip:after {
+    .evil-tip::after {
         bottom: -15px;
     }
 </style>
@@ -80,8 +77,8 @@ preview: "Разбираемся почему метрики Lighthouse могу
 
 У Speedlify есть два режима:
 
--   режим для CI/CD;
--   режим DIY (Do It Yourself) для запуска на локальной машине.
+- режим для CI/CD;
+- режим DIY (Do It Yourself) для запуска на локальной машине.
 
 И они обычно выдают разные оценки производительности! Запуск на сервере обычно ограничен ресурсами и создает меньше условий для получения высоких оценок производительности в Lighhouse.
 
@@ -92,8 +89,8 @@ preview: "Разбираемся почему метрики Lighthouse могу
 Сетевые условия могут быть разными. Может быть, ваш компьютер выполнял ресурсоёмкую задачу пока Lighthouse был запущен. Ниже два дополнительных прогона в Lighhouse одного и того же сайта на MacBook Air (M1, 2020) с Chrome 94. Стоит отметить, что результаты немного лучше, чем те, что были в первых упомянутых тестах.
 
 <div class="small-images-grid">
-    <img src="images/nextjs-mobile-variability.png" alt="Прогон лайтхауса номер 1"/>
-    <img src="images/nextjs-mobile-variability-2.png" alt="Прогон лайтхауса номер 2"/>
+    <img src="images/nextjs-mobile-variability.png" alt="Прогон лайтхауса номер 1">
+    <img src="images/nextjs-mobile-variability-2.png" alt="Прогон лайтхауса номер 2">
 </div>
 
 <p class="evil-tip">
@@ -112,8 +109,8 @@ preview: "Разбираемся почему метрики Lighthouse могу
 Lighthouse позволяет визуально различить оценки для мобильного устройства или десктопа. Например, на скриншотах ниже - оценки Lighthouse для одного и того же сайта, измеренные друг за другом на одинаковом железе. Первое измерение - симуляция мобильного устройства, второе - прогон для десктопа. Оценки проводились на MacBook Air (M1, 2020) для Chrome 94.
 
 <div class="small-images-grid--two-columns">
-    <img src="images/gatsbyjs-mobile-zoomed.png" alt="оценки лайтхауса для мобилок" />
-    <img src="images/gatsbyjs-desktop-zoomed.png" alt="оценки лайтхауса для десктопа" />
+    <img src="images/gatsbyjs-mobile-zoomed.png" alt="оценки лайтхауса для мобилок">
+    <img src="images/gatsbyjs-desktop-zoomed.png" alt="оценки лайтхауса для десктопа">
 </div>
 
 <p class="evil-tip">

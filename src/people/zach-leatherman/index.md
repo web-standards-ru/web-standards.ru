@@ -1,5 +1,5 @@
 ---
-name: Зак Литерман
+name: Зак Лезерман
 url: https://twitter.com/zachleat
 photo: true
 ---
