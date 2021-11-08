@@ -5,15 +5,7 @@ author: sergey-artemov
 editors:
     - vadim-makeev
 tags:
-    - url
-    - path
-    - custom properties
-    - bugs
-    - browser engine
-    - webkit
-hero:
-    src: images/cover.png
-    cover: true
+    - css
 ---
 
 [В недавнем выпуске «Веб-стандартов»](https://web-standards.ru/podcast/302/) обсуждались релиз-ноуты Safari TP 133, среди которых оказался интересный фикс. О нём рассказал Никита Дубко:
