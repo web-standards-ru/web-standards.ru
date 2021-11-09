@@ -5,7 +5,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/images');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/(articles,people)/**/*.!(md)');
+    config.addPassthroughCopy('src/{articles,people}/**/*.!(md)');
 
     // Markdown Options
 
