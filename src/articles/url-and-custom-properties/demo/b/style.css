@@ -1,0 +1,41 @@
+table {
+    --my-color: hsl(250deg 66% 58%);
+    border-spacing: 0;
+}
+
+th, td {
+    height: 72px;
+    padding: 0;
+}
+
+td {
+    width: 72px;
+}
+
+th {
+    background-color: #eeeeee;
+}
+
+.short.inside {
+    background: var(--my-image);
+}
+
+.short.beside {
+    background: url('foo.svg') var(--my-color);
+}
+
+.short.outside {
+    background:
+        url('foo.svg'),
+        linear-gradient(var(--my-color), var(--my-color));
+}
+
+.long.inside {
+    background-image: var(--my-image);
+}
+
+.long.outside {
+    background-image:
+        url('foo.svg'),
+        linear-gradient(var(--my-color), var(--my-color));
+}
