@@ -28,7 +28,7 @@
 
 /* Logo */
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .header__logo {
         z-index: 1;
     }
@@ -47,7 +47,7 @@
 
 /* Menu */
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .header__menu {
         position: absolute;
         top: 0;

@@ -1,6 +1,6 @@
 /* Menu */
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .menu {
         display: grid;
     }
@@ -8,7 +8,7 @@
 
 /* Button */
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .menu__button {
         z-index: 1;
         display: block;
@@ -30,7 +30,7 @@
 
 /* Icon */
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .menu__icon {
         display: block;
         stroke: black;
@@ -60,7 +60,7 @@
     list-style: none;
 }
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .menu__list {
         display: none;
         row-gap: 12px;
@@ -155,7 +155,7 @@
     content: url('../../images/patreon.svg');
 }
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .menu__link--patreon {
         margin-left: -18px;
     }
