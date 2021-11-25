@@ -1,6 +1,6 @@
 ---
 name: Алёна Батицкая
-url: https://github.com/solarrust
+url: https://twitter.com/ABatickaya
 tags: people
 photo: true
 permalink: false
