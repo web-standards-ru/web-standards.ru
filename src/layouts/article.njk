@@ -50,7 +50,11 @@ layout: page.njk
             <div class="creators__block">
                 {% for person in authorData %}
                     {% if person.photo %}
-                        {% set personPhoto = [author, '/photo.jpg'] | join %}
+                        {% if authorData | length > 1 %}
+                            {% set personPhoto = [author[loop.index0], '/photo.jpg'] | join %}
+                        {% else %}
+                            {% set personPhoto = [author, '/photo.jpg'] | join %}
+                        {% endif %}
                     {% else %}
                         {% set personPhoto = 'person.png' %}
                     {% endif %}
