@@ -51,7 +51,8 @@ layout: page.njk
                 {% for person in authorData %}
                     {% if person.photo %}
                         {% if authorData | length > 1 %}
-                            {% set personPhoto = [author[loop.index0], '/photo.jpg'] | join %}
+                            {% set orderedAuthors = author | sort() %}
+                            {% set personPhoto = [orderedAuthors[loop.index0], '/photo.jpg'] | join %}
                         {% else %}
                             {% set personPhoto = [author, '/photo.jpg'] | join %}
                         {% endif %}

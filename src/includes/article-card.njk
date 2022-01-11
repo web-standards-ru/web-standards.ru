@@ -37,7 +37,8 @@
     {% for person in article.data.authorData %}
         {% if person.photo %}
             {% if article.data.authorData | length > 1 %}
-                {% set personPhoto = [article.data.author[loop.index0], '/photo.jpg'] | join %}
+                {% set orderedAuthors = article.data.author | sort() %}
+                {% set personPhoto = [orderedAuthors[loop.index0], '/photo.jpg'] | join %}
             {% else %}
                 {% set personPhoto = [article.data.author, '/photo.jpg'] | join %}
             {% endif %}
