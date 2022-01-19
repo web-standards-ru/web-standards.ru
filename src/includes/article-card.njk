@@ -34,40 +34,46 @@
         {{ article.date | ruDate }}
     </time>
 
-    {% for person in article.data.authorData %}
-        {% if person.photo %}
-            {% if article.data.authorData | length > 1 %}
-                {% set orderedAuthors = article.data.author | sort() %}
-                {% set personPhoto = [orderedAuthors[loop.index0], '/photo.jpg'] | join %}
-            {% else %}
-                {% set personPhoto = [article.data.author, '/photo.jpg'] | join %}
-            {% endif %}
-        {% else %}
-            {% set personPhoto = 'person.png' %}
-        {% endif %}
+    <div class="article-card__author-container {{ 'article-card__author-container--featured' if featured }}">
+        {% for person in article.data.authorData %}
+            <span class="
+                article-card__author
+                article-card__author{{ articleType }}
+                article-card__author{{ featuredClass }}">
+                {{ person.name }}{{ ', ' if not loop.last else '' }}
+            </span>
+        {% endfor %}
+    </div>
 
-        <span class="
-            article-card__author
-            article-card__author{{ articleType }}
-            article-card__author{{ featuredClass }}">
-            {{ person.name }}
-        </span>
+    {% if not featured or articleCardVariant == 'related' %}
+        <div class="article-card__avatar-container">
+            {% for person in article.data.authorData %}
+                {% if person.photo %}
+                    {% if article.data.authorData | length > 1 %}
+                        {% set orderedAuthors = article.data.author | sort() %}
+                        {% set personPhoto = [orderedAuthors[loop.index0], '/photo.jpg'] | join %}
+                    {% else %}
+                        {% set personPhoto = [article.data.author, '/photo.jpg'] | join %}
+                    {% endif %}
+                {% else %}
+                    {% set personPhoto = 'person.png' %}
+                {% endif %}
 
-        {% if not featured or articleCardVariant == 'related' %}
-            <div class="
-                article-card__avatar
-                article-card__avatar{{ articleType }}
-                blob {% blob person.name %}">
-                <img class="
-                        article-card__photo
-                        article-card__photo{{ articleType }}
-                        blob__photo"
-                    src="/people/{{ personPhoto }}"
-                    width="80" height="74"
-                    alt="{{ person.name }}">
-            </div>
-        {% endif %}
-    {% endfor %}
+                <div class="
+                    article-card__avatar
+                    article-card__avatar{{ articleType }}
+                    blob {% blob person.name %}">
+                    <img class="
+                            article-card__photo
+                            article-card__photo{{ articleType }}
+                            blob__photo"
+                        src="/people/{{ personPhoto }}"
+                        width="80" height="74"
+                        alt="{{ person.name }}">
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 
     {% if featured and articleCardVariant !== 'related' %}
         {% if article.data.hero.src %}
