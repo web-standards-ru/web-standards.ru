@@ -118,6 +118,11 @@
     color: var(--color-grey-medium);
 }
 
+.article-card__date,
+.article-card__author-container {
+    align-self: baseline;
+}
+
 .article-card__author-container {
     grid-area: author;
 }
