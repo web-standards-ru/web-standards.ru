@@ -13,7 +13,7 @@
     "typograph": "remark",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
     "test": "npm run editorconfig && npm run stylelint && npm run markdown && npm run eslint",
-    "build": "eleventy && gulp build",
+    "build": "rm -rf dist && eleventy && gulp build",
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
