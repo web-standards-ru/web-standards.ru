@@ -4,8 +4,6 @@ date: 2022-01-01
 author:
     - tatiana-fokina
     - vasiliy-dudin
-editors:
-    - 
 tags:
     - a11y
     - testing
