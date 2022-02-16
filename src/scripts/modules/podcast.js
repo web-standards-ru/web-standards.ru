@@ -36,6 +36,14 @@ function playPodcast() {
     }
 }
 
+/**
+ * @param {string} time
+ * @returns {void}
+ */
+function updateAnchor(time) {
+    window.location.hash = `#${time}`;
+}
+
 function initPassedTimecode() {
     const passed = getPassedTimecode(document.URL);
 
@@ -50,6 +58,7 @@ function initTimecode() {
 
         if (button) {
             setCurrentTime(parseFloat(button.value));
+            updateAnchor(button.innerText);
             playPodcast();
         }
     });
