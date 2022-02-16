@@ -1,18 +1,61 @@
 const player = document.querySelector('.podcast__player');
 const timecode = document.querySelector('.podcast__timecode');
 
-if (timecode && player) {
-    timecode.addEventListener('click', event => {
+/**
+ * Преобразует временные метки вида `00:14:30` в количество секунд.
+ *
+ * @param {string} value
+ * @returns {number}
+ */
+function parseTimecode(value) {
+    return value.split(':').reduceRight((acc, item, index, items) => {
+        return acc += parseFloat(item) * Math.pow(60, items.length - 1 - index);
+    }, 0);
+}
+
+/**
+ * @param {string} url
+ * @returns {string | null}
+ */
+function getPassedTimecode(url) {
+    const match = url.match(/.+#(\d\d:\d\d:\d\d)$/);
+    return match && match[1] ? match[1] : null;
+}
+
+/**
+ * @param {number} time
+ * @returns {void}
+ */
+function setCurrentTime(time) {
+    player.currentTime = time;
+}
+
+function playPodcast() {
+    if (player.paused) {
+        player.play();
+    }
+}
+
+function initPassedTimecode() {
+    const passed = getPassedTimecode(document.URL);
+
+    if (passed) {
+        setCurrentTime(parseTimecode(passed));
+    }
+}
+
+function initTimecode() {
+    timecode.addEventListener('click', (event) => {
         const button = event.target.closest('.podcast__timecode-button');
 
-        if (!button) {
-            return;
-        }
-
-        const time = parseFloat(button.value);
-        player.currentTime = time;
-        if (player.paused) {
-            player.play();
+        if (button) {
+            setCurrentTime(parseFloat(button.value));
+            playPodcast();
         }
     });
+}
+
+if (timecode && player) {
+    initPassedTimecode();
+    initTimecode();
 }
