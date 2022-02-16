@@ -64,7 +64,12 @@ function initTimecode() {
     });
 }
 
+function initAnchor() {
+    window.addEventListener('hashchange', initPassedTimecode);
+}
+
 if (timecode && player) {
     initPassedTimecode();
     initTimecode();
+    initAnchor();
 }
