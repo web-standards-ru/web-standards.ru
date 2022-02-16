@@ -2,7 +2,7 @@ const player = document.querySelector('.podcast__player');
 const timecode = document.querySelector('.podcast__timecode');
 
 /**
- * Преобразует временные метки вида `00:14:30` в количество секунд.
+ * Преобразует временные метки вида `00:14:30` или `14:30` в количество секунд.
  *
  * @param {string} value
  * @returns {number}
@@ -18,7 +18,7 @@ function parseTimecode(value) {
  * @returns {string | null}
  */
 function getPassedTimecode(url) {
-    const match = url.match(/.+#(\d\d:\d\d:\d\d)$/);
+    const match = url.match(/.+#(\d\d:\d\d(:\d\d)?)$/);
     return match && match[1] ? match[1] : null;
 }
 
