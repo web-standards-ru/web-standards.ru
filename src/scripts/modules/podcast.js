@@ -2,53 +2,59 @@ const player = document.querySelector('.podcast__player');
 const timecode = document.querySelector('.podcast__timecode');
 
 /**
- * Преобразует временные метки вида `00:14:30` или `14:30` в количество секунд.
+ * Выделяет из строки временные метки вида `00:14:30` или `14:30`.
  *
- * @param {string} value
- * @returns {number}
+ * @param {string} str
+ * @returns {string | null}
  */
-function parseTimecode(value) {
-    return value.split(':').reduceRight((acc, item, index, items) => {
-        return acc += parseFloat(item) * Math.pow(60, items.length - 1 - index);
-    }, 0);
+function matchTimecode(str) {
+    const match = str.match(/.+#(\d\d:\d\d(:\d\d)?)$/);
+    return match && match[1] ? match[1] : null;
 }
 
 /**
- * @param {string} url
- * @returns {string | null}
+ * Преобразует временные метки вида `00:14:30` или `14:30` в количество секунд.
+ *
+ * @param {string} time
+ * @returns {number}
  */
-function getPassedTimecode(url) {
-    const match = url.match(/.+#(\d\d:\d\d(:\d\d)?)$/);
-    return match && match[1] ? match[1] : null;
+function parseTimecode(time) {
+    return time.split(':').reduceRight((acc, item, index, items) => {
+        return acc += parseFloat(item) * Math.pow(60, items.length - 1 - index);
+    }, 0);
 }
 
 /**
  * @param {number} time
  * @returns {void}
  */
-function setCurrentTime(time) {
+function setTime(time) {
     player.currentTime = time;
 }
 
-function playPodcast() {
-    if (player.paused) {
-        player.play();
+function handlePassedTimecode() {
+    const passed = matchTimecode(document.URL);
+
+    if (passed) {
+        setTime(parseTimecode(passed));
     }
+}
+
+function initAnchor() {
+    window.addEventListener('hashchange', handlePassedTimecode);
 }
 
 /**
  * @param {string} time
  * @returns {void}
  */
-function updateAnchor(time) {
+function setAnchor(time) {
     window.location.hash = `#${time}`;
 }
 
-function initPassedTimecode() {
-    const passed = getPassedTimecode(document.URL);
-
-    if (passed) {
-        setCurrentTime(parseTimecode(passed));
+function playAudio() {
+    if (player.paused) {
+        player.play();
     }
 }
 
@@ -57,19 +63,15 @@ function initTimecode() {
         const button = event.target.closest('.podcast__timecode-button');
 
         if (button) {
-            setCurrentTime(parseFloat(button.value));
-            updateAnchor(button.innerText);
-            playPodcast();
+            setTime(parseFloat(button.value));
+            setAnchor(button.innerText);
+            playAudio();
         }
     });
 }
 
-function initAnchor() {
-    window.addEventListener('hashchange', initPassedTimecode);
-}
-
 if (timecode && player) {
-    initPassedTimecode();
-    initTimecode();
+    handlePassedTimecode();
     initAnchor();
+    initTimecode();
 }
