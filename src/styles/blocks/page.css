@@ -15,3 +15,12 @@
     max-width: 1920px;
     margin: 0 auto;
 }
+
+.page__war {
+    margin: 0;
+    padding: 0.8em 0 0.9em;
+    background-color: black;
+    color: white;
+    line-height: 1;
+    text-align: center;
+}
