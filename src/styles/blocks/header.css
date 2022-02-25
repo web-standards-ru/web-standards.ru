@@ -1,6 +1,7 @@
 /* Header */
 
 .header {
+    position: relative;
     display: grid;
     padding: 16px;
 }
