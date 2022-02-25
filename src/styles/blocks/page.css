@@ -23,4 +23,7 @@
     line-height: 1;
     text-align: center;
     background-color: black;
+    font-weight: bold;
+    font-stretch: expanded;
+    font-family: 'Dewi', sans-serif;
 }
