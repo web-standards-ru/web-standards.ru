@@ -4,11 +4,11 @@ const timecode = document.querySelector('.podcast__timecode');
 /**
  * Выделяет из строки временные метки вида `00:14:30` или `14:30`.
  *
- * @param {string} str
+ * @param {string} string
  * @returns {string | null}
  */
-function matchTimecode(str) {
-    const match = str.match(/.+#(\d\d:\d\d(:\d\d)?)$/);
+function matchTimecode(string) {
+    const match = string.match(/.+#(\d\d:\d\d(:\d\d)?)$/);
     return match && match[1] ? match[1] : null;
 }
 
