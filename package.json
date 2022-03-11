@@ -7,6 +7,7 @@
   "scripts": {
     "start": "eleventy --serve --quiet",
     "editorconfig": "editorconfig-checker",
+    "yaspeller": "yaspeller --only-errors src/**/*.md",
     "stylelint": "stylelint \"src/styles/**/*.css\"",
     "eslint": "eslint src/**/*.js",
     "markdown": "remark 'src/articles/**/*.md' --quiet",
@@ -57,7 +58,8 @@
     "typograf": "^6.12.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-paths": "^3.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "yaspeller": "^7.0.0"
   },
   "browserslist": [
     "last 2 version",
