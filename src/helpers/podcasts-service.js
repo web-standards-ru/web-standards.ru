@@ -52,6 +52,11 @@ async function getEpisodesData() {
 
                 const titles = Array.from(DOM.document.querySelectorAll('h2'));
 
+                const titlesTextToElementMap = titles.reduce((map, titleElement) => {
+                    map[titleElement.textContent] = titleElement;
+                    return map;
+                }, {});
+
                 // удаляем раздел с ведущими из контента
                 const hostsTitle = titles.filter(title => title.textContent === 'Ведущие' || title.textContent === 'Hosts')[0];
                 if (hostsTitle) {
@@ -77,6 +82,11 @@ async function getEpisodesData() {
                         chaptersList.remove();
                     }
                     chaptersTitle.remove();
+                }
+
+                for (const chapter of (chapters || [])) {
+                    const titleElement = titlesTextToElementMap[chapter.title];
+                    titleElement?.setAttribute('id', chapter.time);
                 }
 
                 items.push({

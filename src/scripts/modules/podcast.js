@@ -1,5 +1,4 @@
 const player = document.querySelector('.podcast__player');
-const timecode = document.querySelector('.podcast__timecode');
 
 /**
  * Выделяет из строки временные метки вида `00:14:30` или `14:30`.
@@ -41,15 +40,10 @@ function handlePassedTimecode() {
 }
 
 function initAnchor() {
-    window.addEventListener('hashchange', handlePassedTimecode);
-}
-
-/**
- * @param {string} time
- * @returns {void}
- */
-function setAnchor(time) {
-    window.location.hash = `#${time}`;
+    window.addEventListener('hashchange', () => {
+        handlePassedTimecode();
+        playAudio();
+    });
 }
 
 function playAudio() {
@@ -58,20 +52,11 @@ function playAudio() {
     }
 }
 
-function initTimecode() {
-    timecode.addEventListener('click', (event) => {
-        const button = event.target.closest('.podcast__timecode-button');
-
-        if (button) {
-            setTime(parseFloat(button.value));
-            setAnchor(button.innerText);
-            playAudio();
-        }
-    });
-}
-
-if (timecode && player) {
-    handlePassedTimecode();
+if (player) {
+    if (player.networkState === HTMLMediaElement.NETWORK_LOADING) {
+        player.addEventListener('loadedmetadata', handlePassedTimecode);
+    } else {
+        handlePassedTimecode();
+    }
     initAnchor();
-    initTimecode();
 }
