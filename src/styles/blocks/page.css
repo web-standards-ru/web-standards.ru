@@ -9,6 +9,7 @@
     color: black;
     font-family: 'Dewi', sans-serif;
     background-color: white;
+    scroll-behavior: smooth;
 }
 
 .page__body {

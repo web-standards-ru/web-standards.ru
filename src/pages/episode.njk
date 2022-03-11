@@ -48,13 +48,11 @@ eleventyComputed:
                     {% for chapter in episode.chapters %}
                         <div class="podcast__timecode-chapter">
                             <dt class="podcast__timecode-time">
-                                <button
-                                    class="podcast__timecode-button"
-                                    type="button"
-                                    name="timecode"
-                                    value="{{ chapter.time | timecode }}">
+                                <a
+                                    class="podcast__timecode-link"
+                                    href="#{{ chapter.time }}">
                                     {{ chapter.time }}
-                                </button>
+                                </a>
                             </dt>
                             <dd class="podcast__timecode-title">{{ chapter.title }}</dd>
                         </div>

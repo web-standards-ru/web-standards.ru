@@ -134,13 +134,6 @@ module.exports = function(config) {
         return markdown.render(value);
     });
 
-    // преобразует временные метки вида `00:14:30` в количество секунд
-    config.addFilter('timecode', (value) => {
-        return value.split(':').reduceRight((acc, item, index, items) => {
-            return acc += parseFloat(item) * Math.pow(60, items.length - 1 - index);
-        }, 0)
-    })
-
     // Трансформации
 
     config.addTransform('htmlmin', (content, outputPath) => {
