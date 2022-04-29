@@ -17,7 +17,7 @@
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^1.0.1",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
     "@mavrin/remark-typograf": "^2.2.0",
@@ -34,7 +34,7 @@
     "gulp-terser": "^2.1.0",
     "html-minifier": "^4.0.0",
     "hyphen": "^1.6.2",
-    "linkedom": "^0.13.0",
+    "linkedom": "^0.14.7",
     "markdown-it-multimd-table": "^4.1.1",
     "node-w3c-validator": "^2.0.1",
     "node-xml-stream": "^1.0.2",
