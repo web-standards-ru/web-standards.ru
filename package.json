@@ -43,7 +43,7 @@
     "postcss-csso": "^6.0.0",
     "postcss-import": "^14.0.2",
     "pretty-data": "^0.40.0",
-    "remark-cli": "^10.0.1",
+    "remark-cli": "^11.0.0",
     "remark-frontmatter": "^4.0.1",
     "remark-lint": "^9.1.1",
     "remark-lint-code-block-style": "^3.1.0",
@@ -56,7 +56,7 @@
     "stylelint-order": "^5.0.0",
     "typograf": "^6.12.1",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-paths": "^3.0.1",
+    "vinyl-paths": "3.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "browserslist": [
