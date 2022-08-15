@@ -22,7 +22,7 @@
     "@babel/preset-env": "^7.15.6",
     "@mavrin/remark-typograf": "^2.2.0",
     "autoprefixer": "^10.3.6",
-    "del": "^6.0.0",
+    "del": "6.0.0",
     "editorconfig-checker": "^4.0.2",
     "eslint": "^8.7.0",
     "gulp": "^4.0.2",
