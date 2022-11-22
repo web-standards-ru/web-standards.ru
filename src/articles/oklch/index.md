@@ -11,9 +11,11 @@ tags:
     width: 16px;
     height: 16px;
     border: 1px solid black;
-    margin: 0px 2px 0 0px;
     box-sizing: border-box;
     display: inline-block;
+    position: relative;
+    top: 10px;
+    margin-right: 2px;
   }
 
   .color-preview::before {
@@ -30,7 +32,8 @@ tags:
     display: none;
   }
 
-  .language-css {
+  .preview-with-value {
+    display: inline-block;
     position: relative;
   }
 
@@ -52,16 +55,19 @@ tags:
     .property {
       min-width: 125px;
     }
+    .color-preview {
+      top: 3px;
+    }
   }
 </style>
 
 
 <pre data-lang="css">
-  <code tabindex="0" class="language-css">
-    <span class="selector">a:hover&nbsp;</span><span>{</span>
-      <span class="property">background:&nbsp;</span><span class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(0.21, 50.42, 225.59)"></div><span class="value">oklch(45% 0.26 264);&nbsp;</span><span class="comment">/* blue */</span></span>
-      <span><span class="property">color:&nbsp;</span><span class="preview-with-value"></span><div class="color-preview without-opacity" style="background-color: #fff"></div><span class="value">oklch(100% 0 0);&nbsp;</span><span class="comment">/* white */</span></span>
-      <span><span class="property">color:&nbsp;</span><div class="color-preview" style="background-color: rgba(0, 0, 0, 0.5);"></div><span class="value">oklch(0% 0 0 / 50%);&nbsp;</span><span class="comment">/* black with 50% opacity */</span></span>
-    <span>}</span>
-  </code>
+<code tabindex="0" class="language-css">
+<span class="selector">a:hover&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(0.21, 50.42, 225.59)"></div><span class="value">oklch(45% 0.26 264);&nbsp;</span><span class="comment">/* blue */</span></div>
+  <span class="property">color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #fff"></div><span class="value">oklch(100% 0 0);&nbsp;</span><span class="comment">/* white */</span></div>
+  <span class="property">color:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgba(0, 0, 0, 0.5);"></div><span class="value">oklch(0% 0 0 / 50%);&nbsp;</span><span class="comment">/* black with 50% opacity */</span></div>
+<span>}</span>
+</code>
 </pre>
