@@ -14,7 +14,7 @@ tags:
     box-sizing: border-box;
     display: inline-block;
     position: relative;
-    top: 10px;
+    top: 2px;
     margin-right: 2px;
   }
 
@@ -54,9 +54,6 @@ tags:
   @media (max-width: 1239px) {
     .property {
       min-width: 125px;
-    }
-    .color-preview {
-      top: 3px;
     }
   }
 </style>
