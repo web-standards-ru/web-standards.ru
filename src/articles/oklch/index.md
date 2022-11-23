@@ -74,7 +74,7 @@ tags:
 </pre>
 
 <figure>
-    <img src="images/oklch-picker.png" loading="lazy" alt="Цветовой миксер OKLCH от Evil Martians отображает пространство OKLCH с ползунками для настройки яркости, насыщенности, альфа-канала и оттенка.">
+    <img src="images/oklch-picker.png" loading="lazy" alt="Цветовой миксер OKLCH Злых марсиан отображает пространство OKLCH с ползунками для настройки яркости, насыщенности, альфа-канала и оттенка.">
     <figcaption>Пространство OKLCH в цветовом миксере.</figcaption>
 </figure>
 
