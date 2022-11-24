@@ -101,7 +101,7 @@ tags:
 1. Для OKLCH или LCH при подборе значений <span class="text-highlight">L</span>, <span class="text-highlight">C</span> и <span class="text-highlight">H</span> можно получить цвет, который будет выходить за пределы возможностей экрана. Хотя браузеры и попытаются найти ближайший поддерживаемый цвет, стоит проверять результаты с помощью цветового миксера;
 2. OKLCH – цветовое пространство, которое появилось относительно недавно. На момент написания этой статьи в 2022 году его экосистема ограничена. Однако уже есть <span class="text-highlight">oklch()</span> <a href="https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function" target="_blank" rel="noopener noreferrer">полифил</a>, а также <a href="https://huetone.ardov.me/" target="_blank" rel="noopener noreferrer">генератор палитры</a>, <a href="https://oklch.evilmartians.io/" target="_blank" rel="noopener noreferrer">цветовой миксер</a> и много <a href="https://bottosson.github.io/posts/oklab/#oklab-implementations" target="_blank" rel="noopener noreferrer">конвертеров</a>.
 <figure>
-    <img src="images/oklch-picker.png" loading="lazy" alt="Цветовой миксер OKLCH от Evil Martians отображает пространство OKLCH с ползунками для настройки яркости, насыщенности, альфа-канала и оттенка.">
+    <img src="images/oklch-picker.png" loading="lazy" alt="Цветовой миксер OKLCH Злых марсиан отображает пространство OKLCH с ползунками для настройки яркости, насыщенности, альфа-канала и оттенка.">
     <figcaption>Пространство OKLCH в цветовом миксере.</figcaption>
 </figure>
 Это лишь краткое описание особенностей OKLCH — но если вы готовы к тому, чтобы больше узнать о новой эре CSS-цветов, то смело переходите к первой главе.
@@ -136,7 +136,7 @@ tags:
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="comment">/* В качестве примера в следующих CSS-правилах используются hsl().
-   Не используйте формат hsl() в продакшн-сборке, так как это влечёт проблемы с доступностью. */</span>
+   Не используйте формат hsl() в реальных проектах, так как это влечёт проблемы с доступностью. */</span>
 <span class="selector">:root&nbsp;</span><span>{</span>
   <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: hsl(63 61% 40%);"></div><span class="value">hsl(63 61% 40%);&nbsp;</span></div>
 <span>}</span>
