@@ -74,7 +74,7 @@ tags:
 
 ## Краткое объяснение
 
-<span class="text-highlight">oklch()</span> – это новый способ определять CSS-цвета. В <span class="text-highlight">oklch(L C H)</span> или <span class="text-highlight">oklch(L C H / a)</span> компоненты, представленные буквами в аббревиатуре, означают следующее:
+<span class="text-highlight">oklch()</span> — новый способ определять цвета в CSS. В <span class="text-highlight">oklch(L C H)</span> или <span class="text-highlight">oklch(L C H / a)</span> компоненты, представленные буквами в аббревиатуре, означают следующее:
 
 - <span class="text-highlight">L</span> – яркость (<span class="text-highlight">0%</span>-<span class="text-highlight">100%</span>). Важно отметить, что этот компонент передаёт яркость без искажения, в отличие от <span class="text-highlight">L</span> в <span class="text-highlight">hsl()</span>;
 - <span class="text-highlight">C</span> – насыщенность, которая варьируется от серого до наиболее интенсивного оттенка;
