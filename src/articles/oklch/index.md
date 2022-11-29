@@ -91,7 +91,7 @@ tags:
 Но, работая с OKLCH, следует помнить о паре важных нюансов:
 
 1. Для OKLCH или LCH при подборе `L`, `C` и `H` есть риск получить цвет, выходящий за пределы возможностей экрана. Хоть браузеры и попытаются найти ближайший поддерживаемый цвет, нам стоит проверять результат в цветовом миксере;
-2. OKLCH — цветовое пространство, которое появилось совсем недавно. На момент написания этой статьи в 2022 году его экосистема ограничена. Но у нас уже есть `oklch()` <a href="https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function" target="_blank" rel="noopener noreferrer">полифил</a>, а также <a href="https://huetone.ardov.me/" target="_blank" rel="noopener noreferrer">генератор палитры</a>, <a href="https://oklch.evilmartians.io/" target="_blank" rel="noopener noreferrer">цветовой миксер</a> и много <a href="https://bottosson.github.io/posts/oklab/#oklab-implementations" target="_blank" rel="noopener noreferrer">конвертеров</a>.
+2. OKLCH — цветовое пространство, которое появилось совсем недавно. На момент написания этой статьи в 2022 году его экосистема ограничена. Но у нас уже есть `oklch()` [полифил](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function), а также [генератор палитры](https://huetone.ardov.me/), [цветовой миксер](https://oklch.evilmartians.io/) и много [конвертеров](https://bottosson.github.io/posts/oklab/#oklab-implementations).
 <figure>
     <img src="images/oklch-picker.png" loading="lazy" alt="Цветовой миксер OKLCH Злых марсиан отображает пространство OKLCH с ползунками для настройки яркости, насыщенности, альфа-канала и оттенка.">
     <figcaption>Пространство OKLCH в цветовом миксере.</figcaption>
@@ -109,7 +109,7 @@ tags:
 ## Развитие цвета в CSS
 #### CSS Colors Module 4
 
-Немного истории: 5 июля 2022 года спецификация <a href="https://www.w3.org/TR/css-color-4/" target="_blank" rel="noopener noreferrer">CSS Color Module Level 4</a> стала кандидатом в рекомендации W3C. В ней появляется синтаксический сахар для функций цвета, которым мы будем пользоваться в этой статье:
+Немного истории: 5 июля 2022 года спецификация [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/) стала кандидатом в рекомендации W3C. В ней появляется синтаксический сахар для функций цвета, которым мы будем пользоваться в этой статье:
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="selector">.old&nbsp;</span><span>{</span>
@@ -147,7 +147,7 @@ tags:
 
 #### Нативная поддержка работы с цветом в CSS
 
-<a href="https://www.w3.org/TR/css-color-4/" target="_blank" rel="noopener noreferrer">CSS Color 4</a> — это большой шаг в мире стилей, но грядущий <a href="https://www.w3.org/TR/css-color-5/" target="_blank" rel="noopener noreferrer">CSS Color 5</a> будет ещё полезнее. В нём, наконец, появится нативная поддержка работы с цветом.
+[CSS Color 4](https://www.w3.org/TR/css-color-4/) — это большой шаг в мире стилей, но грядущий [CSS Color 5](https://www.w3.org/TR/css-color-5/) будет ещё полезнее. В нём, наконец, появится нативная поддержка работы с цветом.
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="comment">/* В качестве примера в следующих CSS-правилах используются hsl().
