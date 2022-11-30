@@ -20,6 +20,15 @@ tags:
     margin-right: 2px;
   }
 
+  .compare-block {
+    display: flex;
+    gap: 10px;
+  }
+
+  .compare-code {
+    width: 50%;
+  }
+
   .color-preview::before {
     background: repeating-conic-gradient(#fff 0% 25%, #999 0% 50%) 0 0 / 14px 14px;
     display: block;
@@ -58,6 +67,15 @@ tags:
   @media (max-width: 1239px) {
     .property {
       min-width: var(--mobile-width);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .compare-block {
+      flex-direction: column;
+    }
+    .compare-code {
+      width: 100%;
     }
   }
 </style>
@@ -189,4 +207,159 @@ tags:
 </code>
 </pre>
 Отметим: `--accent` в `oklch(from …)` не обязательно должен быть тоже в формате OKLCH. Но для улучшения читаемости мы рекомендуем писать в едином формате.
- 
+
+## Сравнение OKLCH с другими CSS-форматами цветов
+
+В предыдущей главе мы кратко рассказали об `oklch()`, P3 и встроенных изменениях цвета. Надеемся, что теперь вы узнали больше о развитии цвета в CSS.
+
+Мы можем комбинировать разные форматы при работе с цветами. Необязательно везде использовать OKLCH; но единый подход к записи значительно улучшает читаемость и поддерживаемость кода.
+
+А что, если мы постараемся выбрать единый, универсальный формат записи цвета? Попробуем развить эту идею и определить критерии для выбора:
+
+1. Для него должна быть встроенная поддержка в CSS;
+2. Он должен уметь работать как минимум с широким цветовым охватом P3;
+3. Он подойдёт для лёгкого изменения цвета. Для этого компоненты формата должны быть удобочитаемыми и при этом не зависеть друг от друга. Например, изменение яркости должно сохранять прежний уровень контраста, а изменение насыщенности не должно менять оттенок.
+
+#### OKLCH против RGB/Hex
+
+Все форматы `rgb(109 162 218)`, `#6ea3db` или аналог P3-цветов `color(display-p3 0.48 0.63 0.84)` записываются тремя числами, которые определяют количество красного, зелёного и голубого соответственно. Обратите внимание: `1` в`color(display-p3)` шифрует большее значение, чем `255` в RGB.
+
+Какая проблема объединяет все эти форматы? Они абсолютно нечитаемы для большинства разработчиков. Люди часто начинают обращаться с их составляющими, как с магическими числами, не пытаясь вникнуть в их смысл.
+
+RGB, hex и `color(display-p3)` неудобны для трансформаций цвета, поскольку большинству людей интуитивно сложно задавать цвета, изменяя количество красного, голубого и зелёного. Кроме того, с помощью RGB и hex нельзя определить P3-цвета.
+
+С другой стороны, с помощью OKLCH, LCH и HSL можно установить цвет более похожим на тот, который увидит человек.
+
+Сравните hex и OKLCH:
+
+<div class="compare-block">
+<pre data-lang="css" class="compare-code">
+<code tabindex="0" class="language-css">
+<span class="selector">.button&nbsp;</span><span>{</span>
+  <span class="comment">/* Голубой */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #6ea3db;"></div><span class="value">#6ea3db;</span></div>
+<span>}</span>
+<span class="selector">.button:hover&nbsp;</span><span>{</span>
+  <span class="comment">/* Более яркий голубой */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #7db3eb;"></div><span class="value">#7db3eb;</span></div>
+<span>}</span>
+<span class="selector">.button.is-delete&nbsp;</span><span>{</span>
+  <span class="comment">/* Красный с той же насыщенностью */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #d68585;"></div><span class="value">#d68585;</span></div>
+<span>}</span>
+</code>
+</pre>
+
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.button&nbsp;</span><span>{</span>
+  <span class="comment">/* Голубой */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #6ea3db;"></div><span class="value">oklch(70% 0.1 250);</span></div>
+<span>}</span>
+<span class="selector">.button:hover&nbsp;</span><span>{</span>
+  <span class="comment">/* Более яркий голубой */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #7db3eb;"></div><span class="value">oklch(75% 0.1 250);</span></div>
+<span>}</span>
+<span class="selector">.button.is-delete&nbsp;</span><span>{</span>
+  <span class="comment">/* Красный с той же насыщенностью */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #d68585;"></div><span class="value">oklch(70% 0.1 20);</span></div>
+<span>}</span>
+</code>
+</pre>
+</div>
+
+Простой и понятный порядок определения цветов в OKLCH — это очень удобно. Но здесь стоит вспомнить и про обратную сторону монеты, слабейшее место OKLCH: несмотря на все свои преимущества, он появился совсем недавно. Его система ещё находится в стадии активного развития.
+
+#### OKLCH против HSL
+
+Теперь сравним OKLCH и HSL. HSL использует 3 компонента для кодировки оттенка, насыщенности и яркости, например `hsl(210 60% 64%)`. Главная проблема с HSL в том, что это цветовое пространство растягивается в цилиндр.
+
+Каждый оттенок должен иметь одинаковое значение насыщенности (`0%`—`100%`). Но в реальности экран отображает цвет не так, как это видит человеческий глаз: разные оттенки будут обладать неодинаковой максимальной насыщенностью. HSL не обращает внимания на это различие. Он деформирует цветовое пространство и растягивает цвета до одинакового показателя максимальной насыщенности.
+
+<figure>
+    <img src="images/hsl-vs-oklch.avif" loading="lazy" alt="4 изображения. Два сверху показывают пространства HSL и OKLCH с одинаковыми значениями насыщенности/интенсивности. Два снизу — аналогично для черного и белого цвета.">
+    <figcaption>Так выглядят одинаковые значения яркости и оттенка в пространствах HSL и OKLCH для цветной и черно-белой версии. Разные оттенки в HSL имеют разную яркость.</figcaption>
+</figure>
+
+HSL искажает итоговый результат, поэтому его нельзя полноценно использовать для работы с цветом. Компонент `L` в нём является непредсказуемым, зависящим от угла поворота оттенка. Это приводит к неприятным проблемам с контрастом и доступностью.
+
+Вот несколько реальных примеров, где проявляются эти проблемы:
+
+1. Добавление 10% яркости для голубого или для фиолетового цвета приведут к разным результатам. Если вы когда-нибудь использовали функцию `darken()` в SASS, то понимаете, какой непредсказуемый может быть итог;
+2. Изменение оттенка фона повлечёт изменение яркости, что ухудшит контраст и сделает текст на фоне нечитаемым.
+
+<figure>
+    <img src="images/buttons-hsl-vs-oklch.avif" loading="lazy" alt="4 кнопки. В первой колонке представлено пространство HSL, во второй — OKLCH. Показано, что при изменении угла поворота оттенка в HSL контраст между текстом и фоном кнопки заметно ухудшается. Для OKLCH такой проблемы нет.">
+    <figcaption>Изменение угла в пространстве HSL может привести к проблемам доступности из-за низкого контраста.</figcaption>
+</figure>
+
+HSL плох для работы с цветом. В нашем сообществе многие [просят избегать](https://stripe.com/blog/accessible-color-systems) HSL при создании палитр. Кроме того, подобно RGB или hex, формат HSL не может быть использован для определения P3-цветов.
+
+OKLCH не искажает цветовое пространство; этот формат показывает нам реальные цвета со всей красочностью. Это помогает добиться предсказуемого контраста при изменениях цвета и при указании P3-цветов.
+
+С другой стороны, некоторые комбинации значений для OKLCH порождают цвета, которые обычные экраны отобразить не способны. Ряд из них можно увидеть только на P3-мониторах. Но это не критическая проблема: браузеры будут искать ближайший поддерживаемый цвет.
+
+#### OKLCH против Oklab & LCH против Lab
+
+В CSS есть две функции для пространства Oklab: `oklab()` и `oklch()`. Аналогичные есть и для Lab: `lab()` и `lch()`. Так в чём же разница?
+
+При использовании одинакового пространства есть разные способы задать в нём точку. Oklab и lab существуют в декартовых координатах с осями `a` и `b` (`a`— количество красного/зеленого для цвета, `b` — голубого/желтого). OKLCH и LCH используют полярные координаты, где есть угол оттенка и расстояние для насыщенности.
+
+<figure>
+    <img src="images/oklab-vs-oklch.avif" loading="lazy" alt="2 круга. Первый иллюстрирует декартовы координаты `a`, `b` в Oklab и прямой угол между этими осями. Второй отображает полярные координаты в OKLCH в виде острого угла поворота оттенка. Угол представлен двумя лучами, один из которых представляет собой насыщенность.">
+    <figcaption>Декартовы координаты для Oklab и полярные координаты для OKLCH.</figcaption>
+</figure>
+
+Вкратце, и OKLCH, и LCH являются отличным вариантом для создания читаемого кода и работы с цветом. Значения насыщенности и оттенков для них более приближены к тому, как люди их воспринимают.
+
+#### OKLCH против LCH 
+
+Формат [LCH](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/) построен поверх пространства CIE LAB (Lab). Он решает все проблемы, которые существуют в HSL и RGB. Также он позволяет работать с P3-цветами, и в большинстве случаев изменение цвета даёт предсказуемый результат.
+
+Однако формат LCH имеет одну неприятную проблему: неожиданный сдвиг оттенка при изменении насыщенности и яркости для голубого цвета (угол поворота между `270` и `330`).
+
+<figure>
+    <img src="images/lch-vs-oklch.avif" loading="lazy" alt="Два треугольника, которые представляют собой срезы пространств LCH и OKLCH, где яркость и насыщенность изменяются, а оттенок — одинаков. Фигура слева, обозначающая LCH, является голубой с одной стороны, и фиолетовой с другой. Фигура справа, обозначающая OKLCH, имеет одинаковый цвет на всей площади, как и ожидается.">
+    <figcaption>Срезы пространств LCH и OKLCH, где яркость и насыщенность изменяются, а оттенок — одинаков. Срез LCH голубой с одной стороны и фиолетовый с другой. Оттенок в OKLCH остаётся постоянным, как и ожидается.</figcaption>
+</figure>
+
+Небольшой пример из реального проекта:
+
+<div class="compare-block">
+<pre data-lang="css" class="compare-code">
+<code tabindex="0" class="language-css">
+<span class="selector">.temperature.is-very-very-cold&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(65, 46, 241);"></div><span class="value">lch(35% 110 300);</span></div>
+  <span class="comment">/* Выглядит голубым */</span>
+<span>}</span>
+<span class="selector">.temperature.is-very-cold&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(86, 61, 189);"></div><span class="value">lch(35% 75 300);</span></div>
+  <span class="comment">/* Мы изменили только яркость, но голубой стал фиолетовым */</span>
+<span>}</span>
+<span class="selector">.temperature.is-cold&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(90, 72, 138);"></div><span class="value">lch(35% 40 300);</span></div>
+  <span class="comment">/* Глубокий фиолетовый */</span>
+<span>}</span>
+</code>
+</pre>
+
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.temperature.is-very-very-cold&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(64, 43, 241)"></div><span class="value">oklch(48% 0.27 274);</span></div>
+  <span class="comment">/* Выглядит голубым */</span>
+<span>}</span>
+<span class="selector">.temperature.is-very-cold&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(66, 75, 195);"></div><span class="value">oklch(48% 0.185 274);</span></div>
+  <span class="comment">/* Всё ещё голубой */</span>
+<span>}</span>
+<span class="selector">.temperature.is-cold&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(76, 88, 150);"></div><span class="value">oklch(48% 0.1 274);</span></div>
+  <span class="comment">/* Всё ещё голубой */</span>
+<span>}</span>
+</code>
+</pre>
+</div>
+
+Пространства Oklab и OKLCH [были созданы](https://bottosson.github.io/posts/oklab/) для решения бага со сдвигом оттенка.
+Но OKLCH — не просто исправление. В нём появляется [много полезных возможностей](https://www.w3.org/TR/css-color-4/#ok-lab), связанных с математическими преобразованиями. Например, появляется улучшенная [гамма-коррекция](https://bottosson.github.io/posts/gamutclipping/), и CSSWG [рекомендует использовать OKLCH](https://www.w3.org/TR/css-color-4/#css-gamut-mapping) для гамма-отображения.
