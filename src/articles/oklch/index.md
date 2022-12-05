@@ -478,7 +478,7 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 <code tabindex="0" class="language-css">
 <span class="selector">:root&nbsp;</span><span>{</span>
   <span class="comment">/* Яркость и насыщенность заменены на определённый контраст */</span>
-  <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(from (--user-input) 87% 0.06h);</span></div>
+  <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(from (--user-input) 87% 0.06 h);</span></div>
 <span>}</span>
 <span class="selector">body&nbsp;</span><span>{</span>
   <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">var(--accent);</span></div>
