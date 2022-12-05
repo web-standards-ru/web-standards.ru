@@ -25,8 +25,6 @@
 
 Форкните и присылайте пулреквесты.
 
-Для разработчиков проекта есть чат в Телеграме, где можно синхронизироваться, обсуждать и планировать процесс. Постучите [@pepelsbey](https://t.me/pepelsbey) или [@dark_mefody](https://t.me/dark_mefody) в Телеграме, если хотите попасть туда.
-
 ## Окружение и технологии
 
 Движок [Eleventy](https://www.11ty.io/) собирает Markdown и JSON по шаблонам [Nunjucks](https://mozilla.github.io/nunjucks/) и генерирует статичные HTML-страницы. Стили пишутся на чистом CSS, соединяются импортами, сжимаются и оптимизируются. Браузерная совместимость описана в ключе `browserlist` в [package.json](https://github.com/web-standards-ru/web-standards.ru/blob/master/package.json), если коротко — «без IE11».
