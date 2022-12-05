@@ -41,7 +41,7 @@
     "postcss": "^8.3.8",
     "postcss-color-hex-alpha": "^8.0.2",
     "postcss-csso": "^6.0.0",
-    "postcss-import": "^14.0.2",
+    "postcss-import": "^15.0.1",
     "pretty-data": "^0.40.0",
     "remark-cli": "^11.0.0",
     "remark-frontmatter": "^4.0.1",
