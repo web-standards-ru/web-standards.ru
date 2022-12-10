@@ -126,8 +126,8 @@ tags:
 - [Развитие цвета в CSS](#section-3)
 - [Сравнение OKLCH с другими CSS-форматами цветов](#section-7)
 - [Принципы работы OKLCH](#section-12)
-- [Внедрение OKLCH в проект](#section-6)
-- [Подведение итогов](#section-7)
+- [Внедрение OKLCH в проект](#section-17)
+- [Подведение итогов](#section-27)
 
 ## Развитие цвета в CSS
 #### CSS Colors Module 4
@@ -534,3 +534,382 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 
 И здесь есть хорошая новость: полифил `oklch()` умеет это делать. Он автоматически оборачивает P3-цвета выражением `@media` и устанавливает в качестве запасного варианта ближайший sRGB-цвет.
 
+## Внедрение OKLCH в проект
+
+#### Шаг 1: Добавление полифила OKLCH в CSS
+
+К декабрю  2022, из всех браузеров `oklch()` [поддерживает](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch) только Safari. К счастью, у нас есть полифил для её статичных значений (но не для кастомных CSS-свойств).
+
+Есть два полифила, поддерживающих `oklch()`:
+
+- Очень популярный [`postcss-preset-env`](https://preset-env.cssdb.org/);
+- И крайне быстрый [Lightning CSS](https://lightningcss.dev/), написанный на Rust.
+
+Скорее всего, в вашей системе уже есть `postcss-preset-env`; например, он есть у каждого проекта, созданного с помощью Create React App.
+
+1. Проверьте ваш файл блокировки (`package-lock.json`, `yarn.lock` или `pnpm-lock.yaml`) для `postcss-preset-env`. Убедитесь, что он использует последнюю версию: `7.x` или выше;
+2. Добавьте `oklch(100% 0 0)` в ваш CSS и посмотрите, как он скомпилируется в `rgb()` с помощью инструмента сборки.
+
+Если у вас нет `postcss-preset-env`, но есть инструмент для сборки фронтенда (такой как webpack):
+
+1. Установите `postcss-preset-env` с помощью пакетного менеджера. Для npm запустите следующую команду:
+<pre data-lang="sh">
+<code tabindex="0" class="language-sh">
+npm install postcss-preset-env postcss
+</code>
+</pre>
+2. Проверьте [документацию PostCSS](https://github.com/postcss/postcss), чтобы узнать, как добавить его поддержку в ваш инструмент сборки. Например webpack требует [`postcss-loader`](https://github.com/webpack-contrib/postcss-loader), а в [Vite](https://vitejs.dev/) уже есть встроенная поддержка.
+3. Если у вас уже есть интеграция с PostCSS, найдите файл с его конфигурацией. Многие проекты уже используют PostCSS (например, Autoprefixer). В корневой папке проекта найдите `postcss.config.js` или `.postcssrc.json`, а затем раздел "postcss" в `package.json` или `postcss` в конфигурации сборщика.
+4. Если вы смогли найти файл конфигурации PostCSS, добавьте `postcss-preset-env` в плагины:
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+{
+  "plugins": [
++   "postcss-preset-env",
+    "autoprefixer"
+  ]
+}
+</code>
+</pre>
+5. Если вы не смогли найти файл конфигурации, создайте файл `.postcssrc.json` в корневой папке проекта:
+<pre data-lang="css">
+  <code tabindex="0" class="language-css">
+  {
+    "plugins": [
+      "postcss-preset-env"
+    ]
+  }
+  </code>
+</pre>
+Если у вас ещё нет инструмента сборки, мы рекомендуем использовать Vite или компилировать CSS с помощью [lightningcss](https://github.com/parcel-bundler/lightningcss#from-the-cli) CLI.
+
+Добавьте в файл `.test{ background: oklch(100% 0 0) }`, скомпилируйте стили, затем найдите в итоговом CSS `.test{background:#fff}`.
+
+#### Шаг 2: Перевод в OKLCH уже существующих цветов
+
+С помощью полифила `oklch()` мы можем заменить все цвета в форматах hex, `rgb()` или `hsl()` на OKLCH. Они будут работать в любом бразуере.
+
+Найдите любой цвет в вашем исходном CSS-коде и переведите его в `oklch()`, используя цветовой миксер [OKLCH](https://oklch.evilmartians.io/#70,0.1,191,100).
+<pre data-lang="css">
+  <code tabindex="0" class="language-css">
+  .header {
+  - background: #f3f7fa;
+  + background: oklch(97.4% 0.006 240);
+  }
+  </code>
+</pre>
+Вы также можете использовать [этот скрипт](https://github.com/fpetrakov/convert-to-oklch), чтобы автоматически перевести все цвета:
+<pre data-lang="sh">
+  <code tabindex="0" class="language-sh">
+  npx convert-to-oklch ./src/**/*.css
+  </code>
+</pre>
+Помните, что эти полифилы поддерживаются только в CSS, и не будут работать в HTML или JS-файлах.
+
+#### Дополнительно: добавление палитры
+
+Небольшой рефакторинг заметно улучшит поддерживаемость CSS-кода. Давайте попробуем вынести цвета в единую палитру?
+
+Наши требования для палитр:
+
+- Все цвета указываются как кастомные CSS-свойства;
+- Компоненты фреймворков используют эти цвета в виде `var(--error)`;
+- Дизайнерам стоит стремиться к переиспользованию цветов. Это позволит уменьшить количество их возможных сочетаний;
+- Для создания тёмной темы или темы с высоким контрастом не нужны выражения `@media` в компонентах. Должно быть достаточно изменения кастомных свойств в палитре.
+
+Вот [небольшой пример](https://github.com/evilmartians/oklch-picker/blob/main/view/base/colors.css) такого подхода:
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">:root&nbsp;</span><span>{</span>
+ <span class="property">--surface-0:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(96% 0.005 300);</span></div>
+ <span class="property">--surface-1:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(100% 0 0);</span></div>
+ <span class="property">--surface-2:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(99% 0 0 / 85%);</span></div>
+ <span class="property">--text-primary:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(0% 0 0);</span></div>
+ <span class="property">--text-secondary:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(54% 0 0);</span></div>
+ <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(57% 0.18 286);</span></div>
+ <span class="property">--danger:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(59% 0.23 7);</span></div>
+<span>}</span>
+</code>
+</pre>
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">@media (prefers-color-scheme: dark)&nbsp;</span><span>{</span>
+  <span class="selector">:root&nbsp;</span><span>{</span>
+    <span class="property">--surface-0:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(0% 0 0);</span></div>
+    <span class="property">--surface-1:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(29% 0.01 300);</span></div>
+    <span class="property">--surface-2:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(29% 0 0 / 85%);</span></div>
+    <span class="property">--text-primary:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(100% 0 0);</span></div>
+  <span>}</span>
+<span>}</span>
+</code>
+</pre>
+Также отметим, что перейти к `oklch()` станет проще после создания единой палитры.
+
+#### Шаг 3: Поддержка OKLCH с помощью Stylelint
+
+[Stylelint](https://stylelint.io/) — статический анализатор стилей, который будет полезен для поиска распространённых ошибок и внедрения хороших практик. Он работает как ESLint, но для CSS, SASS, или CSS-in-JS.
+
+Stylelint будет очень полезен при переходе на `oklch()`:
+
+- Он позволяет указать, что цвета в форматах hex, `rgb()` и `hsl()` не будут использоваться. Следует хранить все цвета в `oklch()` для улучшения единообразия;
+- Он проверит, что все P3-цвета находятся в выражении `@media (color-gamut: p3)`. Это поможет избежать автоматической гамма-коррекции в браузере (Safari делает её неправильно).
+
+Давайте установим Stylelint и плагин [stylelint-gamut](https://www.npmjs.com/package/stylelint-gamut). Воспользуемся пакетным менеджером npm:
+<pre data-lang="sh">
+  <code tabindex="0" class="language-sh">
+  npm install stylelint stylelint-gamut
+  </code>
+</pre>
+Затем создадим конфигурацию `.stylelintrc` следующим образом:
+<pre data-lang="json">
+  <code tabindex="0" class="language-json">
+  {
+    "plugins": [
+      "stylelint-gamut"
+    ],
+    "rules": {
+      "gamut/color-no-out-gamut-range": true,
+      "function-disallowed-list": ["rgba", "hsla", "rgb", "hsl"],
+      "color-function-notation": "modern",
+      "color-no-hex": true
+    }
+  }
+  </code>
+</pre>
+Добавим вызов Stylelint в команду `npm test`, чтобы запустить его в CI. Изменим следующую строку в `package.json`:
+<pre data-lang="json">
+  <code tabindex="0" class="language-json">
+    "scripts": {
+  -   "test": "eslint ."
+  +   "test": "eslint . && stylelint **/*.css"
+    }
+  </code>
+</pre>
+Запустим `npm test`, чтобы увидеть, какие цвета должны быть переведены в `oklch()`.
+
+Мы также рекомендуем добавить [`stylelint-config-recommended`](https://github.com/stylelint/stylelint-config-recommended) в `.stylelintrc`. Эта рекомендуемая конфигурация упростит проверку хороших практик в CSS-коде.
+
+#### Дополнительно: P3-цвета
+
+Перевод цветов в `oklch()` улучшит читаемость и поддерживаемость кода, но не добавит новых возможностей. Тем не менее, у OKLCH есть заметное пользователям преимущество: с помощью него мы можем добавлять на сайты красочные и глубокие P3-цвета.
+
+_P3-цвета очень полезны при создании палитр. Но прямо сейчас мы не можем их использовать: только Safari на современных устройствах Apple поддерживает P3-цвета._
+
+Вот, как можно добавить P3-цвета в проект:
+
+1. Выберите любой насыщенный цвет (например, один из акцентирующих) в вашем CSS-коде;
+2. Скопируйте его и вставьте в [цветовой миксер OKLCH](https://oklch.evilmartians.io/);
+3. Измените значения `Chroma` и `Lightness` так, чтобы цвет оказался в области P3-цветов. Легче всего это сделать, изменив `Lightness`: выберите любой цвет выше тонкой белой линии на этом графике;
+4. Скопируйте результат и оберните его в медиавыражение `color-gamut: p3`.
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">:root&nbsp;</span><span>{</span>
+  <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(48, 189, 68)"></div><span class="value">oklch(70% 0.2 145);</span></div>
+<span>}</span>
+<span class="selector">@media (color-gamut: p3)&nbsp;</span><span>{</span>
+  <span class="selector">:root&nbsp;</span><span>{</span>
+    <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: color(display-p3 0.1530 0.7673 0.0793);"></div><span class="value">oklch(70% 0.29 145);</span></div>
+  <span>}</span>
+<span>}</span>
+</code>
+</pre>
+
+#### Дополнительно: OKLCH для SVG
+
+OKLCH можно использовать не только в CSS, но и в SVG или HTML. Это полезно при добавлении ярких красок для иконок приложения.
+
+Обратите внимание: полифилов для использования SVG нет. По этой причине мы рекомендуем использовать функцию `oklch()` только при указании P3-цветов.
+
+<pre data-lang="xml">
+<code tabindex="0" class="language-xml">
+&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  <div>&nbsp;&nbsp;&lt;style&gt;
+    @media (color-gamut: p3) {
+      rect {
+      &nbsp;&nbsp;fill:&nbsp;<div class="color-preview without-opacity" style="background-color: color(display-p3 0.0505 0.5557 0.0653);"></div>oklch(55% 0.23 146)
+      }
+    }
+  &lt;/style&gt;</div>
+  <div>&nbsp;&nbsp;&lt;rect x="10" y="10" width="100" height="100"
+          fill="&nbsp;<div class="color-preview without-opacity" style="background-color: #048c2c;"></div>#048c2c" /&gt;</div>
+&lt;/svg&gt;
+</code>
+</pre>
+#### Дополнительно: OKLCH и Oklab в градиентах
+
+Градиент — путь между двумя или более точками цветового пространства. В разных пространствах градиент для одних и тех же цветов может получиться совершенно разный.
+<figure>
+    <img src="images/p3.png" loading="lazy" alt="4 квадрата. В каждом квадрате приведён код градиентов в пространствах sRGB, Oklab и OKLCH. Код в каждом блоке одинаков, но для каждого цветового пространства градиент немного различается, что показывают фоновые цвета квадратов.">
+    <figcaption>Так выглядят градиенты в разных цветовых пространствах.</figcaption>
+</figure>
+Нет единого решения, какое пространство лучше для работы с градиентами; это зависит от конкретной задачи. Но в цветовом пространстве Oklab (родственнике OKLCH, живущем на вершине декартовых координат) обычно получается хороший результат:
+
+- У него нет сероватой области в центре, как в sRGB (пространство, используемое по умолчанию);
+- У него нет сдвига от голубого к фиолетовому, в отличие от Lab;
+
+В [CSS Image 4 specification](https://drafts.csswg.org/css-images-4/#linear-gradients) есть специальное выражение, изменяющее цветовое пространство для градиентов:
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.oklch&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">linear-gradient(in lab, blue, green);</span></div>
+<span>}</span>
+</code>
+</pre>
+Код выше будет работать только в Safari Technological Preview. Вы можете использовать [плагин PostCSS](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-gradients-interpolation-method), чтобы применять его прямо сейчас.
+
+_Вы можете сделать градиенты ещё более красивыми, используя [easing-gradients](https://larsenwork.com/easing-gradients/)._
+
+#### Дополнительно: Изменение цветов с помощью OKLCH
+
+Уже очень скоро мы сможем увидеть истинную силу OKLCH: с [CSS Colors 5](https://www.w3.org/TR/css-color-5/#relative-colors) браузеры начнут поддерживать встроенные изменения цветов в CSS.
+
+OKLCH крайне хорош для работы с цветом. В отличие от HSL, его контраст предсказуем; в нём нет сдвига оттенка при изменении насыщенности, чем не может похвастаться LCH.
+
+К сожалению, полифил не даёт полную поддержку кастомных CSS-свойств. Но если мы познакомимся с OKLCH сейчас, то сможем применять знания в реальных проектах, как только это станет возможным.
+
+Следующий пример иллюстрирует, как можно при наведении на кнопку сделать её фон на 10% темнее:
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.button&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(165, 145, 213);"></div><span class="value">var(--accent);</span></div>
+<span>}</span>
+<span class="selector">.button:hover&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(135, 115, 181);"></div><span class="value">oklch(from var(--accent) calc(l - 10%) c h);</span></div>
+<span>}</span>
+</code>
+</pre>
+С кастомными свойствами CSS достаточно единожды определить логику`:hover`. В дальнейшем мы можем создавать разные варианты стилей, просто изменяя исходный цвет.
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.button&nbsp;</span><span>{</span>
+  <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(117, 161, 220);"></div><span class="value">var(--accent);</span></div>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">var(--button-color);</span></div>
+<span>}</span>
+<span class="selector">.button.is-secondary&nbsp;</span><span>{</span>
+  <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgba(117, 161, 220, 0.5);"></div><span class="value">var(--dimmed);</span></div>
+<span>}</span>
+<span class="selector">.button.is-error&nbsp;</span><span>{</span>
+  <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgb(214, 133, 131);"></div><span class="value">var(--error);</span></div>
+<span>}</span>
+<span class="selector">.button:hover&nbsp;</span><span>{</span>
+  <span class="comment">/* Один :hover для обычного, вторичного и ошибочного состояния */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(from var(--button-color) calc(l + 10%) c h);</span></div>
+<span>}</span>
+</code>
+</pre>
+Предсказуемый контраст у OKLCH позволяет работать с цветами из пользовательского ввода с отличной доступностью для наших сайтов.
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.header&nbsp;</span><span>{</span>
+  <span class="comment">/* JS установит --user-avatar-dominant */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(117, 161, 220);"></div><span class="value">oklch(from var(--user-avatar-dominant) 80% 0.17 h);</span></div>
+  <span class="comment">/* OKLCH позволяет быть уверенным, что чёрный текст всегда будет читаемым на любом оттенке, так как мы установили L равным 80% */</span>
+  <span class="property">color:&nbsp;</span><div class="preview-with-value"><span class="value">black;</span></div>
+<span>}</span>
+</code>
+</pre>
+И здесь стоит вспомнить про ещё одно достоинство OKLCH: с ним генерация целой системы палитр в CSS становится лёгкой задачей.
+
+#### Дополнительно: OKLCH в JS
+
+Нам не нужно ждать CSS Colors 5, чтобы использовать OKLCH для изменений цвета.
+[Color.js](https://colorjs.io/) и [culori](https://culorijs.org/) позволяют менять цвета в JS с учётом преимуществ OKLCH.
+
+Ниже представлен  пример, как сделать акцентирующий цвет с помощью Color.js:
+
+<pre data-lang="js">
+  <code class="language-js">
+  import Color from 'colorjs.io'
+
+  <span class="comment">// Разбираем любой CSS цвет</span>
+  let accent = new Color(userAvatarDominant)
+
+  <span class="comment">/// Устанавливаем яркость и контраст</span>
+  accent.oklch.l = 0.8
+  accent.oklch.c = 0.17
+
+  <span class="comment">/// Применяем гамма-коррекцию для sRGB, если мы вышли за пределы sRGB</span>
+  if (!accent.inGamut('srgb')) {
+    accent = accent.toGamut({ space: 'srgb' })
+  }
+
+  <span class="comment">/// Делаем цвет на 10% светлее </span>
+  let hover = accent.clone()
+  hover.oklch.l += 0.1
+
+  document.body.style.setProperty('--accent', accent.to('srgb').toString())
+  document.body.style.setProperty('--accent-hover', hover.to('srgb').toString())
+  </code>
+</pre>
+Попробуйте самостоятельно проверить, как работает culori, используя [исходный код цветового миксера OKLCH](https://github.com/evilmartians/oklch-picker). 
+
+Вы можете использовать разные библиотеки, чтобы создавать целые системы палитр в цветовом пространстве OKLCH. Они, к тому же, будут обладать предсказуемым констрастом и отличной доступностью. Например, [Hueone](https://huetone.ardov.me/), генератор доступных палитр, по умолчанию использует Oklab.
+
+## Подведение итогов: почему мы перешли на OKLCH?
+
+Мы, Злые марсиане, уже используем OKLCH в наших проектах. Ответим на главный вопрос: какие же преимущества мы получили, перейдя на OKLCH?
+
+#### 1. Лёгкое чтение цветов
+
+Благодаря OKLCH мы без труда определяем записанный цвет, просто посмотрев на числа в CSS-свойстве. И уже в процессе чтения кода мы можем распознать проблему плохого контраста. Для этого нужно всего лишь сравнить яркость в CSS-правилах:
+
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.text&nbsp;</span><span>{</span>
+  <span class="comment">/* Ошибка: разницы в 20% яркости недостаточно для хорошего контраста и доступности */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: #fff;"></div><span class="value">oklch(80% 0.02 300);</span></div>
+  <span class="property">color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(191, 187, 201);"></div><span class="value">oklch(100% 0 0);</span></div>
+<span>}</span>
+<span class="selector">.error&nbsp;</span><span>{</span>
+  <span class="comment">/* Ошибка: цвета имеют немного разный оттенок */</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(248, 213, 207);"></div><span class="value">oklch(90% 0.04 30);</span></div>
+  <span class="property">color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(183, 25, 28);"></div><span class="value">oklch(50% 0.19 27);</span></div>
+<span>}</span>
+</code>
+</pre>
+#### 2. Лёгкая работа с цветами
+
+Мы изменяем цвета прямо в коде и получаем предсказуемые результаты:
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.button&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(5, 89, 210);"></div><span class="value">oklch(50% 0.2 260);</span></div>
+<span>}</span>
+<span class="selector">.button:hover&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(46, 121, 245);"></div><span class="value">oklch(60% 0.2 260);</span></div>
+<span>}</span>
+</code>
+</pre>
+#### 3. Использование как sRGB, так и новых P3-цветов
+
+Мы используем одинаковые CSS-функции как для sRGB, так и для P3-цветов:
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.buy-button&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(17, 162, 47);"></div><span class="value">oklch(62% 0.19 145);</span></div>
+<span>}</span>
+<span class="selector">@media (color-gamut: p3)&nbsp;</span><span>{</span>
+  <span class="selector">.buy-button&nbsp;</span><span>{</span>
+    <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: color(display-p3 0.1097 0.6527 0.0378);"></div><span class="value">oklch(62% 0.26 145);</span></div>
+  <span>}</span>
+<span>}</span>
+</code>
+</pre>
+
+#### 4. Взаимопонимание между разработчиками и дизайнерами
+
+Формат OKLCH больше всех приближен к цветам, которые мы видим в реальности. Поэтому использование полифила `oklch()` улучшило наше понимание, как можно работать с цветом.
+
+Кроме того, с OKLCH дизайнеры и разработчики стали лучше друг друга понимать. Мы можем использовать `oklch()` как в инструментах для дизайна (к примеру, в [генераторах палитр](https://huetone.ardov.me/)), так и для разработки. Это помогает добиться одинакового видения сайта с обеих сторон.
+
+#### 5. Готовность к будущему
+
+Перейдя на OKLCH сегодня, мы подготовили к себя к завтрашнему дню, когда в CSS появится встроенная работа с цветом.
+OKLCH — лучшее пространство для работы с цветом, и мы советуем познакомиться с ним как можно скорее.
+<pre data-lang="css">
+<code tabindex="0" class="language-css">
+<span class="selector">.button:hover&nbsp;</span><span>{</span>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(from var(--button-color) calc(l + 10%) c h);</span></div>
+<span>}</span>
+</code>
+</pre>
