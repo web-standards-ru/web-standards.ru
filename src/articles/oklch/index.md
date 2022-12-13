@@ -558,7 +558,7 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 npm install postcss-preset-env postcss
 </code>
 </pre>
-2. Проверьте [документацию PostCSS](https://github.com/postcss/postcss), чтобы узнать, как добавить его поддержку в ваш инструмент сборки. Например webpack требует [`postcss-loader`](https://github.com/webpack-contrib/postcss-loader), а в [Vite](https://vitejs.dev/) уже есть встроенная поддержка.
+2. Проверьте [документацию PostCSS](https://github.com/postcss/postcss), чтобы узнать, как добавить поддержку PostCSS в ваш инструмент сборки. Например webpack требует [`postcss-loader`](https://github.com/webpack-contrib/postcss-loader), а в [Vite](https://vitejs.dev/) уже есть встроенная поддержка.
 3. Если у вас уже есть интеграция с PostCSS, найдите файл с его конфигурацией. Многие проекты уже используют PostCSS (например, Автопрефиксер). В корневой папке проекта найдите `postcss.config.js` или `.postcssrc.json`, а затем раздел "postcss" в `package.json` или `postcss` в конфигурации сборщика.
 4. Если вы смогли найти файл конфигурации PostCSS, добавьте `postcss-preset-env` в плагины:
 <pre data-lang="css">
