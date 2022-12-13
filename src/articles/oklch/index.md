@@ -739,7 +739,7 @@ OKLCH можно использовать не только в CSS, но и в S
 
 Градиент — путь между двумя или более точками цветового пространства. В разных пространствах градиент для одних и тех же цветов может получиться совершенно разный.
 <figure>
-    <img src="images/color-space-gradients.avif" loading="lazy" alt="4 квадрата. В каждом квадрате приведён код градиентов в пространствах sRGB, Oklab и OKLCH. Код в каждом блоке одинаков, но для каждого цветового пространства градиент немного различается, что показывают фоновые цвета квадратов.">
+    <img src="images/color-space-gradients.avif" loading="lazy" alt="44 блока. В каждом блоке приведён код градиентов в пространствах sRGB, Oklab и OKLCH. Первый блок: linear-gradient(#e01, #081) (sRGB), linear-gradient(in oklab, #e01, #081) (Oklab), linear-gradient(in oklch, #e01, #081) (OKLCH); Второй блок: linear-gradient(#fff, #01e) (sRGB), linear-gradient(in oklab, #fff, #01e) (Oklab), linear-gradient(in oklch, #fff, #01e) (OKLCH); Третий блок: linear-gradient(#44c, #795) (sRGB), linear-gradient(in oklab, #44c, #795) (Oklab), linear-gradient(in oklch, #44c, #795) (OKLCH); Четвёртый блок: linear-gradient(#a37, #595) (sRGB), linear-gradient(in oklab, #a37, #595) (Oklab), linear-gradient(in oklch, #a37, #595) (OKLCH). Начальный и конечный цвет в каждом блоке одинаков, но для каждого цветового пространства градиент немного различается, что показывают фоновые цвета блоков.">
     <figcaption>Так выглядят градиенты в разных цветовых пространствах.</figcaption>
 </figure>
 Нет единого решения, какое пространство лучше для работы с градиентами; это зависит от конкретной задачи. Но в цветовом пространстве Oklab (родственнике OKLCH, живущем в декартовых координатах) обычно получается хороший результат:
