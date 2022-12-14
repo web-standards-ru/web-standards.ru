@@ -1,6 +1,6 @@
 ---
 title: 'OKLCH в CSS: почему мы ушли от RGB и HSL'
-date: 2022-21-11
+date: 2022-20-12
 author:
     - andrey-sitnik
     - nina-torgunakova
