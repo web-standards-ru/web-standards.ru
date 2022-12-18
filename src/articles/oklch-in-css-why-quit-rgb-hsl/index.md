@@ -67,6 +67,34 @@ tags:
     color: #706D71;
   }
 
+  span.inserted {
+    color: #006346;
+  }
+
+  span.deleted {
+    color: #d32600;
+  }
+
+  span.keyword {
+    color: #cb009e;
+  }
+
+  span.class-name {
+    color: #2b91af;
+  }
+
+  span.string {
+    color: #a5001e;
+  }
+
+  span.number {
+    color: #550098;
+  }
+
+  span.function {
+    color: #727d00;
+  }
+
   @media (max-width: 1239px) {
     .property {
       min-width: var(--mobile-width);
@@ -561,14 +589,12 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 3. Если у вас уже есть интеграция с PostCSS, найдите файл с его конфигурацией. Многие проекты уже используют PostCSS (например, Автопрефиксер). В корневой папке проекта найдите `postcss.config.js` (`.postcssrc.json`), или раздел "postcss" в `package.json` или конфигурации сборщика.
 4. Если вы смогли найти файл конфигурации PostCSS, добавьте `postcss-preset-env` в плагины:
     <pre data-lang="js">
-    <code tabindex="0" class="language-js">
-    {
+    <code tabindex="0" class="language-js">{
       "plugins": [
-    +   "postcss-preset-env",
+    <span class="inserted">+  "postcss-preset-env",</span> 
         "autoprefixer"
       ]
-    }
-    </code>
+    }</code>
     </pre>
 5. Если вы не смогли найти файл конфигурации, создайте файл `.postcssrc.json` в корневой папке проекта:
 <pre data-lang="css">
@@ -592,8 +618,8 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 <pre data-lang="css">
   <code tabindex="0" class="language-css">
   .header {
-  - background: #f3f7fa;
-  + background: oklch(97.4% 0.006 240);
+  <span class="deleted">- background: #f3f7fa;</span>
+  <span class="inserted">+ background: oklch(97.4% 0.006 240);</span>
   }
   </code>
 </pre>
@@ -676,10 +702,9 @@ Stylelint будет очень полезен при переходе на `okl
 <pre data-lang="json">
   <code tabindex="0" class="language-json">
     "scripts": {
-  -   "test": "eslint ."
-  +   "test": "eslint . && stylelint **/*.css"
-    }
-  </code>
+  <span class="deleted">-   "test": "eslint ."</span>
+  <span class="inserted">+   "test": "eslint . && stylelint **/*.css"</span>
+    }</code>
 </pre>
 Запустим `npm test`, чтобы увидеть, какие цвета должны быть переведены в `oklch()`.
 
@@ -815,26 +840,26 @@ OKLCH крайне хорош для работы с цветом. В отлич
 
 <pre data-lang="js">
   <code class="language-js">
-  import Color from 'colorjs.io'
+  <span class="keyword">import</span> Color <span class="keyword">from</span> <span class="string">'colorjs.io'</span>
 
   <span class="comment">// Разбираем любой CSS цвет</span>
-  let accent = new Color(userAvatarDominant)
+  <span class="keyword">let</span> accent = <span class="keyword">new</span> <span class="class-name">Color</span>(userAvatarDominant)
 
   <span class="comment">/// Устанавливаем яркость и контраст</span>
-  accent.oklch.l = 0.8
-  accent.oklch.c = 0.17
+  accent.oklch.l = <span class="number">0.8</span>
+  accent.oklch.c = <span class="number">0.17</span>
 
   <span class="comment">/// Применяем гамма-коррекцию для sRGB, если мы вышли за пределы sRGB</span>
-  if (!accent.inGamut('srgb')) {
-    accent = accent.toGamut({ space: 'srgb' })
+  <span class="keyword">if</span> (!accent.<span class="function">inGamut</span>(<span class="string">'srgb'</span>)) {
+    accent = accent.<span class="function">toGamut</span>({ space: <span class="string">'srgb'</span> })
   }
 
   <span class="comment">/// Делаем цвет на 10% светлее </span>
-  let hover = accent.clone()
-  hover.oklch.l += 0.1
+  <span class="keyword">let</span> hover = accent.<span class="function">clone()</span>
+  hover.oklch.l += <span class="number">0.1</span>
 
-  document.body.style.setProperty('--accent', accent.to('srgb').toString())
-  document.body.style.setProperty('--accent-hover', hover.to('srgb').toString())
+  document.body.style.<span class="function">setProperty</span>(<span class="string">'--accent'</span>, accent.<span class="function">to</span>(<span class="string">'srgb'</span>).<span class="function">toString()</span>)
+  document.body.style.<span class="function">setProperty</span>(<span class="string">'--accent-hover'</span>, hover.<span class="function">to</span>(<span class="string">'srgb'</span>).<span class="function">toString()</span>)
   </code>
 </pre>
 Как это сделать в culori, можно посмотреть в [исходном коде цветового миксера OKLCH](https://github.com/evilmartians/oklch-picker). 
