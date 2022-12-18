@@ -174,8 +174,8 @@ tags:
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="comment">/* В качестве примера в следующих CSS-правилах используются hsl().
-   Не используйте формат hsl() в реальных проектах,
-   так как это влечёт проблемы с доступностью. */</span>
+  Не используйте формат hsl() в реальных проектах,
+  так как это влечёт проблемы с доступностью. */</span>
 <span class="selector">:root&nbsp;</span><span>{</span>
   <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: hsl(63 61% 40%);"></div><span class="value">hsl(63 61% 40%);&nbsp;</span></div>
 <span>}</span>
