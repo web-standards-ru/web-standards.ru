@@ -554,23 +554,22 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 Если у вас нет `postcss-preset-env`, но есть инструмент для сборки фронтенда (такой как webpack):
 
 1. Установите `postcss-preset-env` с помощью пакетного менеджера. Для npm запустите следующую команду:
-<pre data-lang="sh">
-<code tabindex="0" class="language-sh">npm install postcss-preset-env postcss</code>
-</pre>
+    <pre data-lang="sh">
+    <code tabindex="0" class="language-sh">npm install postcss-preset-env postcss</code>
+    </pre>
 2. Проверьте [документацию PostCSS](https://github.com/postcss/postcss), чтобы узнать, как добавить поддержку PostCSS в ваш инструмент сборки. Например webpack требует [`postcss-loader`](https://github.com/webpack-contrib/postcss-loader), а в [Vite](https://vitejs.dev/) уже есть встроенная поддержка.
 3. Если у вас уже есть интеграция с PostCSS, найдите файл с его конфигурацией. Многие проекты уже используют PostCSS (например, Автопрефиксер). В корневой папке проекта найдите `postcss.config.js` (`.postcssrc.json`), или раздел "postcss" в `package.json` или конфигурации сборщика.
 4. Если вы смогли найти файл конфигурации PostCSS, добавьте `postcss-preset-env` в плагины:
-<pre data-lang="js">
-<code tabindex="0" class="language-js">
-{
-  "plugins": [
-+   "postcss-preset-env",
-    "autoprefixer"
-  ]
-}
-</code>
-</pre>
-
+    <pre data-lang="js">
+    <code tabindex="0" class="language-js">
+    {
+      "plugins": [
+    +   "postcss-preset-env",
+        "autoprefixer"
+      ]
+    }
+    </code>
+    </pre>
 5. Если вы не смогли найти файл конфигурации, создайте файл `.postcssrc.json` в корневой папке проекта:
 <pre data-lang="css">
   <code tabindex="0" class="language-css">
@@ -716,19 +715,18 @@ _P3-цвета очень полезны при создании палитр. �
 OKLCH можно использовать не только в CSS, но и в SVG или HTML. Это полезно при добавлении ярких красок в иконки.
 
 Обратите внимание: полифилов для SVG нет. По этой причине мы рекомендуем использовать `oklch()` только для P3-цветов.
-
 <pre data-lang="xml">
 <code tabindex="0" class="language-xml">
 &lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  <div>&nbsp;&nbsp;&lt;style&gt;
+  &lt;style&gt;
     @media (color-gamut: p3) {
       rect {
       &nbsp;&nbsp;fill:&nbsp;<div class="color-preview without-opacity" style="background-color: color(display-p3 0.0505 0.5557 0.0653);"></div>oklch(55% 0.23 146)
       }
     }
-  &lt;/style&gt;</div>
-  <div>&nbsp;&nbsp;&lt;rect x="10" y="10" width="100" height="100"
-          fill="&nbsp;<div class="color-preview without-opacity" style="background-color: #048c2c;"></div>#048c2c" /&gt;</div>
+  &lt;/style&gt;
+  &lt;rect x="10" y="10" width="100" height="100"
+        fill="&nbsp;<div class="color-preview without-opacity" style="background-color: #048c2c;"></div>#048c2c" /&gt;
 &lt;/svg&gt;
 </code>
 </pre>
