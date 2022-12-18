@@ -174,7 +174,8 @@ tags:
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="comment">/* В качестве примера в следующих CSS-правилах используются hsl().
-   Не используйте формат hsl() в реальных проектах, так как это влечёт проблемы с доступностью. */</span>
+   Не используйте формат hsl() в реальных проектах,
+   так как это влечёт проблемы с доступностью. */</span>
 <span class="selector">:root&nbsp;</span><span>{</span>
   <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: hsl(63 61% 40%);"></div><span class="value">hsl(63 61% 40%);&nbsp;</span></div>
 <span>}</span>
@@ -463,7 +464,7 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 <span>}</span>
 <span class="selector">.message.is-error&nbsp;</span><span>{</span>
   <span class="comment">/* Тот же цвет, но с другой прозрачностью */</span>
-  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgba(206, 83, 66, 0.6);"></div><span class="value">oklch(from var(--origin) l c h);</span></div>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgba(206, 83, 66, 0.6);"></div><span class="value">oklch(from var(--origin) l c h / 60%);</span></div>
   <span class="comment">/* На 10% темнее */</span>
   <span class="property">border-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(172, 50, 37);"></div><span class="value">oklch(from var(--error) calc(l - 10%) c h);</span></div>
 <span>}</span>
@@ -521,7 +522,7 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="selector">.martian&nbsp;</span><span>{</span>
- <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(159, 166, 1);"></div><span class="value">oklch(69.73% 0.155 112.79);</span></div>
+  <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(159, 166, 1);"></div><span class="value">oklch(69.73% 0.155 112.79);</span></div>
 <span>}</span>
 <span class="selector">@media (color-gamut: p3)&nbsp;</span><span>{</span>
   <span class="selector">.martian&nbsp;</span><span>{</span>
@@ -554,15 +555,13 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
 
 1. Установите `postcss-preset-env` с помощью пакетного менеджера. Для npm запустите следующую команду:
 <pre data-lang="sh">
-<code tabindex="0" class="language-sh">
-npm install postcss-preset-env postcss
-</code>
+<code tabindex="0" class="language-sh">npm install postcss-preset-env postcss</code>
 </pre>
 2. Проверьте [документацию PostCSS](https://github.com/postcss/postcss), чтобы узнать, как добавить поддержку PostCSS в ваш инструмент сборки. Например webpack требует [`postcss-loader`](https://github.com/webpack-contrib/postcss-loader), а в [Vite](https://vitejs.dev/) уже есть встроенная поддержка.
 3. Если у вас уже есть интеграция с PostCSS, найдите файл с его конфигурацией. Многие проекты уже используют PostCSS (например, Автопрефиксер). В корневой папке проекта найдите `postcss.config.js` (`.postcssrc.json`), или раздел "postcss" в `package.json` или конфигурации сборщика.
 4. Если вы смогли найти файл конфигурации PostCSS, добавьте `postcss-preset-env` в плагины:
-<pre data-lang="css">
-<code tabindex="0" class="language-css">
+<pre data-lang="js">
+<code tabindex="0" class="language-js">
 {
   "plugins": [
 +   "postcss-preset-env",
@@ -571,6 +570,7 @@ npm install postcss-preset-env postcss
 }
 </code>
 </pre>
+
 5. Если вы не смогли найти файл конфигурации, создайте файл `.postcssrc.json` в корневой папке проекта:
 <pre data-lang="css">
   <code tabindex="0" class="language-css">
@@ -621,18 +621,15 @@ npm install postcss-preset-env postcss
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="selector">:root&nbsp;</span><span>{</span>
- <span class="property">--surface-0:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(96% 0.005 300);</span></div>
- <span class="property">--surface-1:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(100% 0 0);</span></div>
- <span class="property">--surface-2:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(99% 0 0 / 85%);</span></div>
- <span class="property">--text-primary:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(0% 0 0);</span></div>
- <span class="property">--text-secondary:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(54% 0 0);</span></div>
- <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(57% 0.18 286);</span></div>
- <span class="property">--danger:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(59% 0.23 7);</span></div>
+  <span class="property">--surface-0:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(96% 0.005 300);</span></div>
+  <span class="property">--surface-1:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(100% 0 0);</span></div>
+  <span class="property">--surface-2:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(99% 0 0 / 85%);</span></div>
+  <span class="property">--text-primary:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(0% 0 0);</span></div>
+  <span class="property">--text-secondary:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(54% 0 0);</span></div>
+  <span class="property">--accent:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(57% 0.18 286);</span></div>
+  <span class="property">--danger:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(59% 0.23 7);</span></div>
 <span>}</span>
-</code>
-</pre>
-<pre data-lang="css">
-<code tabindex="0" class="language-css">
+
 <span class="selector">@media (prefers-color-scheme: dark)&nbsp;</span><span>{</span>
   <span class="selector">:root&nbsp;</span><span>{</span>
     <span class="property">--surface-0:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(0% 0 0);</span></div>
@@ -789,7 +786,7 @@ OKLCH крайне хорош для работы с цветом. В отлич
   <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgba(117, 161, 220, 0.5);"></div><span class="value">var(--dimmed);</span></div>
 <span>}</span>
 <span class="selector">.button.is-error&nbsp;</span><span>{</span>
-  <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgb(214, 133, 131);"></div><span class="value">var(--error);</span></div>
+  <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(214, 133, 131);"></div><span class="value">var(--error);</span></div>
 <span>}</span>
 <span class="selector">.button:hover&nbsp;</span><span>{</span>
   <span class="comment">/* Один :hover для обычного, вторичного и ошибочного состояния */</span>
@@ -803,7 +800,8 @@ OKLCH крайне хорош для работы с цветом. В отлич
 <span class="selector">.header&nbsp;</span><span>{</span>
   <span class="comment">/* JS установит --user-avatar-dominant */</span>
   <span class="property">background:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(117, 161, 220);"></div><span class="value">oklch(from var(--user-avatar-dominant) 80% 0.17 h);</span></div>
-  <span class="comment">/* OKLCH позволяет быть уверенным, что чёрный текст всегда будет читаемым на любом оттенке, так как мы установили L равным 80% */</span>
+  <span class="comment">/* OKLCH позволяет быть уверенным, что чёрный текст всегда
+  будет читаемым на любом оттенке, так как мы установили L равным 80% */</span>
   <span class="property">color:&nbsp;</span><div class="preview-with-value"><span class="value">black;</span></div>
 <span>}</span>
 </code>
