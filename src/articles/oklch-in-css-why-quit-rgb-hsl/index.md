@@ -114,6 +114,8 @@ tags:
   }
 </style>
 
+Эта статья — перевод [оригинальной работы](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) из блога [Злых марсиан](https://evilmartians.com/).
+
 В CSS мы чаще всего пишем цвета через `rgb()` или hex — но так сложилось исторически. Новая спецификация CSS Color 4 позволит нам описывать цвета через новые методы. В этой статье мы расскажем, почему нам больше всего нравится `oklch()`.
 
 ## Краткое объяснение
@@ -592,7 +594,7 @@ OKLCH, и LCH удобнее для работы с цветом, так как 
     <code tabindex="0" class="language-js">{
       "plugins": [
     <span class="inserted">+  "postcss-preset-env",</span> 
-        "autoprefixer"
+    <span>   "autoprefixer"</span> 
       ]
     }</code>
     </pre>
