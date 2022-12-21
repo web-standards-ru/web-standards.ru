@@ -1,9 +1,13 @@
 ---
 title: 'OKLCH в CSS: почему мы ушли от RGB и HSL'
 date: 2022-20-12
-author:
+author: 
     - andrey-sitnik
+translators:
     - nina-torgunakova
+source:
+    title: 'OKLCH in CSS: why we moved from RGB and HSL из блога Злых марсиан'
+    url: 'https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl'
 tags:
     - css
 ---
@@ -113,8 +117,6 @@ tags:
     }
   }
 </style>
-
-_Перевод [статьи](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) из блога [Злых марсиан](https://evilmartians.com/)._
 
 В CSS мы чаще всего пишем цвета через `rgb()` или hex — но так сложилось исторически. Новая спецификация CSS Color 4 позволит нам описывать цвета через новые методы. В этой статье мы расскажем, почему нам больше всего нравится `oklch()`.
 
