@@ -798,18 +798,21 @@ OKLCH крайне хорош для работы с цветом. В отлич
 <pre data-lang="css">
 <code tabindex="0" class="language-css">
 <span class="selector">.button&nbsp;</span><span>{</span>
-    <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(117, 161, 220);"></div><span class="value">var(--accent);</span></div>
     <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">var(--button-color);</span></div>
+<span>}</span>
+<span class="selector">.button:hover&nbsp;</span><span>{</span>
+    <span class="comment">/* Один :hover для обычного, вторичного и ошибочного состояния */</span>
+    <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(from var(--button-color) calc(l + 10%) c h);</span></div>
+<span>}</span>
+
+<span class="selector">.button&nbsp;</span><span>{</span>
+    <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(117, 161, 220);"></div><span class="value">var(--accent);</span></div>
 <span>}</span>
 <span class="selector">.button.is-secondary&nbsp;</span><span>{</span>
     <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview" style="background-color: rgba(117, 161, 220, 0.5);"></div><span class="value">var(--dimmed);</span></div>
 <span>}</span>
 <span class="selector">.button.is-error&nbsp;</span><span>{</span>
     <span class="property">--button-color:&nbsp;</span><div class="preview-with-value"><div class="color-preview without-opacity" style="background-color: rgb(214, 133, 131);"></div><span class="value">var(--error);</span></div>
-<span>}</span>
-<span class="selector">.button:hover&nbsp;</span><span>{</span>
-    <span class="comment">/* Один :hover для обычного, вторичного и ошибочного состояния */</span>
-    <span class="property">background:&nbsp;</span><div class="preview-with-value"><span class="value">oklch(from var(--button-color) calc(l + 10%) c h);</span></div>
 <span>}</span>
 </code>
 </pre>
