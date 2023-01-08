@@ -718,28 +718,28 @@ body {
 Если у вас нет _postcss-preset-env,_ но есть сборщик фронтенда (например, Webpack):
 
 1. Установите _postcss-preset-env_ с помощью пакетного менеджера. Для npm запустите следующую команду:
-   ```sh
-   npm install postcss-preset-env postcss
-   ```
+    ```sh
+    npm install postcss-preset-env postcss
+    ```
 2. Проверьте [документацию PostCSS](https://github.com/postcss/postcss), чтобы узнать, как добавить поддержку PostCSS в ваш инструмент сборки. Например Webpack требует [postcss-loader](https://github.com/webpack-contrib/postcss-loader), а в [Vite](https://vitejs.dev/) уже есть встроенная поддержка.
 3. Если у вас уже есть интеграция с PostCSS, найдите файл с его конфигурацией. Многие проекты уже используют PostCSS (например, Автопрефиксер). В корневой папке проекта найдите _postcss.config.js_ _(.postcssrc.json)_, или раздел `"postcss"` в _package.json_ или конфигурации сборщика.
 4. Если вы смогли найти файл конфигурации PostCSS, добавьте _postcss-preset-env_ в плагины:
-   ```diff
-   {
-       "plugins": [
-   +      "postcss-preset-env",
-          "autoprefixer"
-       ]
-   }
-   ```
+    ```diff
+    {
+        "plugins": [
+    +       "postcss-preset-env",
+            "autoprefixer"
+        ]
+    }
+    ```
 5. Если вы не смогли найти файл конфигурации, создайте файл _.postcssrc.json_ в корневой папке проекта:
-   ```json
-   {
-       "plugins": [
-           "postcss-preset-env"
-       ]
-   }
-   ```
+    ```json
+    {
+        "plugins": [
+            "postcss-preset-env"
+        ]
+    }
+    ```
 
 Если у вас ещё нет инструмента сборки, мы рекомендуем использовать Vite или компилировать CSS с помощью CLI [lightningcss](https://github.com/parcel-bundler/lightningcss#from-the-cli).
 
