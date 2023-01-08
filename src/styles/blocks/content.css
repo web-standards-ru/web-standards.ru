@@ -291,10 +291,11 @@
 /* Code */
 
 .content code {
-    padding-right: 0.3em;
-    padding-left: 0.3em;
+    padding-right: 0.25em;
+    padding-left: 0.25em;
     font-family: 'Rostin', monospace;
     word-wrap: break-word;
+    background-color: var(--color-grey-lightest);
 }
 
 .content pre {
@@ -340,6 +341,7 @@
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker-50a) transparent;
+    background-color: transparent;
     user-select: all;
 }
 
