@@ -1,15 +1,21 @@
 ---
-title: 'OKLCH в CSS: почему мы ушли от RGB и HSL'
+title: 'OKLCH в CSS: почему мы ушли от RGB и HSL'
 date: 2023-01-10
 author:
     - andrey-sitnik
 translators:
     - nina-torgunakova
+editors:
+    - vadim-makeev
 source:
     title: 'OKLCH in CSS: why we moved from RGB and HSL из блога Злых марсиан'
     url: 'https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl'
 tags:
     - css
+hero:
+    src: images/cover.jpg
+    cover: true
+featured: true
 ---
 
 <style>
