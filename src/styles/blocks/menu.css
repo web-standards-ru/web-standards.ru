@@ -116,9 +116,9 @@
         margin-right: 8px;
     }
 
-    .menu--index .menu__item:last-of-type {
+    /* .menu--index .menu__item:last-of-type {
         margin-left: auto;
-    }
+    } */
 }
 
 /* Link */
