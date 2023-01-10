@@ -23,7 +23,7 @@
     "@mavrin/remark-typograf": "^2.2.0",
     "autoprefixer": "^10.3.6",
     "del": "6.0.0",
-    "editorconfig-checker": "^4.0.2",
+    "editorconfig-checker": "4.0.0",
     "eslint": "^8.7.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
