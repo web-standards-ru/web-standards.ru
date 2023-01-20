@@ -145,7 +145,7 @@ hero:
 - [Веб-доступность](https://ec.europa.eu/digital-single-market/en/web-accessibility).
 - [Текст Директивы](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32016L2102).
 - [Что такое Директива 2102?](https://directive2102.eu/).
-- [Европейская директива о веб-доступности](http://nda.ie/Publications/Communications/EU-Web-Accessibility-Directive/).
+- [Европейская директива о веб-доступности](https://nda.ie/monitoring/eu-web-accessibility-directive).
 
 ## Европейский закон о доступности
 
