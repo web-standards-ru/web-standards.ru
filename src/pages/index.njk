@@ -35,10 +35,31 @@ permalink: index.html
         </p>
     </section>
 
+    {% from "podcast-preview.njk" import PodcastPreview %}
+
     <section class="main__section">
         <h2 class="visually-hidden">Подкаст</h2>
 
-        {% include "podcast-feature-grid.njk" %}
+        <div class="podcasts-block archive">
+            <div class="podcasts-block__section">
+                <ul class="podcast-preview-grid">
+                    {% for episode in collections.episodes | reverse %}
+                        {% if loop.index <= 5 %}
+                            <li class="podcast-preview-grid__item">
+                                {{ PodcastPreview({
+                                    episode: episode.episode,
+                                    isInverse: loop.index === 1,
+                                    title:  episode.title,
+                                    link: '/podcast/' + episode.episode + '/',
+                                    date: episode.date
+                                }) }}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
 
         <div class="notice">
             <a class="notice__link" href="/podcast/">Все выпуски</a>
