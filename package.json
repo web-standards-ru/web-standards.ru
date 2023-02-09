@@ -17,7 +17,7 @@
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.3",
+    "@11ty/eleventy": "^2.0.0",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
     "@mavrin/remark-typograf": "^2.2.0",
