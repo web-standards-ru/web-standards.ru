@@ -43,7 +43,7 @@
     letter-spacing: -0.03em;
 }
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .logo__title {
         align-self: center;
     }
@@ -78,7 +78,7 @@
     text-transform: uppercase;
 }
 
-@media (max-width: 735px) {
+@media (max-width: 735.99px) {
     .logo__tagline {
         display: none;
     }
