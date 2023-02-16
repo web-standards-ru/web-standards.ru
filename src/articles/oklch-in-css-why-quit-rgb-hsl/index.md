@@ -69,7 +69,7 @@ featured: true
 
 ```css
 a:hover {
-    /* голубой */
+    /* синий */
     background: oklch(45% 0.26 264);
     /* белый */
     color: oklch(100% 0 0);
