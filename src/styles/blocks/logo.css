@@ -37,15 +37,16 @@
 /* Title */
 
 .logo__title {
+    align-self: center;
     margin: 0;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: -0.03em;
 }
 
-@media (max-width: 735px) {
+@media (min-width: 736px) {
     .logo__title {
-        align-self: center;
+        align-self: flex-start;
     }
 }
 
@@ -71,6 +72,7 @@
 /* Tagline */
 
 .logo__tagline {
+    display: none;
     margin: 0;
     color: var(--color-grey-dark);
     font-size: 12px;
@@ -78,9 +80,9 @@
     text-transform: uppercase;
 }
 
-@media (max-width: 735px) {
+@media (min-width: 736px) {
     .logo__tagline {
-        display: none;
+        display: inline;
     }
 }
 
