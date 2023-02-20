@@ -4,10 +4,6 @@
 },{
     title: 'Подкаст',
     url: '/podcast/'
-},{
-    title: 'Календарь'
-},{
-    title: 'О проекте'
 }] %}
 
 <ul class="menu__list" id="menu__list">
@@ -18,16 +14,9 @@
             {% set currentPage = false %}
         {% endif %}
         <li class="menu__item">
-            <a class="menu__link{% if not item.url %} menu__link--inactive{% endif %}{% if currentPage %} menu__link--current{% endif %}"{% if item.url and not currentPage %} href="{{ item.url }}"{% endif %}>
+            <a class="menu__link" href="{{ item.url }}" {% if currentPage %}aria-current="page"{% endif %}>
                 {{ item.title }}
             </a>
         </li>
     {% endfor %}
-    {# <li class="menu__item">
-        <a class="menu__link menu__link--patreon" href="https://www.patreon.com/webstandards_ru">Поддержать
-            {% if page.url == '/' %}
-                <span class="menu__link--extension"> проект</span>
-            {% endif %}
-        </a>
-    </li> #}
 </ul>
