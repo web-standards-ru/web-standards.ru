@@ -140,6 +140,10 @@
     background-image: url('/images/social/facebook.svg');
 }
 
+.links__icon--mastodon {
+    background-image: url('/images/social/mastodon.svg');
+}
+
 .links__icon--github {
     background-image: url('/images/social/github.svg');
 }
