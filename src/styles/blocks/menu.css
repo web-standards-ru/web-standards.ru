@@ -1,6 +1,6 @@
 /* Menu */
 
-@media (max-width: 735px) {
+@media (width < 736px) {
     .menu {
         display: grid;
     }
@@ -8,7 +8,7 @@
 
 /* Button */
 
-@media (max-width: 735px) {
+@media (width < 736px) {
     .menu__button {
         z-index: 1;
         display: block;
@@ -30,7 +30,7 @@
 
 /* Icon */
 
-@media (max-width: 735px) {
+@media (width < 736px) {
     .menu__icon {
         display: block;
         stroke: black;
@@ -60,7 +60,7 @@
     list-style: none;
 }
 
-@media (max-width: 735px) {
+@media (width < 736px) {
     .menu__list {
         display: none;
         row-gap: 12px;
