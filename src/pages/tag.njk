@@ -3,7 +3,7 @@ pagination:
     data: collections.tagList
     size: 1
     alias: tag
-renderData:
+eleventyComputed:
     title: Статьи с тегом «{{ tag }}»
 layout: page.njk
 permalink: /articles/tags/{{ tag | slug }}/
