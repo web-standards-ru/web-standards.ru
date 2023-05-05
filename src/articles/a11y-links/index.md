@@ -286,6 +286,7 @@ WAI-ARIA (WAI Accessible Rich Internet Applications Suite) — рекоменд
 - [A11y Rules Podcast](https://a11yrules.com).
 - [13 Letters](https://www.bemyeyes.com/podcasts-show/13-letters) — подкаст об универсальном дизайне, законодательстве и лучших практиках цифровой доступности со специалистами из разных стран.
 - [Подскаст «Веб-стандарты»](https://web-standards.ru/podcast/) — не концентрируется только на доступной разработке, но новости и события из мира доступности обсуждаются почти в каждом выпуске.
+- [Подскаст «Инклюзивный ананас»](https://inclusivepineapple.github.io/) — Глафира Жур и Татьяна Фокина обсуждают цифровую доступность, как создавать интерфейсы без барьеров для пользователей.
 - [Accessibility Talks](https://www.youtube.com/c/accessibilitytalks) — стримы о доступности.
 - [Стримы Some Antics на Twitch](https://www.twitch.tv/SomeAnticsDev) и [их записи на YouTube](https://www.youtube.com/playlist?list=PLZluKlEc91YzYor_ItAax4d2iXTXbFAFF) — проект Бена Майерса о доступной разработке в формате дискуссий с разработчиками, тестировщиками, дизайнерами и всеми, кто занимается доступностью.
 - [Technica11y](https://technica11y.org/) — стримы про проблемы и хитрости, связанные с технической доступностью.
