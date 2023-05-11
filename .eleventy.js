@@ -142,7 +142,8 @@ module.exports = function(config) {
             let result = htmlmin.minify(
                 content, {
                     removeComments: true,
-                    collapseWhitespace: true
+                    collapseWhitespace: true,
+                    collapseBooleanAttributes: true,
                 }
             );
             return result;
