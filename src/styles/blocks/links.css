@@ -118,15 +118,15 @@
 /* Icon */
 
 .links__icon {
+    --links-icon-size: 33px;
     display: block;
-    width: 33px;
-    height: 33px;
+    width: var(--links-icon-size);
+    height: var(--links-icon-size);
 }
 
 @media (min-width: 1024px) {
     .links__icon {
-        width: 48px;
-        height: 48px;
+        --links-icon-size: 48px;
     }
 }
 
