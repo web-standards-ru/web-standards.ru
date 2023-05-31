@@ -1,4 +1,5 @@
 const player = document.querySelector('.podcast__player');
+const rewindButton = document.querySelector('.podcast__player-rewind');
 
 /**
  * Выделяет из строки временные метки вида `00:14:30` или `14:30`.
@@ -59,4 +60,27 @@ if (player) {
         handlePassedTimecode();
     }
     initAnchor();
+}
+
+rewindButton.addEventListener('click', () => {
+    rewindAudio(-10);
+});
+
+/** Перемотка аудио назад на `seconds` секунд
+ * @param seconds количество секунд
+ */
+function rewindAudio(seconds) {
+    if (player.duration && !isNaN(player.duration)) {
+        const currentTime = player.currentTime;
+        const duration = player.duration;
+        let targetTime = currentTime + seconds;
+
+        if (targetTime > duration) {
+            targetTime = duration;
+        } else if (targetTime < 0) {
+            targetTime = 0;
+        }
+
+        player.currentTime = targetTime;
+    }
 }

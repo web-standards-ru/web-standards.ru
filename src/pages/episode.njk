@@ -33,13 +33,16 @@ eleventyComputed:
             </section>
         </header>
 
-        <audio
-            class="podcast__player"
-            src="{{ episode.audio }}"
-            controls
-            type="audio/mpeg"
-            preload="metadata">
-        </audio>
+        <div class="podcast__player-wrapper">
+            <button class="podcast__player-rewind"></button>
+            <audio
+                class="podcast__player"
+                src="{{ episode.audio }}"
+                controls
+                type="audio/mpeg"
+                preload="metadata"
+            ></audio>
+        </div>
 
         {% if hasChapters %}
             <section class="podcast__timecode">
