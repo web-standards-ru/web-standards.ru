@@ -32,6 +32,7 @@
 @media (max-width: 735px) {
     .header__logo {
         z-index: 1;
+        width: fit-content;
     }
 }
 
