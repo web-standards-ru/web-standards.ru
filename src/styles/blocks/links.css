@@ -144,6 +144,10 @@
     background-image: url('/images/social/mastodon.svg');
 }
 
+.links__icon--bluesky {
+    background-image: url('/images/social/bluesky.svg');
+}
+
 .links__icon--github {
     background-image: url('/images/social/github.svg');
 }
