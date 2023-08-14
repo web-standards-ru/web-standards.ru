@@ -121,6 +121,8 @@
     display: block;
     width: 33px;
     height: 33px;
+    border-radius: 50%;
+    outline-offset: 2px;
 }
 
 @media (min-width: 1024px) {
@@ -164,8 +166,8 @@
     background-image: url('/images/social/telegram.svg');
 }
 
-.links__icon--twitter {
-    background-image: url('/images/social/twitter.svg');
+.links__icon--x {
+    background-image: url('/images/social/x.svg');
 }
 
 .links__icon--vk {
