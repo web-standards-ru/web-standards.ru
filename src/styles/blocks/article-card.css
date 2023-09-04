@@ -40,6 +40,12 @@
     grid-area: picture;
 }
 
+@media (min-width: 800px) {
+    .article-card__avatar-container {
+        align-self: start;
+    }
+}
+
 .article-card__avatar {
     position: relative;
     width: 80px;
