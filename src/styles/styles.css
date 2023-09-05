@@ -27,6 +27,7 @@
 @import 'blocks/video.css';
 @import 'blocks/tooltip.css';
 @import 'blocks/not-found.css';
+@import 'blocks/player.css';
 @import 'blocks/podcast.css';
 @import 'blocks/podcast-preview.css';
 @import 'blocks/podcast-preview-grid.css';
