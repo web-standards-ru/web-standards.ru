@@ -1,5 +1,6 @@
-const player = document.querySelector('.podcast__player');
-const rewindButton = document.querySelector('.podcast__player-rewind');
+const player = document.querySelector('.player__audio');
+const backButton = document.querySelector('.player__rewind--back');
+const forwardButton = document.querySelector('.player__rewind--forward');
 
 /**
  * Выделяет из строки временные метки вида `00:14:30` или `14:30`.
@@ -62,8 +63,12 @@ if (player) {
     initAnchor();
 }
 
-rewindButton.addEventListener('click', () => {
+backButton.addEventListener('click', () => {
     rewindAudio(-10);
+});
+
+forwardButton.addEventListener('click', () => {
+    rewindAudio(10);
 });
 
 /** Перемотка аудио назад на `seconds` секунд
@@ -72,14 +77,7 @@ rewindButton.addEventListener('click', () => {
 function rewindAudio(seconds) {
     if (player.duration && !isNaN(player.duration)) {
         const currentTime = player.currentTime;
-        const duration = player.duration;
-        let targetTime = currentTime + seconds;
-
-        if (targetTime > duration) {
-            targetTime = duration;
-        } else if (targetTime < 0) {
-            targetTime = 0;
-        }
+        const targetTime = currentTime + seconds;
 
         player.currentTime = targetTime;
     }
