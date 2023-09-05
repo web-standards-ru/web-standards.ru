@@ -5,7 +5,7 @@
     "npm": ">=8"
   },
   "scripts": {
-    "start": "eleventy --serve --quiet",
+    "start": "eleventy --serve --quiet --incremental",
     "editorconfig": "editorconfig-checker",
     "stylelint": "stylelint \"src/styles/**/*.css\"",
     "eslint": "eslint src/**/*.js",
