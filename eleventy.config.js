@@ -5,7 +5,7 @@ module.exports = function(config) {
 
     const md = require('markdown-it')({
         html: true,
-        highlight: function (str, lang) {
+        highlight: function(str, lang) {
             return `<pre><code tabindex="0"${lang ? ` class="language-${lang}"` : ''}>${md.utils.escapeHtml(str)}</code></pre>`;
         },
     }).use(markdownItAnchor, {
@@ -20,7 +20,7 @@ module.exports = function(config) {
     }).use(require('markdown-it-multimd-table'));
 
     md.renderer.rules = { ...md.renderer.rules,
-        table_close: () => "</table></div>",
+        table_close: () => '</table></div>',
         table_open: () => '<div class="content__table-wrapper"><table>',
     };
 
@@ -30,7 +30,7 @@ module.exports = function(config) {
         const set = new Set();
         for (const item of collection.getAllSorted()) {
             if ('tags' in item.data) {
-                const tags = item.data.tags;
+                let tags = item.data.tags;
                 if (typeof tags === 'string') {
                     tags = [tags];
                 }
@@ -82,7 +82,7 @@ module.exports = function(config) {
     });
 
     config.addFilter('fixLinks', (content) => {
-        const reg = /(src="[^(https:\/\/)])|(src="\/)|(href="[^(https:\/\/)])|(href="\/)/g;
+        const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
         const prefix = `https://web-standards.ru` + content.url;
         return content.templateContent.replace(reg, (match) => {
             if (match === `src="/` || match === `href="/`) {
@@ -104,14 +104,14 @@ module.exports = function(config) {
         return value.toLocaleString('ru', {
             year: 'numeric',
             month: 'long',
-            day: 'numeric'
+            day: 'numeric',
         }).replace(' г.', '');
     });
 
     config.addFilter('shortDate', (value) => {
         return value.toLocaleString('ru', {
             month: 'short',
-            day: 'numeric'
+            day: 'numeric',
         }).replace('.', '');
     });
 
@@ -121,7 +121,7 @@ module.exports = function(config) {
 
     config.addFilter('markdown', (value) => {
         let markdown = require('markdown-it')({
-            html: true
+            html: true,
         });
         return markdown.render(value);
     });
@@ -129,7 +129,7 @@ module.exports = function(config) {
     // Трансформации
 
     config.addTransform('htmlmin', (content, outputPath) => {
-        if(outputPath && outputPath.endsWith('.html')) {
+        if (outputPath && outputPath.endsWith('.html')) {
             let htmlmin = require('html-minifier');
             let result = htmlmin.minify(
                 content, {
@@ -144,7 +144,7 @@ module.exports = function(config) {
     });
 
     config.addTransform('xmlmin', function(content, outputPath) {
-        if(outputPath && outputPath.endsWith('.xml')) {
+        if (outputPath && outputPath.endsWith('.xml')) {
             let prettydata = require('pretty-data');
             let result = prettydata.pd.xmlmin(content);
             return result;
@@ -154,7 +154,7 @@ module.exports = function(config) {
 
     config.addTransform('lazyYouTube', (content, outputPath) => {
         let articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
-        let iframes = /\<iframe src\=\"https\:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)\"(.*?)\>\<\/iframe>/ig;
+        let iframes = /<iframe src="https:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)"(.*?)><\/iframe>/ig;
 
         if (outputPath && outputPath.match(articles)) {
             content = content.replace(iframes, (match, p1) => {
@@ -169,7 +169,7 @@ module.exports = function(config) {
                         <button class="video__button" type="button" aria-label="Запустить видео">
                             <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
                         </button>
-                    </div>`
+                    </div>`;
             });
         }
         return content;
@@ -178,19 +178,19 @@ module.exports = function(config) {
     // Теги
 
     config.addNunjucksTag('blob', (nunjucksEngine) => {
-        return new function () {
+        return new function() {
             this.tags = ['blob'];
 
-            this.parse = function (parser, nodes, lexer) {
+            this.parse = function(parser, nodes) {
                 const token = parser.nextToken();
 
-                const arguments = parser.parseSignature(null, true);
+                const args = parser.parseSignature(null, true);
                 parser.advanceAfterBlockEnd(token.value);
 
-                return new nodes.CallExtensionAsync(this, 'run', arguments);
+                return new nodes.CallExtensionAsync(this, 'run', args);
             };
 
-            this.run = function (context, authorName, callback) {
+            this.run = function(context, authorName, callback) {
                 const blobColors = [1, 2, 3, 4];
                 const blobShapes = [1, 2, 3, 4, 5, 6, 7];
                 const shapePrefix = 'blob--shape-';
@@ -219,7 +219,7 @@ module.exports = function(config) {
 
     // Копирование
 
-	[
+    [
         'src/favicon.ico',
         'src/manifest.json',
         'src/fonts',
@@ -227,7 +227,7 @@ module.exports = function(config) {
         'src/styles',
         'src/scripts',
         'src/{articles,people}/**/*.!(md)',
-	].forEach((path) => config.addPassthroughCopy(path));
+    ].forEach((path) => config.addPassthroughCopy(path));
 
     return {
         dir: {
@@ -241,7 +241,8 @@ module.exports = function(config) {
         markdownTemplateEngine: false,
         htmlTemplateEngine: 'njk',
         templateFormats: [
-            'md', 'njk'
+            'md',
+            'njk',
         ],
     };
 };
