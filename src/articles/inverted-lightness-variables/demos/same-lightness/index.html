@@ -4,46 +4,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Custom property for theme hue & saturation</title>
+    <link rel="stylesheet" href="mavo.css">
     <style>
-        :root {
-            --primary-hs: 250 30%;
-        }
-
         body {
-            background: white;
-            color: black;
             font: 100%/1.5 Helvetica Neue, Segoe UI, sans-serif;
+            --l: 50%;
         }
 
-        h1 {
-            color: hsl(var(--primary-hs) 30%);
+        header {
+            margin-bottom: 1em;
         }
 
-        article {
-            background: hsl(var(--primary-hs) 90%);
-            border-radius: .3rem;
-            overflow: hidden;
-            margin: 1em 0;
+        div {
+            width: 100%;
+            height: 6em;
+            background: linear-gradient(to right, var(--stops));
+            --stops: gray, gray;
         }
 
-        article h2 {
-            padding: .3rem .5rem;
-            margin: 0;
-            background: hsl(var(--primary-hs) 40%);
-            color: white;
+        .hsl {
+            --s: 50%;
+            --stops:
+                hsl(0 var(--s) var(--l)),
+                hsl(60 var(--s) var(--l)),
+                hsl(120 var(--s) var(--l)),
+                hsl(180 var(--s) var(--l)),
+                hsl(240 var(--s) var(--l)),
+                hsl(300 var(--s) var(--l));
         }
 
-        article .content {
-            padding: 0 .5rem;
-        }
-
-        footer {
-            margin-top: 1rem;
-            border-top: 1px solid;
-            color: hsl(0 0% 40%);
-            font-size: smaller;
+        .lch {
+            --c: 50;
+            --stops:
+                lch(var(--l) var(--c) 0),
+                lch(var(--l) var(--c) 60),
+                lch(var(--l) var(--c) 120),
+                lch(var(--l) var(--c) 180),
+                lch(var(--l) var(--c) 240),
+                lch(var(--l) var(--c) 300);
         }
     </style>
+    <script src="mavo.js"></script>
 </head>
 <body>
     <!-- Only works in Safari TP >= 120 -->
@@ -52,12 +53,11 @@
             <label>
                 Lightness:
                 <input type="range" property="lightness">
-        [lightness]%
+                [lightness]%
             </label>
         </header>
         <div class="hsl"></div>
         <div class="lch"></div>
     </main>
-    <!-- TODO: https://dev.mavo.io/dist/mavo.es5.js -->
 </body>
 </html>
