@@ -177,6 +177,4 @@ _Проверка соответствия документа_ — хороши
 
 **Спасибо, Майк!**
 
-### Полезный совет — всегда [проверяй свой HTML](http://validator.w3.org/nu) под [рок-н-ролл](https://youtu.be/FVbVCZw5BPQ), играющий… ГРОМКО!
-
-<iframe src="https://www.youtube.com/embed/FVbVCZw5BPQ" allowfullscreen></iframe>
+### Полезный совет — всегда [проверяй свой HTML](http://validator.w3.org/nu) под рок-н-ролл, играющий… ГРОМКО!

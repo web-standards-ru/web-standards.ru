@@ -1,12 +1,4 @@
 module.exports = function(config) {
-    config.addPassthroughCopy('src/favicon.ico');
-    config.addPassthroughCopy('src/manifest.json');
-    config.addPassthroughCopy('src/fonts');
-    config.addPassthroughCopy('src/images');
-    config.addPassthroughCopy('src/styles');
-    config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/{articles,people}/**/*.!(md)');
-
     // Markdown Options
 
     const markdownItAnchor = require('./src/helpers/markdown-it-anchor.js');
@@ -225,6 +217,18 @@ module.exports = function(config) {
         }();
     });
 
+    // Копирование
+
+	[
+        'src/favicon.ico',
+        'src/manifest.json',
+        'src/fonts',
+        'src/images',
+        'src/styles',
+        'src/scripts',
+        'src/{articles,people}/**/*.!(md)',
+	].forEach((path) => config.addPassthroughCopy(path));
+
     return {
         dir: {
             input: 'src',
@@ -236,7 +240,6 @@ module.exports = function(config) {
         dataTemplateEngine: 'njk',
         markdownTemplateEngine: false,
         htmlTemplateEngine: 'njk',
-        passthroughFileCopy: true,
         templateFormats: [
             'md', 'njk'
         ],
