@@ -135,10 +135,6 @@ figure {
     margin-bottom: 10px;
 }
 
-.blob::before {
-    display: none;
-}
-
 .blob__photo {
     mix-blend-mode: normal;
 }
