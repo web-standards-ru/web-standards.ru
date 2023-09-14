@@ -33,6 +33,18 @@ function setTime(time) {
     player.currentTime = time;
 }
 
+/** Перемотка аудио назад на `seconds` секунд
+ * @param seconds количество секунд
+ */
+function rewindAudio(seconds) {
+    if (player.duration && !isNaN(player.duration)) {
+        const currentTime = player.currentTime;
+        const targetTime = currentTime + seconds;
+
+        player.currentTime = targetTime;
+    }
+}
+
 function handlePassedTimecode() {
     const passed = matchTimecode(document.URL);
 
@@ -61,24 +73,13 @@ if (player) {
         handlePassedTimecode();
     }
     initAnchor();
+
+    backButton.addEventListener('click', () => {
+        rewindAudio(-10);
+    });
+
+    forwardButton.addEventListener('click', () => {
+        rewindAudio(10);
+    });
 }
 
-backButton.addEventListener('click', () => {
-    rewindAudio(-10);
-});
-
-forwardButton.addEventListener('click', () => {
-    rewindAudio(10);
-});
-
-/** Перемотка аудио назад на `seconds` секунд
- * @param seconds количество секунд
- */
-function rewindAudio(seconds) {
-    if (player.duration && !isNaN(player.duration)) {
-        const currentTime = player.currentTime;
-        const targetTime = currentTime + seconds;
-
-        player.currentTime = targetTime;
-    }
-}
