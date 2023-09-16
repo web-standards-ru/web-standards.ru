@@ -162,6 +162,10 @@
     background-image: url('/images/social/spotify.svg');
 }
 
+.links__icon--t2 {
+    background-image: url('/images/social/t2.svg');
+}
+
 .links__icon--telegram {
     background-image: url('/images/social/telegram.svg');
 }
