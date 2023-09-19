@@ -3,6 +3,7 @@ const { once } = require('events');
 
 const NodeXMLStream = require('node-xml-stream');
 const { parseHTML } = require('linkedom');
+const { AssetCache } = require('@11ty/eleventy-fetch');
 
 const RSS_URL = 'https://web-standards.ru/podcast/feed/';
 
@@ -15,7 +16,7 @@ async function getEpisodesData() {
         const XMLParser = new NodeXMLStream();
 
         // список полей для парсинга
-        const fields = [
+        const fields = new Set([
             'item',
             'title',
             'pubDate',
@@ -23,14 +24,14 @@ async function getEpisodesData() {
             'guid',
             'itunes:episode',
             'itunes:author',
-        ];
+        ]);
 
         let currentItem = null;
         let currentField = null;
         const items = [];
 
         XMLParser.on('opentag', (name) => {
-            if (!fields.includes(name)) {
+            if (!fields.has(name)) {
                 return;
             }
 
@@ -130,6 +131,30 @@ async function getEpisodesData() {
     });
 }
 
+function withCache({ operation, cacheName, parse }) {
+    const asset = new AssetCache(cacheName);
+
+    return async function() {
+        if (asset.isCacheValid('1d')) {
+            const result = await asset.getCachedValue();
+            return parse(result);
+        }
+
+        const result = await operation.apply(this, arguments);
+        await asset.save(result, 'json');
+        return result;
+    };
+}
+
 module.exports = {
-    getEpisodesData,
+    getEpisodesData: withCache({
+        cacheName: 'rss_podcast_cache',
+        operation: getEpisodesData,
+        parse: (data) => {
+            for (const item of data) {
+                item['date'] = new Date(item['date']);
+            }
+            return data;
+        },
+    }),
 };
