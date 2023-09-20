@@ -15,7 +15,7 @@ async function getEpisodesData() {
         const XMLParser = new NodeXMLStream();
 
         // список полей для парсинга
-        const fields = [
+        const fields = new Set([
             'item',
             'title',
             'pubDate',
@@ -23,14 +23,14 @@ async function getEpisodesData() {
             'guid',
             'itunes:episode',
             'itunes:author',
-        ];
+        ]);
 
         let currentItem = null;
         let currentField = null;
         const items = [];
 
         XMLParser.on('opentag', (name) => {
-            if (!fields.includes(name)) {
+            if (!fields.has(name)) {
                 return;
             }
 
@@ -130,6 +130,19 @@ async function getEpisodesData() {
     });
 }
 
+
+function withCache(operation) {
+    let cache = null;
+
+    return function() {
+        if (cache) {
+            return cache;
+        }
+        cache = operation();
+        return cache;
+    };
+}
+
 module.exports = {
-    getEpisodesData,
+    getEpisodesData: withCache(getEpisodesData),
 };
