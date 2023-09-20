@@ -3,7 +3,6 @@ const { once } = require('events');
 
 const NodeXMLStream = require('node-xml-stream');
 const { parseHTML } = require('linkedom');
-const { AssetCache } = require('@11ty/eleventy-fetch');
 
 const RSS_URL = 'https://web-standards.ru/podcast/feed/';
 
@@ -131,30 +130,19 @@ async function getEpisodesData() {
     });
 }
 
-function withCache({ operation, cacheName, parse }) {
-    const asset = new AssetCache(cacheName);
 
-    return async function() {
-        if (asset.isCacheValid('1d')) {
-            const result = await asset.getCachedValue();
-            return parse(result);
+function withCache(operation) {
+    let cache = null;
+
+    return function() {
+        if (cache) {
+            return cache;
         }
-
-        const result = await operation.apply(this, arguments);
-        await asset.save(result, 'json');
-        return result;
+        cache = operation();
+        return cache;
     };
 }
 
 module.exports = {
-    getEpisodesData: withCache({
-        cacheName: 'rss_podcast_cache',
-        operation: getEpisodesData,
-        parse: (data) => {
-            for (const item of data) {
-                item['date'] = new Date(item['date']);
-            }
-            return data;
-        },
-    }),
+    getEpisodesData: withCache(getEpisodesData),
 };
