@@ -47,7 +47,6 @@
 }
 
 .article-card__avatar {
-    position: relative;
     width: 80px;
     height: 80px;
     object-fit: cover;
