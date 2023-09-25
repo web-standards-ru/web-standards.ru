@@ -1,6 +1,7 @@
 /* Blob */
 
 .blob {
+    position: relative;
     contain: strict;
     -webkit-mask-size: cover;
     mask-size: cover;
