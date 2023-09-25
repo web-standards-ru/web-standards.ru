@@ -245,20 +245,6 @@
     margin-bottom: 16px;
     padding: 5px 0;
     padding-left: 14px;
-    color: black;
-    font-size: 18px;
-}
-
-@media (min-width: 600px) {
-    .content blockquote {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content blockquote {
-        font-size: 28px;
-    }
 }
 
 @media (min-width: 1240px) {
@@ -266,7 +252,6 @@
         margin-top: 40px;
         margin-bottom: 60px;
         padding-left: 40px;
-        font-size: 32px;
     }
 }
 
