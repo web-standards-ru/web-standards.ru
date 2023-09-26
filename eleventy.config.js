@@ -13,9 +13,6 @@ module.exports = function(config) {
         permalinkClass: 'tooltip__button',
         permalinkSymbol: '',
         permalinkSpace: false,
-        permalinkAttrs: () => ({
-            'aria-label': 'Этот заголовок',
-        }),
         slugify: () => 'section',
     }).use(require('markdown-it-multimd-table'));
 
