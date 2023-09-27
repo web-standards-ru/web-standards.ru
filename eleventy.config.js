@@ -177,44 +177,25 @@ module.exports = function(config) {
 
     // Теги
 
-    config.addNunjucksTag('blob', (nunjucksEngine) => {
-        return new function() {
-            this.tags = ['blob'];
+    config.addNunjucksShortcode('blob', function(authorName) {
+        const blobColors = [1, 2, 3, 4];
+        const blobShapes = [1, 2, 3, 4, 5, 6, 7];
+        const shapePrefix = 'blob--shape-';
+        const colorPrefix = 'blob--color-';
 
-            this.parse = function(parser, nodes) {
-                const token = parser.nextToken();
+        const getBlobClass = (basis, array, name) => (
+            name.concat(array[basis % array.length])
+        );
 
-                const args = parser.parseSignature(null, true);
-                parser.advanceAfterBlockEnd(token.value);
+        const shapeBasis = authorName.split('').reduce(
+            (previous, current) => previous + current.charCodeAt(0), 0
+        );
+        const colorBasis = authorName.length;
 
-                return new nodes.CallExtensionAsync(this, 'run', args);
-            };
+        const colorClass = getBlobClass(colorBasis, blobColors, colorPrefix);
+        const shapeClass = getBlobClass(shapeBasis, blobShapes, shapePrefix);
 
-            this.run = function(context, authorName, callback) {
-                const blobColors = [1, 2, 3, 4];
-                const blobShapes = [1, 2, 3, 4, 5, 6, 7];
-                const shapePrefix = 'blob--shape-';
-                const colorPrefix = 'blob--color-';
-
-                const getBlobClass = (basis, array, name) => (
-                    name.concat(array[basis % array.length])
-                );
-
-                const shapeBasis = authorName.split('').reduce(
-                    (previous, current) => previous + current.charCodeAt(0), 0
-                );
-                const colorBasis = authorName.length;
-
-                const colorClass = getBlobClass(colorBasis, blobColors, colorPrefix);
-                const shapeClass = getBlobClass(shapeBasis, blobShapes, shapePrefix);
-
-                callback(
-                    null, new nunjucksEngine.runtime.SafeString(
-                        colorClass.concat(' ', shapeClass)
-                    )
-                );
-            };
-        }();
+        return colorClass.concat(' ', shapeClass);
     });
 
     // Копирование
