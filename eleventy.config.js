@@ -177,7 +177,7 @@ module.exports = function(config) {
 
     // Теги
 
-    config.addNunjucksShortcode('blob', function(authorName) {
+    config.addShortcode('blob', function(authorName) {
         const blobColors = [1, 2, 3, 4];
         const blobShapes = [1, 2, 3, 4, 5, 6, 7];
         const shapePrefix = 'blob--shape-';
