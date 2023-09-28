@@ -1,8 +1,9 @@
-{% if page.url != '/' %}
+{% set isMainPage = (page.url == '/') %}
+{% if not isMainPage %}
     {% set path = '/../../' %}
     {% set mainLinkPath = 'href="/"' %}
 {% endif %}
-{% if page.url == '/' %}
+{% if isMainPage %}
     {% set headerMod = 'header--index' %}
     {% set menuMod = 'menu--index' %}
     {% set logoMod = 'logo--index' %}
@@ -42,4 +43,22 @@
         </button>
         {% include 'menu.njk' %}
     </nav>
+    {% if isMainPage and lastPodcastEpisode %}
+        <div class="header__informers">
+            <div class="informer">
+                <svg class="informer__icon" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">
+                    <ellipse cx="16" cy="16" rx="2" ry="13"/>
+                    <ellipse cx="16" cy="16" rx="15" ry="2"/>
+                    <ellipse cx="22.5" cy="16" rx="1.5" ry="5"/>
+                    <ellipse cx="9.5" cy="16" rx="1.5" ry="5"/>
+                </svg>
+                <b class="informer__meta">
+                    {{- lastPodcastEpisode.episode -}}
+                </b>
+                <a class="informer__title" href="/podcast/{{ lastPodcastEpisode.episode }}/">
+                    {{ lastPodcastEpisode.title }}
+                </a>
+            </div>
+        </div>
+    {% endif %}
 </header>
