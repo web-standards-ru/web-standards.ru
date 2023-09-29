@@ -1,8 +1,10 @@
 .informer {
     --informer-icon-size: 32px;
     position: relative;
+    color: inherit;
     font-size: 14px;
     line-height: 1.3;
+    text-decoration: none;
 }
 
 @media (max-width: 735px) {
@@ -68,17 +70,6 @@
     .informer__meta {
         font-size: 36px;
     }
-}
-
-.informer__title {
-    color: inherit;
-    text-decoration: none;
-}
-
-.informer__title::after {
-    content: '';
-    position: absolute;
-    inset: 0;
 }
 
 @media (min-width: 736px) {
