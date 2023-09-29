@@ -17,7 +17,7 @@
 
     .header--index {
         grid-template-rows: auto auto;
-        grid-template-columns: 0.75fr 0.25fr;
+        grid-template-columns: 3fr 1fr;
         padding-bottom: 48px;
     }
 }
