@@ -1,3 +1,9 @@
+const path = require('node:path');
+const { parseHTML } = require('linkedom');
+const Image = require('@11ty/eleventy-img');
+
+Image.concurrency = require('os').cpus().length;
+
 module.exports = function(config) {
     // Markdown Options
 
@@ -91,10 +97,6 @@ module.exports = function(config) {
         });
     });
 
-    config.addFilter('addLoadingLazy', (content) => {
-        content.replace(/<img(?!.*loading)/g, '<img loading="lazy"');
-    });
-
     // Даты
 
     config.addFilter('ruDate', (value) => {
@@ -124,6 +126,63 @@ module.exports = function(config) {
     });
 
     // Трансформации
+
+    config.addTransform('optimizeContentImages', async function(content) {
+        if (!this.page.inputPath.includes('/articles/')) {
+            return content;
+        }
+
+        if (!this.page.outputPath.endsWith('.html')) {
+            return content;
+        }
+
+        const { document } = parseHTML(content);
+        const images = Array.from(document.querySelectorAll('.article__content img'))
+            .filter((image) => !image.src.startsWith('http://') && !image.src.startsWith('https://'));
+
+        if (images.length === 0) {
+            return content;
+        }
+
+        const articleSourceFolder = path.dirname(this.page.inputPath);
+        const outputArticleImagesFolder = path.join(path.dirname(this.page.outputPath), 'images');
+
+        await Promise.all(images.map(async(image) => {
+            const fullImagePath = path.join(articleSourceFolder, image.src);
+            const imageStats = await Image(fullImagePath, {
+                widths: ['auto', 600, 1200, 2400],
+                formats: ['webp', 'auto'],
+                outputDir: outputArticleImagesFolder,
+                urlPath: 'images/',
+                filenameFormat: (hash, src, width, format) => {
+                    const extension = path.extname(src);
+                    const name = path.basename(src, extension);
+                    return `${hash}-${name}-${width}.${format}`;
+                },
+            });
+
+            const imageAttributes = Object.assign(
+                {
+                    loading: 'lazy',
+                    decoding: 'async',
+                    sizes: `
+                        (min-width: 1920px) calc((1920px - 2 * 64px) * 5 / 8 - 2 * 16px),
+                        (min-width: 1240px) calc((100vw - 2 * 64px) * 5 / 8 - 2 * 16px),
+                        (min-width: 700px) calc(700px - 2 * 16px),
+                        calc(100vw - 2 * 16px)
+                    `,
+                },
+                Object.fromEntries(
+                    [...image.attributes].map((attr) => [attr.name, attr.value])
+                )
+            );
+
+            const newImageHTML = Image.generateHTML(imageStats, imageAttributes);
+            image.outerHTML = newImageHTML;
+        }));
+
+        return document.toString();
+    });
 
     config.addTransform('htmlmin', (content, outputPath) => {
         if (outputPath && outputPath.endsWith('.html')) {
