@@ -4,6 +4,8 @@ const Image = require('@11ty/eleventy-img');
 
 Image.concurrency = require('os').cpus().length;
 
+const isProdMode = process.env.NODE_ENV === 'production';
+
 module.exports = function(config) {
     // Markdown Options
 
@@ -151,7 +153,9 @@ module.exports = function(config) {
             const fullImagePath = path.join(articleSourceFolder, image.src);
             const imageStats = await Image(fullImagePath, {
                 widths: ['auto', 600, 1200, 2400],
-                formats: ['svg', 'avif', 'webp', 'auto'],
+                formats: isProdMode
+                    ? ['svg', 'avif', 'webp', 'auto']
+                    : ['svg', 'webp', 'auto'],
                 outputDir: outputArticleImagesFolder,
                 urlPath: 'images/',
                 svgShortCircuit: true,
