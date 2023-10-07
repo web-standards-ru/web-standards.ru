@@ -166,12 +166,12 @@ module.exports = function(config) {
                 {
                     loading: 'lazy',
                     decoding: 'async',
-                    sizes: `
-                        (min-width: 1920px) calc((1920px - 2 * 64px) * 5 / 8 - 2 * 16px),
-                        (min-width: 1240px) calc((100vw - 2 * 64px) * 5 / 8 - 2 * 16px),
-                        (min-width: 700px) calc(700px - 2 * 16px),
-                        calc(100vw - 2 * 16px)
-                    `,
+                    sizes: [
+                        '(min-width: 1920px) calc((1920px - 2 * 64px) * 5 / 8 - 2 * 16px)',
+                        '(min-width: 1240px) calc((100vw - 2 * 64px) * 5 / 8 - 2 * 16px)',
+                        '(min-width: 700px) calc(700px - 2 * 16px)',
+                        'calc(100vw - 2 * 16px)',
+                    ].join(','),
                 },
                 Object.fromEntries(
                     [...image.attributes].map((attr) => [attr.name, attr.value])
