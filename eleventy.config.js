@@ -151,7 +151,7 @@ module.exports = function(config) {
             const fullImagePath = path.join(articleSourceFolder, image.src);
             const imageStats = await Image(fullImagePath, {
                 widths: ['auto', 600, 1200, 2400],
-                formats: ['svg', 'webp', 'auto'],
+                formats: ['svg', 'avif', 'webp', 'auto'],
                 outputDir: outputArticleImagesFolder,
                 urlPath: 'images/',
                 svgShortCircuit: true,
