@@ -138,7 +138,7 @@ module.exports = function(config) {
 
         const { document } = parseHTML(content);
         const images = Array.from(document.querySelectorAll('.article__content img'))
-            .filter((image) => !image.src.match(/^https?/));
+            .filter((image) => !image.src.match(/^https?:/));
 
         if (images.length === 0) {
             return content;
