@@ -5,7 +5,7 @@
     "npm": ">=8"
   },
   "scripts": {
-    "start": "eleventy --serve --quiet --incremental",
+    "start": "cross-env NODE_ENV=development eleventy --serve --quiet --incremental",
     "editorconfig": "editorconfig-checker",
     "stylelint": "stylelint \"src/styles/**/*.css\"",
     "eslint": "eslint src/**/*.js",
@@ -13,15 +13,17 @@
     "typograph": "remark",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
     "test": "npm run editorconfig && npm run stylelint && npm run markdown && npm run eslint",
-    "build": "rm -rf dist && eleventy && gulp build",
+    "build": "cross-env-shell NODE_ENV=production \"rm -rf dist && eleventy && gulp build\"",
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.1",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
     "@mavrin/remark-typograf": "^2.2.0",
     "autoprefixer": "^10.3.6",
+    "cross-env": "^7.0.3",
     "del": "6.0.0",
     "editorconfig-checker": "^5.0.1",
     "eslint": "^8.7.0",
