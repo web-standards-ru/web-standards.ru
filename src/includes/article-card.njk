@@ -69,6 +69,7 @@
                             blob__photo"
                         src="/people/{{ personPhoto }}"
                         width="80" height="80"
+                        sizes="(min-width: 1024px) 112px, 80px"
                         {% if articleType === '--articles' %}loading="lazy"{% endif %}
                         alt="{{ person.name }}">
                 </div>
