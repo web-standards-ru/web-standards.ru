@@ -189,6 +189,71 @@ module.exports = function(config) {
         return document.toString();
     });
 
+    {
+        const avatarImageFormats = isProdMode
+            ? ['avif', 'webp', 'jpeg']
+            : ['webp', 'jpeg'];
+
+        const formatsOrder = ['avif', 'webp', 'jpeg'];
+
+        config.addTransform('optimizeAvatarImages', async function(content) {
+            if (!this.page.outputPath.endsWith?.('.html')) {
+                return content;
+            }
+
+            const { document } = parseHTML(content);
+            const images = Array.from(document.querySelectorAll('.blob__photo'))
+                .filter((image) => !image.src.match(/^https?:/));
+
+            if (images.length === 0) {
+                return content;
+            }
+
+            await Promise.all(images.map(async(image) => {
+                const fullImagePath = path.join(config.dir.input, image.src);
+                const avatarsOutputFolder = path.dirname(path.join(config.dir.output, image.src));
+
+                const imageStats = await Image(fullImagePath, {
+                    widths: image.sizes
+                        .split(',')
+                        .flatMap((entry) => {
+                            entry = entry.split(/\s+/).at(-1);
+                            entry = parseFloat(entry);
+                            return [entry, entry * 2];
+                        }),
+                    formats: avatarImageFormats,
+                    outputDir: avatarsOutputFolder,
+                    urlPath: image.src.split('/').slice(0, -1).join('/'),
+                    svgShortCircuit: true,
+                    filenameFormat: (hash, src, width, format) => {
+                        const extension = path.extname(src);
+                        const name = path.basename(src, extension);
+                        return `${hash}-${name}-${width}.${format}`;
+                    },
+                });
+
+                image.outerHTML = `
+                    <picture>
+                        ${
+                            formatsOrder
+                                .map(((format) => imageStats[format]))
+                                .filter(Boolean)
+                                .map((stats) => {
+                                    const type = stats[0].sourceType;
+                                    const srcset = stats.map((statsItem) => statsItem.srcset).join(',');
+                                    return `<source type="${type}" srcset="${srcset}"/>`;
+                                })
+                                .join('')
+                        }
+                        ${image.outerHTML}
+                    </picture>
+                `;
+            }));
+
+            return document.toString();
+        });
+    }
+
     config.addTransform('htmlmin', (content, outputPath) => {
         if (outputPath && outputPath.endsWith('.html')) {
             let htmlmin = require('html-minifier');
