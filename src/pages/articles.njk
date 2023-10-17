@@ -1,8 +1,9 @@
 ---
 title: Статьи
 layout: page.njk
-permalink: articles/index.html
 ---
+
+{% from "pagination.njk" import Pagination %}
 
 <main class="main">
     <div class="archive">
@@ -20,6 +21,11 @@ permalink: articles/index.html
                 {%- endfor -%}
             </ul>
         {%- endfor -%}
+
+        {{ Pagination(
+            class="archive__pagination",
+            paginationModel=paginationModel
+        ) }}
     </div>
 
     {# <div class="main__conference-link">
