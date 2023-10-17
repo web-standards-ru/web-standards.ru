@@ -26,7 +26,6 @@ module.exports = {
             return createPaginationModel({
                 eleventyData: data,
                 collection: episodes,
-                pageRange: 5,
             });
         },
     },

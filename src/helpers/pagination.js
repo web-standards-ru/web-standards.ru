@@ -1,8 +1,18 @@
-function createPaginationModel({ eleventyData, collection, pageRange }) {
+function clamp(min, value, max) {
+    return Math.max(min, Math.min(value, max));
+}
+
+function createPaginationModel({ eleventyData, collection, pageRange = 5 }) {
     const { pagination } = eleventyData;
     const itemsCount = collection.length;
-    const pageNumber = pagination.pageNumber;
 
+    // пагинацию не нужно создавать, если общее число элементов в коллекции меньше или равно числа элементов на одной странице
+    if (itemsCount <= pagination.size) {
+        return null;
+    }
+
+    const totalPagesCount = pagination.hrefs.length;
+    const pageNumber = pagination.pageNumber;
     const offset = Math.floor(pageRange / 2);
 
     const items = pagination.hrefs.map((url, index) => ({
@@ -10,14 +20,14 @@ function createPaginationModel({ eleventyData, collection, pageRange }) {
         originalIndex: index,
     }));
 
-    const startIndex = Math.max(0, pageNumber - offset);
+    const startIndex = clamp(0, pageNumber - offset, totalPagesCount - pageRange);
     const endIndex = Math.min(startIndex + pageRange, itemsCount);
 
     const slice = items.slice(startIndex, endIndex);
 
     return {
         slice,
-        totalPagesCount: pagination.hrefs.length,
+        totalPagesCount,
         previousPage: pagination.href.previous,
         nextPage: pagination.href.next,
         firstPage: pagination.href.first,
