@@ -46,8 +46,10 @@
 
 .pagination__link[aria-current] {
     color: black;
-    font-weight: bold;
+    font-weight: 900;
+    font-stretch: expanded;
     text-decoration: none;
+    background-color: var(--color-grey-lightest);
 }
 
 @media (hover: hover) and (pointer: fine) {
