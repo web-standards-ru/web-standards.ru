@@ -23,10 +23,6 @@
     }
 }
 
-.pagination__item--divider {
-    padding: 12px;
-}
-
 .pagination__item--previous,
 .pagination__item--next {
     padding-inline: 17px;
