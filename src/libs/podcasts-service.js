@@ -135,10 +135,9 @@ function withCache(operation) {
     let cache = null;
 
     return function() {
-        if (cache) {
-            return cache;
+        if (!cache) {
+            cache = operation();
         }
-        cache = operation();
         return cache;
     };
 }

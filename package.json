@@ -16,6 +16,9 @@
     "build": "cross-env-shell NODE_ENV=production \"rm -rf dist && eleventy && gulp build\"",
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
+  "imports": {
+    "#*": "./src/*"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.1",

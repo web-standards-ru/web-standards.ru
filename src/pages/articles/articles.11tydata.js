@@ -1,4 +1,4 @@
-const { createPaginationModel } = require('../helpers/pagination');
+const { createPaginationModel } = require('#libs/pagination.js');
 
 module.exports = {
     pagination: {
