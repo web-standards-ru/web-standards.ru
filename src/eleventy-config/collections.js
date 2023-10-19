@@ -1,4 +1,4 @@
-const { getEpisodesData } = require('#libs/podcasts-service.js');
+const { getEpisodesData } = require('../libs/podcasts-service.js');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection('tagList', (collection) => {

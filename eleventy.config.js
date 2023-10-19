@@ -1,21 +1,21 @@
 module.exports = function(eleventyConfig) {
     // Настройка Markdown
-    require('#eleventy-config/markdown-library.js')(eleventyConfig);
+    require('./src/eleventy-config/markdown-library.js')(eleventyConfig);
 
     // Коллекции
-    require('#eleventy-config/collections.js')(eleventyConfig);
+    require('./src/eleventy-config/collections.js')(eleventyConfig);
 
     // Фильтры
-    require('#eleventy-config/filters.js')(eleventyConfig);
+    require('./src/eleventy-config/filters.js')(eleventyConfig);
 
     // Трансформации
-    require('#eleventy-config/transforms.js')(eleventyConfig);
+    require('./src/eleventy-config/transforms.js')(eleventyConfig);
 
     // Теги
-    require('#eleventy-config/shortcodes.js')(eleventyConfig);
+    require('./src/eleventy-config/shortcodes.js')(eleventyConfig);
 
     // Копирование
-    require('#eleventy-config/static-files.js')(eleventyConfig);
+    require('./src/eleventy-config/static-files.js')(eleventyConfig);
 
     return {
         dir: {
