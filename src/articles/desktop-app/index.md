@@ -6,7 +6,7 @@ source:
     title: 'How to easily build desktop apps with HTML, CSS and JS'
     url: 'https://medium.com/p/d3e3f03f95a5'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
 tags:

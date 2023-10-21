@@ -6,7 +6,7 @@ source:
     title: 'HTML, CSS and our vanishing industry entry points'
     url: 'https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
 tags:

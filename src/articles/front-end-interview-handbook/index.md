@@ -6,7 +6,7 @@ source:
     title: 'Front-end interview handbook'
     url: 'https://github.com/yangshun/front-end-interview-handbook'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
 tags:
