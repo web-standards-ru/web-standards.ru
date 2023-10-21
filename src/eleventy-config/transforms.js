@@ -3,10 +3,43 @@ const htmlmin = require('html-minifier');
 const prettydata = require('pretty-data');
 const { parseHTML } = require('linkedom');
 const Image = require('@11ty/eleventy-img');
+const sharp = require('sharp');
 
 Image.concurrency = require('os').cpus().length;
 
 const isProdMode = process.env.NODE_ENV === 'production';
+
+async function processImage({ imageElement, inputPath, options, attributes }) {
+    const imageStats = await Image(inputPath, {
+        filenameFormat: (hash, src, width, format) => {
+            const extension = path.extname(src);
+            const name = path.basename(src, extension);
+            return `${hash}-${name}-${width}.${format}`;
+        },
+        ...options,
+    });
+
+    const imageAttributes = Object.assign(
+        {},
+        attributes ?? {},
+        Object.fromEntries(
+            [...imageElement.attributes].map((attr) => [attr.name, attr.value])
+        )
+    );
+
+    const tempElement = imageElement.ownerDocument.createElement('div');
+    tempElement.innerHTML = Image.generateHTML(imageStats, imageAttributes);
+
+    // Задаём размеры сами, так как для Gif они вычисляются некорректно
+    // https://github.com/11ty/eleventy-img/pull/182
+    const sharpImageMetaData = await sharp(inputPath).metadata();
+    const width = imageElement.getAttribute('width') ?? sharpImageMetaData.width;
+    const height = imageElement.getAttribute('height') ?? sharpImageMetaData.pageHeight ?? sharpImageMetaData.height;
+    const newImage = tempElement.querySelector('img');
+    Object.assign(newImage, { width, height });
+
+    imageElement.replaceWith(tempElement.firstElementChild);
+}
 
 module.exports = function(eleventyConfig) {
     // преобразование контентных изображений
@@ -32,23 +65,26 @@ module.exports = function(eleventyConfig) {
 
         await Promise.all(images.map(async(image) => {
             const fullImagePath = path.join(articleSourceFolder, image.src);
-            const imageStats = await Image(fullImagePath, {
-                widths: ['auto', 600, 1200, 2400],
-                formats: isProdMode
-                    ? ['svg', 'avif', 'webp', 'auto']
-                    : ['svg', 'webp', 'auto'],
-                outputDir: outputArticleImagesFolder,
-                urlPath: 'images/',
-                svgShortCircuit: true,
-                filenameFormat: (hash, src, width, format) => {
-                    const extension = path.extname(src);
-                    const name = path.basename(src, extension);
-                    return `${hash}-${name}-${width}.${format}`;
-                },
-            });
+            const isGif = path.extname(fullImagePath) === '.gif';
 
-            const imageAttributes = Object.assign(
-                {
+            await processImage({
+                document,
+                imageElement: image,
+                inputPath: fullImagePath,
+                options: {
+                    widths: ['auto', 600, 1200, 2400],
+                    // `sharp`, на данный момент, не поддерживает анимированный avif
+                    formats: isProdMode && !isGif
+                        ? ['svg', 'avif', 'webp', 'auto']
+                        : ['svg', 'webp', 'auto'],
+                    outputDir: outputArticleImagesFolder,
+                    urlPath: 'images/',
+                    svgShortCircuit: true,
+                    sharpOptions: {
+                        animated: true,
+                    },
+                },
+                attributes: {
                     loading: 'lazy',
                     decoding: 'async',
                     sizes: [
@@ -58,44 +94,34 @@ module.exports = function(eleventyConfig) {
                         'calc(100vw - 2 * 16px)',
                     ].join(','),
                 },
-                Object.fromEntries(
-                    [...image.attributes].map((attr) => [attr.name, attr.value])
-                )
-            );
-
-            const newImageHTML = Image.generateHTML(imageStats, imageAttributes);
-            image.outerHTML = newImageHTML;
+            });
         }));
 
         return document.toString();
     });
 
     // преобразование аватаров
-    {
-        const avatarImageFormats = isProdMode
-            ? ['avif', 'webp', 'jpeg']
-            : ['webp', 'jpeg'];
+    eleventyConfig.addTransform('optimizeAvatarImages', async function(content) {
+        if (!this.page.outputPath.endsWith?.('.html')) {
+            return content;
+        }
 
-        const formatsOrder = ['avif', 'webp', 'jpeg'];
+        const { document } = parseHTML(content);
+        const images = Array.from(document.querySelectorAll('.blob__photo'))
+            .filter((image) => !image.src.match(/^https?:/));
 
-        eleventyConfig.addTransform('optimizeAvatarImages', async function(content) {
-            if (!this.page.outputPath.endsWith?.('.html')) {
-                return content;
-            }
+        if (images.length === 0) {
+            return content;
+        }
 
-            const { document } = parseHTML(content);
-            const images = Array.from(document.querySelectorAll('.blob__photo'))
-                .filter((image) => !image.src.match(/^https?:/));
+        await Promise.all(images.map(async(image) => {
+            const fullImagePath = path.join(eleventyConfig.dir.input, image.src);
+            const avatarsOutputFolder = path.dirname(path.join(eleventyConfig.dir.output, image.src));
 
-            if (images.length === 0) {
-                return content;
-            }
-
-            await Promise.all(images.map(async(image) => {
-                const fullImagePath = path.join(eleventyConfig.dir.input, image.src);
-                const avatarsOutputFolder = path.dirname(path.join(eleventyConfig.dir.output, image.src));
-
-                const imageStats = await Image(fullImagePath, {
+            await processImage({
+                imageElement: image,
+                inputPath: fullImagePath,
+                options: {
                     widths: image.sizes
                         .split(',')
                         .flatMap((entry) => {
@@ -103,38 +129,18 @@ module.exports = function(eleventyConfig) {
                             entry = parseFloat(entry);
                             return [entry, entry * 2];
                         }),
-                    formats: avatarImageFormats,
+                    formats: isProdMode
+                        ? ['svg', 'avif', 'webp', 'auto']
+                        : ['svg', 'webp', 'auto'],
                     outputDir: avatarsOutputFolder,
                     urlPath: image.src.split('/').slice(0, -1).join('/'),
                     svgShortCircuit: true,
-                    filenameFormat: (hash, src, width, format) => {
-                        const extension = path.extname(src);
-                        const name = path.basename(src, extension);
-                        return `${hash}-${name}-${width}.${format}`;
-                    },
-                });
+                },
+            });
+        }));
 
-                image.outerHTML = `
-                    <picture>
-                        ${
-                            formatsOrder
-                                .map(((format) => imageStats[format]))
-                                .filter(Boolean)
-                                .map((stats) => {
-                                    const type = stats[0].sourceType;
-                                    const srcset = stats.map((statsItem) => statsItem.srcset).join(',');
-                                    return `<source type="${type}" srcset="${srcset}"/>`;
-                                })
-                                .join('')
-                        }
-                        ${image.outerHTML}
-                    </picture>
-                `;
-            }));
-
-            return document.toString();
-        });
-    }
+        return document.toString();
+    });
 
     if (isProdMode) {
         eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
