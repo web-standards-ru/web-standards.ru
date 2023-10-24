@@ -17,6 +17,10 @@
     <meta name="description" content="{{ preview or site.description }}">
     <meta name="theme-color" content="#81c36d">
 
+    {% if page.url.startsWith('/podcast/') %}
+        <meta name="apple-itunes-app" content="app-id=1080500016">
+    {% endif %}
+
     {% include 'open-graph.njk' %}
     {% include 'icons.njk' %}
 
