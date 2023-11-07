@@ -56,17 +56,7 @@ function handlePassedTimecode() {
 function initAnchor() {
     window.addEventListener('hashchange', () => {
         handlePassedTimecode();
-
-        if (!player.paused) {
-            playAudio();
-        }
     });
-}
-
-function playAudio() {
-    if (player.paused) {
-        player.play();
-    }
 }
 
 if (player) {
