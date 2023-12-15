@@ -57,6 +57,7 @@
     "sharp": "^0.32.6",
     "stylelint": "^15.6.0",
     "stylelint-order": "^6.0.1",
+    "stylelint-stylistic": "^0.4.3",
     "typograf": "^7.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-paths": "3.0.1",
