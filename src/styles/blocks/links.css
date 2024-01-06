@@ -182,6 +182,10 @@
     background-image: url('/images/social/castbox.svg');
 }
 
+.links__icon--zvuk {
+    background-image: url('/images/social/zvuk.svg');
+}
+
 .links__icon--youtube {
     background-image: url('/images/social/youtube.svg');
 }
