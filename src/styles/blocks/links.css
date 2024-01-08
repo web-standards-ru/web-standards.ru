@@ -150,6 +150,14 @@
     background-image: url('/images/social/bluesky.svg');
 }
 
+.links__icon--instagram {
+    background-image: url('/images/social/instagram.svg');
+}
+
+.links__icon--threads {
+    background-image: url('/images/social/threads.svg');
+}
+
 .links__icon--github {
     background-image: url('/images/social/github.svg');
 }
