@@ -56,7 +56,7 @@
     "rollup-stream": "^1.24.1",
     "sharp": "^0.32.6",
     "stylelint": "^16.0.2",
-    "stylelint-codeguide": "^1.0.2",
+    "@stylistic/stylelint-plugin": "^2.0.0",
     "stylelint-order": "^6.0.1",
     "typograf": "^7.0.0",
     "vinyl-buffer": "^1.0.1",
