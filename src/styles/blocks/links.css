@@ -150,6 +150,14 @@
     background-image: url('/images/social/bluesky.svg');
 }
 
+.links__icon--instagram {
+    background-image: url('/images/social/instagram.svg');
+}
+
+.links__icon--threads {
+    background-image: url('/images/social/threads.svg');
+}
+
 .links__icon--github {
     background-image: url('/images/social/github.svg');
 }
@@ -176,6 +184,14 @@
 
 .links__icon--yandex {
     background-image: url('/images/social/yandex.svg');
+}
+
+.links__icon--castbox {
+    background-image: url('/images/social/castbox.svg');
+}
+
+.links__icon--zvuk {
+    background-image: url('/images/social/zvuk.svg');
 }
 
 .links__icon--youtube {
