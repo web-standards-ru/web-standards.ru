@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom property for theme hue & saturation</title>
+    <link rel="stylesheet" href="mavo.css">
+    <style>
+        body {
+            font: 100%/1.5 Helvetica Neue, Segoe UI, sans-serif;
+            --l: 50%;
+        }
+
+        header {
+            margin-bottom: 1em;
+        }
+
+        div {
+            width: 100%;
+            height: 6em;
+            background: linear-gradient(to right, var(--stops));
+            --stops: gray, gray;
+        }
+
+        .hsl {
+            --s: 50%;
+            --stops:
+                hsl(0 var(--s) var(--l)),
+                hsl(60 var(--s) var(--l)),
+                hsl(120 var(--s) var(--l)),
+                hsl(180 var(--s) var(--l)),
+                hsl(240 var(--s) var(--l)),
+                hsl(300 var(--s) var(--l));
+        }
+
+        .lch {
+            --c: 50;
+            --stops:
+                lch(var(--l) var(--c) 0),
+                lch(var(--l) var(--c) 60),
+                lch(var(--l) var(--c) 120),
+                lch(var(--l) var(--c) 180),
+                lch(var(--l) var(--c) 240),
+                lch(var(--l) var(--c) 300);
+        }
+    </style>
+    <script src="mavo.js"></script>
+</head>
+<body>
+    <!-- Only works in Safari TP >= 120 -->
+    <main mv-app="appName" style="--l:[lightness]%;">
+        <header>
+            <label>
+                Lightness:
+                <input type="range" property="lightness">
+                [lightness]%
+            </label>
+        </header>
+        <div class="hsl"></div>
+        <div class="lch"></div>
+    </main>
+</body>
+</html>

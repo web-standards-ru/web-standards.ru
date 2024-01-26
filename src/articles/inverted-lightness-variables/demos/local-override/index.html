@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lightness variables, for easy basic dark mode</title>
+    <style>
+        :root {
+            --primary-hs: 250 30%;
+            --secondary-hs: 190 40%;
+
+            --l-0: 0%;
+            --l-30: 30%;
+            --l-40: 40%;
+            --l-50: 50%;
+            --l-90: 90%;
+            --l-100: 100%;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --l-0: 100%;
+                --l-30: 70%;
+                --l-40: 60%;
+                --l-90: 10%;
+                --l-100: 0%;
+            }
+        }
+
+        body {
+            margin: 1rem;
+            background: hsl(0 0% var(--l-100));
+            color: hsl(0 0% var(--l-0));
+            font: 100%/1.5 Helvetica Neue, Segoe UI, sans-serif;
+        }
+
+        h1 {
+            color: hsl(var(--primary-hs) var(--l-30));
+        }
+
+        article {
+            background: hsl(var(--primary-hs) var(--l-90));
+            border-radius: .3rem;
+            overflow: hidden;
+            margin: 1em 0;
+        }
+
+        article h2 {
+            padding: .3rem .5rem;
+            margin: 0;
+            background: hsl(var(--primary-hs) 40%);
+            color: hsl(0 0% var(--l-100));
+        }
+
+        article .content {
+            padding: 0 .5rem;
+        }
+
+        article.alt {
+            --primary-hs: var(--secondary-hs);
+        }
+
+        footer {
+            margin-top: 1rem;
+            border-top: 1px solid;
+            color: hsl(0 0% var(--l-40));
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lea Verou's blog</h1>
+
+    <p>Welcome to my blog, where I write about web standards, usability, and open source.</p>
+
+    <article>
+        <h2>Blog Post 1</h2>
+        <div class="content">
+            <p>Blog post 1 content</p>
+        </div>
+    </article>
+
+    <article class="alt">
+        <h2>Blog Post 2</h2>
+        <div class="content">
+            <p>Blog post 2 content</p>
+        </div>
+    </article>
+
+    <footer>
+        <p>Made with &hearts; by Lea Verou</p>
+    </footer>
+</body>
+</html>
