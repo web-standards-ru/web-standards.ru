@@ -14,7 +14,7 @@
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
     "test": "npm run editorconfig && npm run stylelint && npm run markdown && npm run eslint",
     "build": "cross-env-shell NODE_ENV=production \"rm -rf dist && eleventy && gulp build\"",
-    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
+    "deploy": "cd dist && rsync --progress --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
