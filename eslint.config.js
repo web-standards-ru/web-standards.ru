@@ -5,17 +5,18 @@ const stylisticJs = require('@stylistic/eslint-plugin-js');
 module.exports = [
     js.configs.recommended,
 
-    // Add Node.js global variables for all JS files except browser scripts
+    // Глобальные переменные только для скриптов Node.js
     {
         ignores: ['src/scripts/**/*.js'],
         languageOptions: {
             globals: {
-                ...globals.node, // Replace it with ...globals.nodeBuiltin when switching to ESM
+                // Заменить на ...globals.nodeBuiltin для ESM
+                ...globals.node,
             },
         },
     },
 
-    // Add browser global variables for browser scripts
+    // Глобальные переменные только для браузерных скриптов
     {
         files: ['src/scripts/**/*.js'],
         languageOptions: {
@@ -41,7 +42,7 @@ module.exports = [
             'no-redeclare': ['error', { 'builtinGlobals': false }],
             'no-unneeded-ternary': 'error',
 
-            // Eslint's deprecated stylistic rules returned by the plugin
+            // Стилистические правила из плагина
             '@stylistic/js/arrow-spacing': 'error',
             '@stylistic/js/block-spacing': ['error', 'always'],
             '@stylistic/js/brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
