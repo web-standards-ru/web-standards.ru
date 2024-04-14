@@ -25,7 +25,7 @@ Typograf.addRules([
 
             const re = new RegExp(
                 `(^|\\s|${privateLabel})([а-яё]{1,3})\\. ?([а-яё]{1,3})\\.`,
-                'g',
+                'g'
             );
 
             return (
