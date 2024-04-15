@@ -31,7 +31,7 @@
     "editorconfig-checker": "^5.0.1",
     "eslint": "^9.0.0",
     "globals": "^15.0.0",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^10.0.0",
     "gulp-replace": "^1.1.3",
