@@ -1,21 +1,21 @@
-module.exports = function(eleventyConfig) {
+export default async function(eleventyConfig) {
     // Настройка Markdown
-    require('./src/eleventy-config/markdown-library.js')(eleventyConfig);
+    (await import('./src/eleventy-config/markdown-library.js')).default(eleventyConfig);
 
     // Коллекции
-    require('./src/eleventy-config/collections.js')(eleventyConfig);
+    (await import('./src/eleventy-config/collections.js')).default(eleventyConfig);
 
     // Фильтры
-    require('./src/eleventy-config/filters.js')(eleventyConfig);
+    (await import('./src/eleventy-config/filters.js')).default(eleventyConfig);
 
     // Трансформации
-    require('./src/eleventy-config/transforms.js')(eleventyConfig);
+    (await import('./src/eleventy-config/transforms.js')).default(eleventyConfig);
 
     // Теги
-    require('./src/eleventy-config/shortcodes.js')(eleventyConfig);
+    (await import('./src/eleventy-config/shortcodes.js')).default(eleventyConfig);
 
     // Копирование
-    require('./src/eleventy-config/static-files.js')(eleventyConfig);
+    (await import('./src/eleventy-config/static-files.js')).default(eleventyConfig);
 
     return {
         dir: {

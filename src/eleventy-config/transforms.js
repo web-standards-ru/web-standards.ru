@@ -1,11 +1,12 @@
-const path = require('node:path');
-const htmlmin = require('html-minifier');
-const prettydata = require('pretty-data');
-const { parseHTML } = require('linkedom');
-const Image = require('@11ty/eleventy-img');
-const sharp = require('sharp');
+import path from 'node:path';
+import os from 'node:os';
+import htmlmin from 'html-minifier';
+import prettydata from 'pretty-data';
+import { parseHTML } from 'linkedom';
+import Image from '@11ty/eleventy-img';
+import sharp from 'sharp';
 
-Image.concurrency = require('os').cpus().length;
+Image.concurrency = os.availableParallelism ? os.availableParallelism() : os.cpus().length;
 
 const isProdMode = process.env.NODE_ENV === 'production';
 
@@ -41,7 +42,7 @@ async function processImage({ imageElement, inputPath, options, attributes }) {
     imageElement.replaceWith(tempElement.firstElementChild);
 }
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
     // преобразование контентных изображений
     eleventyConfig.addTransform('optimizeContentImages', async function(content) {
         if (!this.page.inputPath.includes('/articles/')) {

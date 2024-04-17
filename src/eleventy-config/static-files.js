@@ -1,4 +1,4 @@
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
     [
         'src/favicon.ico',
         'src/manifest.json',

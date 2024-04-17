@@ -4,6 +4,7 @@
     "node": ">=16",
     "npm": ">=8"
   },
+  "type": "module",
   "scripts": {
     "start": "cross-env NODE_ENV=development eleventy --serve --quiet --incremental",
     "editorconfig": "editorconfig-checker",
@@ -17,7 +18,7 @@
     "deploy": "cd dist && rsync --progress --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0-alpha.6",
     "@11ty/eleventy-img": "^4.0.2",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",

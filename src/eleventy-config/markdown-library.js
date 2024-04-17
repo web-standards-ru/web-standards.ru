@@ -1,8 +1,8 @@
-const markdownIt = require('markdown-it');
-const markdownItMultimdTable = require('markdown-it-multimd-table');
-const markdownItAnchor = require('../libs/markdown-it-anchor.js');
+import markdownIt from 'markdown-it';
+import markdownItMultimdTable from 'markdown-it-multimd-table';
+import markdownItAnchor from '../libs/markdown-it-anchor.js';
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
     const md = markdownIt({
         html: true,
         highlight: function(str, lang) {

@@ -1,6 +1,6 @@
-const { getEpisodesData } = require('../libs/podcasts-service.js');
+import { getEpisodesData } from '../libs/podcasts-service.js';
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
     eleventyConfig.addCollection('tagList', (collection) => {
         const set = new Set();
         for (const item of collection.getAllSorted()) {

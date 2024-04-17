@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     eleventyComputed: {
         indexArticles: function(data) {
             const articles = data.collections.articles.slice().reverse();

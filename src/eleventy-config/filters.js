@@ -1,6 +1,6 @@
-const hyphenLibRu = require('hyphen/ru');
+import hyphenLibRu from 'hyphen/ru/index.js';
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
     eleventyConfig.addFilter('limit', (array, limit) => {
         return array.slice(0, limit);
     });
