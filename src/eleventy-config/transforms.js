@@ -76,8 +76,7 @@ export default function(eleventyConfig) {
                     widths: ['auto', 600, 1200, 2400],
                     // `sharp`, на данный момент, не поддерживает анимированный avif
                     formats: isProdMode && !isGif
-                        // ? ['svg', 'avif', 'webp', 'auto']
-                        ? ['svg', 'webp', 'auto']
+                        ? ['svg', 'avif', 'webp', 'auto']
                         : ['svg', 'webp', 'auto'],
                     outputDir: outputArticleImagesFolder,
                     urlPath: 'images/',
@@ -132,8 +131,7 @@ export default function(eleventyConfig) {
                             return [entry, entry * 2];
                         }),
                     formats: isProdMode
-                        // ? ['svg', 'avif', 'webp', 'auto']
-                        ? ['svg', 'webp', 'auto']
+                        ? ['svg', 'avif', 'webp', 'auto']
                         : ['svg', 'webp', 'auto'],
                     outputDir: avatarsOutputFolder,
                     urlPath: image.src.split('/').slice(0, -1).join('/'),
