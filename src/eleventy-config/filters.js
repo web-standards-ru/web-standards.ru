@@ -1,4 +1,9 @@
 import hyphenLibRu from 'hyphen/ru/index.js';
+import markdownIt from 'markdown-it';
+
+const markdown = markdownIt({
+    html: true,
+});
 
 export default function(eleventyConfig) {
     eleventyConfig.addFilter('limit', (array, limit) => {
@@ -48,9 +53,6 @@ export default function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter('markdown', (value) => {
-        let markdown = require('markdown-it')({
-            html: true,
-        });
         return markdown.render(value);
     });
 };
