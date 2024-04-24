@@ -47,10 +47,10 @@ permalink: index.html
                         {% if loop.index <= 5 %}
                             <li class="podcast-preview-grid__item">
                                 {{ PodcastPreview({
-                                    episode: episode.episode,
+                                    episode: episode.data.episode,
                                     isInverse: loop.index === 1,
-                                    title:  episode.title,
-                                    link: '/podcast/' + episode.episode + '/',
+                                    title:  episode.data.title,
+                                    link: '/podcast/' + episode.data.episode + '/',
                                     date: episode.date
                                 }) }}
                             </li>
@@ -59,7 +59,6 @@ permalink: index.html
                 </ul>
             </div>
         </div>
-
 
         <div class="notice">
             <a class="notice__link" href="/podcast/">Все выпуски</a>

@@ -1,4 +1,7 @@
-import { getEpisodesData } from '../libs/podcasts-service.js';
+import path from 'node:path';
+import fs from 'node:fs';
+import fastGlob from 'fast-glob';
+import yaml from 'js-yaml';
 
 export default function(eleventyConfig) {
     eleventyConfig.addCollection('tagList', (collection) => {
@@ -17,22 +20,39 @@ export default function(eleventyConfig) {
         return [...set].sort();
     });
 
-    /*
-        Коллекция для выпусков подкаста.
-        Формат данных одного выпуска:
-        - episode
-        - title
-        - date
-        - chapters
-            - time
-            - title
-        - content
-        - hosts
-        - audio
-    */
-    eleventyConfig.addCollection('episodes', () => {
-        return getEpisodesData();
-    });
+    const templatesPaths = fastGlob.sync(['node_modules/podcast/src/episodes/*/*.md']);
+    for (const templatePath of templatesPaths) {
+        const episodeFolderPath = path.dirname(templatePath);
+        const episodeDataFilePath = path.join(episodeFolderPath, 'index.yml');
+        const relativePath = path.relative('node_modules/podcast/src/episodes', templatePath);
+
+        const templateContent = fs.readFileSync(templatePath, { encoding: 'utf-8' });
+        const templateDataFileContent = fs.readFileSync(episodeDataFilePath, { encoding: 'utf-8' });
+        const templateData = yaml.load(templateDataFileContent);
+
+        Object.assign(templateData, {
+            permalink: false,
+            layout: false,
+            tags: ['episodes'],
+            eleventyComputed: {
+                episode(data) {
+                    return data?.page?.fileSlug;
+                },
+                id(data) {
+                    return data?.page?.fileSlug;
+                },
+                audio(data) {
+                    return `https://web-standards.ru/podcast/episodes/${data.episode}.mp3`;
+                },
+                // TODO: убрать mock
+                fileSize() {
+                    return 1024 * 1024 * 10;
+                },
+            },
+        });
+
+        eleventyConfig.addTemplate(`episodes/${relativePath}`, templateContent, templateData);
+    }
 
     eleventyConfig.addCollection('people', (collectionAPI) => {
         return collectionAPI.getFilteredByGlob('src/people/*/*.md');

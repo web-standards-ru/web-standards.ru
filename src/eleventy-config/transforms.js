@@ -1,7 +1,7 @@
 import path from 'node:path';
 import os from 'node:os';
-import htmlmin from 'html-minifier';
-import prettydata from 'pretty-data';
+import htmlmin from 'html-minifier-terser';
+import minifyXml from 'minify-xml';
 import { parseHTML } from 'linkedom';
 import Image from '@11ty/eleventy-img';
 import sharp from 'sharp';
@@ -76,7 +76,8 @@ export default function(eleventyConfig) {
                     widths: ['auto', 600, 1200, 2400],
                     // `sharp`, на данный момент, не поддерживает анимированный avif
                     formats: isProdMode && !isGif
-                        ? ['svg', 'avif', 'webp', 'auto']
+                        // ? ['svg', 'avif', 'webp', 'auto']
+                        ? ['svg', 'webp', 'auto']
                         : ['svg', 'webp', 'auto'],
                     outputDir: outputArticleImagesFolder,
                     urlPath: 'images/',
@@ -131,7 +132,8 @@ export default function(eleventyConfig) {
                             return [entry, entry * 2];
                         }),
                     formats: isProdMode
-                        ? ['svg', 'avif', 'webp', 'auto']
+                        // ? ['svg', 'avif', 'webp', 'auto']
+                        ? ['svg', 'webp', 'auto']
                         : ['svg', 'webp', 'auto'],
                     outputDir: avatarsOutputFolder,
                     urlPath: image.src.split('/').slice(0, -1).join('/'),
@@ -146,22 +148,18 @@ export default function(eleventyConfig) {
     if (isProdMode) {
         eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
             if (outputPath && outputPath.endsWith('.html')) {
-                let result = htmlmin.minify(
-                    content, {
-                        removeComments: true,
-                        collapseWhitespace: true,
-                        collapseBooleanAttributes: true,
-                    }
-                );
-                return result;
+                return htmlmin.minify(content, {
+                    collapseWhitespace: true,
+                });
             }
             return content;
         });
 
         eleventyConfig.addTransform('xmlmin', function(content, outputPath) {
             if (outputPath && outputPath.endsWith('.xml')) {
-                let result = prettydata.pd.xmlmin(content);
-                return result;
+                return minifyXml(content, {
+                    shortenNamespaces: false,
+                });
             }
             return content;
         });

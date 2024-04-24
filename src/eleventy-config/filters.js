@@ -1,4 +1,10 @@
 import hyphenLibRu from 'hyphen/ru/index.js';
+import markdownIt from 'markdown-it';
+import htmlmin from 'html-minifier-terser';
+
+const markdown = markdownIt({
+    html: true,
+});
 
 export default function(eleventyConfig) {
     eleventyConfig.addFilter('limit', (array, limit) => {
@@ -48,9 +54,19 @@ export default function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter('markdown', (value) => {
-        let markdown = require('markdown-it')({
-            html: true,
-        });
         return markdown.render(value);
+    });
+
+    eleventyConfig.addFilter('inlineMarkdown', (value) => {
+        return markdown.renderInline(value);
+    });
+
+    eleventyConfig.addFilter('htmlmin', (value) => {
+        return htmlmin.minify(
+            value, {
+                collapseWhitespace: true,
+                removeEmptyElements: true,
+            }
+        );
     });
 };

@@ -1,32 +1,19 @@
----
-layout: page.njk
-pagination:
-    data: collections.episodes
-    size: 1
-    alias: episode
-permalink: 'podcast/{{ episode.episode }}/index.html'
-podcastDescription: 'Подкаст «Веб-стандарты»'
-eleventyComputed:
-    title: "Выпуск {{ episode.episode }}"
-    preview: ' {{ episode.title }}'
----
-
-{% set hasChapters = episode.chapters and episode.chapters.length > 0 %}
+{% set hasChapters = episode.data.chapters and episode.data.chapters.length > 0 %}
 
 <main class="main">
     <article class="podcast {% if not hasChapters %}podcast--no-chapters{% endif %}">
         <header class="podcast__header">
-            <span class="podcast__number">Выпуск {{ episode.episode }}</span>
+            <span class="podcast__number">Выпуск {{ episode.data.episode }}</span>
             <time class="podcast__date" datetime="{{ episode.date | isoDate }}">
                 {{ episode.date | ruDate }}
             </time>
             <h1 class="article__title podcast__title">
-                {{ episode.title }}
+                {{ episode.data.title }}
             </h1>
             <section class="podcast__hosts">
                 <h2 class="podcast__hosts-heading">Ведущие:</h2>
                 <ul class="podcast__hosts-list">
-                    {% for host in episode.hosts %}
+                    {% for host in episode.data.hosts %}
                         <li class="podcast__host">{{ host }}</li>
                     {% endfor %}
                 </ul>
@@ -42,7 +29,7 @@ eleventyComputed:
             </button>
             <audio
                 class="player__audio"
-                src="{{ episode.audio }}"
+                src="{{ episode.data.audio }}"
                 controls
                 type="audio/mpeg"
                 preload="metadata"
@@ -53,7 +40,7 @@ eleventyComputed:
             <section class="podcast__timecode">
                 <h2 class="podcast__timecode-heading">Темы</h2>
                 <dl class="podcast__timecode-chapters">
-                    {% for chapter in episode.chapters %}
+                    {% for chapter in episode.data.chapters %}
                         <div class="podcast__timecode-chapter">
                             <dt class="podcast__timecode-time">
                                 <a

@@ -44,7 +44,7 @@
         {% include 'menu.njk' %}
     </nav>
     {% if isMainPage and lastPodcastEpisode %}
-        <a class="header__informers informer" href="/podcast/{{ lastPodcastEpisode.episode }}/">
+        <a class="header__informers informer" href="/podcast/{{ lastPodcastEpisode.data.episode }}/">
             <svg class="informer__icon" width="32" height="32" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                 <ellipse cx="16" cy="16" rx="2" ry="13"/>
                 <ellipse cx="16" cy="16" rx="15" ry="2"/>
@@ -52,10 +52,10 @@
                 <ellipse cx="9.5" cy="16" rx="1.5" ry="5"/>
             </svg>
             <b class="informer__meta">
-                {{- lastPodcastEpisode.episode -}}
+                {{- lastPodcastEpisode.data.episode -}}
             </b>
             <span class="informer__title">
-                {{ lastPodcastEpisode.title }}
+                {{ lastPodcastEpisode.data.title }}
             </span>
         </a>
     {% endif %}
