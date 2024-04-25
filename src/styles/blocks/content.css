@@ -6,6 +6,7 @@
     color: black;
     font-size: 16px;
     line-height: 1.7;
+    overflow-wrap: anywhere;
 }
 
 @media (min-width: 1240px) {
