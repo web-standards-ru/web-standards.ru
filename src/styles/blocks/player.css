@@ -2,11 +2,15 @@
     display: grid;
     grid-template-columns:
         min-content
-        min-content
         1fr;
     align-items: center;
     width: 100%;
     height: 40px;
+    column-gap: 12px;
+}
+
+.player__buttons {
+    display: flex;
 }
 
 .player__rewind {
@@ -27,7 +31,6 @@
 .player__audio {
     width: 100%;
     height: 40px;
-    margin-left: 12px;
     border-radius: 20px;
     filter: drop-shadow(
         2px 2px 4px rgba(0, 0, 0, 0.2)
