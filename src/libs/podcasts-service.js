@@ -1,12 +1,12 @@
-const https = require('https');
-const { once } = require('events');
+import https from 'https';
+import { once } from 'events';
 
-const NodeXMLStream = require('node-xml-stream');
-const { parseHTML } = require('linkedom');
+import NodeXMLStream from 'node-xml-stream';
+import { parseHTML } from 'linkedom';
 
 const RSS_URL = 'https://web-standards.ru/podcast/feed/';
 
-async function getEpisodesData() {
+async function _getEpisodesData() {
     const [response] = await once(https.get(RSS_URL), 'response');
 
     response.setEncoding('utf8');
@@ -130,7 +130,6 @@ async function getEpisodesData() {
     });
 }
 
-
 function withCache(operation) {
     let cache = null;
 
@@ -142,6 +141,4 @@ function withCache(operation) {
     };
 }
 
-module.exports = {
-    getEpisodesData: withCache(getEpisodesData),
-};
+export const getEpisodesData = withCache(_getEpisodesData);

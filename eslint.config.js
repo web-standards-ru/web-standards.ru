@@ -1,8 +1,8 @@
-const globals = require('globals');
-const js = require('@eslint/js');
-const stylisticJs = require('@stylistic/eslint-plugin-js');
+import globals from 'globals';
+import js from '@eslint/js';
+import stylisticJs from '@stylistic/eslint-plugin-js';
 
-module.exports = [
+export default [
     js.configs.recommended,
 
     // Глобальные переменные только для скриптов Node.js

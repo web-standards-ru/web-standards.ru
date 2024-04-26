@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     'title': 'Веб-стандарты',
     'subTitle': 'Сообщество разработчиков',
     'description': 'Авторские и переводные статьи по фронтенду',

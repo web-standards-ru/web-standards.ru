@@ -1,27 +1,28 @@
-const babel = require('gulp-babel');
-const buffer = require('vinyl-buffer');
-const del = require('del');
-const fs = require('fs');
-const gulp = require('gulp');
-const paths = require('vinyl-paths');
-const postcss = require('gulp-postcss');
-const replace = require('gulp-replace');
-const rev = require('gulp-rev');
-const rewrite = require('gulp-rev-rewrite');
-const rollup = require('rollup-stream');
-const source = require('vinyl-source-stream');
-const terser = require('gulp-terser');
+import babel from 'gulp-babel';
+import buffer from 'vinyl-buffer';
+import del from 'del';
+import fs from 'fs';
+import gulp from 'gulp';
+import paths from 'vinyl-paths';
+import postcss from 'gulp-postcss';
+import replace from 'gulp-replace';
+import rev from 'gulp-rev';
+import rewrite from 'gulp-rev-rewrite';
+import rollup from 'rollup-stream';
+import source from 'vinyl-source-stream';
+import terser from 'gulp-terser';
 
 // Styles
+const postCssPlugins = await Promise.all([
+    'postcss-import',
+    'postcss-color-hex-alpha',
+    'autoprefixer',
+    'postcss-csso',
+].map((name) => import(name).then(module => module.default)));
 
 gulp.task('styles', () => {
     return gulp.src('dist/styles/{styles,print}.css')
-        .pipe(postcss([
-            require('postcss-import'),
-            require('postcss-color-hex-alpha'),
-            require('autoprefixer'),
-            require('postcss-csso'),
-        ]))
+        .pipe(postcss(postCssPlugins))
         .pipe(gulp.dest('dist/styles'));
 });
 

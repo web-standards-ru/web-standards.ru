@@ -1,6 +1,6 @@
-const { createPaginationModel } = require('../../libs/pagination.js');
+import { createPaginationModel } from '../../libs/pagination.js';
 
-module.exports = {
+export default {
     pagination: {
         data: 'collections.episodes',
         alias: 'episodesChunk',

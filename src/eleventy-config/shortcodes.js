@@ -1,4 +1,4 @@
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
     // генерация псевдослучайных CSS-классов для оформления аватаров
     eleventyConfig.addShortcode('blob', function(authorName) {
         const blobColors = [1, 2, 3, 4];

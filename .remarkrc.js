@@ -1,4 +1,4 @@
-const Typograf = require('typograf');
+import Typograf from 'typograf';
 
 const privateLabel = '\uF000';
 // Узкий неразрывный пробел для сокращений т.д. и т.п.
@@ -43,7 +43,7 @@ const typograf = new Typograf({
 typograf.enableRule('ru/nnbsp/abbr');
 typograf.disableRule('ru/nbsp/abbr');
 
-module.exports = {
+export default {
     settings: {
         commonmark: true,
         emphasis: '_',

@@ -2,7 +2,7 @@ function clamp(min, value, max) {
     return Math.max(min, Math.min(value, max));
 }
 
-function createPaginationModel({ eleventyData, collection, pageRange = 5 }) {
+export function createPaginationModel({ eleventyData, collection, pageRange = 5 }) {
     const { pagination } = eleventyData;
     const itemsCount = collection.length;
 
@@ -41,7 +41,3 @@ function createPaginationModel({ eleventyData, collection, pageRange = 5 }) {
         isNeedShowLastDivider: slice.at(-1).originalIndex < pagination.hrefs.length - 2,
     };
 }
-
-module.exports = {
-    createPaginationModel,
-};
