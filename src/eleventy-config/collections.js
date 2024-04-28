@@ -38,15 +38,8 @@ export default function(eleventyConfig) {
                 episode(data) {
                     return data?.page?.fileSlug;
                 },
-                id(data) {
-                    return data?.page?.fileSlug;
-                },
                 audio(data) {
                     return `https://web-standards.ru/podcast/episodes/${data.episode}.mp3`;
-                },
-                // TODO: убрать mock
-                fileSize() {
-                    return 1024 * 1024 * 10;
                 },
             },
         });
