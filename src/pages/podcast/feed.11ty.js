@@ -4,8 +4,9 @@ export default {
     },
 
     duration(time) {
+        // если длительность берётся из json-файла, то она задана в миллисекундах
         if (typeof time === 'number') {
-            return time;
+            return Math.round(time / 1000);
         }
 
         return time.split(':').reduceRight((acc, item, index, items) => {
