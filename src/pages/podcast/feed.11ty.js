@@ -40,7 +40,7 @@ export default {
                         <enclosure
                             type='audio/mpeg'
                             url='${data.podcastMeta.url}episodes/${episode.fileSlug}.mp3'
-                            length='${episode.fileSize}'
+                            length='${episode.data.fileSize}'
                         />
                         <itunes:episode>${episode.fileSlug}</itunes:episode>
                         <itunes:duration>${this.duration(episode.data.duration)}</itunes:duration>
