@@ -23,7 +23,7 @@ export default {
                 return `
                     <item>
                         <title>${episode.fileSlug}. ${episode.data.title}</title>
-                        <link>${data.podcastMeta.url}${episode.fileSlug}/</link>
+                        <link>${data.podcast.url}${episode.fileSlug}/</link>
                         <pubDate>${episode.date.toUTCString()}</pubDate>
                         <description><![CDATA[
                             <h2>Ведущие</h2>
@@ -36,18 +36,18 @@ export default {
                             }
                             ${await this.htmlmin(episode.content)}
                         ]]></description>
-                        <guid isPermaLink='true'>${data.podcastMeta.url}episodes/${episode.fileSlug}.mp3</guid>
+                        <guid isPermaLink='true'>${data.podcast.url}episodes/${episode.fileSlug}.mp3</guid>
                         <enclosure
                             type='audio/mpeg'
-                            url='${data.podcastMeta.url}episodes/${episode.fileSlug}.mp3'
+                            url='${data.podcast.url}episodes/${episode.fileSlug}.mp3'
                             length='${episode.data.fileSize}'
                         />
                         <itunes:episode>${episode.fileSlug}</itunes:episode>
                         <itunes:duration>${this.duration(episode.data.duration)}</itunes:duration>
                         <itunes:author>${hosts}</itunes:author>
-                        <itunes:explicit>${data.podcastMeta.explicit}</itunes:explicit>
+                        <itunes:explicit>${data.podcast.explicit}</itunes:explicit>
                         <itunes:summary>${this.ruDate(episode.date)}: ${episode.data.title}. ${hosts}</itunes:summary>
-                        <itunes:image href='${data.podcastMeta.url}cover.png'/>
+                        <itunes:image href='${data.podcast.url}cover.png'/>
                     </item>
                 `;
             })
@@ -66,25 +66,25 @@ export default {
                 xmlns:content='http://purl.org/rss/1.0/modules/content/'
             >
                 <channel>
-                    <title>${data.podcastMeta.title}</title>
-                    <description><![CDATA[${this.inlineMarkdown(data.podcastMeta.description)}]]></description>
-                    <copyright>${data.podcastMeta.copyright}</copyright>
-                    <language>${data.podcastMeta.language}</language>
-                    <link>${data.podcastMeta.url}</link>
+                    <title>${data.podcast.title}</title>
+                    <description><![CDATA[${this.inlineMarkdown(data.podcast.description)}]]></description>
+                    <copyright>${data.podcast.copyright}</copyright>
+                    <language>${data.podcast.language}</language>
+                    <link>${data.podcast.url}</link>
 
-                    <atom:link href='${data.podcastMeta.url}feed/' rel='self' type='application/rss+xml'/>
+                    <atom:link href='${data.podcast.url}feed/' rel='self' type='application/rss+xml'/>
 
-                    <itunes:subtitle>${data.podcastMeta.subtitle}</itunes:subtitle>
-                    <itunes:type>${data.podcastMeta.type}</itunes:type>
-                    <itunes:author>${data.podcastMeta.author}</itunes:author>
-                    <itunes:explicit>${data.podcastMeta.explicit}</itunes:explicit>
+                    <itunes:subtitle>${data.podcast.subtitle}</itunes:subtitle>
+                    <itunes:type>${data.podcast.type}</itunes:type>
+                    <itunes:author>${data.podcast.author}</itunes:author>
+                    <itunes:explicit>${data.podcast.explicit}</itunes:explicit>
                     <itunes:owner>
-                        <itunes:name>${data.podcastMeta.owner.name}</itunes:name>
-                        <itunes:email>${data.podcastMeta.owner.email}</itunes:email>
+                        <itunes:name>${data.podcast.owner.name}</itunes:name>
+                        <itunes:email>${data.podcast.owner.email}</itunes:email>
                     </itunes:owner>
-                    <itunes:image href='${data.podcastMeta.url}cover.png'/>
+                    <itunes:image href='${data.podcast.url}cover.png'/>
 
-                    ${data.podcastMeta.categories
+                    ${data.podcast.categories
                         .map(
                             (category) =>
                                 `<itunes:category text='${category.title}'>${
