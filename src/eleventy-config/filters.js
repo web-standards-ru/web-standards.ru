@@ -1,5 +1,6 @@
 import hyphenLibRu from 'hyphen/ru/index.js';
 import markdownIt from 'markdown-it';
+import htmlmin from 'html-minifier-terser';
 
 const markdown = markdownIt({
     html: true,
@@ -54,5 +55,18 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addFilter('markdown', (value) => {
         return markdown.render(value);
+    });
+
+    eleventyConfig.addFilter('inlineMarkdown', (value) => {
+        return markdown.renderInline(value);
+    });
+
+    eleventyConfig.addFilter('htmlmin', (value) => {
+        return htmlmin.minify(
+            value, {
+                collapseWhitespace: true,
+                removeEmptyElements: true,
+            }
+        );
     });
 };

@@ -17,6 +17,9 @@ export default async function(eleventyConfig) {
     // Копирование
     (await import('./src/eleventy-config/static-files.js')).default(eleventyConfig);
 
+    // Расширения
+    (await import('./src/eleventy-config/extensions.js')).default(eleventyConfig);
+
     return {
         dir: {
             input: 'src',
@@ -31,6 +34,7 @@ export default async function(eleventyConfig) {
         templateFormats: [
             'md',
             'njk',
+            '11ty.js',
         ],
     };
 };

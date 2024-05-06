@@ -14,10 +14,10 @@ layout: page.njk
                 {% for episode in episodesChunk %}
                     <li class="podcast-preview-grid__item">
                         {{ PodcastPreview({
-                            episode: episode.episode,
+                            episode: episode.data.episode,
                             isInverse: loop.index === 1 and paginationModel.isFirstPage,
-                            title:  episode.title,
-                            link: '/podcast/' + episode.episode + '/',
+                            title:  episode.data.title,
+                            link: '/podcast/' + episode.data.episode + '/',
                             date: episode.date
                         }) }}
                     </li>

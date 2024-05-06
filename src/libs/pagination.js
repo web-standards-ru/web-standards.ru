@@ -34,7 +34,7 @@ export function createPaginationModel({ eleventyData, collection, pageRange = 5 
         lastPage: pagination.href.last,
         currentPageUrl: eleventyData.page.url,
         isFirstPage: pagination.hrefs[pagination.pageNumber] === pagination.href.first,
-        islastPage: pagination.hrefs[pagination.pageNumber] === pagination.href.last,
+        isLastPage: pagination.hrefs[pagination.pageNumber] === pagination.href.last,
         isNeedShowFirstPage: slice[0].originalIndex >= 1,
         isNeedShowFirstDivider: slice[0].originalIndex >= 2,
         isNeedShowLastPage: slice.at(-1).originalIndex < pagination.hrefs.length - 1,

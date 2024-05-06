@@ -1,7 +1,7 @@
 import path from 'node:path';
 import os from 'node:os';
-import htmlmin from 'html-minifier';
-import prettydata from 'pretty-data';
+import htmlmin from 'html-minifier-terser';
+import minifyXml from 'minify-xml';
 import { parseHTML } from 'linkedom';
 import Image from '@11ty/eleventy-img';
 import sharp from 'sharp';
@@ -143,30 +143,6 @@ export default function(eleventyConfig) {
         return document.toString();
     });
 
-    if (isProdMode) {
-        eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
-            if (outputPath && outputPath.endsWith('.html')) {
-                let result = htmlmin.minify(
-                    content, {
-                        removeComments: true,
-                        collapseWhitespace: true,
-                        collapseBooleanAttributes: true,
-                    }
-                );
-                return result;
-            }
-            return content;
-        });
-
-        eleventyConfig.addTransform('xmlmin', function(content, outputPath) {
-            if (outputPath && outputPath.endsWith('.xml')) {
-                let result = prettydata.pd.xmlmin(content);
-                return result;
-            }
-            return content;
-        });
-    }
-
     eleventyConfig.addTransform('lazyYouTube', (content, outputPath) => {
         let articles = /articles\/([a-zA-Z0-9_-]+)\/index\.html/i;
         let iframes = /<iframe src="https:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)"(.*?)><\/iframe>/ig;
@@ -189,4 +165,87 @@ export default function(eleventyConfig) {
         }
         return content;
     });
+
+    // добавление на заголовки id с временными метками внутри страниц подкастов
+    eleventyConfig.addTransform('podcast-headings', async function(content) {
+        if (this.page?.outputFileExtension !== 'html') {
+            return content;
+        }
+
+        // игнорируем страницы, не попадающие под url вида `/podcast/<номер подкаста>/`
+        if (!(/\podcast\/\d+\//.test(this.page?.url))) {
+            return content;
+        }
+
+        const { document } = parseHTML(content);
+
+        const titlesMap = Array.from(document.querySelectorAll('.podcast__content h2'))
+            .reduce((map, titleElement) => {
+                map[titleElement.textContent.trim()] = titleElement;
+                return map;
+            }, {});
+
+        for (const chapterElement of document.querySelectorAll('.podcast__timecode-chapter')) {
+            const titleText = chapterElement.querySelector('.podcast__timecode-title').textContent.trim();
+            const timeCode = chapterElement.querySelector('.podcast__timecode-link').textContent.trim();
+            titlesMap[titleText]?.setAttribute('id', timeCode);
+        }
+
+        return document.toString();
+    });
+
+    // добавление id на заголовки и кнопок для копирования ссылок
+    eleventyConfig.addTransform('content-headings', async function(content) {
+        if (this.page?.outputFileExtension !== 'html') {
+            return content;
+        }
+
+        const { document } = parseHTML(content);
+
+        const headings = Array.from(document.querySelectorAll('.content :where(h1, h2, h3, h4, h5, h6)'));
+
+        let headingCounter = 0;
+
+        for (const heading of headings) {
+            const headingId = heading.id || `section-${++headingCounter}`;
+            heading.id = headingId;
+            const headingHTML = heading.innerHTML;
+            heading.innerHTML = `
+                ${headingHTML}
+                <span class="tooltip">
+                    <button
+                        class="tooltip__button"
+                        data-href="#${headingId}"
+                        aria-labelledby="copy-${headingId}"
+                        aria-label="Копировать ссылку на заголовок"
+                    ></button>
+                    <span class="tooltip__label" role="tooltip" id="copy-${headingId}">
+                        Скопировать ссылку
+                    </span>
+                </span>
+            `;
+        }
+
+        return document.toString();
+    });
+
+    if (isProdMode) {
+        eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+            if (outputPath && outputPath.endsWith('.html')) {
+                return htmlmin.minify(content, {
+                    collapseWhitespace: true,
+                });
+            }
+            return content;
+        });
+
+        eleventyConfig.addTransform('xmlmin', function(content, outputPath) {
+            if (outputPath && outputPath.endsWith('.xml')) {
+                return minifyXml(content, {
+                    shortenNamespaces: false,
+                });
+            }
+            return content;
+        });
+    }
 };
