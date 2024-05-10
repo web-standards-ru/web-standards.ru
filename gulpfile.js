@@ -1,6 +1,6 @@
 import babel from 'gulp-babel';
 import buffer from 'vinyl-buffer';
-import del from 'del';
+import {deleteAsync} from 'del';
 import fs from 'fs';
 import gulp from 'gulp';
 import paths from 'vinyl-paths';
@@ -64,7 +64,7 @@ gulp.task('cache:hash', () => {
     ], {
         base: 'dist',
     })
-        .pipe(paths(del))
+        .pipe(paths(deleteAsync))
         .pipe(rev())
         .pipe(gulp.dest('dist'))
         .pipe(rev.manifest('rev.json'))
@@ -92,7 +92,7 @@ gulp.task('cache', gulp.series(
 // Clean
 
 gulp.task('clean', () => {
-    return del([
+    return deleteAsync([
         'dist/styles/**/*',
         '!dist/styles/{styles,print}-*.css',
         'dist/scripts/**/*',
