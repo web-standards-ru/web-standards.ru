@@ -1,39 +1,35 @@
 ---
 title: Веб-стандарты — Статьи
-description: Авторские и переводные статьи по фронтенду
-language: ru
+subtitle: Авторские и переводные статьи по фронтенду
+author:
+    name: Веб-стандарты
+    email: wst@web-standards.ru
 url: https://web-standards.ru/articles
 domain: https://web-standards.ru
 permalink: articles/feed/index.xml
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>{{ title }}</title>
-        <description>{{ description }}</description>
-        <language>{{ language }}</language>
-        <link>{{ url }}/</link>
-
-        {% set lastArticle = collections.articles | last %}
-        <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastBuildDate>
-
-        <atom:link href="{{ url }}/feed/" rel="self" type="application/rss+xml"/>
-
-        {% set anchors = r/<span class="tooltip">.*span>/g %}
-
-        {%- for article in collections.articles | reverse  %}
-            <item>
-                <title>{{ article.data.title }}</title>
-                <link>{{ domain }}{{ article.url }}</link>
-                <description>
-                    <![CDATA[
-                        {{ article | fixLinks | replace(anchors, "") | safe }}
-                    ]]>
-                </description>
-                <pubDate>{{ article.date.toUTCString() }}</pubDate>
-                <guid>{{ domain }}{{ article.url }}</guid>
-            </item>
-        {%- endfor %}
-
-    </channel>
-</rss>
+{% set lastArticle = collections.articles | last %}
+{% set anchors = r/<span class="tooltip">.*span>/g %}
+<feed>
+    <title>{{ title }}</title>
+    <subtitle>{{ subtitle }}</subtitle>
+    <link href="{{ url }}/feed/" rel="self"/>
+    <link href="{{ url }}/"/>
+    <updated>{{ lastArticle.date.toUTCString() }}</updated>
+    <id>{{ url }}/</id>
+    <author>
+        <name>{{ author.name }}</name>
+        <email>{{ author.email }}</email>
+    </author>
+    {%- for article in collections.articles | reverse  %}
+        <entry>
+            <title>{{ article.data.title }}</title>
+            <link href="{{ domain }}{{ article.url }}"/>
+            <updated>{{ article.date.toUTCString() }}</updated>
+            <id>{{ domain }}{{ article.url }}</id>
+            <content type="html">
+                {{ article | fixLinks | replace(anchors, "") | safe }}
+            </content>
+        </entry>
+    {%- endfor %}
+</feed>
