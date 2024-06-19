@@ -168,7 +168,7 @@ export default function(eleventyConfig) {
 
     // добавление на заголовки id с временными метками внутри страниц подкастов
     eleventyConfig.addTransform('podcast-headings', async function(content) {
-        if (this.page?.outputFileExtension !== 'html') {
+        if (!this.page?.outputPath?.endsWith?.('html')) {
             return content;
         }
 
@@ -196,7 +196,7 @@ export default function(eleventyConfig) {
 
     // добавление id на заголовки и кнопок для копирования ссылок
     eleventyConfig.addTransform('content-headings', async function(content) {
-        if (this.page?.outputFileExtension !== 'html') {
+        if (!this.page?.outputPath?.endsWith?.('html')) {
             return content;
         }
 
