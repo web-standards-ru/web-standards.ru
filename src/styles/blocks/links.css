@@ -193,3 +193,7 @@
 .links__icon--youtube {
     background-image: url('/images/social/youtube.svg');
 }
+
+.links__icon--deezer {
+    background-image: url('/images/social/deezer.svg');
+}
