@@ -197,3 +197,7 @@
 .links__icon--deezer {
     background-image: url('/images/social/deezer.svg');
 }
+
+.links__icon--amazon {
+    background-image: url('/images/social/amazon.svg');
+}
