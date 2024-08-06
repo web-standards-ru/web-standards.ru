@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-    {% if page.url == '/' %}
-        {% set isIndex = true %}
-    {% else %}
-        {% set titleSuffix = ' — Веб-стандарты' %}
-        {% set isIndex = false %}
-    {% endif %}
-
     <title>
-        {{ renderData.title or title }}{{ titleSuffix }}
+        {{ pageTitle }}
     </title>
 
     <meta charset="utf-8">
