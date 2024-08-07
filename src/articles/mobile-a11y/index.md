@@ -6,13 +6,11 @@ source:
     title: 'Tips for making interactive elements accessible on mobile devices'
     url: 'https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - natalya-ryzhova
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - html
     - a11y
 preview: 'Несколько лет назад WCAG был обновлён до версии 2.1, в которую был включен совершенно новый раздел с правилами доступности для мобильных устройств. В этой статье я расскажу о некоторых новых рекомендациях, касающихся интерактивных элементов на странице.'

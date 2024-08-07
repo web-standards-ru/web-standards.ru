@@ -1,0 +1,15 @@
+{% macro PodcastPreview(data) %}
+    <article class="podcast-preview {% if data.isInverse %}podcast-preview--inverse {% endif %}">
+        <h3 class="podcast-preview__title">
+            <span class="podcast-preview__number">
+                {{ data.episode }}
+            </span>
+            <a class="podcast-preview__link" href="{{ data.link }}">
+                {{ data.title }}
+            </a>
+        </h3>
+        <time class="podcast-preview__date" datetime="{{ data.date | isoDate }}">
+            {{ data.date | ruDate }}
+        </time>
+    </article>
+{% endmacro %}

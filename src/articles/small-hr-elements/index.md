@@ -7,9 +7,7 @@ source:
     url: 'https://html5doctor.com/small-hr-element/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - html
 preview: 'Не так давно мы писали о презентационных элементах <i> и <b> из HTML4, возродившихся к новой семантической жизни. Другие два элемента, которые претерпели изменения, чтобы получить значения в HTML5 — это <small> и <hr>.'
 ---

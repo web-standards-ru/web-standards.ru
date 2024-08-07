@@ -9,9 +9,7 @@ translators:
     - vadim-makeev
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - html
 preview: 'В то время как многие элементы из HTML4 вошли в HTML5 без существенных изменений, некоторые исторически презентационные элементы обрели новую семантику. Давайте посмотрим на <i> и <b> и сравним их с семантическими преемниками — <em> и <strong>.'
 ---

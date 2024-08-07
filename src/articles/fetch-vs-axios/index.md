@@ -9,9 +9,7 @@ translators:
     - artur-khrabrov
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - js
 preview: 'В одном из заключительных разделов курса ES6 Javascript: The Complete Developer’s Guide на Udemy Стефан Гридер рассказывает о методе fetch() и о некоторых его недостатках. Он отмечает, что реализация fetch() не идеальна и предлагает другие варианты для выполнения HTTP-запросов. Один из таких вариантов — Axios.'
 hero:

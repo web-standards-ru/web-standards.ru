@@ -1,16 +1,12 @@
 /* Blob */
 
 .blob {
+    position: relative;
     contain: strict;
-}
-
-.blob::before {
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    left: -1px;
-    z-index: 1;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
 }
 
 /* Colors */
@@ -33,32 +29,32 @@
 
 /* Crop */
 
-.blob--shape-1::before {
-    content: url('/images/shape/1.svg');
+.blob--shape-1 {
+    --mask-image: url('/images/shape/1.svg');
 }
 
-.blob--shape-2::before {
-    content: url('/images/shape/2.svg');
+.blob--shape-2 {
+    --mask-image: url('/images/shape/2.svg');
 }
 
-.blob--shape-3::before {
-    content: url('/images/shape/3.svg');
+.blob--shape-3 {
+    --mask-image: url('/images/shape/3.svg');
 }
 
-.blob--shape-4::before {
-    content: url('/images/shape/4.svg');
+.blob--shape-4 {
+    --mask-image: url('/images/shape/4.svg');
 }
 
-.blob--shape-5::before {
-    content: url('/images/shape/5.svg');
+.blob--shape-5 {
+    --mask-image: url('/images/shape/5.svg');
 }
 
-.blob--shape-6::before {
-    content: url('/images/shape/6.svg');
+.blob--shape-6 {
+    --mask-image: url('/images/shape/6.svg');
 }
 
-.blob--shape-7::before {
-    content: url('/images/shape/7.svg');
+.blob--shape-7 {
+    --mask-image: url('/images/shape/7.svg');
 }
 
 /* Photo */
@@ -72,4 +68,5 @@
         grayscale(1)
         brightness(1.1)
         contrast(1.3);
+    object-fit: cover;
 }

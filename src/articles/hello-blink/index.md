@@ -9,9 +9,7 @@ translators:
     - anton-nemtsev
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - performance
 preview: 'Как же хорошо открыто говорить о Blink — новом движке для браузеров Opera и Сhrome. Я знаю множество людей, которые переживали, что с уходом Opera Presto веб потеряет былое многообразие, но форк WebKit в Blink восстановит баланс сил. Opera будет развивать Blink.'
 ---

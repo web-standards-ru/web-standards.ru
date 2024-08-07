@@ -9,9 +9,7 @@ translators:
     - tatiana-fokina
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - html
     - css
     - a11y

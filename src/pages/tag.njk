@@ -1,20 +1,13 @@
 ---
 pagination:
-    data: collections
+    data: collections.tagList
     size: 1
     alias: tag
-    filter:
-        - all
-        - articles
-        - tagList
-    addAllPagesToCollections: true
-renderData:
+eleventyComputed:
     title: Статьи с тегом «{{ tag }}»
 layout: page.njk
 permalink: /articles/tags/{{ tag | slug }}/
 ---
-
-{% include 'header.njk' %}
 
 <main class="main">
     <div class="archive">
@@ -24,7 +17,7 @@ permalink: /articles/tags/{{ tag | slug }}/
     </div>
 
     <p class="archive__tags">
-        {% for tags in collections.tagList | filterArticleTag %}
+        {% for tags in collections.tagList %}
             <a class="archive__tags-link"
             {% if tag != tags %}
                 href="/articles/tags/{{ tags | slug }}"
@@ -38,13 +31,10 @@ permalink: /articles/tags/{{ tag | slug }}/
     {% set articleType %}{{ '--articles' }}{% endset %}
 
     <ul class="articles articles{{ articleType }}">
-        {%- for article in tagList | filterArticles | reverse -%}
+        {%- for article in tagList | reverse -%}
             <li class="articles__item articles__item{{ articleType }}">
                 {% include 'article-card.njk' %}
             </li>
         {%- endfor -%}
     </ul>
 </main>
-
-{% include 'aside.njk' %}
-{% include 'footer.njk' %}

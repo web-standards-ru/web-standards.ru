@@ -5,8 +5,19 @@
     grid-template-columns: min-content max-content 1fr;
     grid-template-areas:
         'picture title title'
-        'picture date author';
+        'picture date date'
+        'picture author author';
     grid-gap: 14px 16px;
+    padding: 0 16px;
+}
+
+@media (min-width: 460px) {
+    .article-card {
+        grid-template-rows: min-content 1fr;
+        grid-template-areas:
+            'picture title title'
+            'picture date author';
+    }
 }
 
 @media (min-width: 800px) {
@@ -25,18 +36,34 @@
     }
 }
 
-.article-card__avatar {
-    position: relative;
+.article-card__avatar-container {
     grid-area: picture;
+}
+
+@media (min-width: 800px) {
+    .article-card__avatar-container {
+        align-self: start;
+    }
+}
+
+.article-card__avatar {
     width: 80px;
     height: 80px;
     object-fit: cover;
+}
+
+.article-card__avatar:not(:first-child) {
+    margin-top: -32px;
 }
 
 @media (min-width: 1024px) {
     .article-card__avatar {
         width: 112px;
         height: 112px;
+    }
+
+    .article-card__avatar:not(:first-child) {
+        margin-top: -48px;
     }
 }
 
@@ -45,7 +72,7 @@
     margin: 0;
     font-weight: normal;
     font-size: 21px;
-    font-family: 'RF Dewi', sans-serif;
+    font-family: 'Dewi', sans-serif;
     line-height: 1.2;
 }
 
@@ -85,6 +112,10 @@
     .article-card__author {
         font-size: 16px;
     }
+
+    .article-card__author {
+        display: block;
+    }
 }
 
 .article-card__date {
@@ -92,8 +123,16 @@
     color: var(--color-grey-medium);
 }
 
-.article-card__author {
+.article-card__date,
+.article-card__author-container {
+    align-self: baseline;
+}
+
+.article-card__author-container {
     grid-area: author;
+}
+
+.article-card__author {
     color: var(--color-grey-darker);
     text-transform: uppercase;
 }
@@ -152,7 +191,6 @@
 .article-card--featured {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 16px;
 }
 
 .article-card__hero-image--featured {
@@ -199,8 +237,9 @@
     line-height: 1.3;
 }
 
+.article-card__author-container--featured,
 .article-card__date--featured,
-.article-card__author--featured {
+.article-card__hero-image--featured {
     align-self: flex-end;
 }
 
@@ -216,5 +255,9 @@
 @media (min-width: 800px) {
     .article-card__preview {
         min-height: 5em;
+    }
+
+    .article-card__author--featured {
+        display: inline;
     }
 }

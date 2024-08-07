@@ -9,9 +9,7 @@ translators:
     - tatiana-fokina
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - css
     - a11y
 preview: 'Джерард К. Коэн опубликовал статью о том, как пропадает семантика у списков в VoiceOver и Safari (WebKit; macOS и iOS), когда используется свойство list-style: none. Почему WebKit — это единственный браузерный движок, который ведёт себя таким образом?'

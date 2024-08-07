@@ -11,14 +11,12 @@ translators:
 editors:
     - vadim-makeev
     - olga-aleksashenko
-layout: article.njk
 tags:
-    - article
     - html
 preview: 'Майк Смит известный как @sideshowbarker из W3C — человек, с головой увязший в исходном коде инструмента W3C для проверки валидности разметки; эта магия работает именно благодаря ему. Вопросы были заданы на радость и в назидание читателю сайта.'
 ---
 
-[Майк™ Смит](http://people.w3.org/mike/) (известный как [@sideshowbarker](https://twitter.com/sideshowbarker)) из W3C — человек, с головой увязший в исходном коде инструмента W3C для _проверки <del>валидности</del> разметки_; эта _магия_ работает именно благодаря ему. Вопросы были заданы на радость и в назидание читателю сайта.
+[Майк™ Смит](http://people.w3.org/mike/) (известный как @sideshowbarker) из W3C — человек, с головой увязший в исходном коде инструмента W3C для _проверки <del>валидности</del> разметки_; эта _магия_ работает именно благодаря ему. Вопросы были заданы на радость и в назидание читателю сайта.
 
 **Во-первых, расскажите нам немного о том, чем вы занимаетесь и над чем работаете**
 
@@ -97,7 +95,7 @@ _Проверка соответствия документа_ — хороши
 
 **А что, если я найду ошибку в валидаторе или проверке W3C HTML?**
 
-Сообщите об этом на [w3.org/Bugs/Public](https://www.w3.org/Bugs/Public/enter_bug.cgi?product=Nu%20Markup%20Checker), или на [bugzilla.validator.nu](https://bugzilla.validator.nu/), или на [github.com/validator/validator/issues](https://github.com/validator/validator/issues).
+Сообщите об этом [в ишью репозитория](https://github.com/validator/validator/issues).
 
 **Могу ли я запустить локальную копию проверки соответствия W3C HTML?**
 
@@ -123,9 +121,9 @@ _Проверка соответствия документа_ — хороши
 
 Да, он проверяет ошибки в использовании разметки ARIA в HTML-документах, а теперь еще и находит некоторые ошибки ARIA как в элементах SVG внутри HTML-документов, так и в отдельных SVG-документах.
 
-Для HTML-элементов это проверка на соответствие требованиям не только спецификации HTML, но и появившемуся сейчас самостоятельному документу [ARIA в HTML](https://specs.webplatform.org/html-aria/webspecs/master/). Планируется, что спецификация HTML вскоре будет обновлена, чтобы просто ссылаться на требования ARIA в этом документе.
+Для HTML-элементов это проверка на соответствие требованиям не только спецификации HTML, но и появившемуся сейчас самостоятельному документу [ARIA в HTML](https://web.archive.org/web/20170208162324/https://specs.webplatform.org/html-aria/webspecs/master/). Планируется, что спецификация HTML вскоре будет обновлена, чтобы просто ссылаться на требования ARIA в этом документе.
 
-Что касается SVG-элементов, у меня в планах вскоре обновить проверку, чтобы она следовала аналогичным самостоятельным документам в «[Web developer rules for use of ARIA attributes on SVG1.1 elements](https://specs.webplatform.org/SVG1.1-ARIA/webspecs/master/)»
+Что касается SVG-элементов, у меня в планах вскоре обновить проверку, чтобы она следовала аналогичным самостоятельным документам в «[Web developer rules for use of ARIA attributes on SVG1.1 elements](https://web.archive.org/web/20170208160909/https://specs.webplatform.org/SVG1.1-ARIA/webspecs/master/)»
 
 **А что насчёт проверки ARIA в документах по спецификациям до HTML5? Будет ли это сделано?**
 
@@ -179,6 +177,4 @@ _Проверка соответствия документа_ — хороши
 
 **Спасибо, Майк!**
 
-### Полезный совет — всегда [проверяй свой HTML](http://validator.w3.org/nu) под [рок-н-ролл](https://youtu.be/FVbVCZw5BPQ), играющий… ГРОМКО!
-
-<iframe src="https://www.youtube.com/embed/FVbVCZw5BPQ" allowfullscreen></iframe>
+### Полезный совет — всегда [проверяй свой HTML](http://validator.w3.org/nu) под рок-н-ролл, играющий… ГРОМКО!

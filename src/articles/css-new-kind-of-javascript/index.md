@@ -10,9 +10,7 @@ translators:
 editors:
     - olga-aleksashenko
     - andrey-melikhov
-layout: article.njk
 tags:
-    - article
     - satire
     - css
     - js

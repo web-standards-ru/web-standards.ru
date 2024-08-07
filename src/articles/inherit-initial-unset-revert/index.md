@@ -10,9 +10,7 @@ translators:
 editors:
     - vadim-makeev
     - olga-aleksashenko
-layout: article.njk
 tags:
-    - article
     - css
 preview: 'В CSS есть несколько ключевых слов для задания значений свойств. Я собираюсь поговорить о нескольких из них: initial, inherit и об относительно новых — unset и revert.'
 hero:

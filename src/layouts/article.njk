@@ -2,8 +2,6 @@
 layout: page.njk
 ---
 
-{% include 'header.njk' %}
-
 <main class="main">
     <div class="main__content article" itemscope itemtype="http://schema.org/Article">
         <div class="article__heading-wrapper{% if not hero %} article__heading-wrapper--no-hero{% endif %}">
@@ -19,8 +17,8 @@ layout: page.njk
                     <time class="article__date" datetime="{{ date | isoDate }}" itemprop="datePublished">
                         {{ date | ruDate }}
                     </time>
-                    <ul class="article__tags" itemprop="keywords" content="{{ tags | filterArticleTag | join(', ') }}">
-                        {%- for tag in tags | filterArticleTag -%}
+                    <ul class="article__tags" itemprop="keywords" content="{{ tags | join(', ') }}">
+                        {%- for tag in tags -%}
                             <li class="article__tags-item">
                                 <a class="article__link" href="/articles/tags/{{ tag }}">
                                     {{ tag }}
@@ -49,42 +47,53 @@ layout: page.njk
             {% endif %}
         </div>
         <div class="article__creators creators">
-            {% for person in collections.people | filterPeople(author) %}
-                {% if person.photo %}
-                    {% set personPhoto = [author, '/photo.jpg'] | join %}
-                {% else %}
-                    {% set personPhoto = 'person.png' %}
-                {% endif %}
-                {% if person.url %}
-                    <a class="creators__author"
-                        href="{{ person.url }}">
-                        <span class="creators__author-avatar blob {% blob person.name %}">
-                            <img class="blob__photo"
-                                src="/people/{{ personPhoto }}"
-                                width="113" height="104" alt="{{ person.name }}">
+            <div class="creators__block">
+                {% for person in authorData %}
+                    {% if person.photo %}
+                        {% if authorData | length > 1 %}
+                            {% set orderedAuthors = author | sort() %}
+                            {% set personPhoto = [orderedAuthors[loop.index0], '/photo.jpg'] | join %}
+                        {% else %}
+                            {% set personPhoto = [author, '/photo.jpg'] | join %}
+                        {% endif %}
+                    {% else %}
+                        {% set personPhoto = 'person.png' %}
+                    {% endif %}
+                    {% if person.url %}
+                        <a class="creators__author"
+                            href="{{ person.url }}">
+                            <span class="creators__author-avatar blob {% blob person.name %}">
+                                <img class="blob__photo"
+                                    src="/people/{{ personPhoto }}"
+                                    width="100" height="100"
+                                    sizes="(min-width: 1240px) 128px, (min-width: 1024px) 112px, 100px"
+                                    alt="{{ person.name }}">
+                            </span>
+                            <span class="creators__author-name" itemprop="author">
+                                {{ person.name }}
+                            </span>
+                        </a>
+                    {% else %}
+                        <span class="creators__author">
+                            <span class="creators__author-avatar blob {% blob person.name %}">
+                                <img class="blob__photo"
+                                    src="/people/{{ personPhoto }}"
+                                    width="100" height="100"
+                                    sizes="(min-width: 1240px) 128px, (min-width: 1024px) 112px, 100px"
+                                    alt="{{ person.name }}">
+                            </span>
+                            <span class="creators__author-name" itemprop="author">
+                                {{ person.name }}
+                            </span>
                         </span>
-                        <span class="creators__author-name" itemprop="author">
-                            {{ person.name }}
-                        </span>
-                    </a>
-                {% else %}
-                    <span class="creators__author">
-                        <span class="creators__author-avatar blob {% blob person.name %}">
-                            <img class="blob__photo"
-                                src="/people/{{ personPhoto }}"
-                                width="113" height="104" alt="{{ person.name }}">
-                        </span>
-                        <span class="creators__author-name" itemprop="author">
-                            {{ person.name }}
-                        </span>
-                    </span>
-                {% endif %}
-            {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
 
             {% if translators %}
-                <p class="creators__collaborators">
+                <p class="creators__block creators__collaborators">
                     <span class="creators__collaborators-heading">Перевод</span>
-                    {%- for translator in collections.people | filterPeople(translators) -%}
+                    {%- for translator in translatorsData -%}
                         {% if translator.url %}
                             <a class="creators__collaborators-link"
                                 href="{{ translator.url }}"
@@ -101,9 +110,9 @@ layout: page.njk
             {% endif %}
 
             {% if editors %}
-                <p class="creators__collaborators">
+                <p class="creators__block creators__collaborators">
                     <span class="creators__collaborators-heading">Редактура</span>
-                    {%- for editor in collections.people | filterPeople(editors) -%}
+                    {%- for editor in editorsData -%}
                         {% if editor.url %}
                             <a class="creators__collaborators-link"
                                 href="{{ editor.url }}"
@@ -130,7 +139,7 @@ layout: page.njk
         {% set articleCardVariant = 'related' %}
 
         <ul class="articles articles{{ articleType }}">
-            {%- for article in collections.article | reverse | filterCurrentPage(page) | limit(3) -%}
+            {%- for article in relatedArticles -%}
                 <li class="articles__item articles__item{{ articleType }}">
                     {% include 'article-card.njk' %}
                 </li>
@@ -141,6 +150,3 @@ layout: page.njk
         {% include 'conference-link.njk' %}
     </div> #}
 </main>
-
-{% include 'aside.njk' %}
-{% include 'footer.njk' %}

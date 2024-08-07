@@ -1,0 +1,22 @@
+{% set menu = [{
+    title: 'Статьи',
+    url: '/articles/'
+},{
+    title: 'Подкаст',
+    url: '/podcast/'
+}] %}
+
+<ul class="menu__list" id="menu__list">
+    {% for item in menu %}
+        {% if item.url and item.url == page.url %}
+            {% set currentPage = true %}
+        {% else %}
+            {% set currentPage = false %}
+        {% endif %}
+        <li class="menu__item">
+            <a class="menu__link" href="{{ item.url }}" {% if currentPage %}aria-current="page"{% endif %}>
+                {{ item.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

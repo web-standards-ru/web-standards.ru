@@ -4,9 +4,7 @@ date: 2019-11-14
 author: tatiana-fokina
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - a11y
 preview: 'Сергей Кригер и я проводили опрос с апреля по декабрь 2019 года. В нём участвовало 143 человека. Выборка не самая большая, но хотелось бы поделиться с вами результатами.'
 hero:

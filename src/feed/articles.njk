@@ -7,30 +7,31 @@ domain: https://web-standards.ru
 permalink: articles/feed/index.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>{{ title }}</title>
         <description>{{ description }}</description>
         <language>{{ language }}</language>
-        <link>{{ url }}</link>
+        <link>{{ url }}/</link>
 
-        {%- for article in collections.article | filterLastArticles -%}
-            <lastBuildDate>{{ article.date.toUTCString() }}</lastBuildDate>
-        {%- endfor -%}
+        {% set lastArticle = collections.articles | last %}
+        <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastBuildDate>
 
-        {% set anchors = r/<a class="article__heading-anchor".*a>/g %}
+        <atom:link href="{{ url }}/feed/" rel="self" type="application/rss+xml"/>
 
-        {%- for article in collections.article | reverse  %}
+        {% set anchors = r/<span class="tooltip">.*span>/g %}
+
+        {%- for article in collections.articles | reverse  %}
             <item>
                 <title>{{ article.data.title }}</title>
-                <link href="{{ domain }}{{ article.url }}"/>
+                <link>{{ domain }}{{ article.url }}</link>
                 <description>
                     <![CDATA[
                         {{ article | fixLinks | replace(anchors, "") | safe }}
                     ]]>
                 </description>
                 <pubDate>{{ article.date.toUTCString() }}</pubDate>
-                <guid>{{ article.url | url }}</guid>
+                <guid>{{ domain }}{{ article.url }}</guid>
             </item>
         {%- endfor %}
 

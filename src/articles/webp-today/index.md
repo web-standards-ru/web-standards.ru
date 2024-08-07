@@ -9,9 +9,7 @@ translators:
     - vladislav-ermolin
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - js
     - performance
 preview: 'WebP — формат графики, разработанный Google в 2010. Он был создан, как альтернатива PNG и JPG, и отличается от них гораздо меньшим размером при том же качестве изображения.'

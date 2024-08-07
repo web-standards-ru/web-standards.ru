@@ -7,9 +7,7 @@ source:
     url: 'http://css-tricks.com/5452-how-nth-child-works/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - css
 preview: 'Существует такой селектор, точнее псевдокласс, называемый :nth-child. Давайте посмотрим, как именно работает это выражение и что еще можно сделать с помощью :nth-child.'
 ---

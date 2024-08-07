@@ -6,12 +6,10 @@ source:
     title: 'Extract critical CSS'
     url: 'https://web.dev/extract-critical-css'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - css
     - performance
 preview: 'Браузер должен скачать и распарсить CSS-файл перед тем, как отрисует страницу. Это делает CSS ресурсом, блокирующим рендеринг. Если файл большой или соединение медленное, то запрос стилей может значительно увеличить время отрисовки страницы. Критический CSS — это метод, который извлекает CSS для контента «над сгибом».'

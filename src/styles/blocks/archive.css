@@ -1,8 +1,17 @@
 /* Archive */
 
+@media (min-width: 630px) {
+    .archive {
+        padding: 0 24px;
+    }
+}
+
 .archive__title {
-    margin: 0 0 37px;
-    font: 400 24px 'Dewi Expanded', sans-serif;
+    margin: 49px 0 66px;
+    font-weight: 400;
+    font-size: 24px;
+    font-stretch: expanded;
+    letter-spacing: -0.05em;
     text-align: center;
     text-transform: uppercase;
 }
@@ -13,7 +22,7 @@
 
 @media (min-width: 630px) {
     .archive__title {
-        margin: 20px 0 50px;
+        margin: 20px 0 67px;
         font-size: 32px;
     }
 }
@@ -28,14 +37,19 @@
 .archive__year {
     display: inline-block;
     margin-bottom: 16px;
-    font: 700 16px 'Dewi Expanded', sans-serif;
+    margin-left: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    font-stretch: expanded;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 @media (min-width: 630px) {
     .archive__year {
-        margin-bottom: 20px;
-        font-size: 20px;
+        margin-bottom: 16px;
+        margin-left: 0;
+        font-size: 16px;
     }
 }
 
@@ -46,7 +60,7 @@
     }
 }
 
-.archive__articles {
+.archive__articles:not(:last-of-type) {
     margin-bottom: 80px;
 }
 
@@ -77,5 +91,10 @@
 .archive__tags-link:not([href]) {
     color: black;
     font-weight: 900;
-    font-family: 'Dewi Expanded';
+    font-stretch: expanded;
+}
+
+.archive__pagination {
+    margin-block: 24px;
+    margin-block: clamp(16px, 2%, 32px);
 }

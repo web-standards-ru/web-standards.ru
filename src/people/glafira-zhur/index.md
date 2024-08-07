@@ -1,7 +1,5 @@
 ---
 name: Глафира Жур
-url: https://medium.com/@glafirazhur
-tags: people
+url: https://twitter.com/glafirazhur
 photo: true
-permalink: false
 ---

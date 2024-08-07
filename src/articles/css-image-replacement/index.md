@@ -9,9 +9,7 @@ translators:
     - maxim-usachev
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - css
     - fonts
 preview: 'Недавно в проект HTML5 Boilerplate была добавлена новая техника замены текста изображением. В этой записи я расскажу, как она работает и как соотносится с альтернативными методами.'

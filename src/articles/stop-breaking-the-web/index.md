@@ -9,9 +9,7 @@ translators:
     - olga-aleksashenko
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - js
     - performance
 preview: 'В этой статье я собираюсь громко заявить о том, как мы разрушаем веб; о не всегда явных причинах, почему мы должны перестать это делать, и отчего хорошей идеей будет это прекратить.'

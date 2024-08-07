@@ -9,9 +9,7 @@ translators:
     - vlad-andersen
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - css
 preview: 'Использование линейных градиентов в CSS может приводить к самым разнообразным результатам, которые не назовёшь иначе как странными; иногда даже сам синтаксис кажется странным.'
 ---

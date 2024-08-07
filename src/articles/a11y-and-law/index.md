@@ -4,9 +4,7 @@ date: 2019-11-04
 author: tatiana-fokina
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - a11y
 preview: 'Часто встречаю комментарии о том, что доступность не нужна. У меня есть пара контраргументов. В статье я разберу несколько законов, пару стандартов и одну директиву. Они могут коснуться вас как разработчиков, если вы работаете с европейскими и американскими компаниями или с государственным сектором в России.'
 hero:
@@ -147,7 +145,7 @@ hero:
 - [Веб-доступность](https://ec.europa.eu/digital-single-market/en/web-accessibility).
 - [Текст Директивы](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32016L2102).
 - [Что такое Директива 2102?](https://directive2102.eu/).
-- [Европейская директива о веб-доступности](http://nda.ie/Publications/Communications/EU-Web-Accessibility-Directive/).
+- [Европейская директива о веб-доступности](https://nda.ie/monitoring/eu-web-accessibility-directive).
 
 ## Европейский закон о доступности
 
@@ -338,9 +336,9 @@ Section 508, 508 Compliance
 ### Полезные ссылки
 
 - [Закон о реабилитации 1973 года](https://en.wikipedia.org/wiki/Rehabilitation_Act_of_1973).
-- [Текст Раздела 508](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards).
+- [Текст Раздела 508](https://web.archive.org/web/20201112021536/https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards).
 - [Соответствие требованиям 508: что такое Раздел 508?](https://siteimprove.com/en-us/accessibility/section-508-compliance/).
-- [Чеклист доступности соответствия Разделу 508 Министерства здравоохранения и социальных служб США](https://www.hhs.gov/web/section-508/making-files-accessible/checklist/index.html).
+- [Чеклист доступности соответствия Разделу 508 Министерства здравоохранения и социальных служб США](https://web.archive.org/web/20200715142027/https://www.hhs.gov/web/section-508/making-files-accessible/checklist/index.html).
 - [Полный чеклист обновлённого Раздела 508](https://www.3playmedia.com/2017/12/21/the-ultimate-section-508-refresh-checklist/).
 - [Судебные процессы](https://508compliantdocumentconversion.com/section-508-lawsuits/).
 
@@ -692,8 +690,8 @@ ADA — это закон, который защищает права люде�
 
 ### Полезные ссылки
 
-- [WCAG 2.0 на английском языке](https://www.w3.org/Translations/WCAG20-ru/).
-- [WCAG 2.0 на русском языке](https://www.w3.org/Translations/WCAG20-ru/).
+- [WCAG 2.0 на английском языке](https://www.w3.org/TR/WCAG20/).
+- [WCAG 2.0 на русском языке](https://www.w3.org/Translations/WCAG20-ru/WCAG20-ru-20130220/).
 - [WCAG 2.1](https://www.w3.org/TR/WCAG21/).
 - [WCAG 2.1: руководства с поясняющими примерами](https://medium.com/c2-group/wcag-2-1-guidelines-explained-with-examples-5c7c5d8b69eb#7312).
 - [Чеклист WCAG 2 WebAIM](https://webaim.org/standards/wcag/checklist).

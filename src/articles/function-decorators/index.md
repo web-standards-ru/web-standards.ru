@@ -9,9 +9,7 @@ translators:
     - vladislav-pocheptsov
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - js
 preview: 'Декораторы — это функции высшего порядка, которые принимают в качестве аргумента одну функцию и возвращают другую. Давайте самостоятельно напишем некоторые базовые дектораторы, представленные в таких библиотеках, как underscore.js, lodash.js, ramda.js.'
 ---

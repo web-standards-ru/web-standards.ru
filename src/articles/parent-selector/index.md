@@ -7,9 +7,7 @@ source:
     url: 'http://snook.ca/archives/html_and_css/css-parent-selectors/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - css
 preview: 'Относительно регулярно я вижу дискуссии о том, должен ли CSS включать селектор по родителю и, пока я не выяснил, как работает движок браузера, сам строил предположения по этому поводу.'
 ---

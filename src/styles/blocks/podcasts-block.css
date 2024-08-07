@@ -1,0 +1,30 @@
+.podcasts-block {
+    margin-bottom: 48px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+@media (min-width: 736px) {
+    .podcasts-block {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+
+@media (min-width: 1008px) {
+    .podcasts-block {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .podcasts-block {
+        margin-right: -64px;
+        margin-left: -64px;
+    }
+}
+
+.podcasts-block__section:not(:first-child) {
+    margin-top: -1px;
+}

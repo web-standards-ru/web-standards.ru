@@ -6,12 +6,10 @@ source:
     title: 'How to easily build desktop apps with HTML, CSS and JS'
     url: 'https://medium.com/p/d3e3f03f95a5'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - html
     - js
 preview: 'Можно ли использовать HTML, CSS и JavaScript для создания десктопных приложений? Ответ — да. В этой статье мы сосредоточимся в основном на том, как Electron можно использовать для создания десктопных приложений с использованием веб-технологий.'

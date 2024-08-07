@@ -6,12 +6,10 @@ source:
     title: 'Front-end interview handbook'
     url: 'https://github.com/yangshun/front-end-interview-handbook'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - html
 preview: 'В отличие от типичного собеседования с разработчиками ПО, на собеседованиях фронтенд-разработчиков меньше внимания уделяется алгоритмам. Большая часть вопросов касается специфичных знаний и компетенций в таких областях, как HTML, CSS, JavaScript. К сожалению, на многие вопросы я не смог найти в сети полные и удовлетворяющие ответы. Поэтому в документе ниже я постарался самостоятельно ответить на них.'
 ---

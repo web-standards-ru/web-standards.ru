@@ -11,9 +11,7 @@ editors:
     - yuliya-bukhvalova
     - vadim-makeev
     - olga-aleksashenko
-layout: article.njk
 tags:
-    - article
     - html
 preview: 'Недавно в спецификации HTML было изменено определение элементов <blockquote> и <cite>. В статье рассказывается, что это значит для разработчиков.'
 ---

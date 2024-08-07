@@ -10,9 +10,7 @@ translators:
 editors:
     - olga-aleksashenko
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - a11y
 preview: 'Эксперимент, который покажет вам, как плохая доступность влияет на пользователей и их повседневную работу в вебе.'
 hero:

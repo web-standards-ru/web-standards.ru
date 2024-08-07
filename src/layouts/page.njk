@@ -15,63 +15,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ preview or site.description }}">
+    <meta name="theme-color" content="#81c36d">
+
+    {% if page.url.startsWith('/podcast/') %}
+        <meta name="apple-itunes-app" content="app-id=1080500016">
+    {% endif %}
 
     {% include 'open-graph.njk' %}
     {% include 'icons.njk' %}
 
-    <link rel="alternate" href="{{ site.paths.feed }}" type="application/rss+xml" title="Новости — Веб-стандарты">
+    <link rel="alternate" href="{{ site.paths.articlesFeed }}" type="application/rss+xml" title="Статьи — Веб-стандарты">
+    <link rel="alternate" href="{{ site.paths.podcastsFeed }}" type="application/rss+xml" title="Подкасты — Веб-стандарты">
     <link rel="manifest" href="/manifest.json">
+    <link rel="me" href="https://mastodon.social/@webstandards_ru">
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/print.css" media="print">
 </head>
-<body class="page__body{% if isIndex %} page__body--inner{% endif %}">
-    <div class="page__navigation{% if isIndex %} page__navigation--inner{% endif %} navigation">
-        <div class="navigation__logo logo">
-            {% if isIndex %}<a class="logo__link" href="/">{% endif %}
-                <img class="logo__icon" src="/images/logo.svg" width="40" height="40" alt="Логотип Веб-стандартов">
-                <p class="logo__title">
-                    Веб-стандарты
-                </p>
-                <p class="logo__tagline">
-                    Сообщество разработчиков
-                </p>
-            {% if isIndex %}</a>{% endif %}
-        </div>
-        <nav class="navigation__bar">
-            <button class="navigation__button"
-                aria-label="Открыть меню"
-                aria-expanded="false"
-                aria-controls="navigation-menu"
-                type="button">
-                <span class="navigation__inner"></span>
-            </button>
-            {% if page.url == '/articles/' %}
-                {% set articlesClass = 'navigation__link--active' %}
-            {% else %}
-                {% set articlesHref = 'href="/articles/"' %}
-            {% endif %}
-            <ul class="navigation__menu" id="navigation-menu">
-                <li class="navigation__item">
-                    <a class="navigation__link {{ articlesClass }}" {{ articlesHref | safe }}>Статьи</a>
-                </li>
-                <li class="navigation__item">
-                    <a class="navigation__link">Календарь</a>
-                </li>
-                <li class="navigation__item">
-                    <a class="navigation__link">Подкаст</a>
-                </li>
-                <li class="navigation__item">
-                    <a class="navigation__link">О проекте</a>
-                </li>
-                <li class="navigation__item navigation__item--patreon">
-                    <a class="navigation__link navigation__link--patreon" href="https://www.patreon.com/webstandards_ru">Поддержать проект</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="page__content{% if isIndex %} page__content--inner{% endif %}">
-        {{ content | safe }}
-    </div>
-    <script src="/scripts/scripts.js"></script>
+<body class="page__body">
+    {% include 'header.njk' %}
+
+    {{ content | safe }}
+
+    {% include 'aside.njk' %}
+    {% include 'footer.njk' %}
+
+    <script type="module" src="/scripts/index.js"></script>
 </body>
 </html>

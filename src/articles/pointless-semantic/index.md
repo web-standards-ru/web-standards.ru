@@ -9,9 +9,7 @@ translators:
     - vlad-andersen
 editors:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - html
 preview: 'Если ваша главная проблема с HTML5 — выяснить какая разница между <aside> и <blockquote> или, скажем, как правильно разметить адрес — знаете, вы используете HTML5 не для того, для чего он предназначен.'
 ---

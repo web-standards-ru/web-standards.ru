@@ -4,12 +4,10 @@ date: 2016-03-22
 author: heydon-pickering
 source:
     title: 'Progressive enhancement makes me sad'
-    url: 'https://www.heydonworks.com/article/progressive-enhancement-makes-me-sad'
+    url: 'https://web.archive.org/web/20191023105142/https://heydonworks.com/article/progressive-enhancement-makes-me-sad/'
 translators:
     - vadim-makeev
-layout: article.njk
 tags:
-    - article
     - satire
 preview: 'Последнее время только и разговоров в защиту прогрессивного улучшения и «универсальных» (изоморфных) приложений. Оказывается, серверный рендеринг улучшает быстродействие, надёжность, совместимость и упрощает парсинг содержимого. Я поддерживаю эти аргументы из душевной щедрости. Но есть и глубокая озабоченность, связанная с применением прогрессивного улучшения и изоморфизма, о которой стоит поговорить. И похоже только у меня хватит смелости, чтобы пойти против толпы. Не благодарите.'
 ---

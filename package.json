@@ -1,51 +1,71 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "type": "module",
   "scripts": {
-    "start": "eleventy --serve --quiet",
+    "start": "cross-env NODE_ENV=development eleventy --serve --quiet --incremental",
     "editorconfig": "editorconfig-checker",
-    "css": "stylelint \"src/styles/**/*.css\"",
+    "stylelint": "stylelint \"src/styles/**/*.css\"",
+    "eslint": "eslint --ignore-pattern dist",
     "markdown": "remark 'src/articles/**/*.md' --quiet",
     "typograph": "remark",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
-    "test": "npm run editorconfig && npm run css && npm run markdown",
-    "build": "eleventy && gulp build",
-    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/"
+    "test": "npm run editorconfig && npm run stylelint && npm run markdown && npm run eslint",
+    "build": "npm i && cross-env-shell NODE_ENV=production \"rm -rf dist && eleventy && gulp build\"",
+    "deploy": "cd dist && rsync --progress --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/",
+    "postinstall": "npm install git://github.com/web-standards-ru/podcast.git#main --save=false --package-lock=false"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@babel/core": "^7.12.0",
-    "@babel/preset-env": "^7.12.0",
-    "@mavrin/remark-typograf": "^2.1.6",
-    "autoprefixer": "^10.0.1",
-    "del": "^6.0.0",
-    "editorconfig-checker": "^3.2.0",
-    "gulp": "^4.0.2",
+    "@11ty/eleventy": "^3.0.0-beta.1",
+    "@11ty/eleventy-img": "^4.0.2",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@eslint/js": "^9.0.0",
+    "@mavrin/remark-typograf": "^2.2.0",
+    "@stylistic/eslint-plugin-js": "^2.1.0",
+    "@stylistic/stylelint-plugin": "^3.0.0",
+    "autoprefixer": "^10.3.6",
+    "cross-env": "^7.0.3",
+    "del": "^7.1.0",
+    "editorconfig-checker": "^5.0.1",
+    "eslint": "^9.0.0",
+    "fast-glob": "^3.3.2",
+    "globals": "^15.0.0",
+    "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-postcss": "^9.0.0",
-    "gulp-rev": "^9.0.0",
-    "gulp-rev-rewrite": "^3.0.3",
-    "gulp-terser": "^1.4.0",
-    "html-minifier": "^4.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-terser": "^2.1.0",
+    "html-minifier-terser": "^7.2.0",
     "hyphen": "^1.6.2",
-    "markdown-it-multimd-table": "^4.0.3",
-    "node-w3c-validator": "^1.6.4",
-    "postcss": "^8.1.1",
-    "postcss-color-hex-alpha": "^6.0.0",
-    "postcss-csso": "^5.0.0",
-    "postcss-import": "^12.0.1",
-    "pretty-data": "^0.40.0",
-    "remark-cli": "^9.0.0",
-    "remark-frontmatter": "^3.0.0",
-    "remark-lint": "^8.0.0",
-    "remark-lint-code-block-style": "^2.0.1",
-    "remark-lint-emphasis-marker": "^2.0.1",
-    "remark-lint-ordered-list-marker-value": "^2.0.1",
-    "remark-lint-strong-marker": "^2.0.1",
-    "remark-lint-unordered-list-marker-style": "^2.0.1",
-    "stylelint": "^13.7.2",
-    "stylelint-order": "^4.1.0",
-    "typograf": "^6.11.2",
-    "vinyl-paths": "^3.0.1"
+    "js-yaml": "^4.1.0",
+    "linkedom": "^0.18.4",
+    "markdown-it-multimd-table": "^4.1.1",
+    "minify-xml": "^4.4.1",
+    "node-w3c-validator": "^2.0.1",
+    "podcast": "github:web-standards-ru/podcast",
+    "postcss": "^8.3.8",
+    "postcss-color-hex-alpha": "^10.0.0",
+    "postcss-csso": "^6.0.0",
+    "postcss-import": "^16.0.0",
+    "remark-cli": "^12.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-lint": "^10.0.0",
+    "remark-lint-code-block-style": "^4.0.0",
+    "remark-lint-emphasis-marker": "^4.0.0",
+    "remark-lint-ordered-list-marker-value": "^4.0.0",
+    "remark-lint-strong-marker": "^4.0.0",
+    "remark-lint-unordered-list-marker-style": "^4.0.0",
+    "rollup-stream": "^1.24.1",
+    "sharp": "^0.33.2",
+    "stylelint": "^16.2.0",
+    "stylelint-order": "^6.0.1",
+    "typograf": "^7.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "browserslist": [
     "last 2 version",
@@ -58,159 +78,5 @@
       "Bad value “soft-light” for attribute “mode” on element “feBlend”.",
       "Element “style” not allowed as child of element “div” in this context."
     ]
-  },
-  "stylelint": {
-    "extends": "./stylelint.config.rational-order.js",
-    "plugins": [
-      "stylelint-order"
-    ],
-    "rules": {
-      "color-no-invalid-hex": true,
-      "font-family-no-duplicate-names": true,
-      "function-calc-no-unspaced-operator": true,
-      "function-linear-gradient-no-nonstandard-direction": true,
-      "string-no-newline": true,
-      "unit-no-unknown": true,
-      "property-no-unknown": [
-        true,
-        {
-          "ignoreProperties": [
-            "print-color-adjust"
-          ]
-        }
-      ],
-      "declaration-block-no-shorthand-property-overrides": true,
-      "block-no-empty": true,
-      "selector-pseudo-class-no-unknown": true,
-      "selector-pseudo-element-no-unknown": true,
-      "selector-type-no-unknown": true,
-      "media-feature-name-no-unknown": true,
-      "at-rule-no-unknown": true,
-      "comment-no-empty": true,
-      "no-empty-source": true,
-      "no-extra-semicolons": true,
-      "no-invalid-double-slash-comments": true,
-      "no-unknown-animations": true,
-      "function-url-no-scheme-relative": true,
-      "number-max-precision": 2,
-      "declaration-block-single-line-max-declarations": 1,
-      "selector-max-empty-lines": 0,
-      "comment-word-disallowed-list": [
-        "todo"
-      ],
-      "color-hex-case": "lower",
-      "color-hex-length": "long",
-      "font-family-name-quotes": "always-unless-keyword",
-      "function-comma-space-after": "always-single-line",
-      "function-comma-space-before": "never",
-      "function-max-empty-lines": 0,
-      "function-name-case": "lower",
-      "function-parentheses-newline-inside": "always-multi-line",
-      "function-parentheses-space-inside": "never-single-line",
-      "function-url-quotes": "always",
-      "function-whitespace-after": "always",
-      "number-leading-zero": "always",
-      "number-no-trailing-zeros": true,
-      "string-quotes": "single",
-      "length-zero-no-unit": true,
-      "unit-case": "lower",
-      "value-keyword-case": [
-        "lower",
-        {
-          "ignoreKeywords": [
-            "A4"
-          ]
-        }
-      ],
-      "value-list-comma-newline-after": "always-multi-line",
-      "value-list-comma-newline-before": "never-multi-line",
-      "value-list-comma-space-after": "always-single-line",
-      "value-list-comma-space-before": "never",
-      "value-list-max-empty-lines": 0,
-      "property-case": "lower",
-      "declaration-bang-space-after": "never",
-      "declaration-bang-space-before": "always",
-      "declaration-colon-space-after": "always-single-line",
-      "declaration-colon-space-before": "never",
-      "declaration-block-semicolon-newline-after": "always-multi-line",
-      "declaration-block-semicolon-space-after": "always-single-line",
-      "declaration-block-semicolon-space-before": "never",
-      "declaration-block-trailing-semicolon": "always",
-      "declaration-empty-line-before": "never",
-      "declaration-property-unit-allowed-list": {
-        "line-height": []
-      },
-      "declaration-property-value-disallowed-list": {
-        "/.*/": [
-          "/rgb/",
-          "/rgba/"
-        ]
-      },
-      "block-closing-brace-empty-line-before": "never",
-      "block-closing-brace-newline-after": "always-multi-line",
-      "block-closing-brace-newline-before": "always-multi-line",
-      "block-closing-brace-space-before": "always-single-line",
-      "block-opening-brace-newline-after": "always-multi-line",
-      "block-opening-brace-space-after": "always-single-line",
-      "block-opening-brace-space-before": "always-single-line",
-      "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
-      "selector-attribute-brackets-space-inside": "never",
-      "selector-attribute-operator-space-after": "never",
-      "selector-attribute-operator-space-before": "never",
-      "selector-attribute-quotes": "always",
-      "selector-combinator-space-after": "always",
-      "selector-combinator-space-before": "always",
-      "selector-descendant-combinator-no-non-space": true,
-      "selector-pseudo-class-case": "lower",
-      "selector-pseudo-class-parentheses-space-inside": "never",
-      "selector-pseudo-element-case": "lower",
-      "selector-pseudo-element-colon-notation": "double",
-      "selector-type-case": "lower",
-      "selector-list-comma-newline-after": "always-multi-line",
-      "selector-list-comma-space-after": "always-single-line",
-      "selector-list-comma-space-before": "never",
-      "rule-empty-line-before": [
-        "always-multi-line",
-        {
-          "except": [
-            "first-nested"
-          ]
-        }
-      ],
-      "media-feature-colon-space-after": "always",
-      "media-feature-colon-space-before": "never",
-      "media-feature-name-case": "lower",
-      "media-feature-parentheses-space-inside": "never",
-      "media-feature-range-operator-space-after": "always",
-      "media-feature-range-operator-space-before": "always",
-      "media-query-list-comma-newline-after": "always-multi-line",
-      "media-query-list-comma-space-after": "always-single-line",
-      "media-query-list-comma-space-before": "never",
-      "at-rule-empty-line-before": [
-        "always",
-        {
-          "except": [
-            "blockless-after-blockless"
-          ]
-        }
-      ],
-      "at-rule-name-case": "lower",
-      "at-rule-name-space-after": "always",
-      "at-rule-semicolon-newline-after": "always",
-      "at-rule-semicolon-space-before": "never",
-      "comment-empty-line-before": [
-        "always",
-        {
-          "except": [
-            "first-nested"
-          ]
-        }
-      ],
-      "comment-whitespace-inside": "always",
-      "indentation": 4,
-      "max-empty-lines": 2,
-      "no-eol-whitespace": true,
-      "no-missing-end-of-source-newline": true
-    }
   }
 }
