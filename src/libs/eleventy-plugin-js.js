@@ -30,6 +30,7 @@ export default function(eleventyConfig, options = {}) {
             const bundleResult = await esbuild.build({
                 entryPoints: [inputPath],
                 write: false,
+                charset: 'utf8',
                 metafile: true,
                 minify: false,
                 bundle: true,
