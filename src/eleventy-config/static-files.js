@@ -4,8 +4,6 @@ export default function(eleventyConfig) {
         'src/manifest.json',
         'src/fonts',
         'src/images',
-        'src/styles',
-        'src/scripts',
-        'src/{articles,people}/**/*.!(md)',
+        'src/{articles,people}/**/!(*11ty*)*.!(md)',
     ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
 };
