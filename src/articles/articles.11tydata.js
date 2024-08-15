@@ -11,7 +11,7 @@ function filterPeople(peopleList, filterList) {
         });
 }
 
-module.exports = {
+export default {
     layout: 'article.njk',
 
     numberOfRelatedArticles: 3,

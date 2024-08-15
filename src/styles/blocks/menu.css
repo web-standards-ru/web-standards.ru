@@ -144,10 +144,6 @@
     .menu--index .menu__item:not(:last-of-type) {
         margin-right: 8px;
     }
-
-    .menu--index .menu__item:last-of-type {
-        margin-left: auto;
-    }
 }
 
 /* Link */
@@ -156,11 +152,11 @@
     color: var(--color-special-dark);
 }
 
-.menu__link[href]:hover {
+.menu__link:not([aria-current]):hover {
     color: var(--color-special-neutral);
 }
 
-.menu__link--current {
+.menu__link[aria-current] {
     color: black;
     font-weight: bold;
     font-stretch: expanded;
@@ -169,19 +165,4 @@
 
 .menu__link--inactive {
     color: var(--color-grey-medium);
-}
-
-.menu__link--patreon::before {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    margin-top: 2px;
-    margin-left: -18px;
-    content: url('../../images/patreon.svg');
-}
-
-@media (min-width: 736px) {
-    .menu__link--patreon {
-        padding-left: 18px;
-    }
 }

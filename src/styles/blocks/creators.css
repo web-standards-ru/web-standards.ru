@@ -53,13 +53,12 @@
     width: 100px;
     height: 100px;
     margin-bottom: 26px;
-    object-fit: cover;
 }
 
 @media (min-width: 1024px) {
     .creators__author-avatar {
-        width: 113px;
-        height: 113px;
+        width: 112px;
+        height: 112px;
     }
 }
 

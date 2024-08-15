@@ -9,9 +9,22 @@
     color: black;
     font-family: 'Dewi', sans-serif;
     background-color: white;
+    scroll-behavior: smooth;
 }
 
 .page__body {
     max-width: 1920px;
     margin: 0 auto;
+}
+
+.page__war {
+    margin: 0;
+    padding: 0.8em 0 0.9em;
+    color: white;
+    font-weight: bold;
+    font-family: 'Dewi', sans-serif;
+    font-stretch: expanded;
+    line-height: 1;
+    text-align: center;
+    background-color: black;
 }

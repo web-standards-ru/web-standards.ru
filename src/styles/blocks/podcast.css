@@ -99,8 +99,6 @@
     top: 16px;
     z-index: 1;
     grid-column: 1 / -1;
-    width: 100%;
-    height: 40px;
 }
 
 .podcast__timecode {
@@ -161,27 +159,25 @@
     margin: 0;
 }
 
-.podcast__timecode-button {
-    margin: 0;
+.podcast__timecode-link {
     margin-right: 5px;
-    padding: 0;
     color: var(--color-blue-darker);
     font-size: 15px;
-    font-family: inherit;
     font-family: 'Rostin', monospace;
-    background: none;
-    border: none;
-    cursor: pointer;
-    appearance: none;
+    text-decoration: none;
 }
 
-.podcast__timecode-button:hover {
+.podcast__timecode-link:hover {
     color: var(--color-turquoise);
 }
 
 .podcast__content {
     grid-column: 1 / -1;
     max-width: 100%;
+}
+
+.podcast__content h2 {
+    scroll-margin: 5rem;
 }
 
 @media (min-width: 1024px) {

@@ -8,13 +8,8 @@
                 {{ data.title }}
             </a>
         </h3>
-        {% if data.hasPlayer %}
-            <audio class="podcast-preview__audio" src="{{ data.audio }}" controls preload="metadata"></audio>
-        {% endif %}
-        <div class="podcast-preview__meta">
-            <time class="podcast-preview__date" datetime="{{ data.date | isoDate }}">
-                {{ data.date | ruDate }}
-            </time>
-        </div>
+        <time class="podcast-preview__date" datetime="{{ data.date | isoDate }}">
+            {{ data.date | ruDate }}
+        </time>
     </article>
 {% endmacro %}

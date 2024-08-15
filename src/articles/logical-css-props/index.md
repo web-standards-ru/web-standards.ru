@@ -6,7 +6,7 @@ source:
     title: 'New CSS Logical Properties!'
     url: 'https://medium.com/p/bc6945311ce7'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
 tags:

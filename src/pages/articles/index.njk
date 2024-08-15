@@ -1,0 +1,34 @@
+---
+title: Статьи
+layout: page.njk
+---
+
+{% from "pagination.njk" import Pagination %}
+
+<main class="main">
+    <div class="archive">
+        <h1 class="archive__title">Статьи</h1>
+
+        {% set articleType %}{{ '--articles' }}{% endset %}
+
+        {%- for group in articlesGroupsByYears -%}
+            <time class="archive__year" datetime="{{ group.year }}-01-01">{{ group.year }}</time>
+            <ul class="archive__articles articles articles{{ articleType }}">
+                {%- for article in group.articles -%}
+                    <li class="articles__item articles__item{{ articleType }}">
+                        {% include 'article-card.njk' %}
+                    </li>
+                {%- endfor -%}
+            </ul>
+        {%- endfor -%}
+
+        {{ Pagination(
+            class="archive__pagination",
+            paginationModel=paginationModel
+        ) }}
+    </div>
+
+    {# <div class="main__conference-link">
+        {% include 'conference-link.njk' %}
+    </div> #}
+</main>

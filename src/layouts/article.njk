@@ -50,7 +50,12 @@ layout: page.njk
             <div class="creators__block">
                 {% for person in authorData %}
                     {% if person.photo %}
-                        {% set personPhoto = [author, '/photo.jpg'] | join %}
+                        {% if authorData | length > 1 %}
+                            {% set orderedAuthors = author | sort() %}
+                            {% set personPhoto = [orderedAuthors[loop.index0], '/photo.jpg'] | join %}
+                        {% else %}
+                            {% set personPhoto = [author, '/photo.jpg'] | join %}
+                        {% endif %}
                     {% else %}
                         {% set personPhoto = 'person.png' %}
                     {% endif %}
@@ -60,7 +65,9 @@ layout: page.njk
                             <span class="creators__author-avatar blob {% blob person.name %}">
                                 <img class="blob__photo"
                                     src="/people/{{ personPhoto }}"
-                                    width="113" height="104" alt="{{ person.name }}">
+                                    width="100" height="100"
+                                    sizes="(min-width: 1240px) 128px, (min-width: 1024px) 112px, 100px"
+                                    alt="{{ person.name }}">
                             </span>
                             <span class="creators__author-name" itemprop="author">
                                 {{ person.name }}
@@ -71,7 +78,9 @@ layout: page.njk
                             <span class="creators__author-avatar blob {% blob person.name %}">
                                 <img class="blob__photo"
                                     src="/people/{{ personPhoto }}"
-                                    width="113" height="104" alt="{{ person.name }}">
+                                    width="100" height="100"
+                                    sizes="(min-width: 1240px) 128px, (min-width: 1024px) 112px, 100px"
+                                    alt="{{ person.name }}">
                             </span>
                             <span class="creators__author-name" itemprop="author">
                                 {{ person.name }}

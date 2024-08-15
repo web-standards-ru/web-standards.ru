@@ -6,12 +6,7 @@
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/ESLint/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AESLint)
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/Deploy/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3ADeploy)
 
-Новый сайт сообщества: статьи, конференция, календарь, подкаст и всё остальное.
-
-## Дизайн
-
-- [Текущий макет в Figma](https://www.figma.com/file/kHj7Cs5lJsKDgFZS0UjOij).
-- [Новый макет в Figma](https://www.figma.com/file/dV7oWbRYHt8W1076LueOOy).
+Сайт сообщества: статьи и подкаст.
 
 ## Разработка
 
@@ -24,8 +19,6 @@
 Вы можете выбрать [ишью из списка](https://github.com/web-standards-ru/web-standards.ru/issues) и сказать, что берётесь за работу.
 
 Форкните и присылайте пулреквесты.
-
-Для разработчиков проекта есть чат в Телеграме, где можно синхронизироваться, обсуждать и планировать процесс. Постучите [@pepelsbey](https://t.me/pepelsbey) или [@dark_mefody](https://t.me/dark_mefody) в Телеграме, если хотите попасть туда.
 
 ## Окружение и технологии
 

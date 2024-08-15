@@ -10,3 +10,7 @@
     flex: 1 1 420px;
     margin: -1px 0 0 -1px;
 }
+
+.podcast-preview-grid__item:first-child {
+    flex-basis: 100%;
+}

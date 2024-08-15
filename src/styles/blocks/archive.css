@@ -93,3 +93,8 @@
     font-weight: 900;
     font-stretch: expanded;
 }
+
+.archive__pagination {
+    margin-block: 24px;
+    margin-block: clamp(16px, 2%, 32px);
+}
