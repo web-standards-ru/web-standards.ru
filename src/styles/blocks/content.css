@@ -6,6 +6,7 @@
     color: black;
     font-size: 16px;
     line-height: 1.7;
+    overflow-wrap: anywhere;
 }
 
 .page--dark-mode .content {
@@ -83,6 +84,10 @@
 .content h2 .tooltip__button,
 .content h3 .tooltip__button {
     opacity: 0.3;
+}
+
+.page--dark-mode :is(.content h2 .tooltip__button, .content h3 .tooltip__button) {
+    opacity: 0.8;
 }
 
 .content h2:hover .tooltip__button,
@@ -268,24 +273,6 @@
     margin-bottom: 16px;
     padding: 5px 0;
     padding-left: 14px;
-    color: black;
-    font-size: 18px;
-}
-
-.page--dark-mode .content blockquote {
-    color: var(--color-dark-text-content);
-}
-
-@media (min-width: 600px) {
-    .content blockquote {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content blockquote {
-        font-size: 28px;
-    }
 }
 
 @media (min-width: 1240px) {
@@ -293,7 +280,6 @@
         margin-top: 40px;
         margin-bottom: 60px;
         padding-left: 40px;
-        font-size: 32px;
     }
 }
 
@@ -322,10 +308,11 @@
 /* Code */
 
 .content code {
-    padding-right: 0.3em;
-    padding-left: 0.3em;
+    padding-right: 0.25em;
+    padding-left: 0.25em;
     font-family: 'Rostin', monospace;
     word-wrap: break-word;
+    background-color: var(--color-grey-lightest);
 }
 
 .content pre {
@@ -342,7 +329,7 @@
     );
 }
 
-.page--dark-mode .content pre {
+.page--dark-mode :is(.content pre, .content code) {
     background: var(--color-dark-background-code);
 }
 
@@ -383,6 +370,7 @@
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color-green-darker-50a) transparent;
+    background-color: transparent;
     user-select: all;
 }
 
@@ -452,6 +440,10 @@
 
 .page--dark-mode .content > p:first-child::first-letter {
     color: var(--color-dark-text-primary);
+}
+
+.page--dark-mode .content blockquote {
+    color: var(--color-dark-text-content);
 }
 
 /* Tables */

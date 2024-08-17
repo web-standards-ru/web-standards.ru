@@ -1,0 +1,67 @@
+---
+title: Веб-стандарты
+layout: page.njk
+permalink: index.html
+---
+
+<main class="main">
+    {{ content | safe }}
+
+    {% set articleType %}{{ '--main' }}{% endset %}
+
+    <div class="visually-hidden">
+        <h1>Веб-стандарты</h1>
+        <p>Сообщество разработчиков</p>
+    </div>
+
+    <section class="main__section">
+        <h2 class="visually-hidden">Статьи</h2>
+
+        <ul class="articles articles{{ articleType }}">
+            {%- for article in indexArticles -%}
+                <li class="
+                    articles__item
+                    articles__item{{ articleType }}
+                    {% if article.data.featured == true %}
+                        articles__item--featured
+                    {% endif %}">
+                    {% include 'article-card.njk' %}
+                </li>
+            {%- endfor -%}
+        </ul>
+
+        <p class="notice">
+            <a class="notice__link" href="/articles/">Все статьи</a>
+        </p>
+    </section>
+
+    {% from "podcast-preview.njk" import PodcastPreview %}
+
+    <section class="main__section">
+        <h2 class="visually-hidden">Подкаст</h2>
+
+        <div class="podcasts-block archive">
+            <div class="podcasts-block__section">
+                <ul class="podcast-preview-grid">
+                    {% for episode in collections.episodes | reverse %}
+                        {% if loop.index <= 5 %}
+                            <li class="podcast-preview-grid__item">
+                                {{ PodcastPreview({
+                                    episode: episode.data.episode,
+                                    isInverse: loop.index === 1,
+                                    title:  episode.data.title,
+                                    link: '/podcast/' + episode.data.episode + '/',
+                                    date: episode.date
+                                }) }}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="notice">
+            <a class="notice__link" href="/podcast/">Все выпуски</a>
+        </div>
+    </section>
+</main>

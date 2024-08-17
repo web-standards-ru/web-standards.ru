@@ -1,0 +1,4 @@
+extends: relaxed
+
+ignore: |
+    node_modules

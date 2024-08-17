@@ -1,0 +1,33 @@
+---
+title: Подкаст
+layout: page.njk
+---
+
+{% from "podcast-preview.njk" import PodcastPreview %}
+{% from "pagination.njk" import Pagination %}
+
+<main class="main">
+    <div class="podcasts-block archive">
+        <h1 class="podcasts-block__title archive__title">{{ title }}</h1>
+        <div class="podcasts-block__section">
+            <ul class="podcast-preview-grid">
+                {% for episode in episodesChunk %}
+                    <li class="podcast-preview-grid__item">
+                        {{ PodcastPreview({
+                            episode: episode.data.episode,
+                            isInverse: loop.index === 1 and paginationModel.isFirstPage,
+                            title:  episode.data.title,
+                            link: '/podcast/' + episode.data.episode + '/',
+                            date: episode.date
+                        }) }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {{ Pagination(
+            class="archive__pagination",
+            paginationModel=paginationModel
+        ) }}
+    </div>
+</main>

@@ -6,7 +6,7 @@ source:
     title: 'Tips for making interactive elements accessible on mobile devices'
     url: 'https://bitsofco.de/tips-for-making-interactive-elements-accessible-on-mobile-devices/'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - natalya-ryzhova
     - vadim-makeev

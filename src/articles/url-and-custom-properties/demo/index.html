@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Path resolving in values ​​with custom property</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="a/style.css">
+    <link rel="stylesheet" href="b/style.css">
+</head>
+<body>
+    <table>
+    <tr>
+        <td></td>
+        <th scope="col">Inside</th>
+        <th scope="col">Beside</th>
+        <th scope="col">Outside</th>
+    </tr>
+    <tr>
+        <th scope="row">Short</th>
+        <td class="short inside"></td>
+        <td class="short beside"></td>
+        <td class="short outside"></td>
+    </tr>
+    <tr>
+        <th scope="row">Long</th>
+        <td class="long inside"></td>
+        <td></td>
+        <td class="long outside"></td>
+    </tr>
+    </table>
+</body>
+</html>

@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 /* Fonts */
 
 @import 'fonts.css';
@@ -27,12 +29,15 @@
 @import 'blocks/video.css';
 @import 'blocks/tooltip.css';
 @import 'blocks/not-found.css';
+@import 'blocks/player.css';
 @import 'blocks/podcast.css';
 @import 'blocks/podcast-preview.css';
 @import 'blocks/podcast-preview-grid.css';
 @import 'blocks/podcast-feature-grid.css';
 @import 'blocks/podcasts-block.css';
 @import 'blocks/podcast-page.css';
+@import 'blocks/informer.css';
+@import 'blocks/pagination.css';
 
 /* Globals */
 

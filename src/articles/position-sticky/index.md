@@ -6,7 +6,7 @@ source:
     title: 'CSS position: sticky — how it really works!'
     url: 'https://medium.com/p/54cd01dc2d46'
 translators:
-    - alena-batickaya
+    - alena-batitskaia
 editors:
     - vadim-makeev
 tags:
@@ -177,7 +177,7 @@ position: sticky;
     </figcaption>
 </figure>
 
-## В заключении
+## В заключение
 
 Вот и всё. Я надеюсь, что вам понравилась эта статья и мне удалось поделиться своим опытом. Я буду признателен, если вы поделитесь этим постом и поаплодируйте.
 

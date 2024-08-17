@@ -1,0 +1,63 @@
+{% macro Pagination(paginationModel, class) %}
+    {% if paginationModel %}
+        <nav class="pagination {{ class if class }}">
+            <ol class="pagination__list">
+                {% if (paginationModel.previousPage) %}
+                    <li class="pagination__item pagination__item--previous">
+                        <a class="pagination__link" href="{{ paginationModel.previousPage }}" aria-label="Предыдущая страница">
+                            Назад
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if (paginationModel.isNeedShowFirstPage) %}
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="{{ paginationModel.firstPage }}" aria-label="Первая страница">
+                            1
+                        </a>
+                    </li>
+                    {% if (paginationModel.isNeedShowFirstDivider) %}
+                        <li class="pagination__item" role="presentation">
+                            …
+                        </li>
+                    {% endif %}
+                {% endif %}
+
+                {% for pageItem in paginationModel.slice %}
+                    {% set pageIndex = pageItem.originalIndex + 1 %}
+                    {% set isCurrentPage = pageItem.url === paginationModel.currentPageUrl %}
+                    <li class="pagination__item">
+                        <a
+                            class="pagination__link"
+                            href="{{ pageItem.url }}"
+                            {% if isCurrentPage %}aria-current="page"{% endif %}
+                        >
+                            <span class="visually-hidden">Страница</span> {{ pageIndex }}
+                        </a>
+                    </li>
+                {% endfor %}
+
+                {% if (paginationModel.isNeedShowLastPage) %}
+                    {% if (paginationModel.isNeedShowLastDivider) %}
+                        <li class="pagination__item" role="presentation">
+                            …
+                        </li>
+                    {% endif %}
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="{{ paginationModel.lastPage }}" aria-label="Последняя страница">
+                            {{ paginationModel.totalPagesCount }}
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if (paginationModel.nextPage) %}
+                    <li class="pagination__item pagination__item--next">
+                        <a class="pagination__link" href="{{ paginationModel.nextPage }}" aria-label="Следующая страница">
+                            Вперёд
+                        </a>
+                    </li>
+                {% endif %}
+            </ol>
+        </nav>
+    {% endif %}
+{% endmacro %}

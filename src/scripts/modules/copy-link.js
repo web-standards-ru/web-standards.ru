@@ -19,7 +19,7 @@ function setErrorState(tooltip) {
 }
 
 function handleCopy() {
-    const tooltip = this.nextSibling;
+    const tooltip = this.nextElementSibling;
     const hash = this.getAttribute('data-href');
     const url = window.location.href.replace(window.location.hash, '');
 
@@ -33,7 +33,7 @@ function handleCopy() {
 }
 
 function handleMouseEnter() {
-    const tooltip = this.nextSibling;
+    const tooltip = this.nextElementSibling;
 
     if (timeout) {
         return;
@@ -43,7 +43,7 @@ function handleMouseEnter() {
 }
 
 function handleMouseOut() {
-    const tooltip = this.nextSibling;
+    const tooltip = this.nextElementSibling;
 
     if (!tooltip.classList.contains(successClassName) && !tooltip.classList.contains(errorClassName)) {
         return;
