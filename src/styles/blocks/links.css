@@ -167,10 +167,6 @@
     background-image: url('/images/social/threads.svg');
 }
 
-.links__icon--github {
-    background-image: url('/images/social/github.svg');
-}
-
 .links__icon--spotify {
     background-image: url('/images/social/spotify.svg');
 }
@@ -209,8 +205,4 @@
 
 .links__icon--amazon {
     background-image: url('/images/social/amazon.svg');
-}
-
-.page--dark-mode .links__link--github::before {
-    background-image: url('/images/social/github-dark.svg');
 }
