@@ -21,6 +21,13 @@
         }
     }
 
+    function toggleDarkMode() {
+        applyColorScheme(
+            !document.querySelector('html').classList.contains(window.classNameDark),
+            true
+        );
+    }
+
     colorSchemeMediaQuery.addEventListener('change', (mediaQuery) => {
         applyColorScheme(mediaQuery.matches);
     });
@@ -39,4 +46,11 @@
         // В противном случае берём системное значение
         applyColorScheme(isPrefersDarkColorScheme);
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const colorSchemeButton = document.querySelector('.scheme-switcher__button');
+        colorSchemeButton.addEventListener('click', () => {
+            toggleDarkMode();
+        });
+    });
 </script>

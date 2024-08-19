@@ -234,6 +234,7 @@ export default function(eleventyConfig) {
             if (outputPath && outputPath.endsWith('.html')) {
                 return htmlmin.minify(content, {
                     collapseWhitespace: true,
+                    minifyJS: true,
                 });
             }
             return content;
