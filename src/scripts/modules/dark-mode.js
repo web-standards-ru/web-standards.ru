@@ -16,7 +16,7 @@ function applyColorScheme(isDarkMode, shouldPersist = false) {
             } else {
                 localStorage.setItem(storageKey, isDarkMode ? 'dark' : 'light');
             }
-        } catch (e) { }
+        } catch { }
     }
 }
 
@@ -34,7 +34,7 @@ colorSchemeMediaQuery.addEventListener('change', (mediaQuery) => {
 let localStorageTheme = null;
 try {
     localStorageTheme = localStorage.getItem(storageKey);
-} catch (err) { }
+} catch { }
 const hasLocalStorageValue = localStorageTheme !== null && ['dark', 'light'].indexOf(localStorageTheme) >= 0;
 
 // Определяем источник правды
