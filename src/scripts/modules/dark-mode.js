@@ -26,7 +26,7 @@ function applyColorScheme(isDarkMode, shouldPersist = false) {
 function toggleDarkMode() {
     applyColorScheme(
         !document.querySelector('html').classList.contains(classNameDark),
-        true,
+        true
     );
 }
 
