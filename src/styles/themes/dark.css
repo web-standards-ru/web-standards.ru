@@ -1,0 +1,66 @@
+:root {
+    --color-text-primary: var(--color-dark-text-primary);
+    --color-background-primary: var(--color-dark-background);
+
+    --color-logo-tagline: var(--color-dark-text-primary);
+
+    --color-links-background: var(--color-dark-background-social);
+    --color-links-divider: var(--color-dark-divider);
+
+    --color-menu-button: var(--color-dark-text-header);
+    --color-menu-list-background: var(--color-dark-background);
+    --color-menu-link: var(--color-dark-text-link);
+    --color-menu-link-current: var(--color-dark-text-header);
+
+    --color-scheme-switcher-hover: var(--color-dark-divider);
+
+    --color-header-index-border: var(--color-dark-divider);
+
+    --color-footer-text: var(--color-dark-text-secondary);
+    --color-footer-background: var(--color-dark-background-footer);
+    --color-footer-link: var(--color-dark-text-primary);
+
+    --color-archive-tag-current: inherit;
+
+    --color-podcast-header-border: var(--color-dark-divider);
+    --color-podcast-timecode-link: var(--color-dark-text-link);
+
+    --color-podcast-preview-text: var(--color-dark-text-primary);
+    --color-podcast-preview-background: transparent;
+    --color-podcast-preview-meta: var(--color-dark-text-secondary);
+    --color-podcast-preview-border: var(--color-dark-divider);
+    --color-podcast-preview-link-hover: var(--color-blue-light);
+
+    --color-article-card-link: var(--color-dark-text-primary);
+    --color-article-card-date: var(--color-dark-text-secondary);
+    --color-article-card-author: var(--color-dark-text-primary);
+
+    --color-articles-item-border-color: var(--color-dark-divider);
+    --color-articles-item-featured-backgound: var(--color-dark-background-featured-article);
+
+    --color-article-heading-border: var(--color-dark-divider);
+    --color-article-date: var(--color-dark-text-secondary);
+
+    --color-creators-author: var(--color-dark-text-secondary);
+    --color-creators-author-visited: var(--color-dark-text-link-visited);
+
+    --color-content-text: var(--color-dark-text-content);
+    --color-content-heading: var(--color-dark-text-primary);
+    --color-content-link: var(--color-dark-text-link);
+    --color-content-link-visited: var(--color-dark-text-link-visited);
+    --color-content-blockquote-text: var(--color-dark-text-content);
+    --color-content-blockquote-border: #4d5466;
+    --color-content-first-letter: var(--color-dark-text-primary);
+    --color-content-table-border: #4d5466;
+    --color-content-table-head: #2a3443;
+    --color-content-table-head-gradient: var(--color-content-table-head) 0 0;
+    --color-content-inline-code-background: var(--color-dark-background-code);
+    --color-content-block-code-background: var(--color-dark-background-code);
+    --color-content-block-code-gradient: var(--color-dark-background-code) 0 0;
+    --color-content-block-code-fade: var(--color-dark-background-code) 0%, var(--color-dark-background-code-0a) 100%;
+    --color-content-block-code-scrollbar: var(--color-dark-background-code-scrollbar);
+
+    --is-light-theme: 0;
+    --is-dark-theme: 1;
+    color-scheme: dark;
+}

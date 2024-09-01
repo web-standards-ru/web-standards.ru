@@ -20,15 +20,6 @@
         </li>
     {% endfor %}
     <li class="menu__item menu__item--scheme-switcher">
-        <button class="scheme-switcher__button" aria-label="Переключить тёмную тему">
-            <svg class="scheme-switcher__icon" aria-hidden="true" width="20" height="20">
-                <use class="scheme-switcher__icon-moon"
-                    href="{{ path }}images/sprite.svg#moon">
-                </use>
-                <use class="scheme-switcher__icon-sun"
-                    href="{{ path }}images/sprite.svg#sun">
-                </use>
-            </svg>
-        </button>
+        {% include "scheme-switcher.njk" %}
     </li>
 </ul>

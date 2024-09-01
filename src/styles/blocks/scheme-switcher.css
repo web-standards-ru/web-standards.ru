@@ -1,0 +1,28 @@
+/* Color Scheme Switcher */
+
+.scheme-switcher {
+    display: flex;
+    gap: 4px;
+}
+
+.scheme-switcher__button {
+    padding: 4px;
+    color: var(--color-dark-text-secondary);
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.scheme-switcher__button[aria-pressed='true'] {
+    background-color: var(--color-scheme-switcher-hover);
+}
+
+.scheme-switcher__button:hover {
+    color: var(--color-special-neutral);
+}
+
+.scheme-switcher__icon {
+    display: block;
+    fill: currentcolor;
+}
