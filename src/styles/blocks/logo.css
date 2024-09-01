@@ -72,14 +72,10 @@
 
 .logo__tagline {
     margin: 0;
-    color: var(--color-grey-dark);
+    color: var(--color-logo-tagline);
     font-size: 12px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-}
-
-.page--dark-mode .logo__tagline {
-    color: var(--color-dark-text-primary);
 }
 
 @media (max-width: 735px) {

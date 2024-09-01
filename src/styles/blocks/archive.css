@@ -89,7 +89,7 @@
 }
 
 .archive__tags-link:not([href]) {
-    color: black;
+    color: var(--color-archive-tag-current);
     font-weight: 900;
     font-stretch: expanded;
 }
@@ -97,8 +97,4 @@
 .archive__pagination {
     margin-block: 24px;
     margin-block: clamp(16px, 2%, 32px);
-}
-
-.page--dark-mode .archive__tags-link:not([href]) {
-    color: inherit;
 }

@@ -33,11 +33,7 @@
 @media (max-width: 735px) {
     .menu__icon {
         display: block;
-        stroke: black;
-    }
-
-    .page--dark-mode .menu__icon {
-        stroke: var(--color-dark-text-header);
+        stroke: var(--color-menu-button);
     }
 
     .menu__icon:hover {
@@ -71,11 +67,7 @@
         margin-top: 14px;
         padding-bottom: 26px;
         padding-left: 64px;
-        background-color: white;
-    }
-
-    .page--dark-mode .menu__list {
-        background-color: var(--color-dark-background);
+        background-color: var(--color-menu-list-background);
     }
 
     .menu__list--open {
@@ -130,49 +122,10 @@
     }
 }
 
-/* Color Scheme Switcher */
-
-.scheme-switcher__button {
-    margin-top: 2px;
-    padding: 4px;
-    background: none;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.scheme-switcher__button:hover {
-    background-color: var(--color-grey-lightest);
-}
-
-.page--dark-mode .scheme-switcher__button:hover {
-    background-color: var(--color-dark-divider);
-}
-
-.scheme-switcher__button svg {
-    display: block;
-}
-
-.scheme-switcher__icon {
-    fill: var(--color-dark-text-secondary);
-}
-
-.scheme-switcher__icon-moon {
-    display: none;
-}
-
-.page--dark-mode .scheme-switcher__icon-moon {
-    display: block;
-}
-
-.page--dark-mode .scheme-switcher__icon-sun {
-    display: none;
-}
-
 /* Link */
 
 .menu__link {
-    color: var(--color-special-dark);
+    color: var(--color-menu-link);
 }
 
 .menu__link:not([aria-current]):hover {
@@ -180,24 +133,8 @@
 }
 
 .menu__link[aria-current] {
-    color: black;
+    color: var(--color-menu-link-current);
     font-weight: bold;
     font-stretch: expanded;
     text-decoration: none;
-}
-
-.menu__link--inactive {
-    color: var(--color-grey-medium);
-}
-
-.page--dark-mode .menu__link {
-    color: var(--color-dark-text-link);
-}
-
-.page--dark-mode .menu__link--current {
-    color: var(--color-dark-text-header);
-}
-
-.page--dark-mode .menu__link--inactive {
-    color: var(--color-dark-text-secondary);
 }

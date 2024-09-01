@@ -83,12 +83,8 @@
 }
 
 .article-card__link {
-    color: var(--color-grey-darker);
+    color: var(--color-article-card-link);
     text-decoration: none;
-}
-
-.page--dark-mode .article-card__link {
-    color: var(--color-dark-text-primary);
 }
 
 .article-card__link::before {
@@ -124,7 +120,7 @@
 
 .article-card__date {
     grid-area: date;
-    color: var(--color-grey-medium);
+    color: var(--color-article-card-date);
 }
 
 .article-card__date,
@@ -137,12 +133,8 @@
 }
 
 .article-card__author {
-    color: var(--color-grey-darker);
+    color: var(--color-article-card-author);
     text-transform: uppercase;
-}
-
-.page--dark-mode .article-card__author {
-    color: var(--color-dark-text-primary);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -268,8 +260,4 @@
     .article-card__author--featured {
         display: inline;
     }
-}
-
-.page--dark-mode .article-card__date {
-    color: var(--color-dark-text-secondary);
 }

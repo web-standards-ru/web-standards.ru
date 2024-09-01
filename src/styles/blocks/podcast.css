@@ -33,11 +33,7 @@
 .podcast__header {
     grid-column: 1 / -1;
     padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-grey-lightest);
-}
-
-.page--dark-mode .podcast__header {
-    border-color: var(--color-dark-divider);
+    border-bottom: 1px solid var(--color-podcast-header-border);
 }
 
 .podcast__number {
@@ -165,7 +161,7 @@
 
 .podcast__timecode-link {
     margin-right: 5px;
-    color: var(--color-blue-darker);
+    color: var(--color-podcast-timecode-link);
     font-size: 15px;
     font-family: 'Rostin', monospace;
     text-decoration: none;
@@ -197,8 +193,4 @@
 .podcast__content h2:first-child,
 .podcast__content h3:first-child {
     margin-top: 0;
-}
-
-.page--dark-mode .podcast__timecode-button {
-    color: var(--color-dark-text-link);
 }

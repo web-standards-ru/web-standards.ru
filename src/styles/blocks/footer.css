@@ -6,13 +6,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 16px 16px 24px;
-    color: var(--color-grey-lighter);
-    background-color: var(--color-grey-dark);
-}
-
-.page--dark-mode .footer {
-    color: var(--color-dark-text-secondary);
-    background-color: var(--color-dark-background-footer);
+    color: var(--color-footer-text);
+    background-color: var(--color-footer-background);
 }
 
 @media (min-width: 630px) {
@@ -34,28 +29,20 @@
     transition: color 0.2s linear;
 }
 
-.footer__link[href]:link {
-    color: var(--color-grey-lightest);
+.footer__link:link {
+    color: var(--color-footer-link);
 }
 
-.page--dark-mode .footer__link[href]:link {
-    color: var(--color-dark-text-primary);
-}
-
-.footer__link[href]:visited {
+.footer__link:visited {
     color: white;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .footer__link[href]:hover {
-        color: white;
+    .footer__link:hover {
+        color: var(--color-turquoise);
     }
 }
 
-.footer__link[href]:hover,
-.page--dark-mode .footer__link[href]:hover {
-    color: var(--color-turquoise);
-}
 
 /* Copy */
 

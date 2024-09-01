@@ -4,11 +4,7 @@
     display: grid;
     margin-top: -1px;
     padding: 16px 16px 24px;
-    background-color: var(--color-grey-lightest);
-}
-
-.page--dark-mode .links {
-    background-color: var(--color-dark-background-social);
+    background-color: var(--color-links-background);
 }
 
 @media (min-width: 568px) {
@@ -80,11 +76,7 @@
 }
 
 .links__section:not(:last-child) {
-    border-bottom: 1px solid var(--color-grey-lighter);
-}
-
-.page--dark-mode .links__section:not(:last-child) {
-    border-color: var(--color-dark-divider);
+    border-bottom: 1px solid var(--color-links-divider);
 }
 
 /* Description */

@@ -22,13 +22,9 @@
 
 .creators__author {
     margin-bottom: 19px;
-    color: var(--color-grey-darker);
+    color: var(--color-creators-author);
     letter-spacing: 0.05em;
     text-transform: uppercase;
-}
-
-.page--dark-mode .creators__author {
-    color: var(--color-dark-text-secondary);
 }
 
 .creators__author:link {
@@ -36,11 +32,7 @@
 }
 
 .creators__author:link:visited {
-    color: var(--color-grey-medium);
-}
-
-.page--dark-mode .creators__author:link:visited {
-    color: var(--color-dark-text-link-visited);
+    color: var(--color-creators-author-visited);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -95,21 +87,13 @@
 }
 
 .creators__collaborators-link:link {
-    color: var(--color-grey-darker);
+    color: var(--color-creators-author);
     letter-spacing: -0.03em;
     transition: color 0.2s linear;
 }
 
-.page--dark-mode .creators__collaborators-link:link  {
-    color: var(--color-dark-text-secondary);
-}
-
 .creators__collaborators-link:visited {
-    color: var(--color-grey-medium);
-}
-
-.page--dark-mode .creators__collaborators-link:visited {
-    color: var(--color-dark-text-link-visited);
+    color: var(--color-creators-author-visited);
 }
 
 .creators__collaborators-link:not(:last-child) {
@@ -117,13 +101,11 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .creators__collaborators-link:hover,
-    .page--dark-mode .creators__collaborators-link:hover {
+    .creators__collaborators-link:hover {
         color: var(--color-turquoise);
     }
 }
 
-.creators__collaborators-link:active,
-.page--dark-mode .creators__collaborators-link:active {
+.creators__collaborators-link:active {
     color: var(--color-turquoise);
 }

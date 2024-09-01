@@ -6,16 +6,10 @@
 }
 
 .page {
-    color: black;
+    color: var(--color-text-primary);
     font-family: 'Dewi', sans-serif;
-    background-color: white;
+    background-color: var(--color-background-primary);
     scroll-behavior: smooth;
-}
-
-.page--dark-mode.page {
-    color: var(--color-dark-text-primary);
-    background-color: var(--color-dark-background);
-    color-scheme: dark;
 }
 
 .page__body {
