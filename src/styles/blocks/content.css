@@ -3,7 +3,7 @@
 .content {
     max-width: 700px;
     margin: 0 auto;
-    color: var(--color-content-text);
+    color: var(--token-color-content-text);
     font-size: 16px;
     line-height: 1.7;
     overflow-wrap: anywhere;
@@ -23,7 +23,7 @@
 .content h3 {
     margin-top: 32px;
     margin-bottom: 16px;
-    color: var(--color-content-heading);
+    color: var(--token-color-content-heading);
     font-size: 16px;
     font-stretch: expanded;
     line-height: 1.2;
@@ -32,7 +32,7 @@
 }
 
 .content strong {
-    color: var(--color-content-heading);
+    color: var(--token-color-content-heading);
 }
 
 @media (min-width: 600px) {
@@ -103,12 +103,12 @@
 /* Links */
 
 .content a:link {
-    color: var(--color-content-link);
+    color: var(--token-color-content-link);
     transition: color 0.2s linear;
 }
 
 .content a:visited {
-    color: var(--color-content-link-visited);
+    color: var(--token-color-content-link-visited);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -251,7 +251,7 @@
     margin-bottom: 16px;
     padding: 5px 0;
     padding-left: 14px;
-    color: var(--color-content-blockquote-text);
+    color: var(--token-color-content-blockquote-text);
 }
 
 @media (min-width: 1240px) {
@@ -268,7 +268,7 @@
     bottom: 0;
     left: 0;
     width: 1px;
-    background-color: var(--color-content-blockquote-border);
+    background-color: var(--token-color-content-blockquote-border);
     content: '';
 }
 
@@ -287,7 +287,7 @@
     padding-left: 0.25em;
     font-family: 'Rostin', monospace;
     word-wrap: break-word;
-    background-color: var(--color-content-inline-code-background);
+    background-color: var(--token-color-content-inline-code-background);
 }
 
 .content pre {
@@ -296,10 +296,10 @@
     margin-top: 16px;
     margin-bottom: 16px;
     padding: 4px 16px;
-    background-color: var(--color-content-block-code-background);
+    background-color: var(--token-color-content-block-code-background);
     background-image: linear-gradient(
         to right,
-        var(--color-content-block-code-gradient)
+        var(--token-color-content-block-code-gradient)
     );
 }
 
@@ -319,7 +319,7 @@
     width: 76px;
     background-image: linear-gradient(
         to left,
-        var(--color-content-block-code-fade)
+        var(--token-color-content-block-code-fade)
     );
     content: '';
     pointer-events: none;
@@ -330,7 +330,7 @@
     padding: 16px 0;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-content-block-code-scrollbar) transparent;
+    scrollbar-color: var(--token-color-content-block-code-scrollbar) transparent;
     background-color: transparent;
     user-select: all;
 }
@@ -386,7 +386,7 @@
     margin-top: 0.13em;
     margin-left: -5px;
     padding-right: 15px;
-    color: var(--color-content-first-letter);
+    color: var(--token-color-content-first-letter);
     font-weight: normal;
     font-size: 3.5em;
     font-stretch: expanded;
@@ -413,15 +413,15 @@
 }
 
 .content thead {
-    background-color: var(--color-content-table-head);
+    background-color: var(--token-color-content-table-head);
     background-image: linear-gradient(
         to right,
-        var(--color-content-table-head-gradient)
+        var(--token-color-content-table-head-gradient)
     );
 }
 
 .content tr {
-    border-bottom: 1px solid var(--color-content-table-border);
+    border-bottom: 1px solid var(--token-color-content-table-border);
 }
 
 .content th,

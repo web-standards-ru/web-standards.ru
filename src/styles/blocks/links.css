@@ -4,7 +4,7 @@
     display: grid;
     margin-top: -1px;
     padding: 16px 16px 24px;
-    background-color: var(--color-links-background);
+    background-color: var(--token-color-links-background);
 }
 
 @media (min-width: 568px) {
@@ -76,7 +76,7 @@
 }
 
 .links__section:not(:last-child) {
-    border-bottom: 1px solid var(--color-links-divider);
+    border-bottom: 1px solid var(--token-color-links-divider);
 }
 
 /* Description */

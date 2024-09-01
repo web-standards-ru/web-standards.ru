@@ -47,7 +47,7 @@
         grid-template-columns: 1fr 1fr;
         margin: 0 0 64px;
         padding-right: 0;
-        color: var(--color-text-primary);
+        color: var(--token-color-text-primary);
         background-color: transparent;
     }
 }
@@ -122,7 +122,7 @@
         padding: 24px 24px 39px;
         border-width: 1px 0;
         border-style: solid;
-        border-color: var(--color-article-heading-border);
+        border-color: var(--token-color-article-heading-border);
     }
 }
 
@@ -193,7 +193,7 @@
 
 @media (min-width: 1024px) {
     .article__link {
-        color: var(--color-text-primary);
+        color: var(--token-color-text-primary);
     }
 }
 
@@ -249,7 +249,7 @@
 
 .article__date {
     margin-right: 21px;
-    color: var(--color-article-date);
+    color: var(--token-color-article-date);
 }
 
 .article__tags {

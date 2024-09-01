@@ -6,8 +6,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 16px 16px 24px;
-    color: var(--color-footer-text);
-    background-color: var(--color-footer-background);
+    color: var(--token-color-footer-text);
+    background-color: var(--token-color-footer-background);
 }
 
 @media (min-width: 630px) {
@@ -30,7 +30,7 @@
 }
 
 .footer__link:link {
-    color: var(--color-footer-link);
+    color: var(--token-color-footer-link);
 }
 
 .footer__link:visited {

@@ -15,7 +15,7 @@
 }
 
 .scheme-switcher__button[aria-pressed='true'] {
-    background-color: var(--color-scheme-switcher-hover);
+    background-color: var(--token-color-scheme-switcher-hover);
 }
 
 .scheme-switcher__button:hover {

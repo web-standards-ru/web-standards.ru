@@ -83,7 +83,7 @@
 }
 
 .article-card__link {
-    color: var(--color-article-card-link);
+    color: var(--token-color-article-card-link);
     text-decoration: none;
 }
 
@@ -120,7 +120,7 @@
 
 .article-card__date {
     grid-area: date;
-    color: var(--color-article-card-date);
+    color: var(--token-color-article-card-date);
 }
 
 .article-card__date,
@@ -133,7 +133,7 @@
 }
 
 .article-card__author {
-    color: var(--color-article-card-author);
+    color: var(--token-color-article-card-author);
     text-transform: uppercase;
 }
 

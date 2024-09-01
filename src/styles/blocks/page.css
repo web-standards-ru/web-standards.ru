@@ -6,9 +6,9 @@
 }
 
 .page {
-    color: var(--color-text-primary);
+    color: var(--token-color-text-primary);
     font-family: 'Dewi', sans-serif;
-    background-color: var(--color-background-primary);
+    background-color: var(--token-color-background-primary);
     scroll-behavior: smooth;
 }
 

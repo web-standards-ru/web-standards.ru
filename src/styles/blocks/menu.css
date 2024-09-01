@@ -33,7 +33,7 @@
 @media (max-width: 735px) {
     .menu__icon {
         display: block;
-        stroke: var(--color-menu-button);
+        stroke: var(--token-color-menu-button);
     }
 
     .menu__icon:hover {
@@ -67,7 +67,7 @@
         margin-top: 14px;
         padding-bottom: 26px;
         padding-left: 64px;
-        background-color: var(--color-menu-list-background);
+        background-color: var(--token-color-menu-list-background);
     }
 
     .menu__list--open {
@@ -125,7 +125,7 @@
 /* Link */
 
 .menu__link {
-    color: var(--color-menu-link);
+    color: var(--token-color-menu-link);
 }
 
 .menu__link:not([aria-current]):hover {
@@ -133,7 +133,7 @@
 }
 
 .menu__link[aria-current] {
-    color: var(--color-menu-link-current);
+    color: var(--token-color-menu-link-current);
     font-weight: bold;
     font-stretch: expanded;
     text-decoration: none;
