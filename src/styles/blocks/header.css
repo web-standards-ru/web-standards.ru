@@ -68,7 +68,7 @@
         grid-row: 1;
         grid-column: 1 / -1;
         padding-bottom: 13px;
-        border-bottom: 1px solid var(--color-grey-lighter);
+        border-bottom: 1px solid var(--token-color-header-index-border);
     }
 }
 

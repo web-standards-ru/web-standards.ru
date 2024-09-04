@@ -33,7 +33,7 @@
 @media (max-width: 735px) {
     .menu__icon {
         display: block;
-        stroke: black;
+        stroke: var(--token-color-menu-button);
     }
 
     .menu__icon:hover {
@@ -67,7 +67,7 @@
         margin-top: 14px;
         padding-bottom: 26px;
         padding-left: 64px;
-        background-color: white;
+        background-color: var(--token-color-menu-list-background);
     }
 
     .menu__list--open {
@@ -94,6 +94,7 @@
     .menu__list {
         display: grid;
         grid-auto-flow: column;
+        align-items: center;
         column-gap: 8px;
     }
 
@@ -112,15 +113,19 @@
 }
 
 @media (min-width: 736px) {
-    .menu--index .menu__item:not(:last-of-type) {
+    .menu--index .menu__item {
         margin-right: 8px;
+    }
+
+    .menu--index .menu__item--scheme-switcher {
+        margin-left: auto;
     }
 }
 
 /* Link */
 
 .menu__link {
-    color: var(--color-special-dark);
+    color: var(--token-color-menu-link);
 }
 
 .menu__link:not([aria-current]):hover {
@@ -128,12 +133,8 @@
 }
 
 .menu__link[aria-current] {
-    color: black;
+    color: var(--token-color-menu-link-current);
     font-weight: bold;
     font-stretch: expanded;
     text-decoration: none;
-}
-
-.menu__link--inactive {
-    color: var(--color-grey-medium);
 }

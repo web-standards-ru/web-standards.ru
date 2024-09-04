@@ -22,7 +22,7 @@
 
 .creators__author {
     margin-bottom: 19px;
-    color: var(--color-grey-darker);
+    color: var(--token-color-creators-author);
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -32,7 +32,7 @@
 }
 
 .creators__author:link:visited {
-    color: var(--color-grey-medium);
+    color: var(--token-color-creators-author-visited);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -87,13 +87,13 @@
 }
 
 .creators__collaborators-link:link {
-    color: var(--color-grey-darker);
+    color: var(--token-color-creators-author);
     letter-spacing: -0.03em;
     transition: color 0.2s linear;
 }
 
 .creators__collaborators-link:visited {
-    color: var(--color-grey-medium);
+    color: var(--token-color-creators-author-visited);
 }
 
 .creators__collaborators-link:not(:last-child) {

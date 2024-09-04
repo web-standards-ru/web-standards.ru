@@ -4,7 +4,7 @@
     display: grid;
     margin-top: -1px;
     padding: 16px 16px 24px;
-    background-color: var(--color-grey-lightest);
+    background-color: var(--token-color-links-background);
 }
 
 @media (min-width: 568px) {
@@ -76,7 +76,7 @@
 }
 
 .links__section:not(:last-child) {
-    border-bottom: 1px solid var(--color-grey-lighter);
+    border-bottom: 1px solid var(--token-color-links-divider);
 }
 
 /* Description */
@@ -140,6 +140,7 @@
 
 .links__icon--facebook {
     background-image: url('/images/social/facebook.svg');
+    border-radius: 100%;
 }
 
 .links__icon--mastodon {
@@ -156,10 +157,6 @@
 
 .links__icon--threads {
     background-image: url('/images/social/threads.svg');
-}
-
-.links__icon--github {
-    background-image: url('/images/social/github.svg');
 }
 
 .links__icon--spotify {

@@ -89,7 +89,7 @@
 }
 
 .archive__tags-link:not([href]) {
-    color: black;
+    color: var(--token-color-archive-tag-current);
     font-weight: 900;
     font-stretch: expanded;
 }

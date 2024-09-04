@@ -15,15 +15,11 @@
     padding: 0;
     font-size: inherit;
     vertical-align: middle;
-    background-color: transparent;
-    background-image: url('/images/link.svg');
+    background-color: var(--color-blue-darker);
+    mask-image: url('/images/link.svg');
     border: none;
     cursor: pointer;
     appearance: none;
-}
-
-.content .tooltip__button:visited {
-    color: var(--color-blue-darker);
 }
 
 .tooltip__button:focus {
