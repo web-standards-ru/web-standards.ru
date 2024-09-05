@@ -3,7 +3,7 @@
 .content {
     max-width: 700px;
     margin: 0 auto;
-    color: black;
+    color: var(--token-color-content-text);
     font-size: 16px;
     line-height: 1.7;
     overflow-wrap: anywhere;
@@ -23,11 +23,16 @@
 .content h3 {
     margin-top: 32px;
     margin-bottom: 16px;
+    color: var(--token-color-content-heading);
     font-size: 16px;
     font-stretch: expanded;
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+.content strong {
+    color: var(--token-color-content-heading);
 }
 
 @media (min-width: 600px) {
@@ -70,7 +75,7 @@
 
 .content h2 .tooltip__button,
 .content h3 .tooltip__button {
-    opacity: 0.3;
+    opacity: calc(0.3 * var(--is-light-theme) + 0.7 * var(--is-dark-theme));
 }
 
 .content h2:hover .tooltip__button,
@@ -98,12 +103,12 @@
 /* Links */
 
 .content a:link {
-    color: var(--color-blue-darker);
+    color: var(--token-color-content-link);
     transition: color 0.2s linear;
 }
 
 .content a:visited {
-    color: var(--color-grey-medium);
+    color: var(--token-color-content-link-visited);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -112,7 +117,7 @@
     }
 }
 
-.content a:active {
+.content a:active  {
     color: var(--color-turquoise);
 }
 
@@ -246,6 +251,7 @@
     margin-bottom: 16px;
     padding: 5px 0;
     padding-left: 14px;
+    color: var(--token-color-content-blockquote-text);
 }
 
 @media (min-width: 1240px) {
@@ -262,7 +268,7 @@
     bottom: 0;
     left: 0;
     width: 1px;
-    background-color: var(--color-grey-lighter);
+    background-color: var(--token-color-content-blockquote-border);
     content: '';
 }
 
@@ -281,7 +287,7 @@
     padding-left: 0.25em;
     font-family: 'Rostin', monospace;
     word-wrap: break-word;
-    background-color: var(--color-grey-lightest);
+    background-color: var(--token-color-content-inline-code-background);
 }
 
 .content pre {
@@ -290,11 +296,10 @@
     margin-top: 16px;
     margin-bottom: 16px;
     padding: 4px 16px;
-    background-color: var(--color-green-light);
+    background-color: var(--token-color-content-block-code-background);
     background-image: linear-gradient(
         to right,
-        var(--color-green-light) 0%,
-        var(--color-blue-lightest) 100%
+        var(--token-color-content-block-code-gradient)
     );
 }
 
@@ -314,8 +319,7 @@
     width: 76px;
     background-image: linear-gradient(
         to left,
-        var(--color-blue-lightest) 0%,
-        var(--color-blue-lightest-0a) 100%
+        var(--token-color-content-block-code-fade)
     );
     content: '';
     pointer-events: none;
@@ -326,7 +330,7 @@
     padding: 16px 0;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-green-darker-50a) transparent;
+    scrollbar-color: var(--token-color-content-block-code-scrollbar) transparent;
     background-color: transparent;
     user-select: all;
 }
@@ -353,13 +357,11 @@
 
 .content pre code::-webkit-scrollbar-thumb {
     background-color: var(--color-green-darker-50a);
-    border-top: 4px solid var(--color-green-light);
+    border-radius: 8px;
 }
 
 .content pre:hover code::-webkit-scrollbar-thumb {
     background-color: var(--color-green-darker);
-    border-top: none;
-    border-radius: 8px;
 }
 
 .content pre code::-webkit-scrollbar-thumb:active {
@@ -384,7 +386,7 @@
     margin-top: 0.13em;
     margin-left: -5px;
     padding-right: 15px;
-    color: var(--color-grey-medium);
+    color: var(--token-color-content-first-letter);
     font-weight: normal;
     font-size: 3.5em;
     font-stretch: expanded;
@@ -411,16 +413,15 @@
 }
 
 .content thead {
-    background-color: var(--color-green-light);
+    background-color: var(--token-color-content-table-head);
     background-image: linear-gradient(
         to right,
-        var(--color-green-light) 0%,
-        var(--color-blue-lightest) 100%
+        var(--token-color-content-table-head-gradient)
     );
 }
 
 .content tr {
-    border-bottom: 1px solid var(--color-grey-lighter);
+    border-bottom: 1px solid var(--token-color-content-table-border);
 }
 
 .content th,

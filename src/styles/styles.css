@@ -12,6 +12,7 @@
 @import 'blocks/header.css';
 @import 'blocks/logo.css';
 @import 'blocks/menu.css';
+@import 'blocks/scheme-switcher.css';
 @import 'blocks/articles.css';
 @import 'blocks/archive.css';
 @import 'blocks/notice.css';
@@ -68,4 +69,20 @@
     --color-special-neutral: #61afb4;
     --color-special-dark-10a: #3b83ba1a;
     --color-special-dark: #3b84bb;
+
+    --color-dark-background: #1b2028;
+    --color-dark-background-social: #151618;
+    --color-dark-background-footer: #0f0f0f;
+    --color-dark-background-featured-article: #151a22;
+    --color-dark-background-code: #151618;
+    --color-dark-background-code-0a: #15161800;
+    --color-dark-background-code-scrollbar: #1b2028;
+    --color-dark-background-mobile-sidebar: #1e2735; /* #13171e; */
+    --color-dark-divider: #2d323d;
+    --color-dark-text-primary: #dae3eb;
+    --color-dark-text-secondary: #91a1b0;
+    --color-dark-text-content: #bac5cf;
+    --color-dark-text-header: #f1f6fb;
+    --color-dark-text-link: #539dd4;
+    --color-dark-text-link-visited: #6885ec;
 }

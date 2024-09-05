@@ -26,6 +26,7 @@
 .player__icon {
     display: block;
     margin: auto;
+    fill: currentcolor;
 }
 
 .player__audio {
