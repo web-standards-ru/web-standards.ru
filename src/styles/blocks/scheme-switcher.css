@@ -7,7 +7,7 @@
 
 .scheme-switcher__button {
     padding: 4px;
-    color: var(--color-light-text-secondary);
+    color: var(--token-color-content-text);
     background: none;
     border: none;
     border-radius: 4px;
