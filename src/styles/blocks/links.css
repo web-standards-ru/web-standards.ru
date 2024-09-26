@@ -134,6 +134,10 @@
 
 /* Icons */
 
+.links__icon--rss {
+    background-image: url('/images/social/rss.svg');
+}
+
 .links__icon--apple {
     background-image: url('/images/social/apple.svg');
 }
