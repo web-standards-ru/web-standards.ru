@@ -18,8 +18,8 @@
     "postinstall": "npm install git://github.com/web-standards-ru/podcast.git#main --save=false --package-lock=false"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0-beta.1",
-    "@11ty/eleventy-img": "^4.0.2",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
     "@eslint/js": "^9.0.0",
     "@mavrin/remark-typograf": "^2.2.0",
     "@stylistic/eslint-plugin-js": "^2.1.0",
@@ -27,8 +27,8 @@
     "browserslist": "^4.24.0",
     "cross-env": "^7.0.3",
     "editorconfig-checker": "^6.0.0",
-    "esbuild": "^0.23.0",
-    "esbuild-plugin-browserslist": "^0.14.0",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-browserslist": "^0.15.0",
     "eslint": "^9.0.0",
     "fast-glob": "^3.3.2",
     "globals": "^15.0.0",
