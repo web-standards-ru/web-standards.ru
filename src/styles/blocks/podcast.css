@@ -89,11 +89,6 @@
     display: inline;
 }
 
-.podcast__host:not(:last-child)::after {
-    content: ', ';
-    white-space: nowrap;
-}
-
 .podcast__player {
     position: sticky;
     top: 16px;

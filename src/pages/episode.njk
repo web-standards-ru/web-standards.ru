@@ -14,7 +14,9 @@
                 <h2 class="podcast__hosts-heading">Ведущие:</h2>
                 <ul class="podcast__hosts-list">
                     {% for host in episode.data.hosts %}
-                        <li class="podcast__host">{{ host }}</li>
+                        <li class="podcast__host">
+                            {{ host }}{% if not loop.last %},{% endif %}
+                        </li>
                     {% endfor %}
                 </ul>
             </section>
