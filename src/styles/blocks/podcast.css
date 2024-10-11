@@ -89,6 +89,10 @@
     display: inline;
 }
 
+.podcast__host:not(:last-child)::after {
+    content: ' ';
+}
+
 .podcast__player {
     position: sticky;
     top: 16px;
