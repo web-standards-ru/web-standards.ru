@@ -233,7 +233,6 @@ export default function(eleventyConfig) {
         eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
             if (outputPath && outputPath.endsWith('.html')) {
                 return htmlmin.minify(content, {
-                    collapseWhitespace: true,
                     minifyJS: true,
                     minifyCSS: true,
                 });
