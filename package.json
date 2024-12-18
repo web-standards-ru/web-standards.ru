@@ -13,12 +13,10 @@
     "typograph": "remark",
     "html": "node-w3c-validator -i ./dist/**/*.html --exclude ./dist/**/demos/** -f lint -evH",
     "test": "npm run editorconfig && npm run stylelint && npm run markdown && npm run eslint",
-    "build": "cross-env-shell NODE_ENV=production \"rm -rf dist && eleventy\"",
+    "build": "npm run fetch-podcast-data && cross-env-shell NODE_ENV=production \"rm -rf dist && eleventy\"",
     "deploy": "cd dist && rsync --progress --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/",
     "fetch-podcast-data": "npm install git://github.com/web-standards-ru/podcast.git#main --save=false --package-lock=false",
-    "postinstall": "npm run fetch-podcast-data",
-    "full": "npm run fetch-podcast-data && npm run build && npm run deploy",
-    "build-and-deploy": "npm run build && npm run deploy"
+    "postinstall": "npm run fetch-podcast-data"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
