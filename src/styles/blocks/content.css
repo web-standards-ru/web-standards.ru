@@ -29,6 +29,7 @@
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    text-wrap: balance;
 }
 
 .content strong {
