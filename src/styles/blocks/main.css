@@ -8,6 +8,18 @@
     padding-bottom: 10%;
 }
 
+@media (width < 800px) {
+    .main__related-articles {
+        margin-bottom: -1px;
+    }
+}
+
+@media (800px <= width < 1024px) {
+    .main__related-articles {
+        margin-bottom: 100px;
+    }
+}
+
 @media (min-width: 800px) {
     .main__section {
         padding-right: 24px;
