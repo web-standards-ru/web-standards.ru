@@ -133,12 +133,24 @@
 
 /* Icons */
 
-.links__icon--rss {
-    background-image: url('/images/social/rss.svg');
+.links__icon--amazon {
+    background-image: url('/images/social/amazon.svg');
 }
 
 .links__icon--apple {
     background-image: url('/images/social/apple.svg');
+}
+
+.links__icon--bluesky {
+    background-image: url('/images/social/bluesky.svg');
+}
+
+.links__icon--castbox {
+    background-image: url('/images/social/castbox.svg');
+}
+
+.links__icon--deezer {
+    background-image: url('/images/social/deezer.svg');
 }
 
 .links__icon--facebook {
@@ -146,24 +158,20 @@
     border-radius: 100%;
 }
 
-.links__icon--mastodon {
-    background-image: url('/images/social/mastodon.svg');
-}
-
-.links__icon--bluesky {
-    background-image: url('/images/social/bluesky.svg');
-}
-
 .links__icon--instagram {
     background-image: url('/images/social/instagram.svg');
 }
 
-.links__icon--threads {
-    background-image: url('/images/social/threads.svg');
-}
-
 .links__icon--linkedin {
     background-image: url('/images/social/linkedin.svg');
+}
+
+.links__icon--mastodon {
+    background-image: url('/images/social/mastodon.svg');
+}
+
+.links__icon--rss {
+    background-image: url('/images/social/rss.svg');
 }
 
 .links__icon--spotify {
@@ -174,34 +182,30 @@
     background-image: url('/images/social/telegram.svg');
 }
 
-.links__icon--x {
-    background-image: url('/images/social/x.svg');
+.links__icon--threads {
+    background-image: url('/images/social/threads.svg');
 }
 
 .links__icon--vk {
     background-image: url('/images/social/vk.svg');
 }
 
+.links__icon--whatsapp {
+    background-image: url('/images/social/whatsapp.svg');
+}
+
+.links__icon--x {
+    background-image: url('/images/social/x.svg');
+}
+
 .links__icon--yandex {
     background-image: url('/images/social/yandex.svg');
-}
-
-.links__icon--castbox {
-    background-image: url('/images/social/castbox.svg');
-}
-
-.links__icon--zvuk {
-    background-image: url('/images/social/zvuk.svg');
 }
 
 .links__icon--youtube {
     background-image: url('/images/social/youtube.svg');
 }
 
-.links__icon--deezer {
-    background-image: url('/images/social/deezer.svg');
-}
-
-.links__icon--amazon {
-    background-image: url('/images/social/amazon.svg');
+.links__icon--zvuk {
+    background-image: url('/images/social/zvuk.svg');
 }
