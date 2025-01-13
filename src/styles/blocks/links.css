@@ -2,7 +2,6 @@
 
 .links {
     display: grid;
-    margin-top: -1px;
     padding: 16px 16px 24px;
     background-color: var(--token-color-links-background);
 }
