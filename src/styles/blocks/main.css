@@ -27,10 +27,6 @@
     }
 }
 
-.main__conference-link {
-    margin-top: 40px;
-}
-
 @media (min-width: 1024px) {
     .main {
         padding: 100px 64px;
@@ -38,11 +34,5 @@
 
     .main__content {
         margin-bottom: 40px;
-    }
-}
-
-@media (min-width: 1250px) {
-    .main__conference-link {
-        margin-top: 60px;
     }
 }

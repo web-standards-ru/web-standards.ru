@@ -18,10 +18,6 @@
 }
 
 @media (min-width: 1024px) {
-    /* .notice {
-        margin: 160px 0;
-    } */
-
     .notice:last-child {
         margin-bottom: 60px;
     }
@@ -53,24 +49,5 @@
 @media (hover: hover) and (pointer: fine) {
     .notice__link:hover {
         text-decoration: underline;
-    }
-}
-
-.notice__link--shout {
-    background-image: url('/images/shout.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: auto 24px;
-}
-
-@media (min-width: 630px) {
-    .notice__link--shout {
-        padding-left: 50px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .notice__link--shout {
-        padding-left: 56px;
     }
 }
