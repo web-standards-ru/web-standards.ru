@@ -4,7 +4,6 @@ import htmlmin from 'html-minifier-terser';
 import minifyXml from 'minify-xml';
 import { parseHTML } from 'linkedom';
 import Image from '@11ty/eleventy-img';
-import sharp from 'sharp';
 
 Image.concurrency = os.availableParallelism ? os.availableParallelism() : os.cpus().length;
 
@@ -30,14 +29,6 @@ async function processImage({ imageElement, inputPath, options, attributes }) {
 
     const tempElement = imageElement.ownerDocument.createElement('div');
     tempElement.innerHTML = Image.generateHTML(imageStats, imageAttributes);
-
-    // Задаём размеры сами, так как для Gif они вычисляются некорректно
-    // https://github.com/11ty/eleventy-img/pull/182
-    const sharpImageMetaData = await sharp(inputPath).metadata();
-    const width = imageElement.getAttribute('width') ?? sharpImageMetaData.width;
-    const height = imageElement.getAttribute('height') ?? sharpImageMetaData.pageHeight ?? sharpImageMetaData.height;
-    const newImage = tempElement.querySelector('img');
-    Object.assign(newImage, { width, height });
 
     imageElement.replaceWith(tempElement.firstElementChild);
 }

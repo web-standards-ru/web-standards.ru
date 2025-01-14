@@ -49,7 +49,6 @@
     "remark-lint-ordered-list-marker-value": "^4.0.0",
     "remark-lint-strong-marker": "^4.0.0",
     "remark-lint-unordered-list-marker-style": "^4.0.0",
-    "sharp": "^0.33.5",
     "stylelint": "^16.13.0",
     "stylelint-order": "^6.0.4",
     "typograf": "^7.4.1"
