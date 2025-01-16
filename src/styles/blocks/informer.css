@@ -34,6 +34,7 @@
     width: var(--informer-icon-size);
     height: auto;
     aspect-ratio: 1;
+    fill: currentcolor;
 }
 
 @media (max-width: 735px) {
