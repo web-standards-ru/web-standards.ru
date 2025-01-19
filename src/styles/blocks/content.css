@@ -380,20 +380,6 @@
     border: 0;
 }
 
-/* Letter */
-
-.content > p:first-child::first-letter {
-    float: left;
-    margin-top: 0.13em;
-    margin-left: -5px;
-    padding-right: 15px;
-    color: var(--token-color-content-first-letter);
-    font-weight: normal;
-    font-size: 3.5em;
-    font-stretch: expanded;
-    line-height: 0.65;
-}
-
 /* Tables */
 
 .content__table-wrapper {
