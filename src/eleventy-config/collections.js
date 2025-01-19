@@ -42,7 +42,7 @@ export default function(eleventyConfig) {
                     return data?.page?.fileSlug;
                 },
                 audio(data) {
-                    return `https://web-standards.ru/podcast/episodes/${data.episode}.mp3`;
+                    return `https://web-standards.dev/podcast/episodes/${data.episode}.mp3`;
                 },
             },
         });

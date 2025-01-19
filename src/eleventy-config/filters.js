@@ -21,7 +21,7 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addFilter('fixLinks', (content) => {
         const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
-        const prefix = `https://web-standards.ru` + content.url;
+        const prefix = `https://web-standards.dev` + content.url;
         return content.templateContent.replace(reg, (match) => {
             if (match === `src="/` || match === `href="/`) {
                 match = match.slice(0, -1);
