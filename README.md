@@ -5,7 +5,6 @@
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/Stylelint/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AStylelint)
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/ESLint/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AESLint)
 [![](https://github.com/web-standards-ru/web-standards.ru/workflows/YAML/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AYAML)
-[![](https://github.com/web-standards-ru/web-standards.ru/workflows/Deploy/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3ADeploy)
 
 Сайт сообщества: статьи и подкаст.
 
