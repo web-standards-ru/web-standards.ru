@@ -1,4 +1,3 @@
-import hyphenLibRu from 'hyphen/ru/index.js';
 import markdownIt from 'markdown-it';
 import htmlmin from 'html-minifier-terser';
 
@@ -9,14 +8,6 @@ const markdown = markdownIt({
 export default function(eleventyConfig) {
     eleventyConfig.addFilter('limit', (array, limit) => {
         return array.slice(0, limit);
-    });
-
-    eleventyConfig.addFilter('addHyphens', (content, maxLength = 0) => {
-        if (!content || content.length <= maxLength) {
-            return content;
-        }
-        let contentWithHyps = hyphenLibRu.hyphenateSync(content);
-        return contentWithHyps;
     });
 
     eleventyConfig.addFilter('fixLinks', (content) => {

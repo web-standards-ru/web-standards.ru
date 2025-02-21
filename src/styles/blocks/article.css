@@ -132,6 +132,7 @@
     font-size: 21px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+    text-wrap: balance;
 }
 
 @media (min-width: 500px) {
