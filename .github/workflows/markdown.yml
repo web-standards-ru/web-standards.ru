@@ -1,4 +1,4 @@
-name: Markdown
+name: markdown
 
 on:
   pull_request:

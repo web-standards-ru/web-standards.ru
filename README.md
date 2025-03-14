@@ -1,10 +1,10 @@
 # Веб-стандарты
-[![](https://github.com/web-standards-ru/web-standards.ru/workflows/EditorConfig/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AEditorConfig)
-[![](https://github.com/web-standards-ru/web-standards.ru/workflows/Markdown/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AMarkdown)
-[![](https://github.com/web-standards-ru/web-standards.ru/workflows/HTML/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AHTML)
-[![](https://github.com/web-standards-ru/web-standards.ru/workflows/Stylelint/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AStylelint)
-[![](https://github.com/web-standards-ru/web-standards.ru/workflows/ESLint/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AESLint)
-[![](https://github.com/web-standards-ru/web-standards.ru/workflows/YAML/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3AYAML)
+[![](https://github.com/web-standards-ru/web-standards.ru/workflows/editorconfig/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3aeditorconfig)
+[![](https://github.com/web-standards-ru/web-standards.ru/workflows/markdown/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3amarkdown)
+[![](https://github.com/web-standards-ru/web-standards.ru/workflows/html/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3ahtml)
+[![](https://github.com/web-standards-ru/web-standards.ru/workflows/stylelint/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3astylelint)
+[![](https://github.com/web-standards-ru/web-standards.ru/workflows/eslint/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3aeslint)
+[![](https://github.com/web-standards-ru/web-standards.ru/workflows/yaml/badge.svg)](https://github.com/web-standards-ru/web-standards.ru/actions?query=workflow%3ayaml)
 
 Сайт сообщества: статьи и подкаст.
 

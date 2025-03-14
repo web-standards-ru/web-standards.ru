@@ -1,4 +1,4 @@
-name: HTML
+name: html
 
 on:
   pull_request:
