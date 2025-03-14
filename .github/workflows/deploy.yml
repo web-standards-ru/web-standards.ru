@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+      # Setup key
+      - name: Setup key
+        run: |
+          set -eu
+          mkdir "$HOME/.ssh"
+          echo "${{ secrets.KEY }}" > "$HOME/.ssh/key"
+          chmod 600 "$HOME/.ssh/key"
+      # Build
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      # Deploy
+      - name: Deploy
+        run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . wst@web-standards.ru:/var/www/web-standards.ru/html/
+        working-directory: ./dist
