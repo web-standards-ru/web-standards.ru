@@ -371,7 +371,7 @@
 
 /* Frame */
 
-.content > iframe {
+.content iframe {
     display: block;
     width: 100%;
     min-height: 400px;
