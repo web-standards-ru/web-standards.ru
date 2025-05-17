@@ -50,3 +50,21 @@
 ## Инструменты
 
 - Расширение [Nunjucks Template](https://marketplace.visualstudio.com/items?itemName=eseom.nunjucks-template) для VS Code
+
+## Упаковка в контейнер
+
+- Убедитесь, что у вас установлен [Docker](https://www.docker.com/get-started).
+- Запустите команду `docker build -t <имя_контейнера> .` в корневой папке проекта. Эта версия создаст контейнер с внешними зависимостями ssl-сертификатов. Если вы хотите потестировать локально (у вас нет сертификатов), используйте `docker build -t <имя_контейнера> --build-arg NGINX_CONF=nginx.local.conf .`
+
+- Eсли у вас есть сертификаты, запустите докер и смаунтите папку с сертификатами в контейнер:
+    ```bash
+    docker run -d \
+    -v <папка_с_сертификатами>:/etc/letsencrypt/live/web-standards.ru:ro" \
+    -p 80:80 -p 443:443 \ \
+    -e NGINX_CONF=nginx.conf \
+    -p 443:443 <имя_контейнера>
+    ```
+
+- Если вы тестируете локально то просто `docker run -p 8080:80 <имя_контейнера>`.
+
+Если нужно подебажить контейнер, используйте команду `docker run -it <имя_контейнера> /bin/bash`.
