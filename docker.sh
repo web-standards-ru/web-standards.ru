@@ -5,8 +5,8 @@ export DOCKER_BUILDKIT=1
 
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
-  echo "❌ SSH agent not available. Run 'ssh-agent' and 'ssh-add' first."
-  exit 1
+    echo "❌ SSH agent not available. Run 'ssh-agent' and 'ssh-add' first."
+    exit 1
 fi
 
 
