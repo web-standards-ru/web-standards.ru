@@ -23,11 +23,11 @@ RUN apk add --no-cache nginx nginx-mod-http-brotli nginx-mod-http-headers-more b
 RUN getent group www-data || addgroup -S www-data
 RUN getent passwd www-data || adduser -S -G www-data www-data
 COPY --from=nginx-config /nginx /etc/nginx
-COPY --from=builder /app/dist/ /usr/share/nginx/html
+COPY --from=builder /app/dist/ /var/www/web-standards.ru/html
 COPY --from=builder /app/${NGINX_CONF} /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/${NGINX_LOCAL} /etc/nginx/${NGINX_LOCAL}
 RUN sed -i '1aload_module /usr/lib/nginx/modules/ngx_http_brotli_static_module.so;' /etc/nginx/nginx.conf
 RUN sed -i '1aload_module /usr/lib/nginx/modules/ngx_http_brotli_filter_module.so;' /etc/nginx/nginx.conf
-RUN mkdir -p /etc/nginx/ssl/certs && openssl dhparam -out /etc/nginx/ssl/certs/dhparam.pem 2048
+RUN mkdir -p /etc/ssl/certs && openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
