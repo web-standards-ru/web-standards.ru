@@ -4,7 +4,7 @@ FROM node:lts-alpine AS builder
 WORKDIR /app
 RUN apk add --no-cache git
 COPY package*.json ./
-RUN npm install
+RUN npm clean-install
 COPY . .
 RUN npm run build
 
