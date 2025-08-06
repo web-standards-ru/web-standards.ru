@@ -18,9 +18,6 @@
     "fetch-podcast-data": "npm install git://github.com/web-standards-ru/podcast.git#main --save=false --package-lock=false",
     "postinstall": "npm run fetch-podcast-data"
   },
-  "dependencies": {
-    "plausible-tracker": "^0.3.9"
-  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
