@@ -97,7 +97,7 @@
 }
 
 .podcast__player::before {
-    --_scrollbar-size: calc(var(--scrollbar-size, 0) * 1px);
+    --_scrollbar-size: var(--scrollbar-size, 0);
     content: '';
     position: absolute;
     inset-block: -16px;
